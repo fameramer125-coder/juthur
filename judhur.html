@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><base href="/juthur/">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>خَريطةُ الجُذور — المِفْصَلُ بَيْنَ الجَناحَين · جُذور</title>
+<meta name="description" content="خريطةُ الجذور — عشرون جذرًا من أسفارِ البيان، وكلُّ حرفٍ منها موصولٌ بالسِّفرِ الذي يُعلِّمُه في جَناحِ الحرف. مطبعةُ جُذور · د. عادل ف. عامر.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&amp;family=Fraunces:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1B3A2F;--gold:#9A7B23;--gold-aa:#82681d;--paper:#FBF9F4;--ink-70:#4A6459;--gold-15:#F0E9D6;--rule:#D9CFB4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper) url("assets/srf_paper.jpg") repeat;background-size:420px 420px;
+ color:var(--ink);font-family:'Amiri',serif;line-height:2.1}
+body::before{content:"";position:fixed;inset:0;background:rgba(251,249,244,.85);z-index:-1}
+.wrap{max-width:76rem;margin:0 auto;padding:clamp(1.2rem,4vw,3rem)}
+.press{font-size:.72rem;letter-spacing:.26em;color:var(--gold-aa);text-align:center;margin:0 0 .3rem}
+h1{font-size:clamp(1.9rem,5vw,2.9rem);text-align:center;margin:.1rem 0 .2rem;line-height:2}
+.sub{text-align:center;font-family:'Fraunces',Georgia,serif;font-style:italic;color:var(--ink-70);margin:0 0 1.2rem}
+.lede{max-width:62ch;margin:0 auto 1.8rem;text-align:center}
+hr{border:0;border-top:1px solid var(--rule);margin:1.6rem 0}
+footer{margin-top:3rem;text-align:center;border-top:3px double var(--rule);padding-top:1.6rem}
+footer img{width:58px;height:58px;opacity:.85}
+footer p{font-size:.74rem;letter-spacing:.16em;color:var(--gold-aa);margin:.5rem 0;line-height:2}
+.back{display:inline-block;margin-top:.6rem;font-size:.84rem;color:var(--ink);background:rgba(251,249,244,.8);
+ border:1px solid var(--ink);padding:.5rem 1.1rem;text-decoration:none}
+.back:hover{background:var(--gold-15)}
+@media print{body{background:#fff}body::before{display:none}}
+@media (prefers-contrast:more){body{background:#FBF9F4}body::before{display:none}}
+
+.hk{display:inline-block;border:1px solid var(--rule);background:rgba(251,249,244,.85);padding:.35rem .7rem;
+ margin:.2rem;text-decoration:none;color:var(--ink);font-size:.82rem}
+.hk b{color:var(--gold-aa);margin-inline-end:.3rem}
+.hk span{display:block;font-size:.72rem;color:var(--ink-70);letter-spacing:.14em}
+.hk:hover{background:var(--gold-15)}
+.legend{text-align:center;margin:0 0 1.6rem}
+table{width:100%;border-collapse:collapse;background:rgba(251,249,244,.8)}
+th,td{border:1px solid var(--rule);padding:.5rem .6rem;vertical-align:middle}
+th{background:var(--gold-15);font-size:.9rem}
+td.n{width:3.4rem;text-align:center;color:var(--gold-aa);font-weight:700}
+td.t{min-width:11rem}
+td.t a{color:var(--ink)}
+td.t .fg{display:block;font-size:.76rem;color:var(--ink-70)}
+td.rt{width:7rem;text-align:center;font-weight:700;letter-spacing:.1em}
+td.st{width:7rem;text-align:center;font-size:.82rem;color:var(--ink-70)}
+.lt{display:inline-flex;flex-direction:column;align-items:center;min-width:3.1rem;margin:.15rem;
+ border:1px solid var(--rule);background:rgba(251,249,244,.9);padding:.25rem .3rem;text-decoration:none;color:var(--ink)}
+.lt:hover{background:var(--gold-15);border-color:var(--gold)}
+.lt:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.lt .ch{font-size:1.25rem;line-height:1.4}
+.lt .sn{font-size:.62rem;letter-spacing:.08em;color:var(--gold-aa)}
+.lt--off{opacity:.5}
+tr[data-stage="1"] td.n{color:#C9A227}tr[data-stage="2"] td.n{color:#B08E2C}
+tr[data-stage="3"] td.n{color:#96781E}tr[data-stage="4"] td.n{color:#4A7C64}
+tr[data-stage="5"] td.n{color:#3A6852}tr[data-stage="6"] td.n{color:#1B3A2F}
+.note{border-right:4px solid var(--gold);background:rgba(251,249,244,.82);padding:.9rem 1.1rem;margin:1.6rem 0;max-width:70ch}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <p class="press">مَطبعةُ جُذور · دبي · MCMXXVI</p>
+  <h1>خَريطةُ الجُذور</h1>
+  <p class="sub">The Root Map — where a letter is touched, and where it speaks</p>
+  <p class="lede">عشرون جذرًا تحملُ أسفارَ البيان. وكلُّ حرفٍ من حروفِ الجذرِ له سِفرٌ في جَناحِ الحرفِ يُعلِّمُه. اضغطْ حرفًا لتذهبَ إلى سِفرِه.</p>
+  <div class="legend"><a class='hk' href='/harf/sifr-waqfa'><b>٠</b> الوَقْفَة<span>أ ء ى</span></a><a class='hk' href='/harf/sifr-01-aswat-al-madd'><b>١</b> أَصْوَاتُ المَدّ<span>ا و ي</span></a><a class='hk' href='/harf/sifr-02-awwal-sawamit'><b>٢</b> أَوَّلُ الصَّوَامِت<span>ب ت م</span></a><a class='hk' href='/harf/sifr-03-huruf-asasiyya'><b>٣</b> الحُرُوفُ الأَسَاسِيَّة<span>ك د ر ل ن</span></a><a class='hk' href='/harf/sifr-04-huruf-mutaqaddima'><b>٤</b> الحُرُوفُ المُتَقَدِّمَة<span>ج ح س ش ع غ ف ق</span></a><a class='hk' href='/harf/sifr-tamam'><b>٥ب</b> تَمَامُ الحُرُوف<span>ث ذ ز ص ض ط ظ خ ه</span></a></div>
+  <hr>
+  <table>
+    <thead><tr><th>#</th><th>سِفْرُ البَيان</th><th>الجَذْر</th><th>حُروفُه في جَناحِ الحَرْف</th><th>المَرحلة</th></tr></thead>
+    <tbody>
+      <tr data-stage="1">
+        <td class="n">١</td>
+        <td class="t"><a href='/khizana'>نَفَسُ البذرة</a><span class="fg">جابر بن حيّان</span></td>
+        <td class="rt">ن-ف-س</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-03-huruf-asasiyya' title='الحُرُوفُ الأَسَاسِيَّة'><span class="ch">ن</span><span class="sn">سِفْرُ ٣</span></a><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">ف</span><span class="sn">سِفْرُ ٤</span></a><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">س</span><span class="sn">سِفْرُ ٤</span></a></td>
+        <td class="st">البَذْرَة</td>
+      </tr>
+      <tr data-stage="1">
+        <td class="n">٢</td>
+        <td class="t"><a href='/khizana'>صوتُ البذرة</a><span class="fg">الخليل بن أحمد</span></td>
+        <td class="rt">ص-و-ت</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-tamam' title='تَمَامُ الحُرُوف'><span class="ch">ص</span><span class="sn">سِفْرُ ٥ب</span></a><a class='lt' href='/harf/sifr-01-aswat-al-madd' title='أَصْوَاتُ المَدّ'><span class="ch">و</span><span class="sn">سِفْرُ ١</span></a><a class='lt' href='/harf/sifr-02-awwal-sawamit' title='أَوَّلُ الصَّوَامِت'><span class="ch">ت</span><span class="sn">سِفْرُ ٢</span></a></td>
+        <td class="st">البَذْرَة</td>
+      </tr>
+      <tr data-stage="1">
+        <td class="n">٣</td>
+        <td class="t"><a href='/khizana'>نظرةُ البذرة</a><span class="fg">حسّان بن ثابت</span></td>
+        <td class="rt">ن-ظ-ر</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-03-huruf-asasiyya' title='الحُرُوفُ الأَسَاسِيَّة'><span class="ch">ن</span><span class="sn">سِفْرُ ٣</span></a><a class='lt' href='/harf/sifr-tamam' title='تَمَامُ الحُرُوف'><span class="ch">ظ</span><span class="sn">سِفْرُ ٥ب</span></a><a class='lt' href='/harf/sifr-03-huruf-asasiyya' title='الحُرُوفُ الأَسَاسِيَّة'><span class="ch">ر</span><span class="sn">سِفْرُ ٣</span></a></td>
+        <td class="st">البَذْرَة</td>
+      </tr>
+      <tr data-stage="2">
+        <td class="n">٤</td>
+        <td class="t"><a href='/khizana'>إنصاتُ البرعم</a><span class="fg">سكينة بنت الحسين</span></td>
+        <td class="rt">س-م-ع</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">س</span><span class="sn">سِفْرُ ٤</span></a><a class='lt' href='/harf/sifr-02-awwal-sawamit' title='أَوَّلُ الصَّوَامِت'><span class="ch">م</span><span class="sn">سِفْرُ ٢</span></a><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">ع</span><span class="sn">سِفْرُ ٤</span></a></td>
+        <td class="st">البُرْعُم</td>
+      </tr>
+      <tr data-stage="2">
+        <td class="n">٥</td>
+        <td class="t"><a href='/khizana'>سؤالُ البرعم</a><span class="fg">الإمام الشافعي</span></td>
+        <td class="rt">س-أ-ل</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">س</span><span class="sn">سِفْرُ ٤</span></a><a class='lt' href='/harf/sifr-waqfa' title='الوَقْفَة'><span class="ch">أ</span><span class="sn">سِفْرُ ٠</span></a><a class='lt' href='/harf/sifr-03-huruf-asasiyya' title='الحُرُوفُ الأَسَاسِيَّة'><span class="ch">ل</span><span class="sn">سِفْرُ ٣</span></a></td>
+        <td class="st">البُرْعُم</td>
+      </tr>
+      <tr data-stage="2">
+        <td class="n">٦</td>
+        <td class="t"><a href='/khizana'>لُطفُ البرعم</a><span class="fg">ابن المبارك</span></td>
+        <td class="rt">ل-ط-ف</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-03-huruf-asasiyya' title='الحُرُوفُ الأَسَاسِيَّة'><span class="ch">ل</span><span class="sn">سِفْرُ ٣</span></a><a class='lt' href='/harf/sifr-tamam' title='تَمَامُ الحُرُوف'><span class="ch">ط</span><span class="sn">سِفْرُ ٥ب</span></a><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">ف</span><span class="sn">سِفْرُ ٤</span></a></td>
+        <td class="st">البُرْعُم</td>
+      </tr>
+      <tr data-stage="2">
+        <td class="n">٧</td>
+        <td class="t"><a href='/khizana'>حكايةُ البرعم</a><span class="fg">ابن المقفّع</span></td>
+        <td class="rt">ح-ك-ي</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">ح</span><span class="sn">سِفْرُ ٤</span></a><a class='lt' href='/harf/sifr-03-huruf-asasiyya' title='الحُرُوفُ الأَسَاسِيَّة'><span class="ch">ك</span><span class="sn">سِفْرُ ٣</span></a><a class='lt' href='/harf/sifr-01-aswat-al-madd' title='أَصْوَاتُ المَدّ'><span class="ch">ي</span><span class="sn">سِفْرُ ١</span></a></td>
+        <td class="st">البُرْعُم</td>
+      </tr>
+      <tr data-stage="3">
+        <td class="n">٨</td>
+        <td class="t"><a href='/khizana'>نغمةُ الغصن</a><span class="fg">أبو الأسود الدؤلي</span></td>
+        <td class="rt">ن-غ-م</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-03-huruf-asasiyya' title='الحُرُوفُ الأَسَاسِيَّة'><span class="ch">ن</span><span class="sn">سِفْرُ ٣</span></a><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">غ</span><span class="sn">سِفْرُ ٤</span></a><a class='lt' href='/harf/sifr-02-awwal-sawamit' title='أَوَّلُ الصَّوَامِت'><span class="ch">م</span><span class="sn">سِفْرُ ٢</span></a></td>
+        <td class="st">الغُصْن</td>
+      </tr>
+      <tr data-stage="3">
+        <td class="n">٩</td>
+        <td class="t"><a href='/khizana'>إيماءُ الغصن</a><span class="fg">الجاحظ</span></td>
+        <td class="rt">و-م-أ</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-01-aswat-al-madd' title='أَصْوَاتُ المَدّ'><span class="ch">و</span><span class="sn">سِفْرُ ١</span></a><a class='lt' href='/harf/sifr-02-awwal-sawamit' title='أَوَّلُ الصَّوَامِت'><span class="ch">م</span><span class="sn">سِفْرُ ٢</span></a><a class='lt' href='/harf/sifr-waqfa' title='الوَقْفَة'><span class="ch">أ</span><span class="sn">سِفْرُ ٠</span></a></td>
+        <td class="st">الغُصْن</td>
+      </tr>
+      <tr data-stage="3">
+        <td class="n">١٠</td>
+        <td class="t"><a href='/khizana'>حوارُ الغصن</a><span class="fg">ابن رشد</span></td>
+        <td class="rt">ح-و-ر</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">ح</span><span class="sn">سِفْرُ ٤</span></a><a class='lt' href='/harf/sifr-01-aswat-al-madd' title='أَصْوَاتُ المَدّ'><span class="ch">و</span><span class="sn">سِفْرُ ١</span></a><a class='lt' href='/harf/sifr-03-huruf-asasiyya' title='الحُرُوفُ الأَسَاسِيَّة'><span class="ch">ر</span><span class="sn">سِفْرُ ٣</span></a></td>
+        <td class="st">الغُصْن</td>
+      </tr>
+      <tr data-stage="3">
+        <td class="n">١١</td>
+        <td class="t"><a href='/khizana'>عُذرُ الغصن</a><span class="fg">عمر بن الخطّاب</span></td>
+        <td class="rt">ع-ذ-ر</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">ع</span><span class="sn">سِفْرُ ٤</span></a><a class='lt' href='/harf/sifr-tamam' title='تَمَامُ الحُرُوف'><span class="ch">ذ</span><span class="sn">سِفْرُ ٥ب</span></a><a class='lt' href='/harf/sifr-03-huruf-asasiyya' title='الحُرُوفُ الأَسَاسِيَّة'><span class="ch">ر</span><span class="sn">سِفْرُ ٣</span></a></td>
+        <td class="st">الغُصْن</td>
+      </tr>
+      <tr data-stage="4">
+        <td class="n">١٢</td>
+        <td class="t"><a href='/khizana'>تعاطفُ الأوراق</a><span class="fg">الإمام الغزالي</span></td>
+        <td class="rt">ع-ط-ف</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">ع</span><span class="sn">سِفْرُ ٤</span></a><a class='lt' href='/harf/sifr-tamam' title='تَمَامُ الحُرُوف'><span class="ch">ط</span><span class="sn">سِفْرُ ٥ب</span></a><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">ف</span><span class="sn">سِفْرُ ٤</span></a></td>
+        <td class="st">الأَوْرَاق</td>
+      </tr>
+      <tr data-stage="4">
+        <td class="n">١٣</td>
+        <td class="t"><a href='/khizana'>خلافُ الأوراق</a><span class="fg">الإمام مالك</span></td>
+        <td class="rt">خ-ل-ف</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-tamam' title='تَمَامُ الحُرُوف'><span class="ch">خ</span><span class="sn">سِفْرُ ٥ب</span></a><a class='lt' href='/harf/sifr-03-huruf-asasiyya' title='الحُرُوفُ الأَسَاسِيَّة'><span class="ch">ل</span><span class="sn">سِفْرُ ٣</span></a><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">ف</span><span class="sn">سِفْرُ ٤</span></a></td>
+        <td class="st">الأَوْرَاق</td>
+      </tr>
+      <tr data-stage="4">
+        <td class="n">١٤</td>
+        <td class="t"><a href='/khizana'>صمتُ الأوراق</a><span class="fg">لقمان الحكيم</span></td>
+        <td class="rt">ص-م-ت</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-tamam' title='تَمَامُ الحُرُوف'><span class="ch">ص</span><span class="sn">سِفْرُ ٥ب</span></a><a class='lt' href='/harf/sifr-02-awwal-sawamit' title='أَوَّلُ الصَّوَامِت'><span class="ch">م</span><span class="sn">سِفْرُ ٢</span></a><a class='lt' href='/harf/sifr-02-awwal-sawamit' title='أَوَّلُ الصَّوَامِت'><span class="ch">ت</span><span class="sn">سِفْرُ ٢</span></a></td>
+        <td class="st">الأَوْرَاق</td>
+      </tr>
+      <tr data-stage="4">
+        <td class="n">١٥</td>
+        <td class="t"><a href='/khizana'>شورى الأوراق</a><span class="fg">خديجة بنت خويلد</span></td>
+        <td class="rt">ش-و-ر</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">ش</span><span class="sn">سِفْرُ ٤</span></a><a class='lt' href='/harf/sifr-01-aswat-al-madd' title='أَصْوَاتُ المَدّ'><span class="ch">و</span><span class="sn">سِفْرُ ١</span></a><a class='lt' href='/harf/sifr-03-huruf-asasiyya' title='الحُرُوفُ الأَسَاسِيَّة'><span class="ch">ر</span><span class="sn">سِفْرُ ٣</span></a></td>
+        <td class="st">الأَوْرَاق</td>
+      </tr>
+      <tr data-stage="5">
+        <td class="n">١٦</td>
+        <td class="t"><a href='/khizana'>قناعةُ الثمرة</a><span class="fg">ابن جماعة</span></td>
+        <td class="rt">ق-ن-ع</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">ق</span><span class="sn">سِفْرُ ٤</span></a><a class='lt' href='/harf/sifr-03-huruf-asasiyya' title='الحُرُوفُ الأَسَاسِيَّة'><span class="ch">ن</span><span class="sn">سِفْرُ ٣</span></a><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">ع</span><span class="sn">سِفْرُ ٤</span></a></td>
+        <td class="st">الثِّمَار</td>
+      </tr>
+      <tr data-stage="5">
+        <td class="n">١٧</td>
+        <td class="t"><a href='/khizana'>نبرُ الثمرة</a><span class="fg">قُسّ بن ساعدة</span></td>
+        <td class="rt">ن-ب-ر</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-03-huruf-asasiyya' title='الحُرُوفُ الأَسَاسِيَّة'><span class="ch">ن</span><span class="sn">سِفْرُ ٣</span></a><a class='lt' href='/harf/sifr-02-awwal-sawamit' title='أَوَّلُ الصَّوَامِت'><span class="ch">ب</span><span class="sn">سِفْرُ ٢</span></a><a class='lt' href='/harf/sifr-03-huruf-asasiyya' title='الحُرُوفُ الأَسَاسِيَّة'><span class="ch">ر</span><span class="sn">سِفْرُ ٣</span></a></td>
+        <td class="st">الثِّمَار</td>
+      </tr>
+      <tr data-stage="5">
+        <td class="n">١٨</td>
+        <td class="t"><a href='/khizana'>سياقةُ الثمرة</a><span class="fg">صلاح الدين</span></td>
+        <td class="rt">س-و-ق</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">س</span><span class="sn">سِفْرُ ٤</span></a><a class='lt' href='/harf/sifr-01-aswat-al-madd' title='أَصْوَاتُ المَدّ'><span class="ch">و</span><span class="sn">سِفْرُ ١</span></a><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">ق</span><span class="sn">سِفْرُ ٤</span></a></td>
+        <td class="st">الثِّمَار</td>
+      </tr>
+      <tr data-stage="6">
+        <td class="n">١٩</td>
+        <td class="t"><a href='/khizana'>حكمةُ الحصاد</a><span class="fg">الأحنف بن قيس</span></td>
+        <td class="rt">ح-ك-م</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-04-huruf-mutaqaddima' title='الحُرُوفُ المُتَقَدِّمَة'><span class="ch">ح</span><span class="sn">سِفْرُ ٤</span></a><a class='lt' href='/harf/sifr-03-huruf-asasiyya' title='الحُرُوفُ الأَسَاسِيَّة'><span class="ch">ك</span><span class="sn">سِفْرُ ٣</span></a><a class='lt' href='/harf/sifr-02-awwal-sawamit' title='أَوَّلُ الصَّوَامِت'><span class="ch">م</span><span class="sn">سِفْرُ ٢</span></a></td>
+        <td class="st">الحَصَاد</td>
+      </tr>
+      <tr data-stage="6">
+        <td class="n">٢٠</td>
+        <td class="t"><a href='/khizana'>إرثُ الحصاد</a><span class="fg">ابن خلدون</span></td>
+        <td class="rt">و-ر-ث</td>
+        <td class="ls"><a class='lt' href='/harf/sifr-01-aswat-al-madd' title='أَصْوَاتُ المَدّ'><span class="ch">و</span><span class="sn">سِفْرُ ١</span></a><a class='lt' href='/harf/sifr-03-huruf-asasiyya' title='الحُرُوفُ الأَسَاسِيَّة'><span class="ch">ر</span><span class="sn">سِفْرُ ٣</span></a><a class='lt' href='/harf/sifr-tamam' title='تَمَامُ الحُرُوف'><span class="ch">ث</span><span class="sn">سِفْرُ ٥ب</span></a></td>
+        <td class="st">الحَصَاد</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="note"><b>ما تقولُه هذه الخريطةُ في سطر:</b> حروفُ الجذورِ العشرين كلُّها مُغطّاةٌ في جَناحِ الحرف — لا حرفَ واحدَ ناقص. وهذا لم يكن صحيحًا قبلَ استدراكِ سِفرِ الوقفةِ وسِفرِ تمامِ الحروف، إذ كانت الصادُ والضادُ والظاءُ والذالُ والزايُ والخاءُ والهاءُ والثاءُ خارجَ المنهج، وهي في سبعةِ جذورٍ من العشرين.</div>
+  <div class="note"><b>وكيف تُقرأ:</b> السطرُ الواحدُ يقولُ للمعلّم: هذا السِّفرُ من البيان، وجذرُه كذا، ومَن أرادَ أن يُتقِنَ حروفَه فليمرَّ بهذه الأسفارِ من جَناحِ الحرف. فالجناحان لا يُقرآنِ بالتوازي عشوائيًّا، بل يتقاطعانِ عند الجذر.</div>
+  <p style="text-align:center;margin-top:2rem"><a class='back' href='/yad-lisan'>↤ عودةٌ إلى اليَدِ واللِّسان</a></p>
+  <footer>
+    <img src="assets/Juthur_Seal_Mono.png" alt="ختمُ الدار" width="58" height="58">
+    <p>مَطبعةُ جُذور · دبي · MCMXXVI · صمّمه وطوّره د. عادل ف. عامر</p>
+    <p>Designed and developed by Dr. Adel F. Amer · Amer (2024) · CC BY-NC-SA 4.0</p>
+    <a class="back" href="/juthur/">↤ عودةٌ إلى الدار</a>
+  </footer>
+</main>
+</body>
+</html>

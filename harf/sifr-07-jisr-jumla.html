@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><base href="/juthur/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="السِفْر الثامن: جِسْرُ الجملة — الجملةُ تُحَسُّ كاملةً قبل أن تُحلَّل: تقفُ وحدَها، ولها صاحبٌ وحركةٌ ونفَسٌ | مشروع جُذُور — مسار الجسور (٦–٨ سنوات). تأليفٌ على نظريّة القراءة الملموسة، لا إصدارٌ من مصدرٍ. الطبعة المُشكَّلة، جاهزة للطبع.">
+<meta name="author" content="د. عادل ف. عامر — مشروع جُذُور (تأليفٌ على النَّظَريّة)">
+<meta name="keywords" content="مشروع جذور, نظرية القراءة الملموسة, TRT, جسر الجملة, الجملة التامة, صاحب الجملة, نفَس الجملة, الخبر والسؤال">
+<meta name="version" content="v8.0 — جِسْرُ الجملة">
+<meta name="standards" content="استرشادٌ بأُطُر CEFR · ACTFL · IB PYP — دون اعتمادٍ من أيٍّ منها">
+<title>السِفْر الثامن: جِسْرُ الجملة — الطبعة | مشروع جُذُور</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@300;400;600;700;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue-deep:#16324A; --blue-mid:#2E6B9E; --blue-soft:#5A93C0; --blue-pale:#E8F0F6;
+  --forest:#16324A; --forest-mid:#2E6B9E; --forest-soft:#5A93C0; --forest-pale:#E8F0F6;
+  --green-pale:#E8F0F6; --green-deep:#16324A;
+  --gold:#C9A24B;--gold-aa:#8c7134; --gold-light:#E7CF93; --gold-pale:#FBF3DD; --gold-deep:#8A6D2E;
+  --earth:#7A5C3E; --earth-pale:#F4EADB; --earth-deep:#5A4226;
+  --ink:#211C16; --ink-soft:#5A4F42; --ink-faint:#8C8170;
+  --s1:#2E847E; --s1d:#1A5450; --s2:#3E72A0; --s2d:#244B6E; --s3:#5A6BB0; --s3d:#3A4680; --s4:#3F8FA8; --s4d:#235566;
+  --s5:#4A6FA5; --s5d:#2E4870; --s6:#2E7D7A; --s6d:#1A4D4B; --s7:#6A5BA0; --s7d:#443873; --s8:#2E5C86; --s8d:#1B3A56;
+  --crimson:#9E2B32; --silver:#6B6F76; --silver-pale:#EEF0F2;
+  --cream:#FCFAF3; --paper:#FFFFFF; --line:#E1DCCB;
+  --shadow:0 10px 34px rgba(22,50,74,.10); --shadow-sm:0 4px 14px rgba(22,50,74,.07);
+  --r-lg:22px; --r-md:15px; --r-sm:10px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0; background:var(--cream); color:var(--ink); font-family:'Scheherazade New','Amiri',serif; font-size:20px; line-height:2.05; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+.wrap{max-width:980px; margin:0 auto; padding:24px 20px 80px;}
+h1,h2,h3,h4{font-family:'Cairo',sans-serif; font-weight:700; line-height:1.5; color:var(--blue-deep); margin:0;}
+p{margin:0 0 12px;} strong{color:var(--blue-deep); font-weight:700;} em{color:var(--earth-deep); font-style:italic;}
+
+.nav{position:sticky; top:0; z-index:50; background:rgba(252,250,243,.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; gap:5px 10px; justify-content:center; padding:9px 14px; font-family:'Cairo',sans-serif; font-size:13px;}
+.nav a{color:var(--blue-deep); text-decoration:none; padding:3px 7px; border-radius:7px; transition:.2s;}
+.nav a:hover{background:var(--blue-pale); color:var(--blue-mid);}
+
+.cover{position:relative; text-align:center; color:#fff; border-radius:var(--r-lg); overflow:hidden; padding:52px 30px 48px; margin:14px 0 22px; background:radial-gradient(120% 120% at 50% 0%, #2E6B9E 0%, #16324A 60%, #0E2433 100%); box-shadow:var(--shadow);}
+.cover::after{content:""; position:absolute; inset:14px; border:2px solid rgba(201,162,75,.55); border-radius:16px; pointer-events:none;}
+.cover-emblems{display:flex; align-items:center; justify-content:center; gap:22px; margin-bottom:6px;}
+.logo{width:118px; height:118px; display:block; filter:drop-shadow(0 6px 12px rgba(0,0,0,.35));}
+.seal{width:96px; height:96px; display:block; filter:drop-shadow(0 4px 9px rgba(0,0,0,.3));}
+.brand{font-family:'Cairo',sans-serif; font-weight:700; letter-spacing:3px; color:var(--gold-light); font-size:18px; margin-bottom:6px;}
+.cover h1{color:#fff; font-size:38px; margin:8px 0 6px; letter-spacing:.5px;}
+.cover .sub{font-family:'Scheherazade New',serif; color:var(--gold-light); font-size:22px; margin:4px 0;}
+.cover .aphorism{font-family:'Amiri',serif; color:#EAF1F8; font-size:20px; margin:14px auto 2px; max-width:730px;}
+.cover .aphorism small{display:block; font-size:12.5px; color:var(--gold-light); font-family:'Cairo',sans-serif; margin-top:3px; opacity:.85;}
+.cover .motto{font-family:'Amiri',serif; color:#EAF1F8; max-width:760px; margin:14px auto 4px; font-size:19.5px; line-height:2;}
+.cover .slogan{font-family:'Amiri',serif; font-size:18px; color:var(--gold-light); margin:14px auto 0; max-width:700px;}
+.chips{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:20px;}
+.chip{font-family:'Cairo',sans-serif; font-size:13px; font-weight:600; color:var(--gold-pale); background:rgba(255,255,255,.08); border:1px solid rgba(201,162,75,.5); border-radius:30px; padding:6px 14px;}
+.chip.authored{background:rgba(201,162,75,.22); color:#FFF4D8; border-color:var(--gold-light);}
+
+section{margin:30px 0;} .sheet{break-before:page;}
+.card{background:var(--paper); border:1px solid var(--line); border-radius:var(--r-lg); padding:26px 26px 22px; box-shadow:var(--shadow-sm); margin:18px 0;}
+.sec-head{display:flex; align-items:center; gap:12px; margin-bottom:16px; padding-bottom:12px; border-bottom:2px solid var(--gold-pale);}
+.sec-head .ic{font-size:26px; flex:0 0 auto;} .sec-head h2{font-size:24px; color:var(--blue-deep);}
+.lead{color:var(--ink-soft); font-size:19px;}
+
+.disclosure{background:linear-gradient(135deg,#FFF9EC,#FBF3DD); border:2px solid var(--gold); border-radius:var(--r-md); padding:16px 22px; margin:0 0 22px;}
+.disclosure h3{color:var(--gold-deep); font-size:17px; margin-bottom:6px;} .disclosure h3::before{content:"📜  ";}
+.disclosure p{font-family:'Cairo',sans-serif; font-size:14px; color:var(--earth-deep); margin:0;}
+
+.poetic{background:var(--blue-pale); border-right:6px solid var(--blue-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:16px 20px; font-family:'Amiri',serif; font-size:20px; color:var(--blue-deep); line-height:2; margin:10px 0;}
+.golden-rule{background:linear-gradient(135deg,#fff,var(--gold-pale)); border:2px dashed var(--gold); border-radius:var(--r-md); padding:16px 22px; text-align:center; font-family:'Amiri',serif; font-size:20.5px; color:var(--gold-deep); font-weight:700;}
+
+.pearls{display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0;}
+.pearl-c{border-radius:var(--r-sm); padding:13px 9px; text-align:center; font-family:'Cairo',sans-serif; background:linear-gradient(135deg,#fff,var(--gold-pale)); border:1px solid var(--gold-light);}
+.pearl-c .e{font-size:26px; display:block;} .pearl-c b{display:block; color:var(--gold-deep); font-size:14px; margin:3px 0;} .pearl-c span{font-size:12px; color:var(--ink-soft);}
+
+.summary{display:grid; grid-template-columns:repeat(4,1fr); gap:7px; margin:12px 0;}
+.summary .ss{border-radius:var(--r-sm); padding:9px 6px; text-align:center; font-family:'Cairo',sans-serif; font-size:12px; border:1px solid var(--line); color:#fff;}
+.summary .ss .lt{font-family:'Cairo',sans-serif; font-size:15px; font-weight:700; display:block;} .summary .ss b{display:block; font-size:12.5px;} .summary .ss span{font-size:11px; opacity:.9;}
+
+.spiral{display:flex; flex-wrap:wrap; align-items:center; gap:7px; justify-content:center; margin:12px 0;}
+.spiral .node{background:var(--blue-pale); border:1px solid var(--blue-soft); border-radius:var(--r-sm); padding:8px 11px; font-family:'Cairo',sans-serif; font-size:12px; color:var(--blue-deep); text-align:center;}
+.spiral .now{background:var(--blue-deep); color:#fff;} .spiral .now b{color:var(--gold-light);}
+.spiral .arr{color:var(--gold-aa); font-weight:700;}
+.recall{display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:12px 0;}
+.recall .r{background:var(--earth-pale); border:1px solid var(--line); border-radius:var(--r-sm); padding:10px 8px; text-align:center; font-family:'Cairo',sans-serif; font-size:12px; color:var(--earth-deep);}
+.recall .r .e{font-size:20px;} .recall .r b{display:block; color:var(--blue-mid); font-size:12.5px; margin:2px 0;}
+
+.pulse{counter-reset:p; margin:12px 0;}
+.pulse .step{display:flex; gap:12px; align-items:flex-start; background:#FBF1F2; border:1px solid #E7B9BC; border-radius:var(--r-sm); padding:9px 14px; margin:6px 0;}
+.pulse .step::before{counter-increment:p; content:counter(p); flex:0 0 auto; width:25px; height:25px; border-radius:50%; background:var(--crimson); color:#fff; font-family:'Cairo',sans-serif; font-weight:700; display:flex; align-items:center; justify-content:center; font-size:13px;}
+.pulse .step .t{font-family:'Cairo',sans-serif; font-size:13.5px;} .pulse .step .t b{color:var(--crimson);}
+.tiers-inline{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0;}
+.tiers-inline .ti{flex:1 1 220px; border-radius:var(--r-sm); padding:10px 14px; font-family:'Cairo',sans-serif; font-size:13.5px;}
+.ti.seed{background:#FBF7EE; border:1px solid var(--gold-light); color:var(--earth-deep);} .ti.bud{background:var(--blue-pale); border:1px solid var(--blue-soft); color:var(--blue-deep);}
+.ti b{display:block;}
+
+.multi{display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin:12px 0;}
+.multi .mc{background:#F6FAFC; border:1px solid var(--blue-pale); border-radius:var(--r-md); padding:14px 16px; font-family:'Cairo',sans-serif; font-size:13.5px;}
+.multi .mc h4{color:var(--blue-mid); font-size:15.5px; margin-bottom:6px;}
+
+.station{border-radius:var(--r-lg); border:1px solid var(--line); background:var(--paper); box-shadow:var(--shadow-sm); overflow:hidden; margin:20px 0;}
+.st-head{padding:18px 22px; color:#fff; display:flex; align-items:center; gap:14px; flex-wrap:wrap;}
+.st-head .em{font-size:40px;} .st-head h3{color:#fff; font-size:21px;} .st-head .nick{font-family:'Amiri',serif; font-size:16px; color:rgba(255,255,255,.92);}
+.st-head .jadhr{font-family:'Cairo',sans-serif; font-size:12px; background:rgba(255,255,255,.18); padding:4px 11px; border-radius:20px; margin-right:auto; font-weight:700;}
+.st-body{padding:16px 22px 20px;}
+.h1c{background:linear-gradient(120deg,var(--s1),var(--s1d));} .h2c{background:linear-gradient(120deg,var(--s2),var(--s2d));}
+.h3c{background:linear-gradient(120deg,var(--s3),var(--s3d));} .h4c{background:linear-gradient(120deg,var(--s4),var(--s4d));}
+.h5c{background:linear-gradient(120deg,var(--s5),var(--s5d));} .h6c{background:linear-gradient(120deg,var(--s6),var(--s6d));}
+.h7c{background:linear-gradient(120deg,var(--s7),var(--s7d));} .h8c{background:linear-gradient(120deg,var(--s8),var(--s8d));}
+.fig{display:block; margin:4px auto 12px;} .fig-g{width:130px;}
+
+.block{border-radius:var(--r-sm); padding:12px 16px; margin:10px 0; border-right:5px solid var(--gold);}
+.block .lbl{font-family:'Cairo',sans-serif; font-weight:700; font-size:14.5px; color:var(--gold-deep); display:block; margin-bottom:3px;}
+.b-voice{background:#F3ECDA; border-right-color:var(--gold-deep); font-family:'Amiri',serif; font-size:19px; color:var(--earth-deep); line-height:1.95;} .b-voice .lbl{color:var(--gold-deep); font-family:'Cairo',sans-serif; font-size:14px;} .b-voice .lbl::before{content:"🪴  ";}
+.b-narr{background:var(--blue-pale); border-right-color:var(--blue-soft);} .b-narr .lbl{color:var(--blue-mid);} .b-narr .lbl::before{content:"📖  ";}
+.b-fruit{background:#EAF4F1; border-right-color:var(--s6);} .b-fruit .lbl{color:var(--s6d);}
+.homeact{background:#FBF1E6; border-right:5px solid var(--earth); border-radius:var(--r-sm); padding:10px 16px; margin:10px 0; font-family:'Cairo',sans-serif; font-size:14px; color:var(--earth-deep);}
+.homeact .lbl{font-weight:700; display:block; margin-bottom:2px;} .homeact .lbl::before{content:"🏡 الفعل البيتيّ: ";}
+.chant{background:linear-gradient(135deg,#FFF6E2,#FBF3DD); border:1px solid var(--gold); border-radius:var(--r-md); padding:12px 18px; margin:10px 0; font-family:'Amiri',serif; font-size:21px; color:var(--gold-deep); text-align:center; line-height:2;}
+.chant .lbl{font-family:'Cairo',sans-serif; font-weight:700; font-size:14px; color:var(--gold-deep); display:block; margin-bottom:5px;} .chant .lbl::before{content:"🎵  ";}
+.chant .move{font-family:'Cairo',sans-serif; font-size:12.5px; color:var(--ink-soft); margin-top:6px; display:block;}
+.silentq{background:#EEF0F2; border:1.5px dashed var(--silver); border-radius:var(--r-sm); padding:11px 16px; margin:10px 0; color:#3A3E44;}
+.silentq .lbl{font-family:'Cairo',sans-serif; font-weight:700; font-size:14.5px; color:var(--silver); display:block; margin-bottom:3px;} .silentq .lbl::before{content:"□ صمت السؤال: ";}
+.tbreath{text-align:center; font-family:'Cairo',sans-serif; font-size:13.5px; color:var(--blue-mid); background:var(--blue-pale); border:1px solid var(--blue-soft); border-radius:20px; padding:6px 16px; margin:0 0 10px; display:block;} .tbreath::before{content:"🫁  ";}
+.anchor-h{background:#FBF1F2; border-right:5px solid var(--crimson); border-radius:var(--r-sm); padding:8px 14px; margin:9px 0; font-family:'Cairo',sans-serif; font-size:13.5px; color:#7A2A30;}
+.anchor-h .lbl{font-weight:700; display:block; margin-bottom:2px;} .anchor-h .lbl::before{content:"💓  ";}
+.echo{background:#FBF1E2; border-right:5px solid var(--earth); border-radius:var(--r-sm); padding:8px 14px; margin:9px 0; font-family:'Cairo',sans-serif; font-size:13.5px; color:var(--earth-deep);}
+.echo .lbl{font-weight:700; color:var(--earth-deep); display:block; margin-bottom:2px;} .echo .lbl::before{content:"🔁  ";}
+.protocol{background:#EAF2F6; border-right:5px solid var(--s8); border-radius:var(--r-sm); padding:11px 16px; margin:10px 0; font-family:'Cairo',sans-serif; font-size:13.5px; color:#1F4E66;}
+.protocol .lbl{font-weight:700; display:block; margin-bottom:4px; color:#1F4E66;} .protocol .lbl::before{content:"🧪 بروتوكول التطبيق: ";}
+.protocol ol{margin:3px 0 0; padding-right:20px;} .protocol li{margin:2px 0;}
+.protocol-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:4px 10px; margin:4px 0 8px; padding:8px 11px; background:#fff; border:1px solid var(--blue-soft); border-radius:8px;}
+.protocol-item{font-size:12.5px; color:#1F4E66;} .protocol-item b{color:var(--blue-deep);} .protocol-item:last-child{grid-column:1 / -1;}
+.safety{background:#FFF4E5; border-right:5px solid #B8860B; border-radius:var(--r-sm); padding:9px 15px; margin:9px 0; font-family:'Cairo',sans-serif; font-size:13.5px; color:#8A6D2E;}
+.safety .lbl{font-weight:700; display:block; margin-bottom:2px;} .safety .lbl::before{content:"🛡️ سلامةٌ حسّيّةٌ: ";}
+.pearl{background:#F6EEFB; border:1px dashed #B98BD0; border-radius:var(--r-sm); padding:8px 14px; margin:9px 0; font-family:'Cairo',sans-serif; font-size:13.5px; color:#6A3E80;}
+.pearl .lbl{font-weight:700; display:block; margin-bottom:2px;} .pearl .lbl::before{content:"💎  ";}
+.bridge{font-family:'Cairo',sans-serif; font-size:13.5px; color:#1B4E64; background:#E2EFF5; border:1px solid #8FBBD0; border-radius:var(--r-sm); padding:8px 14px; margin:9px 0;}
+.bridge .lbl{font-weight:700; display:block; margin-bottom:2px;} .bridge .lbl::before{content:"🌉  ";} .bridge .en{font-style:italic; color:#275680;direction:ltr;unicode-bidi:isolate;}
+.meaning{display:block; margin-top:4px; font-size:12.5px; color:#1B4E64;} .meaning::before{content:"↪ المعنى: "; font-weight:700;}
+.adapt{background:#EAF1F8; border:1px dashed var(--s2); border-radius:var(--r-sm); padding:8px 14px; margin:9px 0; font-family:'Cairo',sans-serif; font-size:13.5px; color:var(--s2d);}
+.adapt .lbl{font-weight:700; display:block; margin-bottom:2px;} .adapt .lbl::before{content:"♿  ";}
+.silent-arch{background:var(--silver-pale); border:1.5px dashed var(--silver); border-radius:var(--r-sm); padding:8px 14px; margin:9px 0; font-family:'Cairo',sans-serif; font-size:13.5px; color:#3A3E44;}
+.silent-arch .lbl{font-weight:700; color:var(--silver); display:block; margin-bottom:2px;} .silent-arch .lbl::before{content:"🤫  ";}
+.bag{background:#F7F4EC; border:1px solid var(--line); border-radius:var(--r-sm); padding:8px 14px; margin:9px 0; font-family:'Cairo',sans-serif; font-size:13.5px; color:var(--ink-soft);}
+.bag .lbl{font-weight:700; color:var(--earth-deep); display:block; margin-bottom:2px;} .bag .lbl::before{content:"🧳  ";}
+.compnote{background:#F6FAFC; border:1px solid var(--blue-pale); border-radius:var(--r-sm); padding:9px 14px; margin:9px 0; font-family:'Cairo',sans-serif; font-size:13.5px; color:var(--ink-soft);}
+.compnote .lbl{color:var(--blue-mid); font-weight:700;} .compnote .lbl::before{content:"🔹  ";}
+.lath{background:linear-gradient(135deg,#FFFBF0,#FBF3DD); border-right:4px solid var(--gold); border-radius:var(--r-sm); padding:7px 14px; margin:9px 0; font-family:'Cairo',sans-serif; font-size:13px; color:var(--gold-deep);}
+.lath .lbl{font-weight:700;} .lath .lbl::before{content:"💡 لحظةُ اللذاذة: ";}
+
+table{width:100%; border-collapse:collapse; margin:12px 0; font-family:'Cairo',sans-serif; font-size:15px;}
+th,td{border:1px solid var(--line); padding:9px 12px; text-align:right; vertical-align:top;}
+thead th{background:var(--blue-deep); color:#fff; font-weight:700;}
+tbody tr:nth-child(even){background:var(--blue-pale);}
+.wordbridge .wb{display:flex; flex-wrap:wrap; align-items:center; gap:7px; justify-content:center; background:#F6FAFC; border:1px solid var(--blue-pale); border-radius:var(--r-sm); padding:8px 12px; margin:6px 0; font-family:'Cairo',sans-serif; font-size:13.5px;}
+.wordbridge .cell{background:#fff; border:1.5px solid var(--gold); border-radius:8px; padding:4px 11px; font-family:'Amiri',serif; font-size:19px; color:var(--ink);}
+.wordbridge .word{background:var(--gold-pale); border-color:var(--gold); color:var(--gold-deep); font-weight:700;}
+.wordbridge .arr{color:var(--gold-aa); font-weight:700;}
+
+.note{border-radius:var(--r-md); padding:15px 20px; margin:12px 0;}
+.warn{background:#FFF4E5; border:1px solid #F0C078;} .warn h4{color:var(--gold-deep); margin-bottom:8px;}
+.danger{background:#FBECEC; border:1px solid #E0A0A0;} .danger h4{color:var(--crimson); margin-bottom:8px;}
+.compass{background:#EAF2F6; border:1px solid #A9C7D8;} .compass h4{color:var(--blue-mid); margin-bottom:8px;}
+.lathatha{background:linear-gradient(135deg,#FFF6E2,#FBF3DD); border:1px solid var(--gold); border-radius:var(--r-md); padding:15px 20px; margin:12px 0;} .lathatha h4{color:var(--gold-deep); margin-bottom:6px;} .lathatha h4::before{content:"💎  ";}
+.note ul{margin:6px 0 0; padding-right:22px;} .note li{margin:4px 0;}
+.transition{text-align:center; background:#fff; border:2px solid var(--blue-mid); color:var(--blue-deep); font-family:'Cairo',sans-serif; font-weight:700; border-radius:var(--r-md); padding:13px 18px; margin:14px 0; font-size:15.5px;}
+.kit{background:#FFFDF6; border:1px dashed var(--gold); border-radius:var(--r-sm); padding:13px 18px; margin:11px 0; font-family:'Cairo',sans-serif; font-size:13.5px;}
+.kit .h{font-weight:700; color:var(--gold-deep); display:block; margin-bottom:5px;}
+.seal-block{display:flex; align-items:center; gap:20px; flex-wrap:wrap; justify-content:center; background:linear-gradient(135deg,#FFFDF6,#FBF3DD); border:2px solid var(--gold-light); border-radius:var(--r-md); padding:18px 22px; margin:14px 0;}
+.seal-lg{width:148px; height:148px; flex:0 0 auto;}
+.seal-block .t{font-family:'Cairo',sans-serif; color:var(--gold-deep); font-size:14.5px; max-width:520px;} .seal-block .t b{color:var(--blue-deep);}
+.refs{font-family:'Cairo',sans-serif; font-size:13.5px; color:var(--ink-soft);} .refs li{margin:5px 0;} .refs b{color:var(--blue-deep);}
+
+.footer{margin-top:40px; text-align:center; color:#fff; border-radius:var(--r-lg); padding:32px 26px; background:radial-gradient(120% 120% at 50% 0%, #2E6B9E, #16324A 72%);}
+.footer .q{font-family:'Amiri',serif; font-size:21px; color:var(--gold-light); margin-bottom:12px;}
+.footer p{margin:3px 0; font-family:'Cairo',sans-serif; font-size:13.5px; opacity:.92;} .footer .v{color:var(--gold-light); margin-top:12px;}
+.footer .f-emblems{display:flex; align-items:center; justify-content:center; gap:18px; margin-bottom:10px;}
+.footer .logo-sm{width:52px; height:52px; opacity:.92;} .footer .seal-sm{width:58px; height:58px; opacity:.92;}
+
+@media print{
+  body{background:#fff; font-size:13pt;} .wrap{max-width:none; padding:0;} .nav{display:none;}
+  .cover{margin:0 0 16px; box-shadow:none;} .sheet{break-before:page;}
+  .station,.card,.note,table,.pearls,.recall,.lathatha,.seal-block,.chant,.kit,.pulse,.silent-arch,.anchor-h,.echo,.homeact,.bag,.multi,.safety,.protocol,.disclosure,.lath{break-inside:avoid;}
+  .footer{break-inside:avoid;} a{color:inherit; text-decoration:none;} @page{size:A4; margin:15mm 13mm;}
+}
+@media (max-width:680px){ body{font-size:18px;} .pearls,.summary,.recall,.multi{grid-template-columns:repeat(2,1fr);} .cover h1{font-size:26px;} }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="ringGold" cx="50%" cy="34%" r="78%"><stop offset="0%" stop-color="#F2DFA6"/><stop offset="100%" stop-color="#C29333"/></radialGradient>
+    <g id="treeLogo">
+      <circle cx="100" cy="100" r="92" fill="none" stroke="url(#ringGold)" stroke-width="3.6"/>
+      <circle cx="100" cy="100" r="85" fill="none" stroke="#E7CF93" stroke-width="0.9" opacity="0.55" stroke-dasharray="1.4 4.5"/>
+      <path d="M100 138 C97 120 97 110 100 96 C103 84 103 78 100 66" fill="none" stroke="url(#ringGold)" stroke-width="6" stroke-linecap="round"/>
+      <g fill="none" stroke="url(#ringGold)" stroke-width="3" stroke-linecap="round">
+        <path d="M100 82 C88 74 80 66 70 58"/><path d="M70 58 C64 53 60 48 54 44"/><path d="M70 58 C68 50 67 46 64 40"/>
+        <path d="M100 90 C90 86 84 82 76 76"/><path d="M100 72 C100 62 100 56 100 48"/>
+        <path d="M100 82 C112 74 120 66 130 58"/><path d="M130 58 C136 53 140 48 146 44"/><path d="M130 58 C132 50 133 46 136 40"/>
+        <path d="M100 90 C110 86 116 82 124 76"/>
+      </g>
+      <g fill="#E7CF93"><circle cx="100" cy="46" r="8"/><circle cx="54" cy="44" r="6.5"/><circle cx="64" cy="39" r="5"/><circle cx="146" cy="44" r="6.5"/><circle cx="136" cy="39" r="5"/><circle cx="76" cy="75" r="5"/><circle cx="124" cy="75" r="5"/><circle cx="88" cy="58" r="4.5"/><circle cx="112" cy="58" r="4.5"/></g>
+      <g fill="none" stroke="#C9A24B" stroke-linecap="round">
+        <path d="M100 120 C88 128 80 136 70 146" stroke-width="3.2"/><path d="M70 146 C64 151 60 155 55 160" stroke-width="2"/>
+        <path d="M100 116 C92 122 86 128 78 134" stroke-width="2.4"/><path d="M100 138 C100 150 100 156 100 158" stroke-width="3.2"/>
+        <path d="M100 120 C112 128 120 136 130 146" stroke-width="3.2"/><path d="M130 146 C136 151 140 155 145 160" stroke-width="2"/>
+        <path d="M100 116 C108 122 114 128 122 134" stroke-width="2.4"/>
+      </g>
+      <g fill="#C9A24B"><circle cx="55" cy="160" r="2.4"/><circle cx="145" cy="160" r="2.4"/><circle cx="100" cy="160" r="2.6"/><circle cx="78" cy="134" r="2"/><circle cx="122" cy="134" r="2"/></g>
+    </g>
+  </defs>
+</svg>
+
+<nav class="nav" aria-label="فهرس">
+  <a href="#cover">الغلاف</a><a href="#summary">المحطّات</a><a href="#pulse">النبض</a><a href="#multi">الحواسّ</a>
+  <a href="#w1">تقفُ</a><a href="#w2">مَنْ؟</a><a href="#w3">ماذا؟</a><a href="#w4">تطولُ</a><a href="#w5">تُخبرُ؟</a><a href="#w6">نبضٌ</a><a href="#w7">الكتابُ</a><a href="#w8">جملتي</a>
+  <a href="#track">المقياس</a><a href="#home">البيت</a>
+</nav>
+
+<div class="wrap">
+
+<header class="cover" id="cover">
+  <div class="cover-emblems">
+    <svg class="seal" viewBox="0 0 220 220" role="img" aria-label="ختم مشروع جُذُور">
+      <defs><path id="arcTopC" d="M 40 110 A 70 70 0 0 1 180 110"/><path id="arcBotC" d="M 180 110 A 70 70 0 0 1 40 110"/></defs>
+      <circle cx="110" cy="110" r="105" fill="none" stroke="#E7CF93" stroke-width="2"/>
+      <circle cx="110" cy="110" r="98" fill="none" stroke="#E7CF93" stroke-width="4"/>
+      <circle cx="110" cy="110" r="90" fill="none" stroke="#E7CF93" stroke-width="0.9" stroke-dasharray="2 4.5" opacity="0.7"/>
+      <text dir="rtl" font-family="Cairo,sans-serif" font-weight="700" font-size="15" fill="#E7CF93" letter-spacing="1"><textPath href="#arcTopC" startOffset="50%" text-anchor="middle">مَشْرُوعُ جُذُور</textPath></text>
+      <text dir="rtl" font-family="Cairo,sans-serif" font-weight="700" font-size="12" fill="#E7CF93"><textPath href="#arcBotC" startOffset="50%" text-anchor="middle">بَيَانُ الاسْتِرْشَاد</textPath></text>
+      <text x="22" y="116" font-size="13" fill="#E7CF93">✦</text><text x="190" y="116" font-size="13" fill="#E7CF93">✦</text>
+      <g transform="translate(110,112) scale(0.5) translate(-100,-100)"><use href="#treeLogo"/></g>
+    </svg>
+  </div>
+  <div class="brand">مَشْرُوعُ جُذُور</div>
+  <h1>السِّفْرُ الثَّامِنُ: جِسْرُ الجُمْلَةِ</h1>
+  <div class="sub">الجُمْلَةُ تُحَسُّ كَامِلَةً قَبْلَ أَنْ تُحَلَّلَ — تَقِفُ، وَتَحْكِي، وَتَتَنَفَّسُ</div>
+  <p class="aphorism">«الجُمْلَةُ جِسْرٌ: تَقِفُ وَحْدَهَا، وَلَهَا صَاحِبٌ وَحَرَكَةٌ، وَتُقْرَأُ في نَفَسٍ وَاحِدٍ»<small>حكمةُ مشروع جُذُور</small></p>
+  <p class="motto">«الجَسَدُ يَقْرَأُ الحَرْفَ قَبْلَ العَقْلِ. كُلُّ نَشَاطٍ يَبْدَأُ بِالإِحْسَاسِ وَيَصِلُ إِلَى المَعْنَى، لَا العَكْسِ.» — Amer (2024)</p>
+  <p class="slogan">✦ الحَرْفُ يُولَدُ بِتَقَاطُعِ الحَوَاسِّ، وَالمَعْنَى يُعْرَفُ بِتَعَدُّدِ السِّيَاقِ ✦</p>
+  <p class="cover-author" style="font-family:'Cairo',sans-serif; font-size:13px; color:#EADFC2; opacity:.92; margin:8px 0 2px; letter-spacing:.3px;">تأليف: د. عادل ف. عامر · Dr. Adel F. Amer · ORCID: 0009-0008-9618-3863</p>
+  <div class="chips">
+    <span class="chip">مسارُ الجسور · ٦–٨ سنوات</span>
+    <span class="chip">الكود اللونيّ — الأزرق (الجسور)</span>
+    <span class="chip authored">✍ تأليفٌ على TRT — لا إصدارٌ من مصدرٍ</span>
+    <span class="chip">يُكمل ثُلاثيَّ الجسور (٦·٧·٨) ويُغلق المرحلة</span>
+    <span class="chip">CEFR A1 · UNESCO · NAEYC DAP</span>
+    <span class="chip">الدستور العالميّ للطفل v10.2 · معاييرُ الوصولِ (استرشادًا)</span>
+  </div>
+</header>
+<div class="layers-key" style="max-width:900px; margin:18px auto; padding:14px 18px; background:#FBF9F3; border:1px solid #E3D7B8; border-right:5px solid #C9A24B; border-radius:12px; font-family:'Cairo',sans-serif; color:#4A3D1E; font-size:14px; line-height:1.95;"><strong style="color:#8A6D2E;">🧭 مفتاحُ طبقات المحطّة (للميسّر):</strong> كلُّ محطّةٍ طبقتان — <strong>نواةٌ إلزاميّةٌ</strong> تكفي وحدها لتحقيق الهدف: المِرْسَاةُ (الفلسفة)، والنشاطُ الحِسّيُّ، وبروتوكولُ التطبيق، والترديدةُ أو الأهزوجة. و<strong>طبقةٌ إثرائيّةٌ</strong> تُضاف عند اتّساع الوقت لا فرضًا: الجسرُ العابرُ للّغات، والصدى التراكميّ، ولحظةُ اللذاذة، والبدائلُ الحِسّيّةُ ومسارُ المُكتشِف الصامت، وطبقةُ المُرافِق. خُذْ بالنواة أوّلًا، ثمّ أضِفِ الإثراءَ بقدر ما يتّسع له نَفَسُ الطفل — فالطقوسُ خادمةٌ للمعنى لا غايةٌ.</div>
+
+
+<div class="disclosure">
+  <h3>إفصاحٌ منهجيٌّ (أمانةٌ علميّةٌ)</h3>
+  <p>هذا السِّفْرُ <strong>تأليفٌ على نظريّة القراءة الملموسة (TRT — Amer 2024)</strong> وعلى الإحالات المتقدّمة في «جسر القراءة» و«محطّات الكلمة» — وليس إصدارًا من مخطوطةٍ أصليّةٍ. أُلِّف ليُكمل <strong>ثُلاثيَّ الجسور (٦·٧·٨)</strong> ويُغلق مرحلةَ الجسور بلا فجوةٍ في تسلسل ١–١٤. وهو <strong>متمايزٌ عن «معمل الجمل» (المرحلة البنفسجيّة)</strong>: هنا تُحَسُّ الجملةُ كاملةً (تقفُ، تحكي، تتنفّس) بلا تحليلٍ نحويٍّ، وهناك تُبنى وتُحلَّل قواعديًّا. يلتزم بأمانة «سِفر البوصلة المكسورة»: لا يدّعي فاعليّةً بالأرقام، وقابلٌ للمراجعة عند ورود مخطوطة المؤلِّف.</p>
+ وَالحَوَاسُّ الدَّاخِلِيَّةُ (الثِّقَلُ، البَيْنُ، الاتِّزَانُ، الحَرَارَةُ، النَّفَسُ) وَسَائِطُ تَخَيُّلِيَّةٌ تَرْبَوِيَّةٌ تُقَرِّبُ المَعْنَى لِجَسَدِ الطِّفْلِ وَتُعِينُهُ عَلَى التَّذَكُّرِ، لَا ادِّعَاءٌ عَصَبِيٌّ مُثْبَتٌ.</div>
+
+<section id="pearls">
+  <div class="card">
+    <div class="sec-head"><span class="ic">✨</span><h2>تَمْهِيدٌ: بِلِسَانِ البَذْرَةِ + لآلِئُ الصُّمُودِ</h2></div>
+    <div class="block b-voice" style="margin-bottom:14px;"><span class="lbl">بِلِسَانِ البَذْرَةِ</span>«تَعَلَّمْتُ أَنْ أَبْنِيَ الكَلِمَةَ بِيَدِي، وَأَنْ أَجْمَعَ كَلِمَتَيْنِ… وَالآنَ أُرِيدُ أَنْ أَعْرِفَ: مَتَى تَصِيرُ الكَلِمَاتُ جُمْلَةً تَقِفُ وَحْدَهَا وَتَحْكِي؟ أُرِيدُ أَنْ أُحِسَّ الجُمْلَةَ كَامِلَةً — أَنْ أَشْعُرَ بِهَا تَقِفُ، وَتَتَنَفَّسُ، قَبْلَ أَنْ أُفَكِّكَهَا.»</div>
+    <p class="lead">بعد أن بنى الطفلُ الكلمةَ وجمَع كلمتين (في محطّات الكلمة)، يأتي <strong>جِسْرُ الجملة</strong>: ثماني محطّاتٍ حسّيّةٍ يُحِسُّ فيها <strong>الجملةَ البسيطةَ كائنًا حيًّا كاملًا</strong> — تقفُ وحدَها، ولها صاحبٌ وحركةٌ، وتطولُ، وتُخبر أو تسأل، وتُقرأ في نفَسٍ واحدٍ — <strong>بلا تحليلٍ نحويٍّ</strong> (ذاك لمعمل الجمل). الحواسُّ المهيمنةُ: <strong>الحركةُ</strong> (تمثيلُ الجملة)، و<strong>الإيقاعُ السمعيّ</strong> (نغمةُ الجملة ونفَسُها)، و<strong>البصرُ المركّز</strong> (حدودُ الجملة). واللآلئُ تحصّنها:</p>
+    <div class="pearls">
+      <div class="pearl-c"><span class="e">💓</span><b>النبضُ الحيّ</b><span>يتحسّس نبضَه قبل كلّ محطّةٍ؛ والجملةُ تُقرأ على قوسِ نفَسٍ واحدٍ.</span></div>
+      <div class="pearl-c"><span class="e">🏺</span><b>الأثرُ الباقي</b><span>بناءُ الجمل ببطاقاتٍ ملموسةٍ وحفظُ «جملتي» في صندوق الجُمَل.</span></div>
+      <div class="pearl-c"><span class="e">🔦</span><b>الظلُّ والضوءُ</b><span>اكتشافُ حدود الجملة بمصباحٍ على نصٍّ بارزٍ، بعيدًا عن وهج الشاشة.</span></div>
+      <div class="pearl-c"><span class="e">👂</span><b>الصوتُ الأصيلُ</b><span>الإنصاتُ إلى نغمة الخبر والسؤال ونفَس الجملة، لا إلى الإشعارات.</span></div>
+    </div>
+    <div class="golden-rule">«لَا تَشْرَحْ لِلطِّفْلِ قَوَاعِدَ الجُمْلَةِ. دَعْهُ يُحِسَّهَا تَقِفُ وَتَتَنَفَّسُ، ثُمَّ صِفْ مَا حَدَثَ.»</div>
+  </div>
+
+  <div class="card" id="summary">
+    <div class="sec-head"><span class="ic">🗺️</span><h2>المُلَخَّصُ التَّنْفِيذِيُّ: ثَمَانِي مَحَطَّاتٍ لِلْجُمْلَةِ</h2></div>
+    <p class="lead">تنتقل المحطّاتُ بالطفل من <strong>الإحساس بأنّ الجملةَ تقفُ وحدَها</strong> إلى <strong>صناعة جملته وكتابتها</strong> — قوسٌ يُغلق مرحلةَ الجسور ويمهّد للبنفسجيّة:</p>
+    <div class="summary">
+      <div class="ss" style="background:var(--s1d);"><span class="lt">تقفُ</span><b>الجملةُ تامّةٌ</b><span>تقفُ وحدَها</span></div>
+      <div class="ss" style="background:var(--s2d);"><span class="lt">مَنْ؟</span><b>صاحبُها</b><span>مَن يفعل</span></div>
+      <div class="ss" style="background:var(--s3d);"><span class="lt">ماذا؟</span><b>حركتُها</b><span>ماذا يفعل</span></div>
+      <div class="ss" style="background:var(--s4d);"><span class="lt">تطولُ</span><b>تكبر</b><span>وتبقى تقف</span></div>
+      <div class="ss" style="background:var(--s5d);"><span class="lt">تُخبرُ؟</span><b>خبرٌ/سؤالٌ</b><span>نغمةٌ تتغيّر</span></div>
+      <div class="ss" style="background:var(--s6d);"><span class="lt">نبضٌ</span><b>نفَسٌ واحدٌ</b><span>قوسُ الجملة</span></div>
+      <div class="ss" style="background:var(--s7d);"><span class="lt">الكتابُ</span><b>جملةٌ حقيقيّةٌ</b><span>تُقرأ كاملةً</span></div>
+      <div class="ss" style="background:var(--s8d);"><span class="lt">جملتي</span><b>أصنعها</b><span>وأكتبها</span></div>
+    </div>
+    <p style="margin-top:10px;"><strong>القاسمُ المشترك:</strong> الجملةُ في كلّ محطّةٍ <em>كائنٌ يُحَسُّ</em>: تقفُ بالاتزان، ويُشار إلى صاحبها، وتُمثَّل حركتُها بالثقل والجسد، وتطولُ فتثقُل، وتُخبر أو تسأل بالنغمة، وتُقرأ في نفَسٍ. ولا إعرابَ ولا مصطلحاتٍ نحويّةً — كلُّه إحساسٌ يمهّد لمعمل الجمل.</p>
+    <div class="note warn"><h4>⚠️ وتيرةُ التقديم</h4>كلُّ الجمل هنا <strong>بسيطةٌ قصيرةٌ</strong> (صاحبٌ + حركةٌ). محطّةٌ واحدةٌ لكلّ جلسةٍ. لا «قواعد» تُلقَّن، بل أحاسيسُ تُكتشَف. لا يُنتقَل إلى «تطولُ» قبل أن تستقرَّ «تقفُ وحدَها».</div>
+  </div>
+
+  <div class="card">
+    <div class="sec-head"><span class="ic">🌀</span><h2>الحَبْلُ السُّرِّيُّ + خَرِيطَةُ التَّذَكُّرِ</h2></div>
+    <div class="recall">
+      <div class="r"><span class="e">🌉</span><b>جسرُ القراءة</b>من الحرف إلى الكلمة إلى الكتاب</div>
+      <div class="r"><span class="e">🗺️</span><b>محطّاتُ الكلمة</b>الكلمةُ تُبنى وتُكسَر وتُجمَع (وجمعُ كلمتين)</div>
+      <div class="r"><span class="e">🌉</span><b>جسرُ الجملة</b>الجملةُ تُحَسُّ كاملةً (هذا السفر)</div>
+    </div>
+    <div class="spiral" style="margin-top:8px;">
+      <div class="node">🌉 جسرُ القراءة</div><span class="arr">←</span>
+      <div class="node">🗺️ محطّاتُ الكلمة</div><span class="arr">←</span>
+      <div class="node now"><b>🌉 جِسرُ الجملة</b><br>(هذا السفر)</div><span class="arr">←</span>
+      <div class="node">🧩 ورشةُ المعاني (المرحلة البنفسجيّة)</div>
+    </div>
+    <p style="margin-top:8px; font-family:'Cairo',sans-serif; font-size:13px; color:var(--ink-soft);">جسرُ الجملة يأخذ «بذرةَ جمع الكلمتين» من السفر السابق ويُنمّيها: من عبارةٍ من كلمتين إلى <strong>جملةٍ تامّةٍ تقفُ وتحكي وتتنفّس</strong> — ثم تأتي المرحلةُ البنفسجيّةُ لتفتح ما بداخلها (ورشةُ المعاني) وتبنيها قواعديًّا (معملُ الجمل).</p>
+  </div>
+</section>
+
+<section id="pulse">
+  <div class="card">
+    <div class="sec-head"><span class="ic">📜</span><h2>طَقْسُ الأَنْفَاسِ (النَّبْضُ الحَيُّ) + الدُّرَجُ العُمُرِيَّةُ</h2></div>
+    <p class="lead">قبل كلّ محطّةٍ: <strong>شهيقٌ عميقٌ من الأنف (٤ عدّات) + زفيرٌ طويلٌ من الفم مع «هـــــ» (٦ عدّات)</strong> — والنفَسُ هنا مفتاحٌ مزدوجٌ: يهدّئ، ويهيّئ لإحساس «الجملة في نفَسٍ واحدٍ».</p>
+    <div class="pulse">
+      <div class="step"><div class="t"><b>المرساة:</b> كفٌّ على الصدر + شهيقٌ ٤ / زفيرٌ ٦. «اشعر بقلبك… دعه يتحدّث إليك.»</div></div>
+      <div class="step"><div class="t"><b>التحوّل:</b> تُفتح المحطّةُ («بلسان الجملة»)، فينتقل الطفلُ إلى الإحساس بالجملة ككلٍّ حيٍّ.</div></div>
+      <div class="step"><div class="t"><b>صمتُ السؤال:</b> ٤–٥ ثوانٍ، والجسدُ يبلّغ (يقفُ متّزنًا، يشير لصاحب الجملة، يمثّل حركتَها).</div></div>
+      <div class="step"><div class="t"><b>الاكتشاف:</b> تقفُ الجملةُ أو تطولُ أو تتنفّس — لا تُلقَّن قاعدةٌ، بل يُكتشف إحساسٌ.</div></div>
+      <div class="step"><div class="t"><b>التكامل:</b> العودةُ إلى السكون، ويُحفظ أثرُ الجملة.</div></div>
+    </div>
+    <div class="tiers-inline" style="margin-top:12px;">
+      <div class="ti seed"><b>🌰 مسارُ البذرة (الأصغر · نحو ٦)</b>يحسّ أنّ الجملةَ «تقفُ» مقابل العبارة التي «تميل»، ويشير إلى صاحبها، ويمثّل حركتَها البسيطةَ بمساعدةٍ.</div>
+      <div class="ti bud"><b>🌱 مسارُ البرعم (الأكبر · ٧–٨)</b>يبني جملةً تامّةً تقفُ وحدها، ويطيلها، ويميّز الخبرَ من السؤال بالنغمة، ويقرؤها في نفَسٍ، ويصنع جملتَه ويكتبها.</div>
+    </div>
+  </div>
+</section>
+
+<section id="multi">
+  <div class="card">
+    <div class="sec-head"><span class="ic">🎭</span><h2>المَرَاسِي الحِسِّيَّةُ المُتَعَدِّدَةُ (قَبْلَ المَحَطَّاتِ)</h2></div>
+    <div class="multi">
+      <div class="mc"><h4>🧍 مسرحُ الجملة</h4>يقف الطفلُ بطاقتين حيّتين: طفلٌ «صاحبٌ» وطفلٌ «حركةٌ». حين يقفان معًا تكتمل الجملةُ وتقفُ؛ وحين يغيب أحدُهما «تميل» ولا تكتمل — فيُحِسُّ التمامَ بجسده.</div>
+      <div class="mc"><h4>🔗 حبلُ الجملة</h4>حبلٌ ومشابكُ تُعلَّق عليها بطاقاتُ الكلمات يمينًا فيسارًا فتصير جملةً مرئيّةً ملموسةً، تطول كلّما أضفنا بطاقةً ويبقى الحبلُ «واقفًا».</div>
+      <div class="mc"><h4>🎵 نغمةُ الجملة</h4>تُقال الجملةُ نفسُها مرّةً خبرًا (الصوتُ يهبط، كفٌّ تنزل «.») ومرّةً سؤالًا (الصوتُ يصعد، كفٌّ ترتفع «؟») — فيُحِسُّ الفرقَ في النغمة والجسد.</div>
+      <div class="mc"><h4>🫁 نفَسُ الجملة</h4>يرسم الطفلُ قوسًا بيده في الهواء بينما يقول جملةً في نفَسٍ واحدٍ، ويتوقّف عند «.» — فيُحِسُّ أنّ للجملة قوسَ نفَسٍ يميّزها عن مقاطع الكلمة.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== المحطّة ١: الجملةُ تقفُ وحدَها ===== -->
+<section id="w1" class="sheet">
+  <div class="station">
+    <div class="st-head h1c"><span class="em">🧍</span><div><h3>المَحَطَّةُ ١: الجُمْلَةُ تَقِفُ وَحْدَهَا</h3><span class="nick">«الجُمْلَةُ التَّامَّةُ تَقِفُ، وَالعِبَارَةُ النَّاقِصَةُ تَمِيلُ»</span></div><span class="jadhr">جذر: ج-م-ل · حسّ: الاتزان</span></div>
+    <div class="st-body">
+      <svg class="fig fig-g" viewBox="0 0 140 80" role="img" aria-label="جملةٌ تامّةٌ تقف وعبارةٌ تميل">
+        <rect x="74" y="20" width="52" height="44" rx="4" fill="#fff" stroke="#1A5450" stroke-width="2"/><text x="100" y="40" text-anchor="middle" font-family="Amiri,serif" font-size="12" fill="#1A5450">القِطّةُ</text><text x="100" y="56" text-anchor="middle" font-family="Amiri,serif" font-size="12" fill="#1A5450">تَنامُ</text>
+        <line x1="74" y1="66" x2="126" y2="66" stroke="#2E847E" stroke-width="2.5"/><text x="100" y="76" text-anchor="middle" font-family="Cairo,sans-serif" font-size="9" fill="#1A5450">تقفُ ✓</text>
+        <g transform="rotate(14 40 50)"><rect x="16" y="30" width="48" height="30" rx="4" fill="#EDEFF8" stroke="#5A6BB0" stroke-width="1.6"/><text x="40" y="49" text-anchor="middle" font-family="Amiri,serif" font-size="11" fill="#3A4680">قِطّةٌ بيضاءُ</text></g>
+        <text x="40" y="76" text-anchor="middle" font-family="Cairo,sans-serif" font-size="9" fill="#3A4680">تميلُ…</text>
+      </svg>
+      <span class="tbreath">طقسُ الأنفاس: شهيقٌ ٤، زفيرٌ ٦ مع «هـــ».</span>
+      <div class="anchor-h"><span class="lbl">المرساة (الجسدُ والاتزانُ أوّلًا)</span>كفٌّ على الصدر، ثم يقف الطفلُ <strong>متوازنًا على قدمين ثابتتين</strong> حين يسمع جملةً تامّةً («القِطّةُ تنامُ»)، و<strong>يميل/يترنّح</strong> حين يسمع عبارةً ناقصةً («قِطّةٌ بيضاءُ…»). قبل الحكم: <strong>قفْ ساكنًا ٤–٥ ثوانٍ واسأل جسدك: أأقفُ متّزنًا أم أكاد أميل؟</strong> <em>همس: «أتقفُ هذه وحدَها، أم تنتظر شيئًا؟»</em></div>
+      <div class="echo"><span class="lbl">صدًى تراكميٌّ</span>في محطّات الكلمة جمعتَ كلمتين في عبارةٍ («قِطّةٌ بيضاءُ»)؛ والآن تكتشف أنّ بعضَ ما نقوله <em>يقفُ وحدَه ويكتمل</em> («القِطّةُ تنامُ») وبعضَه <em>يميل وينتظر</em> — هذا الفرقُ هو سرُّ الجملة.</div>
+      <div class="block b-voice"><span class="lbl">بلسانُ الجملة</span>«أَنا الجُمْلَةُ التَّامَّةُ. أَقِفُ وَحْدِي وَلَا أَحْتَاجُ إِلَى أَحَدٍ: «القِطّةُ تَنامُ» — قُلْتُ شَيْئًا كَامِلًا وَسَكَتُّ مُرْتَاحَةً. أَمَّا «قِطّةٌ بَيْضَاءُ» فَتَمِيلُ وَتَنْتَظِرُ: بَيْضَاءُ… مَاذَا تَفْعَلُ؟ أَنا أَقِفُ حِينَ يَكْتَمِلُ المَعْنَى.»</div>
+      <div class="homeact"><span class="lbl"></span>قولا أشياءَ ناقصةً وأشياءَ تامّةً، ويقف الطفلُ متّزنًا للتامّة ويميل للناقصة بمرحٍ.</div>
+      <div class="block b-narr"><span class="lbl">التحوّل السرديّ</span>يسمع الطفلُ: «الوَلَدُ يَأْكُلُ». يقف ثابتًا — الجملةُ وقفت! ثم يسمع: «وَلَدٌ صَغِيرٌ…». يترنّح — تنتظر شيئًا! يضحك ويقول: «صغيرٌ ماذا؟». اكتشف بجسده متى يكتمل المعنى ومتى ينتظر.</div>
+      <div class="silentq"><span class="lbl"></span>«أَيُّهُمَا يَقِفُ وَحْدَهُ: «بَابٌ كَبِيرٌ»، أَمْ «البَابُ مَفْتُوحٌ»؟»</div>
+      <div class="chant"><span class="lbl">الأهزوجة</span>«جُمْلَةٌ تَقِفُ… عِبَارَةٌ تَمِيلُ… مَتَى يَكْتَمِلُ المَعْنَى؟»<span class="move">الحركة: وقوفٌ متّزنٌ للتامّة، ميلٌ للناقصة · كلمةُ المعنى: «جُمْلَة».</span></div>
+      <div class="protocol"><span class="lbl"></span>
+        <div class="protocol-grid"><div class="protocol-item"><b>المدّة:</b> ٨ دقائق</div><div class="protocol-item"><b>العدد:</b> طفلٌ أو مجموعةٌ</div><div class="protocol-item"><b>المادّة:</b> جملٌ تامّةٌ وعباراتٌ ناقصةٌ</div><div class="protocol-item"><b>الأدوات:</b> بطاقاتُ جملٍ/عباراتٍ + مساحةٌ للوقوف</div><div class="protocol-item"><b>الخرج:</b> تمييزُ الجملة التامّة من العبارة بالاتزان الجسديّ</div></div>
+        <ol><li>طقسُ الأنفاس أوّلًا.</li><li>الطفلُ يسحب بطاقةً من «صندوق العبارات» ويقرؤها (هو من يبدأ).</li><li>يقف متّزنًا إنْ أحسّها تقفُ، أو يميل إنْ أحسّها تنتظر — بعد وقفةِ إحساسٍ ٤–٥ ثوانٍ.</li><li>للناقصة: يقترح ما يُكملها فتقفَ («قِطّةٌ بيضاءُ» ← «القِطّةُ البيضاءُ تنامُ»).</li><li>يرسم جملةً «واقفةً» في حقيبة الذاكرة.</li></ol>
+      </div>
+      <div class="block b-fruit"><span class="lbl">~ التكامل</span>صار الطفلُ يحسّ — بجسده قبل عقله — متى يكتمل المعنى فتقفَ الجملةُ. أساسُ كلّ ما يأتي. · ☆ ثغرةُ المرح: «جملةٌ مقلوبةٌ» تميل بطريقةٍ مضحكةٍ فيُكملها الطفلُ ضاحكًا.</div>
+      <div class="pearl"><span class="lbl">لؤلؤة الصمود</span>الإحساسُ باكتمال المعنى عبر الاتزان الجسديّ يغرس مفهومَ «الجملة» حسًّا راسخًا، لا تعريفًا يُحفَظ.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span><span class="en">🧍 Stand for a sentence: «The cat sleeps» — stand tall! «white cat…» — lean, it waits!</span><span class="meaning">جُمْلَةٌ تَامَّةٌ ← تَقِفُ وَحْدَهَا ← A sentence stands.</span></div>
+      <div class="adapt"><span class="lbl">بدائل التكيُّف</span>⭐ حسّاس: جالسًا يرفع إبهامَه للتامّة وينزله للناقصة. 🔺 فرط حركة: قفزةٌ للتامّة. 🟰 بديل: بطاقةٌ خضراءُ (تقفُ) وبطاقةٌ صفراءُ (تميل).</div>
+      <div class="silent-arch"><span class="lbl">المكتشف الصامت</span>مَن لا ينطق: يقف متّزنًا أو يميل، أو يرفع البطاقةَ الموافقةَ، دون كلامٍ.</div>
+      <div class="bag"><span class="lbl">حقيبة الذاكرة</span>الأثرُ الباقي: اكتب جملةً «تقفُ وحدَها» وارسم تحتها خطًّا ثابتًا، صوّرها. · سؤالٌ: «ما أصغرُ جملةٍ تقفُ وحدَها؟»</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق — للكبار</span>الحاسّة: الاتزانُ الداخليُّ والحركة · المهارة: الإحساسُ باكتمال المعنى (Sentence completeness) قبل التحليل النحويّ · علامةُ الاكتشاف: يميّز الجملةَ التامّةَ من العبارة دون توجيهٍ · الجسر: A sentence stands.</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تصنع جملةً أخرى… لنفسك؟» — إن طلبَ الطفلُ المزيدَ تلقائيًّا، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد بفرحٍ.</div>
+      <div class="tiers-inline"><div class="ti seed"><b>🌰 بذرة (الأصغر)</b>يقف متّزنًا للتامّة ويميل للناقصة بمساعدةٍ.</div><div class="ti bud"><b>🌱 برعم (الأكبر)</b>يميّز التامّةَ من الناقصة ويُكمل الناقصةَ لتقفَ.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== المحطّة ٢: مَنْ؟ صاحبُ الجملة ===== -->
+<section id="w2" class="sheet">
+  <div class="station">
+    <div class="st-head h2c"><span class="em">👈</span><div><h3>المَحَطَّةُ ٢: مَنْ؟ صَاحِبُ الجُمْلَةِ</h3><span class="nick">«لِكُلِّ جُمْلَةٍ صَاحِبٌ… مَنْ يَفْعَلُ؟»</span></div><span class="jadhr">جذر: ص-ح-ب · حسّ: البَيْن</span></div>
+    <div class="st-body">
+      <svg class="fig fig-g" viewBox="0 0 140 72" role="img" aria-label="إصبعٌ يشير إلى صاحب الجملة">
+        <rect x="24" y="26" width="92" height="24" rx="4" fill="#fff" stroke="#244B6E" stroke-width="1.8"/>
+        <rect x="72" y="29" width="40" height="18" rx="3" fill="#3E72A0" opacity="0.3" stroke="#244B6E" stroke-width="1.4"/>
+        <text x="92" y="42" text-anchor="middle" font-family="Amiri,serif" font-size="13" fill="#244B6E">العُصْفُورُ</text>
+        <text x="46" y="42" text-anchor="middle" font-family="Amiri,serif" font-size="13" fill="#244B6E">يَطِيرُ</text>
+        <path d="M92 64 l-5 -10 10 0 z" fill="#244B6E"/><circle cx="92" cy="64" r="3" fill="#244B6E"/>
+      </svg>
+      <span class="tbreath">طقسُ الأنفاس: شهيقٌ ٤، زفيرٌ ٦ مع «هـــ».</span>
+      <div class="anchor-h"><span class="lbl">المرساة (الجسدُ والبَيْنُ أوّلًا)</span>كفٌّ على الصدر، ثم يسمع الطفلُ جملةً («العُصْفُورُ يَطِيرُ») ويُشير بإصبعه إلى <strong>صاحبها (مَن يفعل)</strong>. قبل الإشارة: <strong>أغمضْ عينيك وأعدِ الجملةَ في رأسك، ودعْ يدَك تنجذب إلى «مَن» قبل أن تفكّر (٤–٥ ثوانٍ).</strong> <em>همس: «مَنِ الذي يطيرُ في هذه الجملة؟»</em></div>
+      <div class="echo"><span class="lbl">صدًى تراكميٌّ</span>عرفتَ أنّ الجملةَ تقفُ وحدَها؛ والآن تكتشف أنّ لها <em>صاحبًا</em> — مَن يفعل الفعلَ. كلُّ جملةٍ واقفةٍ فيها «مَن» تتحدّث عنه (دون أن نسمّيه «فاعلًا» بعدُ).</div>
+      <div class="block b-voice"><span class="lbl">بلسانُ الجملة</span>«في دَاخِلِي دَائِمًا صَاحِبٌ — مَنْ يَفْعَلُ. «العُصْفُورُ يَطِيرُ»: صَاحِبِي هُوَ العُصْفُورُ. «الوَلَدُ يَأْكُلُ»: صَاحِبِي هُوَ الوَلَدُ. أَشِرْ إِلَيْهِ بِإِصْبَعِكَ تَجِدْنِي أَبْدَأُ مِنْهُ. مَنْ يَفْعَلُ؟ ذَاكَ صَاحِبِي.»</div>
+      <div class="homeact"><span class="lbl"></span>أثناء الحكايات، اسألا: «مَن صاحبُ هذه الجملة؟ مَن يفعل؟» ويُشير الطفلُ إليه.</div>
+      <div class="block b-narr"><span class="lbl">التحوّل السرديّ</span>يسمع الطفلُ: «الكَلْبُ يَجْرِي». تتحرّك يدُه قبل عقله وتشير: «الكَلْبُ!». ثم «أُمِّي تَطْبُخُ» — يشير: «أُمِّي!». صار يجد صاحبَ كلّ جملةٍ بحدسٍ، كأنّ يدَه تعرفه قبل لسانه.</div>
+      <div class="silentq"><span class="lbl"></span>«في جملة «الشَّمْسُ تُشْرِقُ»… مَنِ الصَّاحِبُ الذي يَفْعَلُ؟»</div>
+      <div class="chant"><span class="lbl">الأهزوجة</span>«مَنْ؟ مَنْ يَفْعَلُ؟ أُشِيرُ إِلَيْهِ… صَاحِبُ الجُمْلَةِ!»<span class="move">الحركة: الإشارةُ بالإصبع إلى صاحب الجملة · كلمةُ المعنى: «صَاحِب».</span></div>
+      <div class="protocol"><span class="lbl"></span>
+        <div class="protocol-grid"><div class="protocol-item"><b>المدّة:</b> ٨ دقائق</div><div class="protocol-item"><b>العدد:</b> طفلٌ أو زوجٌ</div><div class="protocol-item"><b>المادّة:</b> جملٌ بسيطةٌ (صاحبٌ + حركةٌ)</div><div class="protocol-item"><b>الأدوات:</b> بطاقاتُ جملٍ + إطارٌ مُشيرٌ</div><div class="protocol-item"><b>الخرج:</b> تحديدُ صاحب الجملة بالإشارة</div></div>
+        <ol><li>طقسُ الأنفاس أوّلًا.</li><li>الطفلُ يختار جملةً من البطاقات ويقرؤها بصوتٍ.</li><li>بعد وقفةِ إحساسٍ، يضع «الإطارَ المُشيرَ» حول صاحب الجملة (مَن يفعل).</li><li>يبدّل الصاحبَ ويرى كيف تتغيّر الجملةُ («الكلبُ يجري» ← «الولدُ يجري»).</li><li>يرسم جملةً ويُحيط صاحبَها بدائرةٍ في حقيبة الذاكرة.</li></ol>
+      </div>
+      <div class="block b-fruit"><span class="lbl">~ التكامل</span>صار الطفلُ يجد «مَن يفعل» في أيّ جملةٍ حسًّا. مهّد بذلك لفكرة الإسناد دون أيّ مصطلحٍ نحويٍّ. · ☆ ثغرة: «صاحبٌ غريبٌ» — «الجَبَلُ يَرْقُصُ!» مَن الصاحب؟ الجبل! ضحكٌ.</div>
+      <div class="pearl"><span class="lbl">لؤلؤة الصمود</span>الإشارةُ الحدسيّةُ إلى صاحب الجملة تبني الوعيَ بالإسناد بالجسد، تمهيدًا لطيفًا للنحو دون تلقينٍ.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span><span class="en">👈 Who does it? Point: «The BIRD flies.» Who? The bird!</span><span class="meaning">صَاحِبُ الجملة ← مَنْ يَفْعَلُ ← Who (the doer).</span></div>
+      <div class="adapt"><span class="lbl">بدائل التكيُّف</span>⭐ حسّاس: يضع رقاقةً على الصاحب بدل الإشارة. 🔺 فرط حركة: يقفز نحو بطاقة الصاحب. 🟰 بديل: صورتان، يختار صورةَ الصاحب.</div>
+      <div class="silent-arch"><span class="lbl">المكتشف الصامت</span>مَن لا ينطق: يشير أو يضع الإطارَ حول الصاحب، دون كلامٍ.</div>
+      <div class="bag"><span class="lbl">حقيبة الذاكرة</span>الأثرُ الباقي: اكتب جملةً وأحِطْ صاحبَها بدائرةٍ، صوّرها. · سؤالٌ: «هل توجد جملةٌ بلا صاحبٍ يفعل؟»</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق — للكبار</span>الحاسّة: البَيْن (الانجذاب) والبصر · المهارة: تحديدُ المُسنَد إليه حسّيًّا (Agent identification) قبل مصطلح «الفاعل» · علامةُ الاكتشاف: يحدّد صاحبَ الجملة بالإشارة دون توجيهٍ · الجسر: Who.</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تصنع جملةً أخرى… لنفسك؟» — إن طلبَ الطفلُ المزيدَ تلقائيًّا، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد بفرحٍ.</div>
+      <div class="tiers-inline"><div class="ti seed"><b>🌰 بذرة (الأصغر)</b>يشير إلى صاحب الجملة بمساعدةٍ.</div><div class="ti bud"><b>🌱 برعم (الأكبر)</b>يحدّد الصاحبَ ويبدّله ويرى أثرَ التبديل.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== المحطّة ٣: ماذا يفعلُ؟ حركةُ الجملة ===== -->
+<section id="w3" class="sheet">
+  <div class="station">
+    <div class="st-head h3c"><span class="em">🏃</span><div><h3>المَحَطَّةُ ٣: مَاذَا يَفْعَلُ؟ حَرَكَةُ الجُمْلَةِ</h3><span class="nick">«لِكُلِّ جُمْلَةٍ حَرَكَةٌ تُمَثَّلُ بِالجَسَدِ»</span></div><span class="jadhr">جذر: ف-ع-ل · حسّ: الحركة</span></div>
+    <div class="st-body">
+      <svg class="fig fig-g" viewBox="0 0 140 72" role="img" aria-label="طفلٌ يمثّل حركة الجملة">
+        <rect x="20" y="14" width="100" height="20" rx="4" fill="#fff" stroke="#3A4680" stroke-width="1.6"/><text x="70" y="28" text-anchor="middle" font-family="Amiri,serif" font-size="12" fill="#3A4680">الوَلَدُ يَجْرِي</text>
+        <circle cx="70" cy="44" r="6" fill="none" stroke="#5A6BB0" stroke-width="2"/>
+        <g stroke="#5A6BB0" stroke-width="2.4" stroke-linecap="round" fill="none"><path d="M70 50 l0 10"/><path d="M70 53 l8 4"/><path d="M70 53 l-8 -2"/><path d="M70 60 l7 6"/><path d="M70 60 l-7 4"/></g>
+      </svg>
+      <span class="tbreath">طقسُ الأنفاس: شهيقٌ ٤، زفيرٌ ٦ مع «هـــ».</span>
+      <div class="anchor-h"><span class="lbl">المرساة (الجسدُ والحركةُ أوّلًا)</span>كفٌّ على الصدر، ثم يسمع الطفلُ جملةً («الوَلَدُ يَجْرِي») و<strong>يمثّل حركتَها بجسده</strong> (يجري في مكانه). قبل التمثيل وقفةٌ ٤–٥ ثوانٍ: <strong>تخيّلِ الحركةَ في جسدك قبل أن تؤدّيَها.</strong> <em>همس: «ماذا يفعلُ صاحبُ الجملة؟ أرِنا بجسدك.»</em></div>
+      <div class="echo"><span class="lbl">صدًى تراكميٌّ</span>وجدتَ «مَن» يفعل (الصاحب)؛ والآن تكتشف «ماذا» يفعل — <em>حركةَ الجملة</em>. الصاحبُ والحركةُ معًا هما قلبُ الجملة الواقفة.</div>
+      <div class="block b-voice"><span class="lbl">بلسانُ الجملة</span>«صَاحِبِي لَا يَقِفُ سَاكِنًا، بَلْ يَفْعَلُ! «الوَلَدُ يَجْرِي»: حَرَكَتِي هِيَ الجَرْيُ. «القِطّةُ تَنامُ»: حَرَكَتِي هِيَ النَّوْمُ. مَثِّلْ حَرَكَتِي بِجَسَدِكَ تَشْعُرْ بِي حَيَّةً. أَنا صَاحِبٌ + حَرَكَةٌ.»</div>
+      <div class="homeact"><span class="lbl"></span>العبا «مثّلِ الجملة»: يقول أحدُكما جملةً، ويمثّل الآخرُ حركتَها بلا كلامٍ، ويُخمّن الأوّلُ.</div>
+      <div class="block b-narr"><span class="lbl">التحوّل السرديّ</span>«العُصْفُورُ يَطِيرُ» — يفرد الطفلُ ذراعيه ويرفرف. «السَّمَكَةُ تَسْبَحُ» — يموّج جسده. «الأَرْنَبُ يَقْفِزُ» — يقفز! صارت كلُّ جملةٍ حركةً يعيشها بجسده، لا كلماتٍ على ورقٍ.</div>
+      <div class="silentq"><span class="lbl"></span>«جملة «الطَّائِرَةُ تُحَلِّقُ»… مَا الحَرَكَةُ التي تُمَثِّلُهَا بِجَسَدِكَ؟»</div>
+      <div class="chant"><span class="lbl">الأهزوجة</span>«مَاذَا يَفْعَلُ؟ أُمَثِّلُ بِجَسَدِي… حَرَكَةُ الجُمْلَةِ!»<span class="move">الحركة: تمثيلُ فعل الجملة بالجسد · كلمةُ المعنى: «حَرَكَة / فِعْل».</span></div>
+      <div class="protocol"><span class="lbl"></span>
+        <div class="protocol-grid"><div class="protocol-item"><b>المدّة:</b> ٨ دقائق</div><div class="protocol-item"><b>العدد:</b> مجموعةٌ صغيرةٌ</div><div class="protocol-item"><b>المادّة:</b> جملٌ بأفعالٍ قابلةٍ للتمثيل</div><div class="protocol-item"><b>الأدوات:</b> بطاقاتُ حركةٍ مصوّرةٌ</div><div class="protocol-item"><b>الخرج:</b> تمثيلُ حركة الجملة بالجسد</div></div>
+        <ol><li>طقسُ الأنفاس أوّلًا.</li><li>الطفلُ يسحب بطاقةَ جملةٍ يختارها ويقرؤها سرًّا.</li><li>بعد وقفةِ تخيّلٍ، يمثّل حركتَها بجسده دون كلامٍ.</li><li>يخمّن الرفاقُ الجملةَ، ثم يقرؤونها معًا.</li><li>يرسم نفسَه يمثّل الحركةَ في حقيبة الذاكرة.</li></ol>
+      </div>
+      <div class="block b-fruit"><span class="lbl">~ التكامل</span>صارت الجملةُ تجربةً جسديّةً حيّةً: صاحبٌ يفعل حركةً. الطفلُ يعيش الجملةَ لا يحفظها. · ☆ ثغرةُ المرح: «حركةٌ مستحيلةٌ» — «الحَجَرُ يَرْكُضُ!» يمثّلها الطفلُ ضاحكًا.</div>
+      <div class="pearl"><span class="lbl">لؤلؤة الصمود</span>تمثيلُ حركة الجملة بالجسد يربط المعنى بالحركة (إدراكٌ متجسّدٌ)، فترسخ بنيةُ الجملة عميقًا.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span><span class="en">🏃 What does it do? Act it: «The boy RUNS» — run in place!</span><span class="meaning">حَرَكَةُ الجملة ← مَاذَا يَفْعَلُ ← What it does (act it).</span></div>
+      <div class="adapt"><span class="lbl">بدائل التكيُّف</span>⭐ حسّاس: حركةٌ صغيرةٌ باليد بدل الجسد كلِّه. 🔺 فرط حركة: مساحةٌ أوسعُ للتمثيل الكبير. 🟰 بديل: يطابق الجملةَ بصورة حركةٍ.</div>
+      <div class="silent-arch"><span class="lbl">المكتشف الصامت</span>التمثيلُ الحركيُّ هنا لغةٌ بذاتها — مَن لا ينطق يبدع فيه دون كلامٍ.</div>
+      <div class="bag"><span class="lbl">حقيبة الذاكرة</span>الأثرُ الباقي: ارسم جملةً ومثّلها برسمةِ حركةٍ، صوّرها. · سؤالٌ: «هل كلُّ جملةٍ فيها حركةٌ يمكن تمثيلُها؟»</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق — للكبار</span>الحاسّة: الحركةُ والإدراكُ المتجسّد · المهارة: الإحساسُ بالمُسنَد/الحدث (Predicate sense) قبل مصطلح «الفعل» · علامةُ الاكتشاف: يمثّل حركةَ جملةٍ جديدةٍ ويُفهَم دون توجيهٍ · الجسر: What it does.</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تصنع جملةً أخرى… لنفسك؟» — إن طلبَ الطفلُ المزيدَ تلقائيًّا، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد بفرحٍ.</div>
+      <div class="tiers-inline"><div class="ti seed"><b>🌰 بذرة (الأصغر)</b>يمثّل حركةَ جملةٍ بسيطةٍ بمساعدةٍ.</div><div class="ti bud"><b>🌱 برعم (الأكبر)</b>يمثّل ويخمّن حركاتِ جملٍ متنوّعةٍ.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== المحطّة ٤: الجملةُ تطولُ ===== -->
+<section id="w4" class="sheet">
+  <div class="station">
+    <div class="st-head h4c"><span class="em">➕</span><div><h3>المَحَطَّةُ ٤: الجُمْلَةُ تَطُولُ</h3><span class="nick">«تَكْبَرُ الجُمْلَةُ وَتَثْقُلُ… وَتَبْقَى تَقِفُ»</span></div><span class="jadhr">جذر: ط-و-ل · حسّ: الثقل</span></div>
+    <div class="st-body">
+      <svg class="fig fig-g" viewBox="0 0 140 78" role="img" aria-label="جملةٌ تطول ببطاقاتٍ على حبل">
+        <line x1="14" y1="22" x2="126" y2="22" stroke="#2E4870" stroke-width="2"/>
+        <rect x="92" y="26" width="30" height="16" rx="3" fill="#fff" stroke="#2E4870" stroke-width="1.3"/><text x="107" y="38" text-anchor="middle" font-family="Amiri,serif" font-size="10" fill="#2E4870">القطّةُ</text>
+        <rect x="58" y="26" width="30" height="16" rx="3" fill="#fff" stroke="#2E4870" stroke-width="1.3"/><text x="73" y="38" text-anchor="middle" font-family="Amiri,serif" font-size="10" fill="#2E4870">تنامُ</text>
+        <rect x="92" y="50" width="30" height="16" rx="3" fill="#EAF1F8" stroke="#4A6FA5" stroke-width="1.3"/><text x="107" y="62" text-anchor="middle" font-family="Amiri,serif" font-size="9" fill="#2E4870">القطّةُ</text>
+        <rect x="62" y="50" width="26" height="16" rx="3" fill="#EAF1F8" stroke="#4A6FA5" stroke-width="1.3"/><text x="75" y="62" text-anchor="middle" font-family="Amiri,serif" font-size="9" fill="#2E4870">البيضاءُ</text>
+        <rect x="34" y="50" width="24" height="16" rx="3" fill="#EAF1F8" stroke="#4A6FA5" stroke-width="1.3"/><text x="46" y="62" text-anchor="middle" font-family="Amiri,serif" font-size="9" fill="#2E4870">تنامُ</text>
+        <rect x="10" y="50" width="20" height="16" rx="3" fill="#EAF1F8" stroke="#4A6FA5" stroke-width="1.3"/><text x="20" y="62" text-anchor="middle" font-family="Amiri,serif" font-size="8" fill="#2E4870">بهدوءٍ</text>
+      </svg>
+      <span class="tbreath">طقسُ الأنفاس: شهيقٌ ٤، زفيرٌ ٦ مع «هـــ».</span>
+      <div class="anchor-h"><span class="lbl">المرساة (الجسدُ والثقلُ أوّلًا)</span>كفٌّ على الصدر، ثم يحمل الطفلُ بطاقاتِ جملةٍ قصيرةٍ في كفّه، ثم يضيف بطاقاتٍ فتطولُ الجملةُ. قبل الإضافة: <strong>احملِ الجملةَ القصيرةَ ثم الطويلةَ — أيّتهما أثقلُ في يدك؟ الأطولُ أثقلُ لأنّها تحمل كلماتٍ أكثرَ (٤–٥ ثوانٍ).</strong> <em>همس: «كبرتِ الجملةُ… أمَا زالت تقفُ؟»</em></div>
+      <div class="echo"><span class="lbl">صدًى تراكميٌّ</span>عرفتَ الصاحبَ والحركةَ (جملةً قصيرةً تقفُ)؛ والآن تكتشف أنّ الجملةَ <em>تطولُ</em> بإضافة كلماتٍ (صفةٍ، أو «كيف») فتثقُل وتمتلئ — وتبقى واقفةً. «القطّةُ تنامُ» ← «القطّةُ البيضاءُ تنامُ بهدوءٍ».</div>
+      <div class="block b-voice"><span class="lbl">بلسانُ الجملة</span>«أَسْتَطِيعُ أَنْ أَكْبَرَ! أَبْدَأُ صَغِيرَةً: «القِطّةُ تَنامُ». ثُمَّ أُضِيفُ: «القِطّةُ البَيْضَاءُ تَنامُ بِهُدُوءٍ». صِرْتُ أَطْوَلَ وَأَثْقَلَ في يَدِكَ، لَكِنِّي مَا زِلْتُ أَقِفُ! كُلَّمَا أَضَفْتَ كَلِمَةً، حَمَلْتُ مَعْنًى أَكْثَرَ.»</div>
+      <div class="homeact"><span class="lbl"></span>ابدآ بجملةٍ قصيرةٍ، وتناوبا على إضافة كلمةٍ تطيلها («الكلبُ يجري» ← «الكلبُ الصغيرُ يجري بسرعةٍ»).</div>
+      <div class="block b-narr"><span class="lbl">التحوّل السرديّ</span>«الوَلَدُ يَأْكُلُ» — بطاقتان خفيفتان. يضيف الطفلُ «الجَائِعُ»، ثم «التُّفَّاحَةَ»: «الوَلَدُ الجَائِعُ يَأْكُلُ التُّفَّاحَةَ». الجملةُ في كفّه صارت أثقلَ، لكنّها ما زالت تقفُ متّزنةً. كبرت ولم تقع.</div>
+      <div class="silentq"><span class="lbl"></span>«احملْ «الشمسُ تُشرقُ» و«الشمسُ الذهبيّةُ تُشرقُ في الصباحِ»… أيّتهما أثقلُ؟ وهل ما زالتا تقفان؟»</div>
+      <div class="chant"><span class="lbl">الأهزوجة</span>«تَكْبَرُ… تَثْقُلُ… وَتَبْقَى تَقِفُ!»<span class="move">الحركة: إضافةُ بطاقاتٍ والإحساسُ بثقل الجملة · كلمةُ المعنى: «طَوِيلَة».</span></div>
+      <div class="protocol"><span class="lbl"></span>
+        <div class="protocol-grid"><div class="protocol-item"><b>المدّة:</b> ١٠ دقائق</div><div class="protocol-item"><b>العدد:</b> زوجٌ</div><div class="protocol-item"><b>المادّة:</b> جملةٌ قصيرةٌ + بطاقاتُ إضافةٍ</div><div class="protocol-item"><b>الأدوات:</b> حبلُ الجملة + مشابكُ + بطاقاتٌ</div><div class="protocol-item"><b>الخرج:</b> جملةٌ أطولُ تبقى تقفُ</div></div>
+        <ol><li>طقسُ الأنفاس أوّلًا.</li><li>الطفلُ يبني جملةً قصيرةً يختارها على الحبل ويحملها (يحسّ خفّتها).</li><li>يضيف بطاقةً (صفةً أو «كيف») ويحملها ثانيةً (يحسّ ثقلَها الزائد).</li><li>يقرأ الجملةَ الطويلةَ ويتأكّد أنّها ما زالت تقفُ (تامّةٌ).</li><li>يرسم جملتَه القصيرةَ ثم الطويلةَ في حقيبة الذاكرة.</li></ol>
+      </div>
+      <div class="block b-fruit"><span class="lbl">~ التكامل</span>اكتشف الطفلُ أنّ الجملةَ تنمو بإضافة معنًى وتثقُل، وتبقى متماسكةً. مهّد بذلك للتوسّع الجمليّ. · ☆ ثغرة: «أطولُ جملةٍ» يبنيها الطفلُ بمرحٍ ما دامت تقفُ.</div>
+      <div class="pearl"><span class="lbl">لؤلؤة الصمود</span>ربطُ طول الجملة بثقلها المحسوس يجعل «التوسّع» تجربةً حسّيّةً، لا قاعدةً مجرّدةً.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span><span class="en">➕ Grow it: «The cat sleeps» → «The white cat sleeps quietly.» Heavier, still stands!</span><span class="meaning">الجملةُ تطولُ ← تَكْبَرُ وَتَثْقُلُ ← Grow the sentence.</span></div>
+      <div class="adapt"><span class="lbl">بدائل التكيُّف</span>⭐ حسّاس: إضافةُ كلمةٍ واحدةٍ فقط. 🔺 فرط حركة: يمشي خطوةً مع كلّ بطاقةٍ تُضاف. 🟰 بديل: بطاقاتٌ كبيرةٌ على الأرض يرتّبها بقدميه.</div>
+      <div class="silent-arch"><span class="lbl">المكتشف الصامت</span>مَن لا ينطق: يضيف البطاقاتِ ويحمل الجملةَ ويُشير إلى أنّها ما زالت تقفُ، دون كلامٍ.</div>
+      <div class="bag"><span class="lbl">حقيبة الذاكرة</span>الأثرُ الباقي: اكتب جملةً قصيرةً وتحتها نسختَها الطويلةَ، صوّرها. · سؤالٌ: «هل تطولُ الجملةُ إلى ما لا نهايةَ وتبقى تقفُ؟»</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق — للكبار</span>الحاسّة: الثقلُ واللمس · المهارة: التوسّعُ الجمليُّ حسّيًّا (Sentence expansion) قبل تحليله · علامةُ الاكتشاف: يطيل جملةً وتبقى تامّةً دون توجيهٍ · الجسر: Grow it.</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تصنع جملةً أخرى… لنفسك؟» — إن طلبَ الطفلُ المزيدَ تلقائيًّا، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد بفرحٍ.</div>
+      <div class="tiers-inline"><div class="ti seed"><b>🌰 بذرة (الأصغر)</b>يضيف كلمةً واحدةً لإطالة الجملة بمساعدةٍ.</div><div class="ti bud"><b>🌱 برعم (الأكبر)</b>يطيل الجملةَ بكلمتين أو ثلاثٍ وتبقى تقفُ.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== المحطّة ٥: تُخبرُ أمْ تسألُ؟ ===== -->
+<section id="w5" class="sheet">
+  <div class="station">
+    <div class="st-head h5c"><span class="em">🎵</span><div><h3>المَحَطَّةُ ٥: تُخْبِرُ أَمْ تَسْأَلُ؟</h3><span class="nick">«نَفْسُ الكَلِمَاتِ… نَغْمَةٌ تُخْبِرُ وَنَغْمَةٌ تَسْأَلُ»</span></div><span class="jadhr">جذر: خ-ب-ر · حسّ: الحرارة/النغمة</span></div>
+    <div class="st-body">
+      <svg class="fig fig-g" viewBox="0 0 140 76" role="img" aria-label="نغمةُ الخبر تهبط ونغمةُ السؤال تصعد">
+        <path d="M16 28 q24 0 44 8" fill="none" stroke="#2E4870" stroke-width="2.4"/><polygon points="60,36 54,33 56,40" fill="#2E4870"/><text x="38" y="22" text-anchor="middle" font-family="Cairo,sans-serif" font-size="10" fill="#2E4870">خبرٌ .</text>
+        <path d="M80 40 q24 -12 44 -20" fill="none" stroke="#6A5BA0" stroke-width="2.4"/><polygon points="124,20 119,26 127,27" fill="#6A5BA0"/><text x="104" y="52" text-anchor="middle" font-family="Cairo,sans-serif" font-size="10" fill="#443873">سؤالٌ ؟</text>
+        <text x="34" y="62" text-anchor="middle" font-family="Amiri,serif" font-size="13" fill="#2E4870">.</text><text x="110" y="62" text-anchor="middle" font-family="Amiri,serif" font-size="14" fill="#443873">؟</text>
+      </svg>
+      <span class="tbreath">طقسُ الأنفاس: شهيقٌ ٤، زفيرٌ ٦ مع «هـــ».</span>
+      <div class="anchor-h"><span class="lbl">المرساة (الجسدُ والنغمةُ أوّلًا)</span>كفٌّ على الصدر، ثم يقول الطفلُ الجملةَ نفسَها مرّتين: مرّةً خبرًا (الصوتُ يهبط، كفٌّ تنزل «.») ومرّةً سؤالًا (الصوتُ يصعد دافئًا فضوليًّا، كفٌّ ترتفع «؟»). قبل ذلك وقفةٌ ٤–٥ ثوانٍ: <strong>اشعرْ بصوتك: أيبقى ثابتًا أم يصعد في آخره؟</strong> <em>همس: «هل هذه الجملةُ تُخبرني، أم تسألني؟»</em></div>
+      <div class="echo"><span class="lbl">صدًى تراكميٌّ</span>عرفتَ أنّ الجملةَ تقفُ ولها صاحبٌ وحركةٌ وتطولُ؛ والآن تكتشف أنّ <em>للجملة نغمتين</em>: تُخبر (تهبط) أو تسأل (تصعد) — النغمةُ تغيّر معنى نفس الكلمات.</div>
+      <div class="block b-voice"><span class="lbl">بلسانُ الجملة</span>«لِي صَوْتَانِ! بِنَفْسِ الكَلِمَاتِ: «أَكَلْتَ التُّفَّاحَةَ.» — أُخْبِرُكَ، صَوْتِي يَهْبِطُ وَأَضَعُ «.». «أَكَلْتَ التُّفَّاحَةَ؟» — أَسْأَلُكَ، صَوْتِي يَصْعَدُ دَافِئًا وَأَضَعُ «؟». اسْمَعْ نَغْمَتِي تَعْرِفْ: أُخْبِرُ أَمْ أَسْأَلُ؟»</div>
+      <div class="homeact"><span class="lbl"></span>قولا جملةً واحدةً مرّةً خبرًا ومرّةً سؤالًا، ويرفع الطفلُ يدَه مع نغمة السؤال الصاعدة.</div>
+      <div class="block b-narr"><span class="lbl">التحوّل السرديّ</span>«القِطّةُ نَائِمَةٌ.» يقولها الطفلُ وصوتُه يهبط — خبرٌ. ثم «القِطّةُ نَائِمَةٌ؟» وصوتُه يصعد — سؤالٌ! يضحك: «نفسُ الكلمات، لكنّ النغمةَ غيّرت كلَّ شيءٍ.» صار يسمع الفرقَ بأذنه وحرارة صوته.</div>
+      <div class="silentq"><span class="lbl"></span>«إذا قُلْتُ «وَصَلَ أَبِي» بِصَوْتٍ يَصْعَدُ في آخِرِهِ… أُخْبِرُ أَمْ أَسْأَلُ؟»</div>
+      <div class="chant"><span class="lbl">الأهزوجة</span>«صَوْتٌ يَهْبِطُ: أُخْبِرُ… صَوْتٌ يَصْعَدُ: أَسْأَلُ!»<span class="move">الحركة: كفٌّ تنزل للخبر وترتفع للسؤال · كلمةُ المعنى: «خَبَر / سُؤَال».</span></div>
+      <div class="protocol"><span class="lbl"></span>
+        <div class="protocol-grid"><div class="protocol-item"><b>المدّة:</b> ٨ دقائق</div><div class="protocol-item"><b>العدد:</b> طفلٌ أو زوجٌ</div><div class="protocol-item"><b>المادّة:</b> جملٌ تصلح خبرًا وسؤالًا</div><div class="protocol-item"><b>الأدوات:</b> بطاقتا «.» و«؟»</div><div class="protocol-item"><b>الخرج:</b> تمييزُ الخبر من السؤال بالنغمة</div></div>
+        <ol><li>طقسُ الأنفاس أوّلًا.</li><li>الطفلُ يختار جملةً ويقولها خبرًا (الصوت يهبط) ويضع بطاقةَ «.».</li><li>يقولها سؤالًا (الصوت يصعد) ويضع بطاقةَ «؟»، ويرفع يدَه مع الصعود.</li><li>يستمع لجملةٍ من الميسّر ويرفع البطاقةَ الموافقةَ للنغمة.</li><li>يرسم جملتَه بعلامتها («.» أو «؟») في حقيبة الذاكرة.</li></ol>
+      </div>
+      <div class="block b-fruit"><span class="lbl">~ التكامل</span>صار الطفلُ يميّز الخبرَ من السؤال بالنغمة والإحساس، ويربطهما بعلامتي «.» و«؟». · ☆ ثغرة: «سؤالٌ مضحكٌ» بنغمةٍ مبالَغٍ فيها يضحك لها الجميعُ.</div>
+      <div class="pearl"><span class="lbl">لؤلؤة الصمود</span>تمييزُ النغمة (الخبر/السؤال) بالصوت والجسد يبني الوعيَ بالتنغيم (Prosody) الذي يسبق علاماتِ الترقيم ويُحييها.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span><span class="en">🎵 Tell or ask? «The cat sleeps.» (voice down) «The cat sleeps?» (voice up!)</span><span class="meaning">خبرٌ/سؤالٌ ← نَغْمَةٌ تَهْبِطُ أو تَصْعَدُ ← Tell or ask.</span></div>
+      <div class="adapt"><span class="lbl">بدائل التكيُّف</span>⭐ حسّاس: نغمةٌ هادئةٌ دون مبالغةٍ. 🔺 فرط حركة: قفزةٌ مع نغمة السؤال. 🟰 بديل: يرفع بطاقةَ «؟» أو «.» دون نطقٍ.</div>
+      <div class="silent-arch"><span class="lbl">المكتشف الصامت</span>مَن لا ينطق: يرفع يدَه صاعدةً للسؤال ونازلةً للخبر، أو يختار البطاقةَ، دون كلامٍ.</div>
+      <div class="bag"><span class="lbl">حقيبة الذاكرة</span>الأثرُ الباقي: اكتب جملةً مرّتين بعلامتي «.» و«؟»، صوّرها. · سؤالٌ: «كيف تعرف من الصوت أنّها سؤالٌ قبل أن ترى «؟»؟»</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق — للكبار</span>الحاسّة: السمعُ والحرارة (نغمةُ الصوت) · المهارة: الوعيُ بالتنغيم (Statement vs question intonation) · علامةُ الاكتشاف: يميّز الخبرَ من السؤال بالنغمة دون توجيهٍ · الجسر: Tell or ask.</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تصنع جملةً أخرى… لنفسك؟» — إن طلبَ الطفلُ المزيدَ تلقائيًّا، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد بفرحٍ.</div>
+      <div class="tiers-inline"><div class="ti seed"><b>🌰 بذرة (الأصغر)</b>يميّز نغمةَ الخبر من السؤال (يصعد/يهبط) بمساعدةٍ.</div><div class="ti bud"><b>🌱 برعم (الأكبر)</b>يقول الجملةَ خبرًا وسؤالًا ويضع علامتَها الصحيحةَ.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== المحطّة ٦: نبضُ الجملة ===== -->
+<section id="w6" class="sheet">
+  <div class="station">
+    <div class="st-head h6c"><span class="em">🫁</span><div><h3>المَحَطَّةُ ٦: نَبْضُ الجُمْلَةِ</h3><span class="nick">«الجُمْلَةُ تُقْرَأُ في نَفَسٍ وَاحِدٍ»</span></div><span class="jadhr">جذر: ن-ف-س · حسّ: النفَس</span></div>
+    <div class="st-body">
+      <svg class="fig fig-g" viewBox="0 0 140 70" role="img" aria-label="قوسُ نفَسٍ فوق جملةٍ ينتهي بنقطة">
+        <path d="M16 50 q54 -44 100 0" fill="none" stroke="#1A4D4B" stroke-width="2.4" stroke-linecap="round"/>
+        <text x="66" y="60" text-anchor="middle" font-family="Amiri,serif" font-size="12" fill="#1A4D4B">العُصْفُورُ يَطِيرُ عَالِيًا</text>
+        <circle cx="120" cy="50" r="3.4" fill="#2E7D7A"/><text x="120" y="40" text-anchor="middle" font-family="Cairo,sans-serif" font-size="9" fill="#1A4D4B">يستريحُ هنا .</text>
+      </svg>
+      <span class="tbreath">طقسُ الأنفاس: شهيقٌ ٤، زفيرٌ ٦ مع «هـــ» — ثم نُوظّفه في الجملة.</span>
+      <div class="anchor-h"><span class="lbl">المرساة (الجسدُ والنفَسُ أوّلًا)</span>كفٌّ على الصدر، ثم يأخذ الطفلُ شهيقًا، ويقول جملةً كاملةً في <strong>زفيرٍ واحدٍ</strong> بينما <strong>يرسم قوسًا بيده في الهواء</strong>، ويتوقّف (يستريح النفَسُ) عند «.». قبل ذلك وقفةٌ ٤–٥ ثوانٍ يتخيّل فيها قوسَ الجملة. <em>همس: «هل تستطيع قولَها كلَّها في نفَسٍ واحدٍ؟»</em></div>
+      <div class="echo"><span class="lbl">صدًى تراكميٌّ</span>في محطّات الكلمة صفّقتَ مقاطعَ <em>الكلمة</em> الواحدةِ؛ والآن تكتشف أنّ <em>الجملةَ كلَّها</em> لها قوسُ نفَسٍ واحدٌ يجمع كلماتِها، وتستريح عند النقطة — الجملةُ وحدةُ نفَسٍ، أكبرُ من الكلمة.</div>
+      <div class="block b-voice"><span class="lbl">بلسانُ الجملة</span>«أَنا أُقْرَأُ في نَفَسٍ وَاحِدٍ! خُذْ شَهِيقًا، ثُمَّ قُلْنِي كُلَّي وَأَنْتَ تَزْفِرُ: «العُصْفُورُ يَطِيرُ عَالِيًا» — قَوْسٌ وَاحِدٌ مِنَ النَّفَسِ. وَعِنْدَ «.» يَسْتَرِيحُ نَفَسُكَ. أَنا لَسْتُ مَقَاطِعَ مُتَقَطِّعَةً، بَلْ مَوْجَةُ نَفَسٍ كَامِلَةٌ.»</div>
+      <div class="homeact"><span class="lbl"></span>تنافسا بمرحٍ: مَن يقول جملةً (قصيرةً) كاملةً في نفَسٍ واحدٍ، ويرسم قوسَها بيده.</div>
+      <div class="block b-narr"><span class="lbl">التحوّل السرديّ</span>يأخذ الطفلُ شهيقًا عميقًا، ويبدأ القوسَ بيده: «الأَرْنَبُ… يَجْرِي… في الحَدِيقَةِ» — موجةٌ واحدةٌ تنزل عند «.» ويستريح. يحسّ الجملةَ تتدفّق كنفَسٍ واحدٍ، لها بدايةٌ وقوسٌ ونهايةٌ تستريح عندها.</div>
+      <div class="silentq"><span class="lbl"></span>«جملةٌ طويلةٌ جدًّا… هل تكفيك نفَسٌ واحدٌ؟ أين يحبّ نفَسُك أن يستريحَ؟»</div>
+      <div class="chant"><span class="lbl">الأهزوجة</span>«شَهِيقٌ… ثُمَّ جُمْلَةٌ في نَفَسٍ… وَعِنْدَ النُّقْطَةِ أَسْتَرِيحُ.»<span class="move">الحركة: رسمُ قوسٍ باليد مع قول الجملة في زفيرٍ واحدٍ · كلمةُ المعنى: «نَفَس».</span></div>
+      <div class="protocol"><span class="lbl"></span>
+        <div class="protocol-grid"><div class="protocol-item"><b>المدّة:</b> ٨ دقائق</div><div class="protocol-item"><b>العدد:</b> طفلٌ أو زوجٌ</div><div class="protocol-item"><b>المادّة:</b> جملٌ قصيرةٌ ومتوسّطةٌ</div><div class="protocol-item"><b>الأدوات:</b> بطاقاتُ جملٍ + إيماءةُ اليد</div><div class="protocol-item"><b>الخرج:</b> قراءةُ جملةٍ في قوسِ نفَسٍ واحدٍ</div></div>
+        <ol><li>طقسُ الأنفاس أوّلًا.</li><li>الطفلُ يختار جملةً، يأخذ شهيقًا، ثم يقولها كاملةً في زفيرٍ واحدٍ.</li><li>يرسم قوسًا بيده مع الجملة، ويتوقّف عند «.» (يستريح النفَسُ).</li><li>يجرّب جملةً أطولَ: أين يحتاج نفَسُه أن يستريحَ؟</li><li>يرسم قوسَ جملةٍ بنقطةٍ في نهايته في حقيبة الذاكرة.</li></ol>
+      </div>
+      <div class="block b-fruit"><span class="lbl">~ التكامل</span>صار الطفلُ يحسّ الجملةَ وحدةَ نفَسٍ كاملةً، ويربط النقطةَ بـ«استراحة النفَس». تمهيدٌ حسّيٌّ لعلامات الوقف. · ☆ ثغرة: جملةٌ بنفَسٍ واحدٍ بسرعةٍ مضحكةٍ.</div>
+      <div class="pearl"><span class="lbl">لؤلؤة الصمود</span>إحساسُ «الجملة في نفَسٍ واحدٍ» يجعل التنفّسَ القرائيَّ والوقفَ تجربةً جسديّةً، نقيضَ القراءة المتقطّعة على الشاشة.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span><span class="en">🫁 One breath: «The bird flies in the sky.» — say it in one arc, rest at the dot!</span><span class="meaning">نبضُ الجملة ← في نَفَسٍ واحدٍ ← One breath, one sentence.</span></div>
+      <div class="adapt"><span class="lbl">بدائل التكيُّف</span>⭐ حسّاس: جملةٌ قصيرةٌ جدًّا في نفَسٍ هادئٍ. 🔺 فرط حركة: يمشي قوسًا على الأرض مع الجملة. 🟰 بديل: يرسم القوسَ على ورقةٍ بإصبعه.</div>
+      <div class="silent-arch"><span class="lbl">المكتشف الصامت</span>مَن لا ينطق: يرسم قوسَ النفَس بيده ويتوقّف عند النقطة، دون كلامٍ.</div>
+      <div class="bag"><span class="lbl">حقيبة الذاكرة</span>الأثرُ الباقي: ارسم قوسًا فوق جملةٍ وضع نقطةً في نهايته، صوّرها. · سؤالٌ: «لماذا نستريح عند النقطة؟»</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق — للكبار</span>الحاسّة: النفَسُ والإيقاع · المهارة: الإحساسُ بوحدة الجملة النفَسيّة (Breath-group / prosodic phrasing) ومدخلُ الوقف · علامةُ الاكتشاف: يقرأ جملةً في نفَسٍ واحدٍ ويتوقّف عند «.» دون توجيهٍ · الجسر: One breath.</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تصنع جملةً أخرى… لنفسك؟» — إن طلبَ الطفلُ المزيدَ تلقائيًّا، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد بفرحٍ.</div>
+      <div class="tiers-inline"><div class="ti seed"><b>🌰 بذرة (الأصغر)</b>يقول جملةً قصيرةً في نفَسٍ واحدٍ بمساعدةٍ.</div><div class="ti bud"><b>🌱 برعم (الأكبر)</b>يقرأ جملةً أطولَ ويعرف أين يستريح نفَسُه.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== المحطّة ٧: الجملةُ في الكتاب ===== -->
+<section id="w7" class="sheet">
+  <div class="station">
+    <div class="st-head h7c"><span class="em">📖</span><div><h3>المَحَطَّةُ ٧: الجُمْلَةُ في الكِتَابِ</h3><span class="nick">«أَجِدُ جُمْلَةً كَامِلَةً في كِتَابٍ حَقِيقِيٍّ وَأَقْرَؤُهَا»</span></div><span class="jadhr">جذر: ق-ر-أ</span></div>
+    <div class="st-body">
+      <svg class="fig fig-g" viewBox="0 0 140 76" role="img" aria-label="إصبعٌ يتتبّع جملةً في كتابٍ مفتوحٍ">
+        <path d="M70 20 C54 14 30 14 18 20 L18 60 C30 54 54 54 70 60 Z" fill="#fff" stroke="#443873" stroke-width="1.8"/>
+        <path d="M70 20 C86 14 110 14 122 20 L122 60 C110 54 86 54 70 60 Z" fill="#fff" stroke="#443873" stroke-width="1.8"/>
+        <line x1="70" y1="20" x2="70" y2="60" stroke="#443873" stroke-width="1.4"/>
+        <rect x="78" y="28" width="38" height="6" rx="2" fill="#6A5BA0" opacity="0.45"/>
+        <g stroke="#6A5BA0" stroke-width="1.4"><line x1="78" y1="40" x2="112" y2="40"/><line x1="78" y1="46" x2="106" y2="46"/></g>
+        <path d="M96 60 l-4 -9 8 0 z" fill="#443873"/>
+      </svg>
+      <span class="tbreath">طقسُ الأنفاس: شهيقٌ ٤، زفيرٌ ٦ مع «هـــ».</span>
+      <div class="anchor-h"><span class="lbl">المرساة (الجسدُ واللمسُ أوّلًا)</span>كفٌّ على الصدر، ثم يفتح الطفلُ كتابًا حقيقيًّا، ويبحث عن <strong>جملةٍ كاملةٍ</strong> (تبدأ بحرفٍ بارزٍ وتنتهي بـ«.»)، ويتتبّعها بإصبعه من أوّلها إلى نقطتها. <em>همس: «أين تبدأ هذه الجملةُ؟ وأين تستريح عند نقطتها؟»</em></div>
+      <div class="echo"><span class="lbl">صدًى تراكميٌّ</span>في جسر القراءة تتبّعتَ الكلماتِ في الكتاب؛ وبعد أن أحسستَ الجملةَ تقفُ وتتنفّس، تعود الآن إلى <em>كتابٍ حقيقيٍّ لتصطاد جملةً كاملةً</em> بحدودها (بدايةٌ ونقطةٌ) وتقرأها كقوسِ نفَسٍ.</div>
+      <div class="block b-voice"><span class="lbl">بلسانُ الجملة</span>«أَنا أَعِيشُ في الكُتُبِ! ابْحَثْ عَنِّي بَيْنَ السُّطُورِ: أَبْدَأُ بِحَرْفٍ، وَأَمْشِي كَلِمَاتٍ، وَأَنْتَهِي عِنْدَ «.». ضَعْ إِصْبَعَكَ على أَوَّلِي وَتَتَبَّعْنِي حَتَّى نُقْطَتِي، ثُمَّ اقْرَأْنِي في نَفَسٍ. «الأَرْنَبُ يَجْرِي في الحَدِيقَةِ.» — وَجَدْتَنِي كَامِلَةً!»</div>
+      <div class="homeact"><span class="lbl"></span>في كتاب النوم، اطلبا من الطفل أن «يصطاد» جملةً كاملةً، يتتبّعها بإصبعه ويقرأها.</div>
+      <div class="block b-narr"><span class="lbl">التحوّل السرديّ</span>يفتح الطفلُ الكتابَ، تتجوّل عينُه، فيجد: «الأَرْنَبُ يَجْرِي في الحَدِيقَةِ.» يضع إصبعه على الألف الأولى، يمشي على الكلمات، ويتوقّف عند النقطة. يقرؤها في نفَسٍ واحدٍ بفخرٍ: «جملةٌ حقيقيّةٌ من كتابٍ، وجدتُها وقرأتُها!»</div>
+      <div class="silentq"><span class="lbl"></span>«كيف عرفتَ أين تنتهي الجملةُ في الكتاب، قبل أن تقرأَها كلَّها؟»</div>
+      <div class="chant"><span class="lbl">الأهزوجة</span>«أَبْحَثُ… أَجِدُ جُمْلَةً… مِنْ أَوَّلِهَا إِلَى نُقْطَتِهَا!»<span class="move">الحركة: تتبّعُ الجملة بالإصبع في الكتاب حتى النقطة · كلمةُ المعنى: «قِرَاءَة».</span></div>
+      <div class="protocol"><span class="lbl"></span>
+        <div class="protocol-grid"><div class="protocol-item"><b>المدّة:</b> ١٠ دقائق</div><div class="protocol-item"><b>العدد:</b> طفلٌ أو زوجٌ</div><div class="protocol-item"><b>المادّة:</b> كتابٌ مصوّرٌ بجملٍ بسيطةٍ</div><div class="protocol-item"><b>الأدوات:</b> كتابٌ حقيقيٌّ + إصبعٌ مُتتبِّعٌ</div><div class="protocol-item"><b>الخرج:</b> إيجادُ جملةٍ كاملةٍ وقراءتُها</div></div>
+        <ol><li>طقسُ الأنفاس أوّلًا.</li><li>الطفلُ يفتح صفحةً يختارها ويبحث عن جملةٍ كاملةٍ (من حرفٍ مفتتحٍ إلى «.»).</li><li>يضع إصبعه على أوّلها ويتتبّعها حتى نقطتها.</li><li>يقرؤها في قوس نفَسٍ واحدٍ، ويميّز: أخبرٌ هي أم سؤالٌ؟</li><li>ينسخ الجملةَ أو يرسم مشهدَها في حقيبة الذاكرة.</li></ol>
+      </div>
+      <div class="block b-fruit"><span class="lbl">~ التكامل</span>طبّق الطفلُ كلَّ ما أحسّه (تقفُ، صاحبٌ، حركةٌ، نفَسٌ) على جملةٍ حقيقيّةٍ في كتابٍ. صار قارئَ جملٍ، لا كلماتٍ متفرّقةٍ. · ☆ ثغرة: «أقصرُ جملةٍ في الكتاب» يصطادها بمرحٍ.</div>
+      <div class="pearl"><span class="lbl">لؤلؤة الصمود</span>اصطيادُ الجملة من كتابٍ ورقيٍّ حقيقيٍّ وتتبّعُها باليد يربط كلَّ المهارات بمتعة القراءة الأصيلة، بعيدًا عن الشاشة.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span><span class="en">📖 Find a sentence in the book: «The rabbit runs.» Trace it, read it whole!</span><span class="meaning">الجملةُ في الكتاب ← أَجِدُ جُمْلَةً كَامِلَةً ← A sentence in a book.</span></div>
+      <div class="adapt"><span class="lbl">بدائل التكيُّف</span>⭐ حسّاس: كتابٌ بخطٍّ كبيرٍ وجملٍ قصيرةٍ. 🔺 فرط حركة: يقف ويقرأ الجملةَ بصوتٍ للمجموعة. 🟰 بديل: بطاقةُ جملةٍ كبيرةٍ بدل الكتاب أوّلًا.</div>
+      <div class="silent-arch"><span class="lbl">المكتشف الصامت</span>مَن لا ينطق: يتتبّع الجملةَ بإصبعه ويشير إلى بدايتها ونقطتها، دون كلامٍ.</div>
+      <div class="bag"><span class="lbl">حقيبة الذاكرة</span>الأثرُ الباقي: انسخْ جملةً «اصطدتَها» من كتابٍ، صوّرها. · سؤالٌ: «كم جملةً كاملةً في صفحةٍ واحدةٍ من كتابك؟»</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق — للكبار</span>الحاسّة: البصرُ المركّز واللمس · المهارة: تمييزُ حدود الجملة في نصٍّ حقيقيٍّ (Sentence boundaries in print) · علامةُ الاكتشاف: يجد جملةً كاملةً ويقرؤها بحدودها دون توجيهٍ · الجسر: A sentence in a book.</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تصنع جملةً أخرى… لنفسك؟» — إن طلبَ الطفلُ المزيدَ تلقائيًّا، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد بفرحٍ.</div>
+      <div class="tiers-inline"><div class="ti seed"><b>🌰 بذرة (الأصغر)</b>يجد جملةً قصيرةً في الكتاب ويتتبّعها بمساعدةٍ.</div><div class="ti bud"><b>🌱 برعم (الأكبر)</b>يجد جملةً كاملةً ويقرؤها بحدودها ونغمتها.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== المحطّة ٨: جملتي أنا (ختام الجسور) ===== -->
+<section id="w8" class="sheet">
+  <div class="station">
+    <div class="st-head h8c"><span class="em">💎</span><div><h3>المَحَطَّةُ ٨: جُمْلَتِي أَنا</h3><span class="nick">«أَصْنَعُ جُمْلَتِي… أَقُولُهَا… وَأَكْتُبُهَا»</span></div><span class="jadhr">جذر: ك-ت-ب · ختامُ الجسور</span></div>
+    <div class="st-body">
+      <svg class="fig fig-g" viewBox="0 0 140 76" role="img" aria-label="صندوقُ الجُمَل وفيه جملةٌ مكتوبةٌ">
+        <rect x="28" y="34" width="84" height="34" rx="4" fill="#E7C27A" opacity="0.45" stroke="#1B3A56" stroke-width="1.8"/>
+        <path d="M28 34 q42 -14 84 0" fill="none" stroke="#1B3A56" stroke-width="1.8"/>
+        <rect x="36" y="42" width="68" height="8" rx="2" fill="#fff" stroke="#2E5C86" stroke-width="1.2"/><text x="70" y="49" text-anchor="middle" font-family="Amiri,serif" font-size="9" fill="#1B3A56">أَنا أُحِبُّ القِرَاءَةَ.</text>
+        <g fill="#E7CF93"><circle cx="40" cy="26" r="2"/><circle cx="100" cy="24" r="2"/><circle cx="70" cy="18" r="2.4"/></g>
+      </svg>
+      <span class="tbreath">طقسُ الأنفاس: شهيقٌ ٤، زفيرٌ ٦ مع «هـــ».</span>
+      <div class="anchor-h"><span class="lbl">المرساة (الجسدُ والصوتُ أوّلًا)</span>كفٌّ على الصدر، ثم يصنع الطفلُ <strong>جملتَه</strong> (صاحبٌ + حركةٌ) ببطاقاتٍ، يقولها في نفَسٍ واحدٍ، يكتبها بقلمه، ويضعها في «صندوق الجُمَل». <em>همس: «ما الجملةُ التي تريد أن تقولها للعالَم؟»</em></div>
+      <div class="echo"><span class="lbl">صدًى تراكميٌّ</span>عبَرتَ الجسرَ كلَّه: أحسستَ الجملةَ تقفُ، ولها صاحبٌ وحركةٌ، وتطولُ، وتُخبر أو تسأل، وتُقرأ في نفَسٍ، ووجدتَها في كتابٍ؛ والآن تُتوّجها بأن <em>تصنع جملتَك أنت</em> وتكتبها. الجسرُ يُغلَق، والمرحلةُ البنفسجيّةُ تنتظر حيث تُفتَح الجملةُ فتُرى أجزاؤها وتُبنى قواعديًّا.</div>
+      <div class="block b-voice"><span class="lbl">بلسانُ الجملة</span>«أَنا جُمْلَتُكَ أَنْتَ. اخْتَرْ صَاحِبًا، وَأَعْطِهِ حَرَكَةً، فَأُولَدَ: «أَنا أُحِبُّ القِرَاءَةَ.» قُلْنِي في نَفَسٍ، وَاكْتُبْنِي بِيَدِكَ، وَضَعْنِي في صُنْدُوقِكَ. أَنا أَوَّلُ جُمْلَةٍ صَنَعْتَهَا بِنَفْسِكَ — تَقِفُ، وَتَحْكِي عَنْكَ أَنْتَ.»</div>
+      <div class="homeact"><span class="lbl"></span>اصنعا «صندوقَ جُمَلٍ» بيتيًّا، يضيف إليه الطفلُ كلّ أسبوعٍ جملةً صنعها وكتبها.</div>
+      <div class="block b-narr"><span class="lbl">التحوّل السرديّ</span>يختار الطفلُ صاحبًا: «أَنا». وحركةً: «أُحِبُّ القِرَاءَةَ». يرتّب البطاقاتِ: «أَنا أُحِبُّ القِرَاءَةَ.» يقولها في نفَسٍ واحدٍ، يكتبها بقلمه، يضع «.» في آخرها، ويطويها في صندوق الجُمَل. جملتُه الأولى التي صنعها وقالها وكتبها — جسرٌ بناه بيده.</div>
+      <div class="silentq"><span class="lbl"></span>«ما الذي يجعل هذه الجملةَ جملتَك أنت، لا جملةً عاديّةً؟»</div>
+      <div class="chant"><span class="lbl">الأهزوجة (ختامُ الجسور)</span>«جُمْلَتِي أَنا… صَنَعْتُهَا بِيَدِي… قُلْتُهَا في نَفَسِي… كَتَبْتُهَا بِقَلَمِي… فَوَقَفَتْ تَحْكِي عَنِّي… وَعَبَرْتُ الجِسْرَ!»<span class="move">الحركة: صناعةٌ ثم قولٌ في نفَسٍ ثم كتابةٌ ثم وضعٌ في الصندوق · كلمةُ المعنى: «جُمْلَتي».</span></div>
+      <div class="protocol"><span class="lbl"></span>
+        <div class="protocol-grid"><div class="protocol-item"><b>المدّة:</b> ١٠–١٢ دقيقةً</div><div class="protocol-item"><b>العدد:</b> طفلٌ واحدٌ</div><div class="protocol-item"><b>المادّة:</b> جملةُ الطفل المختارةُ</div><div class="protocol-item"><b>الأدوات:</b> بطاقاتُ كلماتٍ + قلمٌ + صندوقُ الجُمَل</div><div class="protocol-item"><b>الخرج:</b> جملةٌ مصنوعةٌ ومقولةٌ ومكتوبةٌ في الصندوق</div></div>
+        <ol><li>طقسُ الأنفاس أوّلًا.</li><li>الطفلُ يختار صاحبًا وحركةً ويبني جملتَه ببطاقاتٍ يمينًا فيسارًا.</li><li>يقولها في نفَسٍ واحدٍ ويتأكّد أنّها تقفُ (تامّةٌ).</li><li>ينسخها بقلمه ويضع «.» (أو «؟») في آخرها.</li><li>يضعها في «صندوق الجُمَل» ويحتفظ بصورتها في حقيبة الذاكرة.</li></ol>
+      </div>
+      <div class="block b-fruit"><span class="lbl">~ التكامل (حصادُ الجسر)</span>جملةٌ صنعها الطفلُ، قالها، كتبها، وامتلكها. صار يرى الجملةَ شيئًا يُصنَع ويُقال ويُكتَب — لا قاعدةً تُحفَظ. عبَر جسرَ الجملة كلَّه. · ☆ ثغرةُ المرح: «جملةُ سرٍّ» يخترعها الطفلُ كنزًا خاصًّا بضحكٍ.</div>
+      <div class="poetic" style="border-right-color:var(--gold);">🎉 <strong>طقسُ الجملة (احتفالٌ جماعيٌّ بدل اختبارٍ):</strong> يقف الأطفالُ في حلقةٍ، يقول كلٌّ جملتَه في نفَسٍ واحدٍ ويرفع بطاقتَها، فيصفّق الجميعُ، ثم توضَع كلُّ الجمل في «صندوق الجُمَل» المشترك — فالختامُ احتفاءٌ بعبور الجسر، لا امتحانٌ.</div>
+      <div class="poetic" style="border-right-color:var(--gold-deep);">✍ <strong>وصيّةُ الجملة:</strong> يكتب الطفلُ (أو يُملي) سطرًا لنفسه القادمة: «يا أنا، صنعتُ أوّلَ جملةٍ تقفُ وتحكي عنّي… وغدًا سأصنع حكاياتٍ كاملةً.» يطويها في الصندوق ليقرأها حين يكبر.</div>
+      <div class="transition">🌱 الجسرُ الذاتيُّ إلى المرحلة البنفسجيّة: «أحسستَ الجملةَ تقفُ وتتنفّس وتحكي. والآن… هل تتساءل: ما الذي <em>بداخل</em> هذه الكلمات؟ ولماذا تتغيّر الجملةُ حين نبدّل ترتيبَها؟ في المرحلة القادمة — البنفسجيّة — تدخل <strong>ورشةَ المعاني</strong> (لتفتح الكلمةَ) ثم <strong>معملَ الجمل</strong> (لتبنيَ الجملةَ بنفسك قاعدةً قاعدةً). عبرتَ جسورَ الحسّ… وأمامك ورشُ البناء.»</div>
+      <div class="pearl"><span class="lbl">لؤلؤة الصمود</span>أن يصنع الطفلُ جملتَه ويقولها في نفَسٍ ويكتبها ويحفظها كنزًا يمنحه ملكيّةً حقيقيّةً للغة وثقةً بأنّه «صانعُ جملٍ»، نقيضَ الاستهلاك السلبيّ.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span><span class="en">💎 My sentence! I made it, I said it, I wrote it: «I love reading.»</span><span class="meaning">جُمْلَتي ← أَصْنَعُهَا وَأَكْتُبُهَا ← My own sentence.</span></div>
+      <div class="adapt"><span class="lbl">بدائل التكيُّف</span>⭐ حسّاس: جملةٌ قصيرةٌ جدًّا وقلمٌ ليّنُ المسكة. 🔺 فرط حركة: يصنع الجملةَ واقفًا ثم يجلس ليكتب. 🟰 بديل: ينسخ الجملةَ بحروفٍ مغناطيسيّةٍ ويصوّرها.</div>
+      <div class="silent-arch"><span class="lbl">المكتشف الصامت</span>مَن لا ينطق: يصنع الجملةَ ويكتبها ويضعها في الصندوق، ويُشير إليها بفخرٍ، دون كلامٍ.</div>
+      <div class="bag"><span class="lbl">حقيبة الذاكرة</span>الأثرُ الباقي: اكتب جملتَك التي صنعتَها بيدك، صوّرها — إنّها أوّلُ جملةٍ تقفُ وتحكي عنك. · سؤالٌ: «ما الجملةُ التي تريد أن تصنعها غدًا؟»</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق — للكبار</span>الحاسّة: تكاملُ الحركة والنفَس واليد · المهارة: إنتاجُ جملةٍ تامّةٍ قولًا وكتابةً (Sentence production) · علامةُ الاكتشاف: يصنع جملةً تامّةً ويقولها في نفَسٍ ويكتبها مستقلًّا · الجسر: My sentence.</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تصنع جملةً أخرى… لنفسك؟» — إن طلبَ الطفلُ المزيدَ تلقائيًّا، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد بفرحٍ.</div>
+      <div class="tiers-inline"><div class="ti seed"><b>🌰 بذرة (الأصغر)</b>يصنع جملةً قصيرةً (صاحبٌ + حركةٌ) ويكتب أوّلَ كلمةٍ بمساعدةٍ.</div><div class="ti bud"><b>🌱 برعم (الأكبر)</b>يصنع جملتَه ويقولها في نفَسٍ ويكتبها كاملةً بعلامتها.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== المقياس + المصفوفة + السجلّ ===== -->
+<section id="track" class="sheet">
+  <div class="card">
+    <div class="sec-head"><span class="ic">🧰</span><h2>قَائِمَةُ أَدَوَاتِ السَّفَرِ (لِلْمُيَسِّرِ)</h2></div>
+    <div class="kit"><span class="h">جهّزها قبل البدء:</span>بطاقاتُ كلماتٍ (صاحبٌ/حركةٌ/صفةٌ) · بطاقاتُ جملٍ تامّةٍ وعباراتٍ ناقصةٍ · حبلُ الجملة + مشابكُ · بطاقاتُ جملٍ مصوّرةٌ · إطارٌ مُشيرٌ (لصاحب الجملة) · بطاقتا «.» و«؟» · كتابٌ حقيقيٌّ بجملٍ قصيرةٍ · قلمٌ سميكٌ + بطاقاتٌ · صندوقُ الجُمَل · مصباحُ جيبٍ.</div>
+  </div>
+
+  <div class="card">
+    <div class="sec-head"><span class="ic">🌱</span><h2>مَصْفُوفَةُ النُّضْجِ (خَمْسُ دَرَجَاتٍ) + مِقْيَاسُ جُذُور</h2></div>
+    <table>
+      <thead><tr><th>الدرجة</th><th>الطفل...</th></tr></thead>
+      <tbody>
+        <tr><td>🌰 بَذْرَة</td><td>يحسّ أنّ الجملةَ «تقفُ» مقابل العبارة التي «تميل»، ويشير إلى صاحبها بمساعدةٍ.</td></tr>
+        <tr><td>🌱 جَذْر</td><td>يبني جملةً بسيطةً (صاحبٌ + حركةٌ) تقفُ وحدَها، ويمثّل حركتَها.</td></tr>
+        <tr><td>🌿 جِذْع</td><td>يطيل الجملةَ وتبقى تقفُ، ويميّز الخبرَ من السؤال بالنغمة.</td></tr>
+        <tr><td>🍃 وَرَقَة</td><td>يحسّ نبضَ الجملة (يقرؤها في نفَسٍ)، ويجد جملةً كاملةً في كتابٍ ويقرؤها.</td></tr>
+        <tr><td>🌳 شَجَرَة</td><td>يصنع جملتَه (صاحبٌ + حركةٌ)، ويقولها في نفَسٍ، ويكتبها بعلامتها.</td></tr>
+      </tbody>
+    </table>
+    <div class="transition">✅ مُؤَشِّرُ الجاهزيّة (وصفيٌّ لا بوّابة) إلى المرحلة البنفسجيّة (السفر التاسع: ورشةُ المعاني — أجزاءُ الكلمة): وصولُ الطفل إلى درجة «الجَذْر» على الأقلّ في ٣ جلساتٍ.</div>
+    <h3 style="color:var(--blue-deep); font-size:18px; margin:14px 0 6px;">📊 مقياسُ جُذُور — أداةُ رصدٍ وصفيٍّ تُغذّي حكمَ النضج (لا بوّابةٌ ثانيةٌ)</h3>
+    <table>
+      <thead><tr><th>المؤشّر السلوكيّ</th><th>✓</th></tr></thead>
+      <tbody>
+        <tr><td>يميّز الجملةَ التامّةَ (تقفُ) من العبارة الناقصة (تميل)</td><td>☐</td></tr>
+        <tr><td>يحدّد صاحبَ الجملة (مَن يفعل) بالإشارة</td><td>☐</td></tr>
+        <tr><td>يمثّل حركةَ الجملة بجسده</td><td>☐</td></tr>
+        <tr><td>يطيل الجملةَ بكلماتٍ وتبقى تقفُ</td><td>☐</td></tr>
+        <tr><td>يميّز الخبرَ من السؤال بالنغمة («.» / «؟»)</td><td>☐</td></tr>
+        <tr><td>يقرأ جملةً في نفَسٍ واحدٍ، ويصنع جملتَه ويكتبها</td><td>☐</td></tr>
+      </tbody>
+    </table>
+    <div class="transition">📝 جملةٌ وصفيّةٌ واحدةٌ لكلّ مؤشّرٍ. لا درجاتٍ رقميّةً، ولا مقارناتٍ بين الأطفال.</div>
+    <div class="lathatha"><h4>مُؤَشِّرُ اللَّذَاذَةِ (Lathatha Index)</h4>هل يصنع الطفلُ جملًا لمتعته في وقت الفراغ؟ هل يقول جملتَه في نفَسٍ بفخرٍ، ويضيف إلى «صندوق الجُمَل» دون أن يُطلَب منه؟ هل يلتقط جملةً من كتابٍ ويقرؤها كاملةً مبتهجًا؟ — هذا أصدقُ مقياسٍ على أنّ الجسرَ عُبِرَ بحبٍّ لا بإكراهٍ.</div>
+    <div class="note compass"><h4>🧭 سِفْرُ البُوصَلَةِ المَكْسُورَةِ (تنبيهٌ منهجيٌّ صادقٌ)</h4>هذا السِّفْرُ <strong>تأليفٌ على TRT</strong> لا إصدارٌ من مخطوطةٍ أصليّةٍ (كما في الإفصاح). و«الجملةُ تُحَسُّ قبل أن تُحلَّل» استعارةٌ تربويّةٌ <strong>سقالةٌ</strong>، لا قانونًا عصبيًّا. وربطُ إدراك الجملة بالحركة والنفَس والنغمة منهجٌ واعدٌ <strong>يحتاج اختبارًا تجريبيًّا موسّعًا (RCT) قبل أيِّ ادّعاءِ فاعليّةٍ بالأرقام</strong>. نقيس لنتعلّم لا لنحكم.</div>
+  </div>
+
+  <div class="card">
+    <div class="sec-head"><span class="ic">📒</span><h2>سِجِلُّ المُرَافِقِ</h2></div>
+    <table>
+      <thead><tr><th>الطفل</th><th>تقفُ</th><th>مَن؟</th><th>ماذا؟</th><th>تطولُ</th><th>تُخبر/تسأل</th><th>نبضٌ</th><th>الكتابُ</th><th>جملتي</th><th>الدرجة</th></tr></thead>
+      <tbody>
+        <tr><td>______</td><td style="height:26px;"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>______</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>______</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== الطوارئ + المعايير ===== -->
+<section id="guide" class="sheet">
+  <div class="card">
+    <div class="sec-head"><span class="ic">🚨</span><h2>بُرُوتُوكُولُ الطَّوَارِئِ الحِسِّيَّةِ + التَّكْيِيفُ الثَّقَافِيُّ + بُسْتَانُ التَّجْرِبَةِ</h2></div>
+    <div class="note danger"><h4>كَيْفَ تَتَعَامَلُ مَعَ المَوَاقِفِ غَيْرِ المُتَوَقَّعَةِ؟</h4>
+      <ul>
+        <li><strong>رفضُ النشاط:</strong> قدّمْ بديلًا (تمثيلٌ بدل بناءٍ، إشارةٌ بدل نطقٍ، بطاقاتٌ مصوّرةٌ بدل المكتوبة).</li>
+        <li><strong>الضحكُ أثناء الصمت:</strong> الضحكُ تفريغٌ طبيعيٌّ — قابِلْه بابتسامةٍ وواصِلْ بنعومةٍ.</li>
+        <li><strong>«لماذا نفعل هذا؟»:</strong> «لنجرّبْ أوّلًا، ثم نتحدّث» — دعِ التجربةَ تسبقِ الشرحَ.</li>
+        <li><strong>توتّرٌ جسديٌّ:</strong> عُدْ إلى طقس الأنفاس (كفٌّ على الصدر + ٣ أنفاسٍ عميقةٍ).</li>
+        <li><strong>إنْ بكى الطفلُ:</strong> امنحْه لحظةً (نحو ٣٠ ثانيةً)، ثم اقتربْ بهدوءٍ، واطلبْ إذنَه قبل لمسِه — اللمسُ يكون بإذنٍ دائمًا.</li>
+        <li><strong>حساسيّةٌ من أداةٍ (بطاقةٌ، قلمٌ):</strong> استبدلها فورًا (بطاقاتٌ أكبرُ، حروفٌ مغناطيسيّةٌ، قلمٌ أسمكُ).</li>
+        <li><strong>تعثّرٌ في تكوين الجملة:</strong> برِفقٍ وبلا إلحاحٍ، عُدْ خطوةً (ابدأْ بصاحبٍ + حركةٍ فقط)، واحتفلْ بكلّ جملةٍ تقفُ.</li>
+        <li><strong>«هذا صعبٌ/مملٌّ»:</strong> ابدأْ بجملةٍ من كلمتين يحبّها الطفلُ، ودعه يقودُ.</li>
+      </ul>
+    </div>
+    <div class="poetic">🌐 <strong>التكييفُ الثقافيّ + تنويعُ الجمل:</strong> الجملُ (القطّةُ تنامُ، العصفورُ يطيرُ…) ليست قوالبَ مفروضةً — فطفلٌ من بيئةٍ مختلفةٍ قد لا تألفُها حواسُّه. لذا <strong>يُعرَض في كلّ محطّةٍ خمسُ جملٍ (أو خمسةُ صاحبين/أفعالٍ) ليختار الطفلُ ما يحبّ</strong> (مثلًا الصاحب: قِطّة / كلب / عصفور / سمك / أُمّي)، على أن تبقى بسيطةً (صاحبٌ + حركةٌ). الجوهرُ: أن تُحَسَّ الجملةُ بمادّةٍ مألوفةٍ للطفل نفسِه.</div>
+    <div class="poetic" style="border-right-color:var(--s7);">🍂 <strong>بستانُ التجربة:</strong> إن لم تقفِ الجملةُ من أوّل مرّةٍ، لا تصحيحَ جافٌّ — بل: «مَن صاحبُها؟ وماذا يفعل؟ ضعهما معًا… أتقفُ الآن؟» التعثّرُ بذرةٌ لا فشلٌ، والجملةُ تُبنى على مهلٍ.</div>
+  </div>
+
+  <div class="card">
+    <div class="sec-head"><span class="ic">🌍</span><h2>المُوَاءَمَةُ مَعَ المَعَايِيرِ الدَّوْلِيَّةِ</h2></div>
+    <table>
+      <thead><tr><th>المعيار / الإطار</th><th>التطبيق في السفر</th></tr></thead>
+      <tbody>
+        <tr><td>UNESCO — محو الأمّيّة المبكّر (Early Literacy)</td><td>الانتقالُ من الكلمة إلى الجملة التامّة المُحَسّةِ كوحدةٍ معنويّةٍ</td></tr>
+        <tr><td>NAEYC — الممارسةُ الملائمةُ نمائيًّا (DAP)</td><td>أنشطةٌ حسّيّةٌ حركيّةٌ باللعب بلا إكراهٍ، تراعي العمرَ والفروقَ</td></tr>
+        <tr><td>CEFR — المستوى A1 (الجملة البسيطة)</td><td>إنتاجُ جملٍ بسيطةٍ تامّةٍ (صاحبٌ + حركةٌ)، خبرًا وسؤالًا</td></tr>
+        <tr><td>الوعيُ بالتنغيم والنبر (Prosody)</td><td>تمييزُ الخبر من السؤال بالنغمة، وقراءةُ الجملة في قوس نفَسٍ واحدٍ</td></tr>
+        <tr><td>الرؤيةُ النشِطةُ للقراءة (Active View of Reading)</td><td>الطفلُ يبني الجملةَ ويمثّلها ويقرؤها، فاعلًا لا متلقّيًا</td></tr>
+        <tr><td>الإدراكُ المتجسّد (Embodied cognition)</td><td>«الجسدُ يقرأ الجملةَ قبل العقل» — الوقوفُ والتمثيلُ والنفَس</td></tr>
+        <tr><td>السلامةُ الحسّيّةُ في الأنشطة اللمسيّة <span style="font-size:11px;color:#6B6F76;">— Schaaf &amp; Mailloux (2015); Dunn (2014)</span></td><td>تقييمٌ حسّيٌّ مبدئيٌّ، وتعديلاتٌ بيئيّةٌ، وبدائلُ لِكلّ أداةٍ عند الانزعاج</td></tr>
+        <tr><td>معاييرُ الوصولِ (استرشادًا) · الدستور العالميّ للطفل v10.2</td><td>الوصولُ الشاملُ، والتعلّمُ بلا إكراهٍ</td></tr>
+      </tbody>
+    </table>
+    <div class="seal-block">
+      <svg class="seal-lg" viewBox="0 0 220 220" role="img" aria-label="ختم اعتماد مشروع جُذُور">
+        <defs><path id="arcTopL" d="M 40 110 A 70 70 0 0 1 180 110"/><path id="arcBotL" d="M 180 110 A 70 70 0 0 1 40 110"/></defs>
+        <circle cx="110" cy="110" r="105" fill="none" stroke="#C9A24B" stroke-width="2.4"/>
+        <circle cx="110" cy="110" r="98" fill="none" stroke="#C9A24B" stroke-width="4.5"/>
+        <circle cx="110" cy="110" r="90" fill="none" stroke="#C9A24B" stroke-width="0.9" stroke-dasharray="2 4.5" opacity="0.7"/>
+        <text dir="rtl" font-family="Cairo,sans-serif" font-weight="700" font-size="15" fill="#8A6D2E" letter-spacing="1"><textPath href="#arcTopL" startOffset="50%" text-anchor="middle">مَشْرُوعُ جُذُور</textPath></text>
+        <text dir="rtl" font-family="Cairo,sans-serif" font-weight="700" font-size="12" fill="#8A6D2E"><textPath href="#arcBotL" startOffset="50%" text-anchor="middle">بَيَانُ الاسْتِرْشَاد</textPath></text>
+        <text x="22" y="116" font-size="13" fill="#C9A24B">✦</text><text x="190" y="116" font-size="13" fill="#C9A24B">✦</text>
+        <g transform="translate(110,112) scale(0.5) translate(-100,-100)"><use href="#treeLogo"/></g>
+      </svg>
+      <div class="t"><b>بَيَانُ الاسْتِرْشَادِ:</b> صُمِّمَ هذا السِّفْرُ اسْتِرْشَادًا بِنَظَرِيَّةِ القِرَاءَةِ المَلْمُوسَةِ (TRT) وَبِأَدَبِيَّاتِ الوَعْيِ الصَّوْتِيِّ وَالإِدْرَاكِ المُتَجَسِّد، وَبِالاطِّلَاعِ عَلَى أُطُرِ CEFR وACTFL وIB PYP. <b>وَلَمْ يُعْتَمَدْ مِنْ أَيِّ جِهَةٍ مِنْ هذِهِ الجِهَاتِ، وَلَا يَدَّعِي اعْتِمَادَهَا.</b> صُمِّمَ حِصْنًا حِسِّيًّا بِلَا إِكْرَاهٍ.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== البيت + التقرير ===== -->
+<section id="home" class="sheet">
+  <div class="card">
+    <div class="sec-head"><span class="ic">🧠</span><h2>صُنْدُوقُ الذَّاكِرَةِ + رَسَائِلُ البَيْتِ + طَقْسُ الوَدَاعِ</h2></div>
+    <div class="kit"><span class="h">🧠 صندوقُ الذاكرة الملموس</span>يجمع الطفلُ من كلّ محطّةٍ أثرًا: جملةٌ «واقفةٌ»، جملةٌ أُحيطَ صاحبُها بدائرةٍ، رسمةُ حركةٍ مُمثَّلةٍ، جملةٌ قصيرةٌ ثم طويلةٌ، جملةٌ بعلامتي «.» و«؟»، قوسُ نفَسٍ، جملةٌ مصطادةٌ من كتابٍ، و«جملتي» التي صنعها وكتبها.</div>
+    <div class="kit"><span class="h">💌 رسائلُ التغذية الراجعة الحسّية للأهل</span>بدلًا من التقارير الجافّة، أرسِلْ «عيّنةً حسّيّةً» أسبوعيًّا: صورةَ جملةٍ بناها، أو بطاقةَ «جملته» المكتوبةَ. يقرؤها الأهلُ مع الطفل ليحكيَ كيف صنع جملتَه — فيصير التقريرُ تواصلًا شعوريًّا.</div>
+    <div class="kit" style="background:#F6FAFC; border-color:var(--blue-soft);"><span class="h" style="color:var(--blue-mid);">🏠 رسالةٌ إلى البيت</span>عزيزي وليَّ الأمر، في هذا السفرِ يتعلّم طفلُك أنّ <strong>الجملةَ كائنٌ يقفُ ويحكي ويتنفّس</strong>. ابدآ بـ🕯️ عشر دقائق من اللاشيء الرقميّ يوميًّا، ثم: 🧍 قولا أشياءَ ناقصةً وتامّةً، ويقف الطفلُ للتامّة ويميل للناقصة. · 👈 اسألا عند الحكاية «مَن صاحبُ هذه الجملة؟». · 🏃 مثّلا حركةَ جملةٍ بأجسادكم. · ➕ أطيلا جملةً قصيرةً بالتناوب. · 🎵 حوّلا جملةً خبرًا ثم سؤالًا بالنغمة (الصوتُ يصعد). · 🫁 قولا جملةً في نفَسٍ واحدٍ وارسما قوسَها. · 📖 اصطادا جملةً كاملةً في كتاب النوم واقرآها. · 💎 اصنعا «صندوقَ جُمَلٍ» يضيف إليه الطفلُ جملةً صنعها كلّ أسبوعٍ. · ❓ سؤالٌ قبل النوم: «ما الجملةُ التي صنعتَها اليوم؟» <em>ولغتُنا العربيّةُ يُسرٌ لا عُسرٌ.</em></div>
+    <div class="poetic" style="margin-top:14px; border-right-color:var(--s8);">🧱 <strong>الجدارُ الحسّيّ + 🎈 طقسُ الوداع:</strong> تُعلَّق آثارُ الأطفال (الجملُ الواقفةُ، أقواسُ النفَس، بطاقاتُ «جملتي») على «جدار الجسر» فيحكي رحلتَهم. وفي الختام يجتمعون في حلقةٍ، ويعيد كلٌّ أداتَه (البطاقاتِ، الحبلَ، القلمَ…) إلى «صندوق المكتشف» بامتنانٍ قائلًا: «شكرًا أيّتها الجملةُ، علّمتِني أنّكِ تقفين وتحكين عنّي.»</div>
+  </div>
+
+  <div class="card">
+    <div class="sec-head"><span class="ic">📋</span><h2>نَمُوذَجُ التَّقْرِيرِ (لِلْإِدَارَةِ التَّعْلِيمِيَّةِ)</h2></div>
+    <div class="poetic" style="border-right-color:var(--blue-mid);">«انتقل الطالبُ من بناء الكلمة إلى الإحساس بالجملة كاملةً: يميّز الجملةَ التامّةَ من العبارة بالاتزان، ويحدّد صاحبَها ويمثّل حركتَها، ويطيلها وتبقى تقفُ، ويميّز الخبرَ من السؤال بالنغمة، ويقرؤها في قوس نفَسٍ واحدٍ، ويجدها في كتابٍ حقيقيٍّ، ثم يصنع جملتَه ويقولها ويكتبها. وقد بلغ درجةَ "الجذر" في مصفوفة النضج اللغويّ-الحسّيّ.»</div>
+    <div class="note compass"><h4>🧭 ملاحظةٌ على صياغة التقرير</h4>تُوصَف مؤشّراتُ التقدّم <strong>كيفيًّا</strong> من ملاحظة الميسّر (بنى جملةً تقفُ، مثّل حركتَها، قرأ جملةً في نفَسٍ، صنع جملتَه…)، <strong>دون نِسَبٍ رقميّةٍ للفاعليّة لم تُختبَر تجريبيًّا (RCT)</strong>، والتزامًا بأنّ هذا السفرَ تأليفٌ على النَّظَريّة — وفاءً لأمانة «سِفر البوصلة المكسورة».</div>
+  </div>
+</section>
+
+<!-- ===== المراجع ===== -->
+<section id="refs" class="sheet">
+  <div class="card">
+    <div class="sec-head"><span class="ic">📚</span><h2>المَصَادِرُ وَالأُطُرُ المَرْجِعِيَّةُ</h2></div>
+    <ul class="refs">
+      <li><b>عامر، عادل ف. (2024).</b> نظريّة القراءة الملموسة (TRT). ORCID: 0009-0008-9618-3863. <span style="color:#8C8170;">— النَّظَريّةُ التي بُنيَ عليها هذا السفرُ تأليفًا.</span></li>
+      <li><b>Saiegh-Haddad, E. (2003, 2007).</b> Linguistic distance and phonological awareness in Arabic.</li>
+      <li><b>Ehri, L. C. (2005).</b> Learning to read words: orthographic mapping.</li>
+      <li><b>Duke, N. K., & Cartwright, K. B. (2021).</b> The Active View of Reading.</li>
+      <li><b>Wilson, M. (2002).</b> Six views of embodied cognition.</li>
+      <li><b>Schaaf, R. C., &amp; Mailloux, Z. (2015).</b> Clinician's Guide for Implementing Ayres Sensory Integration®. AOTA Press. <span style="color:#8C8170;">— السلامةُ والتقييمُ الحسّيُّ في الأنشطة اللمسيّة.</span></li>
+      <li><b>Dunn, W. (2014).</b> Sensory Profile 2 (SP-2). Pearson. <span style="color:#8C8170;">— رصدُ الأنماط الحسّيّة.</span></li>
+      <li><b>UNESCO.</b> Early Childhood Literacy · <b>NAEYC.</b> Developmentally Appropriate Practice (DAP).</li>
+      <li><b>مشروع جُذُور.</b> الدستور العالميّ للطفل (v10.2) · <b>Council of Europe (2020)</b> CEFR (A1) · <b>W3C (2018)</b> WCAG 2.1 (AA).</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="f-emblems">
+    <svg class="seal-sm" viewBox="0 0 220 220" aria-hidden="true">
+      <circle cx="110" cy="110" r="104" fill="none" stroke="#E7CF93" stroke-width="4"/><circle cx="110" cy="110" r="94" fill="none" stroke="#E7CF93" stroke-width="1.5"/>
+      <g transform="translate(110,110) scale(0.62) translate(-100,-100)"><use href="#treeLogo"/></g>
+    </svg>
+  </div>
+  <p class="q">«الجُمْلَةُ تُحَسُّ كَامِلَةً قَبْلَ أَنْ تُحَلَّلَ — الجَسَدُ يَقْرَأُ الجُمْلَةَ قَبْلَ العَقْلِ.»</p>
+  <p>انتهى السِّفْرُ الثَّامِنُ — جِسْرُ الجُمْلَةِ: الجُمْلَةُ تَقِفُ وَتَحْكِي وَتَتَنَفَّسُ (الطبعة المُشكَّلة)</p>
+  <p>Volume 8 — The Sentence Bridge: A Sentence Stands, Speaks, and Breathes · Juthur · Bridges Stage (Blue)</p>
+  <p style="color:var(--gold-light);">✍ تأليفٌ على نظريّة القراءة الملموسة (TRF) — لا إصدارٌ من مصدرٍ</p>
+  <p>الصادر عن مشروع جُذُور | مسارُ الجسور (٦–٨ سنوات) | المرحلةُ الزرقاء — خاتمةُ الجسور ومدخلُ البناء</p>
+  <p class="slogan" style="color:var(--gold-light); font-family:'Amiri',serif; margin-top:10px;">الحَرْفُ يُولَدُ بِتَقَاطُعِ الحَوَاسِّ، وَالمَعْنَى يُعْرَفُ بِتَعَدُّدِ السِّيَاقِ</p>
+  <p class="v">الإصدار v8.0 — تأليفٌ على النَّظَريّة — مُستلهَمٌ من الدستور العالميّ للطفل والمعايير الدوليّة — بنيةٌ متّسقةٌ مُدقّقة، جسرٌ حسّيٌّ بلا إكراهٍ</p>
+  <p style="opacity:.7;margin-top:8px;">د. عادل ف. عامر — نظريّة القراءة الملموسة (TRT) — Amer (2024) — جميع الحقوق محفوظة ©</p>
+</footer>
+
+</div>
+
+<div class="jz-foot" style="margin:2.4rem 0 1rem;text-align:center;border-top:3px double #D9CFB4;padding-top:1.4rem;font-family:Amiri,serif"><img src="/juthur/assets/Juthur_Seal_Mono.png" alt="ختمُ الدار" width="56" height="56" style="opacity:.85"><p style="font-size:.74rem;letter-spacing:.16em;color:#9A7B23;margin:.5rem 0;line-height:2">مَطبعةُ جُذور · دبي · MCMXXVI · صمّمه وطوّره د. عادل ف. عامر</p><p style="font-size:.74rem;letter-spacing:.16em;color:#9A7B23;margin:.5rem 0;line-height:2">Designed and developed by Dr. Adel F. Amer · Amer (2024) · CC BY-NC-SA 4.0</p></div>
+<div style="text-align:center;margin:1.4rem 0;padding:.8rem;border-top:1px solid #D9CFB4;border-bottom:1px solid #D9CFB4;font-family:Amiri,serif;font-size:.9rem"><a href='/shajara' style='color:#1B3A2F;margin:0 .5rem'>شَجَرَةُ الدَّار</a>·<a href='/khizanat-harf' style='color:#1B3A2F;margin:0 .5rem'>خِزانةُ جَناحِ الحَرْف</a>·<a href='/harf/sullam' style='color:#1B3A2F;margin:0 .5rem'>السُّلَّم</a>·<a href='/judhur' style='color:#1B3A2F;margin:0 .5rem'>خَريطةُ الجُذور</a>·<a href='/yad-lisan' style='color:#1B3A2F;margin:0 .5rem'>اليَدُ واللِّسان</a></div>
+</body>
+</html>

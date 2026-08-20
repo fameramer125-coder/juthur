@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><base href="/juthur/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بيانُ الوصولية — جُذور · Accessibility Statement — Juthur</title>
+<meta name="description" content="بيان الوصولية لموقع جُذور: ما يلتزم به الموقع، وما لا يزال قيد التحسين، وكيف تبلغ عن مشكلة.">
+<link rel="canonical" href="https://juthur.netlify.app/accessibility.html">
+<link rel="icon" type="image/png" href="assets/Juthur_Seal_Mono.png">
+<meta name="theme-color" content="#2b2823">
+<link rel="stylesheet" href="juthur-core.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@400;500;600;700&display=swap">
+<style>
+:root{--ink:#2b2823;--gold:#b08f43;--paper:#f3eee2;--ink-70:#6b6459;--gold-15:#e9e2d2;--rule:#d5cbb8;--gold-aa:#8a6b2c}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Fraunces',Georgia,serif;color:var(--ink);background:var(--paper);font-size:18px;line-height:1.7}
+.ar{font-family:'Amiri',serif}
+main{max-width:72ch;margin:0 auto;padding:clamp(2.5rem,7vw,5rem) 1.4rem}
+h1{font-family:'Amiri',serif;font-size:clamp(1.9rem,5vw,2.6rem);margin:0 0 .3rem;text-shadow:0 1px 0 rgba(255,255,255,.35)}
+h1 small{display:block;font-family:'Fraunces',serif;font-size:1.05rem;font-style:italic;color:var(--ink-70);font-weight:400;margin-top:.3rem}
+h2{font-family:'Amiri',serif;font-size:1.25rem;margin:2.2rem 0 .5rem}
+h2 small{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color:var(--ink-70);font-weight:400;margin-inline-start:.6rem}
+hr{height:5px;background:none;border:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:1.2rem 0 1.8rem}
+p,li{color:var(--ink)}
+li{margin:.45rem 0}
+li i{color:var(--ink-70);font-family:'Fraunces',serif;font-size:.9rem;display:block}
+a{color:var(--gold-aa)}
+a:focus-visible{outline:2px solid var(--gold-aa);outline-offset:2px}
+.back{display:inline-block;margin-top:2.5rem;font-family:'Outfit',sans-serif;font-size:.85rem;letter-spacing:.1em;color:var(--ink);background:var(--gold-15);border:1px solid var(--ink);padding:.6rem 1.4rem;text-decoration:none;box-shadow:0 3px 0 rgba(43,40,35,.3)}
+.back:hover{transform:translateY(1px);box-shadow:0 2px 0 rgba(43,40,35,.3)}
+.stamp{font-family:'Outfit',sans-serif;font-size:.66rem;letter-spacing:.12em;border:1px solid var(--gold-aa);color:var(--gold-aa);padding:.3rem .7rem;display:inline-block;margin-top:.8rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+<h1 class="ar">بيانُ الوصولية<small>Accessibility Statement — Juthur · juthur.netlify.app</small></h1>
+<span class="stamp">آخرُ تحديث: ١٦ أغسطس ٢٠٢٦ · Last updated: 16 August 2026</span>
+<hr>
+
+<p class="ar">مشروعٌ موضوعُه إعادةُ الطفلِ من الشاشةِ إلى الحواسّ، لا يليقُ به إلا أن يكونَ موقعُه من أرحبِ ما على الشاشةِ بابًا: للكفيفِ بقارئِ شاشته، ولمن لا يملكُ إلا لوحةَ مفاتيح، وللجهازِ العتيقِ في مدرسةٍ بعيدة. هذا البيانُ يذكرُ ما التزمَ به الموقعُ فعلًا، وما لا يزالُ قيدَ التحسين، وكيف تُبلغُنا إن وجدتَ بابًا موصَدًا.</p>
+<p><i>A project about returning children from screens to their senses owes the screen its most open door. This page states what the site actually implements, what is still in progress, and how to report a barrier.</i></p>
+
+<h2 class="ar">ما يلتزمُ به الموقع<small>What the site implements</small></h2>
+<ul>
+<li class="ar">التنقّلُ الكاملُ بلوحةِ المفاتيح، ومنه التنقّلُ بالأسهمِ بين قوالبِ الحروفِ التسعةِ والعشرين (roving tabindex) بدل تسعٍ وعشرين ضغطةَ Tab.<i>Full keyboard operation, including arrow-key roving through the 29 letter sorts.</i></li>
+<li class="ar">احترامٌ تامّ لتفضيلِ تقليلِ الحركة: كلُّ الحركةِ تتوقفُ وتُعرَضُ الحالةُ النهائيةُ فورًا.<i>prefers-reduced-motion fully honored — all motion stops, final state renders immediately.</i></li>
+<li class="ar">لا صوتَ يعملُ من تلقاءِ نفسِه أبدًا: صوتُ المكبسِ يصدرُ بضغطةِ المستخدمِ وحدَها، وله زرُّ إيقافٍ ظاهرٌ يحفظُ الاختيار.<i>No autoplay audio — the press sound is gesture-gated with a visible, remembered toggle.</i></li>
+<li class="ar">كلُّ مقاطعِ العربيةِ والإنجليزيةِ موسومةٌ بلغتِها (lang) لقارئاتِ الشاشة، والصفحةُ تُبدِّلُ لغةَ الوثيقةِ واتجاهَها مع زرِّ اللغة.<i>Every Arabic/English span is language-tagged; the toggle switches document lang and dir.</i></li>
+<li class="ar">تباينُ الألوانِ للنصوصِ روجِعَ حسابيًّا إلى 4.5:1 فأعلى في المواضعِ المصحَّحة، ولا يُعتمَدُ على اللونِ وحدَه لنقلِ معنى.<i>Text contrast audited to ≥ 4.5:1 in corrected areas; color is never the only carrier of meaning.</i></li>
+<li class="ar">رابطُ تخطٍّ إلى المحتوى، وعناوينُ مرتّبة، وحلقاتُ تركيزٍ مرئيةٌ في كلِّ عنصرٍ تفاعليٍّ أُضيف.<i>Skip link, ordered headings, visible focus rings on all added interactive elements.</i></li>
+<li class="ar">النماذجُ بعناوينَ ظاهرةٍ مرتبطةٍ بحقولِها، ومصيدةُ السبامِ لا تمسُّ المستخدمَ الحقيقيّ.<i>Forms use visible bound labels; the honeypot never touches real users.</i></li>
+<li class="ar">المحتوى المطويُّ في الأدراجِ يبقى حيًّا لقارئاتِ الشاشةِ (قصٌّ بصريٌّ لا إخفاءُ display:none)، وينفتحُ كلُّه عند الطباعةِ وعند تعطُّلِ جافاسكريبت.<i>Drawer content stays exposed to assistive tech (visual clipping, not display:none) and fully opens for print and no-JS.</i></li>
+<li class="ar">نسخةُ طباعةٍ كاملةٌ ككتاب: كلُّ المحتوى يخرجُ على الورقِ بلا عناصرِ ويبٍ متحركة.<i>A full print edition: all content prints as a book, no web chrome.</i></li>
+</ul>
+
+<h2 class="ar">ما لا يزالُ قيدَ التحسين<small>Known limitations — in progress</small></h2>
+<ul>
+<li class="ar">تدقيقُ WCAG 2.2 AA رسميٌّ شاملٌ بأداةٍ مستقلةٍ لم يُجرَ بعد؛ ما سبقَ التزامٌ هندسيٌّ موثَّقٌ في الكود.<i>A formal independent WCAG 2.2 AA audit is pending; the above is engineering-verified in code.</i></li>
+<li class="ar">نطقُ أسماءِ الحروفِ في مختبرِ الحرفِ يعتمدُ حاليًا على صوتِ المتصفحِ، وجودتُه تتفاوتُ بين الأجهزة؛ تسجيلاتٌ بشريةٌ مجازةٌ تجويديًّا في خارطةِ الطريق.<i>Letter-name audio currently uses the browser voice; ijāza-quality human recordings are on the roadmap.</i></li>
+<li class="ar">الصفحةُ الرئيسيةُ طويلةٌ بطبيعتِها ككتابٍ واحد؛ يعوِّضُها الفهرسُ وعدّادُ اللوحاتِ العائدُ إليه.<i>The single long page is by design (one book); the index and the plate-counter return link compensate.</i></li>
+</ul>
+
+<h2 class="ar">أبلِغْ عن بابٍ موصَد<small>Report a barrier</small></h2>
+<p class="ar">إن اعترضَك حاجزُ وصولٍ في أيِّ موضعٍ من الموقع، راسِلْنا عبرَ <a href="./#portal">بوابةِ المؤسّساتِ والباحثين</a> أو على <a href="mailto:aamer@asdubai.org?subject=Accessibility%20—%20Juthur">aamer@asdubai.org</a>، واذكرِ الصفحةَ والأداةَ المساعدةَ التي تستخدمُها، ويُنظَرُ في الأمرِ بجدّيةِ مطبعةٍ تُصحِّحُ بروفتَها.</p>
+<p><i>If anything on this site blocks you, write via the portal or the address above, naming the page and the assistive technology you use.</i></p>
+
+<a class="back" href="./"><span class="ar">↤ عودةٌ إلى المطبعة</span> · Back to the press</a>
+<p style="text-align:center;font-family:Outfit,sans-serif;font-size:.62rem;letter-spacing:.2em;color:#8a6b2c;margin-top:1.6rem">مطبعةُ جُذور · دبي · MCMXXVI · صمّمه وطوّره د. عادل ف. عامر · Designed and developed by Dr. Adel F. Amer</p>
+</main>
+</body>
+</html>

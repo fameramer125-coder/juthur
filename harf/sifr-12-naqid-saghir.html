@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><base href="/juthur/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="السِفْر الثالث عشر: الناقد الصغير — الذائقة والموازنة الأدبية: أتذوّق، وأوازن، وأبني حكمي بالدليل | مشروع جُذُور — المستوى المبدع (مُثمِر، ١٣+). الطبعة الجامعة الكاملة المُشكَّلة، جاهزة للطبع.">
+<meta name="author" content="د. عادل ف. عامر — مشروع جُذُور">
+<meta name="keywords" content="مشروع جذور, نظرية القراءة الملموسة, TRT, الناقد الصغير, الذائقة, الموازنة الأدبية, مؤشر اللذاذة, الرأي المسنود, الحوار النقدي">
+<meta name="version" content="v13.1 — الناقد الصغير">
+<meta name="standards" content="استرشادٌ بأُطُر CEFR · ACTFL · IB PYP — دون اعتمادٍ من أيٍّ منها">
+<title>السِفْر الثالث عشر: الناقد الصغير — الطبعة الجامعة | مشروع جُذُور</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@300;400;600;700;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#173524; --forest-mid:#2E7D52; --forest-soft:#4CAF7D; --forest-pale:#E8F3EC;
+  --gold:#C9A24B;--gold-aa:#8c7134; --gold-light:#E7CF93; --gold-pale:#FBF3DD; --gold-deep:#8A6D2E;
+  --earth:#7A5C3E; --earth-pale:#F4EADB; --earth-deep:#5A4226;
+  --ink:#211C16; --ink-soft:#5A4F42; --ink-faint:#8C8170;
+  /* محطّات النقد الخمس */
+  --s1:#B04A6E; --s1-pale:#FAE7EE; --s1-deep:#6E2A45;   /* الذائقة — التذوّق */
+  --s2:#2E8C8C; --s2-pale:#E0F0F0; --s2-deep:#1B5454;   /* العدسة — التحليل */
+  --s3:#2E8B7A; --s3-pale:#E2F1ED; --s3-deep:#1C5A4F;   /* الميزان — صدى معمل الجمل */
+  --s4:#9A6B3F; --s4-pale:#F2E9DC; --s4-deep:#5E3F22;   /* الرأي — البرج، صدى معمل الجمل */
+  --s5:#6A5AC9; --s5-pale:#EBE9F7; --s5-deep:#3E3480;   /* الحوار */
+  --crimson:#9E2B32; --crimson-pale:#FBE7E8; --silver:#6B6F76; --silver-pale:#EEF0F2;
+  --cream:#FCFAF3; --paper:#FFFFFF; --line:#E6DFCD;
+  --shadow:0 10px 34px rgba(23,53,36,.08); --shadow-sm:0 4px 14px rgba(23,53,36,.06);
+  --r-lg:22px; --r-md:15px; --r-sm:10px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0; background:var(--cream); color:var(--ink); font-family:'Scheherazade New','Amiri',serif; font-size:20px; line-height:2.05; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+.wrap{max-width:980px; margin:0 auto; padding:24px 20px 80px;}
+h1,h2,h3,h4{font-family:'Cairo',sans-serif; font-weight:700; line-height:1.5; color:var(--forest); margin:0;}
+p{margin:0 0 12px;} strong{color:var(--forest); font-weight:700;} em{color:var(--earth-deep); font-style:italic;}
+
+.nav{position:sticky; top:0; z-index:50; background:rgba(252,250,243,.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; gap:6px 12px; justify-content:center; padding:10px 14px; font-family:'Cairo',sans-serif; font-size:13.5px;}
+.nav a{color:var(--earth-deep); text-decoration:none; padding:3px 8px; border-radius:7px; transition:.2s;}
+.nav a:hover{background:var(--gold-pale); color:var(--forest);}
+
+.cover{position:relative; text-align:center; color:#fff; border-radius:var(--r-lg); overflow:hidden; padding:52px 30px 48px; margin:14px 0 34px; background:radial-gradient(120% 120% at 50% 0%, #245138 0%, #173524 55%, #0E2418 100%); box-shadow:var(--shadow);}
+.cover::after{content:""; position:absolute; inset:14px; border:2px solid rgba(201,162,75,.55); border-radius:16px; pointer-events:none;}
+.cover-emblems{display:flex; align-items:center; justify-content:center; gap:22px; margin-bottom:6px;}
+.logo{width:118px; height:118px; display:block; filter:drop-shadow(0 6px 12px rgba(0,0,0,.35));}
+.seal{width:96px; height:96px; display:block; filter:drop-shadow(0 4px 9px rgba(0,0,0,.3));}
+.brand{font-family:'Cairo',sans-serif; font-weight:700; letter-spacing:3px; color:var(--gold-light); font-size:18px; margin-bottom:6px;}
+.cover h1{color:#fff; font-size:38px; margin:8px 0 6px; letter-spacing:.5px;}
+.cover .sub{font-family:'Scheherazade New',serif; color:var(--gold-light); font-size:23px; margin:4px 0;}
+.cover .verse{font-family:'Amiri',serif; font-size:24px; color:var(--gold-light); margin:18px 0 6px;}
+.cover .verse small{display:block; font-size:14px; opacity:.8; font-family:'Cairo',sans-serif; margin-top:2px;}
+.cover .motto{font-family:'Scheherazade New',serif; color:#EAF3EC; max-width:760px; margin:6px auto 0; font-size:19px; opacity:.96;}
+.cover .slogan{font-family:'Amiri',serif; font-size:18px; color:var(--gold-light); margin:14px auto 0; max-width:680px;}
+.chips{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:20px;}
+.chip{font-family:'Cairo',sans-serif; font-size:13px; font-weight:600; color:var(--gold-pale); background:rgba(255,255,255,.08); border:1px solid rgba(201,162,75,.5); border-radius:30px; padding:6px 14px;}
+
+section{margin:30px 0;} .sheet{break-before:page;}
+.card{background:var(--paper); border:1px solid var(--line); border-radius:var(--r-lg); padding:26px 26px 22px; box-shadow:var(--shadow-sm); margin:18px 0;}
+.sec-head{display:flex; align-items:center; gap:12px; margin-bottom:16px; padding-bottom:12px; border-bottom:2px solid var(--gold-pale);}
+.sec-head .ic{font-size:26px; flex:0 0 auto;} .sec-head h2{font-size:25px; color:var(--forest);}
+.lead{color:var(--ink-soft); font-size:19px;}
+
+.poetic{background:var(--forest-pale); border-right:6px solid var(--forest-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:16px 20px; font-family:'Amiri',serif; font-size:20.5px; color:var(--forest); line-height:2; margin:10px 0;}
+.golden-rule{background:linear-gradient(135deg,#fff,var(--gold-pale)); border:2px dashed var(--gold); border-radius:var(--r-md); padding:18px 22px; text-align:center; font-family:'Amiri',serif; font-size:21px; color:var(--gold-deep); font-weight:700;}
+
+.cord{display:flex; flex-wrap:wrap; align-items:stretch; gap:10px; justify-content:center; margin:14px 0;}
+.cord .node{flex:1 1 150px; min-width:140px; background:var(--earth-pale); border:1px solid var(--line); border-radius:var(--r-sm); padding:12px; text-align:center; font-family:'Cairo',sans-serif; font-size:14px; color:var(--earth-deep);}
+.cord .now{background:var(--forest); color:#fff; border-color:var(--forest);} .cord .now b{color:var(--gold-light);}
+.cord .arrow{align-self:center; color:var(--gold-aa); font-size:24px; font-weight:700;}
+.fiveparts{display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-top:14px;}
+.fiveparts .pp{border-radius:var(--r-sm); padding:12px 6px; text-align:center; font-family:'Cairo',sans-serif;}
+.pp.p1{background:var(--s1-pale); color:var(--s1-deep); border:1px solid var(--s1);}
+.pp.p2{background:var(--s2-pale); color:var(--s2-deep); border:1px solid var(--s2);}
+.pp.p3{background:var(--s3-pale); color:var(--s3-deep); border:1px solid var(--s3);}
+.pp.p4{background:var(--s4-pale); color:var(--s4-deep); border:1px solid var(--s4);}
+.pp.p5{background:var(--s5-pale); color:var(--s5-deep); border:1px solid var(--s5);}
+.pp .big{font-size:22px; display:block;} .pp .ttl{font-weight:700; font-size:14.5px;} .pp .dsc{font-size:12px; opacity:.85;}
+
+.integ{display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin:12px 0;}
+.integ .col{border-radius:var(--r-sm); padding:12px 8px; text-align:center; font-family:'Cairo',sans-serif; border:1px solid var(--line);}
+.integ .col .e{font-size:24px; display:block;} .integ .col .st{font-weight:700; font-size:14px; margin:2px 0;}
+.integ .col .se{font-size:12.5px; color:var(--ink-soft);} .integ .col .ar{color:var(--gold-aa); font-weight:700;} .integ .col .sk{font-size:12.5px; margin-top:6px; font-weight:600;}
+.integ .c1{background:var(--s1-pale);} .integ .c2{background:var(--s2-pale);} .integ .c3{background:var(--s3-pale);} .integ .c4{background:var(--s4-pale);} .integ .c5{background:var(--s5-pale);}
+
+.station{border-radius:var(--r-lg); border:1px solid var(--line); background:var(--paper); box-shadow:var(--shadow-sm); overflow:hidden; margin:22px 0;}
+.st-head{padding:20px 24px; color:#fff; display:flex; align-items:center; gap:14px;}
+.st-head .em{font-size:36px;} .st-head h3{color:#fff; font-size:22px;}
+.st-head .tag{font-family:'Cairo',sans-serif; font-size:13px; background:rgba(255,255,255,.16); padding:4px 12px; border-radius:20px; margin-right:auto;}
+.st-body{padding:18px 24px 22px;}
+.h1c{background:linear-gradient(120deg,var(--s1),var(--s1-deep));}
+.h2c{background:linear-gradient(120deg,var(--s2),var(--s2-deep));}
+.h3c{background:linear-gradient(120deg,var(--s3),var(--s3-deep));}
+.h4c{background:linear-gradient(120deg,var(--s4),var(--s4-deep));}
+.h5c{background:linear-gradient(120deg,var(--s5),var(--s5-deep));}
+
+.block{border-radius:var(--r-sm); padding:14px 18px; margin:12px 0; border-right:5px solid var(--gold);}
+.block .lbl{font-family:'Cairo',sans-serif; font-weight:700; font-size:15px; color:var(--gold-deep); display:block; margin-bottom:4px;}
+.b-mersa{background:#FBF7EE; border-right-color:var(--gold);}
+.b-work{background:var(--forest-pale); border-right-color:var(--forest-soft);} .b-work .lbl{color:var(--forest);}
+.b-refrain{background:var(--crimson-pale); border-right-color:var(--crimson);} .b-refrain .lbl{color:var(--crimson);}
+.b-fruit{background:#EAF5EE; border-right-color:var(--forest-mid);} .b-fruit .lbl{color:var(--forest-mid);}
+.silent{background:var(--silver-pale); border:1.5px dashed var(--silver); border-radius:var(--r-sm); padding:14px 18px; margin:12px 0; color:#3A3E44;}
+.silent .lbl{font-family:'Cairo',sans-serif; font-weight:700; font-size:15px; color:var(--silver); display:block; margin-bottom:4px;} .silent .lbl::before{content:"□ ";}
+.tbreath{text-align:center; font-family:'Cairo',sans-serif; font-size:14px; color:var(--forest-mid); background:var(--forest-pale); border:1px solid var(--forest-soft); border-radius:20px; padding:7px 16px; margin:0 0 12px; display:block;} .tbreath::before{content:"🫁  ";}
+.echo{background:#FBF1E2; border-right:5px solid var(--earth); border-radius:var(--r-sm); padding:10px 16px; margin:0 0 12px; font-family:'Cairo',sans-serif; font-size:14.5px; color:var(--earth-deep);}
+.echo .lbl{font-weight:700; color:var(--earth-deep); display:block; margin-bottom:2px;} .echo .lbl::before{content:"🔁  ";} .echo.key{background:#F3ECDA; border-right-color:var(--gold-deep);}
+.bridge{font-family:'Cairo',sans-serif; font-size:14px; color:#1B4E64; background:#E2EFF5; border:1px solid #8FBBD0; border-radius:var(--r-sm); padding:9px 14px; margin:10px 0;}
+.bridge .lbl{font-weight:700; display:block; margin-bottom:2px;} .bridge .lbl::before{content:"🌉  ";} .bridge .en{font-style:italic; color:#275680;direction:ltr;unicode-bidi:isolate;}
+.motor{background:#EAF1F8; border:1px dashed var(--s2); border-radius:var(--r-sm); padding:9px 14px; margin:10px 0; font-family:'Cairo',sans-serif; font-size:14px; color:var(--s2-deep);}
+.motor .lbl{font-weight:700; display:block; margin-bottom:2px;} .motor .lbl::before{content:"♿  ";}
+.home{background:#FBF7EE; border:1px solid var(--gold-light); border-radius:var(--r-sm); padding:9px 14px; margin:10px 0; font-family:'Cairo',sans-serif; font-size:14px; color:var(--earth-deep);}
+.home .lbl{font-weight:700; display:block; margin-bottom:2px;} .home .lbl::before{content:"🏡  ";}
+.compnote{background:#F7FAF7; border:1px solid var(--forest-pale); border-radius:var(--r-sm); padding:10px 14px; margin:10px 0; font-family:'Cairo',sans-serif; font-size:14px; color:var(--ink-soft);}
+.compnote .lbl{color:var(--forest-mid); font-weight:700;} .compnote .lbl::before{content:"🔹  ";}
+
+table{width:100%; border-collapse:collapse; margin:12px 0; font-family:'Cairo',sans-serif; font-size:15.5px;}
+th,td{border:1px solid var(--line); padding:10px 12px; text-align:right; vertical-align:top;}
+thead th{background:var(--forest); color:#fff; font-weight:700;}
+tbody tr:nth-child(even){background:var(--forest-pale);}
+.check td:last-child{text-align:center; width:54px; font-size:18px; color:var(--forest-mid);}
+.logtbl th,.logtbl td{text-align:center; font-size:14px;} .logtbl td:first-child{text-align:right; background:#F7FAF7; font-weight:600; min-width:110px;} .logtbl .empty{height:30px;}
+
+.note{border-radius:var(--r-md); padding:16px 20px; margin:12px 0;}
+.compass{background:#EEF2F7; border:1px solid #A9C0D4;} .compass h4{color:#2E5A80; margin-bottom:8px;}
+.lathatha{background:linear-gradient(135deg,#FFF6E2,#FBF3DD); border:1px solid var(--gold); border-radius:var(--r-md); padding:16px 20px; margin:12px 0;} .lathatha h4{color:var(--gold-deep); margin-bottom:6px;} .lathatha h4::before{content:"💎  ";}
+.note ul{margin:6px 0 0; padding-right:22px;} .note li{margin:5px 0;} .objectives li{margin:6px 0;}
+.transition{text-align:center; background:#fff; border:2px solid var(--forest-mid); color:var(--forest); font-family:'Cairo',sans-serif; font-weight:700; border-radius:var(--r-md); padding:14px 18px; margin:16px 0; font-size:17px;}
+.letter{background:linear-gradient(180deg,#FBF7EE,#fff); border:1px solid var(--gold-light); border-radius:var(--r-md); padding:20px 24px;}
+.scale-fig{width:200px; max-width:60%; display:block; margin:6px auto 0;}
+.seal-block{display:flex; align-items:center; gap:20px; flex-wrap:wrap; justify-content:center; background:linear-gradient(135deg,#FFFDF6,#FBF3DD); border:2px solid var(--gold-light); border-radius:var(--r-md); padding:18px 22px; margin:14px 0;}
+.seal-lg{width:150px; height:150px; flex:0 0 auto;}
+.seal-block .t{font-family:'Cairo',sans-serif; color:var(--gold-deep); font-size:15px; max-width:520px;}
+.seal-block .t b{color:var(--forest);}
+
+.footer{margin-top:40px; text-align:center; color:#fff; border-radius:var(--r-lg); padding:34px 26px; background:radial-gradient(120% 120% at 50% 0%, #245138, #173524 70%);}
+.footer .q{font-family:'Amiri',serif; font-size:22px; color:var(--gold-light); margin-bottom:12px;}
+.footer p{margin:3px 0; font-family:'Cairo',sans-serif; font-size:14px; opacity:.92;} .footer .v{color:var(--gold-light); margin-top:12px;}
+.footer .f-emblems{display:flex; align-items:center; justify-content:center; gap:18px; margin-bottom:10px;}
+.footer .logo-sm{width:54px; height:54px; opacity:.92;} .footer .seal-sm{width:60px; height:60px; opacity:.92;}
+
+/* v13.1 enhancements */
+.recall{display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:12px 0;}
+.recall .r{background:var(--earth-pale); border:1px solid var(--line); border-radius:var(--r-sm); padding:11px 9px; text-align:center; font-family:'Cairo',sans-serif; font-size:12.5px; color:var(--earth-deep);}
+.recall .r .e{font-size:22px;} .recall .r b{display:block; color:var(--forest); font-size:13.5px; margin:2px 0;} .recall .r .tool{color:var(--gold-deep); font-weight:600;}
+.tiers{font-family:'Cairo',sans-serif; font-size:13.5px; color:var(--s4-deep); background:#F3F1FA; border:1px solid #C9C2E8; border-radius:var(--r-sm); padding:8px 14px; margin:10px 0;}
+.tiers b{color:var(--s5-deep);} .tiers b::before{content:"🪜  ";}
+.protocol{background:#F2F8F8; border:1px solid #BBDCDC; border-radius:var(--r-sm); padding:10px 14px; margin:11px 0; font-family:'Cairo',sans-serif; font-size:13.5px;}
+.protocol .lbl{font-weight:700; color:var(--s2-deep); display:block; margin-bottom:5px;} .protocol .lbl::before{content:"🧪  ";}
+.protocol .g{display:flex; flex-wrap:wrap; gap:5px 16px;} .protocol .g span{color:var(--ink-soft);} .protocol .g b{color:var(--forest);}
+.anchor-h{background:#FBEFF3; border-right:5px solid var(--s1); border-radius:var(--r-sm); padding:9px 14px; margin:10px 0; font-family:'Cairo',sans-serif; font-size:14px; color:var(--s1-deep);}
+.anchor-h .lbl{font-weight:700; display:block; margin-bottom:2px;} .anchor-h .lbl::before{content:"✋  ";}
+.meaning{display:block; margin-top:5px; font-size:13px; color:#1B4E64;} .meaning::before{content:"↪ جسر المعنى: "; font-weight:700;}
+.rules{counter-reset:r; list-style:none; padding:0; margin:8px 0; font-family:'Cairo',sans-serif; font-size:14.5px;}
+.rules li{counter-increment:r; padding:7px 34px 7px 0; border-bottom:1px dashed var(--line); position:relative;}
+.rules li:last-child{border-bottom:none;}
+.rules li::before{content:counter(r); position:absolute; right:0; top:6px; width:24px; height:24px; background:var(--s5); color:#fff; border-radius:50%; text-align:center; font-weight:700; line-height:24px; font-size:13px;}
+.tower-grade{font-family:'Cairo',sans-serif; font-size:14px; margin:8px 0; background:var(--s4-pale); border:1px solid var(--s4); border-radius:var(--r-sm); padding:10px 14px;}
+.tower-grade .lvl{display:flex; gap:10px; padding:5px 0; border-bottom:1px dashed #D8C4A8;} .tower-grade .lvl:last-child{border-bottom:none;}
+.tower-grade .n{flex:0 0 84px; font-weight:700; color:var(--s4-deep);}
+.boxtext{background:#FFFDF6; border:1px solid var(--gold-light); border-radius:var(--r-sm); padding:14px 18px; margin:12px 0; font-family:'Scheherazade New',serif; font-size:19.5px; line-height:2; color:var(--ink);}
+.boxtext .h{font-family:'Cairo',sans-serif; font-weight:700; font-size:14px; color:var(--gold-deep); display:block; margin-bottom:6px;}
+.lens-cards{display:grid; grid-template-columns:repeat(2,1fr); gap:8px; margin:10px 0;}
+.lens-cards .lc{background:var(--s2-pale); border:1px solid var(--s2); border-radius:var(--r-sm); padding:10px 12px; font-family:'Cairo',sans-serif; font-size:13.5px; color:var(--s2-deep);} .lens-cards .lc b{display:block; color:var(--s2-deep); margin-bottom:2px;}
+.silent-critic{background:#EFEFF2; border:1px dashed var(--silver); border-radius:var(--r-sm); padding:9px 14px; margin:10px 0; font-family:'Cairo',sans-serif; font-size:14px; color:#3A3E44;}
+.silent-critic .lbl{font-weight:700; display:block; margin-bottom:2px;} .silent-critic .lbl::before{content:"🤫  ";}
+
+@media print{
+  body{background:#fff; font-size:13.5pt;} .wrap{max-width:none; padding:0;} .nav{display:none;}
+  .cover{margin:0 0 16px; box-shadow:none;} .sheet{break-before:page;}
+  .station,.card,.note,table,.cord,.integ,.letter,.lathatha,.lath,.seal-block,.protocol,.tower-grade,.boxtext,.recall{break-inside:avoid;}
+  .footer{break-inside:avoid;} a{color:inherit; text-decoration:none;} @page{size:A4; margin:16mm 14mm;}
+}
+@media (max-width:680px){ body{font-size:18px;} .fiveparts,.integ{grid-template-columns:repeat(2,1fr);} .cover h1{font-size:27px;} }
+
+.lath{background:linear-gradient(135deg,#FFF8E8,#FBEFCB); border:1px solid #E7CF93; border-right:4px solid #C9A24B; border-radius:10px; padding:11px 14px; margin:12px 0 2px; font-family:'Cairo',sans-serif; font-size:13.5px; color:#6E5318; line-height:1.7;}
+.lath .lbl::before{content:"💡 لحظةُ اللذاذة: "; font-weight:700; color:#C9A24B;}
+</style>
+</head>
+<body>
+
+<!-- ============ تعريفات الرموز (لوجو + ختم) لإعادة الاستخدام ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="ringGold" cx="50%" cy="34%" r="78%">
+      <stop offset="0%" stop-color="#F2DFA6"/><stop offset="100%" stop-color="#C29333"/>
+    </radialGradient>
+    <!-- مجموعة شجرة الجذور (اللوجو) -->
+    <g id="treeLogo">
+      <circle cx="100" cy="100" r="92" fill="none" stroke="url(#ringGold)" stroke-width="3.6"/>
+      <circle cx="100" cy="100" r="85" fill="none" stroke="#E7CF93" stroke-width="0.9" opacity="0.55" stroke-dasharray="1.4 4.5"/>
+      <path d="M100 138 C97 120 97 110 100 96 C103 84 103 78 100 66" fill="none" stroke="url(#ringGold)" stroke-width="6" stroke-linecap="round"/>
+      <g fill="none" stroke="url(#ringGold)" stroke-width="3" stroke-linecap="round">
+        <path d="M100 82 C88 74 80 66 70 58"/><path d="M70 58 C64 53 60 48 54 44"/><path d="M70 58 C68 50 67 46 64 40"/>
+        <path d="M100 90 C90 86 84 82 76 76"/><path d="M100 72 C100 62 100 56 100 48"/>
+        <path d="M100 82 C112 74 120 66 130 58"/><path d="M130 58 C136 53 140 48 146 44"/><path d="M130 58 C132 50 133 46 136 40"/>
+        <path d="M100 90 C110 86 116 82 124 76"/>
+      </g>
+      <g fill="#E7CF93">
+        <circle cx="100" cy="46" r="8"/><circle cx="54" cy="44" r="6.5"/><circle cx="64" cy="39" r="5"/><circle cx="146" cy="44" r="6.5"/><circle cx="136" cy="39" r="5"/>
+        <circle cx="76" cy="75" r="5"/><circle cx="124" cy="75" r="5"/><circle cx="88" cy="58" r="4.5"/><circle cx="112" cy="58" r="4.5"/>
+      </g>
+      <g fill="none" stroke="#C9A24B" stroke-linecap="round">
+        <path d="M100 120 C88 128 80 136 70 146" stroke-width="3.2"/><path d="M70 146 C64 151 60 155 55 160" stroke-width="2"/>
+        <path d="M100 116 C92 122 86 128 78 134" stroke-width="2.4"/><path d="M100 138 C100 150 100 156 100 164" stroke-width="3.2"/>
+        <path d="M100 120 C112 128 120 136 130 146" stroke-width="3.2"/><path d="M130 146 C136 151 140 155 145 160" stroke-width="2"/>
+        <path d="M100 116 C108 122 114 128 122 134" stroke-width="2.4"/>
+      </g>
+      <g fill="#C9A24B"><circle cx="55" cy="160" r="2.4"/><circle cx="145" cy="160" r="2.4"/><circle cx="100" cy="164" r="2.6"/><circle cx="78" cy="134" r="2"/><circle cx="122" cy="134" r="2"/></g>
+    </g>
+  </defs>
+</svg>
+
+<nav class="nav" aria-label="فهرس">
+  <a href="#cover">الغلاف</a><a href="#cord">الحبل السرّي</a><a href="#philo">الفلسفة</a>
+  <a href="#integ">التكامل</a><a href="#m1">الذائقة</a><a href="#m2">العدسة</a><a href="#m3">الميزان</a>
+  <a href="#m4">الرأي</a><a href="#m5">الحوار</a><a href="#track">المقياس</a><a href="#club">نادي الذوّاقة</a>
+</nav>
+
+<div class="wrap">
+
+<!-- COVER -->
+<header class="cover" id="cover">
+  <div class="cover-emblems">
+    <svg class="seal" viewBox="0 0 220 220" role="img" aria-label="ختم مشروع جُذُور">
+      <defs>
+        <path id="arcTopC" d="M 40 110 A 70 70 0 0 1 180 110"/>
+        <path id="arcBotC" d="M 180 110 A 70 70 0 0 1 40 110"/>
+      </defs>
+      <circle cx="110" cy="110" r="105" fill="none" stroke="#E7CF93" stroke-width="2"/>
+      <circle cx="110" cy="110" r="98" fill="none" stroke="#E7CF93" stroke-width="4"/>
+      <circle cx="110" cy="110" r="90" fill="none" stroke="#E7CF93" stroke-width="0.9" stroke-dasharray="2 4.5" opacity="0.7"/>
+      <text dir="rtl" font-family="Cairo,sans-serif" font-weight="700" font-size="15" fill="#E7CF93" letter-spacing="1"><textPath href="#arcTopC" startOffset="50%" text-anchor="middle">مَشْرُوعُ جُذُور</textPath></text>
+      <text dir="rtl" font-family="Cairo,sans-serif" font-weight="700" font-size="12" fill="#E7CF93"><textPath href="#arcBotC" startOffset="50%" text-anchor="middle">بَيَانُ الاسْتِرْشَاد</textPath></text>
+      <text x="22" y="116" font-size="13" fill="#E7CF93">✦</text><text x="190" y="116" font-size="13" fill="#E7CF93">✦</text>
+      <g transform="translate(110,112) scale(0.5) translate(-100,-100)"><use href="#treeLogo"/></g>
+    </svg>
+  </div>
+  <div class="brand">مَشْرُوعُ جُذُور</div>
+  <h1>السِّفْرُ الثَّالِثَ عَشَرَ: النَّاقِدُ الصَّغِيرُ</h1>
+  <div class="sub">الذَّائِقَةُ وَالمُوَازَنَةُ الأَدَبِيَّةُ — أَتَذَوَّقُ، وَأُوَازِنُ، وَأَبْنِي حُكْمِي بِالدَّلِيلِ</div>
+  <p class="verse amiri">﴿أَصْلُهَا ثَابِتٌ وَفَرْعُهَا فِي السَّمَاءِ﴾<small>سورة إبراهيم: ٢٤</small></p>
+  <p class="motto">«لَا أَقُولُ: هَذَا عَمَلٌ سَيِّئٌ. بَلْ أَقُولُ: هَذَا حَرَّكَنِي أَكْثَرَ، وَلِهَذَا الدَّلِيلُ. الذَّائِقَةُ تُبْنَى بِالحُجَّةِ لَا بِالهَوَى، وَتَتَّسِعُ بِالحِوَارِ لَا بِالغَلَبَةِ.»</p>
+  <p class="slogan">✦ الحَرْفُ يُولَدُ بِتَقَاطُعِ الحَوَاسِّ، وَالمَعْنَى يُعْرَفُ بِتَعَدُّدِ السِّيَاقِ ✦</p>
+  <p class="cover-author" style="font-family:'Cairo',sans-serif; font-size:13px; color:#EADFC2; opacity:.92; margin:8px 0 2px; letter-spacing:.3px;">تأليف: د. عادل ف. عامر · Dr. Adel F. Amer · ORCID: 0009-0008-9618-3863</p>
+  <div class="chips">
+    <span class="chip">المستوى المبدع — مُثمِر · ١٣+ سنة</span>
+    <span class="chip">الكود الذهبيّ — المستوى الرابع (مُبدِع)</span>
+    <span class="chip">CEFR C1 · ACTFL Advanced→Superior · IB DP Language A</span>
+    <span class="chip">الدستور العالميّ للطفل v10.2</span>
+    <span class="chip">الطبعة الجامعة · جاهزة للطبع</span>
+    <span class="chip">بنيةٌ مُتّسقةٌ مُدقّقة</span>
+  </div>
+</header>
+<div class="layers-key" style="max-width:900px; margin:18px auto; padding:14px 18px; background:#FBF9F3; border:1px solid #E3D7B8; border-right:5px solid #C9A24B; border-radius:12px; font-family:'Cairo',sans-serif; color:#4A3D1E; font-size:14px; line-height:1.95;"><strong style="color:#8A6D2E;">🧭 مفتاحُ طبقات المحطّة (للميسّر):</strong> كلُّ محطّةٍ طبقتان — <strong>نواةٌ إلزاميّةٌ</strong> تكفي وحدها لتحقيق الهدف: المِرْسَاةُ (الفلسفة)، والنشاطُ الحِسّيُّ، وبروتوكولُ التطبيق، والترديدةُ أو الأهزوجة. و<strong>طبقةٌ إثرائيّةٌ</strong> تُضاف عند اتّساع الوقت لا فرضًا: الجسرُ العابرُ للّغات، والصدى التراكميّ، ولحظةُ اللذاذة، والبدائلُ الحِسّيّةُ ومسارُ المُكتشِف الصامت، وطبقةُ المُرافِق. خُذْ بالنواة أوّلًا، ثمّ أضِفِ الإثراءَ بقدر ما يتّسع له نَفَسُ الطفل — فالطقوسُ خادمةٌ للمعنى لا غايةٌ.</div>
+
+
+<!-- CORD -->
+<section id="cord">
+  <div class="card">
+    <div class="sec-head"><span class="ic">🧬</span><h2>الحَبْلُ السُّرِّيُّ — الجِسْرُ وَالخَرِيطَةُ</h2></div>
+    <p class="lead">بَعْدَ أَنْ صَارَ الطفلُ مؤلِّفًا يصنع العملَ، يتعلّم الآن أن <strong>يتذوّقه ويوازنه</strong> — لا لِيهدم، بل لِيُربّي ذائقتَه وحكمَه.</p>
+    <div class="cord">
+      <div class="node">نَسِيجُ النَّصِّ<br>السفر ١١</div>
+      <span class="arrow">←</span>
+      <div class="node">المُؤَلِّفُ الصَّغِيرُ<br>السفر ١٢</div>
+      <span class="arrow">←</span>
+      <div class="node now"><b>النَّاقِدُ الصَّغِيرُ</b><br>السفر ١٣ — أنتَ هنا 🔭</div>
+      <span class="arrow">←</span>
+      <div class="node">قَائِدُ مَشْرُوعٍ مُجْتَمَعِيٍّ<br>السفر ١٤ — الختام</div>
+    </div>
+    <p style="margin-top:14px;"><strong>الجذر النَّاقل:</strong> مَن يصنع العملَ يُصبح أقدرَ على تذوّقه. أدواتُ التأليف التي تعلّمها (الصورةُ، والإيقاعُ، والذروةُ) تصير الآن <em>عدساتٍ</em> يرى بها الطفلُ صنعةَ غيره، فيُربّي ذائقتَه وحكمَه. <strong>وميزانُ معمل الجمل وبرجُه يعودان هنا</strong> أداتَيْ موازنةٍ وحُكمٍ.</p>
+    <div class="fiveparts">
+      <div class="pp p1"><span class="big">👅</span><span class="ttl">الذَّائِقَةُ</span><br><span class="dsc">أتذوّق النص</span></div>
+      <div class="pp p2"><span class="big">🔭</span><span class="ttl">العَدَسَةُ</span><br><span class="dsc">ماذا فعل المؤلِّف؟</span></div>
+      <div class="pp p3"><span class="big">⚖️</span><span class="ttl">المِيزَانُ</span><br><span class="dsc">أوازن عملين</span></div>
+      <div class="pp p4"><span class="big">🏛️</span><span class="ttl">الرَّأْيُ المَسْنُودُ</span><br><span class="dsc">حكمٌ بدليل</span></div>
+      <div class="pp p5"><span class="big">💬</span><span class="ttl">الحِوَارُ</span><br><span class="dsc">نختلف بأدب</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- RECALL MAP + AGE TIERS + WHAT TO CRITIQUE (v13.1) -->
+<section id="recall">
+  <div class="card">
+    <div class="sec-head"><span class="ic">🗺️</span><h2>خَرِيطَةُ التَّذَكُّرِ — مَاذَا أَعْطَاكَ كُلُّ سِفْرٍ لِتَنْقُدَ بِهِ؟</h2></div>
+    <p class="lead">قبل أن تنقد، تذكّر أدواتِك: كلُّ سِفرٍ سابقٍ أهداك عدسةً.</p>
+    <div class="recall">
+      <div class="r"><span class="e">⚖️</span><b>السفر ١٠ — معمل الجمل</b><span class="tool">الميزان · البرج</span></div>
+      <div class="r"><span class="e">🧵</span><b>السفر ١١ — نسيج النص</b><span class="tool">التسلسل · الذروة · النول</span></div>
+      <div class="r"><span class="e">🌳</span><b>السفر ١٢ — المؤلِّف الصغير</b><span class="tool">الصورة · الإيقاع · الأداء</span></div>
+      <div class="r"><span class="e">🔭</span><b>السفر ١٣ — الناقد</b><span class="tool">تصير كلُّها عدساتٍ للنقد</span></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="sec-head"><span class="ic">🪜</span><h2>الدُّرَجُ العُمُرِيَّةُ + مَاذَا نَنْقُدُ؟</h2></div>
+    <p>«١٣+» نطاقٌ واسعٌ، فالطقوسُ الحسّيّةُ (إغماضٌ، تنفّسٌ، يدٌ على القلب) تبقى لكلِّ الأعمار — <strong>وما يتدرّج هو عُمقُ الاستجابة النقديّة</strong>، لا إلغاءُ الحسّ:</p>
+    <table>
+      <thead><tr><th>الدَّرَجَة</th><th>عُمقُ النقد عبر المحطّات</th></tr></thead>
+      <tbody>
+        <tr><td><strong>١٣–١٥ سنة</strong></td><td>تذوّقٌ حسّيٌّ + عدسةٌ أولى: مؤشّر اللذاذة، والتقاطُ أداةٍ، وترجيحٌ بمعيارٍ واحد، وحكمٌ + دليل.</td></tr>
+        <tr><td><strong>١٥–١٧ سنة</strong></td><td>موازنةٌ ورأيٌ مسنود: ثلاثُ أدواتٍ بأثرها، وموازنةٌ بمعايير، وفقرةٌ (حكم + دليل + تعليل).</td></tr>
+        <tr><td><strong>١٧+ سنة</strong></td><td>حوارٌ نقديٌّ وتعدّدُ قراءات: تأمّلٌ يربط بالتجربة، وموازنةٌ عبر الحواسّ الأربع، ومقالٌ مصغّر بمقابلةٍ وتعديل.</td></tr>
+      </tbody>
+    </table>
+    <div class="transition" style="border-color:var(--s3); color:var(--s3-deep);">📌 مَاذَا نَنْقُدُ؟ تدرّجٌ ثلاثيّ: (أ) <strong>نصُّك أنتَ</strong> ممّا ألّفتَه في السفر ١٢ (نقدٌ ذاتيٌّ لطيف) ← (ب) <strong>نصُّ زميلٍ</strong> (تبادلٌ نقديٌّ) ← (ج) <strong>نصٌّ تراثيٌّ/كلاسيكيّ</strong> أو من الصندوق النقديّ.</div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section id="philo" class="sheet">
+  <div class="card">
+    <div class="sec-head"><span class="ic">✨</span><h2>فَلْسَفَةُ السِّفْرِ: مِنَ التَّأْلِيفِ إِلَى الذَّائِقَةِ</h2></div>
+    <p>بَعْدَ أَنْ صَارَ الطِّفْلُ مُؤَلِّفًا يَصْنَعُ العَمَلَ، يَتَعَلَّمُ الآنَ أَنْ يَتَذَوَّقَهُ وَيُوَازِنَهُ. النَّاقِدُ الصَّغِيرُ <strong>لَا يَهْدِمُ</strong>، بَلْ يَتَذَوَّقُ كَمَا يَتَذَوَّقُ ثَمَرَةً: يُغْمِضُ عَيْنَيْهِ، وَيُصْغِي لِمَا يَتْرُكُهُ النَّصُّ فِي قَلْبِهِ، ثُمَّ يَرْفَعُ عَدَسَتَهُ لِيَرَى كَيْفَ صَنَعَ المُؤَلِّفُ ذَلِكَ الأَثَرَ. <strong>الذَّائِقَةُ حَاسَّةٌ تُرَبَّى، وَالحُكْمُ يُسْنَدُ بِالدَّلِيلِ.</strong></p>
+    <p style="color:var(--s1-deep); background:var(--s1-pale); border-radius:var(--r-sm); padding:10px 16px;">⚠️ <strong>النَّاقِدُ لَا يَتَعَالَى:</strong> يَنْقُدُ النَّصَّ لَا صَاحِبَهُ، وَيُرَبِّي ذَائِقَتَهُ لَا يَتَفَاخَرُ بِهَا. النَّقْدُ <em>تَرْبِيَةٌ ذَاتِيَّةٌ</em> لِلذَّوْقِ، لَا تَفَوُّقٌ عَلَى أَحَدٍ — وَلِكُلِّ نَصٍّ طَعْمٌ.</p>
+    <div class="lathatha"><h4>مُؤَشِّرُ اللَّذَاذَةِ (Lathatha Index) — أَدَاةُ هَذَا السِّفْرِ</h4>مِقْيَاسٌ حِسِّيٌّ لِلْأَثَرِ الجَمَالِيِّ: مَا الَّذِي «لَذَّ» فِي النَّصِّ وَبَقِيَ فِي القَلْبِ؟ يَنْتَقِلُ هُنَا مِنْ إِشَارَةٍ عَلَى هَامِشِ التَّعَلُّمِ إِلَى <strong>أَدَاةٍ نَقْدِيَّةٍ يَسْتَعْمِلُهَا الطِّفْلُ بِنَفْسِهِ</strong>.</div>
+    <div class="poetic">🌿 <strong>هَمْسَةُ سَلِيمٍ (للميسّر):</strong> «أَحْكُمُ بِقَلْبِي وَعَقْلِي مَعًا، لَا بِعَدَدِ الإِعْجَابَاتِ عَلَى شَاشَةٍ. ذَائِقَتِي لِي، وَأَبْنِيهَا بِالدَّلِيلِ.»</div>
+  </div>
+</section>
+
+<!-- INTEGRATION -->
+<section id="integ">
+  <div class="card">
+    <div class="sec-head"><span class="ic">🧭</span><h2>خَرِيطَةُ التَّكَامُلِ النَّقْدِيِّ</h2></div>
+    <p class="lead">تنمو الذائقةُ من الأثر إلى الحكم إلى الحوار — كلُّ محطّةٍ تُفعِّل حاسّةً نقديّةً.</p>
+    <div class="integ">
+      <div class="col c1"><span class="e">👅</span><div class="st">الذائقة</div><div class="se">التذوّق + الخيال</div><div class="ar">↓</div><div class="sk">الأثر الجماليّ</div></div>
+      <div class="col c2"><span class="e">🔭</span><div class="st">العدسة</div><div class="se">البصر + التحليل</div><div class="ar">↓</div><div class="sk">أدوات الصنعة</div></div>
+      <div class="col c3"><span class="e">⚖️</span><div class="st">الميزان</div><div class="se">الثقل + الموازنة</div><div class="ar">↓</div><div class="sk">ترجيحٌ مسنودٌ</div></div>
+      <div class="col c4"><span class="e">🏛️</span><div class="st">الرأي</div><div class="se">التركيب + التوازن</div><div class="ar">↓</div><div class="sk">حكمٌ بالدليل</div></div>
+      <div class="col c5"><span class="e">💬</span><div class="st">الحوار</div><div class="se">السمع + الحوار</div><div class="ar">↓</div><div class="sk">تعدّد القراءات</div></div>
+    </div>
+    <div class="golden-rule" style="margin-top:14px;">القَاعِدَةُ الذَّهَبِيَّةُ: «لَا تَقُلْ هَذَا رَدِيءٌ؛ قُلْ هَذَا حَرَّكَنِي أَكْثَرَ، وَهَذَا دَلِيلِي.»</div>
+  </div>
+</section>
+
+<!-- STATION 1 — TASTE -->
+<section id="m1" class="sheet">
+  <div class="station">
+    <div class="st-head h1c"><span class="em">👅</span><h3>المَحَطَّةُ ١: الذَّائِقَةُ — أَتَذَوَّقُ النَّصَّ</h3><span class="tag">الحاسّة: التذوّق والخيال</span></div>
+    <div class="st-body">
+      <span class="tbreath">نَفَسٌ استكشافيٌّ: شهيقٌ طويلٌ من الأنف (٤ ثوانٍ) — احتباسٌ <b style="color:#8f3a1e">(يُستثنى مَن دونَ السابعةِ ومَن لديه ربوٌ أو عارضٌ تنفّسيٌّ أو قلبيّ — يُستبدَلُ الحبسُ بزفيرٍ طويلٍ هادئ.)</b> (٢) — زفيرٌ من الفم (٦) مع إغماض العينين. أَصْغِ لِما بقي.</span>
+      <div class="anchor-h"><span class="lbl">المرساة الحركيّة</span>ضع يدك على قلبك: شهيقٌ — ما الذي بقي؟ زفيرٌ — ما الذي مضى؟</div>
+      <div class="echo"><span class="lbl">صدًى من مؤشّر اللذاذة</span>المؤشّرُ الذي رافقك منذ الصغر إشارةً على هامش التعلّم… صار الآن أداةً في يدك تُقيّم بها الأثرَ بنفسك.</div>
+      <div class="block b-mersa"><span class="lbl">～ المِرْسَاةُ (الفلسفة)</span>«أَقْرَأُ النَّصَّ كَمَا أَتَذَوَّقُ ثَمَرَةً: أُغْمِضُ عَيْنَيَّ، وَأُصْغِي لِمَا يَتْرُكُهُ فِي قَلْبِي. بَعْضُ النُّصُوصِ حُلْوَةٌ تَبْقَى، وَبَعْضُهَا يَمُرُّ بِلَا أَثَرٍ. أَنَا أَتَذَوَّقُ أَوَّلًا، ثُمَّ أَصِفُ الطَّعْمَ.»</div>
+      <div class="block b-work"><span class="lbl">🔍 وَرْشَةُ النَّقْدِ</span>يَسْتَمِعُ النَّاقِدُ إِلَى نَصَّيْنِ قَصِيرَيْنِ (أَوْ يَقْرَؤُهُمَا)، وَيُغْمِضُ عَيْنَيْهِ بَعْدَ كُلٍّ، وَيُحَرِّكُ مُؤَشِّرَ اللَّذَاذَةِ (مِنْ ١ إِلَى ٥) حَسَبَ الأَثَرِ، ثُمَّ يُسَمِّي اللَّحْظَةَ الَّتِي «لَذَّتْ» لَهُ.</div>
+      <div class="protocol"><span class="lbl">بروتوكول التطبيق</span><div class="g"><span><b>المدّة:</b> ٢٠ د</span><span><b>العدد:</b> ٤–٦ نقّاد</span><span><b>المادّة:</b> نصٌّ قصيرٌ (٢٠٠–٣٠٠ كلمة) من الصندوق النقديّ</span><span><b>الأدوات:</b> بطاقة الذائقة + دفتر الملاحظات</span><span><b>الخرج:</b> جملة «لَذَّ لِي ___ لِأَنَّ ___»</span></div></div>
+      <div class="silent"><span class="lbl">سُؤَالُ النَّاقِدِ</span>«أَيُّ لَحْظَةٍ فِي النَّصِّ بَقِيَتْ فِي قَلْبِكَ بَعْدَ أَنِ انْتَهَى؟»</div>
+      <div class="block b-refrain"><span class="lbl">🎵 لَازِمَةُ النَّاقِدِ</span>«أَتَذَوَّقُ النَّصَّ... فَأَعْرِفُ طَعْمَهُ.»</div>
+      <div class="block b-fruit"><span class="lbl">~ الثَّمَرَةُ</span>يُحَدِّدُ النَّاقِدُ «لَذَاذَةَ» النَّصِّ، وَيُسَمِّي العُنْصُرَ الَّذِي أَثَّرَ فِيهِ (صُورَةٌ، إِيقَاعٌ، مُفَاجَأَةٌ).</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span>taste · savour · impression — <span class="en">«Taste the text slowly — what flavor does it leave on your tongue?»</span><span class="meaning">«savour» أدقُّ من «taste» لأنّها تتضمّن البطءَ والتأمّل.</span></div>
+      <div class="motor"><span class="lbl">المسار البديل</span>مَن يصعب عليه الإصغاءُ طويلًا: نصٌّ أقصرُ، أو يُشير إلى وجهٍ معبّرٍ (😊/😐) بدل المؤشّر الرقميّ.</div>
+      <div class="home"><span class="lbl">امتداد البيت</span>اقرؤوا نصّين قصيرين، واسألوا الطفلَ: «أيُّهما ترك أثرًا أحلى؟ ولماذا؟»</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق</span>الحاسّة: التذوّق (المجازيّ) والخيال · المهارة: الاستجابة الجمالية الأولية عبر مؤشّر اللذاذة.</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تتذوّقَ نصًّا آخرَ وتُبديَ رأيَك بأدبٍ… لنفسك؟» — إن عاد الناقدُ إلى نصٍّ أحبّه يتذوّقه تلقائيًّا، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد.</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATION 2 — LENS -->
+<section id="m2" class="sheet">
+  <div class="station">
+    <div class="st-head h2c"><span class="em">🔭</span><h3>المَحَطَّةُ ٢: العَدَسَةُ — مَاذَا فَعَلَ المُؤَلِّفُ؟</h3><span class="tag">الحاسّة: البصر والتحليل</span></div>
+    <div class="st-body">
+      <span class="tbreath">نَفَسٌ تركيزيٌّ: شهيقٌ — احتباسٌ <b style="color:#8f3a1e">(يُستثنى مَن دونَ السابعةِ ومَن لديه ربوٌ أو عارضٌ تنفّسيٌّ أو قلبيّ — يُستبدَلُ الحبسُ بزفيرٍ طويلٍ هادئ.)</b> — زفيرٌ بطيءٌ، وثبِّت نظرك كعدسةٍ على تفصيلٍ واحدٍ في النصّ.</span>
+      <div class="anchor-h"><span class="lbl">المرساة الحركيّة</span>تابِع بإصبعك سطورَ النصِّ كأنّك تتتبّع خيطَ الصانع، وقِفْ عند كلِّ أداةٍ.</div>
+      <div class="echo"><span class="lbl">صدًى من السفر الثاني عشر</span>الأدواتُ التي ألّفتَ بها (صورةٌ، إيقاعٌ، ذروةٌ) صارت الآن عدساتٍ ترى بها صنعةَ غيرك.</div>
+      <div class="block b-mersa"><span class="lbl">～ المِرْسَاةُ (الفلسفة)</span>«الطَّعْمُ لَا يَأْتِي صُدْفَةً؛ المُؤَلِّفُ صَنَعَهُ. أَرْفَعُ عَدَسَتِي وَأَنْظُرُ: كَيْفَ بَدَأَ؟ أَيَّ صُورَةٍ رَسَمَ؟ أَيْنَ رَفَعَ الذُّرْوَةَ؟ أَرَى يَدَ الصَّانِعِ خَلْفَ العَمَلِ.»</div>
+      <div class="block b-work"><span class="lbl">🔍 وَرْشَةُ النَّقْدِ</span>يَفْحَصُ النَّاقِدُ النَّصَّ بِعَدَسَةٍ (حَقِيقِيَّةٍ أَوْ مُتَخَيَّلَةٍ)، وَيَلْتَقِطُ أَدَوَاتٍ صَنَعَهَا المُؤَلِّفُ: افْتِتَاحِيَّةٌ تَشُدُّ، وَصُورَةٌ حِسِّيَّةٌ، وَذُرْوَةٌ، وَإِيقَاعٌ. يَضَعُ عَلَامَةً عِنْدَ كُلٍّ فِي النَّصِّ.</div>
+      <div class="protocol"><span class="lbl">بروتوكول التطبيق</span><div class="g"><span><b>المدّة:</b> ٢٥ د</span><span><b>العدد:</b> ٤–٦ نقّاد</span><span><b>المادّة:</b> النصُّ نفسُه من المحطّة السابقة</span><span><b>الأدوات:</b> بطاقات العدسة + أقلام تحديد</span><span><b>الخرج:</b> تسميةُ ٣ أدواتٍ فنيّةٍ وأثرِها</span></div></div>
+      <div class="silent"><span class="lbl">سُؤَالُ النَّاقِدِ</span>«مَا الأَدَاةُ الَّتِي اسْتَخْدَمَهَا المُؤَلِّفُ لِتَجْعَلَكَ تَشْعُرُ بِذَلِكَ؟»</div>
+      <div class="block b-refrain"><span class="lbl">🎵 لَازِمَةُ النَّاقِدِ</span>«أَرْفَعُ عَدَسَتِي... فَأَرَى يَدَ الصَّانِعِ.»</div>
+      <div class="block b-fruit"><span class="lbl">~ الثَّمَرَةُ</span>يُسَمِّي النَّاقِدُ ثَلَاثَ أَدَوَاتٍ فَنِّيَّةٍ فِي النَّصِّ، وَيَرْبِطُ كُلَّ أَدَاةٍ بِأَثَرِهَا فِيهِ.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span>lens · craft · technique — <span class="en">«Look through the lens — spot one tool the author used.»</span><span class="meaning">«craft» أدقُّ من «skill» لأنّها صنعةٌ مقصودةٌ لا مهارةٌ عابرة.</span></div>
+      <div class="motor"><span class="lbl">المسار البديل</span>مَن يصعب عليه الكتابةُ: يُشير بإصبعه إلى الأدوات في النصّ ويُسمّيها صوتًا.</div>
+      <div class="home"><span class="lbl">امتداد البيت</span>ابحثوا معًا عن «الصورة الأجمل» في النصّ، وسمّوا لماذا أعجبتكم.</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق</span>الحاسّة: البصر والتحليل · المهارة: ملاحظة أدوات الصنعة الأدبية في النصّ.</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تتذوّقَ نصًّا آخرَ وتُبديَ رأيَك بأدبٍ… لنفسك؟» — إن عاد الناقدُ إلى نصٍّ أحبّه يتذوّقه تلقائيًّا، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد.</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATION 3 — SCALE -->
+<section id="m3" class="sheet">
+  <div class="station">
+    <div class="st-head h3c"><span class="em">⚖️</span><h3>المَحَطَّةُ ٣: المِيزَانُ — أُوَازِنُ بَيْنَ عَمَلَيْنِ</h3><span class="tag">الحاسّة: الثقل والموازنة</span></div>
+    <div class="st-body">
+      <span class="tbreath">نَفَسٌ توازنيٌّ: شهيقٌ وزفيرٌ متساويان (٤/٤)، تخيّل الكفّتين متّزنتين قبل أن تُرجّح.</span>
+      <div class="anchor-h"><span class="lbl">المرساة الحركيّة</span>افتح كفّيك أمامك كأنّهما كفّتا ميزانٍ، وضع في كلِّ كفٍّ عملًا، ثم أحسَّ أيُّهما يميل.</div>
+      <div class="echo key"><span class="lbl">صدًى من معمل الجمل (السفر العاشر)</span>تذكّر المِيزانَ الذي وزنتَ به المبتدأَ والخبرَ في الجملة الاسمية… الآن تزن به <strong>عملين أدبيّين</strong>.</div>
+      <svg class="scale-fig" viewBox="0 0 220 150" role="img" aria-label="ميزان الذوّاقة بكفّتين">
+        <line x1="110" y1="20" x2="110" y2="118" stroke="#2E8B7A" stroke-width="5" stroke-linecap="round"/>
+        <rect x="86" y="118" width="48" height="9" rx="4" fill="#1C5A4F"/>
+        <line x1="40" y1="34" x2="180" y2="34" stroke="#2E8B7A" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="110" cy="34" r="6" fill="#C9A24B"/>
+        <line x1="40" y1="34" x2="40" y2="60" stroke="#8A6D2E" stroke-width="2"/><line x1="180" y1="34" x2="180" y2="60" stroke="#8A6D2E" stroke-width="2"/>
+        <path d="M22 60 A 18 14 0 0 0 58 60 Z" fill="#E2F1ED" stroke="#2E8B7A" stroke-width="2"/>
+        <path d="M162 60 A 18 14 0 0 0 198 60 Z" fill="#FBE8E2" stroke="#C2553B" stroke-width="2"/>
+        <text x="40" y="56" text-anchor="middle" font-family="Cairo,sans-serif" font-size="13" font-weight="700" fill="#1C5A4F">عملٌ أ</text>
+        <text x="180" y="56" text-anchor="middle" font-family="Cairo,sans-serif" font-size="13" font-weight="700" fill="#84321D">عملٌ ب</text>
+        <text x="110" y="146" text-anchor="middle" font-family="Amiri,serif" font-size="13" fill="#5A4226">أُرَجِّحُ بِالدَّلِيلِ، وَأَحْتَرِمُ الآخَرَ</text>
+      </svg>
+      <div class="block b-mersa"><span class="lbl">～ المِرْسَاةُ (الفلسفة)</span>«أَمَامِي عَمَلَانِ. أَضَعُ كُلًّا فِي كِفَّةٍ، وَأُوَازِنُ: أَيُّهُمَا أَعْمَقُ أَثَرًا، وَأَيُّهُمَا أَصْدَقُ إِحْسَاسًا؟ لَا أَقُولُ «هَذَا سَيِّئٌ»، بَلْ «هَذَا حَرَّكَنِي أَكْثَرَ، وَلِهَذَا السَّبَبِ».»</div>
+      <div class="block b-work"><span class="lbl">🔍 وَرْشَةُ النَّقْدِ</span>يَضَعُ النَّاقِدُ عَمَلَيْنِ عَلَى «مِيزَانِ الذَّوَّاقَةِ»، وَيُوَازِنُ بَيْنَهُمَا فِي مِعْيَارَيْنِ أَوْ ثَلَاثَةٍ (الصُّورَةُ، الإِيقَاعُ، الأَثَرُ)، ثُمَّ يُرَجِّحُ أَحَدَهُمَا مَعَ ذِكْرِ الدَّلِيلِ مِنَ النَّصِّ — احْتِرَامًا لِلْعَمَلِ الآخَرِ.</div>
+      <div class="protocol"><span class="lbl">بروتوكول التطبيق</span><div class="g"><span><b>المدّة:</b> ٢٥ د</span><span><b>العدد:</b> أزواجٌ أو ٤–٦</span><span><b>المادّة:</b> نصّان قصيران</span><span><b>الأدوات:</b> ميزانٌ ورقيٌّ + بطاقتا عملٍ</span><span><b>الخرج:</b> ترجيحٌ مسنودٌ بدليلٍ نصّيّ</span></div></div>
+      <p style="font-family:'Cairo',sans-serif; font-weight:700; color:var(--s3-deep); margin:10px 0 4px;">محاورُ الموازنةِ (استلهامًا من الحواسِّ الداخليّةِ في TRF):</p>
+      <table>
+        <thead><tr><th>المحور</th><th>السؤال النقديّ</th></tr></thead>
+        <tbody>
+          <tr><td>الثِّقَل</td><td>أَيُّهُمَا أَثْقَلُ وِجْدَانًا وَأَبْقَى فِي القَلْبِ؟</td></tr>
+          <tr><td>البَيْن</td><td>أَيُّهُمَا أَوْسَعُ فَجْوَةَ تَخَيُّلٍ يَمْلَؤُهَا القَارِئُ بِنَفْسِهِ؟</td></tr>
+          <tr><td>الاتِّزَان</td><td>أَيُّهُمَا أَكْثَرُ تَوَازُنًا فِي بِنَائِهِ (بِدَايَةً وَذُرْوَةً وَنِهَايَةً)؟</td></tr>
+          <tr><td>الحَرَارَة</td><td>أَيُّهُمَا أَدْفَأُ (أَوْ أَبْرَدُ) أَثَرًا فِي إِحْسَاسِكَ؟</td></tr>
+        </tbody>
+      </table>
+      <div class="silent"><span class="lbl">سُؤَالُ النَّاقِدِ</span>«أَيُّ العَمَلَيْنِ حَرَّكَكَ أَكْثَرَ؟ وَأَيُّ جُمْلَةٍ فِيهِ هِيَ الدَّلِيلُ؟»</div>
+      <div class="block b-refrain"><span class="lbl">🎵 لَازِمَةُ النَّاقِدِ</span>«أُوَازِنُ عَمَلَيْنِ... بِالدَّلِيلِ لَا بِالهَوَى.»</div>
+      <div class="block b-fruit"><span class="lbl">~ الثَّمَرَةُ</span>يُوَازِنُ النَّاقِدُ بَيْنَ عَمَلَيْنِ بِمَعَايِيرَ وَاضِحَةٍ، وَيُرَجِّحُ أَحَدَهُمَا بِدَلِيلٍ نَصِّيٍّ.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span>weigh · compare · criteria — <span class="en">«Set two works on a scale — which side tips, and why?»</span><span class="meaning">«weigh» تستحضر الميزانَ الحسّيَّ، بخلاف «judge» المجرَّدة.</span></div>
+      <div class="motor"><span class="lbl">المسار البديل</span>مَن يصعب عليه التجريدُ: يستخدم ميزانًا محسوسًا (كفّتين) يضع في كلِّ كفّةٍ بطاقةَ عملٍ.</div>
+      <div class="home"><span class="lbl">امتداد البيت</span>قارنوا قصّتين تحبّونهما، وليقل كلٌّ أيُّهما أحبُّ إليه ولماذا — بلا تخطئةٍ.</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق</span>الحاسّة: الثقل والموازنة · المهارة: الموازنة النقدية المسنودة بمعايير.</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تتذوّقَ نصًّا آخرَ وتُبديَ رأيَك بأدبٍ… لنفسك؟» — إن عاد الناقدُ إلى نصٍّ أحبّه يتذوّقه تلقائيًّا، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد.</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATION 4 — EVIDENCE-BASED OPINION -->
+<section id="m4" class="sheet">
+  <div class="station">
+    <div class="st-head h4c"><span class="em">🏛️</span><h3>المَحَطَّةُ ٤: الرَّأْيُ المَسْنُودُ — أَبْنِي حُكْمِي بِالدَّلِيلِ</h3><span class="tag">الحاسّة: التركيب والتوازن</span></div>
+    <div class="st-body">
+      <span class="tbreath">نَفَسٌ بنّاءٌ: شهيقٌ على ثلاث طبقاتٍ (حُكمٌ… دليلٌ… تعليلٌ)، ثم زفيرٌ واحدٌ يجمعها.</span>
+      <div class="anchor-h"><span class="lbl">المرساة الحركيّة</span>اقبض يدك (الفكرة)، ثم افتحها طبقةً طبقةً: حُكمٌ، فدليلٌ، فتعليلٌ — بناءٌ يثبت.</div>
+      <div class="echo key"><span class="lbl">صدًى من معمل الجمل (السفر العاشر)</span>تذكّر البُرجَ بطبقاته (نعتٌ، حالٌ، عطفٌ)… الآن تبني <strong>برجَ حُكمك</strong>: حُكمٌ، فدليلٌ، فتعليلٌ — بناءٌ لا يسقط.</div>
+      <div class="block b-mersa"><span class="lbl">～ المِرْسَاةُ (الفلسفة)</span>«رَأْيِي لَيْسَ «أَحْبَبْتُهُ» فَقَطْ. رَأْيِي بِنَاءٌ: حُكْمٌ، ثُمَّ دَلِيلٌ مِنَ النَّصِّ، ثُمَّ تَعْلِيلٌ. كَمَا بَنَيْتُ الجُمْلَةَ بِالمِيزَانِ، أَبْنِي حُكْمِي مُتَوَازِنًا لَا يَسْقُطُ.»</div>
+      <div class="block b-work"><span class="lbl">🔍 وَرْشَةُ النَّقْدِ</span>يَصُوغُ النَّاقِدُ حُكْمًا فِي ثَلَاثِ طَبَقَاتٍ (كَبُرْجِ مَعْمَلِ الجُمَلِ): «أَرَى أَنَّ... (حُكْمٌ)، وَالدَّلِيلُ... (اقْتِبَاسٌ مِنَ النَّصِّ)، لِأَنَّ... (تَعْلِيلٌ)». يَكْتُبُهُ فَقْرَةً مُتَمَاسِكَةً وَيَقْرَؤُهُ.</div>
+      <div class="protocol"><span class="lbl">بروتوكول التطبيق</span><div class="g"><span><b>المدّة:</b> ٢٥–٣٠ د</span><span><b>العدد:</b> فرديٌّ ثم ٤–٦</span><span><b>المادّة:</b> النصُّ المختار</span><span><b>الأدوات:</b> دفتر الحُكم</span><span><b>الخرج:</b> فقرةٌ (حُكمٌ + دليلٌ + تعليلٌ)</span></div></div>
+      <div class="tower-grade"><span style="font-weight:700; color:var(--s4-deep); display:block; margin-bottom:4px;">🏛️ درجاتُ البرج (يَعلو بالعمر والمهارة):</span>
+        <div class="lvl"><span class="n">الطابق ١</span><span>حُكمٌ + دليلٌ (جملتان) — ١٣–١٤</span></div>
+        <div class="lvl"><span class="n">الطابق ٢</span><span>+ تعليلٌ (فقرة) — ١٤–١٥</span></div>
+        <div class="lvl"><span class="n">الطابق ٣</span><span>+ مقابلةٌ برأيٍ آخرَ (فقرتان) — ١٥–١٧</span></div>
+        <div class="lvl"><span class="n">الطابق ٤</span><span>+ تعديلُ الحُكم بعد الحوار (مقالٌ مصغَّر) — ١٧+</span></div>
+      </div>
+      <div class="silent"><span class="lbl">سُؤَالُ النَّاقِدِ</span>«مَا حُكْمُكَ؟ وَأَيْنَ دَلِيلُهُ فِي النَّصِّ؟ وَلِمَاذَا أَثَّرَ فِيكَ؟»</div>
+      <div class="block b-refrain"><span class="lbl">🎵 لَازِمَةُ النَّاقِدِ</span>«حُكْمٌ... وَدَلِيلٌ... وَتَعْلِيلٌ — بُرْجٌ لَا يَسْقُطُ.»</div>
+      <div class="block b-fruit"><span class="lbl">~ الثَّمَرَةُ</span>يَكْتُبُ النَّاقِدُ رَأْيًا مَسْنُودًا (حُكْمٌ + دَلِيلٌ + تَعْلِيلٌ) فِي فَقْرَةٍ مُتَمَاسِكَةٍ.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span>judge · claim · evidence — <span class="en">«Build your opinion like a wall — each brick a reason.»</span><span class="meaning">«evidence» أقوى من «reason» لأنّها دليلٌ من النصِّ لا مجرّدُ سبب.</span></div>
+      <div class="motor"><span class="lbl">المسار البديل</span>مَن يصعب عليه الكتابةُ: يقول الطبقاتِ الثلاثَ صوتًا (حُكمٌ/دليلٌ/تعليلٌ) فتُكتَب عنه.</div>
+      <div class="home"><span class="lbl">امتداد البيت</span>شجّعوا الطفلَ أن يقول رأيَه ثم دليلَه: «أحببتُه لأنّ... كما في...».</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق</span>الحاسّة: التركيب والتوازن · المهارة: بناء رأيٍ نقديٍّ مسنودٍ بالدليل والتعليل.</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تتذوّقَ نصًّا آخرَ وتُبديَ رأيَك بأدبٍ… لنفسك؟» — إن عاد الناقدُ إلى نصٍّ أحبّه يتذوّقه تلقائيًّا، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد.</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATION 5 — DIALOGUE -->
+<section id="m5" class="sheet">
+  <div class="station">
+    <div class="st-head h5c"><span class="em">💬</span><h3>المَحَطَّةُ ٥: الحِوَارُ — نَخْتَلِفُ بِأَدَبٍ</h3><span class="tag">الحاسّة: السمع والحوار</span></div>
+    <div class="st-body">
+      <span class="tbreath">نَفَسٌ إصغائيٌّ: شهيقٌ مشتركٌ مع زميلك، ثم أنصِت لرأيٍ يخالفك دون مقاطعةٍ قبل أن تتكلّم.</span>
+      <div class="anchor-h"><span class="lbl">المرساة الحركيّة</span>المسْ كتفَ زميلك أو صافِحْه قبل أن تختلفا — الحوارُ وصلٌ لا غلبةٌ.</div>
+      <div class="echo"><span class="lbl">صدًى من النَّول البشريّ (السفر الحادي عشر)</span>كما تتشابك الخيوطُ في نسيجٍ واحدٍ، تتشابك الآراءُ المختلفةُ في فهمٍ أوسعَ.</div>
+      <div class="block b-mersa"><span class="lbl">～ المِرْسَاةُ (الفلسفة)</span>«ذَائِقَتِي تَخْتَلِفُ عَنْ ذَائِقَةِ صَدِيقِي، وَهَذَا جَمِيلٌ كَاخْتِلَافِ الثِّمَارِ. أُصْغِي إِلَى رَأْيِهِ، وَأَقُولُ رَأْيِي بِلُطْفٍ. لَا أَنْتَصِرُ عَلَيْهِ، بَلْ نَنْسِجُ فَهْمًا أَوْسَعَ مَعًا.»</div>
+      <div class="block b-work"><span class="lbl">🔍 وَرْشَةُ النَّقْدِ</span>يَتَبَادَلُ نَاقِدَانِ صَغِيرَانِ حُكْمَيْهِمَا عَنِ العَمَلِ نَفْسِهِ، وَيُصْغِي كُلٌّ لِلْآخَرِ، ثُمَّ يُضِيفُ: «أَتَّفِقُ مَعَكَ فِي... وَأَرَى أَيْضًا...». يَكْتَشِفَانِ أَنَّ لِلْعَمَلِ أَكْثَرَ مِنْ طَعْمٍ.</div>
+      <div class="protocol"><span class="lbl">بروتوكول التطبيق</span><div class="g"><span><b>المدّة:</b> ٢٠ د</span><span><b>العدد:</b> زوجٌ/مجموعةٌ صغيرة</span><span><b>المادّة:</b> حُكما الناقدَين عن العمل نفسِه</span><span><b>الأدوات:</b> بطاقة «قراءة بديلة»</span><span><b>الخرج:</b> فهمٌ مشتركٌ موسَّع</span></div></div>
+      <div class="note" style="background:var(--s5-pale); border:1px solid var(--s5);">
+        <h4 style="color:var(--s5-deep);">💬 بروتوكولُ الحوارِ النقديِّ (قواعدُ الاختلافِ بأدبٍ)</h4>
+        <ol class="rules">
+          <li>أُصْغِي كاملًا دون مقاطعةٍ.</li>
+          <li>أُسَمِّي ما أتّفقُ معه أوّلًا.</li>
+          <li>أُضيفُ رأيي بـ«أَرَى أَيْضًا...» لا بـ«لَكِنْ...».</li>
+          <li>أَسألُ: «مَا الَّذِي رَأَيْتَهُ وَلَمْ أَرَهُ؟»</li>
+          <li>نُسجِّلُ الاختلافَ «قراءةً بديلةً» لا «خطأً».</li>
+        </ol>
+      </div>
+      <div class="silent"><span class="lbl">سُؤَالُ النَّاقِدِ</span>«مَا الَّذِي رَآهُ صَدِيقُكَ فِي العَمَلِ وَلَمْ تَرَهُ أَنْتَ؟»</div>
+      <div class="block b-refrain"><span class="lbl">🎵 لَازِمَةُ النَّاقِدِ</span>«نَخْتَلِفُ بِأَدَبٍ... فَيَتَّسِعُ فَهْمُنَا.»</div>
+      <div class="block b-fruit"><span class="lbl">~ الثَّمَرَةُ</span>يُحَاوِرُ النَّاقِدُ زَمِيلَهُ بِاحْتِرَامٍ، وَيَبْنِي عَلَى رَأْيِهِ بَدَلًا مِنْ إِلْغَائِهِ.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span>dialogue · respect · perspectives — <span class="en">«Trade views like gifts — your taste differs from mine, and that is fine.»</span><span class="meaning">«perspective» أرحبُ من «opinion» لأنّها زاويةُ رؤيةٍ لا حكمًا نهائيًّا.</span></div>
+      <div class="silent-critic"><span class="lbl">الناقد الصامت (مسارٌ كتابيٌّ)</span>مَن يصعب عليه الكلامُ أمام المجموعة يكتب حكمَه وإضافتَه («أتّفق... وأضيف...») بدل النطق بها — متاحٌ في كلِّ محطّة.</div>
+      <div class="motor"><span class="lbl">المسار البديل</span>مَن يصعب عليه الكلامُ أمام المجموعة: يُحاور زميلًا واحدًا، أو يكتب إضافتَه.</div>
+      <div class="home"><span class="lbl">امتداد البيت</span>اختلفوا في الرأي حول قصّةٍ، وليُكمل كلٌّ جملةَ الآخر باحترامٍ: «أتّفق... وأضيف...».</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق</span>الحاسّة: السمع والحوار · المهارة: الحوار النقديّ المحترم وتقبّل تعدّد القراءات.</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تتذوّقَ نصًّا آخرَ وتُبديَ رأيَك بأدبٍ… لنفسك؟» — إن عاد الناقدُ إلى نصٍّ أحبّه يتذوّقه تلقائيًّا، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACKING -->
+<section id="track" class="sheet">
+  <div class="card">
+    <div class="sec-head"><span class="ic">📐</span><h2>أَدَوَاتُ التَّتَبُّعِ وَالمُوَاءَمَةِ</h2></div>
+    <h3 style="color:var(--forest-mid); font-size:19px; margin-bottom:6px;">مِقْيَاسُ جُذُور (J-Scale) — سِتَّةُ مُؤَشِّرَاتٍ نَقْدِيَّةٍ</h3>
+    <table class="check">
+      <thead><tr><th>المؤشّر النقديّ</th><th>✓</th></tr></thead>
+      <tbody>
+        <tr><td>يَصِفُ أَثَرَ النَّصِّ فِيهِ عَبْرَ مُؤَشِّرِ اللَّذَاذَةِ، وَيُسَمِّي عُنْصُرَهُ المُؤَثِّرَ</td><td>☐</td></tr>
+        <tr><td>يَلْتَقِطُ ثَلَاثَ أَدَوَاتٍ فَنِّيَّةٍ فِي النَّصِّ وَيَرْبِطُهَا بِأَثَرِهَا</td><td>☐</td></tr>
+        <tr><td>يُوَازِنُ بَيْنَ عَمَلَيْنِ بِمَعَايِيرَ وَاضِحَةٍ وَيُرَجِّحُ بِدَلِيلٍ</td><td>☐</td></tr>
+        <tr><td>يَكْتُبُ رَأْيًا مَسْنُودًا (حُكْمٌ + دَلِيلٌ + تَعْلِيلٌ) مُتَمَاسِكًا</td><td>☐</td></tr>
+        <tr><td>يُحَاوِرُ زَمِيلَهُ بِاحْتِرَامٍ وَيَبْنِي عَلَى رَأْيِهِ لَا لِيُلْغِيَهُ</td><td>☐</td></tr>
+        <tr><td>يُمَيِّزُ «لَمْ يُعْجِبْنِي» عَنْ «هَذَا رَدِيءٌ»، وَيَحْتَرِمُ تَعَدُّدَ الذَّائِقَاتِ</td><td>☐</td></tr>
+      </tbody>
+    </table>
+    <div class="transition">✅ مُؤَشِّرُ الجاهزيّة (وصفيٌّ لا بوّابة)ِ إِلَى السِّفْرِ الرَّابِعَ عَشَرَ (قَائِدُ البُسْتَانِ): تَحَقُّقُ ٤ مِنْ ٦ مُؤَشِّرَاتٍ بِاسْتِقْلَالِيَّةٍ.</div>
+    <h3 style="color:var(--forest-mid); font-size:18px; margin:14px 0 6px;">🌱 مَصْفُوفَةُ النُّضْجِ (٥ دَرَجَاتٍ)</h3>
+    <table>
+      <thead><tr><th>الدرجة</th><th>الطفل...</th></tr></thead>
+      <tbody>
+        <tr><td>🌰 بَذْرَة</td><td>يَقُولُ «أَحْبَبْتُهُ» أَوْ «لَمْ يُعْجِبْنِي» دُونَ تَعْلِيلٍ.</td></tr>
+        <tr><td>🌱 جَذْر</td><td>يَصِفُ أَثَرَ النَّصِّ فِيهِ وَيُسَمِّي عُنْصُرَهُ المُؤَثِّرَ (مُؤَشِّرُ اللَّذَاذَةِ).</td></tr>
+        <tr><td>🌿 جِذْع</td><td>يَلْتَقِطُ أَدَوَاتٍ فَنِّيَّةً فِي النَّصِّ وَيَرْبِطُهَا بِأَثَرِهَا.</td></tr>
+        <tr><td>🍃 وَرَقَة</td><td>يَكْتُبُ رَأْيًا مَسْنُودًا (حُكْمٌ + دَلِيلٌ + تَعْلِيلٌ) وَيُوَازِنُ بَيْنَ عَمَلَيْنِ بِمَعَايِيرَ.</td></tr>
+        <tr><td>🌳 شَجَرَة</td><td>يُحَاوِرُ بِأَدَبٍ وَيَبْنِي عَلَى رَأْيِ غَيْرِهِ، وَيُمَيِّزُ ذَائِقَتَهُ عَنِ الحُكْمِ المُطْلَقِ، وَيُرَبِّي ذَائِقَةَ غَيْرِهِ بِلُطْفٍ.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="lathatha"><h4>مُؤَشِّرُ اللَّذَاذَةِ (Lathatha Index)</h4>هَلْ يَعُودُ النَّاقِدُ إِلَى نَصٍّ أَحَبَّهُ لِيَتَذَوَّقَهُ ثَانِيَةً؟ هَلْ يُدَافِعُ عَنْ ذَائِقَتِهِ بِأَدَبٍ وَيُصْغِي لِذَائِقَةِ غَيْرِهِ بِفُضُولٍ؟ — هَذَا أَصْدَقُ مِقْيَاسٍ.</div>
+
+    <div class="note compass"><h4>🧭 سِفْرُ البُوصَلَةِ المَكْسُورَةِ (تنبيهٌ منهجيٌّ صادقٌ)</h4>النَّقْدُ هُنَا <strong>تَرْبِيَةُ ذَائِقَةٍ لَا إِصْدَارُ أَحْكَامٍ قَاطِعَةٍ</strong>؛ وَمُؤَشِّرُ اللَّذَاذَةِ أَدَاةٌ نَوْعِيَّةٌ ذَاتِيَّةٌ تَحْتَاجُ مُعَايَرَةً تَجْرِيبِيَّةً، لَا مِقْيَاسًا مَوْضُوعِيًّا لِلْجَوْدَةِ. احْرِصْ عَلَى أَلَّا يَتَحَوَّلَ النَّقْدُ إِلَى تَفْضِيلٍ بَيْنَ الأَطْفَالِ أَوْ إِلَى قَسْوَةٍ. وَالحَوَاسُّ الدَّاخِلِيَّةُ (الثِّقَلُ، البَيْنُ، الاتِّزَانُ، الحَرَارَةُ، النَّفَسُ) وَسَائِطُ تَخَيُّلِيَّةٌ تَرْبَوِيَّةٌ تُقَرِّبُ المَعْنَى لِجَسَدِ الطِّفْلِ وَتُعِينُهُ عَلَى التَّذَكُّرِ، لَا ادِّعَاءٌ عَصَبِيٌّ مُثْبَتٌ.</div>
+  </div>
+
+  <div class="card">
+    <div class="sec-head"><span class="ic">📒</span><h2>سِجِلُّ النُّقَّادِ (للمرافق)</h2></div>
+    <p class="lead">رصدُ تقدّم كلِّ ناقدٍ في المحطّات الخمس + نتيجة المقياس + ملاحظةٌ على لطف الحوار. (✓ أتقن · ～ في الطريق · □ لم يبدأ)</p>
+    <table class="logtbl">
+      <thead><tr><th>اسمُ الناقد</th><th>👅 ذائقة</th><th>🔭 عدسة</th><th>⚖️ ميزان</th><th>🏛️ رأي</th><th>💬 حوار</th><th>المقياس (../٦)</th><th>ملاحظة</th></tr></thead>
+      <tbody>
+        <tr><td>__________</td><td class="empty"></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>__________</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>__________</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>__________</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>__________</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="sec-head"><span class="ic">🌍</span><h2>المُوَاءَمَةُ مَعَ المَعَايِيرِ الدَّوْلِيَّةِ وَدُسْتُورِ الطِّفْلِ</h2></div>
+    <table>
+      <thead><tr><th>الإطار</th><th>المؤشّر في هذا السفر</th></tr></thead>
+      <tbody>
+        <tr><td>CEFR — C1</td><td>فهمُ النصوص الأدبية وتقييمُها وإبداءُ رأيٍ معلّلٍ فيها</td></tr>
+        <tr><td>ACTFL — Advanced → Superior</td><td>الموازنةُ والتحليلُ والتعبيرُ عن رأيٍ مسنودٍ بطلاقةٍ</td></tr>
+        <tr><td>IB DP — Language A</td><td>الاستجابةُ النقديّةُ للنصوص (Analysis &amp; evaluation)</td></tr>
+        <tr><td>معاييرُ الوصولِ (استرشادًا) — الوصول الشامل</td><td>المسارُ الحركيُّ البديلُ و«الناقدُ الصامتُ» (مسارٌ كتابيٌّ) في كلّ محطّة</td></tr>
+        <tr><td>نظريّة القراءة الملموسة (TRT) — Amer (2024)</td><td>الذائقةُ حاسّةٌ تُربّى، والحكمُ يُسنَد بالدليل لا بالهوى</td></tr>
+        <tr><td>الدستور العالميّ للطفل — جُذُور (v10.2)</td><td>حقُّ الطفل في رأيٍ محترمٍ، والاختلافُ بأدبٍ لا بقسوةٍ</td></tr>
+      </tbody>
+    </table>
+
+    <div class="seal-block">
+      <svg class="seal-lg" viewBox="0 0 220 220" role="img" aria-label="ختم اعتماد مشروع جُذُور">
+        <defs><path id="arcTopL" d="M 40 110 A 70 70 0 0 1 180 110"/><path id="arcBotL" d="M 180 110 A 70 70 0 0 1 40 110"/></defs>
+        <circle cx="110" cy="110" r="105" fill="none" stroke="#C9A24B" stroke-width="2.4"/>
+        <circle cx="110" cy="110" r="98" fill="none" stroke="#C9A24B" stroke-width="4.5"/>
+        <circle cx="110" cy="110" r="90" fill="none" stroke="#C9A24B" stroke-width="0.9" stroke-dasharray="2 4.5" opacity="0.7"/>
+        <text dir="rtl" font-family="Cairo,sans-serif" font-weight="700" font-size="15" fill="#8A6D2E" letter-spacing="1"><textPath href="#arcTopL" startOffset="50%" text-anchor="middle">مَشْرُوعُ جُذُور</textPath></text>
+        <text dir="rtl" font-family="Cairo,sans-serif" font-weight="700" font-size="12" fill="#8A6D2E"><textPath href="#arcBotL" startOffset="50%" text-anchor="middle">بَيَانُ الاسْتِرْشَاد</textPath></text>
+        <text x="22" y="116" font-size="13" fill="#C9A24B">✦</text><text x="190" y="116" font-size="13" fill="#C9A24B">✦</text>
+        <g transform="translate(110,112) scale(0.5) translate(-100,-100)"><use href="#treeLogo"/></g>
+      </svg>
+      <div class="t"><b>بَيَانُ الاسْتِرْشَادِ:</b> صُمِّمَ هذا السِّفْرُ اسْتِرْشَادًا بِنَظَرِيَّةِ القِرَاءَةِ المَلْمُوسَةِ (TRT) وَبِأَدَبِيَّاتِ الوَعْيِ الصَّوْتِيِّ وَالإِدْرَاكِ المُتَجَسِّد، وَبِالاطِّلَاعِ عَلَى أُطُرِ CEFR وACTFL وIB PYP. <b>وَلَمْ يُعْتَمَدْ مِنْ أَيِّ جِهَةٍ مِنْ هذِهِ الجِهَاتِ، وَلَا يَدَّعِي اعْتِمَادَهَا.</b> صُمِّمَ حِصْنًا حِسِّيًّا بِلَا إِكْرَاهٍ.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CRITICAL BOX (v13.1) -->
+<section id="box" class="sheet">
+  <div class="card">
+    <div class="sec-head"><span class="ic">📦</span><h2>الصُّنْدُوقُ النَّقْدِيُّ — نُصُوصٌ لِلتَّذَوُّقِ وَالنَّقْدِ</h2></div>
+    <p class="lead">لا يُتعلَّم النقدُ بلا نصٍّ (كالسباحةِ بلا ماء). هذه نصوصٌ أصليّةٌ قصيرةٌ للتدريب — وللمرشد أن يأتي بنصوصٍ تراثيّةٍ أو عالميّةٍ أخرى.</p>
+    <div class="boxtext"><span class="h">نصٌّ أ — شِعرٌ: «جَدَّتِي وَالضَّوْءُ»</span>جَدَّتِي تَفْتَحُ الشُّبَّاكَ كُلَّ مَسَاءْ،<br>فَيَدْخُلُ ضَوْءٌ خَجُولٌ كَطِفْلٍ حَيِيّْ.<br>تَقُولُ: انْتَظِرْ، سَيَجِيءُ القَمَرْ...<br>فَأَنَامُ، وَفِي كَفِّهَا يَكْبُرُ الضَّوْءُ شَيْئًا فَشَيْئًا.</div>
+    <div class="boxtext"><span class="h">نصٌّ ب — نَثرٌ: «الحَصَاةُ»</span>وَجَدَ الوَلَدُ حَصَاةً مَلْسَاءَ عَلَى الطَّرِيقِ، فَظَنَّهَا عَادِيَّةً. لَكِنَّهُ حِينَ وَضَعَهَا فِي جَيْبِهِ، صَارَتْ تُثْقِلُهُ قَلِيلًا عِنْدَ كُلِّ خُطْوَةٍ، كَأَنَّهَا تَهْمِسُ: «لَسْتُ حَصَاةً، أَنَا حِكَايَةٌ تَنْتَظِرُ مَنْ يَكْتُبُهَا.»</div>
+    <div class="boxtext"><span class="h">نصٌّ ج — مَشْهَدٌ مَسْرَحِيٌّ مُصَغَّرٌ: «المَطَرُ»</span><strong>الأُمُّ:</strong> لِمَاذَا تَنْظُرُ إِلَى المَطَرِ صَامِتًا؟<br><strong>الوَلَدُ:</strong> أَعُدُّ القَطَرَاتِ يَا أُمِّي.<br><strong>الأُمُّ:</strong> وَهَلْ لَهَا عَدَدٌ؟<br><strong>الوَلَدُ:</strong> لَا، لَكِنَّ كُلَّ قَطْرَةٍ تَكْتُبُ سَطْرًا عَلَى الزُّجَاجِ ثُمَّ تَمْحُوهُ.</div>
+
+    <p style="font-family:'Cairo',sans-serif; font-weight:700; color:var(--s2-deep); margin:14px 0 4px;">🔭 بطاقاتُ العَدَسةِ (جاهزةٌ للطباعةِ والاستعمالِ):</p>
+    <div class="lens-cards">
+      <div class="lc"><b>الافتتاحيّة</b>هل شدّتك الجملةُ الأولى؟ ولماذا؟</div>
+      <div class="lc"><b>الصورة الحسّية</b>أيَّ حاسّةٍ خاطبت؟ (لمسٌ، بصرٌ، سمعٌ، تذوّقٌ)</div>
+      <div class="lc"><b>الذروة</b>أين بلغ الأثرُ قمّتَه في النصّ؟</div>
+      <div class="lc"><b>الإيقاع</b>أين تسارع الإيقاعُ وأين هدأ؟</div>
+    </div>
+
+    <div class="note" style="background:#EAF5EE; border:1px solid var(--forest-mid); margin-top:14px;">
+      <h4 style="color:var(--forest-mid);">✅ نموذجُ إجابةٍ مكتمِلٌ (حُكمٌ + دليلٌ + تعليلٌ)</h4>
+      <p style="font-family:'Scheherazade New',serif; font-size:19px;">«أَرَى أَنَّ نَصَّ "جَدَّتِي" حَرَّكَنِي أَكْثَرَ <em>(حُكْمٌ)</em>، وَالدَّلِيلُ قَوْلُهُ: «وَفِي كَفِّهَا يَكْبُرُ الضَّوْءُ شَيْئًا فَشَيْئًا» <em>(دَلِيلٌ)</em>، لِأَنَّ الصُّورَةَ تَجْعَلُ الحَنَانَ شَيْئًا مَلْمُوسًا يَنْمُو، فَبَقِيَ أَثَرُهُ فِي قَلْبِي بَعْدَ القِرَاءَةِ <em>(تَعْلِيلٌ)</em>. وَإِنْ فَضَّلَ زَمِيلِي نَصَّ "المَطَرِ"، فَتِلْكَ قِرَاءَةٌ بَدِيلَةٌ مُحْتَرَمَةٌ <em>(حِوَارٌ)</em>.»</p>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITATOR GUIDE (v13.1) -->
+<section id="guide">
+  <div class="card">
+    <div class="sec-head"><span class="ic">🧑‍🏫</span><h2>دَلِيلُ المُرْشِدِ النَّقْدِيِّ</h2></div>
+    <div class="note warn">
+      <h4>كيف يتعامل المرشدُ مع النقد المدمِّر؟</h4>
+      <ul>
+        <li><strong>إنْ قسا ناقدٌ أو هدم:</strong> حوّل حكمَه إلى سؤالٍ عن الدليل: «أيُّ جملةٍ في النصّ تجعلك تقول هذا؟» — فالنقدُ دليلٌ لا هجومٌ.</li>
+        <li><strong>ذكّر دائمًا:</strong> النقدُ تربيةُ ذائقةٍ لا تفوّقٌ؛ ننقد النصَّ لا صاحبَه.</li>
+        <li><strong>لا مقارنةَ تفضيليّةً بين الأطفال:</strong> الموازنةُ بين النصوصِ لا بين النقّادِ.</li>
+        <li><strong>علّمه الفرقَ:</strong> «لم يُعجبني» (ذوقٌ شخصيٌّ مشروعٌ) ≠ «رديءٌ» (حكمٌ مطلقٌ متعجرفٌ).</li>
+        <li><strong>وفّر دائمًا «الناقد الصامت»:</strong> مسارٌ كتابيٌّ لمن يصعب عليه الكلامُ أمام المجموعة.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- HOME + CLUB (capstone) -->
+<section id="club" class="sheet">
+  <div class="card">
+    <div class="sec-head"><span class="ic">🏡</span><h2>رِسَالَةٌ إِلَى البَيْتِ + نَادِي الذَّوَّاقَةِ</h2></div>
+    <div class="letter">
+      <p style="font-family:'Cairo',sans-serif; font-weight:700; color:var(--forest);">عزيزي وليَّ الأمر،</p>
+      <p>طِفْلُكَ صَارَ ذَوَّاقَةً صَغِيرًا. فِي البَيْتِ، أَنْشِئُوا «نَادِي ذَوَّاقَةٍ»: اقْرَؤُوا أَوْ شَاهِدُوا عَمَلًا، ثُمَّ لِيُعْطِ كُلٌّ رَأْيَهُ وَدَلِيلَهُ، وَ<strong>اخْتَلِفُوا بِأَدَبٍ وَاحْتِرَامٍ</strong>.</p>
+      <div class="bridge" style="margin-top:10px;"><span class="lbl">الجسر الإنجليزيّ في البيت</span><span class="en">«Taste it, look closely, weigh it, back it with reasons, then talk it over kindly.»</span></div>
+    </div>
+    <div class="poetic" style="margin-top:14px; border-right-color:var(--s5);">💬 <strong>نَادِي الذَّوَّاقَةِ (التتويج):</strong> اجْلِسُوا حَوْلَ عَمَلٍ وَاحِدٍ، وَلْيَقُلْ كُلٌّ: «أَرَى أَنَّ... وَالدَّلِيلُ... لِأَنَّ...»، ثُمَّ: «أَتَّفِقُ مَعَكَ فِي... وَأُضِيفُ...».</div>
+    <div class="golden-rule" style="margin-top:14px;">«الذَّائِقَةُ ثَمَرَةٌ تُرَبَّى... وَالحُكْمُ بِنَاءٌ يُسْنَدُ بِالدَّلِيلِ.»</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="f-emblems">
+    <svg class="seal-sm" viewBox="0 0 220 220" aria-hidden="true">
+      <circle cx="110" cy="110" r="104" fill="none" stroke="#E7CF93" stroke-width="4"/>
+      <circle cx="110" cy="110" r="94" fill="none" stroke="#E7CF93" stroke-width="1.5"/>
+      <g transform="translate(110,110) scale(0.62) translate(-100,-100)"><use href="#treeLogo"/></g>
+    </svg>
+  </div>
+  <p class="q">«أَتَذَوَّقُ، وَأُوَازِنُ، وَأَبْنِي حُكْمِي بِالدَّلِيلِ — أَنَا النَّاقِدُ الصَّغِيرُ.»</p>
+  <p>انتهى السِّفْرُ الثالث عشرَ — النَّاقِدُ الصَّغِيرُ (الطبعة الجامعة الكاملة المُشكَّلة)</p>
+  <p>Volume 13 — The Young Critic (Comparative Literary Appreciation) · Juthur · Level 4 (Creator)</p>
+  <p>الصادر عن مشروع جُذُور | المستوى المبدع (مُثمِر · ١٣+) | الذائقة والموازنة الأدبية</p>
+  <p class="slogan amiri" style="color:var(--gold-light); font-family:'Amiri',serif; margin-top:10px;">الحَرْفُ يُولَدُ بِتَقَاطُعِ الحَوَاسِّ، وَالمَعْنَى يُعْرَفُ بِتَعَدُّدِ السِّيَاقِ</p>
+  <p class="v">الإصدار v13.1 — مُستلهَمٌ من الدستور العالميّ للطفل والمعايير الدوليّة (CEFR · ACTFL · IB) — بنيةٌ مُتّسقةٌ مُدقّقة</p>
+  <p style="opacity:.7;margin-top:8px;">د. عادل ف. عامر — نظريّة القراءة الملموسة (TRT) — Amer (2024) — جميع الحقوق محفوظة ©</p>
+</footer>
+
+</div>
+
+<div class="jz-foot" style="margin:2.4rem 0 1rem;text-align:center;border-top:3px double #D9CFB4;padding-top:1.4rem;font-family:Amiri,serif"><img src="/juthur/assets/Juthur_Seal_Mono.png" alt="ختمُ الدار" width="56" height="56" style="opacity:.85"><p style="font-size:.74rem;letter-spacing:.16em;color:#9A7B23;margin:.5rem 0;line-height:2">مَطبعةُ جُذور · دبي · MCMXXVI · صمّمه وطوّره د. عادل ف. عامر</p><p style="font-size:.74rem;letter-spacing:.16em;color:#9A7B23;margin:.5rem 0;line-height:2">Designed and developed by Dr. Adel F. Amer · Amer (2024) · CC BY-NC-SA 4.0</p></div>
+<div style="text-align:center;margin:1.4rem 0;padding:.8rem;border-top:1px solid #D9CFB4;border-bottom:1px solid #D9CFB4;font-family:Amiri,serif;font-size:.9rem"><a href='/shajara' style='color:#1B3A2F;margin:0 .5rem'>شَجَرَةُ الدَّار</a>·<a href='/khizanat-harf' style='color:#1B3A2F;margin:0 .5rem'>خِزانةُ جَناحِ الحَرْف</a>·<a href='/harf/sullam' style='color:#1B3A2F;margin:0 .5rem'>السُّلَّم</a>·<a href='/judhur' style='color:#1B3A2F;margin:0 .5rem'>خَريطةُ الجُذور</a>·<a href='/yad-lisan' style='color:#1B3A2F;margin:0 .5rem'>اليَدُ واللِّسان</a></div>
+</body>
+</html>

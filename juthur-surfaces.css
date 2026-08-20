@@ -1,0 +1,58 @@
+/*
+  juthur-surfaces.css — أسطحُ صناديقِ الخِزانة
+  مطبعةُ جُذور · MCMXXVI
+  صمّمه وطوّره د. عادل ف. عامر · Designed and developed by Dr. Adel F. Amer
+  ══════════════════════════════════════════
+  الاستعمال:  <div class="srf srf--leather"> … </div>
+  ستّةُ أسطح: leather · oak · paper · linen · marble · brass
+  كلُّ سطحٍ صورةٌ واحدة تتكرّر، ويُطبَع فوقها إطارٌ ذهبيٌّ وظلٌّ داخليّ.
+*/
+
+.srf{
+  position:relative;
+  background-repeat:repeat;
+  background-size:340px 340px;
+  border:1px solid rgba(27,58,47,.55);
+  border-radius:2px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28),
+             inset 0 -14px 26px rgba(27,58,47,.16),
+             0 2px 0 rgba(27,58,47,.18);
+  padding:clamp(1.1rem,3vw,2rem);
+}
+/* خيطٌ ذهبيٌّ داخلَ الحافّة، كتذهيبِ الغلاف */
+.srf::before{
+  content:"";position:absolute;inset:6px;
+  border:1px solid rgba(154,123,35,.55);
+  border-radius:1px;pointer-events:none;
+}
+/* الأسطح */
+.srf--leather{background-image:url("assets/srf_leather.jpg")}
+.srf--oak    {background-image:url("assets/srf_oak.jpg")}
+.srf--paper  {background-image:url("assets/srf_paper.jpg")}
+.srf--linen  {background-image:url("assets/srf_linen.jpg")}
+.srf--marble {background-image:url("assets/srf_marble.jpg")}
+.srf--brass  {background-image:url("assets/srf_brass.jpg")}
+
+/* لونُ النصِّ فوقَ كلِّ سطح — محسوبٌ للتباين */
+.srf--leather,.srf--oak,.srf--paper,.srf--marble,.srf--brass{color:#1B3A2F}
+.srf--linen{color:#FBF9F4}
+.srf--linen::before{border-color:rgba(240,233,214,.45)}
+
+/* لوحةُ العنوان: تُقرأ فوقَ أيِّ سطح */
+.srf .plate{
+  background:rgba(251,249,244,.90);
+  border:1px solid rgba(27,58,47,.35);
+  padding:.55rem .9rem;display:inline-block;color:#1B3A2F;
+}
+.srf--linen .plate{background:rgba(251,249,244,.94)}
+
+/* الطباعةُ الورقية: تُطفأ الأسطحُ ويبقى الإطار */
+@media print{
+  .srf{background-image:none!important;box-shadow:none;border-color:#1B3A2F}
+  .srf--linen{color:#1B3A2F}
+}
+/* من يطلبُ تقليلَ الحركةِ أو التباينَ العالي */
+@media (prefers-contrast:more){
+  .srf{background-image:none!important;background:#FBF9F4;color:#1B3A2F}
+  .srf--linen{color:#1B3A2F}
+}

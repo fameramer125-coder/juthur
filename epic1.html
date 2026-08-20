@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><base href="/juthur/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الملحمةُ الأولى — جزيرةُ النشاط · سندباد وكنزه المفقود · جُذور</title>
+<meta name="description" content="الملحمة الأولى من سلسلة سندباد وكنزه المفقود — جزيرة النشاط: رحلة في أرخبيل كل جزيرة تحمل اسم فضيلة ويخفي واقعها نقيضها.">
+<link rel="canonical" href="https://juthur.netlify.app/epic1.html">
+<link rel="icon" type="image/png" href="assets/Juthur_Seal_Mono.png">
+<meta name="theme-color" content="#2b2823">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,wght@0,400;0,500;1,400&family=Outfit:wght@400;500;600;700&display=swap">
+<style>
+:root{--ink:#2b2823;--gold:#b08f43;--paper:#f3eee2;--ink-70:#6b6459;--gold-15:#e9e2d2;--rule:#d5cbb8;--gold-aa:#8a6b2c;--rubric:#8f3a1e;--sea:#1a3a4a;--sea-15:#e0e8ec}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Amiri',serif;color:var(--ink);background:var(--paper);font-size:20px;line-height:2.1}
+.en{font-family:'Fraunces',Georgia,serif;font-style:italic;color:var(--ink-70)}
+main{max-width:66ch;margin:0 auto;padding:clamp(2rem,5vw,4rem) 1.4rem}
+
+/* ═══ الغلاف ═══ */
+.coverplate{border:3px double var(--ink);outline:1px solid var(--rule);outline-offset:6px;padding:2.2rem 1.6rem 1.8rem;text-align:center;margin-bottom:2rem;position:relative}
+.emblem{display:block;margin:0 auto .7rem}
+.masthead b{font-size:1.45rem;font-weight:700;color:#48423a;text-shadow:0 1px 0 rgba(255,255,255,.85)}
+.masthead span{display:block;font-family:'Outfit';font-size:.58rem;letter-spacing:.4em}
+.series{font-family:'Outfit';font-size:.62rem;letter-spacing:.2em;color:var(--gold-aa);margin:.4rem 0}
+h1{font-size:clamp(1.8rem,6vw,2.8rem);margin:.3rem 0 .1rem;font-weight:700;line-height:1.3}
+h1 .tk{color:var(--rubric)}
+.subtitle{font-size:1.1rem;color:var(--ink-70);margin:.2rem 0 .8rem}
+.subtitle .en{display:block;font-size:.9rem}
+.authorline{font-size:.98rem;margin:.9rem 0 .15rem}
+.pressline{font-family:'Outfit';font-size:.6rem;letter-spacing:.18em;color:var(--gold-aa)}
+.badge{font-family:'Outfit';font-size:.62rem;letter-spacing:.12em;border:1px solid var(--sea);color:var(--sea);background:var(--sea-15);padding:.25rem .8rem;display:inline-block;margin:.5rem 0}
+
+/* ═══ شريط التقدم ═══ */
+#progress-bar{position:fixed;top:0;left:0;width:0%;height:4px;background:linear-gradient(90deg,var(--gold-aa),var(--rubric));z-index:999;transition:width .15s}
+
+/* ═══ المائيات الداخلية ═══ */
+.wplate{margin:1.8rem 0 .6rem;background:transparent}
+.wplate svg{width:100%;height:auto;display:block}
+.wplate.sea .w1{fill:#1a3a4a;opacity:.22}
+.wplate.sea .w2{fill:#2a5a6a;opacity:.14}
+.wplate.island .w1{fill:#4a7a3a;opacity:.26}
+.wplate.island .w2{fill:#8a3a1e;opacity:.16}
+.wplate.dream .w1{fill:#6a4a8a;opacity:.24}
+.wplate.dream .w2{fill:#b08f43;opacity:.18}
+.wplate.wake .w1{fill:#8f3a1e;opacity:.20}
+.wplate.wake .w2{fill:#2b2823;opacity:.14}
+.wlabel{font-family:'Outfit';font-size:.58rem;letter-spacing:.22em;color:var(--gold-aa);text-align:center;margin:.1rem 0 1rem}
+.wroot{font-family:'Amiri',serif;font-size:52px;fill:var(--ink);opacity:.82;font-weight:700}
+
+/* ═══ الفصول ═══ */
+.chapter{margin:3rem 0;border-top:1px solid var(--rule);padding-top:1.2rem}
+.chapter-num{font-family:'Outfit';font-size:.6rem;letter-spacing:.22em;color:var(--gold-aa);margin:0 0 .2rem}
+h2{font-size:clamp(1.4rem,4vw,1.9rem);margin:.1rem 0 .8rem;font-weight:700}
+h2 .tk{color:var(--rubric)}
+.scene{font-size:1.05rem;color:var(--ink-70);margin:.3rem 0 .8rem;font-style:italic;border-right:3px solid var(--rule);padding-right:.9rem}
+p{margin:.6rem 0}
+.dialogue{margin:.7rem 0}
+.dialogue b{color:var(--ink)}
+.dialogue .speaker{color:var(--rubric);font-weight:700}
+
+/* ═══ الجوهرة الختامية ═══ */
+.gem{background:var(--sea-15);border:1px solid #b0c8d0;padding:1.1rem 1.4rem;text-align:center;margin:2rem 0;font-size:1.15rem;font-weight:700;line-height:1.7}
+.gem .en{display:block;font-size:.9rem;margin-top:.4rem;font-weight:400}
+
+/* ═══ همس المرافق ═══ */
+.companion{border:2px double var(--ink);padding:1.4rem 1.6rem;margin:2.8rem 0;background:var(--gold-15)}
+.companion-head{font-family:'Outfit';font-size:.64rem;letter-spacing:.22em;color:var(--gold-aa);text-align:center;margin:0 0 1rem}
+.companion h3{font-size:1.1rem;margin:.9rem 0 .3rem;font-weight:700}
+.companion h3 .tk{color:var(--rubric)}
+.companion p{font-size:.97rem;color:var(--ink-70);margin:.3rem 0}
+.companion .en{font-size:.85rem}
+.stars{text-align:center;color:var(--gold);letter-spacing:.5em;margin:1rem 0;font-size:.85rem}
+.sep{text-align:center;color:var(--gold-aa);letter-spacing:.4em;margin:2rem 0;font-size:.8rem}
+
+/* ═══ ناف السفن ═══ */
+.shipnav{display:flex;gap:1rem;justify-content:space-between;margin:2rem 0;flex-wrap:wrap}
+.shipnav a{font-family:'Outfit';font-size:.75rem;letter-spacing:.08em;color:var(--ink);background:var(--gold-15);border:1px solid var(--ink);padding:.55rem 1.1rem;text-decoration:none;box-shadow:0 3px 0 rgba(43,40,35,.3);flex:1 1 auto;text-align:center}
+.shipnav a:focus-visible{outline:2px solid var(--gold-aa);outline-offset:2px}
+
+.sealmark{display:block;margin:2rem auto .4rem;opacity:.85}
+.colo{text-align:center;font-family:'Outfit';font-size:.56rem;letter-spacing:.22em;color:var(--gold-aa)}
+.rights{text-align:center;font-family:'Outfit';font-size:.64rem;letter-spacing:.1em;color:var(--ink-70);margin:1rem 0}
+
+/* مرشح المائية */
+svg.filters{position:absolute;width:0;height:0}
+
+@media(max-width:600px){h1{font-size:1.8rem}h2{font-size:1.3rem}.gem{font-size:1rem}}
+@media print{#progress-bar,.shipnav{display:none}.chapter{break-inside:avoid}h2{break-after:avoid}.companion{break-inside:avoid}}
+@media(prefers-reduced-motion:reduce){#progress-bar{transition:none}}
+</style>
+</head>
+<body>
+<div id="progress-bar" role="progressbar" aria-label="تقدم القراءة"></div>
+
+<svg class="filters" aria-hidden="true"><defs>
+<filter id="wf1" x="-20%" y="-20%" width="140%" height="140%">
+<feTurbulence type="fractalNoise" baseFrequency="0.032" numOctaves="3" seed="11" result="n"/>
+<feDisplacementMap in="SourceGraphic" in2="n" scale="26"/>
+<feGaussianBlur stdDeviation="1.3"/>
+</filter>
+<filter id="wf2" x="-20%" y="-20%" width="140%" height="140%">
+<feTurbulence type="fractalNoise" baseFrequency="0.048" numOctaves="2" seed="23" result="n"/>
+<feDisplacementMap in="SourceGraphic" in2="n" scale="34"/>
+<feGaussianBlur stdDeviation="1.8"/>
+</filter>
+</defs></svg>
+
+<main>
+<!-- ═══ الغلاف ═══ -->
+<div class="coverplate">
+<img class="emblem" src="assets/Juthur_Logo_192.webp" alt="شعار جذور" width="72" height="72">
+<p class="masthead"><b>جُذور</b><span>JUTHUR · MCMXXVI</span></p>
+<p class="series">سلسلةُ الأدبِ الحِسِّيّ · <span class="en" lang="en">Sensory Literature Series</span></p>
+<span class="badge">الملحمةُ الأولى من أربع</span>
+<h1>جَزِيرَةُ النَّشَاطِ</h1>
+<p class="subtitle">سِنْدِبَادُ وَالْكَنْزُ الْمَفْقُودُ<span class="en" lang="en">Sindbad and the Lost Treasure — The Island of Busyness</span></p>
+<p class="subtitle" style="font-size:.98rem;margin-top:-.3rem">أَوَّلُ مَرْفَأٍ… وَأَوَّلُ قِنَاعٍ يَنْقَلِبُ</p>
+<p class="authorline">تأليف: <b>د. عادل ف. عامر</b></p>
+<p class="pressline">مطبعةُ جُذور · دبي · MCMXXVI — قراءةٌ قبلَ القراءة</p>
+</div>
+
+<!-- ═══ مقدمة الرحلة ═══ -->
+<figure class="wplate sea" aria-hidden="true" aria-label="لوحة البحر الافتتاحية">
+<svg viewBox="0 0 480 148" preserveAspectRatio="none">
+<rect class="w1" x="20" y="16" width="440" height="116" rx="4" filter="url(#wf1)" transform="rotate(-1.5 240 74)"/>
+<rect class="w2" x="40" y="32" width="400" height="84" rx="4" filter="url(#wf2)" transform="rotate(1.2 240 74)"/>
+<text x="240" y="102" text-anchor="middle" class="wroot">بَحْرٌ يَتَذَكَّرُ</text>
+</svg></figure>
+<p class="wlabel">رِحْلَةٌ فِي أَرْخَبِيلٍ · كُلُّ جَزِيرَةٍ تَحْمِلُ اسْمَ فَضِيلَةٍ وَيُخْفِي وَاقِعُهَا نَقِيضَهَا</p>
+
+<p>رِحْلَةٌ فِي أَرْخَبِيلٍ، كُلُّ جَزِيرَةٍ فِيهِ تَحْمِلُ اسْمَ فَضِيلَةٍ، وَيُخْفِي وَاقِعُهَا نَقِيضَهَا. هُنَا يَتَعَلَّمُ سِنْدِبَادُ أَنَّ الشَّجَاعَةَ لَيْسَتْ أَنْ تَقْتَحِمَ، بَلْ أَنْ تَعْرِفَ مَتَى تَقِفُ؛ وَأَنَّ الْبَوْصَلَةَ الَّتِي تُشِيرُ إِلَى الْخَارِجِ تَكْذِبُ، وَالْمَكْسُورَةُ وَحْدَهَا تُشِيرُ إِلَى الدَّاخِلِ.</p>
+
+<!-- ═══ الفصل الأول ═══ -->
+<div class="chapter" id="c1">
+<p class="chapter-num">١ / ١</p>
+<h2>بَحْرٌ يَتَذَكَّرُ</h2>
+<figure class="wplate sea" aria-hidden="true">
+<svg viewBox="0 0 480 120" preserveAspectRatio="none">
+<rect class="w1" x="16" y="12" width="448" height="96" rx="3" filter="url(#wf1)" transform="rotate(-2 240 60)"/>
+<rect class="w2" x="36" y="28" width="408" height="64" rx="3" filter="url(#wf2)" transform="rotate(1.8 240 60)"/>
+<text x="240" y="82" text-anchor="middle" class="wroot" style="font-size:44px">يَتَذَكَّرُ</text>
+</svg></figure>
+<p class="scene">بَحْرٌ بِلَا شَاطِئٍ. مَدًى لَا يَعِدُ بِأَرْضٍ، وَأُفُقٌ يَبْتَلِعُ نَفْسَهُ.</p>
+<p>وَالْمَوْجُ هُنَا لَا يَنْكَسِرُ؛ يَتَنَفَّسُ: شَهِيقٌ يَرْفَعُ الْمَاءَ كَصَدْرٍ يَمْتَلِئُ، وَزَفِيرٌ يُنْزِلُهُ كَتَنَهُّدَةٍ قَدِيمَةٍ. وَفِي وَسَطِ هَذَا النَّفَسِ الْكَبِيرِ، سَفِينَةٌ مُحَطَّمَةٌ تَصْطَكُّ أَلْوَاحُهَا كَأَسْنَانٍ تَرْتَعِشُ، وَعَلَى سَطْحِ الْمَاءِ هَيْكَلُ رُبَّانٍ مَا زَالَتْ يَدُهُ مُمْسِكَةً بِالدَّفَّةِ، يَقُودُ سَفِينَةً لَمْ تَعُدْ تَسِيرُ، إِلَى مِينَاءٍ لَمْ يَعُدْ مَوْجُودًا.</p>
+<p>سِنْدِبَادُ وَاقِفٌ عَلَى صَارٍ مَكْسُورٍ، وَالْمَاءُ يَبْلُغُ صَدْرَهُ. لَا يُقَاوِمُ. يَنْظُرُ إِلَى الْأُفُقِ، ثُمَّ يَضْحَكُ.</p>
+<div class="dialogue"><p><span class="speaker">— سِنْدِبَاد:</span> لِلْمَرَّةِ السَّابِعَةِ تُغْرِقُنِي يَا بَحْرُ… لَعَلَّكَ تُحِبُّنِي.</p></div>
+<p>مِنْ تَحْتِ الْمَاءِ يَظْهَرُ جُحَا. لَا يَسْبَحُ؛ يَمْشِي عَلَى الْقَاعِ مُتَّزِنًا كَأَنَّهُ فِي سُوقٍ، وَفِي يَدِهِ تُفَّاحَةٌ.</p>
+<div class="dialogue">
+<p><span class="speaker">— جُحَا:</span> مُنْذُ أَنْ أَكَلْتُ تُفَّاحَةَ نُوحٍ، لَمْ يَعُدِ الْبَحْرُ يُبَلِّلُنِي.</p>
+<p><span class="speaker">— سِنْدِبَاد:</span> أَنَا لَا آكُلُ التُّفَّاحَ تَحْتَ الْمَاءِ.</p>
+<p><span class="speaker">— جُحَا:</span> إِذَنْ سَتَظَلُّ تَغْرَقُ.</p>
+</div>
+<p>تَمُرُّ بِجَانِبِهِمَا بَقَايَا سَفِينَةٍ عَتِيقَةٍ. يُلْقِي عَلَيْهَا جُحَا نَظْرَةً طَوِيلَةً، كَمَنْ يُحَيِّي قَبْرًا.</p>
+<div class="dialogue">
+<p><span class="speaker">— جُحَا:</span> هَذَا صَدِيقٌ قَدِيمٌ. قَالَ لِي قَبْلَ أَنْ يَمُوتَ: الْبَحْرُ لَا يُغْرِقُ أَحَدًا؛ الْبَحْرُ يَتَذَكَّرُ فَقَطْ.</p>
+</div>
+<p>عَلَى الْأُفُقِ يَعْبُرُ ظِلٌّ أَسْوَدُ. لَيْسَ طَائِرًا وَلَا سَحَابَةً، بَلْ فَرَاغٌ يَتَحَرَّكُ؛ فُرْجَةٌ فِي النَّهَارِ تَمْشِي. ثُمَّ يَخْتَفِي.</p>
+<div class="dialogue">
+<p><span class="speaker">— سِنْدِبَاد:</span> مَا هَذَا؟</p>
+<p><span class="speaker">— جُحَا:</span> شَيْءٌ جَائِعٌ.</p>
+</div>
+</div>
+
+<!-- ═══ الفصل الثاني ═══ -->
+<div class="chapter" id="c2">
+<p class="chapter-num">١ / ٢</p>
+<h2>الْجَزِيرَةُ الَّتِي تَنَامُ</h2>
+<figure class="wplate island" aria-hidden="true">
+<svg viewBox="0 0 480 128" preserveAspectRatio="none">
+<rect class="w1" x="18" y="14" width="444" height="100" rx="4" filter="url(#wf1)" transform="rotate(1.8 240 64)"/>
+<rect class="w2" x="38" y="30" width="404" height="68" rx="4" filter="url(#wf2)" transform="rotate(-1.4 240 64)"/>
+<text x="240" y="92" text-anchor="middle" class="wroot" style="font-size:44px">تَنَامُ</text>
+</svg></figure>
+<p class="scene">خُضْرَةٌ فَاقِعَةٌ كَأَنَّهَا تَصْرُخُ. رَائِحَتُهَا ثَقِيلَةٌ بِالْيَاسْمِينِ وَالزَّعْتَرِ، حُلْوَةٌ إِلَى حَدِّ الدُّوَارِ.</p>
+<p>عَلَى ظَهْرِ حِمَارٍ — لَا قَارِبٍ — يَبْلُغَانِ جَزِيرَةً خَضْرَاءَ. رِمَالٌ بَيْضَاءُ تَغُوصُ فِيهَا الْأَقْدَامُ أَكْثَرَ مِنَ الطَّبِيعِيِّ، كَأَنَّ الْأَرْضَ تُرِيدُ أَنْ تَحْتَفِظَ بِمَنْ يَطَؤُهَا.</p>
+<p>كُلُّ شَيْءٍ هُنَا نَائِمٌ، وَالْحَيَاةُ مُتَوَقِّفَةٌ فِي مُنْتَصَفِ حَرَكَتِهَا: النَّادِلَةُ نَائِمَةٌ وَكُوبُ الْقَهْوَةِ فِي يَدِهَا مَا زَالَ سَاخِنًا، يَتَصَاعَدُ مِنْهُ بُخَارٌ لَا يَنْتَهِي. الصَّيَّادُ نَائِمٌ وَشِبَاكُهُ لَمْ تُلْقَ. الْأَطْفَالُ نِيَامٌ وَأَقْلَامُهُمْ بَيْنَ أَصَابِعِهِمْ تَرْتَعِشُ، كَأَنَّهَا تُرِيدُ أَنْ تَكْتُبَ وَحْدَهَا.</p>
+<p>وَفَوْقَ كُلِّ نَائِمٍ فُقَّاعَةُ حُلْمٍ: نِصْفُهَا الْأَسْفَلُ رَمَادِيٌّ بَارِدٌ، وَنِصْفُهَا الْأَعْلَى مُلَوَّنٌ زَاهٍ. وَمِنْ حِينٍ إِلَى حِينٍ تَتَشَقَّقُ فُقَّاعَةٌ، فَيَتَسَرَّبُ مِنْهَا دُخَانٌ أَسْوَدُ رَقِيقٌ، يَصْعَدُ وَيَخْتَفِي — وَلَا أَحَدَ يَسْتَيْقِظُ.</p>
+<div class="dialogue">
+<p><span class="speaker">— سِنْدِبَاد:</span> اسْتَيْقِظْ!</p>
+<p><span class="speaker">— النَّائِمُ:</span> دَعْنِي… أَحْلَامِي أَفْضَلُ…</p>
+<p><span class="speaker">— جُحَا:</span> لَا تُوقِظْهُ. هَذِهِ الطِّفْلَةُ وَحْدَهَا تَسْتَطِيعُ.</p>
+</div>
+</div>
+
+<!-- ═══ الفصل الثالث ═══ -->
+<div class="chapter" id="c3">
+<p class="chapter-num">١ / ٣</p>
+<h2>زَيْنَبُ — ذَاكِرَةُ الْجَزِيرَةِ</h2>
+<figure class="wplate dream" aria-hidden="true">
+<svg viewBox="0 0 480 128" preserveAspectRatio="none">
+<rect class="w1" x="18" y="14" width="444" height="100" rx="4" filter="url(#wf1)" transform="rotate(-1 240 64)"/>
+<rect class="w2" x="38" y="28" width="404" height="72" rx="4" filter="url(#wf2)" transform="rotate(2.2 240 64)"/>
+<text x="240" y="90" text-anchor="middle" class="wroot" style="font-size:42px">تَحْلُمُ</text>
+</svg></figure>
+<p class="scene">طِفْلَةٌ فِي الْعَاشِرَةِ، حَافِيَةٌ، تُمْسِكُ قِنَاعًا خَشَبِيًّا بِابْتِسَامَةٍ مَنْحُوتَةٍ. هِيَ وَحْدَهَا يَقِظَةٌ.</p>
+<div class="dialogue">
+<p><span class="speaker">— زَيْنَب:</span> كُنْتُ نَائِمَةً… حَلَمْتُ أَنَّ رَجُلَيْنِ سَيَأْتِيَانِ، أَحَدُهُمَا يَضْحَكُ وَهُوَ يَغْرَقُ.</p>
+</div>
+<p>يَتَبَادَلُ سِنْدِبَادُ وَجُحَا نَظْرَةً: الْبَحْرُ يَتَذَكَّرُ، وَالطِّفْلَةُ تَحْلُمُ بِمَا سَيَكُونُ.</p>
+<div class="dialogue">
+<p><span class="speaker">— جُحَا:</span> هِيَ لَيْسَتْ طِفْلَةً. هِيَ ذَاكِرَةُ الْجَزِيرَةِ.</p>
+<p><span class="speaker">— سِنْدِبَاد:</span> وَلِمَاذَا لَا تُوقِظِينَهُمْ؟</p>
+<p><span class="speaker">— زَيْنَب:</span> لِأَنَّهُمْ حِينَ يَسْتَيْقِظُونَ… سَيَبْكُونَ. وَعِنْدَهَا سَأَعْرِفُ أَنِّي كُنْتُ السَّبَبَ.</p>
+</div>
+</div>
+
+<!-- ═══ الفصل الرابع ═══ -->
+<div class="chapter" id="c4">
+<p class="chapter-num">١ / ٤</p>
+<h2>الصَّحْوَةُ النَّاقِصَةُ</h2>
+<figure class="wplate wake" aria-hidden="true">
+<svg viewBox="0 0 480 128" preserveAspectRatio="none">
+<rect class="w1" x="18" y="14" width="444" height="100" rx="4" filter="url(#wf1)" transform="rotate(2.5 240 64)"/>
+<rect class="w2" x="36" y="26" width="408" height="76" rx="4" filter="url(#wf2)" transform="rotate(-1.8 240 64)"/>
+<text x="240" y="90" text-anchor="middle" class="wroot" style="font-size:38px">تَصْحُو</text>
+</svg></figure>
+<p>يَأْخُذُ سِنْدِبَادُ الْقِنَاعَ، يَضَعُهُ مَعْكُوسًا عَلَى وَجْهِهِ، فَتَنْقَلِبُ الِابْتِسَامَةُ الْمَنْحُوتَةُ بُكَاءً. تَأْخُذُهُ زَيْنَبُ مِنْهُ، تَقْلِبُهُ، تَبْتَسِمُ. ثُمَّ تَضَعُهُ بِرِفْقٍ عَلَى وَجْهِ أَبِيهَا النَّائِمِ. يَفْتَحُ الْأَبُ عَيْنَيْهِ لَحْظَةً، يَرَى الْقِنَاعَ الْبَاكِيَ، يَئِنُّ، ثُمَّ يُغْمِضُ.</p>
+<div class="dialogue">
+<p><span class="speaker">— سِنْدِبَاد:</span> مَرَّةً أُخْرَى. لَا تُوقِظِيهِمْ عَلَى مَا فَقَدُوا، بَلْ عَلَى مَا مَا زَالَ بَيْنَ أَيْدِيهِمْ.</p>
+</div>
+<p>هَكَذَا أَدْرَكَ سِنْدِبَادُ أَوَّلَ دَرْسِ الرِّحْلَةِ: أَنَّ اسْمَ الْجَزِيرَةِ «النَّشَاطُ» لَا يَصْنَعُ نَشَاطًا، وَأَنَّ الْأَسْمَاءَ قَدْ تَكُونُ أَوَّلَ الْكَذِبِ.</p>
+<div class="gem">«لَا تُوقِظْهُمْ عَلَى مَا فَقَدُوا، بَلْ عَلَى مَا مَا زَالَ بَيْنَ أَيْدِيهِمْ.»<span class="en" lang="en">"Do not wake them to what they have lost, but to what is still in their hands."</span></div>
+<p>وَفِي الْأُفُقِ ظِلٌّ أَسْوَدُ يَتَرَقَّبُ، وَصَوْتٌ خَفِيضٌ يَتَسَرَّبُ كَالدُّخَانِ: «سَآكُلُ يَقَظَتَكَ قَبْلَ نَوْمِكَ.» — وَهُنَا يُبْحِرَانِ نَحْوَ جَزِيرَةِ الْمَرَايَا.</p>
+</div>
+
+<p class="sep">✦ ✦ ✦</p>
+
+<!-- ═══ همس المرافق ═══ -->
+<div class="companion">
+<p class="companion-head">هَمْسٌ لِلْمُرَافِقِ · <span class="en" lang="en">A Whisper to the Companion</span></p>
+<p style="text-align:center;font-style:italic;color:var(--ink-70);font-size:.96rem">مِفْتَاحُ الْجَزِيرَةِ — يُقْرَأُ قَبْلَ النَّوْمِ، لَا فِي أَثْنَاءِ الْحِكَايَةِ</p>
+<h3>فَكُّ الشِّيفْرَةِ</h3>
+<p>«الْكَنْزُ» هُنَا لَيْسَ ذَهَبًا، بَلِ الْقُدْرَةُ عَلَى التَّوَقُّفِ دُونَ خَوْفٍ مِنَ السُّكُونِ؛ حِسِّيًّا: تَبَاطُؤُ النَّفَسِ وَنُزُولُ الْكَتِفَيْنِ. <span class="en" lang="en">"Treasure" = the power to pause; the broken compass = listening inward; the Eater = what devours attention when we rush nowhere.</span></p>
+<h3>فِي جَوَازِ السَّفَرِ</h3>
+<p>وُضُوحُ الْإِحْسَاسِ الْجَسَدِيِّ عِنْدَ التَّوَقُّفِ (الصَّدْرُ/الْكَتِفَانِ) ← ٣ مِنْ ٤؛ هُدُوءُ النَّفَسِ فِي ٣ مُحَاوَلَاتٍ مِنْ ٤. يُنْتَقَلُ بِالْجَاهِزِيَّةِ، لَا بِالزَّمَنِ. <span class="en" lang="en">Advance by readiness, not the clock.</span></p>
+<h3>بِطَاقَةُ التَّكْيِيفِ</h3>
+<p>بَصَرِيٌّ-لَمْسِيٌّ: يَدٌ عَلَى حَجَرٍ أَمْلَسَ · حَرَكِيٌّ-سَمْعِيٌّ: مَشْيٌ بَطِيءٌ عَلَى إِيقَاعِ طَبْلَةٍ تَتَبَاطَأُ · تَنَفُّسِيٌّ: شَهِيقٌ عَلَى أَرْبَعٍ، زَفِيرٌ عَلَى سِتٍّ. <span class="en" lang="en">Three sensory paths — never say "wrong"; redirect the sensation.</span></p>
+<h3>بَوَّابَةُ الْخُرُوجِ</h3>
+<p>أَغْلِقِ الْكِتَابَ. ضَعْ كَفَّكَ عَلَى صَدْرِكَ. اكْتُبْ كَلِمَةً وَاحِدَةً تَشْعُرُ أَنَّهَا تُهَدِّئُكَ — وَابْدَأْ يَوْمَكَ مِنْهَا. <span class="en" lang="en">Close the book. Hand on chest. Write one word that calms you.</span></p>
+</div>
+
+<p class="stars">✦ ✦ ✦</p>
+<p class="rights">© د. عادل ف. عامر · مطبعةُ جُذور · MCMXXVI · <span class="en" lang="en">All rights reserved · Free to read</span></p>
+
+<div class="shipnav">
+<a href='/maktaba'>↤ بهوُ المكتبة</a>
+<a href='/library'>رِواقُ القِصَصِ الحِسّيّة ↦</a>
+</div>
+
+<img class="sealmark" src="assets/Juthur_Seal_Mono.png" alt="ختم الدار" width="46" height="46">
+<p class="colo">مطبعةُ جُذور · دبي · MCMXXVI · صمّمه وطوّره د. عادل ف. عامر · Designed and developed by Dr. Adel F. Amer · الملحمةُ الأولى</p>
+</main>
+
+<script>
+// شريط التقدم الذهبي
+(function(){
+  var bar=document.getElementById('progress-bar');
+  function upd(){
+    var s=document.documentElement,
+        p=(s.scrollTop||document.body.scrollTop)/(s.scrollHeight-s.clientHeight)*100;
+    bar.style.width=Math.min(p,100)+'%';
+    bar.setAttribute('aria-valuenow',Math.round(p));
+  }
+  window.addEventListener('scroll',upd,{passive:true});
+  upd();
+})();
+// استئناف موضع القراءة
+(function(){
+  var k='juthur_epic1_pos';
+  var saved=localStorage.getItem(k);
+  if(saved&&parseInt(saved)>200) setTimeout(function(){window.scrollTo(0,parseInt(saved));},80);
+  window.addEventListener('scroll',function(){
+    localStorage.setItem(k,Math.round(window.scrollY));
+  },{passive:true});
+})();
+// حمرة العناوين
+document.querySelectorAll('h1,h2').forEach(function(el){
+  el.innerHTML=el.textContent.replace(/([\u064B-\u0652\u0670])/g,'<span class="tk">$1</span>');
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,2228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar"><head><base href="/juthur/"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جُذور · JUTHUR — مطبعة جُذور ١٩٢٦</title>
+<meta name="description" content="جُذور — مشروعٌ لتعليم القراءة المبكّرة بالعربية عبر نَظَرِيَّةِ القراءةِ الملموسة (TRT). اللغةُ تُعرَف بتقاطع الحواسّ، والمعنى بتعدّد السياق. د. عادل ف. عامر · Amer (2024).">
+<meta property="og:title" content="جُذور · JUTHUR">
+<meta property="og:description" content="اللغةُ تُعرَف بتقاطع الحواسّ، والمعنى بتعدّد السياق — مشروع القراءة الملموسة بالعربية.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://juthur.netlify.app/">
+<meta property="og:image" content="https://juthur.netlify.app/assets/Juthur_Seal_Mono.png">
+<meta property="og:locale" content="ar_AE">
+<meta property="og:site_name" content="جُذور · JUTHUR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="جُذور · JUTHUR">
+<meta name="twitter:description" content="اللغةُ تُعرَف بتقاطع الحواسّ، والمعنى بتعدّد السياق — مشروع القراءة الملموسة بالعربية.">
+<meta name="twitter:image" content="https://juthur.netlify.app/assets/Juthur_Seal_Mono.png">
+<link rel="canonical" href="https://juthur.netlify.app/">
+<link rel="icon" type="image/png" href="assets/Juthur_Seal_Mono.png">
+<meta name="theme-color" content="#2b2823">
+<link rel="manifest" href="manifest.webmanifest">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"WebSite","url":"https://juthur.netlify.app/","name":"جُذور · Juthur — مطبعة جُذور ١٩٢٦","inLanguage":["ar","en"],
+  "description":"مشروع القراءة الملموسة بالعربية — نَظَرِيَّةُ القراءةِ الملموسة (TRT) وموادها الصفّية."},
+ {"@type":"Book","name":"جُذور تَقْرَأُ — Juthur Reads: A Tactile Theory of Reading Through the Body",
+  "author":{"@id":"https://juthur.netlify.app/#author"},"inLanguage":"ar",
+  "publisher":{"@type":"Organization","name":"مطبعة جُذور · Juthur Press"}},
+ {"@type":"Person","@id":"https://juthur.netlify.app/#author","name":"Dr. Adel F. Amer","alternateName":"د. عادل ف. عامر",
+  "url":"https://juthur.netlify.app/#author","sameAs":["https://orcid.org/0009-0008-9618-3863"]}
+]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Amiri+Quran&family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@400;500;600;700&display=swap">
+<style>
+
+/* ─────────────────────────────────────────────
+   JUTHUR PRESS · 1926
+   Palette locked to brand: INK #2b2823 / GOLD #b08f43.
+   Third values are derived tints & shades only.
+   ───────────────────────────────────────────── */
+:root{
+  --ink:#2b2823;
+  --gold:#b08f43;
+  --paper:#f3eee2;
+  --ink-70:#6b6459;
+  --gold-15:#e9e2d2;
+  --rule:#d5cbb8;
+  /* derived */
+  --ink-deep:#221f1a;      /* shade of INK — dark plates */
+  --ink-plate:#2b2823;     /* shade of INK — panel ground */
+  --paper-aged:#e9e2d2;    /* paper toned toward GOLD */
+  --gold-soft:#c9a961;     /* tint of GOLD — on dark ground */
+  /* the four senses — Brand Guide 04 */
+  --sage:#6e8b5a;   /* البصر sight */
+  --olive:#5a6b5a;
+  --terra:#c98a4b;  /* اللمس touch */
+  --slate:#5a7d8b;  /* السمع hearing */
+  --measure:74ch;
+  --bg:var(--paper);         /* background fallback — used in Naraf stations */
+  --gold-aa:#7d6128;         /* WCAG AA gold — 5.0:1 on paper, 4.5:1 on aged paper */
+  /* typography families */
+  --display-ar:'Amiri',serif;
+  --display-lat:'Fraunces',Georgia,serif;
+  --label:'Outfit',system-ui,sans-serif;
+  --rubric:#8f3a1e;
+  --rubric-soft:#e0a765;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+body{
+  margin:0;
+  font-family:'Fraunces',Georgia,serif;
+  color:var(--ink);
+  background:var(--paper);
+  font-size:18px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.skip-link{position:absolute;top:-100%;left:0;background:var(--ink);color:var(--paper);padding:.6rem 1.2rem;text-decoration:none;z-index:9999;font-size:.9rem}
+.skip-link:focus{top:0}
+/* faint press grain — ink bite on rag paper */
+body::before{
+  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+:lang(ar),.ar{font-family:'Amiri',serif;direction:rtl;text-align:right;line-height:2.15}
+:lang(en),.en{font-family:'Fraunces',Georgia,serif;direction:ltr;text-align:left;line-height:1.62}
+
+/* language switching */
+body[data-lang="ar"] .en{display:none}
+body[data-lang="en"] .ar{display:none}
+body[data-lang="en"]{direction:ltr}
+body[data-lang="ar"]{direction:rtl}
+
+a{color:inherit}
+img{max-width:100%;display:block}
+
+/* ── letterpress furniture ───────────────── */
+.wrap{width:min(1180px,92vw);margin-inline:auto}
+.narrow{width:min(760px,92vw);margin-inline:auto}
+
+.eyebrow{
+  font-family:'Fraunces',serif;font-size:.7rem;font-weight:600;
+  letter-spacing:.4em;text-transform:uppercase;color:var(--gold-aa);
+  display:block;margin-bottom:1.4rem;line-height:1.8;
+}
+body[data-lang="ar"] .eyebrow{font-family:'Amiri',serif;letter-spacing:.18em;font-size:.82rem}
+
+h1,h2,h3,h4{font-weight:600;margin:0;line-height:1.18;letter-spacing:-.01em}
+body[data-lang="ar"] h1,body[data-lang="ar"] h2,
+body[data-lang="ar"] h3,body[data-lang="ar"] h4{font-family:'Amiri',serif;line-height:1.55;letter-spacing:0;font-weight:700}
+
+h2{font-size:clamp(1.85rem,4vw,2.9rem);margin-bottom:.5rem}
+h3{font-size:clamp(1.15rem,2.1vw,1.42rem);margin-bottom:.5rem}
+
+.lede{font-size:clamp(1.02rem,1.6vw,1.16rem);color:var(--ink-70);max-width:62ch}
+body[data-lang="ar"] .lede{max-width:56ch}
+
+.rule{height:1px;background:var(--rule);border:0;margin:0}
+.rule-double{border:0;height:4px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);background:transparent}
+.fleuron{display:block;text-align:center;color:var(--gold);font-size:1.15rem;letter-spacing:1.2em;margin:0 auto;padding-inline-start:1.2em;opacity:.75}
+
+section{padding:clamp(4rem,9vw,7.5rem) 0;position:relative}
+.plate{background:var(--ink-plate);color:var(--paper)}
+.plate h2,.plate h3{color:var(--paper)}
+.plate .lede{color:#C6D2CB}
+.plate .eyebrow{color:var(--gold-soft)}
+.aged{background:var(--paper-aged)}
+
+.head{margin-bottom:clamp(2.4rem,5vw,3.6rem)}
+.head .rule{margin-top:1.6rem;max-width:120px}
+body[data-lang="ar"] .head .rule{margin-inline-start:0}
+
+/* ── masthead ────────────────────────────── */
+header.masthead{
+  position:sticky;top:0;z-index:100;
+  background:rgba(243,238,226,.93);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rule);
+}
+.masthead-in{display:flex;align-items:center;gap:1.5rem;padding:.85rem 0;justify-content:space-between}
+.brandmark{display:flex;align-items:center;gap:.65rem;text-decoration:none;flex-shrink:0}
+.brandmark .seed{width:26px;height:26px;flex-shrink:0}
+.brandmark b{font-family:'Amiri',serif;font-size:1.3rem;font-weight:700;letter-spacing:.02em}
+.brandmark span{font-size:.64rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-aa);font-weight:600}
+nav.primary{display:flex;gap:1.4rem;flex-wrap:wrap}
+nav.primary a{
+  text-decoration:none;font-size:.94rem;color:var(--ink-70);
+  padding-bottom:2px;border-bottom:1px solid transparent;transition:.25s;
+}
+nav.primary a:hover,nav.primary a:focus-visible{color:var(--ink);border-bottom-color:var(--gold)}
+.langtoggle{
+  font-family:'Fraunces',serif;background:transparent;border:1px solid var(--rule);
+  color:var(--ink-70);padding:.55rem 1.1rem;font-size:.76rem;letter-spacing:.18em;
+  text-transform:uppercase;cursor:pointer;transition:.25s;flex-shrink:0;
+}
+.langtoggle:hover{border-color:var(--gold);color:var(--ink)}
+.navtoggle{display:none;background:none;border:0;font-size:1.4rem;color:var(--ink);cursor:pointer;padding:.2rem .5rem}
+
+/* ── title page ──────────────────────────── */
+.titlepage{
+  padding:clamp(2rem,5vw,4rem) 0 clamp(2.5rem,6vw,4.5rem);
+  text-align:center;position:relative;
+}
+.titlepage .imprint{
+  font-size:.66rem;letter-spacing:.42em;text-transform:uppercase;
+  color:var(--gold-aa);margin-bottom:1.8rem;margin-top:1rem;line-height:2.2;padding-inline-start:.42em;
+}
+.wordmark{
+  font-family:'Amiri',serif;font-weight:700;
+  font-size:clamp(4rem,13vw,8.5rem);line-height:1;margin:0;
+  letter-spacing:.02em;text-align:center;
+}
+.wordmark-lat{
+  font-size:clamp(.8rem,2.2vw,1rem);letter-spacing:.72em;text-transform:uppercase;
+  color:var(--ink-70);margin:1.1rem 0 0;padding-inline-start:.72em;font-weight:500;
+  text-align:center;
+}
+.claim{
+  font-family:'Amiri',serif;font-size:clamp(1.05rem,2.4vw,1.4rem);
+  color:var(--ink-70);margin:1.8rem auto 0;max-width:34ch;line-height:2;
+  text-align:center;
+}
+body[data-lang="en"] .claim{font-family:'Fraunces',serif;max-width:44ch;line-height:1.6}
+.titlepage .fleuron{margin:2rem auto}
+
+/* ── the tactile plate — SIGNATURE ───────── */
+.tactile{
+  display:flex;justify-content:center;gap:clamp(.6rem,2vw,1.4rem);
+  margin:0 auto;padding:0;direction:rtl;flex-wrap:wrap;
+}
+.slug{
+  position:relative;width:clamp(72px,15vw,124px);aspect-ratio:1/1.18;
+  display:grid;place-items:center;cursor:pointer;border:0;
+  font-family:'Amiri',serif;font-weight:700;
+  font-size:clamp(2.4rem,7vw,4.2rem);line-height:1;
+  transition:transform .28s cubic-bezier(.2,.7,.3,1),box-shadow .28s ease,background .28s ease,color .28s ease;
+}
+/* raised — metal type standing above the bed */
+.slug[data-state="raised"]{
+  background:linear-gradient(160deg,var(--paper-aged) 0%,#E8DFCB 100%);
+  color:var(--ink);
+  box-shadow:
+    inset 1px 1px 0 rgba(255,255,255,.85),
+    inset -1px -1px 0 rgba(43,40,35,.12),
+    3px 5px 0 var(--rule),
+    6px 10px 22px rgba(43,40,35,.26);
+  transform:translate(-1px,-2px);
+}
+/* carved — bitten into the sheet */
+.slug[data-state="carved"]{
+  background:linear-gradient(160deg,#E6DCC6 0%,var(--paper-aged) 100%);
+  color:var(--gold-aa);
+  box-shadow:
+    inset 4px 5px 9px rgba(43,40,35,.34),
+    inset -2px -2px 0 rgba(255,255,255,.7),
+    0 1px 0 rgba(255,255,255,.5);
+  transform:translate(0,1px);
+}
+.slug:hover,.slug:focus-visible{outline:0}
+.slug:hover[data-state="raised"]{transform:translate(0,0);box-shadow:inset 1px 1px 0 rgba(255,255,255,.85),2px 3px 0 var(--rule),3px 5px 12px rgba(43,40,35,.22)}
+.slug:active{transform:translate(1px,3px)!important}
+.slug:focus-visible{box-shadow:0 0 0 2px var(--gold-aa),3px 5px 0 var(--rule)}
+.slug small{
+  position:absolute;bottom:-1.7rem;inset-inline:0;text-align:center;
+  font-family:'Amiri',serif;font-size:.66rem;font-weight:400;letter-spacing:.1em;
+  color:var(--ink-70);opacity:.75;
+}
+body[data-lang="en"] .slug small{font-family:'Fraunces',serif;letter-spacing:.18em;text-transform:uppercase;font-size:.58rem}
+.tactile-note{
+  text-align:center;margin-top:3.4rem;font-size:.92rem;color:var(--ink-70);
+  font-style:italic;max-width:46ch;margin-inline:auto;
+}
+body[data-lang="ar"] .tactile-note{font-family:'Amiri',serif;font-style:normal;line-height:2.1;max-width:40ch}
+
+/* ── verse plates ────────────────────────── */
+.verse{text-align:center}
+.verse .ayah{
+  font-family:'Amiri',serif;direction:rtl;
+  font-size:clamp(1.35rem,3.4vw,2.15rem);line-height:2.25;
+  color:var(--paper);margin:0 auto;max-width:36ch;font-weight:400;
+}
+/* Arabic mode: verse displayed dramatically large, split on two lines */
+body[data-lang="ar"] .verse .ayah-1,
+body[data-lang="ar"] .verse .ayah-2{
+  font-size:clamp(1.6rem,4.2vw,3rem);line-height:2.05;
+  text-align:right;max-width:none;margin:0;
+}
+body[data-lang="ar"] .verse .ayah-2{margin-top:.1em}
+body[data-lang="ar"] .verse{text-align:right}
+body[data-lang="ar"] .verse .gloss{text-align:center;margin-inline:auto}
+body[data-lang="ar"] .verse .after{text-align:right}
+.verse .gloss{
+  font-style:italic;color:#B9C7BF;margin:1.8rem auto 0;max-width:52ch;
+  font-size:1.02rem;line-height:1.7;font-family:'Fraunces',serif;direction:ltr;
+}
+.verse .src{
+  display:block;margin-top:1.8rem;font-size:.68rem;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--gold-soft);
+}
+body[data-lang="ar"] .verse .src{font-family:'Amiri',serif;letter-spacing:.14em;font-size:.86rem;text-align:right}
+.verse .after{margin-top:2rem;color:var(--gold-soft);font-size:1rem}
+
+/* ── grids ───────────────────────────────── */
+.grid{display:grid;gap:clamp(1.4rem,3vw,2.4rem)}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(258px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+
+/* numbered sequence — order carries meaning */
+.step{border-top:1px solid var(--rule);padding-top:1.5rem}
+.plate .step{border-top-color:rgba(217,207,180,.28)}
+.step .num{
+  font-family:'Fraunces',serif;font-size:.7rem;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--gold-aa);display:block;margin-bottom:1rem;font-weight:600;
+}
+body[data-lang="ar"] .step .num{font-family:'Amiri',serif;font-size:1.5rem;letter-spacing:0;font-weight:700}
+.step p{color:var(--ink-70);margin:.6rem 0 0;font-size:.98rem}
+.plate .step p{color:#BCC9C2}
+
+/* doors */
+.door{
+  display:block;text-decoration:none;background:var(--paper);
+  border:1px solid var(--rule);padding:clamp(1.6rem,3vw,2.2rem);
+  transition:.3s;position:relative;
+}
+.aged .door{background:var(--paper)}
+.door:hover,.door:focus-visible{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 10px 30px rgba(43,40,35,.09)}
+.door h3{margin-bottom:.7rem}
+.door p{color:var(--ink-70);font-size:.96rem;margin:0 0 1.4rem}
+.door .go{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-aa);font-weight:600}
+body[data-lang="ar"] .door .go{font-family:'Amiri',serif;letter-spacing:.1em;font-size:.9rem}
+
+/* cards */
+.card{border-top:2px solid var(--ink);padding-top:1.4rem}
+.plate .card{border-top-color:var(--gold-soft)}
+.card p{color:var(--ink-70);font-size:.97rem;margin:.55rem 0 0}
+.plate .card p{color:#BCC9C2}
+
+/* counts */
+.counts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.count{background:var(--paper);padding:1.8rem 1rem;text-align:center}
+.aged .count{background:var(--paper-aged)}
+.count b{display:block;font-family:'Amiri',serif;font-size:clamp(2rem,5vw,2.9rem);font-weight:700;color:var(--gold-aa);line-height:1}
+.count span{display:block;margin-top:.6rem;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-70)}
+body[data-lang="ar"] .count span{font-family:'Amiri',serif;letter-spacing:.04em;font-size:.95rem;text-transform:none}
+
+/* the tree */
+.tree{display:flex;flex-direction:column-reverse;gap:0}
+.rung{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.2rem,3vw,2.2rem);align-items:start;
+  padding:clamp(1.5rem,3vw,2.1rem) 0;border-bottom:1px solid var(--rule)}
+.rung:first-child{border-bottom:0}
+.rung .mark{
+  width:clamp(46px,7vw,62px);height:clamp(46px,7vw,62px);flex-shrink:0;
+  display:grid;place-items:center;border:1px solid var(--gold-aa);border-radius:50%;
+  font-family:'Amiri',serif;font-weight:700;font-size:1.3rem;color:var(--gold-aa);
+}
+.rung[data-stage="4"] .mark{background:var(--gold);color:var(--paper)}
+.rung h3 em{font-style:normal;color:var(--gold-aa);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;margin-inline-start:.9rem;font-weight:600}
+body[data-lang="ar"] .rung h3 em{font-family:'Amiri',serif;letter-spacing:.06em;font-size:.95rem;text-transform:none}
+.rung p{color:var(--ink-70);margin:.5rem 0 0;font-size:.98rem}
+.rung .contains{display:block;margin-top:.7rem;font-size:.85rem;color:var(--gold-aa);opacity:.9}
+
+/* cabinet */
+.jewel{
+  border:1px solid var(--rule);background:var(--paper);
+  padding:clamp(1.8rem,4vw,3rem);display:grid;gap:clamp(1.5rem,4vw,3rem);
+  grid-template-columns:minmax(0,1fr);align-items:center;
+}
+@media(min-width:780px){.jewel{grid-template-columns:minmax(0,300px) minmax(0,1fr)}}
+.jewel-plate{
+  background:linear-gradient(150deg,var(--ink-plate),var(--ink-deep));
+  aspect-ratio:2/3;display:grid;place-content:center;text-align:center;padding:2rem;
+  border:1px solid rgba(217,207,180,.25);box-shadow:0 18px 40px rgba(43,40,35,.22);
+}
+.jewel-plate .t{font-family:'Amiri',serif;color:var(--paper);font-size:1.45rem;font-weight:700;line-height:2;margin:0}
+.jewel-plate .y{display:block;margin-top:1.6rem;color:var(--gold-soft);font-size:.66rem;letter-spacing:.4em}
+.jewel-plate .orn{color:var(--gold-soft);font-size:1rem;letter-spacing:.8em;margin-bottom:1.4rem;opacity:.8}
+.shelf{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:clamp(2rem,4vw,3rem)}
+.vol{background:var(--paper);padding:1.4rem 1.3rem;text-decoration:none;display:block;transition:.25s}
+.aged .vol{background:var(--paper-aged)}
+.vol:hover,.vol:focus-visible{background:var(--gold-15)}
+.vol b{display:block;font-weight:600;font-size:1.02rem}
+body[data-lang="ar"] .vol b{font-family:'Amiri',serif;font-weight:700}
+.vol i{display:block;font-style:normal;font-size:.82rem;color:var(--ink-70);margin-top:.35rem}
+.vol u{display:inline-block;text-decoration:none;margin-top:.9rem;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-aa);font-weight:600}
+body[data-lang="ar"] .vol u{font-family:'Amiri',serif;letter-spacing:.06em;font-size:.85rem;text-transform:none}
+
+/* research ledger */
+.ledger{border-top:1px solid var(--rule)}
+.entry{display:grid;grid-template-columns:auto 1fr;gap:clamp(1rem,3vw,2rem);
+  padding:1.3rem 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.entry .tag{
+  font-size:.63rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;
+  color:var(--gold);border:1px solid var(--rule);padding:.34rem .7rem;white-space:nowrap;
+}
+body[data-lang="ar"] .entry .tag{font-family:'Amiri',serif;letter-spacing:.04em;font-size:.82rem;text-transform:none}
+.entry p{margin:0;font-size:1rem}
+.entry p i{display:block;font-style:normal;color:var(--ink-70);font-size:.88rem;margin-top:.25rem}
+
+/* author */
+.vitae{display:grid;gap:clamp(1.6rem,4vw,2.6rem);grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.vitae h3{font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-aa);margin-bottom:1.2rem;font-weight:600}
+body[data-lang="ar"] .vitae h4{font-family:'Amiri',serif;letter-spacing:.08em;font-size:1rem;text-transform:none}
+.vitae ul{list-style:none;margin:0;padding:0}
+.vitae li{padding:.7rem 0;border-bottom:1px solid var(--rule);font-size:.95rem}
+.plate .vitae li{border-bottom-color:rgba(217,207,180,.22)}
+.vitae li b{display:block;font-weight:600}
+.vitae li span{color:var(--ink-70);font-size:.84rem}
+.plate .vitae li span{color:#9FB1A8}
+.idline{display:flex;gap:1.6rem;flex-wrap:wrap;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-aa);margin-top:1.4rem}
+
+/* colophon */
+footer{background:var(--ink-deep);color:#B9C7BF;padding:clamp(3rem,7vw,5rem) 0 2rem;text-align:center}
+footer .fleuron{color:var(--gold-soft)}
+.colophon{max-width:56ch;margin:2rem auto 0;font-size:.9rem;line-height:1.9}
+body[data-lang="ar"] .colophon{font-family:'Amiri',serif;line-height:2.2}
+.colophon b{color:var(--paper);font-weight:600}
+.imprintline{margin-top:2.6rem;padding-top:1.8rem;border-top:1px solid rgba(217,207,180,.2);
+  font-size:.64rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-soft);line-height:2.4;padding-inline-start:.28em}
+footer a{color:var(--gold-soft)}
+
+/* printer's device */
+.device{width:clamp(84px,13vw,116px);height:auto;margin:0 auto 2.2rem;display:block}
+.device text{font-family:'Fraunces',serif;font-size:8.4px;letter-spacing:.34em;fill:var(--gold)}
+
+/* first-edition line */
+.edition{
+  margin:2.4rem auto 0;font-size:.78rem;letter-spacing:.2em;color:var(--ink-70);
+  display:inline-flex;align-items:center;gap:.9rem;flex-wrap:wrap;justify-content:center;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.7rem 1.4rem;
+}
+body[data-lang="ar"] .edition{font-family:'Amiri',serif;letter-spacing:.04em;font-size:.95rem}
+
+/* plate numeral on section eyebrows */
+.plateno{
+  display:inline-block;color:var(--gold-aa);font-family:'Fraunces',serif;
+  letter-spacing:.24em;font-weight:600;
+}
+
+/* table of contents */
+.toc{border-top:1px solid var(--rule);max-width:820px}
+.toc a{
+  display:grid;grid-template-columns:2.6rem 1fr auto;gap:1.2rem;align-items:baseline;
+  padding:1.05rem .2rem;border-bottom:1px solid var(--rule);text-decoration:none;transition:.22s;
+}
+.toc a:hover,.toc a:focus-visible{background:var(--gold-15)}
+.toc .rn{font-family:'Fraunces',serif;color:var(--gold-aa);letter-spacing:.16em;font-weight:600;font-size:.92rem}
+.toc .ti{font-size:1.06rem}
+body[data-lang="ar"] .toc .ti{font-family:'Amiri',serif;font-size:1.16rem}
+.toc .ti i{font-style:normal;color:var(--ink-70);font-size:.9em}
+.toc .dot{color:var(--rule);letter-spacing:.28em;font-size:.8rem}
+
+/* reveal */
+.rev{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+.rev.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none}}
+
+@media(max-width:860px){
+  .navtoggle{display:block}
+  nav.primary{
+    display:none;position:absolute;top:100%;inset-inline:0;background:var(--paper);
+    border-bottom:1px solid var(--rule);flex-direction:column;gap:0;padding:.5rem 4vw 1.2rem;
+  }
+  nav.primary.open{display:flex}
+  nav.primary a{padding:.7rem 0;border-bottom:1px solid var(--rule)}
+}
+
+
+/* THE CATALOGUE — the corpus made visible without being given away */
+.cat-head{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;
+  border-bottom:2px solid var(--ink);padding-bottom:.7rem;margin:0 0 1.4rem}
+.cat-head h3{margin:0;font-size:clamp(1.1rem,2.2vw,1.4rem)}
+.cat-head .tally{font-family:var(--label);font-size:.66rem;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--gold-aa);font-weight:600;margin-inline-start:auto}
+body[data-lang="ar"] .cat-head .tally{font-family:'Amiri',serif;letter-spacing:.05em;font-size:.95rem;text-transform:none}
+ol.cat{list-style:none;margin:0;padding:0;columns:2;column-gap:clamp(1.6rem,4vw,3rem)}
+@media(min-width:1000px){ol.cat{columns:3}}
+@media(max-width:560px){ol.cat{columns:1}}
+ol.cat li{break-inside:avoid;display:grid;grid-template-columns:2.1rem 1fr auto;
+  gap:.6rem;align-items:baseline;padding:.5rem 0;border-bottom:1px solid var(--rule)}
+ol.cat .cn{font-family:'Amiri',serif;color:var(--gold-aa);font-size:.86rem;font-weight:700}
+ol.cat b{font-family:'Amiri',serif;font-weight:400;font-size:1.02rem;line-height:2}
+ol.cat i{font-family:var(--label);font-style:normal;font-size:.6rem;letter-spacing:.1em;
+  color:var(--ink-70);white-space:nowrap;opacity:.8}
+.cat-note{margin-top:1.6rem;font-size:.9rem;color:var(--ink-70)}
+.cat-pending{border:1px dashed var(--rule);padding:1.2rem 1.4rem;margin-top:1.8rem;
+  font-size:.9rem;color:var(--ink-70)}
+
+/* STATUS & EVIDENCE — the project graded by its own standard */
+.status{background:var(--paper-aged);border-block:1px solid var(--rule)}
+.grade-rows{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:1.6rem}
+.grade-row{background:var(--paper);display:grid;grid-template-columns:auto 1fr;gap:1.2rem;
+  padding:1.15rem 1.3rem;align-items:baseline}
+.grade-row .g{font-family:var(--label);font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;
+  font-weight:600;padding:.3rem .6rem;border:1px solid;white-space:nowrap;align-self:start}
+.g.s{color:var(--sage);border-color:var(--sage)}
+.g.m{color:var(--terra);border-color:var(--terra)}
+.g.n{color:var(--ink-70);border-color:var(--ink-70)}
+.grade-row b{display:block;font-weight:600}
+body[data-lang="ar"] .grade-row b{font-family:'Amiri',serif;font-weight:700}
+.grade-row i{display:block;font-style:normal;color:var(--ink-70);font-size:.94rem;margin-top:.35rem;line-height:1.85}
+body[data-lang="ar"] .grade-row i{font-family:'Amiri',serif;line-height:2}
+.ready{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:1.8rem;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.ready div{background:var(--paper);padding:1.2rem 1.3rem}
+.ready b{display:block;font-size:.96rem}
+body[data-lang="ar"] .ready b{font-family:'Amiri',serif;font-weight:700}
+.ready span.c{display:block;margin-top:.4rem;font-family:var(--label);font-size:.58rem;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--gold-aa);font-weight:600}
+body[data-lang="ar"] .ready span.c{font-family:'Amiri',serif;letter-spacing:.04em;font-size:.9rem;text-transform:none}
+.ready p{margin:.5rem 0 0;font-size:.9rem;color:var(--ink-70)}
+
+/* the ladder: six plant stages held inside four maqamat */
+.tree .rung{grid-template-columns:auto 1fr;border-bottom:1px solid rgba(213,203,184,.2)}
+.tree .rung[data-c="sage"] .mark{border-color:var(--sage);color:var(--sage)}
+.tree .rung[data-c="slate"] .mark{border-color:var(--slate);color:var(--slate)}
+.tree .rung[data-c="terra"] .mark{border-color:var(--terra);color:var(--terra)}
+.tree .rung[data-c="gold"] .mark{background:var(--gold);border-color:var(--gold);color:var(--ink-deep)}
+.maqam{margin:1.6rem 0 .2rem;font-family:var(--label);font-size:.62rem;letter-spacing:.26em;
+  text-transform:uppercase;font-weight:600;padding-bottom:.5rem;border-bottom:2px solid currentColor}
+body[data-lang="ar"] .maqam{font-family:'Amiri',serif;letter-spacing:.05em;font-size:.98rem;text-transform:none}
+.maqam.sage{color:var(--sage)}.maqam.slate{color:var(--slate)}
+.maqam.terra{color:var(--terra)}.maqam.gold{color:var(--gold-soft)}
+
+ol.epics b em.latin{font-family:var(--display-lat);font-style:italic;font-weight:500;
+  font-size:.82em;color:var(--ink-70)}
+ol.epics s{display:block;text-decoration:none;font-family:'Amiri',serif;font-size:.95rem;
+  color:var(--gold-aa);margin-top:.3rem;line-height:1.9}
+
+ol.islands{list-style:none;margin:1.4rem 0 0;padding:0;columns:2;column-gap:clamp(1.6rem,4vw,3rem)}
+@media(max-width:640px){ol.islands{columns:1}}
+ol.islands li{break-inside:avoid;display:grid;grid-template-columns:2rem 1fr;gap:.7rem;
+  padding:.75rem 0;border-bottom:1px solid var(--rule);align-items:baseline}
+ol.islands .cn{font-family:'Amiri',serif;color:var(--gold-aa);font-weight:700;font-size:.9rem}
+ol.islands b{font-family:'Amiri',serif;font-weight:700;font-size:1.02rem}
+ol.islands i{font-style:normal;font-family:'Amiri',serif;font-size:.88rem;color:var(--sage);margin-inline-start:.6rem}
+ol.islands u{display:block;text-decoration:none;font-family:'Amiri',serif;font-size:.88rem;
+  color:var(--ink-70);margin-top:.25rem;line-height:2}
+
+ol.cat b.flagname{color:var(--terra)}
+ol.cat b.flagname::after{content:' \25B3';font-size:.7em;opacity:.8}
+ol.cat-tight{columns:2;margin-bottom:1.4rem}
+@media(min-width:900px){ol.cat-tight{columns:4}}
+.stage-row{display:flex;align-items:baseline;gap:.9rem;margin:1.2rem 0 .5rem}
+.stage-row .st{font-family:'Amiri',serif;font-weight:700;color:var(--ink);font-size:1.02rem}
+.stage-row .bd{font-family:var(--label);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-aa)}
+ol.epics{list-style:none;margin:0;padding:0;display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule)}
+ol.epics li{background:var(--paper);display:grid;grid-template-columns:3.4rem 1fr;gap:1rem;padding:1.2rem 1.3rem;align-items:baseline}
+.aged ol.epics li{background:var(--paper-aged)}
+ol.epics .cn{font-family:var(--label);font-weight:600;letter-spacing:.16em;color:var(--gold-aa);font-size:.9rem}
+ol.epics b{font-family:'Amiri',serif;font-weight:700;font-size:1.14rem;display:block}
+ol.epics i{display:block;font-family:'Amiri',serif;font-style:normal;font-size:.9rem;color:var(--terra);margin-top:.4rem}
+ol.epics u{display:block;font-family:'Amiri',serif;text-decoration:none;font-size:.92rem;color:var(--ink-70);margin-top:.35rem;line-height:2}
+
+/* THE HANDBOOK — the one thing a teacher can use on Monday */
+.handbook{border:1px solid var(--rule);background:var(--paper);
+  padding:clamp(1.6rem,3.5vw,2.6rem);margin-top:clamp(2.6rem,5vw,3.6rem);
+  display:grid;gap:clamp(1.4rem,3.5vw,2.6rem);grid-template-columns:minmax(0,1fr);align-items:center}
+@media(min-width:760px){.handbook{grid-template-columns:minmax(0,188px) minmax(0,1fr)}}
+.hb-plate{background:linear-gradient(150deg,var(--ink-plate),var(--ink-deep));
+  aspect-ratio:3/4;display:grid;place-content:center;text-align:center;padding:1.4rem;
+  border:1px solid rgba(213,203,184,.22);box-shadow:0 14px 30px rgba(43,40,35,.2)}
+.hb-plate .n{font-family:var(--display-lat);color:var(--gold-soft);font-size:2.6rem;
+  line-height:1;font-weight:600}
+.hb-plate .t{font-family:var(--display-lat);color:var(--paper);font-size:1.16rem;
+  line-height:1.3;margin:.7rem 0 0;font-weight:600;letter-spacing:.01em}
+.hb-plate .s{display:block;margin-top:1.1rem;font-family:var(--label);color:var(--gold-soft);
+  font-size:.54rem;letter-spacing:.28em;text-transform:uppercase;line-height:1.9}
+.handbook h3{font-size:clamp(1.35rem,2.6vw,1.85rem)}
+.handbook p{color:var(--ink-70);margin:.8rem 0 0}
+.grades{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.5rem 0 0}
+.grade{font-family:var(--label);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;
+  padding:.34rem .7rem;border:1px solid;font-weight:600}
+.grade.s{color:var(--sage);border-color:var(--sage)}
+.grade.m{color:var(--terra);border-color:var(--terra)}
+.grade.p{color:var(--slate);border-color:var(--slate)}
+.hb-get{display:inline-block;margin-top:1.6rem;font-family:var(--label);font-size:.66rem;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:600;
+  text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:4px}
+body[data-lang="ar"] .hb-get{font-family:'Amiri',serif;letter-spacing:.06em;font-size:.95rem;text-transform:none}
+.hb-meta{display:block;margin-top:1.2rem;font-family:var(--label);font-size:.6rem;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--ink-70)}
+body[data-lang="ar"] .hb-meta{font-family:'Amiri',serif;letter-spacing:.03em;font-size:.88rem;text-transform:none}
+
+/* THE SIGNATURE — a tipped-in colour plate, as a 1926 frontispiece would be */
+.signature{display:block;width:clamp(110px,18vw,170px);height:auto;margin:0 auto 1.8rem}
+.signature-cap{display:block;text-align:center;margin:-1rem 0 1.6rem;
+  font-size:.6rem;letter-spacing:.36em;text-transform:uppercase;color:var(--ink-70)}
+body[data-lang="ar"] .signature-cap{font-family:'Amiri',serif;letter-spacing:.08em;
+  font-size:1.05rem;text-transform:none;margin:-1.2rem 0 2.6rem}
+.monomark{display:block;color:var(--ink)}
+.plate .monomark,footer .monomark,.mottoplate .monomark{color:var(--gold-soft)}
+
+/* THE MARK — drawn to the Brand Guide construction:
+   one vertical axis, three tangent circles (crown / seed / roots);
+   the seed's almond is also an eye. Vector, so it needs no asset file. */
+.mark{display:block;color:var(--ink)}
+.mark .seedfill{fill:var(--gold)}
+.mark .stroke{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
+.plate .mark,footer .mark{color:var(--paper)}
+footer .mark .seedfill,.plate .mark .seedfill{fill:var(--gold-soft)}
+
+/* THE MOTTO — a plate of its own, not a footnote */
+.mottoplate{background:var(--ink-plate);color:var(--paper);text-align:center;
+  padding:clamp(3.6rem,8vw,6rem) 0}
+.mottoplate .motto{
+  font-family:'Amiri',serif;direction:rtl;margin:0 auto;max-width:22ch;
+  font-size:clamp(1.4rem,3.6vw,2.35rem);line-height:2.15;color:var(--paper);font-weight:400;
+}
+body[data-lang="en"] .mottoplate .motto{
+  font-family:var(--display-lat);direction:ltr;max-width:26ch;line-height:1.5;font-style:italic}
+.mottoplate .attrib{display:block;margin-top:2rem;font-size:.66rem;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--gold-soft)}
+body[data-lang="ar"] .mottoplate .attrib{font-family:'Amiri',serif;letter-spacing:.08em;
+  font-size:.92rem;text-transform:none}
+.mottoplate .mark{width:clamp(54px,8vw,74px);margin:0 auto 2.4rem}
+
+/* ENGRAVED TAILPIECE — hatched botanical, in the manner of a wood engraving */
+.tailpiece{display:block;width:min(300px,62vw);margin:clamp(2.6rem,5vw,3.8rem) auto 0;
+  color:var(--gold);opacity:.85}
+.plate .tailpiece,footer .tailpiece{color:var(--gold-soft)}
+.tailpiece .h{fill:none;stroke:currentColor;stroke-width:.7;stroke-linecap:round}
+.tailpiece .r{fill:none;stroke:currentColor;stroke-width:.6}
+
+/* real brand assets, with the drawn vector standing in if absent */
+.markslot{display:inline-grid;place-items:center;line-height:0}
+.markslot img{display:block;height:auto}
+.brandmark .markslot img{width:30px}
+.sealblock{margin:0 auto;text-align:center}
+.sealblock .markslot img{width:clamp(96px,15vw,132px);opacity:.92}
+.sealcap{display:block;margin-top:1rem;font-size:.64rem;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--gold-soft)}
+body[data-lang="ar"] .sealcap{font-family:'Amiri',serif;letter-spacing:.08em;
+  font-size:.92rem;text-transform:none}
+
+/* the invocation — a slim band, not a plate */
+.invocation{padding:clamp(2.2rem,5vw,3.4rem) 0;text-align:center;
+  background:var(--paper-aged);border-block:1px solid var(--rule)}
+.invocation p{margin:0;font-family:'Amiri',serif;direction:rtl;
+  font-size:clamp(1.3rem,3.4vw,2rem);line-height:2.1;color:var(--ink)}
+.invocation .src{display:block;margin-top:1.1rem;font-size:.66rem;
+  letter-spacing:.3em;text-transform:uppercase;color:var(--gold-aa)}
+body[data-lang="ar"] .invocation .src{font-family:'Amiri',serif;
+  letter-spacing:.08em;font-size:.9rem;text-transform:none}
+
+/* labels & small caps ride the system sans, as the brand sheet specifies */
+.eyebrow,.plateno,.step .num,.count span,.entry .tag,.vitae h4,.door .go,
+.imprint,.imprintline,.sealcap,.signature-cap,.mottoplate .attrib,.toc .rn,
+.langtoggle,.vol u,.rung h3 em{font-family:var(--label);font-weight:500}
+body[data-lang="ar"] .eyebrow,body[data-lang="ar"] .step .num,
+body[data-lang="ar"] .count span,body[data-lang="ar"] .entry .tag,
+body[data-lang="ar"] .vitae h4,body[data-lang="ar"] .door .go,
+body[data-lang="ar"] .imprint,body[data-lang="ar"] .imprintline,
+body[data-lang="ar"] .sealcap,body[data-lang="ar"] .signature-cap,
+body[data-lang="ar"] .mottoplate .attrib,body[data-lang="ar"] .vol u,
+body[data-lang="ar"] .rung h3 em{font-family:'Amiri',serif;font-weight:400}
+/* titlepage: Arabic imprint loses Outfit's letter-spacing, gains Amiri's natural rhythm */
+body[data-lang="ar"] .titlepage .imprint{
+  letter-spacing:.06em;text-transform:none;font-size:.92rem;
+  color:var(--gold-aa);line-height:2;text-align:center;
+}
+
+/* the four channels carry the four senses — breath is the gold core */
+#materials .g4 .step:nth-child(1){border-top-color:var(--slate)}
+#materials .g4 .step:nth-child(1) .num{color:var(--slate)}
+#materials .g4 .step:nth-child(2){border-top-color:var(--gold)}
+#materials .g4 .step:nth-child(2) .num{color:var(--gold-aa)}
+#materials .g4 .step:nth-child(3){border-top-color:var(--sage)}
+#materials .g4 .step:nth-child(3) .num{color:var(--sage)}
+#materials .g4 .step:nth-child(4){border-top-color:var(--terra)}
+#materials .g4 .step:nth-child(4) .num{color:var(--terra)}
+#materials .g4 .step{border-top-width:2px}
+
+/* ═══ DISPLAY FACES · RELIEF · RUBRICATION ═══════════════════
+   Swap either --display-* back to the body face in one line. */
+
+/* display face on the two largest ranks only — h3 stays in the body face */
+.wordmark,h1,h2{font-family:var(--display-lat)}
+body[data-lang="ar"] h1,
+body[data-lang="ar"] h2{font-family:var(--display-ar);line-height:1.95;font-weight:700}
+body[data-lang="ar"] .wordmark,
+body[data-lang="en"] .wordmark{font-family:var(--display-ar);line-height:1.42;padding-block:.14em;font-weight:700}
+h2{letter-spacing:-.005em}
+
+/* between carved and raised: the bite of type into damp paper,
+   with the rim of displaced fibre catching the light */
+.wordmark,h2,.jewel-plate .t{
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.9),
+    0 -1px 0 rgba(43,40,35,.14),
+    0 2px 3px rgba(43,40,35,.13);
+}
+.plate h2,.jewel-plate .t{
+  text-shadow:
+    0 1px 0 rgba(0,0,0,.5),
+    0 -1px 0 rgba(243,238,226,.16),
+    0 2px 4px rgba(0,0,0,.32);
+}
+
+/* the harakat, struck in the second ink — headings only */
+.tk{color:var(--rubric)}
+.plate .tk,.status .tk,footer .tk{color:var(--rubric-soft)}
+@media (prefers-contrast:more){/* أُلغيت قاعدة الإطفاء — مذهبُ التحمير الأصلي يعود بحدوده */}
+.evidence-updated .ar,.ledger-head .ar{font-family:'Amiri',serif;letter-spacing:.02em}
+footer .ledger-head{color:var(--gold-15)}footer .ledger-head .ar{color:var(--gold-15)}footer .ledger-body{color:var(--paper-aged)}
+.plate .evidence-updated{color:var(--gold-soft)}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "جُذور · JUTHUR",
+      "url": "https://juthur.netlify.app/",
+      "description": "مشروع لتعليم القراءة المبكّرة بالعربية عبر إطارِ القراءةِ الملموسة",
+      "founder": {
+        "@type": "Person",
+        "name": "Dr. Adel F. Amer",
+        "sameAs": "https://orcid.org/0009-0008-9618-3863"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://juthur.netlify.app/#author",
+      "name": "Dr. Adel F. Amer",
+      "jobTitle": "Head of Department, Arabic & Islamic Studies",
+      "sameAs": [
+        "https://orcid.org/0009-0008-9618-3863",
+        "https://osf.io/2nwfq"
+      ]
+    }
+  ]
+}
+</script>
+
+<style id="press1926-css">
+/* ═══ إخراج مطبعة ١٩٢٦ · Press 1926 Art Direction ═══ */
+
+/* ورق حي: حبيبات + حواف مشرّبة */
+/* الحبيبات: body::before الأصلي يتكفّل بها — لا تكرار */
+#page-vignette{position:fixed;inset:0;z-index:2;pointer-events:none;
+  box-shadow:inset 0 0 110px rgba(43,40,35,.09), inset 0 0 10px rgba(43,40,35,.05)}
+
+/* علامات القصّ في أركان الألواح */
+.plate .wrap,.aged .wrap{position:relative}
+.plate .wrap::before,.aged .wrap::before{content:"";position:absolute;top:-14px;right:-6px;width:18px;height:18px;pointer-events:none;
+  border-top:1px solid var(--gold);border-right:1px solid var(--gold);opacity:.5}
+.plate .wrap::after,.aged .wrap::after{content:"";position:absolute;bottom:-14px;left:-6px;width:18px;height:18px;pointer-events:none;
+  border-bottom:1px solid var(--gold);border-left:1px solid var(--gold);opacity:.5}
+
+/* سطر الحبر + سِنّ الريشة */
+#ink-rule{position:fixed;top:0;right:0;left:0;height:3px;background:var(--gold);transform-origin:100% 50%;transform:scaleX(0);z-index:9999;pointer-events:none}
+#ink-nib{position:fixed;top:-2.5px;width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 6px rgba(176,143,67,.8);z-index:9999;pointer-events:none;right:-4px;will-change:transform}
+
+/* الختم الحي */
+.device.mark{transform-origin:50% 50%}
+.stamped{animation:none}
+
+/* التعقيبة — أثر المخطوط العربي */
+.taqiba{position:absolute;bottom:.6rem;left:clamp(.8rem,3vw,2rem);font-family:var(--display-ar);color:var(--gold-aa);
+  font-size:1.05rem;transform:rotate(-4deg);opacity:.85;pointer-events:none;line-height:1}
+.plate .taqiba{color:var(--gold-soft)}
+.taqiba .en{font-family:var(--display-lat);font-style:italic;font-size:.9em}
+.taqiba::before{content:"❦ ";font-size:.8em;opacity:.7}
+body[data-lang="en"] .taqiba{font-size:.95rem}
+
+/* عدّاد اللوحات الحي */
+#plate-counter{position:fixed;bottom:1rem;right:1rem;z-index:900;background:var(--paper-aged);border:1px solid var(--rule);
+  color:var(--ink);font-family:var(--label);font-size:.72rem;letter-spacing:.06em;padding:.35rem .7rem;
+  box-shadow:0 2px 0 rgba(43,40,35,.18);opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s;pointer-events:none;text-decoration:none;cursor:pointer}
+#plate-counter.show{pointer-events:auto}
+#plate-counter:hover{transform:translateY(1px)!important;box-shadow:0 1px 0 rgba(43,40,35,.22)}
+#plate-counter:focus-visible{outline:2px solid var(--gold-aa);outline-offset:2px}
+#plate-counter.show{opacity:1;transform:none}
+#plate-counter .ar{font-family:var(--display-ar);font-size:.95rem;letter-spacing:0}
+@media(max-width:719px){#plate-counter{display:none}}
+
+/* قلمُ المصحف — الآياتُ بالرسم العثماني تُصفُّ بأميري قرآن */
+.ayah{font-family:'Amiri Quran','Amiri',serif}
+
+/* قانون الحفر والبروز — العربيةُ تُحفَر والترجمةُ تبرُز */
+h1.wordmark{color:#48423a;text-shadow:0 2px 1px rgba(255,255,255,.9), 0 -2px 3px rgba(43,40,35,.42)}
+.wordmark-lat{color:var(--ink);text-shadow:0 -1px 0 rgba(255,255,255,.8), 0 2px 2px rgba(43,40,35,.32)}
+.brandmark b{color:#48423a;text-shadow:0 1px 0 rgba(255,255,255,.85), 0 -1px 1px rgba(43,40,35,.4)}
+.brandmark>span{text-shadow:0 -1px 0 rgba(255,255,255,.7), 0 1px 1px rgba(43,40,35,.28)}
+
+/* مختبر الحرف */
+.case-hint{margin:.9rem 0 0;font-size:.85rem;color:rgba(243,238,226,.78)}
+.lab{margin-top:1.6rem;background:var(--paper);color:var(--ink);border:1px solid var(--gold);padding:clamp(1rem,3vw,1.8rem);display:grid;grid-template-columns:minmax(130px,auto) 1fr;gap:1.4rem;align-items:center;box-shadow:0 4px 0 rgba(0,0,0,.35)}
+.lab-glyph{font-family:var(--display-ar);font-size:clamp(4.5rem,13vw,7.5rem);line-height:1.1;text-align:center;padding:.2rem .6rem;transition:text-shadow .25s,color .25s}
+.lab-glyph[data-state="raised"]{color:var(--ink);text-shadow:-1px -1px 0 rgba(255,255,255,.75),2px 3px 3px rgba(43,40,35,.4)}
+.lab-glyph[data-state="carved"]{color:#8d857a;text-shadow:1px 1px 0 rgba(255,255,255,.9),-1px -2px 2px rgba(43,40,35,.5)}
+.lab-name .ar{font-family:var(--display-ar);font-size:1.35rem;font-weight:700}
+.lab-name,.lab-makhraj{margin:.15rem 0}
+.eyebrow-sm{display:block;font-family:var(--label);font-size:.62rem;letter-spacing:.16em;color:var(--gold-aa);text-transform:uppercase;margin-bottom:.15rem}
+.lab-m-ar{font-family:var(--display-ar)}
+.lab-makhraj{color:var(--ink-70);font-size:.98rem}
+.lab-controls{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+.lab-btn{font-family:var(--label);font-size:.75rem;letter-spacing:.1em;color:var(--ink);background:var(--paper-aged);border:1px solid var(--ink);padding:.45rem 1rem;cursor:pointer;box-shadow:0 2px 0 rgba(43,40,35,.3);transition:transform .12s,box-shadow .12s}
+.lab-btn:hover{transform:translateY(1px);box-shadow:0 1px 0 rgba(43,40,35,.3)}
+.lab-btn:active{transform:translateY(2px);box-shadow:none}
+.lab-btn[aria-pressed="true"]{background:var(--gold-15);border-color:var(--gold-aa)}
+.lab-btn:focus-visible{outline:2px solid var(--gold-aa);outline-offset:2px}
+@media(max-width:640px){.lab{grid-template-columns:1fr}.lab-glyph{padding:0}}
+@media print{.lab,.case-hint{display:none!important}}
+
+/* سطر الوضوح والشارات */
+.plainline{max-width:52ch;margin:1rem auto 0;font-size:1.02rem;color:var(--ink-70);line-height:1.75}
+.plainline .ar{font-family:var(--display-ar)}
+.badges{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin:.9rem 0 0;padding:0}
+.badges>span{font-family:var(--label);font-size:.66rem;letter-spacing:.12em;border:1px solid var(--gold-aa);color:var(--gold-aa);padding:.32rem .75rem}
+
+/* الفاصل المزدوج — تفصيلة مطابع ١٩٢٦ للوحَي الأرشيف */
+#catalogue .head .rule,#cabinet .head .rule{height:5px;background:none;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+
+/* بوابة المؤسسات */
+.portal{margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--rule)}
+.portal h3{font-size:1.15rem;margin:0 0 .3rem}
+.portal-lede{color:var(--ink-70);font-size:.95rem;margin:0 0 1rem}
+.portal-form{display:grid;gap:1rem;max-width:560px}
+.portal-form .hp{display:none}
+.portal-form label{display:grid;gap:.35rem;font-family:var(--label);font-size:.78rem;letter-spacing:.08em;color:var(--ink-70)}
+.portal-form input,.portal-form select,.portal-form textarea{font-family:'Amiri','Fraunces',serif;font-size:1rem;color:var(--ink);background:var(--paper);border:1px solid var(--rule);padding:.6rem .8rem;box-shadow:inset 0 1px 2px rgba(43,40,35,.08)}
+.portal-form textarea{resize:vertical}
+.portal-form input:focus-visible,.portal-form select:focus-visible,.portal-form textarea:focus-visible{outline:2px solid var(--gold-aa);outline-offset:1px}
+.portal-form .portal-submit{justify-self:start;margin:0}
+.portal-links{margin:.9rem 0 0;font-size:.85rem}
+.privacy-note{font-size:.85rem;color:var(--ink-70);margin:.7rem 0 0}
+.privacy-note .en{display:block;font-size:.78rem}
+.evidence-updated{font-family:var(--label);font-size:.68rem;letter-spacing:.1em;color:var(--gold-aa);margin:.4rem 0 0}
+.ledger{border:1px solid var(--rule);background:rgba(233,226,210,.35);padding:.8rem 1.2rem;margin:1.6rem auto;max-width:60ch;text-align:center}
+.ledger-head{font-family:var(--label);font-size:.66rem;letter-spacing:.18em;color:var(--gold-aa);margin:0 0 .3rem}
+.ledger-body{font-size:.92rem;color:var(--ink-70);margin:.2rem 0}
+.sample-link{margin:.8rem 0 0}
+.sample-link a{display:inline-block;font-family:var(--label);font-size:.78rem;letter-spacing:.08em;color:var(--ink);background:var(--gold-15);border:1px solid var(--ink);padding:.5rem 1.1rem;text-decoration:none;box-shadow:0 3px 0 rgba(43,40,35,.3)}
+.sample-link a:hover{transform:translateY(1px);box-shadow:0 2px 0 rgba(43,40,35,.3)}
+.sample-link a:focus-visible{outline:2px solid var(--gold-aa);outline-offset:2px}
+.portal-links a{color:var(--gold-aa)}
+@media print{.portal{display:none!important}}
+
+/* نَفَس الاحتياط: حين تغيب مكتبة الحركة، للورقة دخولها الهادئ */
+@keyframes pressfall{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+html:not(.boot-press) .titlepage .wrap{animation:pressfall .8s ease both}
+
+/* أدراج المطبعة — الكتالوج والخزانة */
+.drawer-body{position:relative;overflow:hidden;transition:max-height .5s ease}
+.drawer-closed .drawer-body{max-height:52vh}
+.drawer-closed .drawer-body::after{content:"";position:absolute;bottom:0;right:0;left:0;height:7rem;pointer-events:none;
+  background:linear-gradient(to bottom, rgba(243,238,226,0), var(--paper))}
+.plate.drawer-closed .drawer-body::after{background:linear-gradient(to bottom, rgba(34,31,26,0), var(--ink-plate))}
+.aged.drawer-closed .drawer-body::after{background:linear-gradient(to bottom, rgba(233,226,210,0), var(--paper-aged))}
+.drawer-toggle{display:block;margin:1rem auto 0;font-family:var(--label);font-size:.8rem;letter-spacing:.12em;
+  color:var(--ink);background:var(--paper-aged);border:1px solid var(--ink);padding:.55rem 1.4rem;cursor:pointer;
+  box-shadow:0 3px 0 rgba(43,40,35,.3);transition:transform .15s,box-shadow .15s}
+.plate .drawer-toggle{color:var(--paper);background:var(--ink-deep);border-color:var(--gold-soft)}
+.drawer-toggle:hover{transform:translateY(1px);box-shadow:0 2px 0 rgba(43,40,35,.3)}
+.drawer-toggle:active{transform:translateY(3px);box-shadow:none}
+.drawer-toggle:focus-visible{outline:2px solid var(--gold-aa);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.drawer-body{transition:none}}
+
+/* تسجيل اللوح عند القصد إليه */
+section:target h2 .ar, section:target h2 .en{animation:register 1.1s ease}
+@keyframes register{0%{color:var(--gold)}70%{color:var(--gold)}100%{color:inherit}}
+@media (prefers-reduced-motion:reduce){section:target h2 .ar,section:target h2 .en{animation:none}}
+
+/* جسر الأبواب */
+.press-cta{display:block;width:max-content;margin:1.1rem auto .2rem;font-family:var(--label);font-size:.85rem;letter-spacing:.14em;
+  color:var(--ink);background:var(--paper-aged);border:1px solid var(--ink);padding:.65rem 1.6rem;text-decoration:none;
+  box-shadow:0 3px 0 rgba(43,40,35,.35);transition:transform .15s,box-shadow .15s}
+.press-cta:hover{transform:translateY(1px);box-shadow:0 2px 0 rgba(43,40,35,.35)}
+.press-cta:active{transform:translateY(3px);box-shadow:0 0 0 rgba(43,40,35,.35)}
+.press-cta:focus-visible{outline:2px solid var(--gold-aa);outline-offset:3px}
+
+/* زر صوت المكبس */
+#press-sound{font-family:var(--label);font-size:.72rem;letter-spacing:.08em;color:var(--ink-70);
+  background:none;border:1px solid var(--rule);padding:.35rem .8rem;cursor:pointer;margin-top:.6rem}
+#press-sound[aria-pressed="true"]{color:var(--ink);border-color:var(--gold-aa)}
+#press-sound:focus-visible{outline:2px solid var(--gold-aa);outline-offset:2px}
+
+/* البرهان المطبوع */
+.proof{position:absolute;top:-.2rem;left:50%;transform:translateX(-50%);font-family:var(--display-ar);
+  font-size:1.4rem;color:var(--ink);pointer-events:none;opacity:0}
+.js-proof .proof{animation:proofrise .65s ease-out forwards}
+@keyframes proofrise{0%{opacity:0;transform:translate(-50%,0)}25%{opacity:.9}100%{opacity:0;transform:translate(-50%,-1.6rem)}}
+@media (prefers-reduced-motion:reduce){.proof{display:none}}
+
+/* ═══ صندوق حروف المطبعة ═══ */
+#typecase .case{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px;margin-top:1.8rem}
+.sort{position:relative;font-family:var(--display-ar);font-size:1.7rem;line-height:1;color:var(--ink);
+  background:linear-gradient(180deg,#efe8d8,var(--paper-aged));border:1px solid var(--rule);
+  padding:.85rem .3rem 1.05rem;cursor:pointer;text-align:center;
+  box-shadow:0 3px 0 rgba(43,40,35,.22), inset 0 1px 0 rgba(255,255,255,.55);
+  transition:transform .12s ease,box-shadow .12s ease,background .12s ease}
+.sort small{position:absolute;bottom:.22rem;right:0;left:0;font-family:var(--label);font-size:.67rem;line-height:1.15;letter-spacing:.05em;color:var(--ink-70)}
+.sort:hover{background:linear-gradient(180deg,#f4eee0,#ece4d1)}
+.sort:active,.sort.pressed{transform:translateY(3px);box-shadow:0 0 0 rgba(43,40,35,0), inset 0 2px 4px rgba(43,40,35,.28);color:var(--ink-deep)}
+.sort:focus-visible{outline:2px solid var(--gold-aa);outline-offset:2px}
+.sort.la{grid-column:span 2;border:2px solid var(--gold);background:linear-gradient(180deg,#f2e9d2,var(--gold-15));color:var(--gold-aa)}
+.sort.la{padding-bottom:1.6rem}.sort.la small{color:var(--ink)}.sort.la::after{content:"٢٩";position:absolute;top:.25rem;left:.4rem;font-family:var(--label);font-size:.62rem;color:var(--gold-aa);border:1px solid var(--gold);border-radius:50%;width:1.2rem;height:1.2rem;line-height:1.15rem}
+.sort .inkdot{position:absolute;inset:auto;top:50%;left:50%;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:var(--ink);opacity:0;pointer-events:none}
+.sort.pressed .inkdot{animation:inksplat .45s ease-out}
+@keyframes inksplat{0%{opacity:.55;transform:scale(.4)}100%{opacity:0;transform:scale(5)}}
+
+/* الأبواب — مفصّلة على اليمين */
+/* نزيف الحبر على العنوان */
+@media (hover:hover) and (pointer:fine){.wordmark{transition:filter .3s}.wordmark:hover{filter:url(#inkbleed)}}
+
+/* letterpress لمسة على العناوين الكبرى */
+h1.wordmark, section:not(.plate) h2 .ar{text-shadow:0 1px 0 rgba(255,255,255,.35)}
+.plate h2 .ar{text-shadow:0 -1px 0 rgba(0,0,0,.45)}
+
+@media print{
+  @page{margin:2.2cm}
+  #ink-rule,#ink-nib,#plate-counter,#page-vignette{display:none!important}
+  .masthead,.press-cta,.drawer-toggle,#press-sound,.skip-link,.proof,.inkdot{display:none!important}
+  body::before{display:none!important}
+  html.boot-press section .wrap,html.boot-press .titlepage .wordmark,html.boot-press .titlepage .wordmark-lat,html.boot-press .titlepage .claim,html.boot-press .titlepage .device.mark,html.boot-press .titlepage .slug,.rev{opacity:1!important;transform:none!important}
+  .drawer-closed .drawer-body{max-height:none!important}
+  .drawer-body::after{display:none!important}
+  .sort{box-shadow:none}
+  h1,h2,h3{page-break-after:avoid}
+  .plate,.aged{page-break-before:always}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:9pt;color:#555}
+}
+@media (prefers-reduced-motion:reduce){
+  #ink-rule,#ink-nib{display:none}
+  .sort,.sort:active{transition:none}
+  .sort.pressed .inkdot{animation:none}
+  .wordmark:hover{filter:none}
+  #plate-counter{transition:none}
+}
+</style>
+<style id="press1926-initial">
+html.boot-press section:not(.titlepage) .wrap{opacity:0}
+html.boot-press .head.rev,html.boot-press .case.rev{opacity:1;transform:none;transition:none}
+html.boot-press .titlepage .wordmark,html.boot-press .titlepage .wordmark-lat,html.boot-press .titlepage .claim,html.boot-press .titlepage .device.mark,html.boot-press .titlepage .slug{opacity:0}
+
+/* ── IA v2 §1: no motion. Stillness is the argument. ───────── */
+*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.rev,.head.rev,.case.rev,.door.rev{opacity:1!important;transform:none!important}
+html:not(.boot-press) .titlepage .wrap{animation:none!important;opacity:1!important;transform:none!important}
+a.bk:hover{transform:none!important}
+</style>
+<script>(function(){try{if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('boot-press');}}catch(e){}})();</script>
+</head>
+<body data-lang="ar">
+<a class="skip-link" href="#main-content">
+  <span class="ar">انتقل إلى المحتوى</span>
+  <span class="en" lang="en">Skip to content</span>
+</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="gSage" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fae76"></stop><stop offset="1" stop-color="#4f6a3b"></stop></linearGradient>
+  <linearGradient id="gOlive" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#647a5b"></stop><stop offset="1" stop-color="#39472f"></stop></linearGradient>
+  <linearGradient id="gTerra" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0a765"></stop><stop offset="1" stop-color="#a4682e"></stop></linearGradient>
+  <linearGradient id="gSlate" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7ba2b3"></stop><stop offset="1" stop-color="#3f606d"></stop></linearGradient>
+  <radialGradient id="gGold" cx="0.4" cy="0.35" r="0.75"><stop offset="0" stop-color="#ecd591"></stop><stop offset="0.55" stop-color="#c9a961"></stop><stop offset="1" stop-color="#a8853c"></stop></radialGradient>
+  <filter id="dsh" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="4" stdDeviation="4.5" flood-color="#000000" flood-opacity="0.45"></feDropShadow></filter>
+  <clipPath id="fpHero"><circle cx="60" cy="53" r="10.6"></circle></clipPath>
+
+  <!-- THE SIGNATURE — faceted seed · gold roots (جذور) · fingerprint core (القراءة الملموسة) -->
+  <symbol id="juthur-signature" viewBox="0 0 120 128">
+    <g filter="url(#dsh)">
+      <polygon points="60,82 40,30 60,6" fill="url(#gSage)"></polygon>
+      <polygon points="60,82 60,6 80,30" fill="url(#gOlive)"></polygon>
+      <polygon points="60,82 18,60 40,30" fill="url(#gTerra)"></polygon>
+      <polygon points="60,82 80,30 102,60" fill="url(#gSlate)"></polygon>
+      <g stroke="#c9a961" fill="none" stroke-linecap="round" opacity="0.92">
+        <path d="M60,80 C57,90 49,95 43,107" stroke-width="1.7"></path>
+        <path d="M60,81 C60,93 60,101 60,114" stroke-width="1.9"></path>
+        <path d="M60,80 C63,90 71,95 77,107" stroke-width="1.7"></path>
+        <path d="M54,91 C50,95 48,97 45,101" stroke-width="1" opacity=".75"></path>
+        <path d="M66,91 C70,95 72,97 75,101" stroke-width="1" opacity=".75"></path>
+      </g>
+      <g fill="#c9a961" opacity="0.92"><circle cx="43" cy="107" r="1.5"></circle><circle cx="60" cy="114" r="1.7"></circle><circle cx="77" cy="107" r="1.5"></circle></g>
+      <polyline points="18,60 40,30 60,6 80,30 102,60" fill="none" stroke="rgba(243,238,226,.55)" stroke-width="1.1" stroke-linejoin="round"></polyline>
+      <g stroke="#2f3a2f" stroke-width="1" opacity=".38" fill="none">
+        <line x1="60" y1="6" x2="60" y2="82"></line><line x1="40" y1="30" x2="60" y2="82"></line><line x1="80" y1="30" x2="60" y2="82"></line>
+      </g>
+      <polygon points="60,66 47,53 60,40 73,53" fill="#5c4a2a" opacity=".35"></polygon>
+      <circle cx="60" cy="53" r="12" fill="url(#gGold)"></circle>
+      <path d="M50.4,45.8 A12,12 0 0 1 69.6,45.8" fill="none" stroke="rgba(255,246,220,.5)" stroke-width="1.1" stroke-linecap="round"></path>
+      <path d="M50.4,60.2 A12,12 0 0 0 69.6,60.2" fill="none" stroke="rgba(60,42,10,.4)" stroke-width="1.1" stroke-linecap="round"></path>
+      <g clip-path="url(#fpHero)" stroke="#7d5f24" fill="none" stroke-linecap="round" stroke-width="0.65">
+        <path d="M49.6,61 C48.6,49.5 52.8,43 60,43 C67.2,43 71.4,49.5 70.4,61"></path>
+        <path d="M51.2,62.5 C50.2,51 54.2,45 60,45 C65.8,45 69.8,51 68.8,62.5" stroke-dasharray="7 1.1"></path>
+        <path d="M52.8,63 C52,52.5 55.4,47 60,47 C64.6,47 68,52.5 67.2,63"></path>
+        <path d="M54.4,63 C53.7,54.5 56.3,49 59.7,49 C62.9,49 65.3,53 65,59.5" stroke-dasharray="5.5 1"></path>
+        <path d="M55.9,63 C55.4,56.5 57.3,51 59.6,51 C61.8,51 63.6,54.5 63.4,58.5"></path>
+        <path d="M57.3,62.5 C57,57.5 58.2,53 59.5,53 C60.8,53 61.9,55.8 61.8,58"></path>
+        <path d="M58.6,60.5 C58.4,57 59,55 59.6,55 C60.3,55 60.7,56.8 60.6,58.4"></path>
+        <path d="M59.4,57.6 C59.5,57 59.8,56.9 59.9,57.4" stroke-width="0.75"></path>
+        <path d="M65.8,60.5 C66.8,58 67.6,55 67.8,51.8" opacity=".85"></path>
+        <path d="M67.3,62 C68.2,59.8 68.9,57.3 69.2,54.6" opacity=".7" stroke-dasharray="3.5 1"></path>
+        <path d="M52.4,48.2 C51.4,50.4 50.8,53 50.6,55.8" opacity=".8"></path>
+      </g>
+    </g>
+  </symbol>
+
+  <!-- the same mark, one ink — for small sizes, per the Production sheet.
+       currentColor lets it sit on paper or on a dark plate unchanged. -->
+  <symbol id="juthur-mono" viewBox="0 0 120 96">
+    <g fill="currentColor" opacity=".14">
+      <polygon points="60,82 40,30 60,6"></polygon><polygon points="60,82 60,6 80,30"></polygon>
+      <polygon points="60,82 18,60 40,30"></polygon><polygon points="60,82 80,30 102,60"></polygon>
+    </g>
+    <polyline points="18,60 40,30 60,6 80,30 102,60 60,82 18,60" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></polyline>
+    <g stroke="currentColor" stroke-width="1" opacity=".45" fill="none">
+      <line x1="60" y1="6" x2="60" y2="82"></line><line x1="40" y1="30" x2="60" y2="82"></line><line x1="80" y1="30" x2="60" y2="82"></line>
+    </g>
+    <circle cx="60" cy="53" r="12" fill="currentColor"></circle>
+    <polyline points="52,58 60,47 68,58" fill="none" stroke="var(--paper)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"></polyline>
+  </symbol>
+
+  <symbol id="juthur-mark" viewBox="0 0 120 120">
+    <!-- leaves rise -->
+    <path class="stroke" stroke-width="2.1" d="M60 55C51 50 48 42 52 34c6 5 9 14 8 21Z"></path>
+    <path class="stroke" stroke-width="2.1" d="M60 55c9-5 12-13 8-21-6 5-9 14-8 21Z"></path>
+    <!-- the seed: an almond that is also an eye -->
+    <path class="seedfill" d="M60 54.5c6.5 3.5 6.5 13.5 0 17-6.5-3.5-6.5-13.5 0-17Z"></path>
+    <circle cx="60" cy="63" r="2.4" fill="#2b2823"></circle>
+    <!-- roots reach -->
+    <path class="stroke" stroke-width="2.1" d="M60 71v22"></path>
+    <path class="stroke" stroke-width="1.6" d="M60 74c-5 6-8 12-10 18"></path>
+    <path class="stroke" stroke-width="1.6" d="M60 74c5 6 8 12 10 18"></path>
+    <path class="stroke" stroke-width="1.1" d="M60 82c-3.5 3-5.5 6.5-6.5 10M60 82c3.5 3 5.5 6.5 6.5 10"></path>
+  </symbol>
+
+  <symbol id="tailpiece" viewBox="0 0 300 46">
+    <path class="r" d="M8 23h96M196 23h96"></path>
+    <path class="r" d="M104 23c6-3 10-3 16 0M180 23c-6 3-10 3-16 0"></path>
+    <!-- hatched leaf, left -->
+    <path class="r" d="M138 23c-8-8-16-11-24-9 2 8 9 14 18 15"></path>
+    <path class="h" d="M120 16.5l6 6M124 15.2l6.5 6.6M128.5 14.6l6.5 6.4M133 15.2l5 5"></path>
+    <!-- hatched leaf, right -->
+    <path class="r" d="M162 23c8-8 16-11 24-9-2 8-9 14-18 15"></path>
+    <path class="h" d="M180 16.5l-6 6M176 15.2l-6.5 6.6M171.5 14.6l-6.5 6.4M167 15.2l-5 5"></path>
+    <!-- the seed between them -->
+    <path class="r" d="M150 15c4.5 3 4.5 12 0 15-4.5-3-4.5-12 0-15Z"></path>
+    <path class="h" d="M150 17.5v10"></path>
+    <path class="r" d="M150 30v9M150 33c-2.5 2-4 4-5 7M150 33c2.5 2 4 4 5 7"></path>
+  </symbol>
+</defs></svg>
+
+<header class="masthead">
+  <div class="wrap masthead-in">
+    <a class="brandmark" href="#top">
+      <span class="markslot"><picture><source srcset="assets/Juthur_Logo_192.webp" type="image/webp"><img src="assets/Juthur_Logo_Transparent.png" alt="شعار جُذور" width="147" height="192" onerror="this.parentElement.style.display=&#39;none&#39;;this.parentElement.nextElementSibling.style.display=&#39;block&#39;"></picture><svg class="seed monomark" viewBox="0 0 120 96" aria-hidden="true" style="display:none; width: 32px;"><use href="#juthur-mono"></use></svg></span>
+      <b>جُذور</b><span>Juthur</span>
+    </a>
+    <nav class="primary" id="nav" aria-label="القائمة الرئيسية">
+      <a href="#mission"><span class="ar">الرسالة</span><span class="en" lang="en">Mission</span></a>
+      <a href="#letter"><span class="ar">الحرف</span><span class="en" lang="en">The Letter</span></a>
+      <a href="#theory"><span class="ar">النظرية</span><span class="en" lang="en">Theory</span></a>
+      <a href="#toc"><span class="ar">الفهرس</span><span class="en" lang="en">Contents</span></a>
+      <a href="#cabinet"><span class="ar">الخزانة</span><span class="en" lang="en">Library</span></a>
+      <a href="#catalogue"><span class="ar">الفِهرسُ التفصيليّ</span><span class="en" lang="en">Catalogue</span></a>
+      <a href="#research"><span class="ar">البحث</span><span class="en" lang="en">Research</span></a>
+      <a href="#status"><span class="ar">الحال</span><span class="en" lang="en">Status</span></a>
+      <a href="#author"><span class="ar">المؤلّف</span><span class="en" lang="en">Author</span></a>
+      <a href='/shajara'><span class="ar">الشَّجَرة</span><span class="en" lang="en">The Tree</span></a>
+    </nav>
+    <div style="display:flex;gap:.6rem;align-items:center">
+      <button class="langtoggle" id="lang" type="button">EN</button>
+      <button class="navtoggle" id="burger" type="button" aria-label="القائمة" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ── TITLE PAGE ─────────────────────────── -->
+<section class="titlepage" id="top">
+  <div class="wrap">
+    <h1 class="wordmark">ج<span class="tk">ُ</span>ذور</h1>
+    <p class="wordmark-lat">Juthur</p>
+
+    <p class="claim">
+      <span class="ar">حرفٌ يُغرَسُ في الكفِّ، فيُورِقُ على اللِّسان.</span>
+      <span class="en" lang="en">A letter planted in the palm, leafing upon the tongue.</span>
+    </p>
+
+    <p class="plainline"><span class="ar">مشروعٌ تربويٌّ بحثيٌّ لتعليمِ القراءةِ العربيةِ المبكرةِ بالحواسّ: نظريةٌ قابلةٌ للاختبار، ومنهجٌ صفّي، ومكتبةُ نصوصٍ للأطفال.</span><span class="en" lang="en">An Arabic early-literacy research project: a testable theory, a classroom method, and a children's library — reading through the senses.</span></p>
+    <p class="badges" aria-label="حالة البحث"><span><span class="ar">فرضيةٌ قيدَ الاختبار</span><span class="en" lang="en">Hypothesis under test</span></span><span><span class="ar">بياناتٌ مفتوحة · OSF</span><span class="en" lang="en">Open data · OSF</span></span></p>
+
+    <a class="press-cta" href="#doors"><span class="ar">ادخلْ من بابِك</span><span class="en" lang="en">Enter by your door</span></a>
+
+    <span class="fleuron" aria-hidden="true">❧ ✽ ❧</span>
+
+    <svg class="signature" viewBox="0 0 120 128" aria-hidden="true"><use href="#juthur-signature"></use></svg>
+    <span class="signature-cap"><span class="ar">جُذور · القراءةُ الملموسة</span><span class="en" lang="en">Juthur · Tactile Reading</span></span>
+    <svg class="device mark" viewBox="0 0 120 120" aria-hidden="true" style="width:clamp(72px,10vw,100px);margin-top:1.4rem;margin-bottom:0">
+      <defs><path id="ring" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"></path></defs>
+      <circle cx="60" cy="60" r="54" fill="none" stroke="#b08f43" stroke-width=".7"></circle>
+      <circle cx="60" cy="60" r="36" fill="none" stroke="#d5cbb8" stroke-width=".7"></circle>
+      <text><textPath href="#ring" startOffset="1%">JUTHUR PRESS · DUBAI · MCMXXVI · EDITIO PRINCEPS ·</textPath></text>
+      <use href="#juthur-mark" x="18" y="18" width="84" height="84" class="mark"></use>
+    </svg>
+
+    <p class="imprint">
+      <span class="ar">مطبعة جُذور · دبي · طبعةٌ أولى مختومة</span>
+      <span class="en" lang="en">Juthur Press · Dubai · Editio Princeps</span>
+    </p>
+
+    <!-- SIGNATURE: the four letters, two raised, two carved -->
+    <div class="tactile" role="group" aria-label="جُذور — حروف بارزة وغائرة">
+      <button class="slug" data-state="raised" type="button">ج<small class="ar">بارز</small><small class="en" lang="en">Raised</small></button>
+      <button class="slug" data-state="carved" type="button">ذ<small class="ar">غائر</small><small class="en" lang="en">Carved</small></button>
+      <button class="slug" data-state="raised" type="button">و<small class="ar">بارز</small><small class="en" lang="en">Raised</small></button>
+      <button class="slug" data-state="carved" type="button">ر<small class="ar">غائر</small><small class="en" lang="en">Carved</small></button>
+    </div>
+
+    <svg class="tailpiece" viewBox="0 0 300 46" aria-hidden="true" style="margin-top:3rem"><use href="#tailpiece"></use></svg>
+
+    <p class="tactile-note">
+      <span class="ar">المِسْهُ. حرفانِ يقفانِ فوقَ الورقةِ، وحرفانِ غارا فيها — والإصبعُ يعرفُ الفرقَ قبلَ العين.</span>
+      <span class="en" lang="en">Press one. Two letters stand above the sheet, two are bitten into it — and the finger knows the difference before the eye does.</span>
+    </p>
+
+    <p class="edition">
+      <span class="ar">طبعةٌ أولى · تعليمُ القراءةِ المبكّرةِ بالعربيّةِ بالحواسِّ لا بالشّاشة</span>
+      <span class="en" lang="en">First edition · Early Arabic reading, through the senses and not the screen</span>
+    </p>
+  </div>
+</section>
+
+<hr class="rule-double">
+
+<main id="main-content">
+<!-- ── DIAGNOSIS ──────────────────────────── -->
+
+<!-- ── THE THREE DOORS (IA v2 §2) ─────────── -->
+<section class="aged" id="mushafaha-doors">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow"><span class="ar">الميثاقُ والأدواتُ والمكتبة</span><span class="en" lang="en">Charter · Instruments · Library</span></span>
+      <h2><span class="ar">جُذُور: مَنْهَجٌ بِلَا شَاشَةٍ</span><span class="en" lang="en">A Screen-Free Method</span></h2>
+      <p class="lede"><span class="ar">صَوْتًا يُنْتَج، وَصَوْتًا يُسْمَع. ثلاثةُ أبوابٍ لا رابعَ لها.</span><span class="en" lang="en">Voice produced, voice heard. Three doors and no fourth.</span></p>
+      <hr class="rule">
+    </div>
+    <div class="grid g3">
+      <a class="door" href="/juthur/mushafaha/">
+        <h3><span class="ar">الْمُشَافَهَة</span><span class="en" lang="en">al-Mushafaha</span></h3>
+        <p><span class="ar">الميثاقُ الحاكمُ كاملًا — أربعَ عشرةَ مادّة: الصوتُ والحضورُ، والموقفُ من الشاشة، وتوزيعُ الزمن، والتقنيةُ المساعدة.</span><span class="en" lang="en">The governing doctrine in full — fourteen articles.</span></p>
+        <span class="go"><span class="ar">اقرأ الميثاق ←</span><span class="en" lang="en">Read the charter →</span></span>
+      </a>
+      <a class='door' href='/tools/durj'>
+        <h3><span class="ar">الأَدَوَات</span><span class="en" lang="en">The Instruments</span></h3>
+        <p><span class="ar">الدُّرْجُ والكرةُ العجيبة — مواصفةُ كلِّ أداةٍ كاملةً، والأنماطُ، والتنفيذُ في الصفّ.</span><span class="en" lang="en">ad-Durj and the Wondrous Ball — full specifications.</span></p>
+        <span class="go"><span class="ar">افتح الدُّرْج ←</span><span class="en" lang="en">Open the Drawer →</span></span>
+      </a>
+      <a class="door" href="/juthur/library/stories/">
+        <h3><span class="ar">الْمَكْتَبَة</span><span class="en" lang="en">The Library</span></h3>
+        <p><span class="ar">المتنُ القصصيُّ ١–٦٠ مشكَّلًا كاملًا، ومعه الرِّواقُ والملاحمُ والأسفار.</span><span class="en" lang="en">The story corpus 1–60, fully vocalised.</span></p>
+        <span class="go"><span class="ar">ادخل المكتبة ←</span><span class="en" lang="en">Enter the library →</span></span>
+      </a>
+    </div>
+    <p class="lede" style="margin-top:1.4rem;font-size:.9rem;opacity:.9"><span class="ar">وللنَّظَريّةِ صفحتُها في <a href="/juthur/theory/">النَّظَرِيَّة</a> و<a href='/theory/glossary'>المُصْطَلَحَات</a>، وللقراراتِ المُغلَقةِ <a href='/decisions'>السِّجِلّ</a>، و<a href="/juthur/listen/">الاسْتِمَاع</a> هو المكتبةُ الصوتيّة.</span><span class="en" lang="en">The theory has <a href="/juthur/theory/">its own page</a> with <a href='/theory/glossary'>the glossary</a>; closed decisions are kept in <a href='/decisions'>the public register</a>, and <a href="/juthur/listen/">Listening</a> is the audio library.</span></p>
+  </div>
+</section>
+
+<section class="plate verse">
+  <div class="narrow">
+    <span class="eyebrow"><span class="ar">التشخيص</span><span class="en" lang="en">The Diagnosis</span></span>
+    <p class="ayah ayah-1 ar">﴿ …كَسَرَابٍۭ بِقِيعَةٍ يَحۡسَبُهُ ٱلظَّمۡـَٔانُ مَآءً</p>
+    <p class="ayah ayah-2 ar">حَتَّىٰٓ إِذَا جَآءَهُۥ لَمۡ يَجِدۡهُ شَيۡـًٔا… ﴾</p>
+    <p class="ayah ayah-en en">﴿ …كَسَرَابٍۭ بِقِيعَةٍ يَحْسَبُهُ ٱلظَّمْـَٔانُ مَآءً حَتَّىٰٓ إِذَا جَآءَهُۥ لَمْ يَجِدْهُ شَيْـًٔا… ﴾</p>
+    <p class="gloss" lang="en" dir="ltr">"…like a mirage in a lowland which a thirsty one thinks is water, until he comes to it and finds it is nothing…"</p>
+    <span class="src"><span class="ar">سورة النّور · ٣٩</span><span class="en" lang="en">Sūrat an-Nūr · 39</span></span>
+    <p class="after"><span class="ar">سرابُ زماننا: خوفُ الفوات.</span><span class="en" lang="en">The mirage of our age: the fear of missing out.</span></p>
+  </div>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<section class="aged" id="toc">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="eyebrow"><span class="ar">الفهرس</span><span class="en" lang="en">Contents</span></span>
+      <h2><span class="ar">ف<span class="tk">ِ</span>ه<span class="tk">ْ</span>ر<span class="tk">ِ</span>س<span class="tk">ُ</span> الم<span class="tk">َ</span>طبوعة</span><span class="en" lang="en">Table of Contents</span></h2>
+      <p class="lede"><span class="ar">تسعُ لوحاتٍ ولواحقُها، يُقرَأنَ بترتيبِها، أو يُقصَدُ منها ما شئت.</span><span class="en" lang="en">Nine plates and their annexes. Read them in order, or go straight to the one you want.</span></p>
+      <hr class="rule">
+    </div>
+    <nav class="toc rev">
+      <a href="#mission">
+        <span class="rn">I</span>
+        <span class="ti"><span class="ar">الرسالة — <i>مِنَ السَّرابِ إلى الحَقيقة</i></span><span class="en" lang="en">The Mission — <i>from the mirage to the truth</i></span></span>
+        <span class="dot" aria-hidden="true">·····</span>
+      </a>
+      <a href="#letter">
+        <span class="rn">II</span>
+        <span class="ti"><span class="ar">الحرف — <i>بارزٌ وغائر</i></span><span class="en" lang="en">The Letter — <i>raised and carved</i></span></span>
+        <span class="dot" aria-hidden="true">·····</span>
+      </a>
+      <a href="#theory">
+        <span class="rn">III</span>
+        <span class="ti"><span class="ar">النَّظَريّة — <i>نَظَرِيَّةُ القراءةِ الملموسة</i></span><span class="en" lang="en">The Theory — <i>Tactile Reading Theory</i></span></span>
+        <span class="dot" aria-hidden="true">·····</span>
+      </a>
+      <a href="#materials">
+        <span class="rn">IV</span>
+        <span class="ti"><span class="ar">الموادّ — <i>ما تحمِلُهُ الشَّجرة</i></span><span class="en" lang="en">The Materials — <i>what the tree carries</i></span></span>
+        <span class="dot" aria-hidden="true">·····</span>
+      </a>
+      <a href="#levels">
+        <span class="rn">V</span>
+        <span class="ti"><span class="ar">السُّلَّم — <i>شجرةُ النموّ</i></span><span class="en" lang="en">The Ladder — <i>the Tree of Growth</i></span></span>
+        <span class="dot" aria-hidden="true">·····</span>
+      </a>
+      <a href="#cabinet">
+        <span class="rn">VI</span>
+        <span class="ti"><span class="ar">الخزانة — <i>خِزانةُ الأسفار</i></span><span class="en" lang="en">The Cabinet — <i>the codex library</i></span></span>
+        <span class="dot" aria-hidden="true">·····</span>
+      </a>
+      <a href="#catalogue">
+        <span class="rn">VI b</span>
+        <span class="ti"><span class="ar">فِهرسُ الخِزانة — كلُّ عملٍ بالاسم</span><span class="en" lang="en">The Catalogue — every work by name</span></span>
+        <span class="dot" aria-hidden="true">·····</span>
+      </a>
+      <a href="#method">
+        <span class="rn">VII</span>
+        <span class="ti"><span class="ar">المنهج — <i>أوّلُ الغَيث</i></span><span class="en" lang="en">The Method — <i>the first rain</i></span></span>
+        <span class="dot" aria-hidden="true">·····</span>
+      </a>
+      <a href="#research">
+        <span class="rn">VIII</span>
+        <span class="ti"><span class="ar">البحث — <i>علمٌ مفتوح</i></span><span class="en" lang="en">The Research — <i>open science</i></span></span>
+        <span class="dot" aria-hidden="true">·····</span>
+      </a>
+      <a href="#status">
+        <span class="rn">VIII b</span>
+        <span class="ti"><span class="ar">الحال — أين يقفُ هذا العمل</span><span class="en" lang="en">Where this work stands</span></span>
+        <span class="dot" aria-hidden="true">·····</span>
+      </a>
+      <a href="#author">
+        <span class="rn">IX</span>
+        <span class="ti"><span class="ar">المؤلّف — <i>د. عادل ف. عامر</i></span><span class="en" lang="en">The Author — <i>Dr. Adel F. Amer</i></span></span>
+        <span class="dot" aria-hidden="true">·····</span>
+      </a>
+      <a href="#typecase">
+        <span class="rn" aria-hidden="true">❦</span>
+        <span class="ti"><span class="ar">عُدّةُ المطبعة — <i>صندوقُ الحروفِ التسعةِ والعشرين</i></span><span class="en" lang="en">The Press&#39;s Kit — <i>the case of the twenty-nine sorts</i></span></span>
+        <span class="dot" aria-hidden="true">·····</span>
+      </a>
+    </nav>
+  </div>
+</section>
+
+<!-- ── MISSION ────────────────────────────── -->
+<section id="mission">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="eyebrow"><span class="plateno">I</span> <span class="ar">اللوحةُ الأولى · الرسالة</span><span class="en" lang="en">Plate I · The Mission</span></span>
+      <h2><span class="ar">م<span class="tk">ِ</span>ن<span class="tk">َ</span> الس<span class="tk">َّ</span>راب<span class="tk">ِ</span> إلى الح<span class="tk">َ</span>قيقة</span><span class="en" lang="en">From the Mirage to the Truth</span></h2>
+      <p class="lede">
+        <span class="ar">لم تُولد جُذور في قاعةِ بحثٍ فحسب، بل أمامَ مشهدٍ يتكرّر في كلِّ بيت: طفلٌ رأسُه محنيٌّ على شاشة.</span>
+        <span class="en" lang="en">Juthur was not born only in a research hall, but before a scene repeated in every home: a child with his head bent over a screen.</span>
+      </p>
+      <hr class="rule">
+    </div>
+
+    <div class="grid g3">
+      <div class="step rev">
+        <span class="num"><span class="ar">١</span><span class="en" lang="en">One</span></span>
+        <h3><span class="ar">جائحةُ الشّاشات</span><span class="en" lang="en">The Screen Pandemic</span></h3>
+        <p><span class="ar">جيلٌ يكبرُ ورأسُه منحنٍ؛ تنطفئُ العينُ عن الوجوه، واليدُ عن اللمس، والأذنُ عن الحكاية — فيذبلُ الانتباهُ وتتراجعُ اللغةُ قبلَ أن تكتمل.</span><span class="en" lang="en">A generation grows with its head bent; the eye dims to faces, the hand to touch, the ear to story — attention withers and language recedes before it is whole.</span></p>
+      </div>
+      <div class="step rev">
+        <span class="num"><span class="ar">٢</span><span class="en" lang="en">Two</span></span>
+        <h3><span class="ar">قامةٌ منحنية</span><span class="en" lang="en">A Bent Posture</span></h3>
+        <p><span class="ar">الآيةُ الكريمةُ في سورةِ المُلك (٢٢) تصفُ الحالَ بدقّة: مُكِبًّا عَلَىٰ وَجْهِهِ. تلك قامةُ الطفلِ فوقَ الشاشة — قراءةٌ انكمشت إلى مستطيلٍ مُضيءٍ يُتلقّى بلا حواسّ.</span><span class="en" lang="en">The verse of Sūrat al-Mulk (67:22) names it exactly: fallen on his face. That is the child's posture over the screen — reading shrunk to a glowing rectangle, received without the senses.</span></p>
+      </div>
+      <div class="step rev">
+        <span class="num"><span class="ar">٣</span><span class="en" lang="en">Three</span></span>
+        <h3><span class="ar">قامةٌ سويّة</span><span class="en" lang="en">An Upright Posture</span></h3>
+        <p><span class="ar">جُذور تُعيدُ القراءةَ إلى الجسدِ كلِّه: يدٌ تتلمّسُ الحرف، وصوتٌ ينطقُه، وأذنٌ تسمعُه، وعينٌ تراه — تتقاطعُ الحواسُّ فيقفُ الطفلُ سَوِيًّا على طريقِ المعنى.</span><span class="en" lang="en">Juthur returns reading to the whole body: a hand that traces the letter, a voice that sounds it, an ear that hears it, an eye that sees it — the senses cross, and the child stands upright on the path of meaning.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE MOTTO -->
+<section class="mottoplate">
+  <div class="narrow">
+    <svg class="monomark" viewBox="0 0 120 96" aria-hidden="true" style="width:clamp(58px,9vw,80px);margin:0 auto 2.4rem"><use href="#juthur-mono"></use></svg>
+    <p class="motto">
+      <span class="ar">اللغةُ تُعرَفُ بتقاطعِ الحواسِّ،<br>والمعنى بتعدُّدِ السِّياقِ.</span>
+      <span class="en" lang="en">Language is known by the crossing of the senses;<br>meaning, by the multiplicity of context.</span>
+    </p>
+    <span class="attrib"><span class="ar">شعار المشروع · Amer (2024)</span><span class="en" lang="en">The Motto · Amer (2024)</span></span>
+    <svg class="tailpiece" viewBox="0 0 300 46" aria-hidden="true"><use href="#tailpiece"></use></svg>
+  </div>
+</section>
+
+<!-- ── DOORS ──────────────────────────────── -->
+<section class="aged" id="doors">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="eyebrow"><span class="ar">من أين تبدأ</span><span class="en" lang="en">Where to Begin</span></span>
+      <h2><span class="ar">أبواب<span class="tk">ُ</span> الد<span class="tk">ّ</span>ار</span><span class="en" lang="en">The Doors of the House</span></h2>
+      <p class="lede"><span class="ar">لكلِّ زائرٍ حاجةٌ مختلفة؛ ابدأ من البابِ الذي يخصّك.</span><span class="en" lang="en">Each visitor has a different need. Begin from the door that is yours.</span></p>
+      <hr class="rule">
+    </div>
+    <div class="grid g3">
+      <a class="door rev" href="#method">
+        <h3><span class="ar">المعلّم والمدرسة</span><span class="en" lang="en">Teachers &amp; Schools</span></h3>
+        <p><span class="ar">النظريةُ والمنهجُ والسُّلَّمُ والموادُّ الصفّية — كلُّ ما يلزمُ لإدخالِ جُذور إلى الصفّ.</span><span class="en" lang="en">The theory, the method, the ladder, and classroom materials — all you need to bring Juthur into the room.</span></p>
+        <span class="go"><span class="ar">ادخل ←</span><span class="en" lang="en">Enter →</span></span>
+      </a>
+      <a class="door rev" href="#mission">
+        <h3><span class="ar">الأسرة</span><span class="en" lang="en">Families</span></h3>
+        <p><span class="ar">لماذا القراءةُ بالحواسّ، وكيف تُعيدُ طفلَك من الشّاشةِ إلى الحرفِ المحسوس.</span><span class="en" lang="en">Why senses-first reading, and how to bring your child back from the screen to the letter made tangible.</span></p>
+        <span class="go"><span class="ar">افهم الرسالة ←</span><span class="en" lang="en">Understand the mission →</span></span>
+      </a>
+      <a class="door rev" href="#research">
+        <h3><span class="ar">الباحث والجهات</span><span class="en" lang="en">Researchers &amp; Institutions</span></h3>
+        <p><span class="ar">المخطوطاتُ المُحكَّمةُ، والتسجيلُ المسبق، والبياناتُ المفتوحةُ على OSF.</span><span class="en" lang="en">Peer-reviewed manuscripts, preregistration, and open data on OSF.</span></p>
+        <span class="go"><span class="ar">اطّلع على البحث ←</span><span class="en" lang="en">See the research →</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── THE LETTER ─────────────────────────── -->
+<section class="plate" id="letter">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="eyebrow"><span class="plateno">II</span> <span class="ar">اللوحةُ الثانية · قلبُ القراءةِ الملموسة</span><span class="en" lang="en">Plate II · The Heart of Tactile Reading</span></span>
+      <h2><span class="ar">حين<span class="tk">َ</span> يصير<span class="tk">ُ</span> الحرف<span class="tk">ُ</span> جسدا<span class="tk">ً</span> ي<span class="tk">ُ</span>لم<span class="tk">َ</span>س</span><span class="en" lang="en">When the Letter Becomes a Body to Touch</span></h2>
+      <p class="lede"><span class="ar">قبلَ أن تقرأَ العينُ، يتلمّسُ الإصبعُ الحرفَ بارزاً ناتئاً، وغائراً منحوتاً — فيثبتُ الصوتُ في اليدِ قبلَ أن يثبتَ في الذاكرة.</span><span class="en" lang="en">Before the eye reads, the finger traces the letter — raised and standing, then carved and sunken — so the sound settles in the hand before it settles in memory.</span></p>
+      <hr class="rule">
+    </div>
+    <div class="grid g2">
+      <div class="card rev">
+        <h3><span class="ar">البارز — يُلمَس</span><span class="en" lang="en">Raised — met by the hand</span></h3>
+        <p><span class="ar">الحرفُ يقفُ فوقَ سطحِ الورقة. الإصبعُ يصطدمُ بحافّتِه فيعرفُ أينَ يبدأُ وأينَ ينتهي، قبلَ أن يعرفَ اسمَه.</span><span class="en" lang="en">The letter stands above the sheet. The finger meets its edge and learns where it begins and ends, before it learns its name.</span></p>
+      </div>
+      <div class="card rev">
+        <h3><span class="ar">الغائر — يُتلمَّس</span><span class="en" lang="en">Carved — sought by the hand</span></h3>
+        <p><span class="ar">الحرفُ محفورٌ في الورقة. الإصبعُ يسقطُ داخلَه فيتتبّعُ مسارَه، ويُعيدُ رسمَه بالحركةِ لا بالنظر.</span><span class="en" lang="en">The letter is bitten into the sheet. The finger drops into it, follows its path, and redraws it by movement rather than by sight.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ──────────────────────────────── -->
+<section id="about">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="eyebrow"><span class="ar">التعريف</span><span class="en" lang="en">About</span></span>
+      <h2><span class="ar">ج<span class="tk">ُ</span>ذور<span class="tk">ُ</span> الح<span class="tk">ِ</span>كاية</span><span class="en" lang="en">The Roots of the Tale</span></h2>
+      <hr class="rule">
+    </div>
+    <div class="narrow rev" style="margin-inline:0">
+      <p style="font-size:clamp(1.05rem,2vw,1.22rem);color:var(--ink-70)">
+        <span class="ar">جُذور مشروعٌ لتعليمِ القراءةِ المبكّرةِ بالعربية، طوّرَه د. عادل ف. عامر. يجمعُ بينَ إطارٍ نظريٍّ يُعنى بالرّبطِ بينَ الحرفِ والصوت، ومنهجٍ للتطبيقِ في الصفّ، ومجموعةٍ من النصوصِ المكتوبةِ للأطفال. تُعرَضُ النظريةُ بوصفِها فرضيةً قابلةً للاختبار، وتُسجَّلُ بياناتُها وتُحكَّمُ مخطوطاتُها علناً.</span>
+        <span class="en" lang="en">Juthur is a project for early Arabic reading, developed by Dr. Adel F. Amer. It joins a theoretical framework concerned with linking letter and sound, a method for classroom practice, and a body of texts written for children. The theory is presented as a testable hypothesis; its data are registered and its manuscripts reviewed in the open.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── THEORY ─────────────────────────────── -->
+<section class="aged" id="theory">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="eyebrow"><span class="plateno">III</span> <span class="ar">اللوحةُ الثالثة · الأساسُ النظريّ · نَظَرِيَّةُ القراءةِ الملموسة</span><span class="en" lang="en">Plate III · Tactile Reading Theory (TRT)</span></span>
+      <h2><span class="ar">م<span class="tk">ِ</span>يزان<span class="tk">ُ</span> الحرف<span class="tk">ِ</span> والص<span class="tk">َّ</span>وت</span><span class="en" lang="en">Where Letter Meets Sound</span></h2>
+      <p class="lede"><span class="ar">تقترحُ النظريةُ أنّ إشاراتٍ نُطقيّةً وحسّية-حركيّةً مقصودةً قد تُضيفُ مساراً إضافيّاً لاسترجاعِ الأصواتِ في أثناءِ تعلّمِ الرّبطِ بينَ الحرفِ والصوت — فرضيةٌ ضمنَ نموذجٍ متعدّدِ القيود، لا بديلٌ عن السّمع.</span><span class="en" lang="en">The theory proposes that deliberately-attended articulatory and sensorimotor cues may add a further route for retrieving speech sounds during grapheme–phoneme learning — a hypothesis within a multi-constraint model, not a replacement for hearing.</span></p>
+      <hr class="rule">
+    </div>
+    <p class="lede" style="margin:0 0 1.2rem;font-size:.94rem;opacity:.92"><span class="ar"><b>حدُّ الدعوى.</b> تُعالِجُ النَّظَريّةُ <b>ربطَ الحرفِ بالصوت</b>، ولا يدّعي معالجةَ الفجوةِ الازدواجيّةِ بين المحكيّةِ والفصحى — وهي عائقٌ لسانيٌّ مستقلٌّ موثَّقٌ في الأدبيّات، ويحتاجُ تدخُّلاً آخر. وأيُّ تحسُّنٍ يُنسَبُ إلى النَّظَريّةِ يُقاسُ في الربطِ الإملائيِّ لا في تجاوزِ الازدواجيّة.</span><span class="en" lang="en"><b>The boundary of the claim.</b> The theory addresses <b>grapheme–phoneme binding</b>. It does not claim to address the diglossic gap between spoken and standard Arabic — a separate, well-documented linguistic obstacle requiring a different intervention. Any gain attributed to the theory is measured in orthographic mapping, not in bridging diglossia.</span></p>
+    <p class="lede" style="margin:0 0 clamp(1.6rem,3vw,2.2rem);font-size:.94rem;opacity:.92"><span class="ar"><b>تسميتانِ، والمُسمّى واحد.</b> في <b>الأوراقِ البحثيّةِ والمخطوطاتِ المُقدَّمةِ للنشر</b>: <b>TRF — Tactile Reading Framework</b>؛ فـ«الإطارُ» يَعِدُ بقدرِ ما تفي به الدعوى أمامَ المحكِّم. وفي <b>كلِّ ما عدا ذلك</b> — الكتبُ والأدواتُ والمواثيقُ والموادُّ الصفّيّةُ وهذا الموقعُ نفسُه —: <b>TRT — نَظَرِيَّةُ القراءةِ الملموسة</b>، وهو الاسمُ الذي نُشِرَ به العملُ وبُنيَ عليه. <span style="opacity:.75">يتغيّرُ السِّجِلُّ ولا يتغيّرُ المضمون؛ والاسمانِ يدلّانِ على الشيءِ نفسِه.</span></span><span class="en" lang="en"><b>Two names, one thing.</b> In <b>research papers and manuscripts submitted for publication</b>: <b>TRF — Tactile Reading Framework</b>; <i>framework</i> claims exactly what the work claims, and the smaller claim survives review. <b>Everywhere else</b> — the books, the instruments, the charters, the classroom material, and this site —: <b>TRT — Tactile Reading Theory</b>, the name the work was published and built under. <span style="opacity:.75">The register changes; the content does not. The two names denote the same thing.</span></span></p>
+    <div class="grid g3">
+      <div class="card rev">
+        <h3><span class="ar">المرتكزُ النُّطقيّ</span><span class="en" lang="en">The Articulatory Anchor</span></h3>
+        <p><span class="ar">إشارةٌ مقصودةٌ داخلَ النُّطق — كانغلاقِ الشّفتينِ أو اهتزازِ الحنجرة — تجعلُ سمةً صوتيةً قابلةً للانتباه.</span><span class="en" lang="en">A deliberate cue within speech — lip closure, laryngeal vibration — makes a phonetic feature available to attention.</span></p>
+      </div>
+      <div class="card rev">
+        <h3><span class="ar">الرّبطُ الإملائيّ</span><span class="en" lang="en">Orthographic Mapping</span></h3>
+        <p><span class="ar">تُبنى القراءةُ بربطِ الهجاءِ بالنُّطقِ والمعنى؛ وقد يُسهمُ مرتكزٌ إضافيٌّ في دقّةِ هذا الرّبط.</span><span class="en" lang="en">Reading is built by bonding spelling to pronunciation and meaning; an added anchor may aid that bond's precision.</span></p>
+      </div>
+      <div class="card rev">
+        <h3><span class="ar">العربيةُ حالةَ اختبار</span><span class="en" lang="en">Arabic as a Test Case</span></h3>
+        <p><span class="ar">الازدواجيةُ والتشكيلُ والصّرفُ وبنيةُ الخطِّ قيودٌ منفصلةٌ تجعلُ العربيةَ سياقاً يُميّزُ بينَ الفرضيات.</span><span class="en" lang="en">Diglossia, vowelization, morphology and script structure are separable constraints that let Arabic tell hypotheses apart.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ صندوق حروف المطبعة · The Type Case ═══ -->
+<section class="plate" id="typecase">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="eyebrow"><span class="ar">من عُدّةِ المطبعة</span><span class="en" lang="en">From the Press's Kit</span></span>
+      <h2><span class="ar">صندوق<span class="tk">ُ</span> الحروفِ التسعةِ والعشرين</span><span class="en" lang="en">The Case of the Twenty-Nine Sorts</span></h2>
+      <p class="lede"><span class="ar">المسُّ قبلَ الرسم: تسعةٌ وعشرون قالبًا تبدأُ بالهمزةِ — إذ النطقُ بالهمزِ لا بالألف — وتُختَمُ بـ«لا» الحرفِ التاسعِ والعشرين، وفيه الألفُ مذكورةٌ ضمنًا، كما تُثبِتُه نَظَرِيَّةُ القراءةِ الملموسة.</span><span class="en" lang="en">Touch before tracing: twenty-nine sorts beginning with hamza — for speech opens with the glottal stop, not alif — and sealed with lā, the twenty-ninth letter, in which alif is held implicitly, as Tactile Reading Theory maintains.</span></p>
+      <button id="press-sound" type="button" aria-pressed="true"><span class="ar">صوتُ المكبس: يعمل</span><span class="en" lang="en">Press sound: on</span></button>
+      <hr class="rule">
+    </div>
+    <div class="case rev" role="group" aria-label="صندوق حروف المطبعة">
+<button class="sort" type="button" aria-label="حرف همزة">ء<span class="inkdot" aria-hidden="true"></span><small>همزة</small></button>
+<button class="sort" type="button" aria-label="حرف باء">ب<span class="inkdot" aria-hidden="true"></span><small>باء</small></button>
+<button class="sort" type="button" aria-label="حرف تاء">ت<span class="inkdot" aria-hidden="true"></span><small>تاء</small></button>
+<button class="sort" type="button" aria-label="حرف ثاء">ث<span class="inkdot" aria-hidden="true"></span><small>ثاء</small></button>
+<button class="sort" type="button" aria-label="حرف جيم">ج<span class="inkdot" aria-hidden="true"></span><small>جيم</small></button>
+<button class="sort" type="button" aria-label="حرف حاء">ح<span class="inkdot" aria-hidden="true"></span><small>حاء</small></button>
+<button class="sort" type="button" aria-label="حرف خاء">خ<span class="inkdot" aria-hidden="true"></span><small>خاء</small></button>
+<button class="sort" type="button" aria-label="حرف دال">د<span class="inkdot" aria-hidden="true"></span><small>دال</small></button>
+<button class="sort" type="button" aria-label="حرف ذال">ذ<span class="inkdot" aria-hidden="true"></span><small>ذال</small></button>
+<button class="sort" type="button" aria-label="حرف راء">ر<span class="inkdot" aria-hidden="true"></span><small>راء</small></button>
+<button class="sort" type="button" aria-label="حرف زاي">ز<span class="inkdot" aria-hidden="true"></span><small>زاي</small></button>
+<button class="sort" type="button" aria-label="حرف سين">س<span class="inkdot" aria-hidden="true"></span><small>سين</small></button>
+<button class="sort" type="button" aria-label="حرف شين">ش<span class="inkdot" aria-hidden="true"></span><small>شين</small></button>
+<button class="sort" type="button" aria-label="حرف صاد">ص<span class="inkdot" aria-hidden="true"></span><small>صاد</small></button>
+<button class="sort" type="button" aria-label="حرف ضاد">ض<span class="inkdot" aria-hidden="true"></span><small>ضاد</small></button>
+<button class="sort" type="button" aria-label="حرف طاء">ط<span class="inkdot" aria-hidden="true"></span><small>طاء</small></button>
+<button class="sort" type="button" aria-label="حرف ظاء">ظ<span class="inkdot" aria-hidden="true"></span><small>ظاء</small></button>
+<button class="sort" type="button" aria-label="حرف عين">ع<span class="inkdot" aria-hidden="true"></span><small>عين</small></button>
+<button class="sort" type="button" aria-label="حرف غين">غ<span class="inkdot" aria-hidden="true"></span><small>غين</small></button>
+<button class="sort" type="button" aria-label="حرف فاء">ف<span class="inkdot" aria-hidden="true"></span><small>فاء</small></button>
+<button class="sort" type="button" aria-label="حرف قاف">ق<span class="inkdot" aria-hidden="true"></span><small>قاف</small></button>
+<button class="sort" type="button" aria-label="حرف كاف">ك<span class="inkdot" aria-hidden="true"></span><small>كاف</small></button>
+<button class="sort" type="button" aria-label="حرف لام">ل<span class="inkdot" aria-hidden="true"></span><small>لام</small></button>
+<button class="sort" type="button" aria-label="حرف ميم">م<span class="inkdot" aria-hidden="true"></span><small>ميم</small></button>
+<button class="sort" type="button" aria-label="حرف نون">ن<span class="inkdot" aria-hidden="true"></span><small>نون</small></button>
+<button class="sort" type="button" aria-label="حرف هاء">ه<span class="inkdot" aria-hidden="true"></span><small>هاء</small></button>
+<button class="sort" type="button" aria-label="حرف واو">و<span class="inkdot" aria-hidden="true"></span><small>واو</small></button>
+<button class="sort" type="button" aria-label="حرف ياء">ي<span class="inkdot" aria-hidden="true"></span><small>ياء</small></button>
+<button class="sort la" type="button" aria-label="لا — الحرف التاسع والعشرون">لا<span class="inkdot" aria-hidden="true"></span><small>الحرفُ التاسعُ والعشرون</small></button>
+    </div>
+    <p class="case-hint"><span class="ar">اضغطْ أيَّ قالبٍ تُفتَحْ عَيِّنتُه في مختبرِ الحرف.</span><span class="en" lang="en">Press any sort to open its specimen in the Letter Lab.</span></p>
+    <div id="letter-lab" aria-live="polite" class="lab" hidden>
+      <div class="lab-glyph" data-state="raised" aria-hidden="true">ء</div>
+      <div class="lab-info">
+        <p class="lab-name"><span class="ar"></span><span class="en" lang="en"></span></p>
+        <p class="lab-makhraj"><span class="eyebrow-sm"><span class="ar">المخرج</span><span class="en" lang="en">Articulation</span></span><span class="ar lab-m-ar"></span><span class="en lab-m-en" lang="en"></span></p>
+        <div class="lab-controls" role="group" aria-label="حالتا الحرف">
+          <button type="button" class="lab-btn" id="lab-raised" aria-pressed="true"><span class="ar">بارز</span><span class="en" lang="en">Raised</span></button>
+          <button type="button" class="lab-btn" id="lab-carved" aria-pressed="false"><span class="ar">غائر</span><span class="en" lang="en">Carved</span></button>
+          <button type="button" class="lab-btn" id="lab-speak"><span class="ar">اسمَعِ اسمَه</span><span class="en" lang="en">Hear its name</span></button>
+          <button type="button" class="lab-btn" id="lab-close"><span class="ar">أغلِق</span><span class="en" lang="en">Close</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── MATERIALS ──────────────────────────── -->
+<section id="materials">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="eyebrow"><span class="plateno">IV</span> <span class="ar">اللوحةُ الرابعة · الموادّ</span><span class="en" lang="en">Plate IV · The Materials</span></span>
+      <h2><span class="ar">ما تحم<span class="tk">ِ</span>ل<span class="tk">ُ</span>ه<span class="tk">ُ</span> الش<span class="tk">َّ</span>جرة</span><span class="en" lang="en">What the Tree Carries</span></h2>
+      <p class="lede"><span class="ar">أربعةُ أفنانٍ تتقاطعُ فيها الحواسّ — الاستماعُ والوعيُ الصوتيُّ والقراءةُ والكتابة — يجمعُها الكتابُ الأمّ.</span><span class="en" lang="en">Four boughs where the senses cross — listening, phonological awareness, reading, and writing — held together by the Mother Book.</span></p>
+      <hr class="rule">
+    </div>
+
+    <div class="card rev" style="border-top-width:3px;margin-bottom:clamp(2rem,4vw,3rem)">
+      <h3><span class="ar">الكتابُ الأمّ</span><span class="en" lang="en">The Mother Book</span></h3>
+      <p style="max-width:60ch"><span class="ar">المنظومةُ الجامعةُ وأصلُ المشروع؛ منها تتفرّعُ النظريةُ والنصوصُ والمناهج — النسخةُ الكاملةُ الموحّدة.</span><span class="en" lang="en">The unifying corpus and origin of the project; from it branch the theory, the texts, and the curricula — the complete, consolidated edition.</span></p>
+    </div>
+
+    <div class="grid g4">
+      <div class="step rev">
+        <span class="num"><span class="ar">الاستماع</span><span class="en" lang="en">Listening</span></span>
+        <h3><span class="ar">فنُّ البيان</span><span class="en" lang="en">The Art of Bayān</span></h3>
+        <p><span class="ar">عشرون سِفراً في فنِّ الإصغاءِ والحديث، في قوسٍ تراكميٍّ عبرَ العام، مع بروتوكولِ الصمتِ الرقميّ.</span><span class="en" lang="en">Twenty books in the art of listening and speech, a cumulative arc across the year, with a digital-silence protocol.</span></p>
+      </div>
+      <div class="step rev">
+        <span class="num"><span class="ar">الوعي الصوتيّ</span><span class="en" lang="en">Phonology</span></span>
+        <h3><span class="ar">الأطلسُ الصوتيّ</span><span class="en" lang="en">The Atlas</span></h3>
+        <p><span class="ar">ثمانيةٌ وعشرون وعاءً أدبيّاً، وطقسُ الأنفاس، والمراحلُ الثلاث، والألعابُ الصوتية.</span><span class="en" lang="en">Twenty-eight literary vessels, the Anfas Ritual, the three stages, and the sound games.</span></p>
+      </div>
+      <div class="step rev">
+        <span class="num"><span class="ar">القراءة</span><span class="en" lang="en">Reading</span></span>
+        <h3><span class="ar">النصوص</span><span class="en" lang="en">The Texts</span></h3>
+        <p><span class="ar">ثلاثٌ وخمسون قصّة، وتسعُ ملاحم، وثمانيةٌ وعشرون نصّاً تأسيسيّاً — موزّعةٌ على مستوياتِها.</span><span class="en" lang="en">Fifty-three stories, nine epics, and twenty-eight foundational texts — arranged across their levels.</span></p>
+      </div>
+      <div class="step rev">
+        <span class="num"><span class="ar">الكتابة</span><span class="en" lang="en">Writing</span></span>
+        <h3><span class="ar">دفترُ التدريب</span><span class="en" lang="en">The Training Notebook</span></h3>
+        <p><span class="ar">دفترُ التدريبِ الكتابيِّ للحرفِ البارزِ والغائر: كرّاسةُ البذرة، وكرّاسةُ البرعم.</span><span class="en" lang="en">The writing notebook for the raised and carved letter: the Seed booklet and the Bud booklet.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── THE TREE ───────────────────────────── -->
+<section class="plate" id="levels">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="eyebrow"><span class="plateno">V</span> <span class="ar">اللوحةُ الخامسة · مراحلُ النموّ</span><span class="en" lang="en">Plate V · Stages of Growth</span></span>
+      <h2><span class="ar">س<span class="tk">ُ</span>ل<span class="tk">َّ</span>م<span class="tk">ُ</span> الش<span class="tk">ّ</span>جرة</span><span class="en" lang="en">The Tree of Growth</span></h2>
+      <p class="lede"><span class="ar">لا مستوياتٍ جامدة، بل شجرةٌ واحدةٌ يتسلّقُها الطفل: من البذرةِ إلى الثّمر، يصعدُ درجةً كلّما نضج.</span><span class="en" lang="en">Not rigid levels, but one tree the child climbs: from seed to fruit, rising a stage as they ripen.</span></p>
+      <hr class="rule">
+    </div>
+    <div class="tree rev"><div class="rung" data-c="sage"><div class="mark">١</div><div><h3><span class="ar">البَذْرة</span><span class="en" lang="en">The Seed</span></h3><span class="contains"><span class="ar">التأسيسيّاتُ الـ٢٨ · أسفارُ البيان ١—٣</span><span class="en" lang="en">The 28 foundational texts · Bayān 1–3</span></span></div></div><div class="rung" data-c="sage"><div class="mark">٢</div><div><h3><span class="ar">البُرْعُم</span><span class="en" lang="en">The Bud</span></h3><span class="contains"><span class="ar">أسفارُ البيان ٤—٧ · القصصُ الأولى</span><span class="en" lang="en">Bayān 4–7 · the first tales</span></span></div></div><div class="maqam sage"><span class="ar">المقامُ الأدنى · A1 · ٤—٧</span><span class="en" lang="en">Foundational · A1</span></div><div class="rung" data-c="slate"><div class="mark">٣</div><div><h3><span class="ar">الغُصْن</span><span class="en" lang="en">The Branch</span></h3><span class="contains"><span class="ar">أسفارُ البيان ٨—١١ · القصصُ الطويلة</span><span class="en" lang="en">Bayān 8–11 · longer tales</span></span></div></div><div class="rung" data-c="slate"><div class="mark">٤</div><div><h3><span class="ar">الأوراق</span><span class="en" lang="en">The Leaves</span></h3><span class="contains"><span class="ar">أسفارُ البيان ١٢—١٥ · القصصُ الحسّيّة</span><span class="en" lang="en">Bayān 12–15 · the sensory stories</span></span></div></div><div class="maqam slate"><span class="ar">المقامُ الأوسط · B1 · ٨—١٢</span><span class="en" lang="en">Intermediate · B1</span></div><div class="rung" data-c="terra"><div class="mark">٥</div><div><h3><span class="ar">الثَّمَرة</span><span class="en" lang="en">The Fruit</span></h3><span class="contains"><span class="ar">أسفارُ البيان ١٦—١٨ · مطالعُ الملاحم</span><span class="en" lang="en">Bayān 16–18 · the epics’ openings</span></span></div></div><div class="maqam terra"><span class="ar">المقامُ المتقدّم · B2 · ١٣—١٥</span><span class="en" lang="en">Advanced · B2</span></div><div class="rung" data-c="gold"><div class="mark">٦</div><div><h3><span class="ar">الحَصاد</span><span class="en" lang="en">The Harvest</span></h3><span class="contains"><span class="ar">أسفارُ البيان ١٩—٢٠ · الملاحمُ التِّسْع · إبداعُ الطفل</span><span class="en" lang="en">Bayān 19–20 · the nine epics · the child’s own work</span></span></div></div><div class="maqam gold"><span class="ar">المقامُ المُبدع · C1 · ١٦—١٩</span><span class="en" lang="en">Creative · C1</span></div></div>
+    <p class="lede rev" style="margin-top:2.4rem"><span class="ar">ستُّ مراحلَ نباتيّةٍ داخلَ أربعةِ مقامات: يصعدُ الطفلُ من البذرةِ إلى الحصاد، والمقامُ يتبدّلُ حين ينضجُ لا حين يكبر. ومحاذاةُ CEFR استرشاديّةٌ لا قياسيّة.</span><span class="en" lang="en">Six plant stages inside four maqāmāt: the child climbs from Seed to Harvest, and the maqām changes when they ripen, not when they age. The CEFR alignment is indicative, not a standard.</span></p>
+  </div>
+</section>
+
+<!-- ── THE CABINET ────────────────────────── -->
+<section class="aged" id="cabinet">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="eyebrow"><span class="plateno">VI</span> <span class="ar">اللوحةُ السادسة · الخزانة</span><span class="en" lang="en">Plate VI · The Cabinet</span></span>
+      <h2><span class="ar">خ<span class="tk">ِ</span>زانة<span class="tk">ُ</span> الأسفار</span><span class="en" lang="en">The Codex Cabinet</span></h2>
+      <p class="lede"><span class="ar">مكتبةُ المشروعِ كاملةً — أسفارٌ معتّقةٌ كُتِبت للأطفال. نماذجُ مختارةٌ تُقرأُ الآن، وبقيّةُ الخزانةِ محفوظةُ الحقوقِ تُتاحُ عندَ الطلب.</span><span class="en" lang="en">The project's full library — aged codices written for children. Selected works are readable now; the rest are rights-reserved, available on request.</span></p>
+      <hr class="rule">
+    </div>
+
+    <div class="counts rev">
+      <div class="count"><b><span class="ar">٥٣</span><span class="en" lang="en">53</span></b><span><span class="ar">قصّة</span><span class="en" lang="en">Stories</span></span></div>
+      <div class="count"><b><span class="ar">٩</span><span class="en" lang="en">9</span></b><span><span class="ar">ملاحم</span><span class="en" lang="en">Epics</span></span></div>
+      <div class="count"><b><span class="ar">٢٨</span><span class="en" lang="en">28</span></b><span><span class="ar">نصّاً تأسيسيّاً</span><span class="en" lang="en">Foundational</span></span></div>
+      <div class="count"><b><span class="ar">٢٠</span><span class="en" lang="en">20</span></b><span><span class="ar">سِفراً للبيان</span><span class="en" lang="en">Bayān Books</span></span></div>
+    </div>
+
+    <div class="jewel rev" style="margin-top:clamp(2.4rem,5vw,3.6rem)">
+      <div class="jewel-plate">
+        <span class="orn" aria-hidden="true">❦ ✦ ❦</span>
+        <p class="t">غائبٌ<br>في زمنِ<br>الجائحة</p>
+        <span class="y">MCMXXVI · JUTHUR PRESS</span>
+      </div>
+      <div>
+        <span class="eyebrow"><span class="ar">دُرّةُ الخزانة</span><span class="en" lang="en">The Jewel of the Cabinet</span></span>
+        <h3 style="font-size:clamp(1.5rem,3vw,2.1rem)"><span class="ar">غائبٌ في زمنِ الجائحة</span><span class="en" lang="en">Absent in the Time of the Pandemic</span></h3>
+        <p style="color:var(--ink-70);margin:.9rem 0 1.4rem"><span class="ar">قراءةٌ قبلَ القراءة · نسخةُ ١٩٢٦ المعتّقة</span><span class="en" lang="en">A Reading Before Reading · the aged 1926 edition</span></p>
+        <p style="color:var(--ink-70);max-width:52ch"><span class="ar">ملحمةُ المشروعِ الكبرى: حكايةُ طفلٍ غابَ في زمنِ الشّاشة، صِيغت في هيئةِ كتابٍ عمرُه قرن.</span><span class="en" lang="en">The project's flagship tale: a child gone absent in the age of the screen, cast as a century-old book.</span></p>
+        <div style="margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:1.2rem;align-items:center">
+          <a href="/juthur/sample" target="_blank" rel="noopener" style="font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-aa);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold-aa);padding-bottom:3px"><span class="ar">الصفحةُ الثنائية ←</span><span class="en" lang="en">Bilingual Page →</span></a>
+          <a href="mailto:aamer@asdubai.org?subject=Juthur%20%E2%80%94%20Absent%20in%20the%20Time%20of%20the%20Pandemic" style="font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-aa);font-weight:600;text-decoration:none;border-bottom:1px solid var(--gold-aa);padding-bottom:3px"><span class="ar">اطلبِ النسخةَ الكاملة ←</span><span class="en" lang="en">Request the full edition →</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── محطات النَّرف الأربع عشرة / The Fourteen Naraf Stations ── -->
+    <div class="rev" style="margin-top:clamp(2rem,5vw,3rem);padding:clamp(1.4rem,3vw,2rem);background:var(--paper);border:1px solid var(--rule);border-radius:4px">
+      <span class="eyebrow" style="display:block;margin-bottom:.6rem"><span class="ar">محطاتُ دورةِ النَّرْف الأربعَ عشرة</span><span class="en" lang="en">The Fourteen Naraf Stations — Tactile Reading Theory (TRT)</span></span>
+      <p style="font-size:.88rem;color:var(--ink-70);margin:.2rem 0 1.2rem;max-width:60ch"><span class="ar">تمرّ العمليةُ القرائيةُ بأربعَ عشْرةَ محطّةً، تبدأُ بالنَّفَسِ وتنتهي بالعودةِ والتعليم — دورةٌ كاملةٌ من الإحساسِ إلى الفهمِ إلى الأثر.</span><span class="en" lang="en">Reading unfolds across fourteen stations, from Breath to Return &amp; Teach — a full cycle from sensation to understanding to lasting imprint.</span></p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:.55rem">
+        <div style="display:flex;align-items:flex-start;gap:.6rem;background:var(--bg,#faf8f3);border:1px solid var(--rule);border-right:3px solid var(--gold);border-radius:3px;padding:.65rem .8rem"><span style="background:var(--ink);color:var(--gold);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">١</span><span style="font-size:.85rem;line-height:1.5;color:var(--ink)"><span class="ar">النَّفَس</span><span class="en" lang="en" style="font-size:.72rem;color:var(--ink-70);display:block">Breath</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:.6rem;background:var(--bg,#faf8f3);border:1px solid var(--rule);border-right:3px solid var(--gold);border-radius:3px;padding:.65rem .8rem"><span style="background:var(--ink);color:var(--gold);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">٢</span><span style="font-size:.85rem;line-height:1.5;color:var(--ink)"><span class="ar">الصوتُ يُوقِظ</span><span class="en" lang="en" style="font-size:.72rem;color:var(--ink-70);display:block">Sound Awakens</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:.6rem;background:var(--bg,#faf8f3);border:1px solid var(--rule);border-right:3px solid var(--gold);border-radius:3px;padding:.65rem .8rem"><span style="background:var(--ink);color:var(--gold);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">٣</span><span style="font-size:.85rem;line-height:1.5;color:var(--ink)"><span class="ar">أثرُ الهواء</span><span class="en" lang="en" style="font-size:.72rem;color:var(--ink-70);display:block">Air-Trace</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:.6rem;background:var(--bg,#faf8f3);border:1px solid var(--rule);border-right:3px solid var(--gold);border-radius:3px;padding:.65rem .8rem"><span style="background:var(--ink);color:var(--gold);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">٤</span><span style="font-size:.85rem;line-height:1.5;color:var(--ink)"><span class="ar">رسمُ الرمل</span><span class="en" lang="en" style="font-size:.72rem;color:var(--ink-70);display:block">Sand Tracing</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:.6rem;background:var(--bg,#faf8f3);border:1px solid var(--rule);border-right:3px solid var(--gold);border-radius:3px;padding:.65rem .8rem"><span style="background:var(--ink);color:var(--gold);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">٥</span><span style="font-size:.85rem;line-height:1.5;color:var(--ink)"><span class="ar">رسمُ الخشب</span><span class="en" lang="en" style="font-size:.72rem;color:var(--ink-70);display:block">Wood Tracing</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:.6rem;background:var(--bg,#faf8f3);border:1px solid var(--rule);border-right:3px solid var(--gold);border-radius:3px;padding:.65rem .8rem"><span style="background:var(--ink);color:var(--gold);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">٦</span><span style="font-size:.85rem;line-height:1.5;color:var(--ink)"><span class="ar">جُمبازُ الحروف</span><span class="en" lang="en" style="font-size:.72rem;color:var(--ink-70);display:block">Jumbaz al-Huruf</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:.6rem;background:var(--bg,#faf8f3);border:1px solid var(--rule);border-right:3px solid var(--gold);border-radius:3px;padding:.65rem .8rem"><span style="background:var(--ink);color:var(--gold);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">٧</span><span style="font-size:.85rem;line-height:1.5;color:var(--ink)"><span class="ar">الأنشودة</span><span class="en" lang="en" style="font-size:.72rem;color:var(--ink-70);display:block">Chant</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:.6rem;background:var(--bg,#faf8f3);border:1px solid var(--rule);border-right:3px solid var(--gold);border-radius:3px;padding:.65rem .8rem"><span style="background:var(--ink);color:var(--gold);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">٨</span><span style="font-size:.85rem;line-height:1.5;color:var(--ink)"><span class="ar">الفَهْم</span><span class="en" lang="en" style="font-size:.72rem;color:var(--ink-70);display:block">Fahm / Understanding</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:.6rem;background:var(--bg,#faf8f3);border:1px solid var(--rule);border-right:3px solid var(--gold);border-radius:3px;padding:.65rem .8rem"><span style="background:var(--ink);color:var(--gold);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">٩</span><span style="font-size:.85rem;line-height:1.5;color:var(--ink)"><span class="ar">الجذرُ يلتقي الكلمة</span><span class="en" lang="en" style="font-size:.72rem;color:var(--ink-70);display:block">Root Joins Word</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:.6rem;background:var(--bg,#faf8f3);border:1px solid var(--rule);border-right:3px solid var(--gold);border-radius:3px;padding:.65rem .8rem"><span style="background:var(--ink);color:var(--gold);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">١٠</span><span style="font-size:.85rem;line-height:1.5;color:var(--ink)"><span class="ar">العودةُ والتعليم</span><span class="en" lang="en" style="font-size:.72rem;color:var(--ink-70);display:block">Return &amp; Teach</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:.6rem;background:var(--bg,#faf8f3);border:1px solid var(--rule);border-right:3px solid var(--gold);border-radius:3px;padding:.65rem .8rem"><span style="background:var(--ink);color:var(--gold);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">١١</span><span style="font-size:.85rem;line-height:1.5;color:var(--ink)"><span class="ar">لَذَاذةُ القراءة</span><span class="en" lang="en" style="font-size:.72rem;color:var(--ink-70);display:block">Lathatha — Reading Pleasure</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:.6rem;background:var(--bg,#faf8f3);border:1px solid var(--rule);border-right:3px solid var(--gold);border-radius:3px;padding:.65rem .8rem"><span style="background:var(--ink);color:var(--gold);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">١٢</span><span style="font-size:.85rem;line-height:1.5;color:var(--ink)"><span class="ar">التقييمُ الذاتي</span><span class="en" lang="en" style="font-size:.72rem;color:var(--ink-70);display:block">Self-Assessment</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:.6rem;background:var(--bg,#faf8f3);border:1px solid var(--rule);border-right:3px solid var(--gold);border-radius:3px;padding:.65rem .8rem"><span style="background:var(--ink);color:var(--gold);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">١٣</span><span style="font-size:.85rem;line-height:1.5;color:var(--ink)"><span class="ar">الربطُ بالسياق</span><span class="en" lang="en" style="font-size:.72rem;color:var(--ink-70);display:block">Contextual Anchoring</span></span></div>
+        <div style="display:flex;align-items:flex-start;gap:.6rem;background:var(--bg,#faf8f3);border:1px solid var(--rule);border-right:3px solid var(--gold);border-radius:3px;padding:.65rem .8rem"><span style="background:var(--ink);color:var(--gold);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0">١٤</span><span style="font-size:.85rem;line-height:1.5;color:var(--ink)"><span class="ar">الأثرُ الممتد</span><span class="en" lang="en" style="font-size:.72rem;color:var(--ink-70);display:block">Extended Imprint</span></span></div>
+      </div>
+      <p style="margin-top:1.1rem;font-size:.82rem;color:var(--ink-70);border-top:1px solid var(--rule);padding-top:.8rem">
+        <span class="ar">المستودعُ المفتوح: <a href="https://osf.io/2nwfq" target="_blank" rel="noopener" style="color:var(--gold-aa)">osf.io/2nwfq</a> · ORCID: <span style="direction:ltr;display:inline-block">0009-0008-9618-3863</span></span>
+        <span class="en" lang="en">Open repository: <a href="https://osf.io/2nwfq" target="_blank" rel="noopener" style="color:var(--gold-aa)">osf.io/2nwfq</a> · ORCID: 0009-0008-9618-3863</span>
+      </p>
+    </div>
+
+    <div class="shelf rev">
+      <a class="vol" href="mailto:aamer@asdubai.org?subject=Juthur%20%E2%80%94%20The%20Mother%20Book"><b><span class="ar">الكتابُ الأمّ</span><span class="en" lang="en">The Mother Book</span></b><i>Juthur · Amer (2024)</i><u><span class="ar">عند الطلب</span><span class="en" lang="en">On request</span></u></a>
+      <a class="vol" href="mailto:aamer@asdubai.org?subject=Juthur%20%E2%80%94%20The%20Bayan%20Books"><b><span class="ar">أسفارُ البيان</span><span class="en" lang="en">The Bayān Books</span></b><i><span class="ar">٢٠ سِفراً · عيّنة: نَفَسُ البذرة</span><span class="en" lang="en">20 books · sample: Nafas al-Badhra</span></i><u><span class="ar">اقرأ عيّنة</span><span class="en" lang="en">Read a sample</span></u></a>
+      <a class="vol" href="mailto:aamer@asdubai.org?subject=Juthur%20%E2%80%94%20The%2053%20Sensory%20Stories"><b><span class="ar">القصصُ الحسّية</span><span class="en" lang="en">The Sensory Stories</span></b><i><span class="ar">٥٣ قصّة</span><span class="en" lang="en">53 tales</span></i><u><span class="ar">عند الطلب</span><span class="en" lang="en">On request</span></u></a>
+      <a class="vol" href="mailto:aamer@asdubai.org?subject=Juthur%20%E2%80%94%20Voices%20of%20the%20Roots"><b><span class="ar">أصواتُ الجذور</span><span class="en" lang="en">Voices of the Roots</span></b><i><span class="ar">٢٨ · قصصُ الإمارات</span><span class="en" lang="en">28 · UAE tales</span></i><u><span class="ar">عند الطلب</span><span class="en" lang="en">On request</span></u></a>
+      <a class="vol" href="mailto:aamer@asdubai.org?subject=Juthur%20%E2%80%94%20The%20Nine%20Epics"><b><span class="ar">الملاحم</span><span class="en" lang="en">The Epics</span></b><i><span class="ar">تسعُ ملاحم</span><span class="en" lang="en">Nine epics</span></i><u><span class="ar">عند الطلب</span><span class="en" lang="en">On request</span></u></a>
+      <a class="vol" href="mailto:aamer@asdubai.org?subject=Juthur%20%E2%80%94%20The%20Phonological%20Atlas"><b><span class="ar">الأطلسُ الصوتيّ</span><span class="en" lang="en">The Phonological Atlas</span></b><i><span class="ar">الوعيُ الصوتيّ · v4.4</span><span class="en" lang="en">Phonological awareness · v4.4</span></i><u><span class="ar">عند الطلب</span><span class="en" lang="en">On request</span></u></a>
+      <a class="vol" href="mailto:aamer@asdubai.org?subject=Juthur%20%E2%80%94%20Teachers%20Guide"><b><span class="ar">دليلُ المعلّم</span><span class="en" lang="en">The Teacher's Guide</span></b><i>EN · v1.0</i><u><span class="ar">اطلب</span><span class="en" lang="en">Request</span></u></a>
+      <a class="vol" href="mailto:aamer@asdubai.org?subject=Juthur%20%E2%80%94%20The%20Manifesto"><b><span class="ar">الميثاقُ والبيان</span><span class="en" lang="en">The Manifesto</span></b><i>v2.0 · AR / EN</i><u><span class="ar">اطلب</span><span class="en" lang="en">Request</span></u></a>
+    </div>
+
+    <p class="rev" style="margin-top:2rem;font-size:.9rem;color:var(--ink-70)">
+      <span class="ar">الأعمالُ الكاملةُ محفوظةُ الحقوق · Amer (2024). للحصولِ عليها أو للتعاونِ التربويِّ والبحثيّ: <a href="mailto:aamer@asdubai.org" style="color:var(--gold-aa)">aamer@asdubai.org</a></span>
+      <span class="en" lang="en">The complete works are rights-reserved · Amer (2024). For access or educational and research collaboration: <a href="mailto:aamer@asdubai.org" style="color:var(--gold-aa)">aamer@asdubai.org</a></span>
+    </p>
+    <svg class="tailpiece" viewBox="0 0 300 46" aria-hidden="true"><use href="#tailpiece"></use></svg>
+  </div>
+</section>
+
+<!-- THE CATALOGUE -->
+<section id="catalogue">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="eyebrow"><span class="plateno">VI b</span> <span class="ar">اللوحةُ السادسة · تابع</span><span class="en" lang="en">Plate VI · continued</span></span>
+      <h2><span class="ar">ف<span class="tk">ِ</span>ه<span class="tk">ْ</span>ر<span class="tk">ِ</span>س<span class="tk">ُ</span> الخ<span class="tk">ِ</span>زانة</span><span class="en" lang="en">The Catalogue</span></h2>
+      <p class="lede"><span class="ar">كلُّ عملٍ بالاسم. النصوصُ نفسُها محفوظةُ الحقوقِ — والقصصُ الحسّيّةُ الثلاثُ والخمسونَ مفتوحةٌ كاملةً في الرِّواقِ، وسائرُ الأعمالِ تُتاحُ عندَ الطلبِ — أمّا الفهرسُ فمفتوح، ليعرفَ القارئُ ما الذي يقفُ خلفَ الأرقام.</span><span class="en" lang="en">Every work by name. The 53 sensory stories are open in full in the Riwaq; the remaining texts are rights-reserved, available on request; the catalogue is open, so a reader can see what stands behind the counts.</span></p>
+      <p class="sample-link"><a href='/maktaba'><span class="ar">ادخلِ المكتبةَ المفتوحة: القصصُ كاملةً، والرفوفُ بحالِها ↤</span><span class="en" lang="en">Enter the open library — 53 stories in full, and the shelves as they stand</span></a></p>
+      
+      <hr class="rule">
+    </div>
+
+    <div class="rev">
+      <div class="cat-head">
+        <h3><span class="ar">القِصَصُ الحسّية</span><span class="en" lang="en">The Sensory Stories</span></h3>
+        <span class="tally"><span class="ar">٥٣ قصّة · ٨—١٢ سنة</span><span class="en" lang="en">53 stories · ages 8–12</span></span>
+      </div>
+      <ol class="cat"><li><span class="cn">١</span><b>مَدَّةُ الخَيْطِ</b><i>م-د-د</i></li><li><span class="cn">٢</span><b>مِحْوَرٌ يَدُورُ</b><i>د-و-ر</i></li><li><span class="cn">٣</span><b>ثِقَلٌ يَخِفُّ</b><i>ث-ق-ل</i></li><li><span class="cn">٤</span><b>وَمِضَةُ نُورٍ</b><i>ض-و-ء</i></li><li><span class="cn">٥</span><b>حَرْفٌ يَخْتَبِئُ</b><i>ب-ي-ن</i></li><li><span class="cn">٦</span><b>دِفْءُ الكَلِمَةِ</b><i>د-ف-أ</i></li><li><span class="cn">٧</span><b>حِوَارُ القَلَمِ</b><i>ق-ب-ض</i></li><li><span class="cn">٨</span><b>رَقْصَةُ الخُطْوَةِ</b><i>م-ش-ي</i></li><li><span class="cn">٩</span><b>حَافَّةُ المَسَافَةِ</b><i>ل-م-س</i></li><li><span class="cn">١٠</span><b>تَرْجِيحُ المِحْوَرِ</b><i>ع-د-ل</i></li><li><span class="cn">١١</span><b>ثُبُوتُ القَاعِدَةِ</b><i>ث-ب-ت</i></li><li><span class="cn">١٢</span><b>بُرُودَةٌ وَدِفْءٌ</b><i>ب-ر-د</i></li><li><span class="cn">١٣</span><b>تَوَقُّفُ الرَّكْضِ</b><i>ر-ك-ض</i></li><li><span class="cn">١٤</span><b>طُولُ الذِّرَاعِ</b><i>ط-و-ل</i></li><li><span class="cn">١٥</span><b>سُقُوطٌ مُرَتَّبٌ</b><i>س-ق-ط</i></li><li><span class="cn">١٦</span><b>نَفْخَةٌ تَنْتَظِمُ</b><i>ن-ف-خ</i></li><li><span class="cn">١٧</span><b>مَيْلُ الجِذْعِ</b><i>م-ي-ل</i></li><li><span class="cn">١٨</span><b>قُرْبُ المَصْدَرِ</b><i>ق-ر-ب</i></li><li><span class="cn">١٩</span><b>تَتَبُّعُ السُّرْعَةِ</b><i>س-ر-ع</i></li><li><span class="cn">٢٠</span><b>صَوْتُ القَطْرَةِ</b><i>و-ق-ع</i></li><li><span class="cn">٢١</span><b>زَلَقَةُ الخَيْطِ</b><i>ز-ل-ق</i></li><li><span class="cn">٢٢</span><b>ذَوَبَانُ الطَّعْمِ</b><i>ذ-و-ب</i></li><li><span class="cn">٢٣</span><b>اتِّجَاهُ الهَبَّةِ</b><i>ه-ب-ب</i></li><li><span class="cn">٢٤</span><b>وَمِيضُ الضَّوْءِ</b><i>و-م-ض</i></li><li><span class="cn">٢٥</span><b>دَقَّاتُ ما بعدَ الجَرْيِ</b><i>د-ق-ق</i></li><li><span class="cn">٢٦</span><b>حَافَّةُ السَّطْحَيْنِ</b><i>ح-ف-ف</i></li><li><span class="cn">٢٧</span><b>مَوْجَةُ القَارِبِ</b><i>م-و-ج</i></li><li><span class="cn">٢٨</span><b>وَقْفَةُ الظِّلِّ</b><i>و-ق-ف</i></li><li><span class="cn">٢٩</span><b>صَدًى يَسْكُنُ العَظْمَ</b><i>ح-ف-ظ</i></li><li><span class="cn">٣٠</span><b>النَّبْتَةُ التي رَفَضَتِ العَجَلَةَ</b><i>ط-ل-ع</i></li><li><span class="cn">٣١</span><b>حِوَارٌ بَيْنَ كَفٍّ وَثِقَلٍ</b><i>س-ح-ب</i></li><li><span class="cn">٣٢</span><b>يَدَانِ تَتَّسِعَانِ لِلفَرَاغِ</b><i>ك-ف-ل</i></li><li><span class="cn">٣٣</span><b>النُّقْطَةُ الأُولَى</b><i>ب-د-ء</i></li><li><span class="cn">٣٤</span><b>عِنْدَ الحَدِّ</b><i>و-ص-ل</i></li><li><span class="cn">٣٥</span><b>ما لا أَرَاهُ</b><i>ع-ل-م</i></li><li><span class="cn">٣٦</span><b>صَوْتُ «هُنَا»</b><i>ن-ظ-م</i></li><li><span class="cn">٣٧</span><b>أَثَرٌ في الهَوَاءِ</b><i>ر-س-م</i></li><li><span class="cn">٣٨</span><b>أَنْصِتِي إلى أَسْفَلَ</b><i>س-ل-م</i></li><li><span class="cn">٣٩</span><b>الرَّائِحَةُ تُفَاجِئُ</b><i>ش-م-م</i></li><li><span class="cn">٤٠</span><b>طَبَقَةٌ بَعْدَ طَبَقَةٍ</b><i>ذ-و-ق</i></li><li><span class="cn">٤١</span><b>صَوْتٌ في الصَّدْرِ</b><i>ص-و-ت</i></li><li><span class="cn">٤٢</span><b>العَيْنُ التي تَتَّسِعُ</b><i>ن-ظ-ر</i></li><li><span class="cn">٤٣</span><b>رَاحَةٌ تَسَعُ الضِّدَّيْنِ</b><i>ل-م-س</i></li><li><span class="cn">٤٤</span><b>رَقْصَةُ الكَاحِلِ</b><i>و-ز-ن</i></li><li><span class="cn">٤٥</span><b>الهَوَاءُ الذي يَنْتَظِرُ</b><i>ح-ب-س</i></li><li><span class="cn">٤٦</span><b>لَسْعَةٌ ثُمَّ دِفْءٌ</b><i>ص-ف-ق</i></li><li><span class="cn">٤٧</span><b>الانْحِنَاءُ الذي لا يَكْسِرُ</b><i>ح-ن-و</i></li><li><span class="cn">٤٨</span><b>سِرُّ الحَلْقِ</b><i>ه-م-س</i></li><li><span class="cn">٤٩</span><b>مَسْكَةُ الحَجَرِ</b><i>م-س-ك</i></li><li><span class="cn">٥٠</span><b>دَفْعَةُ الثَّبَاتِ</b><i>د-ف-ع</i></li><li><span class="cn">٥١</span><b>لَوْيَةُ الجِذْعِ</b><i>ل-و-ي</i></li><li><span class="cn">٥٢</span><b>وَثْبَةٌ تَمْتَصُّ</b><i>ق-ف-ز</i></li><li><span class="cn">٥٣</span><b>تَمَوُّجُ الهَوَاءِ</b><i>س-ب-ح</i></li></ol>
+      <p class="cat-note"><span class="ar">إلى جانب كلِّ عنوانٍ جذرُهُ الثلاثيّ — فالقصّةُ مبنيّةٌ على مخرجِ حروفِه وعلى حركةٍ في الجسد. ولكلِّ قصّةٍ صندوقُ مرشدٍ لا يراه الطفل.</span><span class="en" lang="en">Beside each title is its triliteral root — the story is built on the articulation of those letters and on one movement in the body. Each carries a mentor’s box the child never sees.</span></p>
+    </div>
+
+    <div class="rev" style="margin-top:clamp(2.6rem,5vw,3.8rem)">
+      <div class="cat-head">
+        <h3><span class="ar">أسفارُ البَيان</span><span class="en" lang="en">The Bayān Books</span></h3>
+        <span class="tally"><span class="ar">٢٠ سِفراً · أربعةُ مقامات · ٤—١٩ سنة</span><span class="en" lang="en">20 books · four stages · ages 4–19</span></span>
+      </div>
+      <div class="stage-row"><span class="st">البَذْرة</span><span class="bd">A1 · ٤—٧</span></div><ol class="cat cat-tight"><li><span class="cn">١</span><b>نَفَسُ البَذْرة</b></li><li><span class="cn">٢</span><b>صَوْتُ البَذْرة</b></li><li><span class="cn">٣</span><b>نَظْرَةُ البَذْرة</b></li></ol><div class="stage-row"><span class="st">البُرْعُم</span><span class="bd">A1 · ٤—٧</span></div><ol class="cat cat-tight"><li><span class="cn">٤</span><b>إنصاتُ البُرْعُم</b></li><li><span class="cn">٥</span><b>سؤالُ البُرْعُم</b></li><li><span class="cn">٦</span><b>لُطْفُ البُرْعُم</b></li><li><span class="cn">٧</span><b>حِكايةُ البُرْعُم</b></li></ol><div class="stage-row"><span class="st">الغُصْن</span><span class="bd">B1 · ٨—١٢</span></div><ol class="cat cat-tight"><li><span class="cn">٨</span><b>نَغْمةُ الغُصْن</b></li><li><span class="cn">٩</span><b>إيماءُ الغُصْن</b></li><li><span class="cn">١٠</span><b>حِوارُ الغُصْن</b></li><li><span class="cn">١١</span><b>عُذْرُ الغُصْن</b></li></ol><div class="stage-row"><span class="st">الأوراق</span><span class="bd">B1 · ٨—١٢</span></div><ol class="cat cat-tight"><li><span class="cn">١٢</span><b>تَعاطُفُ الأوراق</b></li><li><span class="cn">١٣</span><b>خِلافُ الأوراق</b></li><li><span class="cn">١٤</span><b>صَمْتُ الأوراق</b></li><li><span class="cn">١٥</span><b>شُورى الأوراق</b></li></ol><div class="stage-row"><span class="st">الثَّمَرة</span><span class="bd">B2 · ١٣—١٥</span></div><ol class="cat cat-tight"><li><span class="cn">١٦</span><b>قَناعةُ الثَّمَرة</b></li><li><span class="cn">١٧</span><b>نَبْرُ الثَّمَرة</b></li><li><span class="cn">١٨</span><b>سِياقةُ الثَّمَرة</b></li></ol><div class="stage-row"><span class="st">الحَصاد</span><span class="bd">C1 · ١٦—١٩</span></div><ol class="cat cat-tight"><li><span class="cn">١٩</span><b>حِكْمةُ الحَصاد</b></li><li><span class="cn">٢٠</span><b>جُذورُ الحَصاد</b></li></ol>
+      <p class="cat-note"><span class="ar">قوسٌ واحدٌ من النَّفَسِ إلى الحصاد: الذاتُ أولاً (نَفَس · صوت · نظرة · إنصات · سؤال · لطف · حكاية)، ثمّ أدواتُ التعبير، ثمّ الجماعة، ثمّ الحكمة. المحاذاةُ بـCEFR استرشاديّةٌ لا قياسيّة.</span><span class="en" lang="en">One arc from breath to harvest: the self first, then the tools of expression, then the group, then wisdom. The CEFR alignment is indicative, not a standard.</span></p>
+    </div>
+
+    <div class="rev" style="margin-top:clamp(2.6rem,5vw,3.8rem)">
+      <div class="cat-head">
+        <h3><span class="ar">المَلاحِمُ التِّسْع</span><span class="en" lang="en">The Nine Epics</span></h3>
+        <span class="tally"><span class="ar">سلسلةُ الأدبِ الحِسّيّ · CEFR B2–C1 · ١٢+</span><span class="en" lang="en">A Sensory Literature Series · CEFR B2–C1 · ages 12+</span></span>
+      </div>
+      <ol class="epics"><li><span class="cn">I</span><div><b>جَزِيرَةُ النَّشاط<em class="latin"> · The Island of Busyness</em></b><s>أوّلُ مَرْفَأٍ… وأوّلُ قِناعٍ يَنقَلِب</s><i>الانتباه · المتقدّمُ الأدنى</i><u>الاسمُ نشاطٌ والواقعُ سُبات — والأسماءُ قد تكونُ أوّلَ الكذب.</u></div></li><li><span class="cn">II</span><div><b>جَزِيرَةُ المَرايا<em class="latin"> · The Island of Mirrors</em></b><s>حيثُ يلتقي المرءُ وَجهَهُ الذي يَهربُ منه</s><i>الصِّدقُ مع النفس · المتقدّمُ الأدنى</i><u>الصورةُ قد تَكذِبُ أكثرَ من الاسم.</u></div></li><li><span class="cn">III</span><div><b>جَزِيرَةُ الجُود</b><i>الكرمُ الحقيقيّ · المتقدّمُ الأوسط</i><u>الاسمُ كرمٌ والقلوبُ أقفال.</u></div></li><li><span class="cn">IV</span><div><b>جَزِيرَةُ السَّلام</b><i>السلامُ لا الخمول · المتقدّمُ الأوسط</i><u>سكونٌ يُخفي حرباً، وسلامٌ يُولَدُ من المواجهة.</u></div></li><li><span class="cn">V</span><div><b>جَزِيرَةُ الأبطال</b><i>البطولةُ الصامتة · المتقدّمُ الأوسط</i><u>الأبطالُ تماثيل، والبطلُ الحيُّ منسيّ.</u></div></li><li><span class="cn">VI</span><div><b>جَزِيرَةُ الحُرّيّة</b><i>الحرّيّةُ المسؤولة · المتقدّمُ الأعلى</i><u>كلُّ شيءٍ مباح، فلا أحدَ حُرّ.</u></div></li><li><span class="cn">VII</span><div><b>جَزِيرَةُ الحِكمة</b><i>الحكمةُ لا المعرفة · المتقدّمُ الأعلى</i><u>يُجمَعُ العلمُ ويُفقَدُ الفهم.</u></div></li><li><span class="cn">VIII</span><div><b>جَزِيرَةُ القَمَر</b><i>النورُ المُستعار · المُبدع</i><u>يضيءُ الجميعُ بضوءِ غيرِهم.</u></div></li><li><span class="cn">IX</span><div><b>جَزِيرَةُ العَوْدة</b><i>الكنزُ كان البداية · المُبدع</i><u>يكتشفُ سندبادُ أنّ المرفأَ الأوّلَ هو الكنز.</u></div></li></ol>
+      <p class="cat-note" style="border-inline-start:3px solid var(--terra);padding-inline-start:1rem;margin-bottom:1.1rem"><span class="ar"><b style="color:var(--terra)">تنبيهُ محتوى (١٢+).</b> تتناولُ الملاحمُ الفقدَ والخوفَ ومواجهةَ الظلّ، وفيها مجازٌ عن الاستغلالِ التاريخيِّ للشعوب. كُتِبت للنقاشِ الصفّيِّ الموجَّهِ لا للقراءةِ المنفردة، ويُنصَحُ بإطلاعِ إدارةِ المدرسةِ وأولياءِ الأمورِ عليها قبلَ اعتمادِها. وتوصيفُ CEFR هنا يصفُ <b>تعقيدَ النصّ</b> لا كفايةَ القارئِ اللغويّة؛ فالجمهورُ ناطقون بالعربيّةِ لغةً أُمّاً أو وراثيّة.</span><span class="en" lang="en"><b style="color:var(--terra)">Content note (12+).</b> The epics deal with loss, fear and facing one’s shadow, and carry an allegory of historical exploitation. They are written for guided classroom discussion, not solitary reading; school leadership and families should see them before adoption. The CEFR band describes <b>textual complexity</b>, not reader proficiency — the audience are native and heritage speakers of Arabic.</span></p>
+      <p class="cat-note"><span class="ar">تسعُ جزائرَ ومَرفأُ عَوْدة. كلُّ جزيرةٍ تحملُ اسمَ فضيلةٍ ويُخفي واقعُها نقيضَها، ولكلٍّ قيمتُها الجوهريّةُ ومستواها النمائيّ — من الحضورِ إلى الإبداع. والذهبُ خيطٌ جامعٌ يربطُها كما يربطُ الجذرُ أغصانَه.</span><span class="en" lang="en">Nine islands and one harbour of return. Each island bears the name of a virtue and hides its opposite; each carries its core value and its developmental level — from presence to creation. Gold is the thread that binds them, as a root binds its branches.</span></p>
+    </div>
+
+    <div class="rev" style="margin-top:clamp(2.6rem,5vw,3.8rem)">
+      <div class="cat-head">
+        <h3><span class="ar">النُّصوصُ التأسيسيّة · أصواتُ الجُذور</span><span class="en" lang="en">The Foundational Texts · Voices of the Roots — Tales of a Child from the Emirates</span></h3>
+        <span class="tally"><span class="ar">٢٨ قصّة · سبعُ حِزَم · ٦—٨ سنوات</span><span class="en" lang="en">28 stories · seven bundles · ages 6–8</span></span>
+      </div>
+      <p class="cat-note" style="margin:0 0 1rem;border-inline-start:3px solid var(--sage);padding-inline-start:1rem"><span class="ar"><b>مبدأُ التتابع.</b> يُرتَّبُ الحرفُ هنا بمعيارِ <b>قابليّةِ التجسُّد</b> لا بالتواترِ ولا بالترتيبِ المُعجميِّ وحدَه: يُفتَتَحُ بالباءِ لأنّها شفويّةٌ انفجاريّةٌ — الشفتانِ تنطبقانِ فيراهما الطفلُ ويشعرُ بهما، فهي أظهرُ المخارجِ للعينِ واليد. ويُختَمُ بالهمزةِ لأنّها حَبْسةٌ حنجريّةٌ لا شفةَ فيها تُرى ولا لسانَ يُلمَس، وهي أعقدُ الحروفِ رسماً (أ إ ؤ ئ ء). وما بينهما على الترتيبِ الهجائيِّ استبقاءً للاتّصالِ الثقافيِّ وسهولةِ الرجوع. <b>وهذا التتابعُ فرضيّةٌ قابلةٌ للاختبار، لا عُرفٌ موروث.</b></span><span class="en" lang="en"><b>The sequencing principle.</b> Letters here are ordered by <b>embodiability</b>, not by frequency nor by the lexical order alone: it opens with <i>bāʾ</i> because it is a bilabial plosive — the lips close where the child can both see and feel them, making it the most visible articulation in Arabic. It closes with <i>hamza</i> because it is a glottal stop with no visible lip and no touchable tongue, and the most complex letter orthographically. Between them the alphabetical order is kept for cultural continuity and ease of reference. <b>This sequence is a testable hypothesis, not an inherited convention.</b></span></p>
+      <p class="cat-note" style="margin:0 0 1.2rem"><span class="ar">قصّةٌ لكلِّ حرفٍ من حروفِ العربيّةِ الثمانيةِ والعشرين، في سبعِ حِزَمٍ رُباعيّة. ولا يُدرَّسُ الحرفُ فيها مجرّداً، بل يُعلَّقُ على عُنصرٍ من البيئةِ الإماراتيّةِ يُنتِجُ مَخرَجَه في الجسد.</span><span class="en" lang="en">One story for each of the twenty-eight Arabic letters, in seven bundles of four. The letter is never taught bare: each hangs on an element of the Emirati landscape that produces its articulation in the body.</span></p>
+      <ol class="islands"><li><span class="cn">ب</span><div><b>البَحْر</b><i>ب · م · و</i><u>انغلاقُ الشفتينِ ودَفعةُ الهواء — حَبلُ المرسى والعُقدة.</u></div></li><li><span class="cn">د</span><div><b>البِئْر</b><i>د · ذ · ن</i><u>إيقاعُ القَطرةِ وثِقَلُ الدَّلوِ الصاعد.</u></div></li><li><span class="cn">خ</span><div><b>الخَيْمة</b><i>خ · ش · ف</i><u>القُماشُ في الريحِ، والثَّبَاتُ الذي لا يُقاوِم.</u></div></li><li><span class="cn">ث</span><div><b>الغَاف</b><i>ث · ع · غ</i><u>بُرودةُ الظِّلِّ وهواءٌ رقيقٌ بين الأسنان.</u></div></li><li><span class="cn">ل</span><div><b>السَّجَّادة</b><i>ل · م · ي</i><u>انسيابُ اليدِ على الوَبَرِ والخيطِ المرسوم.</u></div></li><li><span class="cn">ك</span><div><b>الكُبَّةُ والجَرَّة</b><i>ك · ص · ض · ق</i><u>الطَّرْقُ على الفَخّارِ وصداهُ في الصَّدر.</u></div></li><li><span class="cn">ف</span><div><b>الفَلَج</b><i>ف · ل · ج</i><u>جريانُ الماءِ في المَجرى وصوتُه تحتَ القَدَم.</u></div></li></ol>
+      <p class="cat-note" style="margin:1.4rem 0 .8rem"><span class="ar">الثمانيةُ والعشرون كاملةً، وإلى جانبِ كلٍّ حرفُها:</span><span class="en" lang="en">All twenty-eight, each beside its letter:</span></p><ol class="cat cat-tight" style="columns:2"><li><span class="cn">١</span><b>حَبْلُ المَرْسَى</b><i>ب</i></li><li><span class="cn">٢</span><b>خَيْمَةُ تالا والرِّيح</b><i>ت</i></li><li><span class="cn">٣</span><b>دَلْوُ ثامِر</b><i>ث</i></li><li><span class="cn">٤</span><b>جُمانةُ والنَّسيم</b><i>ج</i></li><li><span class="cn">٥</span><b>حَبْلُ حاتِمٍ والعُقدةُ المُعَقَّدة</b><i>ح</i></li><li><span class="cn">٦</span><b>خَيْمةُ خالِدٍ والثُّقبُ الصغير</b><i>خ</i></li><li><span class="cn">٧</span><b>دَلْوُ دُعاءَ والبِئرُ الجافّة</b><i>د</i></li><li><span class="cn">٨</span><b>ذُبابةُ ذاكِرٍ وحُبوبُ اللَّقاح</b><i>ذ</i></li><li><span class="cn">٩</span><b>العَرَبةُ والرِّمال</b><i>ر</i></li><li><span class="cn">١٠</span><b>زَينةُ والنَّحلة</b><i>ز</i></li><li><span class="cn">١١</span><b>سارةُ والعَجين</b><i>س</i></li><li><span class="cn">١٢</span><b>شَيْمَاءُ والمَطَر</b><i>ش</i></li><li><span class="cn">١٣</span><b>الجِرَّةُ والصَّبر</b><i>ص</i></li><li><span class="cn">١٤</span><b>ظِلُّ ضُحى</b><i>ض</i></li><li><span class="cn">١٥</span><b>طارِقٌ والبابُ العالِق</b><i>ط</i></li><li><span class="cn">١٦</span><b>ظافِرٌ وبَرَكةُ الفَلَج</b><i>ظ</i></li><li><span class="cn">١٧</span><b>الغِطاءُ والبِئر</b><i>ع</i></li><li><span class="cn">١٨</span><b>غادةُ والصَّدى</b><i>غ</i></li><li><span class="cn">١٩</span><b>فاطِمةُ والسِّتارة</b><i>ف</i></li><li><span class="cn">٢٠</span><b>قَيسٌ والضَّوءُ الهادِئ</b><i>ق</i></li><li><span class="cn">٢١</span><b>الكُبَّةُ والبَهارات</b><i>ك</i></li><li><span class="cn">٢٢</span><b>لِينا والسَّلَّة</b><i>ل</i></li><li><span class="cn">٢٣</span><b>مَرْيَمُ والرَّحَى</b><i>م</i></li><li><span class="cn">٢٤</span><b>نادِرٌ واللَّيل</b><i>ن</i></li><li><span class="cn">٢٥</span><b>الصُّندوقُ والبُخار</b><i>هـ</i></li><li><span class="cn">٢٦</span><b>وَردةُ والطَّوقُ الفارِغ</b><i>و</i></li><li><span class="cn">٢٧</span><b>يارا والسَّجّادة</b><i>ي</i></li><li><span class="cn">٢٨</span><b>آسِرٌ والفَجر</b><i>ء</i></li></ol>
+      <p class="cat-note" style="opacity:.92"><span class="ar"><b>قاعدةُ التسمية مكتملة: ٢٨/٢٨.</b> اسمُ كلِّ طفلٍ يبدأُ بحرفِ قصّتِه، ولا يتكرَّرُ اسم — من باسِمٍ في الباءِ إلى أَيمَنَ في الهمزة. <b>وأربعُ قصصٍ تنتهي ولمّا يبلغِ الطفلُ ما أراد</b> (٣ · ١٥ · ٢٠ · ٢٧): الدلوُ لا يصعد، والبابُ لا ينفتح، والجمرةُ لا تشتعل، والخيطُ لا يثبت. والانتباهُ ينجحُ في كلِّها — النتيجةُ وحدَها تتأخّر.</span><span class="en" lang="en"><b>The naming rule is complete: 28/28.</b> Each child’s name begins with the letter of their story, and no name repeats — from Bāsim at <i>bāʾ</i> to Ayman at <i>hamza</i>. <b>And four stories end before the child gets what he wanted</b> (3 · 15 · 20 · 27): the bucket does not rise, the door does not open, the ember does not catch, the thread does not hold. The attention succeeds in every one — only the result is delayed.</span></p>
+    </div>
+
+    <div class="cat-pending rev">
+      <span class="ar">الفهرسُ يُستكمَلُ تباعاً — والمُتونُ محفوظةُ الحقوق تُتاحُ عند الطلب.</span><span class="en" lang="en">The catalogue is completed in stages — the texts themselves remain rights-reserved, available on request.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── METHOD / HOW TO BEGIN ──────────────── -->
+<section id="method">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="eyebrow"><span class="plateno">VII</span> <span class="ar">اللوحةُ السابعة · للمعلّمِ والمدرسة</span><span class="en" lang="en">Plate VII · For Teachers &amp; Schools</span></span>
+      <h2><span class="ar">أو<span class="tk">ّ</span>ل<span class="tk">ُ</span> الغ<span class="tk">َ</span>يث</span><span class="en" lang="en">The First Rain</span></h2>
+      <p class="lede"><span class="ar">أربعُ خطواتٍ عمليّةٍ لإدخالِ جُذور إلى صفّك — من الفهمِ إلى التطبيق.</span><span class="en" lang="en">Four practical steps to bring Juthur into your classroom — from understanding to practice.</span></p>
+      <hr class="rule">
+    </div>
+    <div class="grid g4">
+      <div class="step rev">
+        <span class="num"><span class="ar">١</span><span class="en" lang="en">One</span></span>
+        <h3><span class="ar">افهمِ الإطار</span><span class="en" lang="en">Understand the framework</span></h3>
+        <p><span class="ar">اقرأ «ما جُذور» والنظريةَ والمكوّنات؛ لتعرفَ كيفَ يتقاطعُ الحرفُ والصوتُ واللّمس.</span><span class="en" lang="en">Read what Juthur is, the theory, and the materials — how letter, sound, and touch cross.</span></p>
+        <p style="margin-top:.9rem"><a href="#theory" style="color:var(--gold-aa);text-decoration:none;font-size:.86rem"><span class="ar">إلى النظرية ←</span><span class="en" lang="en">To the theory →</span></a></p>
+      </div>
+      <div class="step rev">
+        <span class="num"><span class="ar">٢</span><span class="en" lang="en">Two</span></span>
+        <h3><span class="ar">ابدأ من البذرة</span><span class="en" lang="en">Begin at the Seed</span></h3>
+        <p><span class="ar">أوّلُ مراحلِ سُلَّمِ الشّجرة — بكتبِ البذرةِ والتأسيسيّاتِ الـ٢٨.</span><span class="en" lang="en">The first stage of the Tree of Growth — the Seed books and the 28 foundational texts.</span></p>
+        <p style="margin-top:.9rem"><a href="#levels" style="color:var(--gold-aa);text-decoration:none;font-size:.86rem"><span class="ar">إلى السُّلَّم ←</span><span class="en" lang="en">To the ladder →</span></a></p>
+      </div>
+      <div class="step rev">
+        <span class="num"><span class="ar">٣</span><span class="en" lang="en">Three</span></span>
+        <h3><span class="ar">اقرأ دليلَ المعلّم</span><span class="en" lang="en">Read the Teacher's Guide</span></h3>
+        <p><span class="ar">الدليلُ التطبيقيُّ للجلساتِ الصفّية، مجّانيٌّ عندَ الطلب.</span><span class="en" lang="en">The applied classroom guide, free on request.</span></p>
+        <p style="margin-top:.9rem"><a href="#cabinet" style="color:var(--gold-aa);text-decoration:none;font-size:.86rem"><span class="ar">افتحِ الدليل ←</span><span class="en" lang="en">Open the guide →</span></a></p>
+      </div>
+      <div class="step rev">
+        <span class="num"><span class="ar">٤</span><span class="en" lang="en">Four</span></span>
+        <h3><span class="ar">تواصل للتعاون</span><span class="en" lang="en">Reach out</span></h3>
+        <p><span class="ar">للأعمالِ الكاملة، أو تدريبِ المعلّمين، أو الشّراكةِ المدرسية.</span><span class="en" lang="en">For the complete works, teacher training, or a school partnership.</span></p>
+        <p style="margin-top:.9rem"><a href="mailto:aamer@asdubai.org?subject=Juthur%20%E2%80%94%20School%20adoption" style="color:var(--gold-aa);text-decoration:none;font-size:.86rem"><span class="ar">راسِلْنا ←</span><span class="en" lang="en">Email us →</span></a></p>
+      </div>
+    </div>
+    <p class="cat-note rev" style="border:1px solid var(--terra);padding:1.1rem 1.3rem;margin-top:2.2rem"><span class="ar"><b style="color:var(--terra)">حدُّ اللمس.</b> كلُّ حركةٍ في موادِّ جُذور <b>يؤدّيها الطفلُ بنفسِه</b>. لا يضعُ المرافقُ يدَه على صدرِ الطفلِ ولا حلقِه ولا وجهِه ولا شفتيه في أيِّ نشاط. وإن احتاجَ الطفلُ نموذجاً، أدّاه المرافقُ على نفسِه ليُقلَّد. ومَن لم يُرِد أداءَ حركةٍ لا يُلَحُّ عليه ولا يُسأَلُ عن السبب.</span><span class="en" lang="en"><b style="color:var(--terra)">The touch limit.</b> Every movement in Juthur materials is <b>performed by the child on themselves</b>. A companion does not place their hand on a child’s chest, throat, face or lips in any activity. If a child needs a model, the companion performs it on themselves. A child who declines a movement is neither pressed nor asked why.</span></p>
+
+    <div class="handbook rev">
+      <div class="hb-plate">
+        <span class="n">10</span>
+        <p class="t">THE<br>DAILY<br>TEN</p>
+        <span class="s">Juthur · v1.1<br>CC BY-NC-SA 4.0</span>
+      </div>
+      <div>
+        <span class="eyebrow"><span class="ar">كتيّبٌ للصفّ · مجّانيّ</span><span class="en" lang="en">A classroom handbook · free</span></span>
+        <h3><span class="ar">العَشْرُ اليوميّة · <span lang="en" dir="ltr">The Daily Ten</span></span><span class="en" lang="en">The Daily Ten</span></h3>
+        <p style="margin-top:.5rem;font-style:italic"><span class="ar">بِناءُ الانتباهِ والذّاكرةِ والتّركيزِ — في أيِّ صفّ، وأيِّ مادّةٍ، وأيِّ عُمر.</span><span class="en" lang="en">Building attention, memory and focus — in any classroom, any subject, any age.</span></p>
+        <p><span class="ar">عشرةُ روتيناتٍ، أطولُها عشرُ دقائق، ولا يحتاجُ شيءٌ منها إلى جهازٍ أو ميزانيةٍ أو إذن. وكلُّ رافعةٍ فيها تحمِلُ درجةَ دليلِها مكشوفةً — وما لا دليلَ عليهِ مَذكورٌ في جدولِ رفضٍ صريح.</span><span class="en" lang="en">Ten routines, none longer than ten minutes, none needing equipment, budget or permission. Every lever carries its evidence grade in the open — and what the evidence does not support is named in a table of its own.</span></p>
+        <div class="grades">
+          <span class="grade s">Strong</span><span class="grade m">Moderate</span><span class="grade p">Promising</span>
+        </div>
+        <a class="hb-get" href="assets/The_Daily_Ten.docx"><span class="ar">حمّلِ الكتيّب ←</span><span class="en" lang="en">Download the handbook →</span></a>
+        <span class="hb-meta"><span class="ar">بالإنجليزية · الإصدار ١٫١ · يوليو ٢٠٢٦ · د. عادل ف. عامر</span><span class="en" lang="en">In English · v1.1 · July 2026 · Dr. Adel F. Amer</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RESEARCH — corrected 19 July 2026 ──── -->
+<section class="plate" id="research">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="eyebrow"><span class="plateno">VIII</span> <span class="ar">اللوحةُ الثامنة · علمٌ مفتوح</span><span class="en" lang="en">Plate VIII · Open Science</span></span>
+      <h2><span class="ar">الب<span class="tk">َ</span>ي<span class="tk">ِّ</span>ن<span class="tk">َ</span>ة<span class="tk">ُ</span> والب<span class="tk">ُ</span>رهان</span><span class="en" lang="en">The Evidence</span></h2>
+      <p class="lede"><span class="ar">خمسُ مخطوطاتٍ قيدَ التحكيمِ الآن، ودراسةٌ مُسجَّلةٌ مُسبقاً ببياناتٍ مفتوحةٍ على OSF.</span><span class="en" lang="en">Five manuscripts currently under review, and a preregistered study with open data on OSF.</span></p>
+      <p class="evidence-updated"><span class="ar">آخرُ تحديثٍ لحالةِ الأدلة: <b>١٧ أغسطس ٢٠٢٦</b></span><span class="en" lang="en">Evidence status last updated: 17 Aug 2026</span></p>
+      <hr class="rule">
+    </div>
+    <div class="ledger rev">
+      <div class="entry">
+        <span class="tag"><span class="ar">قيد التحكيم</span><span class="en" lang="en">Under review</span></span>
+        <p><span class="ar">إعادةُ ترتيبِ الهجائيةِ العربية — قضيّةُ «لا»</span><span class="en" lang="en">Reordering the Arabic Alphabet — the case of <em>lā</em></span><i>Al-ʿArabiyya · Georgetown University Press</i></p>
+      </div>
+      <div class="entry">
+        <span class="tag"><span class="ar">قيد التحكيم</span><span class="en" lang="en">Under review</span></span>
+        <p><span class="ar">دراسةُ الجدوى العنقوديةُ العشوائيةُ لنظريّةِ القراءةِ الملموسة</span><span class="en" lang="en">A cluster-randomized feasibility study of the Tactile Reading Theory</span><i>Early Child Development and Care</i></p>
+      </div>
+      <div class="entry">
+        <span class="tag"><span class="ar">قيد التحكيم</span><span class="en" lang="en">Under review</span></span>
+        <p><span class="ar">أداةُ RPI للقياسِ القرائيّ</span><span class="en" lang="en">The Relational Presence Index (RPI)</span><i>Journal of Psychoeducational Assessment</i></p>
+      </div>
+      <div class="entry">
+        <span class="tag"><span class="ar">قيد التحكيم</span><span class="en" lang="en">Under review</span></span>
+        <p><span class="ar">نظامُ ACTS</span><span class="en" lang="en">The ACTS system</span><i>CALICO Journal</i></p>
+      </div>
+      <div class="entry">
+        <span class="tag"><span class="ar">قيد التحكيم</span><span class="en" lang="en">Under review</span></span>
+        <p><span class="ar">التقطيعُ البصريُّ للنصِّ العربيّ</span><span class="en" lang="en">Peripheral-key orthographic chunking for Arabic</span><i>Interacting with Computers · Oxford University Press</i></p>
+      </div>
+      <div class="entry">
+        <span class="tag"><span class="ar">مُسجَّل مسبقاً</span><span class="en" lang="en">Preregistered</span></span>
+        <p><span class="ar">دراسةُ الجدوى مُسجَّلةٌ مُسبقاً، وبياناتُها ونصوصُها البرمجيةُ مفتوحةٌ على OSF</span><span class="en" lang="en">The feasibility study is preregistered; data and scripts open on OSF</span><i><a href="https://osf.io/2nwfq" style="color:var(--gold-soft)">osf.io/2nwfq</a></i></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATUS & EVIDENCE -->
+<section class="status" id="status">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="eyebrow"><span class="plateno">VIII b</span> <span class="ar">اللوحةُ الثامنة · تابع</span><span class="en" lang="en">Plate VIII · continued</span></span>
+      <h2><span class="ar">أين<span class="tk">َ</span> يقف<span class="tk">ُ</span> هذا العمل</span><span class="en" lang="en">Where This Work Stands</span></h2>
+      <p class="lede"><span class="ar">هذه الصفحةُ تُطبِّقُ على جُذور ما تُطبِّقُه «العَشْرُ اليوميّة» على غيرِها: كلُّ دعوى مقرونةٌ بدرجةِ دليلِها. والمشروعُ الذي يُعلنُ حدودَه أصعبُ على الخصمِ من الذي يُخفيها.</span><span class="en" lang="en">This page applies to Juthur what <em>The Daily Ten</em> applies to everyone else: every claim carries its evidence grade. A project that names its own limits is harder to argue with than one that hides them.</span></p>
+      <hr class="rule">
+    </div>
+
+    <div class="grade-rows rev">
+      <div class="grade-row">
+        <span class="g s"><span class="ar">قويّ</span><span class="en" lang="en">Strong</span></span>
+        <div><b><span class="ar">الإزاحة: الساعةُ أمامَ الشاشةِ ساعةٌ لا تُقرأُ ولا تُلمَسُ ولا تُحكى.</span><span class="en" lang="en">Displacement: an hour on a screen is an hour not read, not touched, not spoken.</span></b>
+        <i><span class="ar">حسابٌ لا ارتباط. والأنشطةُ الأربعُ المُزاحةُ لها أدلّةٌ مستقلّةٌ قويّة. هذا الجزءُ لا يحتاجُ إلى جُذور ليصحّ.</span><span class="en" lang="en">Arithmetic, not correlation. The four displaced activities each have strong independent evidence. This part is true without Juthur.</span></i></div>
+      </div>
+      <div class="grade-row">
+        <span class="g m"><span class="ar">متوسّط</span><span class="en" lang="en">Moderate</span></span>
+        <div><b><span class="ar">الترميزُ الحسّي-الحركيّ يُسنِدُ تعلُّمَ الحرف.</span><span class="en" lang="en">Sensorimotor encoding supports letter learning.</span></b>
+        <i><span class="ar">James &amp; Engelhardt (2012) و Longcamp وزملاؤها (2005). أقوى ما يكونُ في اكتسابِ الرسم، وأضعفُ عند الأكبرِ سنّاً. حقيقيٌّ وأصغرُ من الحماسةِ حولَه.</span><span class="en" lang="en">James &amp; Engelhardt (2012); Longcamp et al. (2005). Strongest for script acquisition, weaker for older learners. Real, and smaller than the enthusiasm around it.</span></i></div>
+      </div>
+      <div class="grade-row">
+        <span class="g n"><span class="ar">غيرُ مُختبَر</span><span class="en" lang="en">Untested</span></span>
+        <div><b><span class="ar">الدعوى الخاصّةُ بجُذور: أنّ تنظيمَ هذه الأفنانِ على المبادئِ الستّةِ يُنتِجُ أثراً تفاضليّاً في الاحتفاظِ المؤجَّل.</span><span class="en" lang="en">Juthur’s own claim: that organising these boughs on the six principles produces a differential effect on delayed retention.</span></b>
+        <i><span class="ar">لا دليلَ أثريَّ بعد. اللجنةُ المقارِنةُ الداخليّةُ سمّتها «الفجوةَ الكُبرى عالميّاً» أمام PATHS و Second Step و Roots of Empathy — وهي مدعومةٌ بتجاربَ ضابطةٍ عشوائيّة. ودراسةُ الجدوى مُسجَّلةٌ مُسبقاً ولم تُنشَر نتائجُها.</span><span class="en" lang="en">No efficacy evidence yet. The internal comparative panel named this the widest gap against PATHS, Second Step and Roots of Empathy, which are backed by randomised controlled trials. The feasibility study is preregistered; its results are not published.</span></i></div>
+      </div>
+      <div class="grade-row">
+        <span class="g n"><span class="ar">غيرُ مُقنَّن</span><span class="en" lang="en">Not validated</span></span>
+        <div><b><span class="ar">مقياسُ التزامِ الممارسة ومؤشّرُ اللَّذاذة: أداتا التزامٍ وملاحظة، لا أداتا نتيجة.</span><span class="en" lang="en">The Fidelity Scale and the Lathatha Log: instruments of implementation and observation, not of outcome.</span></b>
+        <i><span class="ar">تقيسُ إلى أيِّ مدًى نُفِّذت المبادئُ الستّةُ في الجلسة، لا ما تعلَّمَه الطفل — وهذا شرطٌ لازمٌ لأيِّ اختبارٍ للنظريّة: بدونه لا تُفرَّقُ النتيجةُ الصفريّةُ الناتجةُ عن بطلانِ الفرضيّةِ من الناتجةِ عن سوءِ التطبيق. ومخرجاتُ التعلُّمِ تُقاسُ بأدواتٍ مستقلّةٍ عن المشروع، ولا يُستعمَلُ أيٌّ منهما في تشخيصِ طفلٍ أو فرزِه.</span><span class="en" lang="en">They measure how far the six principles were implemented in a session, not what the child learned — a necessary condition for testing the theory at all: without it a null result cannot be told apart from poor implementation. Learning outcomes are measured with instruments independent of the project, and neither is used to diagnose or sort a child.</span></i></div>
+      </div>
+    </div>
+
+    <div class="head rev" style="margin:clamp(2.6rem,5vw,3.6rem) 0 0">
+      <h3 style="font-size:clamp(1.15rem,2.2vw,1.45rem)"><span class="ar">ما يُمكِنُ استعمالُه يومَ الاثنين</span><span class="en" lang="en">What you can use on Monday</span></h3>
+    </div>
+    <div class="ready rev">
+      <div><b><span class="ar">العَشْرُ اليوميّة</span><span class="en" lang="en">The Daily Ten</span></b><span class="c"><span class="ar">مجّانيّ · CC BY-NC-SA</span><span class="en" lang="en">Free · CC BY-NC-SA</span></span><p><span class="ar">عشرةُ روتيناتٍ صفّيّةٍ بدرجاتِ أدلّتِها. لا يحتاجُ إلى جُذور ولا إلى إذن.</span><span class="en" lang="en">Ten classroom routines with their evidence grades. Needs neither Juthur nor permission.</span></p></div>
+      <div><b><span class="ar">دليلُ المعلّم</span><span class="en" lang="en">The Teacher’s Guide</span></b><span class="c"><span class="ar">مجّانيّ · عند الطلب</span><span class="en" lang="en">Free · on request</span></span><p><span class="ar">الدليلُ التطبيقيُّ للجلساتِ الصفّية.</span><span class="en" lang="en">The applied guide for classroom sessions.</span></p></div>
+      <div><b><span class="ar">الميثاقُ والبيان</span><span class="en" lang="en">The Manifesto</span></b><span class="c"><span class="ar">مجّانيّ</span><span class="en" lang="en">Free</span></span><p><span class="ar">تصوُّرُ المشروعِ كاملاً بالعربيّةِ والإنجليزيّة.</span><span class="en" lang="en">The full conceptual account, Arabic and English.</span></p></div>
+      <div><b><span class="ar">الأعمالُ الكاملة</span><span class="en" lang="en">The complete works</span></b><span class="c"><span class="ar">الرِّواقُ مفتوحٌ (٥٣ قصّة) · والباقي بالمراسلة</span><span class="en" lang="en">The Riwaq is open (53 stories) · the rest by correspondence</span></span><p><span class="ar">١٢١ عملاً، فهرسُها الكاملُ يُرسَلُ بالمراسلة. الشروطُ والكلفةُ تُناقَشُ لكلِّ مدرسةٍ على حدة.</span><span class="en" lang="en">121 works; the complete index is sent by correspondence. Terms and cost are discussed school by school.</span></p></div>
+    </div>
+
+    <div class="portal rev" id="portal">
+      <h3><span class="ar">بوابةُ المؤسّساتِ والباحثين</span><span class="en" lang="en">The Institutions &amp; Researchers Portal</span></h3>
+      <p class="portal-lede"><span class="ar">للمدارسِ والجامعاتِ والجهات: قدِّم طلبَك هنا، ويُردُّ عليكَ بالمراسلة.</span><span class="en" lang="en">For schools, universities, and institutions: submit your request here; replies come by correspondence.</span></p>
+      <form action="/juthur/thanks/" class="portal-form" method="POST" name="portal" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="portal">
+        <p class="hp" aria-hidden="true"><label>لا تملأ هذا الحقل <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <label><span class="ar">الجهة</span><span class="en" lang="en">Institution</span>
+          <input type="text" name="institution" required dir="auto" autocomplete="organization"></label>
+        <label><span class="ar">البريد الإلكتروني</span><span class="en" lang="en">Email</span>
+          <input type="email" name="email" required dir="ltr" autocomplete="email"></label>
+        <label><span class="ar">نوعُ الطلب</span><span class="en" lang="en">Request type</span>
+          <select name="type">
+            <option>شراكة بحثية · Research partnership</option>
+            <option>اعتماد مدرسي · School adoption</option>
+            <option>ترخيص طباعة · Print licence</option>
+            <option>طلب الفهرس الكامل · Full index request</option>
+          </select></label>
+        <label><span class="ar">الهدف</span><span class="en" lang="en">Purpose</span>
+          <textarea name="purpose" rows="4" dir="auto"></textarea></label>
+        <button type="submit" class="press-cta portal-submit"><span class="ar">اطبعِ الطلبَ وأرسِلْه</span><span class="en" lang="en">Press &amp; send the request</span></button>
+      
+        <p class="privacy-note"><span class="ar">بياناتُكَ تُستخدَمُ للردِّ على طلبِكَ فقط، ولا تُشارَكُ معَ طرفٍ ثالث. الإرسالُ موافقةٌ على ذلك.</span><span class="en" lang="en">Your data is used only to answer this request and is never shared.</span></p>
+        </form>
+      <p class="portal-links"><a href='/support/'><span class="ar">للأفرادِ والمؤيِّدين: بوّابةُ المؤيِّدينَ والأفكار</span><span class="en" lang="en">Individuals &amp; supporters: the Supporters &amp; Ideas Portal</span></a> · <a href='/accessibility'><span class="ar">بيانُ الوصولية</span><span class="en" lang="en">Accessibility statement</span></a></p>
+    </div>
+
+    <p class="cat-note rev" style="margin-top:1.8rem"><span class="ar">ولم تُطبَّق جُذور في مدرسةٍ تطبيقاً موثَّقاً بعد. أوّلُ شريكٍ يدخلُ شراكةً بحثيّةً لا شراءَ منتَج — ويُنشَرُ ما يظهرُ، حَسُنَ أم ساء.</span><span class="en" lang="en">Juthur has not yet been implemented in a school under documented conditions. The first partner enters a research partnership, not a purchase — and what emerges is published, favourable or not.</span></p>
+  </div>
+</section>
+
+<!-- ── AUTHOR — corrected 19 July 2026 ─────── -->
+<section id="author">
+  <div class="wrap">
+    <div class="head rev">
+      <span class="eyebrow"><span class="plateno">IX</span> <span class="ar">اللوحةُ التاسعة · المؤلّف</span><span class="en" lang="en">Plate IX · The Author</span></span>
+      <h2><span class="ar">د. عادل ف. عامر</span><span class="en" lang="en">Dr. Adel F. Amer</span></h2>
+      <p class="lede"><span class="ar">رئيسُ قسمِ الدراساتِ العربيةِ والإسلامية (حاليّاً)</span><span class="en" lang="en">Head of Department, Arabic &amp; Islamic Studies (Present)</span></p>
+      <div class="idline">
+        <span><a href="https://orcid.org/0009-0008-9618-3863" target="_blank" rel="noopener" style="color:var(--gold-aa);text-decoration:underline">ORCID 0009-0008-9618-3863</a></span>
+        <span><a href="https://osf.io/2nwfq" style="color:var(--gold-aa);text-decoration:underline">OSF · osf.io/2nwfq</a></span>
+        <span><span class="ar">دبي</span><span class="en" lang="en">Dubai</span></span>
+      </div>
+      <hr class="rule" style="margin-top:1.8rem">
+    </div>
+
+    <div class="vitae rev">
+      <div>
+        <h3><span class="ar">المسيرة</span><span class="en" lang="en">Career</span></h3>
+        <ul>
+          <li><b><span class="ar">رئيسُ قسمِ الدراساتِ العربيةِ والإسلامية</span><span class="en" lang="en">Head of Department, Arabic &amp; Islamic Studies</span></b><span><span class="ar">حاليّاً</span><span class="en" lang="en">Present</span></span></li>
+          <li><b><span class="ar">عضوُ هيئةِ تدريس — جامعةُ جورجيا</span><span class="en" lang="en">Faculty — University of Georgia</span></b><span>2013 — 2021</span></li>
+          <li><b><span class="ar">مدرِّسٌ مشارك · ستارتوك — جامعةُ بريغهام يونغ</span><span class="en" lang="en">Associate Instructor · STARTALK — Brigham Young University</span></b><span>2010/2011 · 2011/2012</span></li>
+          <li><b><span class="ar">مسؤولُ برنامج ستارتوك — جامعةُ لويزيانا</span><span class="en" lang="en">STARTALK Program Director — Louisiana University</span></b><span>2008</span></li>
+          <li><b><span class="ar">رئيسُ قسمِ اللغاتِ العالمية — الكليةُ الأمريكيةُ بالقاهرة</span><span class="en" lang="en">Chair of World Languages — Cairo American College</span></b><span>2002 — 2013</span></li>
+          <li><b><span class="ar">مذيعٌ ومقدّمُ برامج — اتحادُ الإذاعةِ والتلفزيونِ المصري</span><span class="en" lang="en">Broadcaster &amp; Program Host — Egyptian Radio &amp; Television Union</span></b><span>1996 — 2002</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="ar">التكريمُ والشهادات</span><span class="en" lang="en">Recognition</span></h3>
+        <ul>
+          <li><b>Fulbright Specialist Roster — Early Childhood Education</b><span>2025 — 2028</span></li>
+          <li><b>ACTFL Certified Full Examiner</b><span>OPI &amp; WPT · Superior</span></li>
+          <li><b><span class="ar">إجازةٌ في تجويدِ القرآنِ والقراءاتِ العشر</span><span class="en" lang="en">Ijāza — Tajwīd &amp; the Ten Qirāʾāt</span></b></li>
+          <li><b><span class="ar">دكتوراه — جامعةُ عينِ شمس · مرتبةُ الشرفِ الأولى</span><span class="en" lang="en">Ph.D. — Ain Shams University · First Class Honors</span></b><span>2013</span></li>
+        </ul>
+        <h3 style="margin-top:2.2rem"><span class="ar">البحثُ والخدمة</span><span class="en" lang="en">Research &amp; Service</span></h3>
+        <ul>
+          <li><b><span class="ar">مؤسِّسُ مشروعِ جُذور</span><span class="en" lang="en">Founder — The Juthur Project</span></b><span>2024</span></li>
+          <li><b><span class="ar">نَظَرِيَّةُ القراءةِ الملموسة (TRT) وأداةُ RPI</span><span class="en" lang="en">Tactile Reading Theory (TRT) &amp; the RPI instrument</span></b><span>2026</span></li>
+          <li><b><span class="ar">مستشارٌ لغويّ — «عالم سمسم»</span><span class="en" lang="en">Linguistic Advisor — Alam Simsim</span></b><span>2001 — 2007</span></li>
+          <li><b><span class="ar">بعثاتٌ إنسانية · الحوارُ بينَ الأديان</span><span class="en" lang="en">Humanitarian missions · interfaith dialogue</span></b><span>2010 — <span class="ar">الآن</span><span class="en" lang="en">Present</span></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="rev" style="margin-top:2.4rem;font-size:.92rem;color:var(--ink-70)">
+      <span class="ar">للمراسلةِ برقيّاً — «جُذور، دبي» · وبالبريد:</span><span class="en" lang="en">Telegrams — “JUTHUR, DUBAI” · By post:</span>
+      <a href="mailto:aamer@asdubai.org" style="color:var(--gold-aa)">aamer@asdubai.org</a>
+    </p>
+  </div>
+</section>
+
+<!-- INVOCATION -->
+<section class="invocation">
+  <div class="narrow">
+    <p lang="ar" dir="rtl">ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ</p>
+    <span class="src"><span class="ar">سورة الفاتحة · ١:٦</span><span class="en" lang="en">Sūrat al-Fātiḥa · 1:6</span></span>
+  </div>
+</section>
+
+<!-- ── THE VERDICT ────────────────────────── -->
+<section class="plate verse">
+  <div class="narrow">
+    <span class="eyebrow"><span class="ar">الحُكم</span><span class="en" lang="en">The Verdict</span></span>
+    <p class="ayah" lang="ar" dir="rtl">﴿ أَفَمَن يَمْشِى مُكِبًّا عَلَىٰ وَجْهِهِۦٓ أَهْدَىٰٓ أَمَّن يَمْشِى سَوِيًّا عَلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ ﴾</p>
+    <p class="gloss" lang="en" dir="ltr">"Is he who walks fallen on his face better guided, or he who walks upright upon a straight path?"</p>
+    <span class="src"><span class="ar">سورة المُلك · ٢٢</span><span class="en" lang="en">Sūrat al-Mulk · 22</span></span>
+    <span class="fleuron" style="margin-top:3rem" aria-hidden="true">❦ ✦ ❦</span>
+    <p class="after" style="font-size:clamp(1.05rem,2.2vw,1.3rem);line-height:2;color:var(--paper)">
+      <span class="ar">إنّما يُقاسُ التعليمُ بما يُقيمُ من قاماتٍ،<br><b style="color:var(--gold-soft)">لا بما يُلَقَّنُ من كلماتٍ، أو يُؤخَذُ عن الشاشات.</b></span>
+      <span class="en" lang="en">Teaching is measured by the statures it raises —<br><b style="color:var(--gold-soft)">not by dictated words, nor lessons taken from screens.</b></span>
+    </p>
+  </div>
+</section>
+
+<!-- ── COLOPHON ───────────────────────────── -->
+</main>
+<section id="wings" style="padding:clamp(2rem,5vw,3.4rem) 0;opacity:1;transform:none;background:rgba(251,249,244,.55);border-top:1px solid #D9CFB4;border-bottom:1px solid #D9CFB4">
+  <div style="max-width:74rem;margin:0 auto;padding:0 clamp(1rem,4vw,2rem)">
+    <p style="text-align:center;font-size:.72rem;color:var(--gold-aa);margin:0 0 .3rem"><span style="font-family:Amiri,serif;letter-spacing:.04em;font-size:.95rem">جَناحَا الدَّار</span> · <span lang="en" dir="ltr" style="letter-spacing:.26em">THE TWO WINGS</span></p>
+    <h2 style="text-align:center;font-family:Amiri,serif;font-size:clamp(1.5rem,4vw,2.1rem);color:#1B3A2F;line-height:2;margin:.1rem 0 .6rem">
+      اليَدُ واللِّسان</h2>
+    <p style="text-align:center;font-family:Amiri,serif;max-width:60ch;margin:0 auto 1.4rem;color:#1B3A2F;line-height:2.1">
+      <span class="ar">أَرْبَعَةَ عَشَرَ سِفْرًا تُعَلِّمُ الطِّفْلَ أَنْ يَقْرَأ، وَعِشْرُونَ تُعَلِّمُهُ أَنْ يَتَكَلَّم.<br>
+      يَدٌ تُمْسِكُ الحَرْف، وَلِسَانٌ يَحْمِلُ المَعْنَى — وَكِلَاهُمَا يَبْدَأُ مِنَ الجَسَد.</span><span class="en" lang="en" style="font-family:Fraunces,Georgia,serif">Fourteen books teach the child to read, and twenty teach him to speak.<br>A hand holds the letter; a tongue carries the meaning — and both begin from the body.</span></p>
+    <p style="text-align:center;margin:0">
+      <a href='/shajara' style='display:inline-block;margin:.25rem;font-family:Amiri,serif;font-size:.9rem;color:#FBF9F4;background:#1B3A2F;border:1px solid #1B3A2F;padding:.55rem 1.2rem;text-decoration:none'>شَجَرَةُ الدَّار</a>
+      <a href='/yad-lisan' style='display:inline-block;margin:.25rem;font-family:Amiri,serif;font-size:.9rem;color:#1B3A2F;background:rgba(251,249,244,.85);border:1px solid #1B3A2F;padding:.55rem 1.2rem;text-decoration:none'>اليَدُ واللِّسان</a>
+      <a href='/harf/sullam' style='display:inline-block;margin:.25rem;font-family:Amiri,serif;font-size:.9rem;color:#1B3A2F;background:rgba(251,249,244,.85);border:1px solid #1B3A2F;padding:.55rem 1.2rem;text-decoration:none'>جَناحُ الحَرْف</a>
+      <a href='/khizana' style='display:inline-block;margin:.25rem;font-family:Amiri,serif;font-size:.9rem;color:#1B3A2F;background:rgba(251,249,244,.85);border:1px solid #1B3A2F;padding:.55rem 1.2rem;text-decoration:none'>جَناحُ البَيان</a>
+      <a href='/judhur' style='display:inline-block;margin:.25rem;font-family:Amiri,serif;font-size:.9rem;color:#1B3A2F;background:rgba(251,249,244,.85);border:1px solid #1B3A2F;padding:.55rem 1.2rem;text-decoration:none'>خَريطةُ الجُذور</a>
+    </p>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="sealblock">
+      <span class="markslot"><img src="assets/Juthur_Seal_Mono.png" alt="ختمُ مطبعةِ جُذور" loading="lazy" decoding="async" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;block&#39;"><svg width="62" height="62" viewBox="0 0 100 100" aria-hidden="true" style="display:none;">
+        <circle cx="50" cy="50" r="46" fill="none" stroke="#c9a961" stroke-width="1"></circle>
+        <circle cx="50" cy="50" r="40" fill="none" stroke="#c9a961" stroke-width=".5" stroke-dasharray="2 3"></circle>
+        <path d="M50 22c9 8 14 15 14 23a14 14 0 0 1-28 0c0-8 5-15 14-23z" fill="none" stroke="#c9a961" stroke-width="1.3"></path>
+        <path d="M50 78V38M50 50l7-7M50 58l-7-7" stroke="#c9a961" stroke-width="1.1" fill="none" stroke-linecap="round"></path>
+      </svg></span>
+      <span class="sealcap"><span class="ar">خَتْمُ اعتمادِ جُذور</span><span class="en" lang="en">The Juthur Seal of Authenticity</span></span>
+    </div>
+    <a class="press-cta" href="#doors"><span class="ar">ادخلْ من بابِك</span><span class="en" lang="en">Enter by your door</span></a>
+
+    <span class="fleuron" aria-hidden="true">❧ ✽ ❧</span>
+    <p class="colophon">
+      <span class="ar"><b>جُذور · JUTHUR</b><br>اللغةُ تُعرَفُ بتقاطعِ الحواسِّ، والمعنى بتعدُّدِ السِّياق.<br>مشروعٌ لتعليمِ القراءةِ المبكّرةِ بالعربية — صمّمه وطوّره د. عادل ف. عامر · Amer (2024).</span>
+      <span class="en" lang="en"><b>جُذور · JUTHUR</b><br>Language is known by the crossing of the senses; meaning, by the multiplicity of context.<br>A project for early Arabic reading — Designed and developed by Dr. Adel F. Amer · Amer (2024).</span>
+    </p>
+    <p class="colophon" style="margin-top:1.6rem">
+      <a href="mailto:aamer@asdubai.org">aamer@asdubai.org</a> · <a href="https://osf.io/2nwfq">OSF · osf.io/2nwfq</a> · ORCID 0009-0008-9618-3863
+    </p>
+    <div class="ledger">
+  <p class="ledger-head"><span class="ar">دفترُ الإصلاحات — قيدَ العملِ في المطبعة</span><span class="en" lang="en">The repairs ledger — in the works at the press</span></p>
+  <p class="ledger-body ar">الطبعةُ الإنجليزيةُ الكاملة · فتحُ المكتبةِ عملًا عملًا · «الصفُّ الأول»: أولُ شراكةٍ بحثيةٍ موثَّقة — وما يظهرُ سيُنشَر، حَسُنَ أم ساء.</p>
+  <p class="ledger-body en" lang="en">In the works: full English edition · opening the library · "The First Classroom" — the first documented research partnership. Whatever emerges will be published, for better or worse.</p>
+</div>
+<p class="imprintline">
+      <span class="ar">صُفَّ بحرفَي «أميري» و«فراونسِس» · طُبع على طراز مطابع لندن لسنة ١٩٢٦<br>مطبعة جُذور · دبي · ٢٠٢٦ · رخصة CC BY-NC-SA 4.0</span>
+      <span class="en" lang="en">Set in Amiri &amp; Fraunces · in the manner of the London houses of 1926<br>Juthur Press · Dubai · 2026 · CC BY-NC-SA 4.0</span>
+    </p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var body = document.body, html = document.documentElement;
+  var btn = document.getElementById('lang');
+
+  function setLang(l){
+    body.setAttribute('data-lang', l);
+    html.setAttribute('lang', l);
+    html.setAttribute('dir', l === 'ar' ? 'rtl' : 'ltr');
+    btn.textContent = l === 'ar' ? 'EN' : 'ع';
+    btn.setAttribute('aria-label', l === 'ar' ? 'Switch to English' : 'التحويل إلى العربية');
+    var _nav=document.getElementById('nav'),_burger=document.getElementById('burger');
+    if(_nav) _nav.setAttribute('aria-label', l==='ar' ? 'القائمة الرئيسية' : 'Main menu');
+    if(_burger) _burger.setAttribute('aria-label', l==='ar' ? 'القائمة' : 'Menu');
+  }
+  btn.addEventListener('click', function(){
+    setLang(body.getAttribute('data-lang') === 'ar' ? 'en' : 'ar');
+  });
+
+  /* mobile nav */
+  var burger = document.getElementById('burger'), nav = document.getElementById('nav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', String(open));
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ nav.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+  });
+
+  /* the press — raised becomes carved, carved becomes raised */
+  Array.prototype.forEach.call(document.querySelectorAll('.slug'), function(s){
+    var arL = s.querySelector('small.ar'), enL = s.querySelector('small.en');
+    function flip(){
+      var next = s.getAttribute('data-state') === 'raised' ? 'carved' : 'raised';
+      s.setAttribute('data-state', next);
+      if(arL) arL.textContent = next === 'raised' ? 'بارز' : 'غائر';
+      if(enL) enL.textContent = next === 'raised' ? 'Raised' : 'Carved';
+      s.setAttribute('aria-label', s.firstChild.nodeValue.trim() + ' — ' + (next === 'raised' ? 'بارز' : 'غائر'));
+    }
+    s.addEventListener('click', flip);
+    s.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); flip(); }
+    });
+  });
+
+
+  /* Rubrication — CSS cannot address a combining mark, so give each its own
+     element. Marks are wrapped in runs; base letters are never split, so
+     Arabic joining is untouched. No JS -> black harakat, nothing breaks. */
+  var HARAKAT = /[\u064B-\u0655\u0670]/;
+  function rubricate(root){
+    var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null), out = [], t;
+    while((t = w.nextNode())) out.push(t);
+    out.forEach(function(node){
+      var s = node.nodeValue;
+      if(!HARAKAT.test(s)) return;
+      var frag = document.createDocumentFragment(), buf = '', i = 0;
+      while(i < s.length){
+        if(HARAKAT.test(s[i])){
+          if(buf){ frag.appendChild(document.createTextNode(buf)); buf = ''; }
+          var run = '';
+          while(i < s.length && HARAKAT.test(s[i])) run += s[i++];
+          var m = document.createElement('span');
+          m.className = 'tk'; m.textContent = run;
+          frag.appendChild(m);
+        } else { buf += s[i++]; }
+      }
+      if(buf) frag.appendChild(document.createTextNode(buf));
+      node.parentNode.replaceChild(frag, node);
+    });
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('h1,h2'), rubricate);
+
+  /* scroll reveal */
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.rev');
+  if(reduce || !('IntersectionObserver' in window)){
+    Array.prototype.forEach.call(items, function(n){ n.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    Array.prototype.forEach.call(items, function(n){ io.observe(n); });
+  }
+})();
+</script>
+
+
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<filter id="inkbleed"><feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="4"/></filter>
+</defs></svg>
+<div id="page-vignette" aria-hidden="true"></div><div id="ink-rule" aria-hidden="true"></div><div id="ink-nib" aria-hidden="true"></div>
+<a id="plate-counter" href="#toc" aria-label="العودة إلى الفهرس · Back to the index"><span class="ar"></span><span class="en" lang="en"></span></a>
+<script src="assets/motion.min.js"></script>
+<script id="press1926-js">
+(function(){
+  "use strict";
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var M = window.Motion;
+  if(reduced || !M){ document.documentElement.classList.remove('boot-press'); }
+
+  /* ── صندوق الحروف: الضغطة والحبر (يعمل حتى بلا Motion) ── */
+  /* ── صوت المكبس: مُخلَّق، بإيماءة فقط، بذاكرة ── */
+  var sndBtn = document.getElementById('press-sound');
+  var sndOn = true;
+  try{ sndOn = localStorage.getItem('juthur_press_sound') !== 'off'; }catch(e){}
+  function paintSnd(){
+    if(!sndBtn) return;
+    sndBtn.setAttribute('aria-pressed', String(sndOn));
+    sndBtn.querySelector('.ar').textContent = sndOn ? 'صوتُ المكبس: يعمل' : 'صوتُ المكبس: صامت';
+    sndBtn.querySelector('.en').textContent = sndOn ? 'Press sound: on' : 'Press sound: off';
+  }
+  paintSnd();
+  if(sndBtn) sndBtn.addEventListener('click', function(){
+    sndOn = !sndOn; paintSnd();
+    try{ localStorage.setItem('juthur_press_sound', sndOn ? 'on' : 'off'); }catch(e){}
+  });
+  /* ── مختبر الحرف ── */
+  var LAB_DATA = {"ء": ["همزة", "أقصى الحلق", "Deepest throat — glottal"], "ب": ["باء", "الشفتان منطبقتان", "Both lips pressed — bilabial"], "ت": ["تاء", "طرف اللسان مع أصول الثنايا العليا", "Tongue tip at upper incisor roots"], "ث": ["ثاء", "طرف اللسان مع أطراف الثنايا العليا", "Tongue tip at upper incisor edges"], "ج": ["جيم", "وسط اللسان مع الحنك الأعلى", "Mid-tongue at the hard palate"], "ح": ["حاء", "وسط الحلق", "Mid-throat — pharyngeal"], "خ": ["خاء", "أدنى الحلق مما يلي الفم", "Upper throat — near uvula"], "د": ["دال", "طرف اللسان مع أصول الثنايا العليا", "Tongue tip at upper incisor roots"], "ذ": ["ذال", "طرف اللسان مع أطراف الثنايا العليا", "Tongue tip at upper incisor edges"], "ر": ["راء", "طرف اللسان قربَ ظهرِه مع اللثة", "Tongue tip, slightly back, at the gum"], "ز": ["زاي", "طرف اللسان مع الثنايا السفلى — صفير", "Tongue tip at lower incisors — sibilant"], "س": ["سين", "طرف اللسان مع الثنايا السفلى — صفير", "Tongue tip at lower incisors — sibilant"], "ش": ["شين", "وسط اللسان مع الحنك الأعلى", "Mid-tongue at the hard palate"], "ص": ["صاد", "طرف اللسان مع الثنايا السفلى — صفير مُفخَّم", "Tongue tip at lower incisors — emphatic sibilant"], "ض": ["ضاد", "حافّة اللسان مع الأضراس العليا", "Tongue side against upper molars"], "ط": ["طاء", "طرف اللسان مع أصول الثنايا العليا — مُفخَّم", "Tongue tip at incisor roots — emphatic"], "ظ": ["ظاء", "طرف اللسان مع أطراف الثنايا العليا — مُفخَّم", "Tongue tip at incisor edges — emphatic"], "ع": ["عين", "وسط الحلق", "Mid-throat — pharyngeal"], "غ": ["غين", "أدنى الحلق مما يلي الفم", "Upper throat — near uvula"], "ف": ["فاء", "باطن الشفة السفلى مع أطراف الثنايا العليا", "Inner lower lip at upper teeth"], "ق": ["قاف", "أقصى اللسان مع الحنك اللحمي", "Deep tongue at the soft palate — uvular"], "ك": ["كاف", "أقصى اللسان دون مخرج القاف", "Back tongue at the palate — velar"], "ل": ["لام", "حافّة اللسان الأمامية مع اللثة", "Front tongue edge at the gum — lateral"], "م": ["ميم", "الشفتان منطبقتان — بغُنّة", "Both lips — with nasal resonance"], "ن": ["نون", "طرف اللسان مع اللثة — بغُنّة", "Tongue tip at the gum — with nasal resonance"], "ه": ["هاء", "أقصى الحلق", "Deepest throat — glottal"], "و": ["واو", "الشفتان منضمّتان", "Rounded lips"], "ي": ["ياء", "وسط اللسان مع الحنك الأعلى", "Mid-tongue at the hard palate"], "لا": ["لا — الحرف التاسع والعشرون", "مركّبٌ: لامٌ من حافةِ اللسان، ثم ألفٌ من الجوف", "Compound: lām from the tongue edge, then the open-cavity alif"]};
+  var lab = document.getElementById('letter-lab');
+  var labGlyph = lab.querySelector('.lab-glyph');
+  var labNameAr = lab.querySelector('.lab-name .ar'), labNameEn = lab.querySelector('.lab-name .en');
+  var labMAr = lab.querySelector('.lab-m-ar'), labMEn = lab.querySelector('.lab-m-en');
+  var currentName = '';
+  function labOpen(ch){
+    var d = LAB_DATA[ch]; if(!d) return;
+    labGlyph.textContent = ch;
+    labNameAr.textContent = d[0]; labNameEn.textContent = d[0];
+    labMAr.textContent = d[1]; labMEn.textContent = d[2];
+    currentName = d[0].split('—')[0].trim();
+    lab.hidden = false;
+    var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    lab.scrollIntoView({ block: 'nearest', behavior: rm ? 'auto' : 'smooth' });
+  }
+  document.getElementById('lab-close').addEventListener('click', function(){ lab.hidden = true; });
+  var btnR = document.getElementById('lab-raised'), btnC = document.getElementById('lab-carved');
+  function setState(st){
+    labGlyph.setAttribute('data-state', st);
+    btnR.setAttribute('aria-pressed', String(st === 'raised'));
+    btnC.setAttribute('aria-pressed', String(st === 'carved'));
+  }
+  btnR.addEventListener('click', function(){ setState('raised'); });
+  btnC.addEventListener('click', function(){ setState('carved'); });
+  document.getElementById('lab-speak').addEventListener('click', function(){
+    try{
+      if(!('speechSynthesis' in window) || !currentName) return;
+      window.speechSynthesis.cancel();
+      var u = new SpeechSynthesisUtterance(currentName);
+      u.lang = 'ar'; u.rate = .85;
+      var vs = window.speechSynthesis.getVoices();
+      for(var i3 = 0; i3 < vs.length; i3++){ if((vs[i3].lang||'').indexOf('ar') === 0){ u.voice = vs[i3]; break; } }
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  });
+
+  var actx = null;
+  function thunk(){
+    if(!sndOn) return;
+    try{
+      actx = actx || new (window.AudioContext || window.webkitAudioContext)();
+      if(actx.state === 'suspended') actx.resume();
+      var t = actx.currentTime;
+      var o = actx.createOscillator(), g = actx.createGain();
+      o.type = 'sine'; o.frequency.setValueAtTime(96, t); o.frequency.exponentialRampToValueAtTime(52, t + .07);
+      g.gain.setValueAtTime(.22, t); g.gain.exponentialRampToValueAtTime(.001, t + .09);
+      o.connect(g); g.connect(actx.destination); o.start(t); o.stop(t + .1);
+      var len = Math.floor(actx.sampleRate * .035), buf = actx.createBuffer(1, len, actx.sampleRate), d = buf.getChannelData(0);
+      for(var i2 = 0; i2 < len; i2++){ d[i2] = (Math.random()*2-1) * (1 - i2/len); }
+      var n = actx.createBufferSource(); n.buffer = buf;
+      var f = actx.createBiquadFilter(); f.type = 'bandpass'; f.frequency.value = 1400; f.Q.value = .8;
+      var ng = actx.createGain(); ng.gain.setValueAtTime(.12, t); ng.gain.exponentialRampToValueAtTime(.001, t + .05);
+      n.connect(f); f.connect(ng); ng.connect(actx.destination); n.start(t);
+    }catch(e){}
+  }
+
+  var sorts = Array.prototype.slice.call(document.querySelectorAll('.sort'));
+  sorts.forEach(function(s, i){
+    if(i > 0) s.tabIndex = -1;
+    s.addEventListener('click', function(){
+      s.classList.remove('pressed'); void s.offsetWidth; s.classList.add('pressed');
+      setTimeout(function(){ s.classList.remove('pressed'); }, 460);
+      thunk();
+      labOpen((s.firstChild.nodeValue || '').trim() || s.textContent.trim());
+      /* البرهان المطبوع */
+      if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+        var old = s.querySelector('.proof'); if(old) old.remove();
+        var p = document.createElement('span');
+        p.className = 'proof'; p.setAttribute('aria-hidden','true');
+        p.textContent = (s.firstChild.nodeValue || '').trim() || s.textContent.trim().charAt(0);
+        s.classList.add('js-proof'); s.appendChild(p);
+        setTimeout(function(){ p.remove(); }, 700);
+      }
+    });
+    s.addEventListener('keydown', function(e){
+      var d = 0;
+      if(e.key === 'ArrowLeft' || e.key === 'ArrowDown') d = 1;      /* RTL: يسار = التالي */
+      else if(e.key === 'ArrowRight' || e.key === 'ArrowUp') d = -1;
+      else return;
+      e.preventDefault();
+      var n = sorts[(i + d + sorts.length) % sorts.length];
+      s.tabIndex = -1; n.tabIndex = 0; n.focus();
+    });
+  });
+
+  /* ── وسوم اللغة لقارئات الشاشة ── */
+  document.querySelectorAll('.ar').forEach(function(x){ x.setAttribute('lang','ar'); });
+  document.querySelectorAll('.en').forEach(function(x){ x.setAttribute('lang','en'); });
+
+  /* ── أدراج المطبعة: الكتالوج والخزانة ── */
+  ['catalogue','cabinet'].forEach(function(id){
+    var sec = document.getElementById(id); if(!sec) return;
+    var wrap = sec.querySelector('.wrap'); var head = wrap && wrap.querySelector('.head'); if(!wrap || !head) return;
+    var body = document.createElement('div'); body.className = 'drawer-body'; body.id = id + '-drawer';
+    while(head.nextSibling){ body.appendChild(head.nextSibling); }
+    wrap.appendChild(body);
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'drawer-toggle';
+    btn.setAttribute('aria-expanded','false'); btn.setAttribute('aria-controls', body.id);
+    btn.innerHTML = '<span class="ar" lang="ar"></span><span class="en" lang="en"></span>';
+    wrap.appendChild(btn);
+    function paint(open){
+      btn.querySelector('.ar').textContent = open ? 'أغلقِ الدُّرج' : 'افتحِ الدُّرجَ كاملًا';
+      btn.querySelector('.en').textContent = open ? 'Close the drawer' : 'Open the full drawer';
+      btn.setAttribute('aria-expanded', String(open));
+    }
+    function setOpen(open){
+      sec.classList.toggle('drawer-closed', !open); paint(open);
+      body.toggleAttribute('inert', !open);
+      if(open){ body.style.maxHeight = body.scrollHeight + 'px';
+        setTimeout(function(){ body.style.maxHeight = 'none'; }, 520);
+      } else { body.style.maxHeight = ''; }
+    }
+    btn.addEventListener('click', function(){ setOpen(sec.classList.contains('drawer-closed')); });
+    setOpen(false);
+    function autoOpen(){ if(location.hash === '#' + id){ setOpen(true); } }
+    window.addEventListener('hashchange', autoOpen); autoOpen();
+  });
+
+  /* ── التعقيبة: أول كلمة عربية من عنوان القسم التالي ── */
+  var secs = Array.prototype.slice.call(document.querySelectorAll('main section, body > section'));
+  if(!secs.length) secs = Array.prototype.slice.call(document.querySelectorAll('section'));
+  secs.forEach(function(sec, i){
+    var next = secs[i+1]; if(!next) return;
+    var hAr = next.querySelector('h2 .ar'), hEn = next.querySelector('h2 .en');
+    var wAr = hAr ? hAr.textContent.trim().split(/\s+/)[0] : '';
+    var wEn = hEn ? hEn.textContent.trim().split(/\s+/).slice(0,2).join(' ') : '';
+    if(!wAr && !wEn) return;
+    var t = document.createElement('span');
+    t.className = 'taqiba'; t.setAttribute('aria-hidden','true');
+    t.innerHTML = '<span class="ar"></span><span class="en" lang="en"></span>';
+    t.querySelector('.ar').textContent = wAr;
+    t.querySelector('.en').textContent = wEn;
+    sec.appendChild(t);
+  });
+
+  /* ── عدّاد اللوحات: يقرأ الختم الروماني المطبوع على اللوح نفسه ── */
+  var pc = document.getElementById('plate-counter');
+  var pcAr = pc.querySelector('.ar'), pcEn = pc.querySelector('.en');
+  function firstWords(el, n){ return el ? el.textContent.trim().split(/\s+/).slice(0, n).join(' ') : ''; }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var pn = e.target.querySelector('.plateno');
+        if(!pn){ pc.classList.remove('show'); return; }
+        var num = pn.textContent.trim();
+        pcAr.textContent = 'لوحة ' + num + ' · ' + firstWords(e.target.querySelector('h2 .ar'), 2);
+        pcEn.textContent = 'Plate ' + num + ' · ' + firstWords(e.target.querySelector('h2 .en'), 3);
+        pc.classList.add('show');
+      });
+    }, { rootMargin:'-40% 0px -55% 0px' });
+    secs.forEach(function(s){ io.observe(s); });
+  }
+
+  if(reduced || !M) return; /* من هنا: حركة فقط */
+  var animate = M.animate, inView = M.inView, scroll = M.scroll, stagger = M.stagger;
+
+  /* ── سطر الحبر والريشة ── */
+  var ink = document.getElementById('ink-rule'), nib = document.getElementById('ink-nib');
+  scroll(function(a, b){
+    var p = (typeof a === 'number') ? a : (a && a.y && typeof a.y.progress === 'number' ? a.y.progress : 0);
+    ink.style.transform = 'scaleX(' + p + ')';
+    nib.style.transform = 'translateX(' + (-p * 100) + 'vw)';
+  });
+
+  /* ── افتتاح المطبعة: الختم يُختَم ثم العنوان يُضغَط ثم القوالب ── */
+  var mark = document.querySelector('.device.mark');
+  var wm = document.querySelector('.wordmark');
+  var wmLat = document.querySelector('.wordmark-lat');
+  var claim = document.querySelector('.claim');
+  var slugs = document.querySelectorAll('.tactile .slug');
+  if(wm){ animate(wm, { opacity:[0,1], transform:['translateY(14px) scale(1.02)','translateY(0) scale(1)'] }, { duration:.9, ease:[.22,1,.36,1] }); }
+  if(wmLat){ animate(wmLat, { opacity:[0,1] }, { duration:.7, delay:.35 }); }
+  if(claim){ animate(claim, { opacity:[0,1], transform:['translateY(10px)','translateY(0)'] }, { duration:.7, delay:.5, ease:'easeOut' }); }
+  if(mark){ animate(mark, { opacity:[0,1], transform:['scale(1.5) rotate(-7deg)','scale(1) rotate(0deg)'] }, { duration:.65, delay:.85, ease:[.34,1.56,.64,1] }); }
+  if(slugs.length){ animate(slugs, { opacity:[0,1], transform:['translateY(12px)','translateY(0)'] }, { duration:.4, delay: stagger(0.09, { startDelay: 1.15 }), ease:'easeOut' }); }
+
+  /* ── كل قسم يخرج من المكبس ── */
+  document.querySelectorAll('section .wrap').forEach(function(w){
+    if(w.closest('.titlepage')) return;
+    inView(w, function(){
+      animate(w, { opacity:[0,1], transform:['translateY(16px)','translateY(0)'] }, { duration:.5, ease:'easeOut' });
+      var items = w.querySelectorAll('.entry, .rung, .stage-row, .sort');
+      if(items.length && items.length < 40){
+        animate(items, { opacity:[0,1], transform:['translateY(8px)','translateY(0)'] }, { duration:.35, delay: stagger(0.03), ease:'easeOut' });
+      }
+    });
+  });
+
+
+  /* ── الفواصل تُرسَم ── */
+  document.querySelectorAll('.rule').forEach(function(r){
+    r.style.transformOrigin = '100% 50%';
+    inView(r, function(){
+      animate(r, { transform:['scaleX(0)','scaleX(1)'] }, { duration:.7, ease:[.65,0,.35,1] });
+    }, { amount: 0.6 });
+  });
+})();
+</script>
+</body></html>

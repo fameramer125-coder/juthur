@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><base href="/juthur/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="السِفْر الثاني عشر: المؤلِّف الصغير — التأليف متعدّد الوسائط حيث تجتمع الحواسّ السبع في عملٍ واحد | مشروع جُذُور — المستوى المبدع (مُثمِر، ١٣+). الطبعة الجامعة الكاملة المُشكَّلة، جاهزة للطبع.">
+<meta name="author" content="د. عادل ف. عامر — مشروع جُذُور">
+<meta name="keywords" content="مشروع جذور, نظرية القراءة الملموسة, TRT, التأليف متعدد الوسائط, المؤلف الصغير, البذرة, النص, الصورة, الصوت, الأداء, النشر, مقياس جذور, مؤشر اللذاذة">
+<meta name="version" content="v12.1 — المؤلف الصغير">
+<meta name="standards" content="استرشادٌ بأُطُر CEFR · ACTFL · IB PYP — دون اعتمادٍ من أيٍّ منها">
+<title>السِفْر الثاني عشر: المؤلِّف الصغير — الطبعة الجامعة | مشروع جُذُور</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@300;400;600;700;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#173524; --forest-mid:#2E7D52; --forest-soft:#4CAF7D; --forest-pale:#E8F3EC;
+  --gold:#C9A24B;--gold-aa:#8c7134; --gold-light:#E7CF93; --gold-pale:#FBF3DD; --gold-deep:#8A6D2E;
+  --earth:#7A5C3E; --earth-pale:#F4EADB; --earth-deep:#5A4226;
+  --ink:#211C16; --ink-soft:#5A4F42; --ink-faint:#8C8170;
+  /* محطّات التأليف الخمس */
+  --s1:#5E8C3A; --s1-pale:#EAF2DF; --s1-deep:#3C5A23;   /* البذرة — الخيال */
+  --s2:#2E6FA3; --s2-pale:#E2EDF5; --s2-deep:#1B4564;   /* النص — النطق */
+  --s3:#C2553B; --s3-pale:#FBE8E2; --s3-deep:#84321D;   /* الصورة — البصر */
+  --s4:#8A5A9E; --s4-pale:#F1E9F5; --s4-deep:#533462;   /* الصوت — السمع */
+  --s5:#B5852E; --s5-pale:#F8EFD8; --s5-deep:#6E4F15;   /* الأداء — الحركة والكل */
+  --crimson:#9E2B32; --crimson-pale:#FBE7E8; --silver:#6B6F76; --silver-pale:#EEF0F2;
+  --cream:#FCFAF3; --paper:#FFFFFF; --line:#E6DFCD;
+  --shadow:0 10px 34px rgba(23,53,36,.08); --shadow-sm:0 4px 14px rgba(23,53,36,.06);
+  --r-lg:22px; --r-md:15px; --r-sm:10px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0; background:var(--cream); color:var(--ink); font-family:'Scheherazade New','Amiri',serif; font-size:20px; line-height:2.05; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+.wrap{max-width:980px; margin:0 auto; padding:24px 20px 80px;}
+h1,h2,h3,h4{font-family:'Cairo',sans-serif; font-weight:700; line-height:1.5; color:var(--forest); margin:0;}
+p{margin:0 0 12px;} strong{color:var(--forest); font-weight:700;} em{color:var(--earth-deep); font-style:italic;}
+
+.nav{position:sticky; top:0; z-index:50; background:rgba(252,250,243,.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--line); display:flex; flex-wrap:wrap; gap:6px 12px; justify-content:center; padding:10px 14px; font-family:'Cairo',sans-serif; font-size:13.5px;}
+.nav a{color:var(--earth-deep); text-decoration:none; padding:3px 8px; border-radius:7px; transition:.2s;}
+.nav a:hover{background:var(--gold-pale); color:var(--forest);}
+
+.cover{position:relative; text-align:center; color:#fff; border-radius:var(--r-lg); overflow:hidden; padding:54px 30px 50px; margin:14px 0 34px; background:radial-gradient(120% 120% at 50% 0%, #245138 0%, #173524 55%, #0E2418 100%); box-shadow:var(--shadow);}
+.cover::after{content:""; position:absolute; inset:14px; border:2px solid rgba(201,162,75,.55); border-radius:16px; pointer-events:none;}
+.logo{width:120px; height:120px; display:block; margin:0 auto 8px; filter:drop-shadow(0 6px 12px rgba(0,0,0,.35));}
+.brand{font-family:'Cairo',sans-serif; font-weight:700; letter-spacing:3px; color:var(--gold-light); font-size:18px; margin-bottom:6px;}
+.cover h1{color:#fff; font-size:38px; margin:8px 0 6px; letter-spacing:.5px;}
+.cover .sub{font-family:'Scheherazade New',serif; color:var(--gold-light); font-size:24px; margin:4px 0;}
+.cover .verse{font-family:'Amiri',serif; font-size:24px; color:var(--gold-light); margin:18px 0 6px;}
+.cover .verse small{display:block; font-size:14px; opacity:.8; font-family:'Cairo',sans-serif; margin-top:2px;}
+.cover .motto{font-family:'Scheherazade New',serif; color:#EAF3EC; max-width:760px; margin:6px auto 0; font-size:19px; opacity:.96;}
+.cover .slogan{font-family:'Amiri',serif; font-size:18px; color:var(--gold-light); margin:14px auto 0; max-width:680px;}
+.chips{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:20px;}
+.chip{font-family:'Cairo',sans-serif; font-size:13px; font-weight:600; color:var(--gold-pale); background:rgba(255,255,255,.08); border:1px solid rgba(201,162,75,.5); border-radius:30px; padding:6px 14px;}
+
+section{margin:30px 0;} .sheet{break-before:page;}
+.card{background:var(--paper); border:1px solid var(--line); border-radius:var(--r-lg); padding:26px 26px 22px; box-shadow:var(--shadow-sm); margin:18px 0;}
+.sec-head{display:flex; align-items:center; gap:12px; margin-bottom:16px; padding-bottom:12px; border-bottom:2px solid var(--gold-pale);}
+.sec-head .ic{font-size:26px; flex:0 0 auto;} .sec-head h2{font-size:25px; color:var(--forest);}
+.lead{color:var(--ink-soft); font-size:19px;}
+
+.poetic{background:var(--forest-pale); border-right:6px solid var(--forest-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:16px 20px; font-family:'Amiri',serif; font-size:20.5px; color:var(--forest); line-height:2; margin:10px 0;}
+.golden-rule{background:linear-gradient(135deg,#fff,var(--gold-pale)); border:2px dashed var(--gold); border-radius:var(--r-md); padding:18px 22px; text-align:center; font-family:'Amiri',serif; font-size:21px; color:var(--gold-deep); font-weight:700;}
+
+.cord{display:flex; flex-wrap:wrap; align-items:stretch; gap:10px; justify-content:center; margin:14px 0;}
+.cord .node{flex:1 1 150px; min-width:140px; background:var(--earth-pale); border:1px solid var(--line); border-radius:var(--r-sm); padding:12px; text-align:center; font-family:'Cairo',sans-serif; font-size:14px; color:var(--earth-deep);}
+.cord .now{background:var(--forest); color:#fff; border-color:var(--forest);} .cord .now b{color:var(--gold-light);}
+.cord .arrow{align-self:center; color:var(--gold-aa); font-size:24px; font-weight:700;}
+.fiveparts{display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-top:14px;}
+.fiveparts .pp{border-radius:var(--r-sm); padding:12px 6px; text-align:center; font-family:'Cairo',sans-serif;}
+.pp.p1{background:var(--s1-pale); color:var(--s1-deep); border:1px solid var(--s1);}
+.pp.p2{background:var(--s2-pale); color:var(--s2-deep); border:1px solid var(--s2);}
+.pp.p3{background:var(--s3-pale); color:var(--s3-deep); border:1px solid var(--s3);}
+.pp.p4{background:var(--s4-pale); color:var(--s4-deep); border:1px solid var(--s4);}
+.pp.p5{background:var(--s5-pale); color:var(--s5-deep); border:1px solid var(--s5);}
+.pp .big{font-size:22px; display:block;} .pp .ttl{font-weight:700; font-size:14.5px;} .pp .dsc{font-size:12px; opacity:.85;}
+
+/* integration map */
+.integ{display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin:12px 0;}
+.integ .col{border-radius:var(--r-sm); padding:12px 8px; text-align:center; font-family:'Cairo',sans-serif; border:1px solid var(--line);}
+.integ .col .e{font-size:24px; display:block;} .integ .col .st{font-weight:700; font-size:14px; margin:2px 0;}
+.integ .col .se{font-size:12.5px; color:var(--ink-soft);} .integ .col .ar{color:var(--gold-aa); font-weight:700;} .integ .col .sk{font-size:12.5px; margin-top:6px; font-weight:600;}
+.integ .c1{background:var(--s1-pale);} .integ .c2{background:var(--s2-pale);} .integ .c3{background:var(--s3-pale);} .integ .c4{background:var(--s4-pale);} .integ .c5{background:var(--s5-pale);}
+
+/* station */
+.station{border-radius:var(--r-lg); border:1px solid var(--line); background:var(--paper); box-shadow:var(--shadow-sm); overflow:hidden; margin:22px 0;}
+.st-head{padding:20px 24px; color:#fff; display:flex; align-items:center; gap:14px;}
+.st-head .em{font-size:36px;} .st-head h3{color:#fff; font-size:22px;}
+.st-head .tag{font-family:'Cairo',sans-serif; font-size:13px; background:rgba(255,255,255,.16); padding:4px 12px; border-radius:20px; margin-right:auto;}
+.st-body{padding:18px 24px 22px;}
+.h1c{background:linear-gradient(120deg,var(--s1),var(--s1-deep));}
+.h2c{background:linear-gradient(120deg,var(--s2),var(--s2-deep));}
+.h3c{background:linear-gradient(120deg,var(--s3),var(--s3-deep));}
+.h4c{background:linear-gradient(120deg,var(--s4),var(--s4-deep));}
+.h5c{background:linear-gradient(120deg,var(--s5),var(--s5-deep));}
+
+.block{border-radius:var(--r-sm); padding:14px 18px; margin:12px 0; border-right:5px solid var(--gold);}
+.block .lbl{font-family:'Cairo',sans-serif; font-weight:700; font-size:15px; color:var(--gold-deep); display:block; margin-bottom:4px;}
+.b-mersa{background:#FBF7EE; border-right-color:var(--gold);}
+.b-work{background:var(--forest-pale); border-right-color:var(--forest-soft);} .b-work .lbl{color:var(--forest);}
+.b-refrain{background:var(--crimson-pale); border-right-color:var(--crimson);} .b-refrain .lbl{color:var(--crimson);}
+.b-fruit{background:#EAF5EE; border-right-color:var(--forest-mid);} .b-fruit .lbl{color:var(--forest-mid);}
+.silent{background:var(--silver-pale); border:1.5px dashed var(--silver); border-radius:var(--r-sm); padding:14px 18px; margin:12px 0; color:#3A3E44;}
+.silent .lbl{font-family:'Cairo',sans-serif; font-weight:700; font-size:15px; color:var(--silver); display:block; margin-bottom:4px;} .silent .lbl::before{content:"□ ";}
+.tbreath{text-align:center; font-family:'Cairo',sans-serif; font-size:14px; color:var(--forest-mid); background:var(--forest-pale); border:1px solid var(--forest-soft); border-radius:20px; padding:7px 16px; margin:0 0 12px; display:block;} .tbreath::before{content:"🫁  ";}
+.echo{background:#FBF1E2; border-right:5px solid var(--earth); border-radius:var(--r-sm); padding:10px 16px; margin:0 0 12px; font-family:'Cairo',sans-serif; font-size:14.5px; color:var(--earth-deep);}
+.echo .lbl{font-weight:700; color:var(--earth-deep); display:block; margin-bottom:2px;} .echo .lbl::before{content:"🔁  ";}
+.bridge{font-family:'Cairo',sans-serif; font-size:14px; color:#1B4E64; background:#E2EFF5; border:1px solid #8FBBD0; border-radius:var(--r-sm); padding:9px 14px; margin:10px 0;}
+.bridge .lbl{font-weight:700; display:block; margin-bottom:2px;} .bridge .lbl::before{content:"🌉  ";} .bridge .en{font-style:italic; color:#275680;direction:ltr;unicode-bidi:isolate;}
+.motor{background:#EAF1F8; border:1px dashed var(--s2); border-radius:var(--r-sm); padding:9px 14px; margin:10px 0; font-family:'Cairo',sans-serif; font-size:14px; color:var(--s2-deep);}
+.motor .lbl{font-weight:700; display:block; margin-bottom:2px;} .motor .lbl::before{content:"♿  ";}
+.home{background:#FBF7EE; border:1px solid var(--gold-light); border-radius:var(--r-sm); padding:9px 14px; margin:10px 0; font-family:'Cairo',sans-serif; font-size:14px; color:var(--earth-deep);}
+.home .lbl{font-weight:700; display:block; margin-bottom:2px;} .home .lbl::before{content:"🏡  ";}
+.compnote{background:#F7FAF7; border:1px solid var(--forest-pale); border-radius:var(--r-sm); padding:10px 14px; margin:10px 0; font-family:'Cairo',sans-serif; font-size:14px; color:var(--ink-soft);}
+.compnote .lbl{color:var(--forest-mid); font-weight:700;} .compnote .lbl::before{content:"🔹  ";}
+
+table{width:100%; border-collapse:collapse; margin:12px 0; font-family:'Cairo',sans-serif; font-size:15.5px;}
+th,td{border:1px solid var(--line); padding:10px 12px; text-align:right; vertical-align:top;}
+thead th{background:var(--forest); color:#fff; font-weight:700;}
+tbody tr:nth-child(even){background:var(--forest-pale);}
+.check td:last-child{text-align:center; width:54px; font-size:18px; color:var(--forest-mid);}
+.logtbl th,.logtbl td{text-align:center; font-size:14px;} .logtbl td:first-child{text-align:right; background:#F7FAF7; font-weight:600; min-width:110px;} .logtbl .empty{height:30px;}
+
+.note{border-radius:var(--r-md); padding:16px 20px; margin:12px 0;}
+.warn{background:#FFF4E5; border:1px solid #F0C078;} .warn h4{color:var(--gold-deep); margin-bottom:8px;}
+.compass{background:#EEF2F7; border:1px solid #A9C0D4;} .compass h4{color:#2E5A80; margin-bottom:8px;}
+.lathatha{background:linear-gradient(135deg,#FFF6E2,#FBF3DD); border:1px solid var(--gold); border-radius:var(--r-md); padding:16px 20px; margin:12px 0;} .lathatha h4{color:var(--gold-deep); margin-bottom:6px;} .lathatha h4::before{content:"💎  ";}
+.note ul{margin:6px 0 0; padding-right:22px;} .note li{margin:5px 0;} .objectives li{margin:6px 0;}
+.transition{text-align:center; background:#fff; border:2px solid var(--forest-mid); color:var(--forest); font-family:'Cairo',sans-serif; font-weight:700; border-radius:var(--r-md); padding:14px 18px; margin:16px 0; font-size:17px;}
+.letter{background:linear-gradient(180deg,#FBF7EE,#fff); border:1px solid var(--gold-light); border-radius:var(--r-md); padding:20px 24px;}
+
+.footer{margin-top:40px; text-align:center; color:#fff; border-radius:var(--r-lg); padding:34px 26px; background:radial-gradient(120% 120% at 50% 0%, #245138, #173524 70%);}
+.footer .q{font-family:'Amiri',serif; font-size:22px; color:var(--gold-light); margin-bottom:12px;}
+.footer p{margin:3px 0; font-family:'Cairo',sans-serif; font-size:14px; opacity:.92;} .footer .v{color:var(--gold-light); margin-top:12px;}
+.footer .logo-sm{width:54px; height:54px; margin:0 auto 10px; display:block; opacity:.9;}
+
+@media print{
+  body{background:#fff; font-size:13.5pt;} .wrap{max-width:none; padding:0;} .nav{display:none;}
+  .cover{margin:0 0 16px; box-shadow:none;} .sheet{break-before:page;}
+  .station,.card,.note,.lath,table,.cord,.integ,.letter,.lathatha{break-inside:avoid;}
+  .footer{break-inside:avoid;} a{color:inherit; text-decoration:none;} @page{size:A4; margin:16mm 14mm;}
+}
+@media (max-width:680px){ body{font-size:18px;} .fiveparts,.integ{grid-template-columns:repeat(2,1fr);} .cover h1{font-size:28px;} }
+
+.lath{background:linear-gradient(135deg,#FFF8E8,#FBEFCB); border:1px solid #E7CF93; border-right:4px solid #C9A24B; border-radius:10px; padding:11px 14px; margin:12px 0 2px; font-family:'Cairo',sans-serif; font-size:13.5px; color:#6E5318; line-height:1.7;}
+.lath .lbl::before{content:"💡 لحظةُ اللذاذة: "; font-weight:700; color:#C9A24B;}
+
+.protocol{background:#FBF6EA; border-right:5px solid #C9A24B; border-radius:10px; padding:11px 16px; margin:10px 0; font-family:'Cairo',sans-serif; font-size:13.5px; color:#4A3D1E;}
+.protocol .lbl{font-weight:700; display:block; margin-bottom:4px; color:#8A6D2E;}
+.protocol .lbl::before{content:"🧪 بروتوكول التطبيق: ";}
+.protocol ol{margin:3px 0 0; padding-right:20px;} .protocol li{margin:2px 0;}
+.protocol-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:4px 10px; margin:4px 0 8px; padding:8px 11px; background:#fff; border:1px solid #EADFC2; border-radius:8px;}
+.protocol-item{font-size:12.5px; color:#4A3D1E;} .protocol-item b{color:#8A6D2E;} .protocol-item:last-child{grid-column:1 / -1;}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="فهرس">
+  <a href="#cover">الغلاف</a><a href="#cord">الحبل السرّي</a><a href="#philo">الفلسفة</a>
+  <a href="#integ">التكامل</a><a href="#m1">البَذرة</a><a href="#m2">النص</a><a href="#m3">الصورة</a>
+  <a href="#m4">الصوت</a><a href="#m5">الأداء</a><a href="#track">المقياس</a><a href="#dedication">الإهداء</a>
+</nav>
+
+<div class="wrap">
+
+<!-- COVER with LOGO -->
+<header class="cover" id="cover">
+  <svg class="logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="لوجو مشروع جُذُور: شجرةٌ بجذورها في دائرة">
+    <circle cx="100" cy="100" r="91" fill="none" stroke="#C9A24B" stroke-width="3"/>
+    <circle cx="100" cy="100" r="83" fill="none" stroke="#E7CF93" stroke-width="1" opacity="0.6"/>
+    <line x1="100" y1="132" x2="100" y2="68" stroke="#C9A24B" stroke-width="6" stroke-linecap="round"/>
+    <g fill="none" stroke="#C9A24B" stroke-width="3.4" stroke-linecap="round">
+      <path d="M100 86 Q78 80 66 64"/><path d="M100 94 Q84 92 74 82"/><path d="M100 74 Q100 60 100 50"/>
+      <path d="M100 86 Q122 80 134 64"/><path d="M100 94 Q116 92 126 82"/>
+      <path d="M100 110 Q80 118 66 138"/><path d="M100 106 Q86 112 76 126"/><path d="M100 132 Q100 148 100 158"/>
+      <path d="M100 110 Q120 118 134 138"/><path d="M100 106 Q114 112 124 126"/>
+    </g>
+    <g fill="#E7CF93">
+      <circle cx="100" cy="48" r="9"/><circle cx="66" cy="62" r="8"/><circle cx="134" cy="62" r="8"/>
+      <circle cx="74" cy="80" r="6"/><circle cx="126" cy="80" r="6"/><circle cx="84" cy="56" r="5"/><circle cx="116" cy="56" r="5"/>
+    </g>
+    <g fill="#C9A24B">
+      <circle cx="66" cy="138" r="3"/><circle cx="76" cy="126" r="2.6"/><circle cx="134" cy="138" r="3"/><circle cx="124" cy="126" r="2.6"/><circle cx="100" cy="158" r="3"/>
+    </g>
+  </svg>
+  <div class="brand">مَشْرُوعُ جُذُور</div>
+  <h1>السِّفْرُ الثَّانِيَ عَشَرَ: المُؤَلِّفُ الصَّغِيرُ</h1>
+  <div class="sub">التَّأْلِيفُ مُتَعَدِّدُ الوَسَائِطِ — حَيْثُ تَجْتَمِعُ الحَوَاسُّ السَّبْعُ فِي عَمَلٍ وَاحِدٍ</div>
+  <p class="verse amiri">﴿أَصْلُهَا ثَابِتٌ وَفَرْعُهَا فِي السَّمَاءِ﴾<small>سورة إبراهيم: ٢٤</small></p>
+  <p class="motto">«صِرْتَ بَذْرَةً، فَأَثْمَرْتَ. وَالآنَ تُؤَلِّفُ عَالَمَكَ: تَكْتُبُهُ، وَتَرْسُمُهُ، وَتُغَنِّيهِ، وَتُؤَدِّيهِ بِجَسَدِكَ. كُلُّ حَوَاسِّكَ تَلْتَقِي فِي عَمَلٍ وَاحِدٍ — أَنْتَ المُؤَلِّفُ.»</p>
+  <p class="slogan">✦ الحَرْفُ يُولَدُ بِتَقَاطُعِ الحَوَاسِّ، وَالمَعْنَى يُعْرَفُ بِتَعَدُّدِ السِّيَاقِ ✦</p>
+  <p class="cover-author" style="font-family:'Cairo',sans-serif; font-size:13px; color:#EADFC2; opacity:.92; margin:8px 0 2px; letter-spacing:.3px;">تأليف: د. عادل ف. عامر · Dr. Adel F. Amer · ORCID: 0009-0008-9618-3863</p>
+  <div class="chips">
+    <span class="chip">المستوى المبدع — مُثمِر · ١٣+ سنة</span>
+    <span class="chip">الكود الذهبيّ — المستوى الرابع (مُبدِع)</span>
+    <span class="chip">مُستلهَمٌ من: CEFR C1 · ACTFL Advanced · IB DP Language A/B</span>
+    <span class="chip">الدستور العالميّ للطفل v10.2</span>
+    <span class="chip">الطبعة الجامعة · جاهزة للطبع</span>
+    <span class="chip">بنيةٌ مُتّسقةٌ مُدقّقة</span>
+  </div>
+</header>
+<div class="layers-key" style="max-width:900px; margin:18px auto; padding:14px 18px; background:#FBF9F3; border:1px solid #E3D7B8; border-right:5px solid #C9A24B; border-radius:12px; font-family:'Cairo',sans-serif; color:#4A3D1E; font-size:14px; line-height:1.95;"><strong style="color:#8A6D2E;">🧭 مفتاحُ طبقات المحطّة (للميسّر):</strong> كلُّ محطّةٍ طبقتان — <strong>نواةٌ إلزاميّةٌ</strong> تكفي وحدها لتحقيق الهدف: المِرْسَاةُ (الفلسفة)، والنشاطُ الحِسّيُّ، وبروتوكولُ التطبيق، والترديدةُ أو الأهزوجة. و<strong>طبقةٌ إثرائيّةٌ</strong> تُضاف عند اتّساع الوقت لا فرضًا: الجسرُ العابرُ للّغات، والصدى التراكميّ، ولحظةُ اللذاذة، والبدائلُ الحِسّيّةُ ومسارُ المُكتشِف الصامت، وطبقةُ المُرافِق. خُذْ بالنواة أوّلًا، ثمّ أضِفِ الإثراءَ بقدر ما يتّسع له نَفَسُ الطفل — فالطقوسُ خادمةٌ للمعنى لا غايةٌ.</div>
+
+
+<!-- CORD -->
+<section id="cord">
+  <div class="card">
+    <div class="sec-head"><span class="ic">🧬</span><h2>الحَبْلُ السُّرِّيُّ — الجِسْرُ وَالخَرِيطَةُ</h2></div>
+    <p class="lead">هنا يبدأ <strong>المستوى الذهبيّ</strong>: ينتقل الطفلُ من «المتعلِّم» إلى «المُبدِع» الذي يصنع عملًا يُشاركه العالمَ.</p>
+    <div class="cord">
+      <div class="node">مَعْمَلُ الجُمَلِ<br>السفر ١٠</div>
+      <span class="arrow">←</span>
+      <div class="node">نَسِيجُ النَّصِّ<br>السفر ١١</div>
+      <span class="arrow">←</span>
+      <div class="node now"><b>المُؤَلِّفُ الصَّغِيرُ</b><br>السفر ١٢ — أنتَ هنا 🌳</div>
+      <span class="arrow">←</span>
+      <div class="node">النَّاقِدُ الصَّغِيرُ<br>السفر ١٣</div>
+      <span class="arrow">←</span>
+      <div class="node">قَائِدُ مَشْرُوعٍ<br>السفر ١٤</div>
+    </div>
+    <p style="margin-top:14px;"><strong>الجذر النَّاقل:</strong> كلُّ ما تعلّمه الطفلُ — الحرفُ، والكلمةُ، والجملةُ، والنصُّ — يصير الآن <em>أدواتِ مؤلِّفٍ</em>. لم يَعُد يتعلّم القراءةَ والكتابةَ، بل يستخدمهما لِيُؤلِّف عملًا أصيلًا متعدّدَ الوسائط ثم يُهديه للعالم.</p>
+    <div class="fiveparts">
+      <div class="pp p1"><span class="big">🌱</span><span class="ttl">البَذْرَةُ</span><br><span class="dsc">فكرةٌ من عالمك</span></div>
+      <div class="pp p2"><span class="big">✍️</span><span class="ttl">النَّصُّ</span><br><span class="dsc">تكتبه</span></div>
+      <div class="pp p3"><span class="big">🎨</span><span class="ttl">الصُّورَةُ</span><br><span class="dsc">ترسمه</span></div>
+      <div class="pp p4"><span class="big">🎵</span><span class="ttl">الصَّوْتُ</span><br><span class="dsc">تُلحّنه</span></div>
+      <div class="pp p5"><span class="big">🎭</span><span class="ttl">الأَدَاءُ</span><br><span class="dsc">تؤدّيه وتُهديه</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section id="philo" class="sheet">
+  <div class="card">
+    <div class="sec-head"><span class="ic">✨</span><h2>فَلْسَفَةُ السِّفْرِ: مِنَ النَّسِيجِ إِلَى التَّأْلِيفِ</h2></div>
+    <p>قَطَعَ الطِّفْلُ رِحْلَتَهُ: لَمَسَ الحَرْفَ، وَنَطَقَهُ بِجَسَدِهِ، وَبَنَى الجُمْلَةَ، وَنَسَجَ النَّصَّ. وَالآنَ — فِي المُسْتَوَى المُبْدِعِ — يَصِيرُ مُؤَلِّفًا: لَا يَنْسِجُ نَصًّا فَحَسْبُ، بَلْ عَمَلًا مُتَكَامِلًا تَجْتَمِعُ فِيهِ الحَوَاسُّ السَّبْعُ: النَّصُّ (نُطْقٌ)، وَالصُّورَةُ (بَصَرٌ)، وَالصَّوْتُ (سَمْعٌ)، وَالحَرَكَةُ (لَمْسٌ وَحَرَكَةٌ)، يَقُودُهَا الخَيَالُ. عَادَ الجَسَدُ الحِسِّيُّ كَامِلًا، لَكِنَّهُ الآنَ <strong>يُبْدِعُ لَا يَتَعَلَّمُ فَقَطْ</strong>.</p>
+    <div class="poetic" style="border-right-color:var(--s1);">🌳 <strong>جُذَيْرٌ مُثْمِرٌ:</strong> بَلَغَ رَفِيقُنَا جُذَيْرٌ مَرْحَلَةَ الإِثْمَارِ. مَا كَانَ بَذْرَةً صَارَ شَجَرَةً تُعْطِي ثَمَرًا — وَالثَّمَرُ هُنَا أَعْمَالٌ يُبْدِعُهَا الطِّفْلُ بِيَدَيْهِ، لَا تُسْتَهْلَكُ عَلَى شَاشَةٍ.</div>
+    <div class="poetic">🌿 <strong>هَمْسَةُ سَلِيمٍ (للميسّر):</strong> «أُؤَلِّفُ عَالَمِي بِيَدِي، فَأَكُونُ صَانِعًا لَا مُسْتَهْلِكًا. الشَّاشَةُ تَعْرِضُ إِبْدَاعَ غَيْرِي، وَيَدِي تَصْنَعُ إِبْدَاعِي.»</div>
+  </div>
+</section>
+
+<!-- LITERARY VESSEL (v12.1) -->
+<section id="vessel">
+  <div class="card">
+    <div class="sec-head"><span class="ic">🌰</span><h2>وِعَاءٌ أَدَبِيٌّ خَفِيفٌ: حَصَاةُ جُذَيْرٍ</h2></div>
+    <p class="lead">عَتَبَةٌ قَصِيرَةٌ تُمَهِّدُ لِلْمَحَطَّاتِ الخَمْسِ — وَالوِعَاءُ الأَهَمُّ يَبْقَى «بَذْرَتَكَ أَنْتَ مِنْ عَالَمِكَ».</p>
+    <div class="poetic" style="border-right-color:var(--s1);">جُذَيْرٌ، بَعْدَ أَنْ نَسَجَ نُصُوصَهُ فِي «نَسِيجِ النَّصِّ»، أَحَسَّ أَنَّهُ يُرِيدُ أَنْ يُهْدِيَ العَالَمَ شَيْئًا مِنْ عَالَمِهِ. فَأَخَذَ <strong>حَصَاةً</strong> مِنْ حَيِّهِ (بَذْرَتُهُ)، وَ<strong>كَتَبَ</strong> عَنْهَا (نَصُّهُ)، وَ<strong>رَسَمَهَا</strong> (صُورَتُهُ)، وَ<strong>غَنَّى</strong> لَهَا (صَوْتُهُ)، ثُمَّ <strong>أَدَّاهَا</strong> أَمَامَ عَائِلَتِهِ وَوَهَبَهَا لِجَدَّتِهِ (أَدَاؤُهُ وَنَشْرُهُ). هَكَذَا صَارَتْ حَصَاةٌ صَغِيرَةٌ عَمَلًا يُهْدَى.</div>
+  </div>
+</section>
+
+<!-- INTEGRATION MAP -->
+<section id="integ">
+  <div class="card">
+    <div class="sec-head"><span class="ic">🧭</span><h2>خَرِيطَةُ التَّكَامُلِ — الحَوَاسُّ السَّبْعُ فِي عَمَلٍ وَاحِدٍ</h2></div>
+    <p class="lead">كلُّ محطّةٍ تُفعِّل حاسّةً، ثم تجتمع كلُّها في العمل المتكامل — <strong>والخيالُ يقودها جميعًا</strong>.</p>
+    <div class="integ">
+      <div class="col c1"><span class="e">🌱</span><div class="st">البَذرة</div><div class="se">الخيال + اللمس</div><div class="ar">↓</div><div class="sk">فكرةٌ أصيلةٌ</div></div>
+      <div class="col c2"><span class="e">✍️</span><div class="st">النص</div><div class="se">النطق + الترابط</div><div class="ar">↓</div><div class="sk">نصٌّ متماسكٌ</div></div>
+      <div class="col c3"><span class="e">🎨</span><div class="st">الصورة</div><div class="se">البصر + اللمس</div><div class="ar">↓</div><div class="sk">صورةٌ أصيلةٌ</div></div>
+      <div class="col c4"><span class="e">🎵</span><div class="st">الصوت</div><div class="se">السمع + الإيقاع</div><div class="ar">↓</div><div class="sk">نبضٌ يخدم الذروة</div></div>
+      <div class="col c5"><span class="e">🎭</span><div class="st">الأداء</div><div class="se">الحركة + الكلّ</div><div class="ar">↓</div><div class="sk">عملٌ متكاملٌ يُهدى</div></div>
+    </div>
+    <div class="golden-rule" style="margin-top:14px;">القَاعِدَةُ الذَّهَبِيَّةُ: «لَا تَصِفْ لَهُ الكَمَالَ. دَعْهُ يُبْدِعُ مِنْ عَالَمِهِ، ثُمَّ احْتَفِ بِأَصَالَتِهِ.»</div>
+  </div>
+</section>
+
+<!-- STATION 1 — SEED -->
+<section id="m1" class="sheet">
+  <div class="station">
+    <div class="st-head h1c"><span class="em">🌱</span><h3>المَحَطَّةُ ١: البَذْرَةُ — فِكْرَةٌ مِنْ عَالَمِكَ</h3><span class="tag">جذر: ب-ذ-ر · الحاسّة: الخيال واللمس</span></div>
+    <div class="st-body">
+      <span class="tbreath">نَفَسُ البَذْرَةِ: كفٌّ على الصدر، شهيقٌ — استحضِر مشهدًا من عالمك تحبّه، حبسٌ <b style="color:#8f3a1e">(يُستثنى مَن دونَ السابعةِ ومَن لديه ربوٌ أو عارضٌ تنفّسيٌّ أو قلبيّ — يُستبدَلُ الحبسُ بزفيرٍ طويلٍ هادئ.)</b>، زفيرٌ.</span>
+      <div class="echo"><span class="lbl">صدًى من رحلتك كلِّها</span>كانت كلُّ رحلتك بذرةً تنمو: حرفٌ، فكلمةٌ، فجملةٌ، فنصٌّ… والآن أنتَ مَن يزرع البذرةَ ويُثمرها.</div>
+      <div class="block b-mersa"><span class="lbl">～ المِرْسَاةُ (الفلسفة)</span>«كُلُّ عَمَلٍ يَبْدَأُ بِبَذْرَةٍ. لَا أَبْحَثُ عَنْ فِكْرَةٍ بَعِيدَةٍ، بَلْ أَلْتَقِطُ شَيْئًا مِنْ عَالَمِي: نَخْلَةٌ فِي حَيِّي، جَدَّتِي تَرْوِي، مَطَرٌ عَلَى النَّافِذَةِ. البَذْرَةُ الصَّادِقَةُ تُثْمِرُ عَمَلًا صَادِقًا.»</div>
+      <div class="block b-work"><span class="lbl">🎨 الوَرْشَةُ الإِبْدَاعِيَّةُ</span>يَجْلِسُ المُبْدِعُ الصَّغِيرُ وَيُغْمِضُ عَيْنَيْهِ، وَيَسْتَحْضِرُ مَشْهَدًا يُحِبُّهُ مِنْ حَيَاتِهِ (مَكَانٌ، شَخْصٌ، لَحْظَةٌ). يَلْمِسُ شَيْئًا يَرْتَبِطُ بِهِ (حَصَاةٌ، وَرَقَةُ نَخِيلٍ)، وَيَخْتَارُهُ بَذْرَةَ عَمَلِهِ.</div>
+      <div class="silent"><span class="lbl">سُؤَالُ المُبْدِعِ</span>«مَا الَّذِي يَلْمِسُ قَلْبَكَ مِنْ عَالَمِكَ حَقًّا؟ وَمَا الَّذِي تُرِيدُ أَنْ يَشْعُرَ بِهِ مَنْ يَرَى عَمَلَكَ؟»</div>
+      <div class="block b-refrain"><span class="lbl">🎵 لَازِمَةُ المُؤَلِّفِ</span>«بَذْرَتِي مِنْ عَالَمِي... أَزْرَعُهَا فَتُثْمِرُ.»</div>
+      <div class="protocol"><span class="lbl"></span><div class="protocol-grid"><div class="protocol-item"><b>المدّة:</b> ١٠ دقائق</div><div class="protocol-item"><b>العدد:</b> فرديّ</div><div class="protocol-item"><b>المادّة:</b> فكرةٌ من عالم الطفل</div><div class="protocol-item"><b>الأدوات:</b> بطاقةُ «بذرة» + صندوقُ الأفكار</div><div class="protocol-item"><b>الخرج:</b> بذرةُ فكرةٍ يختارها الطفلُ</div></div><ol><li>طقسُ الأنفاس أوّلًا.</li><li>يفكّر الطفلُ فيما يحبّه أو يدهشه في يومه.</li><li>يختار «بذرةَ» فكرةٍ واحدةً ويضعها في صندوق الأفكار.</li><li>يحكيها في جملةٍ: «حكايتي عن…».</li><li>يحتفظ ببطاقة البذرة في حقيبة الذاكرة.</li></ol></div>
+      <div class="block b-fruit"><span class="lbl">~ الثَّمَرَةُ</span>يَخْتَارُ المُبْدِعُ بَذْرَةً (مَوْضُوعًا وَإِحْسَاسًا) أَصِيلَةً مِنْ عَالَمِهِ، وَيَكْتُبُهَا جُمْلَةً وَاحِدَةً فِي دَفْتَرِهِ.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span>seed · idea · world — <span class="en">«Plant your seed — pick an idea from your own world and bury it.»</span></div>
+      <div class="motor"><span class="lbl">المسار البديل</span>لمن يصعب عليه اللمسُ: استحضِر البذرةَ بصوتٍ من ذكراك، أو بصورةٍ ذهنيّةٍ، بدل المادّة الملموسة.</div>
+      <div class="home"><span class="lbl">امتداد البيت</span>اختاروا معًا «بذرةَ عملٍ» من ذكرى عائليّة، وسمّوا الإحساسَ الذي تحملها.</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق</span>الحاسّة: الخيال واللمس · المهارة: توليد فكرةٍ أصيلةٍ مرتبطةٍ بالعالم الحقيقيّ.</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تؤلّفَ شيئًا آخرَ من خيالك… لنفسك؟» — إن ألّف الطفلُ أو رسم حكايةً تلقائيًّا بفرحٍ، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد.</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATION 2 — TEXT -->
+<section id="m2" class="sheet">
+  <div class="station">
+    <div class="st-head h2c"><span class="em">✍️</span><h3>المَحَطَّةُ ٢: النَّصُّ — تَكْتُبُهُ بِكُلِّ مَا تَعَلَّمْتَ</h3><span class="tag">جذر: ك-ت-ب · الحاسّة: النطق والترابط</span></div>
+    <div class="st-body">
+      <span class="tbreath">نَفَسُ البَذْرَةِ: شهيقٌ على فكرتك، حبسٌ <b style="color:#8f3a1e">(يُستثنى مَن دونَ السابعةِ ومَن لديه ربوٌ أو عارضٌ تنفّسيٌّ أو قلبيّ — يُستبدَلُ الحبسُ بزفيرٍ طويلٍ هادئ.)</b>، زفيرٌ — ثم دع القلمَ يتبع إحساسَك.</span>
+      <div class="echo"><span class="lbl">صدًى من السفر الحادي عشر</span>تذكّر النَّولَ والعُقَدَ والذروةَ في «نسيج النصّ»… الآن انسِج نصَّك بالتسلسل والرَّبط والذروة.</div>
+      <div class="block b-mersa"><span class="lbl">～ المِرْسَاةُ (الفلسفة)</span>«الآنَ أَنْسِجُ نَصِّي مِنْ بَذْرَتِي: جُمَلٌ تَثْقُلُ وَتَتَحَرَّكُ وَتَلْتَصِقُ، وَعُقَدٌ تَرْبِطُهَا، وَفَقَرَاتٌ تَتَسَلْسَلُ. كُلُّ مَا تَعَلَّمْتُهُ فِي الأَسْفَارِ السَّابِقَةِ يَصِيرُ بَيْنَ يَدَيَّ أَدَاةً.»</div>
+      <div class="block b-work"><span class="lbl">🎨 الوَرْشَةُ الإِبْدَاعِيَّةُ</span>يَكْتُبُ المُبْدِعُ نَصَّ عَمَلِهِ (قَصِيدَةٌ قَصِيرَةٌ، أَوْ قِصَّةٌ، أَوْ وَصْفٌ) مُسْتَخْدِمًا مَهَارَاتِ النَّسِيجِ (السفر ١١): تَسَلْسُلٌ، وَرَبْطٌ، وَذُرْوَةٌ. يَقْرَؤُهُ بِصَوْتِهِ وَيُنَقِّحُهُ.</div>
+      <div class="silent"><span class="lbl">سُؤَالُ المُبْدِعِ</span>«هَلْ نَصُّكَ يَصِلُ إِلَى الذُّرْوَةِ الَّتِي أَرَدْتَهَا؟ وَأَيُّ كَلِمَةٍ تَحْمِلُ إِحْسَاسَ بَذْرَتِكَ أَكْثَرَ؟»</div>
+      <div class="block b-refrain"><span class="lbl">🎵 لَازِمَةُ المُؤَلِّفِ</span>«مِنَ البَذْرَةِ نَصٌّ... أَنْسِجُهُ بِيَدِي.»</div>
+      <div class="protocol"><span class="lbl"></span><div class="protocol-grid"><div class="protocol-item"><b>المدّة:</b> ١٢ دقيقةً</div><div class="protocol-item"><b>العدد:</b> فرديّ</div><div class="protocol-item"><b>المادّة:</b> البذرةُ المختارةُ</div><div class="protocol-item"><b>الأدوات:</b> ورقٌ + قلمٌ سميكٌ</div><div class="protocol-item"><b>الخرج:</b> نصٌّ قصيرٌ من بذرة الفكرة</div></div><ol><li>طقسُ الأنفاس أوّلًا.</li><li>يسقي البذرةَ كلماتٍ: يكتب جملًا قليلةً تنمو من فكرته.</li><li>يقرأ ما كتب بصوتٍ ويُحسّ أنّه «مؤلّفٌ».</li><li>يضيف جملةً أو يصحّح برفقٍ دون إكراهٍ.</li><li>يحفظ نصَّه في حقيبة الذاكرة.</li></ol></div>
+      <div class="block b-fruit"><span class="lbl">~ الثَّمَرَةُ</span>نَصٌّ مُتَمَاسِكٌ (قَصِيدَةٌ/قِصَّةٌ/وَصْفٌ) نَابِعٌ مِنْ بَذْرَتِهِ، مُنَقَّحٌ بِصَوْتِهِ.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span>write · text · draft — <span class="en">«Water it into words — write what grows from the seed.»</span></div>
+      <div class="motor"><span class="lbl">المسار البديل</span>مَن يصعب عليه الكتابةُ بالقلم: يُملي نصَّه صوتًا فيُكتَب عنه، أو يرتّب بطاقاتِ جملٍ جاهزةٍ.</div>
+      <div class="home"><span class="lbl">امتداد البيت</span>استمعوا إليه يقرأ نصَّه، واسألوه: «أيُّ سطرٍ أحبُّ إليك؟ ولماذا؟»</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق</span>الحاسّة: النطق والترابط · المهارة: تأليفُ نصٍّ أدبيٍّ متماسكٍ من فكرةٍ أصيلةٍ.</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تؤلّفَ شيئًا آخرَ من خيالك… لنفسك؟» — إن ألّف الطفلُ أو رسم حكايةً تلقائيًّا بفرحٍ، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد.</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATION 3 — IMAGE -->
+<section id="m3" class="sheet">
+  <div class="station">
+    <div class="st-head h3c"><span class="em">🎨</span><h3>المَحَطَّةُ ٣: الصُّورَةُ — تَرْسُمُهُ بِالشَّخْبَطَةِ المُنَظَّمَةِ</h3><span class="tag">جذر: ر-س-م · الحاسّة: البصر واللمس</span></div>
+    <div class="st-body">
+      <span class="tbreath">نَفَسُ البَذْرَةِ: شهيقٌ على لون إحساسك، حبسٌ <b style="color:#8f3a1e">(يُستثنى مَن دونَ السابعةِ ومَن لديه ربوٌ أو عارضٌ تنفّسيٌّ أو قلبيّ — يُستبدَلُ الحبسُ بزفيرٍ طويلٍ هادئ.)</b>، زفيرٌ — ثم دع يدك تخطّ.</span>
+      <div class="echo"><span class="lbl">صدًى من السفر التاسع</span>تذكّر القماشَ الذي كان «صفةً» تُزيّن… الآن لوّن عملَك بما يليق بإحساس بذرتك.</div>
+      <div class="block b-mersa"><span class="lbl">～ المِرْسَاةُ (الفلسفة)</span>«عَمَلِي يَحْتَاجُ عَيْنًا. أَرْسُمُهُ بِيَدِي — خَطٌّ دَافِئٌ غَيْرُ كَامِلٍ، شَخْبَطَةٌ مُنَظَّمَةٌ. لَا أَنْسَخُ صُورَةً مِنْ شَاشَةٍ، بَلْ أَصْنَعُ صُورَتِي بِقَلَمِي وَأَلْوَانِي.»</div>
+      <div class="block b-work"><span class="lbl">🎨 الوَرْشَةُ الإِبْدَاعِيَّةُ</span>يَرْسُمُ المُبْدِعُ مَشْهَدًا مِنْ نَصِّهِ بِأُسْلُوبِ الشَّخْبَطَةِ المُنَظَّمَةِ (قَلَمُ شَمْعٍ/رَصَاصٍ عَلَى وَرَقٍ دَافِئٍ). يَخْتَارُ أَلْوَانًا تَخْدِمُ إِحْسَاسَ البَذْرَةِ، وَيَكْتُبُ كَلِمَةً مِفْتَاحِيَّةً بِخَطِّهِ عَلَى الرَّسْمِ.</div>
+      <div class="silent"><span class="lbl">سُؤَالُ المُبْدِعِ</span>«هَلْ لَوْنُكَ وَخَطُّكَ يَحْمِلَانِ الإِحْسَاسَ نَفْسَهُ الَّذِي فِي نَصِّكَ؟ وَمَا الَّذِي تَرَكْتَهُ نَاقِصًا عَمْدًا؟»</div>
+      <div class="block b-refrain"><span class="lbl">🎵 لَازِمَةُ المُؤَلِّفِ</span>«أَرْسُمُ عَالَمِي... بِخَطٍّ مِنْ يَدِي.»</div>
+      <div class="protocol"><span class="lbl"></span><div class="protocol-grid"><div class="protocol-item"><b>المدّة:</b> ١٠ دقائق</div><div class="protocol-item"><b>العدد:</b> فرديّ</div><div class="protocol-item"><b>المادّة:</b> نصُّ الطفل</div><div class="protocol-item"><b>الأدوات:</b> أوراقٌ + ألوانٌ</div><div class="protocol-item"><b>الخرج:</b> صورةٌ تُجسّد النصَّ</div></div><ol><li>طقسُ الأنفاس أوّلًا.</li><li>يتخيّل مشهدًا من نصّه ويغمض عينيه ليراه.</li><li>يرسم صورتَه الخاصّةَ التي تُجسّد الحكايةَ.</li><li>يربط الصورةَ بالجملة المناسبة.</li><li>يضمّ الصورةَ إلى نصّه في حقيبة الذاكرة.</li></ol></div>
+      <div class="block b-fruit"><span class="lbl">~ الثَّمَرَةُ</span>رَسْمٌ أَصِيلٌ (شَخْبَطَةٌ مُنَظَّمَةٌ) يُكَمِّلُ نَصَّهُ وَيَخْدِمُ إِحْسَاسَهُ — وَالنَّقْصُ بَصْمَةٌ.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span>draw · image · colour — <span class="en">«Draw what you see in your mind — your very own picture.»</span></div>
+      <div class="motor"><span class="lbl">المسار البديل</span>مَن يصعب عليه الرسمُ بالقلم: يُلصق قُصاصاتٍ ملوّنةً، أو يختار ألوانًا فقط تُعبّر عن الإحساس.</div>
+      <div class="home"><span class="lbl">امتداد البيت</span>ارسموا معًا مشهدًا من العمل، واحتفظوا به في «دفتر الإبداع» — النقصُ بصمةٌ.</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق</span>الحاسّة: البصر واللمس · المهارة: إنتاجُ صورةٍ أصيلةٍ تخدم النصَّ (وعيٌ بصريٌّ).</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تؤلّفَ شيئًا آخرَ من خيالك… لنفسك؟» — إن ألّف الطفلُ أو رسم حكايةً تلقائيًّا بفرحٍ، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد.</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATION 4 — SOUND -->
+<section id="m4" class="sheet">
+  <div class="station">
+    <div class="st-head h4c"><span class="em">🎵</span><h3>المَحَطَّةُ ٤: الصَّوْتُ — تُلَحِّنُهُ بِالإِيقَاعِ</h3><span class="tag">جذر: ص-و-ت · الحاسّة: السمع والإيقاع</span></div>
+    <div class="st-body">
+      <span class="tbreath">نَفَسُ البَذْرَةِ: اسمع نبضَ نفَسك (شهيق… حبس… زفير) — ثم اجعل لنصّك نبضًا مثله.</span>
+      <div class="echo"><span class="lbl">صدًى من طقس الأنفاس</span>تذكّر كيف كان للنفَس إيقاعٌ (شهيقٌ وحبسٌ <b style="color:#8f3a1e">(يُستثنى مَن دونَ السابعةِ ومَن لديه ربوٌ أو عارضٌ تنفّسيٌّ أو قلبيّ — يُستبدَلُ الحبسُ بزفيرٍ طويلٍ هادئ.)</b> وزفيرٌ)… الآن أعطِ نصَّك نبضَه الخاصّ.</div>
+      <div class="block b-mersa"><span class="lbl">～ المِرْسَاةُ (الفلسفة)</span>«لِكُلِّ عَمَلٍ نَبْضٌ. أُعْطِي نَصِّي صَوْتًا: إِيقَاعٌ بِكَفَّيَّ، أُهْزُوجَةٌ، أَوْ صَوْتٌ مِنْ بِيئَتِي (مَاءٌ، رِيحٌ، طَبْلٌ). الصَّوْتُ يَجْعَلُ الكَلِمَاتِ تَتَنَفَّسُ.»</div>
+      <div class="block b-work"><span class="lbl">🎨 الوَرْشَةُ الإِبْدَاعِيَّةُ</span>يُضِيفُ المُبْدِعُ طَبَقَةً صَوْتِيَّةً لِعَمَلِهِ: يُصَفِّقُ إِيقَاعًا يُنَاسِبُ نَصَّهُ، أَوْ يَصْنَعُ أُهْزُوجَةً قَصِيرَةً، أَوْ يُسَجِّلُ أَصْوَاتًا مِنْ بِيئَتِهِ (بِأَدَوَاتٍ بَسِيطَةٍ). يَرْبِطُ الإِيقَاعَ بِذُرْوَةِ النَّصِّ.</div>
+      <div class="silent"><span class="lbl">سُؤَالُ المُبْدِعِ</span>«أَيْنَ يَتَسَارَعُ إِيقَاعُكَ وَأَيْنَ يَهْدَأُ؟ وَهَلْ يَخْدِمُ صَوْتُكَ ذُرْوَةَ عَمَلِكَ؟»</div>
+      <div class="block b-refrain"><span class="lbl">🎵 لَازِمَةُ المُؤَلِّفِ</span>«لِكَلِمَاتِي نَبْضٌ... أَسْمَعُهُ بِأُذُنِي.»</div>
+      <div class="protocol"><span class="lbl"></span><div class="protocol-grid"><div class="protocol-item"><b>المدّة:</b> ٨ دقائق</div><div class="protocol-item"><b>العدد:</b> فرديّ أو مجموعة</div><div class="protocol-item"><b>المادّة:</b> نصُّ الطفل</div><div class="protocol-item"><b>الأدوات:</b> إيقاعٌ (تصفيقٌ/طبلةٌ صغيرةٌ)</div><div class="protocol-item"><b>الخرج:</b> إيقاعٌ أو لحنٌ بسيطٌ للنصّ</div></div><ol><li>طقسُ الأنفاس أوّلًا.</li><li>يقرأ جملةً من نصّه ويصفّق إيقاعَها.</li><li>يجرّب لحنًا بسيطًا أو ترديدةً لكلماته.</li><li>يؤدّي النصَّ بالإيقاع ويُحسّ موسيقاه.</li><li>يسجّل إيقاعَه (رمزًا) في حقيبة الذاكرة.</li></ol></div>
+      <div class="block b-fruit"><span class="lbl">~ الثَّمَرَةُ</span>طَبَقَةٌ صَوْتِيَّةٌ/إِيقَاعِيَّةٌ تَخْدِمُ نَصَّهُ وَتُبْرِزُ ذُرْوَتَهُ.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span>sound · rhythm · pulse — <span class="en">«Tap a rhythm for your words — hear them sing.»</span></div>
+      <div class="motor"><span class="lbl">المسار البديل</span>مَن يصعب عليه التصفيقُ: يستخدم نقرًا على الطاولة، أو صوتًا بفمه يُحاكي الإيقاع.</div>
+      <div class="home"><span class="lbl">امتداد البيت</span>صفّقوا إيقاعَ العمل معًا، أو اخترعوا له لحنًا بسيطًا يردّده الطفل.</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق</span>الحاسّة: السمع والإيقاع · المهارة: إضافةُ بُعدٍ صوتيٍّ/إيقاعيٍّ متناغمٍ مع النصّ.</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تؤلّفَ شيئًا آخرَ من خيالك… لنفسك؟» — إن ألّف الطفلُ أو رسم حكايةً تلقائيًّا بفرحٍ، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد.</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATION 5 — PERFORMANCE -->
+<section id="m5" class="sheet">
+  <div class="station">
+    <div class="st-head h5c"><span class="em">🎭</span><h3>المَحَطَّةُ ٥: الأَدَاءُ وَالنَّشْرُ — تُؤَدِّيهِ وَتُهْدِيهِ</h3><span class="tag">جذر: أ-د-ي · الحاسّة: الحركة والحواسّ مجتمعة</span></div>
+    <div class="st-body">
+      <span class="tbreath">نَفَسُ البَذْرَةِ: نَفَسٌ عميقٌ قبل الأداء — اجمع حواسَّك كلَّها، ثم ابدأ.</span>
+      <div class="echo"><span class="lbl">صدًى من كلّ الأسفار</span>الحِسُّ، والحرفُ، والكلمةُ، والجملةُ، والنصُّ — تلتقي الآن كلُّها في عملك وأدائك. هذه ثمرةُ الرحلة.</div>
+      <div class="block b-mersa"><span class="lbl">～ المِرْسَاةُ (الفلسفة)</span>«عَمَلِي اكْتَمَلَ: نَصٌّ، وَصُورَةٌ، وَصَوْتٌ. الآنَ أُؤَدِّيهِ بِجَسَدِي أَمَامَ مَنْ أُحِبُّ، ثُمَّ أُهْدِيهِ — أَنْشُرُهُ فِي العَالَمِ كَثَمَرَةٍ مِنْ شَجَرَتِي. صِرْتُ مُؤَلِّفًا يُشَارِكُ، لَا مُتَعَلِّمًا فَقَطْ.»</div>
+      <div class="block b-work"><span class="lbl">🎨 الوَرْشَةُ الإِبْدَاعِيَّةُ</span>يَجْمَعُ المُبْدِعُ طَبَقَاتِهِ (نَصٌّ + صُورَةٌ + صَوْتٌ) فِي عَمَلٍ وَاحِدٍ، وَيُؤَدِّيهِ بِجَسَدِهِ (قِرَاءَةٌ مُعَبِّرَةٌ + حَرَكَةٌ) أَمَامَ مَجْمُوعَةٍ صَغِيرَةٍ، ثُمَّ «يَنْشُرُهُ»: كُتَيِّبٌ صَغِيرٌ، أَوْ لَوْحَةُ عَرْضٍ، أَوْ إِهْدَاءٌ لِمَكْتَبَةِ الصَّفِّ.</div>
+      <div class="silent"><span class="lbl">سُؤَالُ المُبْدِعِ</span>«كَيْفَ يَجْعَلُ جَسَدُكَ عَمَلَكَ حَيًّا عِنْدَ الأَدَاءِ؟ وَلِمَنْ تُهْدِي ثَمَرَتَكَ؟»</div>
+      <div class="block b-refrain"><span class="lbl">🎵 لَازِمَةُ المُؤَلِّفِ</span>«أُؤَدِّي عَمَلِي... ثُمَّ أُهْدِيهِ لِلْعَالَمِ.»</div>
+      <div class="protocol"><span class="lbl"></span><div class="protocol-grid"><div class="protocol-item"><b>المدّة:</b> ١٢ دقيقةً</div><div class="protocol-item"><b>العدد:</b> مجموعة</div><div class="protocol-item"><b>المادّة:</b> العملُ المكتملُ (نصٌّ + صورةٌ + إيقاعٌ)</div><div class="protocol-item"><b>الأدوات:</b> ركنُ العرض + «كتابُ المؤلّف الصغير»</div><div class="protocol-item"><b>الخرج:</b> أداءٌ ونشرٌ — يصير الطفلُ مؤلّفًا</div></div><ol><li>طقسُ الأنفاس أوّلًا.</li><li>يقف الطفلُ ويعرض عملَه (يقرأ ويُري صورتَه).</li><li>يصفّق الرفاقُ احتفاءً لا حكمًا.</li><li>يُضاف عملُه إلى «كتاب المؤلّف الصغير» المشترك.</li><li>يحتفظ بنسخةٍ في حقيبة الذاكرة فخورًا.</li></ol></div>
+      <div class="block b-fruit"><span class="lbl">~ الثَّمَرَةُ</span>عَمَلٌ مُتَعَدِّدُ الوَسَائِطِ مُتَكَامِلٌ (نَصٌّ + صُورَةٌ + صَوْتٌ + أَدَاءٌ)، يَنْشُرُهُ وَيُهْدِيهِ.</div>
+      <div class="bridge"><span class="lbl">الجسر الإنجليزيّ</span>perform · share · author — <span class="en">«Stand and share it aloud — you are an author!»</span></div>
+      <div class="motor"><span class="lbl">المسار البديل</span>مَن يصعب عليه الأداءُ واقفًا: يؤدّي جالسًا، أو يعرض عملَه بصوتٍ مُسجَّلٍ مع عرض الصورة.</div>
+      <div class="home"><span class="lbl">امتداد البيت</span>اصنعوا «حفلَ إهداءٍ» صغيرًا في البيت: يؤدّي عملَه، ويُهديه لفردٍ من العائلة.</div>
+      <div class="compnote"><span class="lbl">طبقة المرافق</span>الحاسّة: الحركة والحواسّ مجتمعة · المهارة: دمجُ الوسائط وأداءُ العمل ونشرُه (تأليفٌ متكاملٌ).</div>
+      <div class="lath"><span class="lbl"></span>يهمس الميسّرُ في الختام: «هل تحبُّ أن تؤلّفَ شيئًا آخرَ من خيالك… لنفسك؟» — إن ألّف الطفلُ أو رسم حكايةً تلقائيًّا بفرحٍ، فتلك إشارةُ لذاذةٍ إيجابيّةٌ تُرصَد.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACKING -->
+<section id="track" class="sheet">
+  <div class="card">
+    <div class="sec-head"><span class="ic">📐</span><h2>أَدَوَاتُ التَّتَبُّعِ وَالمُوَاءَمَةِ</h2></div>
+    <h3 style="color:var(--forest-mid); font-size:19px; margin-bottom:6px;">🌱 مَصْفُوفَةُ النُّضْجِ (٥ دَرَجَاتٍ)</h3>
+    <table>
+      <thead><tr><th>الدرجة</th><th>الطفل…</th></tr></thead>
+      <tbody>
+        <tr><td>🌰 بَذْرَة</td><td>يَلْتَقِطُ فِكْرَةً (بَذْرَةً) مِنْ عَالَمِهِ بِمُسَاعَدَةٍ.</td></tr><tr><td>🌱 جَذْر</td><td>يُحَوِّلُ البَذْرَةَ إِلَى نَصٍّ قَصِيرٍ بِجُمَلٍ بَسِيطَةٍ.</td></tr><tr><td>🌿 جِذْع</td><td>يُضِيفُ صُورَةً وَإِيقَاعًا يَخْدِمَانِ نَصَّهُ.</td></tr><tr><td>🍃 وَرَقَة</td><td>يُؤَدِّي عَمَلَهُ وَيُشَارِكُهُ بِثِقَةٍ أَمَامَ غَيْرِهِ.</td></tr><tr><td>🌳 شَجَرَة</td><td>يُؤَلِّفُ أَعْمَالًا مُتَكَامِلَةً تِلْقَائِيًّا (نَصٌّ + صُورَةٌ + إِيقَاعٌ) وَيُلْهِمُ غَيْرَهُ — صَارَ مُؤَلِّفًا.</td></tr>
+      </tbody>
+    </table>
+    <h3 style="color:var(--forest-mid); font-size:19px; margin-bottom:6px;">مِقْيَاسُ جُذُور (J-Scale) — سِتَّةُ مُؤَشِّرَاتٍ</h3>
+    <table class="check">
+      <thead><tr><th>المؤشّر الإبداعيّ</th><th>✓</th></tr></thead>
+      <tbody>
+        <tr><td>يُوَلِّدُ فِكْرَةً أَصِيلَةً نَابِعَةً مِنْ عَالَمِهِ وَيُحَدِّدُ إِحْسَاسَهَا</td><td>☐</td></tr>
+        <tr><td>يَكْتُبُ نَصًّا أَدَبِيًّا مُتَمَاسِكًا ذَا ذُرْوَةٍ مِنْ فِكْرَتِهِ</td><td>☐</td></tr>
+        <tr><td>يُنْتِجُ صُورَةً أَصِيلَةً (شَخْبَطَةً مُنَظَّمَةً) تَخْدِمُ النَّصَّ</td><td>☐</td></tr>
+        <tr><td>يُضِيفُ طَبَقَةً صَوْتِيَّةً/إِيقَاعِيَّةً مُتَنَاغِمَةً</td><td>☐</td></tr>
+        <tr><td>يَدْمِجُ الوَسَائِطَ وَيُؤَدِّي عَمَلَهُ بِجَسَدِهِ أَمَامَ مَجْمُوعَةٍ</td><td>☐</td></tr>
+        <tr><td>يَنْشُرُ/يُهْدِي عَمَلَهُ المُكْتَمِلَ بِثِقَةٍ وَفَرَحٍ</td><td>☐</td></tr>
+      </tbody>
+    </table>
+    <div class="transition">✅ مُؤَشِّرُ الجاهزيّة (وصفيٌّ لا بوّابة)ِ إِلَى السِّفْرِ ١٣ (النَّاقِدُ الصَّغِيرُ): تَحَقُّقُ ٤ مِنْ ٦ مُؤَشِّرَاتٍ بِاسْتِقْلَالِيَّةٍ.</div>
+
+    <div class="lathatha"><h4>مُؤَشِّرُ اللَّذَاذَةِ (Lathatha Index)</h4>هَلْ يَفْخَرُ المُبْدِعُ بِعَمَلِهِ وَيَطْلُبُ أَنْ يُؤَدِّيَهُ ثَانِيَةً؟ هَلْ يَبْدَأُ بَذْرَةً جَدِيدَةً مِنْ تِلْقَاءِ نَفْسِهِ؟ — هَذَا أَصْدَقُ مِقْيَاسٍ لِنَجَاحِ السِّفْرِ.</div>
+
+    <div class="note compass"><h4>🧭 سِفْرُ البُوصَلَةِ المَكْسُورَةِ (تنبيهٌ منهجيٌّ صادقٌ)</h4>التَّأْلِيفُ مُتَعَدِّدُ الوَسَائِطِ <strong>مَسَارٌ إِبْدَاعِيٌّ مَفْتُوحٌ</strong> يَحْتَاجُ تَقْوِيمًا نَوْعِيًّا لَا مِعْيَارِيًّا صَارِمًا. وَالتَّقْيِيمُ هُنَا <strong>لِلْعَمَلِيَّةِ وَالأَصَالَةِ لَا لِلْكَمَالِ</strong>؛ فوَثِّقْ تَنَوُّعَ المَسَارَاتِ الإِبْدَاعِيَّةِ دُونَ مُقَارَنَةٍ تَفْضِيلِيَّةٍ بَيْنَ الأَطْفَالِ. وَالحَوَاسُّ الدَّاخِلِيَّةُ (الثِّقَلُ، البَيْنُ، الاتِّزَانُ، الحَرَارَةُ، النَّفَسُ) وَسَائِطُ تَخَيُّلِيَّةٌ تَرْبَوِيَّةٌ تُقَرِّبُ المَعْنَى لِجَسَدِ الطِّفْلِ وَتُعِينُهُ عَلَى التَّذَكُّرِ، لَا ادِّعَاءٌ عَصَبِيٌّ مُثْبَتٌ.</div>
+  </div>
+
+  <div class="card">
+    <div class="sec-head"><span class="ic">📒</span><h2>سِجِلُّ المُبْدِعِينَ (للمرافق)</h2></div>
+    <p class="lead">رصدُ تقدّم كلِّ مبدعٍ في المحطّات الخمس + نتيجة المقياس + ملاحظةٌ على الأصالة. (✓ أتقن · ～ في الطريق · □ لم يبدأ)</p>
+    <table class="logtbl">
+      <thead><tr><th>اسمُ المبدع</th><th>🌱 بذرة</th><th>✍️ نص</th><th>🎨 صورة</th><th>🎵 صوت</th><th>🎭 أداء</th><th>المقياس (../٦)</th><th>ملاحظة الأصالة</th></tr></thead>
+      <tbody>
+        <tr><td>__________</td><td class="empty"></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>__________</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>__________</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>__________</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>__________</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="sec-head"><span class="ic">🌍</span><h2>المُوَاءَمَةُ مَعَ المَعَايِيرِ الدَّوْلِيَّةِ وَدُسْتُورِ الطِّفْلِ</h2></div>
+    <table>
+      <thead><tr><th>الإطار</th><th>المؤشّر في هذا السفر</th></tr></thead>
+      <tbody>
+        <tr><td>CEFR — C1</td><td>إنتاجُ نصوصٍ وأعمالٍ تعبيريّةٍ واضحةٍ منظَّمةٍ متعدّدةِ الأنماط</td></tr>
+        <tr><td>ACTFL — Advanced</td><td>التأليفُ والسردُ والوصفُ بثقةٍ عبر وسائطَ متعدّدةٍ</td></tr>
+        <tr><td>IB DP — Language A/B</td><td>الإبداعُ والاستجابةُ النقديّةُ (Creating &amp; responding)</td></tr>
+        <tr><td>UNESCO — التعبير والإبداع</td><td>تحويلُ المهارات اللغويّة إلى إنتاجٍ ثقافيٍّ أصيلٍ يُشارَك</td></tr>
+        <tr><td>معاييرُ الوصولِ (استرشادًا) — الوصول الشامل</td><td>مسارٌ بديلٌ لكلّ نشاطٍ إبداعيٍّ (حركيٌّ وحسّيٌّ) في المحطّات الخمس</td></tr>
+        <tr><td>نظريّة القراءة الملموسة (TRT) — Amer (2024)</td><td>الجسدُ يُبدع لا يتعلّم فقط؛ وصانعٌ لا مستهلكٌ</td></tr>
+        <tr><td>الدستور العالميّ للطفل — جُذُور (v10.2)</td><td>حقُّ الطفل في الإبداع والمشاركة، والاحتفاءُ بالأصالة لا الكمال</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- HOME + DEDICATION (capstone) -->
+<section id="dedication" class="sheet">
+  <div class="card">
+    <div class="sec-head"><span class="ic">🏡</span><h2>رِسَالَةٌ إِلَى البَيْتِ + حَفْلُ الإِهْدَاءِ</h2></div>
+    <div class="letter">
+      <p style="font-family:'Cairo',sans-serif; font-weight:700; color:var(--forest);">عزيزي وليَّ الأمر،</p>
+      <p>طِفْلُكَ صَارَ مُؤَلِّفًا. أَعْطُوهُ مَسَاحَةً لِيُبْدِعَ عَمَلَهُ، ثُمَّ يُؤَدِّيَهُ وَيُهْدِيَهُ. <strong>لَا تُصَحِّحُوا الكَمَالَ، بَلِ احْتَفُوا بِالأَصَالَةِ وَالجُرْأَةِ.</strong></p>
+      <div class="bridge" style="margin-top:10px;"><span class="lbl">الجسر الإنجليزيّ في البيت</span><span class="en">«Plant it, water it, draw it, sing it, share it — you grew a whole work!»</span></div>
+    </div>
+    <div class="poetic" style="margin-top:14px; border-right-color:var(--s5);">🎭 <strong>حَفْلُ الإِهْدَاءِ (التتويج):</strong> اجْلِسُوا جُمْهُورًا صَغِيرًا، وَدَعُوا الطِّفْلَ يُؤَدِّي عَمَلَهُ المُتَكَامِلَ، ثُمَّ يُهْدِيهِ لِمَنْ يُحِبُّ، وَيَضَعُهُ فِي «دَفْتَرِ الإِبْدَاعِ» العَائِلِيِّ.</div>
+    <div class="golden-rule" style="margin-top:14px;">«مِنْ بَذْرَةٍ... صَارَ ثَمَرٌ... وَالطِّفْلُ الآنَ مُؤَلِّفٌ يُهْدِي العَالَمَ مِنْ شَجَرَتِهِ.»</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <svg class="logo-sm" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="100" cy="100" r="91" fill="none" stroke="#E7CF93" stroke-width="4"/>
+    <line x1="100" y1="132" x2="100" y2="68" stroke="#E7CF93" stroke-width="7" stroke-linecap="round"/>
+    <g fill="none" stroke="#E7CF93" stroke-width="4" stroke-linecap="round">
+      <path d="M100 86 Q76 80 64 64"/><path d="M100 74 Q100 60 100 50"/><path d="M100 86 Q124 80 136 64"/>
+      <path d="M100 110 Q78 118 64 138"/><path d="M100 132 Q100 148 100 158"/><path d="M100 110 Q122 118 136 138"/>
+    </g>
+    <g fill="#E7CF93"><circle cx="100" cy="48" r="10"/><circle cx="64" cy="62" r="9"/><circle cx="136" cy="62" r="9"/></g>
+  </svg>
+  <p class="q">«أُؤَدِّي عَمَلِي... ثُمَّ أُهْدِيهِ لِلْعَالَمِ — أَنَا المُؤَلِّفُ.»</p>
+  <p>انتهى السِّفْرُ الثاني عشرَ — المُؤَلِّفُ الصَّغِيرُ (الطبعة الجامعة الكاملة المُشكَّلة)</p>
+  <p>Volume 12 — The Young Author (Multimedia Composition) · Juthur · Level 4 (Creator)</p>
+  <p>الصادر عن مشروع جُذُور | المستوى المبدع (مُثمِر · ١٣+) | التأليف متعدّد الوسائط</p>
+  <p class="slogan amiri" style="color:var(--gold-light); font-family:'Amiri',serif; margin-top:10px;">الحَرْفُ يُولَدُ بِتَقَاطُعِ الحَوَاسِّ، وَالمَعْنَى يُعْرَفُ بِتَعَدُّدِ السِّيَاقِ</p>
+  <p class="v">الإصدار v12.1 — مُستلهَمٌ من الدستور العالميّ للطفل والمعايير الدوليّة (CEFR · ACTFL · IB) — بنيةٌ مُتّسقةٌ مُدقّقة</p>
+  <p style="opacity:.7;margin-top:8px;">د. عادل ف. عامر — نظريّة القراءة الملموسة (TRT) — Amer (2024) — جميع الحقوق محفوظة ©</p>
+</footer>
+
+</div>
+<div class="card" style="border:1px solid #D9CFB4;padding:1rem;margin:1.5rem 0"><div class="t"><b>بَيَانُ الاسْتِرْشَادِ:</b> صُمِّمَ هذا السِّفْرُ اسْتِرْشَادًا بِنَظَرِيَّةِ القِرَاءَةِ المَلْمُوسَةِ (TRT) وَبِأَدَبِيَّاتِ الوَعْيِ الصَّوْتِيِّ وَالإِدْرَاكِ المُتَجَسِّد. <b>وَلَمْ يُعْتَمَدْ مِنْ أَيِّ جِهَةٍ خَارِجِيَّةٍ، وَلَا يَدَّعِي اعْتِمَادَهَا.</b></div></div>
+
+<div class="jz-foot" style="margin:2.4rem 0 1rem;text-align:center;border-top:3px double #D9CFB4;padding-top:1.4rem;font-family:Amiri,serif"><img src="/juthur/assets/Juthur_Seal_Mono.png" alt="ختمُ الدار" width="56" height="56" style="opacity:.85"><p style="font-size:.74rem;letter-spacing:.16em;color:#9A7B23;margin:.5rem 0;line-height:2">مَطبعةُ جُذور · دبي · MCMXXVI · صمّمه وطوّره د. عادل ف. عامر</p><p style="font-size:.74rem;letter-spacing:.16em;color:#9A7B23;margin:.5rem 0;line-height:2">Designed and developed by Dr. Adel F. Amer · Amer (2024) · CC BY-NC-SA 4.0</p></div>
+<div style="text-align:center;margin:1.4rem 0;padding:.8rem;border-top:1px solid #D9CFB4;border-bottom:1px solid #D9CFB4;font-family:Amiri,serif;font-size:.9rem"><a href='/shajara' style='color:#1B3A2F;margin:0 .5rem'>شَجَرَةُ الدَّار</a>·<a href='/khizanat-harf' style='color:#1B3A2F;margin:0 .5rem'>خِزانةُ جَناحِ الحَرْف</a>·<a href='/harf/sullam' style='color:#1B3A2F;margin:0 .5rem'>السُّلَّم</a>·<a href='/judhur' style='color:#1B3A2F;margin:0 .5rem'>خَريطةُ الجُذور</a>·<a href='/yad-lisan' style='color:#1B3A2F;margin:0 .5rem'>اليَدُ واللِّسان</a></div>
+</body>
+</html>

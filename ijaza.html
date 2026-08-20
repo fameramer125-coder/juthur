@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><base href="/juthur/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إجازةُ القارئِ الصغير — مطبعة جُذور</title>
+<meta name="description" content="براءة قراءة تُطبع ويُملأ اسم الطفل بخط اليد — احتفالًا بقراءةٍ تمّت باليد والورق.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="assets/Juthur_Seal_Mono.png">
+<link rel="stylesheet" href="juthur-core.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700&family=Outfit:wght@400;600&display=swap">
+<style>
+:root{--ink:#2b2823;--gold:#b08f43;--paper:#f3eee2;--ink-70:#6b6459;--gold-15:#e9e2d2;--rule:#d5cbb8;--gold-aa:#8a6b2c;--rubric:#8f3a1e}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Amiri',serif;color:var(--ink);background:var(--paper);font-size:19px;line-height:2;display:flex;flex-direction:column;align-items:center;padding:1.2rem}
+.cert{max-width:720px;width:100%;border:4px double var(--ink);outline:1px solid var(--rule);outline-offset:6px;padding:2.2rem 1.8rem;text-align:center;background:var(--paper)}
+.emblem{display:block;margin:0 auto .6rem}
+.masthead b{font-size:1.4rem;font-weight:700;color:#48423a;text-shadow:0 1px 0 rgba(255,255,255,.85),0 -1px 1px rgba(43,40,35,.4)}
+.masthead span{display:block;font-family:'Outfit';font-size:.58rem;letter-spacing:.4em}
+h1{font-size:clamp(1.7rem,5vw,2.4rem);margin:.5rem 0 .2rem}
+h1 .tk{color:var(--rubric)}
+.sub{font-family:'Outfit';font-size:.62rem;letter-spacing:.2em;color:var(--gold-aa);margin:0 0 1.2rem}
+.line{display:inline-block;min-width:12rem;border-bottom:1.5px dotted var(--ink-70);vertical-align:baseline;margin:0 .3rem}
+.line.short{min-width:5rem}
+.body p{font-size:1.12rem;margin:.7rem 0}
+.duo{display:flex;gap:1rem;justify-content:space-between;margin-top:2rem;flex-wrap:wrap}
+.duo div{flex:1 1 40%;font-size:.95rem}
+.duo .line{min-width:8rem}
+.sealmark{display:block;margin:1.4rem auto .3rem;opacity:.85}
+.colo{font-family:'Outfit';font-size:.56rem;letter-spacing:.22em;color:var(--gold-aa);margin:0}
+.printbar{margin:1.2rem 0}
+.printbar button,.printbar a{font-family:'Outfit';font-size:.8rem;letter-spacing:.08em;color:var(--ink);background:var(--gold-15);border:1px solid var(--ink);padding:.6rem 1.3rem;box-shadow:0 3px 0 rgba(43,40,35,.3);cursor:pointer;text-decoration:none;margin:0 .3rem}
+@media print{.printbar{display:none}body{padding:0}.cert{border-width:4px;outline-offset:6px}}
+</style>
+</head>
+<body>
+<div class="cert">
+<img class="emblem" src="assets/Juthur_Logo_192.webp" alt="شعار جذور" width="64" height="64">
+<p class="masthead"><b>جُذور</b><span>JUTHUR · MCMXXVI</span></p>
+<h1>إِجازَةُ القارِئِ الصَّغيرِ</h1>
+<p class="sub">تُمنَحُ على سُنَّةِ إجازاتِ القُرّاءِ — قراءةٌ قبلَ القراءة</p>
+<div class="body">
+<p>تُشهِدُ مطبعةُ جُذورَ أنَّ القارئَ الكريمَ / القارئةَ الكريمةَ</p>
+<p><span class="line" aria-label="اسم الطفل">&nbsp;</span></p>
+<p>قد قرأَ من رِواقِ القِصَصِ الحِسّيّةِ <span class="line short" aria-label="عدد القصص">&nbsp;</span> قصّةً،</p>
+<p>بيَدٍ تَلمِسُ، وأُذُنٍ تُصغي، وقلبٍ حاضرٍ — بعيدًا عنِ الشّاشاتِ،</p>
+<p>فاستحقَّ هذهِ الإجازةَ، وأُذِنَ لهُ أن يَقرأَ ويُقرِئَ مَن حولَهُ.</p>
+</div>
+<div class="duo">
+<div>المُرشِد/ة: <span class="line">&nbsp;</span></div>
+<div>التاريخ: <span class="line">&nbsp;</span></div>
+</div>
+<img class="sealmark" src="assets/Juthur_Seal_Mono.png" alt="ختم الدار" width="52" height="52">
+<p class="colo">مطبعةُ جُذور · دبي · MCMXXVI · صمّمه وطوّره د. عادل ف. عامر · Designed and developed by Dr. Adel F. Amer</p>
+</div>
+<p class="printbar"><button onclick="print()">🖨 اطبعِ الإجازة</button><a href='/library'>↤ عودةٌ إلى الرِّواق</a></p>
+<script>document.querySelectorAll('h1').forEach(function(el){el.innerHTML=el.textContent.replace(/([\u064B-\u0652\u0670])/g,'<span class="tk">$1</span>');});</script>
+</body>
+</html>

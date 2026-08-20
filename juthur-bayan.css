@@ -1,0 +1,106 @@
+/*  juthur-bayan.css — جِلْدُ الأَسْفار
+    مطبعةُ جُذور · MCMXXVI
+    صمّمه وطوّره د. عادل ف. عامر · Designed and developed by Dr. Adel F. Amer
+    ────────────────────────────────────────────
+    قِشرةٌ واحدةٌ تُلبَسُ فوقَ نصِّ كلِّ سِفرٍ فيصيرُ من الدار:
+    ورقُ المطبعة، وخيطُها الذهبيّ، وأميري وفراونسِس، وأربعةُ مقامات.
+*/
+:root{
+  --ink:#1B3A2F; --gold:#9A7B23; --gold-aa:#82681d; --paper:#FBF9F4; --ink-70:#4A6459;
+  --gold-15:#F0E9D6; --rule:#D9CFB4;
+}
+html[data-maqam="1"]{--band:#C9A227}
+html[data-maqam="2"]{--band:#9A7B23}
+html[data-maqam="3"]{--band:#3C6A55}
+html[data-maqam="4"]{--band:#1B3A2F}
+
+body{
+  background:var(--paper) url("assets/srf_paper.jpg") repeat;
+  background-size:420px 420px;
+  color:var(--ink);
+  font-family:'Amiri',serif; line-height:2.15;
+  margin:0; padding:0;
+}
+body::before{ /* حجابٌ يهدّئ الورقَ تحتَ النصّ */
+  content:"";position:fixed;inset:0;background:rgba(251,249,244,.80);z-index:-1;pointer-events:none
+}
+.jz-wrap{max-width:44rem;margin:0 auto;padding:clamp(1rem,3vw,2rem)}
+
+/* ── الغلاف ── */
+.jz-cover{margin:0 0 2.4rem;text-align:center}
+.jz-cover img{width:min(340px,72vw);height:auto;display:block;margin:0 auto;
+  box-shadow:0 2px 0 rgba(27,58,47,.25),0 14px 34px rgba(27,58,47,.22);border:1px solid rgba(27,58,47,.35)}
+.jz-press{font-family:'Amiri',serif;font-size:.72rem;letter-spacing:.26em;color:var(--gold-aa);margin:.9rem 0 .2rem}
+.jz-maqam{display:inline-block;margin-top:.6rem;padding:.28rem .9rem;border:1px solid var(--gold);
+  background:var(--band);color:#FBF9F4;font-size:.78rem;letter-spacing:.12em}
+html[data-maqam="1"] .jz-maqam,html[data-maqam="2"] .jz-maqam{color:var(--ink)}
+
+/* ── الطباعة ── */
+h1,h2,h3,h4{font-family:'Amiri',serif;color:var(--ink);line-height:2}
+h1{font-size:clamp(1.7rem,5vw,2.5rem);text-align:center;margin:.4rem 0 1.2rem}
+h2{font-size:clamp(1.2rem,3.4vw,1.6rem);border-bottom:1px solid var(--rule);padding-bottom:.4rem;margin:2.4rem 0 1rem}
+h3{font-size:1.12rem;color:var(--ink-70);margin:1.8rem 0 .7rem}
+h4{font-size:1rem;color:var(--gold-aa);margin:1.2rem 0 .5rem}
+p,li{font-size:1.02rem}
+:lang(en),.en{font-family:'Fraunces','EB Garamond',Georgia,serif;direction:ltr}
+
+/* الفواصلُ والزخارف */
+hr{border:0;border-top:1px solid var(--rule);margin:2rem 0}
+.jz-fleuron{text-align:center;color:var(--gold-aa);letter-spacing:.6em;margin:2rem 0}
+
+/* الجداولُ والصناديق فوق الورق */
+table{width:100%;border-collapse:collapse;background:rgba(251,249,244,.72)}
+th,td{border:1px solid var(--rule);padding:.5rem .7rem}
+th{background:var(--gold-15)}
+blockquote,details,.box,.card{background:rgba(251,249,244,.78);border:1px solid var(--rule);
+  padding:.9rem 1.1rem;margin:1.2rem 0}
+details summary{cursor:pointer;color:var(--gold-aa);font-weight:700}
+code,pre{font-family:ui-monospace,Menlo,monospace;background:var(--gold-15)}
+
+/* ── الذيل ── */
+.jz-foot{margin:3rem 0 1rem;text-align:center;border-top:3px double var(--rule);padding-top:1.6rem}
+.jz-foot img{width:56px;height:56px;opacity:.85}
+.jz-foot p{font-size:.74rem;letter-spacing:.16em;color:var(--gold-aa);margin:.5rem 0;line-height:2}
+.jz-back{display:inline-block;margin-top:.8rem;font-size:.82rem;letter-spacing:.08em;color:var(--ink);
+  background:rgba(251,249,244,.8);border:1px solid var(--ink);padding:.5rem 1.1rem;text-decoration:none}
+.jz-back:hover{background:var(--gold-15)}
+.jz-back:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+@media print{
+  body{background:#fff}body::before{display:none}
+  .jz-cover img{box-shadow:none}.jz-back{display:none}
+}
+@media (prefers-contrast:more){
+  body{background:#FBF9F4}body::before{display:none}
+}
+
+/* ── توحيدُ ألوانِ الأسفار على هويّةِ الدار ──
+   ما كان أزرقَ في المسوّدات يُردُّ إلى INK والذهب؛ الهويّةُ واحدة. */
+html[data-stage]{
+  --forest:#1B3A2F; --forest-mid:#3C6A55; --forest-soft:#6E9584; --forest-pale:#EAF1ED;
+  --gold:#9A7B23; --gold-light:#C9A227; --gold-pale:#F0E9D6; --gold-deep:#6E5716;
+  --ink:#1B3A2F; --ink-soft:#4A6459; --ink-faint:#8A9A92;
+  --blue-stage:#3C6A55; --blue-deep:#1B3A2F; --blue-pale:#F0E9D6; --blue-soft:#6E9584;
+  --s1:#3C6A55; --s1d:#1B3A2F; --s2:#4A7C64; --s2d:#23503F; --s3:#5E8F79; --s3d:#2E6350;
+}
+/* ── شريطُ المراحلِ الستّ — الوحدةُ العضويّةُ والتدرُّج ── */
+.jz-arc{display:flex;flex-wrap:wrap;justify-content:center;gap:.35rem;margin:1.4rem 0 .4rem;font-size:.76rem}
+.jz-arc span{padding:.3rem .7rem;border:1px solid var(--rule);background:rgba(251,249,244,.8);color:var(--ink-70);letter-spacing:.06em}
+.jz-arc span.on{background:var(--band,#9A7B23);color:#FBF9F4;border-color:var(--gold);font-weight:700}
+html[data-stage="1"]{--band:#C9A227}html[data-stage="2"]{--band:#B08E2C}
+html[data-stage="3"]{--band:#96781E}html[data-stage="4"]{--band:#4A7C64}
+html[data-stage="5"]{--band:#3A6852}html[data-stage="6"]{--band:#1B3A2F}
+html[data-stage="1"] .jz-arc span.on,html[data-stage="2"] .jz-arc span.on,html[data-stage="3"] .jz-arc span.on{color:#1B3A2F}
+/* ── لوحُ الجذر ── */
+.jz-plate{margin:2rem 0}
+.jz-plate img{width:100%;height:auto;border:1px solid rgba(27,58,47,.35);box-shadow:0 2px 0 rgba(27,58,47,.2)}
+.jz-plate figcaption{text-align:center;font-size:.78rem;letter-spacing:.14em;color:var(--gold-aa);margin-top:.5rem}
+/* ── تنقُّلُ الأسفار ── */
+.jz-nav{display:flex;justify-content:space-between;gap:1rem;margin:2.4rem 0 0;flex-wrap:wrap}
+.jz-nav a{flex:1 1 40%;text-align:center;font-size:.86rem;color:var(--ink);background:rgba(251,249,244,.8);
+  border:1px solid var(--ink);padding:.55rem .9rem;text-decoration:none}
+.jz-nav a:hover{background:var(--gold-15)}
+.jz-nav a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.jz-nav .none{visibility:hidden}
+.jz-nav .jz-soon,.jz-nav .jz-none{flex:1 1 40%;text-align:center;font-size:.86rem;color:var(--ink-70);
+  background:rgba(251,249,244,.55);border:1px dashed var(--rule);padding:.55rem .9rem}
