@@ -34,14 +34,19 @@ export const themes = {
 
   // ASD department documents, lectures, student worksheets — institutional,
   // legible at a glance, classroom-appropriate.
+  // Sourced from confirmed ASD brand facts (23 Aug 2026): primary Red + White
+  // (logo, uniform, official print), Falcons athletics identity adds
+  // dark grey/black. Exact HEX not yet confirmed against an official brand
+  // guide — this is a reasonable standard-school-red placeholder; replace
+  // with the verified HEX if/when the official guide or logo file is available.
   asdInstitutional: {
     name: "ASD Institutional",
     colors: {
-      ink: "#7A0000", // ASD maroon family — adjust to match official ASD brand guide when available
-      ink70: "#A33333",
-      accent: "#1B3A2F",
-      paper: "#FBF9F4",
-      rule: "#E0D6D6",
+      ink: "#C8102E", // ASD Red — PLACEHOLDER, verify against official brand guide
+      ink70: "#7A0A1C",
+      accent: "#2B2B2B", // Falcons dark grey/black
+      paper: "#FFFFFF", // ASD White — confirmed primary
+      rule: "#D9D9D9",
     },
     typography: {
       arabic: { fontFamily: "'Amiri', serif", direction: "rtl", lineHeightWithTashkeel: 1.8 },
