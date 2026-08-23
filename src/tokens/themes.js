@@ -34,23 +34,26 @@ export const themes = {
 
   // ASD department documents, lectures, student worksheets — institutional,
   // legible at a glance, classroom-appropriate.
-  // Sourced from confirmed ASD brand facts (23 Aug 2026): primary Red + White
-  // (logo, uniform, official print), Falcons athletics identity adds
-  // dark grey/black. Exact HEX not yet confirmed against an official brand
-  // guide — this is a reasonable standard-school-red placeholder; replace
-  // with the verified HEX if/when the official guide or logo file is available.
+  // UPDATED (23 Aug 2026): synced to the actual production red used in the
+  // Masar Operating System tool (#A6192E) — a real deployed color, more
+  // authoritative than the earlier standard-school-red placeholder. Gold
+  // accent also synced to Masar's corrected gold (was mistakenly grey there
+  // too, fixed in the same review pass). Still worth a final check against
+  // an official ASD Communications brand guide if one exists.
   asdInstitutional: {
     name: "ASD Institutional",
     colors: {
-      ink: "#C8102E", // ASD Red — PLACEHOLDER, verify against official brand guide
-      ink70: "#7A0A1C",
+      ink: "#A6192E", // ASD Red — from Masar (production use), Pantone-adjacent maroon-red
+      ink70: "#7E1322", // Masar's --ink-deep
+      gold: "#B8923A", // Masar's corrected --gold
+      goldSoft: "#E7C570", // Masar's corrected --gold-soft
       accent: "#2B2B2B", // Falcons dark grey/black
-      paper: "#FFFFFF", // ASD White — confirmed primary
-      rule: "#D9D9D9",
+      paper: "#F8F1E3", // Masar's warm parchment paper, not pure white
+      rule: "#DECFAE",
     },
     typography: {
       arabic: { fontFamily: "'Amiri', serif", direction: "rtl", lineHeightWithTashkeel: 1.8 },
-      latin: { fontFamily: "system-ui, sans-serif", direction: "ltr", lineHeight: 1.5 },
+      latin: { fontFamily: "'Spectral', 'EB Garamond', Georgia, serif", direction: "ltr", lineHeight: 1.5 },
     },
   },
 };
