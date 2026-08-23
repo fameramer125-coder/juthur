@@ -1,10 +1,11 @@
 import React from "react";
-import { colors } from "../tokens/colors.js";
+import { themes } from "../tokens/themes.js";
 
 /**
- * Juthur content card — Paper background, GOLD rule border, INK text.
+ * Theme-aware content card. Works identically across all three audiences.
  */
-export function Card({ children }) {
+export function Card({ children, theme = "juthurCore" }) {
+  const { colors } = themes[theme] ?? themes.juthurCore;
   return (
     <div
       style={{

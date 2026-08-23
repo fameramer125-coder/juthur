@@ -1,11 +1,12 @@
 import React from "react";
-import { colors } from "../tokens/colors.js";
-import { typography } from "../tokens/typography.js";
+import { themes } from "../tokens/themes.js";
 
 /**
- * Juthur Arabic heading — Amiri, RTL, INK color, line-height 2.0 for tashkeel.
+ * Theme-aware Arabic heading. `theme` picks the audience palette/typography;
+ * `hasTashkeel` controls line-height per the fixed rule (>= project minimum with diacritics).
  */
-export function ArabicHeading({ children, level = 1, hasTashkeel = true }) {
+export function ArabicHeading({ children, level = 1, hasTashkeel = true, theme = "juthurCore" }) {
+  const { colors, typography } = themes[theme] ?? themes.juthurCore;
   const Tag = `h${level}`;
   return (
     <Tag
@@ -14,7 +15,7 @@ export function ArabicHeading({ children, level = 1, hasTashkeel = true }) {
         fontFamily: typography.arabic.fontFamily,
         lineHeight: hasTashkeel
           ? typography.arabic.lineHeightWithTashkeel
-          : typography.arabic.lineHeightPlain,
+          : 1.6,
         color: colors.ink,
         margin: 0,
       }}

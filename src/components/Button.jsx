@@ -1,10 +1,13 @@
 import React from "react";
-import { colors } from "../tokens/colors.js";
+import { themes } from "../tokens/themes.js";
 
 /**
- * Juthur primary button — INK fill, Paper text, GOLD on hover/focus.
+ * Theme-aware button. Pass `theme="juthurCore" | "academicNeutral" | "asdInstitutional"`
+ * to switch audience — defaults to Juthur Core.
  */
-export function Button({ children, variant = "primary", ...props }) {
+export function Button({ children, variant = "primary", theme = "juthurCore", ...props }) {
+  const { colors } = themes[theme] ?? themes.juthurCore;
+
   const styles = {
     primary: {
       backgroundColor: colors.ink,
@@ -14,9 +17,11 @@ export function Button({ children, variant = "primary", ...props }) {
     secondary: {
       backgroundColor: "transparent",
       color: colors.ink,
-      border: `1px solid ${colors.gold}`,
+      border: `1px solid ${colors.accent ?? colors.gold ?? colors.ink}`,
     },
   };
+
+  const hoverColor = colors.accent ?? colors.gold ?? colors.ink70;
 
   return (
     <button
@@ -29,7 +34,7 @@ export function Button({ children, variant = "primary", ...props }) {
         cursor: "pointer",
         transition: "background-color 150ms ease",
       }}
-      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = colors.gold)}
+      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = hoverColor)}
       onMouseLeave={(e) =>
         (e.currentTarget.style.backgroundColor = styles[variant].backgroundColor)
       }
