@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="boot-press">
+<head>
+<meta property="og:image" content="https://juthur.netlify.app/assets/juthur_seal_mono.png">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>مَلاحِمُ سِنْدِبَاد — جُذور</title>
+<meta name="description" content="أربعُ ملاحمَ في بحار الأسماء — سندباد وجحا وزينب">
+<link rel="canonical" href="https://juthur.netlify.app/epics.html">
+<link rel="icon" href="assets/Juthur_Seal_Mono.png">
+<meta name="theme-color" content="#3d2b1a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Outfit:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="juthur-core.css">
+<script src="assets/motion.min.js" defer></script>
+<style>
+/* ══ الكتابُ الأم — نظامُ الألوان ══ */
+:root{
+  --ink:#2b2823; --gold:#b08f43; --paper:#f3eee2;
+  --ink-70:#6b6459; --gold-15:#e9e2d2; --rule:#d5cbb8;
+  --paper-aged:#e8d9a0; --paper-dark:#d4c080;
+   
+  --gold-aa:#8a6b2c; --rubric:#8f3a1e;
+  --e1:#2E7D32; --e2:#1565C0; --e3:#6A1B9A; --e4:#C9A227;
+  --display-ar:'Amiri',serif;
+  --display-lat:'Fraunces',Georgia,serif;
+  --label:'Outfit',system-ui,sans-serif;
+}
+
+/* ══ نسيجُ الورق ══ */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--display-ar);color:var(--ink);
+  background:#ede0b8;font-size:19px;line-height:2.05;
+  min-height:100vh;
+}
+body::before{/* حبكةُ الورق المطبعي */
+  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='4'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}
+
+
+
+/* ══ شريطُ الحبر ══ */
+#ink-rule{
+  position:fixed;top:18px;left:18px;right:18px;height:3px;z-index:1000;
+  background:linear-gradient(90deg,var(--gold-aa),var(--gold),var(--gold-aa));
+  transform-origin:0 50%;transform:scaleX(0);
+  box-shadow:0 1px 8px rgba(176,143,67,.5);
+}
+
+
+/* ══ زرُّ الصوت ══ */
+#sound-btn{
+  position:fixed;bottom:24px;right:28px;z-index:600;
+  background:#ede0b8;border:1px solid var(--frame-gold);
+  color:var(--frame);font-size:1.1rem;width:36px;height:36px;
+  border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 8px rgba(43,28,10,.3);transition:.2s;
+}
+#sound-btn:hover{background:var(--gold-15)}
+
+/* ══ صفحةُ الغلاف ══ */
+.boot-press .epic-section,.boot-press .titlepage{opacity:0}
+html:not(.boot-press) .epic-section,html:not(.boot-press) .titlepage{opacity:1}
+
+.titlepage{
+  min-height:100svh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;
+  padding:clamp(4rem,10vw,7rem) clamp(2rem,5vw,4rem);
+  background:linear-gradient(170deg,var(--paper-aged) 0%,#ddd090 50%,#c8b860 100%);
+  position:relative;overflow:hidden;
+}
+/* زوايا الإطار الزخرفية */
+.titlepage::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 10% 90%,rgba(107,76,42,.2) 0%,transparent 40%),
+    radial-gradient(ellipse at 90% 10%,rgba(107,76,42,.15) 0%,transparent 35%);
+  pointer-events:none;
+}
+
+
+
+
+
+
+.foxing{position:absolute;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,rgba(107,76,42,.22) 0%,transparent 70%)}
+
+.device.mark{width:76px;height:76px;margin:0 auto 1.1rem;opacity:0;filter:drop-shadow(0 2px 8px rgba(43,28,10,.3))}
+.wordmark{font-size:clamp(2.2rem,6vw,3.4rem);font-weight:700;color:var(--ink);opacity:0;line-height:1.1}
+.wordmark-lat{font-family:var(--display-lat);font-style:italic;font-size:clamp(.72rem,1.8vw,.95rem);letter-spacing:.32em;color:var(--ink-70);display:block;margin-top:.25rem;opacity:0}
+.claim{font-size:clamp(.98rem,2.4vw,1.28rem);color:var(--ink-70);font-style:italic;margin:1.1rem auto .7rem;max-width:50ch;opacity:0}
+
+.tactile{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;margin:1.3rem 0}
+.slug{
+  font-family:var(--label);font-size:.6rem;letter-spacing:.16em;
+  padding:.38rem .85rem;border:1px solid var(--rule);border-radius:1px;
+  background:linear-gradient(160deg,var(--paper-aged) 0%,#ddd090 100%);color:var(--ink);
+  box-shadow:inset 1px 1px 0 rgba(255,255,255,.7),inset -1px -1px 0 rgba(43,28,10,.1),
+             2px 4px 0 var(--rule),4px 8px 14px rgba(43,28,10,.18);
+  transform:translate(-1px,-2px);transition:.2s;cursor:default;
+}
+.tier-map{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;margin:1rem 0;direction:ltr}
+.tier-chip{font-family:var(--label);font-size:.56rem;letter-spacing:.1em;border:1px solid;border-radius:1px;padding:.2rem .62rem;display:flex;align-items:center;gap:.3rem}
+.tier-chip .dot{width:.6rem;height:.6rem;border-radius:50%;flex-shrink:0}
+.pressline{font-family:var(--label);font-size:.56rem;letter-spacing:.2em;color:var(--gold-aa);margin-top:1.3rem}
+.author-line{font-size:.95rem;color:var(--ink-70);margin:.5rem 0 0}
+.resume-btn{font-family:var(--label);font-size:.7rem;letter-spacing:.1em;color:var(--ink);background:rgba(255,255,255,.3);border:1px solid var(--frame-gold);padding:.5rem 1.1rem;cursor:pointer;margin-top:.7rem;display:none;box-shadow:0 2px 0 rgba(43,28,10,.2)}
+
+/* ══ الهيكلُ العام ══ */
+.wrap{width:min(760px,calc(100vw - 64px));margin-inline:auto}
+.epic-section{padding:clamp(2.5rem,5vw,4.5rem) 0;border-top:1px solid var(--rule);position:relative}
+
+/* ══ رأسُ الملحمة ══ */
+.epic-head{
+  background:linear-gradient(145deg,var(--paper) 0%,var(--paper-aged) 100%);
+  border:2px double var(--frame);
+  box-shadow:inset 0 0 0 4px rgba(255,220,100,.08),4px 6px 20px rgba(43,28,10,.18);
+  padding:1.8rem 1.5rem 1.4rem;text-align:center;
+  position:relative;overflow:hidden;margin-bottom:2.4rem;
+}
+.epic-head::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at 80% 15%,rgba(176,143,67,.1) 0%,transparent 55%);
+  pointer-events:none;
+}
+.epic-num{font-family:var(--label);font-size:.58rem;letter-spacing:.22em;color:var(--gold-aa);margin-bottom:.4rem}
+.epic-title{font-size:clamp(1.55rem,4vw,2.2rem);font-weight:700;margin:.1rem 0}
+.epic-en{font-family:var(--display-lat);font-style:italic;font-size:.92rem;color:var(--ink-70);margin:.2rem 0 .6rem}
+.epic-badge{display:inline-block;font-family:var(--label);font-size:.56rem;letter-spacing:.13em;padding:.2rem .62rem;border:1px solid;margin:.2rem}
+.epic-sense{font-size:.96rem;color:var(--ink-70);margin:.5rem 0 0}
+
+/* ══ الإلوستراسيونُ — قلبُ التجربة ══ */
+.illustration{
+  position:relative;margin:2rem 0;
+  overflow:hidden;border-radius:1px;
+  box-shadow:0 2px 18px rgba(43,28,10,.18),0 0 0 1px rgba(139,90,43,.15);
+}
+.illustration::before{/* البطانةُ الداخلية */
+  content:"";position:absolute;inset:6px;border:1px solid rgba(107,76,42,.3);pointer-events:none;z-index:3
+}
+.illustration-canvas{
+  display:block;width:100%;
+  /* نسبةُ الكتاب الأم: أفقي */
+  aspect-ratio:auto;
+  position:relative;
+}
+/* نسيجُ الرسم نفسه */
+.illustration-canvas::before{
+  content:"";position:absolute;inset:0;z-index:2;
+  background:
+    radial-gradient(ellipse at 15% 90%,rgba(43,28,10,.18) 0%,transparent 45%),
+    radial-gradient(ellipse at 85% 10%,rgba(43,28,10,.12) 0%,transparent 40%),
+    radial-gradient(ellipse at 50% 50%,transparent 30%,rgba(43,28,10,.06) 100%);
+  mix-blend-mode:multiply;pointer-events:none;
+}
+/* طبقةُ الفلتر الفني */
+.illustration-canvas::after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;opacity:.6;
+}
+/* شارةُ المشهد */
+.illustration-caption{
+  background:var(--frame);color:var(--paper-aged);
+  font-family:var(--label);font-size:.58rem;letter-spacing:.16em;
+  padding:.4rem 1rem;text-align:center;position:relative;z-index:4;
+  border-top:1px solid var(--frame-gold);
+}
+
+/* SVG المشاهد — رسومٌ بالكود */
+.il-scene{position:absolute;inset:0;z-index:1}
+
+/* ══ النصُّ السرديّ ══ */
+.epic-body p{margin:.55rem 0}
+.section-mark{font-family:var(--label);font-size:.6rem;letter-spacing:.2em;color:var(--ep-color,var(--gold-aa));margin:2rem 0 .6rem;display:flex;align-items:center;gap:.6rem}
+.section-mark::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--ep-color,var(--gold-aa)),transparent)}
+.dialogue{border-inline-start:2.5px solid var(--ep-color,var(--gold-aa));padding:.5rem 1rem;margin:.9rem 0;background:linear-gradient(90deg,rgba(255,255,255,.28),transparent);border-radius:0 2px 2px 0}
+.dialogue b{color:var(--ep-color,var(--ink))}
+.em-note{font-style:italic;color:var(--ink-70);font-size:.94rem}
+
+.silence::before{content:"صَمْتُ السُّؤَالِ";font-family:var(--label);font-size:.54rem;letter-spacing:.2em;color:var(--ep-color,var(--gold-aa));display:block;margin-bottom:.4rem}
+.silence-timer{font-family:var(--label);font-size:.66rem;color:var(--ep-color,var(--gold-aa));cursor:pointer;border:1px solid;padding:.2rem .65rem;display:inline-block;margin-top:.4rem;opacity:0;transition:opacity .4s}
+.silence-timer.vis{opacity:1}
+
+.maxim p{font-size:1.06rem;font-weight:700;margin:.2rem 0}
+.maxim .lat{font-family:var(--display-lat);font-style:italic;font-size:.88rem;color:var(--ink-70);margin:.3rem 0 0;display:block}
+
+.guide summary{font-family:var(--label);font-size:.6rem;letter-spacing:.13em;color:var(--ep-color,var(--gold-aa));cursor:pointer;list-style:none}
+.guide summary::-webkit-details-marker{display:none}
+.guide[open] summary{margin-bottom:.5rem}
+.guide p{margin:.3rem 0;color:var(--ink-70);font-size:.96rem}
+
+/* ══ تقليبُ الصفحات ══ */
+.page-nav{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:600;display:flex;align-items:center;gap:.4rem}
+.page-nav button{font-family:var(--label);font-size:.9rem;background:#ede0b8;border:1px solid var(--frame-gold);color:var(--frame);width:38px;height:38px;cursor:pointer;box-shadow:0 2px 8px rgba(43,28,10,.25);transition:.15s}
+.page-nav button:hover{background:var(--gold-15)}
+.page-nav button:active{transform:translateY(2px)}
+#ep-counter{font-family:var(--label);font-size:.6rem;letter-spacing:.12em;color:var(--gold-aa);background:#ede0b8;border:1px solid var(--frame-gold);padding:.4rem .8rem;min-width:60px;text-align:center}
+
+/* ══ الكولوفون ══ */
+.colo-section{border-top:3px double var(--frame);padding:3rem 0 5rem;text-align:center}
+.sealmark{display:block;margin:0 auto 1rem;opacity:.8;filter:drop-shadow(0 2px 6px rgba(43,28,10,.25))}
+.colo{font-family:var(--label);font-size:.54rem;letter-spacing:.24em;color:var(--gold-aa)}
+.back{display:inline-block;font-family:var(--label);font-size:.72rem;letter-spacing:.1em;color:var(--ink);background:rgba(255,255,255,.3);border:1px solid var(--frame-gold);padding:.6rem 1.3rem;text-decoration:none;margin-top:1.1rem;box-shadow:0 3px 0 rgba(43,28,10,.2)}
+
+
+
+.sh{color:#8f3a1e;font-weight:700}
+.rev{opacity:0;transform:translateY(14px)}
+html:not(.boot-press) .rev{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rev{opacity:1;transform:none}*{transition-duration:.01ms!important}}
+@media print{#ink-rule,#ink-nib,.page-nav,#sound-btn{display:none}}
+
+/* ═══ الصورُ التوضيحية الحقيقية ═══ */
+.il-photo{
+  width:100%;height:auto;object-fit:contain;display:block;
+  filter:sepia(.12) contrast(1.04) brightness(.97);
+  max-height:420px;
+}
+.illustration img{
+  transition: transform .4s ease;
+}
+.illustration:hover img{
+  transform: scale(1.02);
+}
+.illustration img[alt*="زينب"]{
+  filter: sepia(.25) contrast(1.08) brightness(.95);
+}
+.il-photo{
+  width:100%;height:auto;object-fit:contain;display:block;
+  filter:sepia(.12) contrast(1.04) brightness(.97);
+  max-height:420px;
+}
+.illustration img{
+  display:block;width:100%;height:100%;
+  object-fit:cover;
+  filter:sepia(.15) contrast(1.05) brightness(.98);
+}
+
+/* ═══ المحركُ الصرفي — كلمةٌ كاملة لا حرف ═══ */
+.ev-word{color:#8f3a1e;font-style:normal}
+.end-word{color:#8a6b2c;font-style:normal}
+.sh{color:#8f3a1e;font-weight:700;font-style:normal}
+
+
+.silence,.maxim,
+.silence::before,.maxim::before,.guide::before{display:none}
+.silence-inner,.maxim-inner,.guide-inner{
+  position:relative;z-index:2;text-align:center;
+}
+.silence-label{
+  font-family:var(--label);font-size:.56rem;letter-spacing:.2em;
+  color:#5a3010;display:block;margin-bottom:.5rem;
+  position:relative;z-index:2;text-align:center;
+}
+.silence-timer{
+  font-family:var(--label);font-size:.66rem;
+  color:#5a3010;cursor:pointer;
+  border:1px solid #8a5c20;padding:.22rem .7rem;
+  display:inline-block;margin-top:.4rem;
+  background:rgba(255,255,255,.2);
+  opacity:0;transition:opacity .4s;
+  position:relative;z-index:2;
+}
+.silence-timer.vis{opacity:1}
+.maxim p{font-size:1.08rem;font-weight:700;position:relative;z-index:2;margin:.2rem 0}
+.maxim .lat{font-family:var(--display-lat);font-style:italic;font-size:.88rem;color:var(--ink-70);display:block;margin:.3rem 0 0;position:relative;z-index:2}
+.guide summary{font-family:var(--label);font-size:.6rem;letter-spacing:.13em;color:#5a3010;cursor:pointer;list-style:none;position:relative;z-index:2}
+.guide summary::-webkit-details-marker{display:none}
+.guide[open] summary{margin-bottom:.5rem}
+.guide p{margin:.3rem 0;color:var(--ink-70);font-size:.96rem;position:relative;z-index:2}
+
+
+
+.maxim p.sh, .maxim .sh{
+  color:#f0d890 !important;
+  text-shadow: 0 1px 3px rgba(0,0,0,.8), 0 0 12px rgba(180,120,20,.4);
+  font-weight:700;
+}
+.maxim .lat{
+  color:#d4b870 !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.7);
+}
+
+/* ═══ الأسطحُ الحقيقية ═══ */
+.silence{
+  background:url("/assets/epics/epic-01.jpg") center/cover no-repeat !important;
+  border:none !important;border-radius:3px;
+  padding:2rem 2.2rem 1.8rem;margin:1.8rem 0;
+  box-shadow:3px 5px 18px rgba(43,28,10,.35);
+}
+.silence::before{display:none!important}
+.silence-label{color:#3a1808!important;font-weight:600}
+.silence p{color:#1a0802!important;font-weight:500}
+.silence-timer{color:#3a1808!important;border-color:#6a3010!important;background:rgba(255,240,200,.3)!important}
+
+.maxim{
+  background:url("/assets/epics/epic-02.jpg") center/cover no-repeat !important;
+  border:none!important;border-radius:3px;
+  padding:2rem 2.5rem;margin:1.8rem 0;
+  box-shadow:4px 6px 22px rgba(43,28,10,.45);
+}
+.maxim::before{display:none!important}
+.maxim p,.maxim .sh{color:#f5e090!important;text-shadow:0 1px 4px rgba(0,0,0,.9)!important;font-weight:700}
+.maxim .lat{color:#d4b060!important;text-shadow:0 1px 3px rgba(0,0,0,.8)!important}
+
+.guide{
+  background:url("/assets/epics/epic-03.jpg") center/cover no-repeat !important;
+  border:none!important;border-radius:3px;
+  padding:1.6rem 1.8rem;margin:1.8rem 0;
+  box-shadow:3px 5px 16px rgba(43,28,10,.35);
+}
+.guide::before{display:none!important}
+.guide summary{color:#3a1808!important;font-weight:600}
+.guide p{color:#2a1005!important}
+</style>
+</head>
+<body>
+<nav class="jx-bar" aria-label="تنقّل جُذور" style="direction:rtl;font-family:Amiri,serif;font-size:15px;line-height:1.6;display:flex;flex-wrap:wrap;gap:.2rem 1rem;align-items:center;justify-content:center;padding:8px 16px;border-bottom:1px solid rgba(43,40,35,.18);background:inherit"><a href="/" style="font-weight:700;text-decoration:none;color:inherit">جُذور</a><a href="/library" style="color:inherit">الرِّواق</a><a href="/library/stories/" style="color:inherit">المتنُ القصصيّ</a><a href="/khizana" style="color:inherit">الأسفار</a><a href="/theory/" style="color:inherit">النظريّة</a><a href="/listen/" style="color:inherit">الاستماع</a><a href="/en.html" lang="en" style="color:inherit;font-family:Georgia,serif">English</a></nav>
+
+<div id="ink-rule" role="progressbar" aria-label="تقدمُ القراءة"></div>
+
+<button id="sound-btn" onclick="toggleSound()" title="صوتُ قلب الصفحة" aria-label="تفعيل الصوت">🔇</button>
+
+<nav class="page-nav" aria-label="التنقل بين الملاحم">
+  <button onclick="goPrev()" aria-label="السابق">◁</button>
+  <span id="ep-counter">غلاف</span>
+  <button onclick="goNext()" aria-label="التالي">▷</button>
+</nav>
+
+<!-- ══ الغلاف ══ -->
+<section class="titlepage" id="cover">
+  
+  
+  <div class="foxing" style="width:100px;height:100px;top:-20px;right:-10px;opacity:.6"></div>
+  <div class="foxing" style="width:70px;height:70px;bottom:15px;left:5px;opacity:.4"></div>
+
+  <img loading="lazy" decoding="async" class="device mark" src="assets/Juthur_Logo_192.webp" alt="شعار جذور" width="76" height="76">
+  <h1 class="wordmark">سِنْدِبَادُ وَالْكَنْزُ الْمَفْقُود</h1>
+  <span class="wordmark-lat">Sindbad and the Lost Treasure</span>
+  <p class="claim">«إِذَا وَجَدْتَ مَا تَبْحَثُ عَنْهُ — سَتَتَمَنَّى أَنَّكَ مَا بَحَثْتَ»</p>
+
+  <div class="tactile">
+    <span class="slug">البُرعُم · الاتِّزان</span>
+    <span class="slug">الغُصن · الحَرارة</span>
+    <span class="slug">الشَّجَرة · الثِّقَل</span>
+    <span class="slug">المُبدِع · اللَّمس</span>
+  </div>
+  <div class="tier-map">
+    <span class="tier-chip" style="border-color:#2E7D32;color:#1b5e20"><span class="dot" style="background:#2E7D32"></span>A2–B1</span>
+    <span class="tier-chip" style="border-color:#1565C0;color:#0d47a1"><span class="dot" style="background:#1565C0"></span>B1</span>
+    <span class="tier-chip" style="border-color:#6A1B9A;color:#4a148c"><span class="dot" style="background:#6A1B9A"></span>B2</span>
+    <span class="tier-chip" style="border-color:#C9A227;color:#8a6b2c"><span class="dot" style="background:#C9A227"></span>C1</span>
+  </div>
+  <p class="author-line">تأليف: <b>د. عادل ف. عامر</b></p>
+  <button class="resume-btn" id="resumeBtn" onclick="resumeReading()">◈ أكملِ من حيث توقَّفتَ</button>
+  <p class="pressline">مطبعةُ جُذور · دبي · MCMXXVI — قراءةٌ قبلَ القراءة</p>
+</section>
+
+<main class="wrap" id="epic-main">
+
+<!-- ══ الملحمةُ الأولى ══ -->
+<section class="epic-section rev" id="e1" style="--ep-color:#2E7D32">
+<div class="epic-head">
+  <p class="epic-num">الملحمةُ الأُولى · بُرعُم · A2–B1</p>
+  <h2 class="epic-title">الْبُوصَلَةُ الْمَكْسُورَةُ</h2>
+  <p class="epic-en">The Broken Compass</p>
+  <span class="epic-badge" style="border-color:#2E7D32;color:#1b5e20">الاتِّزان — حِسُّ الجِهَة من الداخل</span>
+  <p class="epic-sense">الشَّجَاعَةُ لَيْسَتْ أَنْ تَقْتَحِمَ، بَلْ أَنْ تَعْرِفَ مَتَى تَقِفُ</p>
+</div>
+
+<div class="epic-body">
+
+<!-- رسمٌ ١: البحرُ وجحا على القاع -->
+<figure class="illustration rev">
+  <div class="illustration-canvas" style="aspect-ratio:auto"><img loading="lazy" decoding="async" src="/assets/epics/epic-04.jpg" alt="بَحْرٌ يَتَذَكَّرُ — زينبُ تقرأ" class="il-photo"></div>
+  <figcaption class="illustration-caption">بَحْرٌ يَتَذَكَّرُ — وَجُحَا يَمشِي عَلَى الْقَاعِ</figcaption>
+</figure>
+
+<div class="section-mark">١ / ١ — بَحْرٌ يَتَذَكَّرُ</div>
+<p class="rev">بَحْرٌ بِلَا شَاطِئٍ. مَدًى لَا يَعِدُ بِأَرْضٍ. وَالْمَوْجُ هُنَا لَا يَنكَسِرُ؛ يَتَنَفََّسُ: شَهِيقٌ يَرفَعُ الْمَاءَ، وَزَفِيرٌ يُنزِلُهُ كَتَنَهُّدَةٍ قَدِيمَةٍ.</p>
+<p class="rev"><span class="end-word">سِنْدِبَادُ</span> <span class="end-word">وَاقِفٌ</span> عَلَى <span class="end-word">صَارٍ</span> <span class="end-word">مَكْسُورٍ</span> وَالْمَاءُ <span class="ev-word">يَبْلُغُ</span> <span class="end-word">صَدْرَهُ</span>. لَا <span class="ev-word">يُقَاوِمُ</span>. <span class="ev-word">يَنْظُرُ</span> إِلَى <span class="end-word">الْأُفُقِ</span>، ثُمَّ <span class="ev-word">يَضْحَكُ</span>. لَا يُقَاوِمُ. يَنظُرُ إِلَى الْأُفُقِ، ثُمَّ يَضحَكُ.</p>
+<div class="dialogue rev"><b>— سِنْدِبَاد:</b> لِلْمَرَّةِ <span class="end-word">السَّابِعَةِ</span> <span class="ev-word">تُغْرِقُنِي</span> يَا <span class="end-word">بَحْرُ</span>… <span class="sh">لَعَلَّكَ تُحِبُّنِي.</span></div>
+<p class="rev">مِنْ تَحْتِ الْمَاءِ <span class="ev-word">يَظْهَرُ</span> <span class="end-word">جُحَا</span>. لَا <span class="ev-word">يَسْبَحُ</span>؛ <span class="ev-word">يَمْشِي</span> عَلَى <span class="end-word">الْقَاعِ</span> وَفِي <span class="end-word">يَدِهِ</span> <span class="end-word">تُفَّاحَةٌ</span>.</p>
+<div class="dialogue rev">
+  <b>— جُحَا:</b> مُنْذُ أَنْ أَكَلْتُ تُفَّاحَةَ نُوحٍ، لَمْ يَعُدِ الْبَحْرُ يُبَلِّلُنِي.<br>
+  <b>— سِنْدِبَاد:</b> أَنَا لَا آكُلُ التُّفَّاحَ تَحْتَ الْمَاءِ.<br>
+  <b>— جُحَا:</b> إِذَنْ سَتَظَلُّ تَغرَقُ.
+</div>
+<div class="dialogue rev"><b>— جُحَا</b> <em class="em-note">(يُلقي نظرةً على سفينةٍ عتيقة):</em> الْبَحْرُ لَا يُغرِقُ أَحَدًا؛ الْبَحْرُ يَتَذَكََّرُ فَقَطْ.</div>
+
+<!-- رسمٌ ٢: الجزيرةُ النائمة وزينب -->
+<figure class="illustration rev">
+  <div class="illustration-canvas" style="aspect-ratio:auto"><img loading="lazy" decoding="async" src="/assets/epics/epic-05.jpg" alt="جُحَا يَمشِي عَلَى الْقَاعِ بِالتُّفَّاحَةِ" class="il-photo"></div>
+  <p class="ink-wash-caption">زَيْنَبُ — ذَاكِرَةُ الْجَزِيرَةِ</p>
+</figure>
+
+<figure class="illustration rev">
+  <div class="illustration-canvas" style="aspect-ratio:auto">
+    <img loading="lazy" decoding="async" src="/assets/epics/epic-06.jpg"  alt="الْجَزِيرَةُ الَّتِي تَنَامُ" >
+  </div>
+</figure>
+<p class="ink-wash-caption">الْجَزِيرَةُ النَّائِمَةُ — وَأَحْلَامُهَا تَطُوفُ</p>
+
+<div class="section-mark">١ / ٣ — زَيْنَبُ</div>
+<p class="rev"><span class="ev-word">تَظْهَرُ</span> <span class="end-word">زَيْنَبُ</span> مِنْ خَلْفِ <span class="end-word">نَخْلَةٍ</span>. فِي <span class="end-word">الْعَاشِرَةِ</span>، <span class="end-word">حَافِيَةٌ</span>، <span class="ev-word">تُمْسِكُ</span> <span class="end-word">قِنَاعًا</span> <span class="end-word">خَشَبِيًّا</span> <span class="end-word">لِأَبِيهَا</span>.</p>
+<div class="dialogue rev">
+  <b>— زَيْنَب:</b> كُنْتُ نَائِمَةً… حَلَمْتُ أَنَّ رَجُلَيْنِ سَيَأْتِيَانِ، أَحَدُهُمَا يَضحَكُ وَهُوَ يَغرَقُ.<br>
+  <b>— جُحَا:</b> <span class="sh">هِيَ لَيْسَتْ طِفْلَةً. هِيَ ذَاكِرَةُ الْجَزِيرَةِ.</span>
+</div>
+<div class="silence" style="--ep-color:#2E7D32">
+  <span class="silence-label">صَمْتُ السُّؤَالِ</span>
+  <div class="silence-inner">
+    <p style="position:relative;z-index:2;margin:.3rem 0">أَيْنَ تَشعُرُ بِالتَّعَبِ الْآنَ؟ فِي كَتِفَيْكَ، أَمْ فِي جَفْنَيْكَ؟</p>
+    <span class="silence-timer" onclick="startTimer(this,120)">◷ نَفَسَانِ — ابدأ</span>
+  </div>
+</div>
+<div class="maxim">
+  <p class="sh" style="position:relative;z-index:2;margin:.4rem 0">«الْبُوصَلَةُ الْمَكْسُورَةُ وَحْدَهَا تُشِيرُ إِلَى الدَّاخِلِ»</p>
+  <span class="lat">Only the broken compass points inward.</span>
+</div>
+<details class="guide">
+  <summary>❧ همسٌ للمرافق</summary>
+  <div style="position:relative;z-index:2"><p><b>الكنز:</b> القدرةُ على التوقف. حسيًّا: تباطؤُ النفس، نزولُ الكتفين.</p>
+  <p><b>بوابةُ الخروج:</b> أغلق. كفٌّ على الصدر. كلمةٌ واحدةٌ تُهدِّئُك.</p></div>
+</details>
+</div></section>
+
+<!-- ══ الملحمةُ الثانية ══ -->
+<section class="epic-section rev" id="e2" style="--ep-color:#1565C0">
+<div class="epic-head">
+  <p class="epic-num">الملحمةُ الثانية · غُصن · B1</p>
+  <h2 class="epic-title">مَرَايَا الْأَسْمَاءِ</h2>
+  <p class="epic-en">Mirrors of Names</p>
+  <span class="epic-badge" style="border-color:#1565C0;color:#0d47a1">الحَرارة — حِسُّ الصِّدق</span>
+  <p class="epic-sense">الِاسْمُ الْكَاذِبُ يَحرِقُ، وَالصَّادِقُ يُبَرِّدُ</p>
+</div>
+<div class="epic-body">
+
+<!-- رسمٌ ٣: مرآةُ مرجانة -->
+<figure class="illustration rev">
+  <div class="illustration-canvas" style="aspect-ratio:auto"><img loading="lazy" decoding="async" src="/assets/epics/epic-07.jpg"  alt="مِرْآةُ مَرْجَانَةَ — تُرِي مَا تَحْتَ الِاسْمِ" ></div>
+  <p class="ink-wash-caption">مِرْآةُ مَرْجَانَةَ — تُرِي مَا تَحْتَ الِاسْمِ</p>
+</figure>
+
+<div class="section-mark">مِرْآةُ مَرْجَانَةَ</div>
+<p class="rev">رَسَا عَلَى جَزِيرَةٍ كُتِبَ عَلَيْهَا: «السَّلَامُ». لَكِنَّ سِنْدِبَادَ لَمَسَ جِدَارًا، فَوَجَدَهُ سَاخِنًا كَأَنَّ خَلْفَهُ نَارًا.</p>
+<div class="dialogue rev">
+  <b>— مَرْجَانَة:</b> انظُرْ، لَكِنِ احذَرْ. <span class="sh">مِرْآتِي لَا تُرِي الْوَجْهَ؛ تُرِي مَا تَحْتَ الِاسْمِ.</span><br>
+  <b>— سِنْدِبَاد:</b> وَأَيُّهَا الْحَقِيقَةُ؟<br>
+  <b>— مَرْجَانَة:</b> لَا الِاسْمُ وَلَا الْمِرْآةُ. <span class="sh">الْحَقِيقَةُ مَا تَلْمِسُهُ بِيَدِكَ.</span>
+</div>
+<div class="silence" style="--ep-color:#1565C0">
+  <span class="silence-label">صَمْتُ السُّؤَالِ</span>
+  <div class="silence-inner">
+    <p style="position:relative;z-index:2;margin:.3rem 0">ضَعْ يَدَكَ عَلَى صَدْرِكَ. هَلْ هُوَ بَارِدٌ أَمْ حَارٌّ حِينَ تَسمَعُ كَلِمَةً لَا تَصدُقُ؟</p>
+    <span class="silence-timer" onclick="startTimer(this,120)">◷ نَفَسَانِ — ابدأ</span>
+  </div>
+</div>
+<div class="maxim">
+  <p class="sh" style="position:relative;z-index:2;margin:.4rem 0">«الْبَحْرُ يَتَذَكَّرُ فَقَطْ، وَمَا نُسَمِّيهِ لَا يُغَيِّرُ مَا هُوَ عَلَيْهِ»</p>
+  <span class="lat">The sea only remembers; what we name does not change what it is.</span>
+</div>
+<details class="guide">
+  <summary>❧ همسٌ للمرافق</summary>
+  <div style="position:relative;z-index:2"><p><b>مرآةُ مرجانة:</b> الحقيقةُ ما تلمسه بيدك. حسيًّا: يدٌ على جدار دافئ/بارد.</p></div>
+</details>
+</div></section>
+
+<!-- ══ الملحمةُ الثالثة ══ -->
+<section class="epic-section rev" id="e3" style="--ep-color:#6A1B9A">
+<div class="epic-head">
+  <p class="epic-num">الملحمةُ الثالثة · شَجَرة · B2</p>
+  <h2 class="epic-title">أَرْضُ مَا بَعْدَ الزَّمَانِ</h2>
+  <p class="epic-en">The Land Beyond Time</p>
+  <span class="epic-badge" style="border-color:#6A1B9A;color:#4a148c">الثِّقَل — حِسُّ الزمانِ والفَقد</span>
+  <p class="epic-sense">حِينَ يَجِدُ الْبَاحِثُ مَا يَبحَثُ عَنْهُ — فَيَتَمَنَّى أَنَّهُ مَا بَحَثَ</p>
+</div>
+<div class="epic-body">
+
+<!-- رسمٌ ٤: المدينةُ الغارقة -->
+<figure class="illustration rev">
+  <div class="illustration-canvas" style="aspect-ratio:auto"><img loading="lazy" decoding="async" src="/assets/epics/epic-08.jpg"  alt="الْمَدِينَةُ الْغَارِقَةُ — مَصَابِيحُهَا مَا زَالَتْ تُضِيءُ" ></div>
+  <p class="ink-wash-caption">الْمَدِينَةُ الْغَارِقَةُ — مَصَابِيحُهَا مَا زَالَتْ تُضِيءُ</p>
+</figure>
+
+<div class="section-mark">الْمَدِينَةُ الْغَارِقَةُ</div>
+<p class="rev">تَحْتَ الْمَاءِ <span class="ev-word">ظَهَرَتْ</span> <span class="end-word">مَدِينَةٌ</span> <span class="end-word">كَامِلَةٌ</span> <span class="end-word">غَارِقَةٌ</span>، لَكِنَّ <span class="end-word">مَصَابِيحَهَا</span> مَا <span class="ev-word">زَالَتْ</span> <span class="end-word">مُضِيئَةً</span>. <span class="sh">سَمَّوُا الْجُوعَ شِبَعًا، وَالْخَوْفَ أَمْنًا — حَتَّى غَرِقُوا وَهُمْ يَبْتَسِمُونَ.</span></p>
+<div class="dialogue rev"><b>— جُحَا</b> <em class="em-note">(يصطاد سمكًا لا يأتي):</em> هُنَا حَدَثَتِ الْمَجْزَرَةُ. لَا دَمَ فِيهَا؛ هِيَ مَجْزَرَةُ الْمَعَانِي. <span class="sh">مَاتَتِ الْكَلِمَاتُ حِينَ فَقَدَتْ مَا تَحْتَهَا.</span></div>
+<div class="silence" style="--ep-color:#6A1B9A">
+  <span class="silence-label">صَمْتُ السُّؤَالِ</span>
+  <div class="silence-inner">
+    <p style="position:relative;z-index:2;margin:.3rem 0">هَلْ تَشعُرُ بِثِقَلٍ بَيْنَ كَتِفَيْكَ الْآنَ؟ دَعْهُ يَنزِلُ. لَا تَدفَعْهُ.</p>
+    <span class="silence-timer" onclick="startTimer(this,120)">◷ نَفَسَانِ — ابدأ</span>
+  </div>
+</div>
+<div class="maxim">
+  <p class="sh" style="position:relative;z-index:2;margin:.4rem 0">«وَقَدْ أَصْبَحَتِ الْجُمْلَةُ إِجَابَةً، لَا تَحْذِيرًا»</p>
+  <span class="lat">And the sentence had become an answer, not a warning.</span>
+</div>
+<details class="guide">
+  <summary>❧ همسٌ للمرافق</summary>
+  <div style="position:relative;z-index:2"><p><b>الكنز:</b> اسمُ الشيء كما هو بلا تجميل. حسيًّا: الكتفان، تنزيلُ الثقل.</p></div>
+</details>
+</div></section>
+
+<!-- ══ الملحمةُ الرابعة ══ -->
+<section class="epic-section rev" id="e4" style="--ep-color:#C9A227">
+<div class="epic-head">
+  <p class="epic-num">الملحمةُ الرابعة · مُبدِع · C1</p>
+  <h2 class="epic-title">النَّهَارُ الدَّائِمُ</h2>
+  <p class="epic-en">The Endless Day</p>
+  <span class="epic-badge" style="border-color:#C9A227;color:#8a6b2c">اللَّمس — حِسُّ الحُضور</span>
+  <p class="epic-sense">لَيْلٌ لَا يَأْتِي، وَنُجُومٌ لَمْ تَغِبْ — نَحْنُ مَنْ غِبْنَا عَنْهَا</p>
+</div>
+<div class="epic-body">
+
+<!-- رسمٌ ٥: زينب وكتفها والنجمة -->
+<figure class="illustration rev">
+  <div class="illustration-canvas" style="aspect-ratio:auto"><img loading="lazy" decoding="async" src="/assets/epics/epic-09.jpg" alt="شَوَارِعُ الْوَهَجِ — طِفْلٌ وَحِيدٌ <span class="ev-word">يَرْفَعُ</span> رَأْسَهُ" class="il-photo"></div>
+  <p class="ink-wash-caption">زَيْنَبُ تَرفَعُ رَأْسَهَا — وَالنَّجْمَةُ كَانَتْ هُنَاكَ طَوَالَ الْوَقْتِ</p>
+</figure>
+
+<figure class="illustration rev">
+  <div class="illustration-canvas" style="aspect-ratio:auto">
+    <img loading="lazy" decoding="async" src="/assets/epics/epic-10.jpg"  alt="النَّجْمَةُ الْعَائِدَةُ" >
+  </div>
+  <figcaption class="illustration-caption">«النُّجُومُ لَمْ تَذهَبْ، أَنْتَ مَنْ غَابَ عَنْهَا»</figcaption>
+</figure>
+
+<div class="section-mark">زَيْنَبُ وَالنَّجْمَةُ</div>
+<p class="rev">عَلَى <span class="end-word">عَتَبَةِ</span> <span class="end-word">بَيْتٍ</span> <span class="ev-word">جَلَسَتْ</span> <span class="end-word">زَيْنَبُ</span>، وَفِي كَفِّهَا الضَّوْءُ نَفْسُهُ. <span class="ev-word">اقْتَرَبَ</span> <span class="end-word">سِنْدِبَادُ</span> وَ<span class="ev-word">جَلَسَ</span> <span class="end-word">بِجِوَارِهَا</span>. لَمْ يَقُلْ: «ارفَعِي رَأْسَكِ». <span class="ev-word">مَدَّ</span> <span class="end-word">يَدَهُ</span> وَ<span class="ev-word">وَضَعَهَا</span> عَلَى <span class="end-word">كَتِفِهَا</span>. <span class="end-word">كَتِفٌ</span> <span class="end-word">بَارِدٌ</span> <span class="end-word">مُتَيَبِّسٌ</span> مِنْ <span class="end-word">طُولِ</span> <span class="end-word">الِانْحِنَاءِ</span>.</p>
+<div class="dialogue rev">
+  <b>— سِنْدِبَاد:</b> زَيْنَبُ، أَتَشعُرِينَ بِيَدِي؟<br>
+  <b>— زَيْنَب:</b> …نَعَمْ.
+</div>
+<p class="rev">لَمْ <span class="ev-word">تُجِبْ</span> <span class="end-word">بِأَكْثَرَ</span>. لَكِنَّ <span class="end-word">كَتِفَهَا</span>، تَحْتَ <span class="end-word">يَدِهِ</span>، <span class="ev-word">نَزَلَ</span> <span class="end-word">قَلِيلًا</span>. ثُمَّ <span class="ev-word">رَفَعَتْ</span> <span class="end-word">نَظَرَهَا</span> — وَ<span class="ev-word">انْشَقَّتِ</span> <span class="end-word">السَّمَاءُ</span> <span class="end-word">الرَّمَادِيَّةُ</span> عَنْ <span class="end-word">نُقْطَةٍ</span> <span class="end-word">وَاحِدَةٍ</span>.</p>
+<div class="dialogue rev"><b>— جُحَا:</b> <span class="sh">النُّجُومُ لَا تَغِيبُ يَا سِنْدِبَاد. نَحْنُ الَّذِينَ نَحْنِي رِقَابَنَا عَنْهَا.</span></div>
+<div class="silence" style="--ep-color:#C9A227">
+  <span class="silence-label">صَمْتُ السُّؤَالِ</span>
+  <div class="silence-inner">
+    <p style="position:relative;z-index:2;margin:.3rem 0">نَفَسَانِ. أَيْنَ يَدُكَ الْآنَ؟ هَلِ ارتَفَعَ رَأْسُكَ قَلِيلًا، مِنْ غَيْرِ أَنْ تَأمُرَهُ؟</p>
+    <span class="silence-timer" onclick="startTimer(this,120)">◷ نَفَسَانِ — ابدأ</span>
+  </div>
+</div>
+<div class="maxim">
+  <p class="sh" style="position:relative;z-index:2;margin:.4rem 0">«النُّجُومُ لَمْ تَذهَبْ، أَنْتَ مَنْ غَابَ عَنْهَا»</p>
+  <span class="lat">The stars did not leave; you are the one who vanished from them.</span>
+</div>
+<details class="guide">
+  <summary>❧ همسٌ للمرافق</summary>
+  <div style="position:relative;z-index:2"><p><b>الآكل:</b> ضوءٌ لطيف يبتلع الساعات. يُسمِّي نفسَه «أُنسًا».</p>
+  <p><b>القاعدةُ الذهبية:</b> لَا تَصِفْ لَهُ مَا سَيَشعُرُ بِهِ. دَعْهُ يَشعُرُ، ثُمَّ صِفْ مَا حَدَثَ.</p></div>
+</details>
+</div></section>
+
+<section class="colo-section wrap">
+  <img loading="lazy" decoding="async" class="sealmark" src="assets/Juthur_Seal_Mono.png" alt="ختم الدار" width="54" height="54">
+  <p class="colo">مطبعةُ جُذور · دبي · MCMXXVI · صمّمه وطوّره د. عادل ف. عامر · Designed and developed by Dr. Adel F. Amer</p>
+  <a class='back' href='/maktaba'>↤ عودةٌ إلى المكتبة المفتوحة</a>
+</section>
+</main>
+
+<script>
+(function(){
+"use strict";
+var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var M = window.Motion;
+
+/* ══ محركُ الصوت — Web Audio API ══ */
+var audioCtx = null, soundOn = false;
+var btn = document.getElementById('sound-btn');
+
+function initAudio(){
+  if(audioCtx) return;
+  try{ audioCtx = new (window.AudioContext||window.webkitAudioContext)(); }catch(e){}
+}
+
+function playPageTurn(){
+  if(!soundOn || !audioCtx) return;
+  try{
+    var t = audioCtx.currentTime;
+    /* نفخةُ الهواء */
+    var bufSize = audioCtx.sampleRate * 0.18;
+    var buf = audioCtx.createBuffer(1, bufSize, audioCtx.sampleRate);
+    var data = buf.getChannelData(0);
+    for(var i=0;i<bufSize;i++) data[i]=(Math.random()*2-1)*Math.exp(-i/bufSize*8);
+    var src = audioCtx.createBufferSource();
+    src.buffer = buf;
+    /* مرشحٌ للتليين */
+    var filter = audioCtx.createBiquadFilter();
+    filter.type = 'bandpass';
+    filter.frequency.value = 2400;
+    filter.Q.value = 0.8;
+    /* خشخشةٌ ورقية */
+    var gainNode = audioCtx.createGain();
+    gainNode.gain.setValueAtTime(0.18, t);
+    gainNode.gain.exponentialRampToValueAtTime(0.001, t+0.18);
+    src.connect(filter);
+    filter.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    src.start(t);
+    /* صدىً خفيف */
+    var osc = audioCtx.createOscillator();
+    var oscGain = audioCtx.createGain();
+    osc.frequency.value = 180;
+    osc.type = 'sine';
+    oscGain.gain.setValueAtTime(0.04, t);
+    oscGain.gain.exponentialRampToValueAtTime(0.001, t+0.12);
+    osc.connect(oscGain);
+    oscGain.connect(audioCtx.destination);
+    osc.start(t); osc.stop(t+0.12);
+  }catch(e){}
+}
+
+window.toggleSound = function(){
+  initAudio();
+  soundOn = !soundOn;
+  btn.textContent = soundOn ? '🔊' : '🔇';
+  if(soundOn) playPageTurn();
+};
+
+/* ══ Motion Engine ══ */
+if(!reduced && M){
+  var animate=M.animate, inView=M.inView, scroll=M.scroll, stagger=M.stagger;
+  var ink=document.getElementById('ink-rule'), nib=null;
+  ink.style.transformOrigin='0 50%';
+  scroll(function(a){
+    var p=(typeof a==='number')?a:(a&&a.y&&typeof a.y.progress==='number'?a.y.progress:0);
+    ink.style.transform='scaleX('+p+')';
+    
+  });
+  /* الغلاف */
+  var mark=document.querySelector('.device.mark');
+  var wm=document.querySelector('.wordmark');
+  var wmL=document.querySelector('.wordmark-lat');
+  var claim=document.querySelector('.claim');
+  var slugs=document.querySelectorAll('.tactile .slug');
+  if(wm) animate(wm,{opacity:[0,1],transform:['translateY(14px) scale(1.02)','translateY(0) scale(1)']},{duration:.9,ease:[.22,1,.36,1]});
+  if(wmL) animate(wmL,{opacity:[0,1]},{duration:.7,delay:.35});
+  if(claim) animate(claim,{opacity:[0,1],transform:['translateY(10px)','translateY(0)']},{duration:.7,delay:.5,ease:'easeOut'});
+  if(mark) animate(mark,{opacity:[0,1],transform:['scale(1.5) rotate(-7deg)','scale(1) rotate(0deg)']},{duration:.65,delay:.85,ease:[.34,1.56,.64,1]});
+  if(slugs.length) animate(slugs,{opacity:[0,1],transform:['translateY(12px)','translateY(0)']},{duration:.4,delay:stagger(0.09,{startDelay:1.15}),ease:'easeOut'});
+  setTimeout(function(){document.documentElement.classList.remove('boot-press');},400);
+  /* كشفُ العناصر */
+  document.querySelectorAll('.rev').forEach(function(el){
+    inView(el,function(){
+      animate(el,{opacity:[0,1],transform:['translateY(14px)','translateY(0)']},{duration:.55,ease:'easeOut'});
+    },{amount:.12});
+  });
+  /* الرسومُ تتنفس */
+  document.querySelectorAll('.illustration').forEach(function(il){
+    inView(il,function(){
+      animate(il,{opacity:[0,1],transform:['scale(.96)','scale(1)']},{duration:.9,ease:[.22,1,.36,1]});
+      playPageTurn();
+    },{amount:.15});
+  });
+  /* الفواصل */
+  document.querySelectorAll('.section-mark').forEach(function(r){
+    r.style.transformOrigin='100% 50%';
+    inView(r,function(){animate(r,{transform:['scaleX(0)','scaleX(1)'],opacity:[0,1]},{duration:.6,ease:[.65,0,.35,1]});},{amount:.4});
+  });
+} else {
+  document.documentElement.classList.remove('boot-press');
+  document.querySelectorAll('.rev').forEach(function(el){el.style.opacity=1;el.style.transform='none';});
+}
+
+/* ══ Scroll progress بلا Motion ══ */
+if(!M){
+  var ink2=document.getElementById('ink-rule');
+  ink2.style.transformOrigin='0 50%';
+  window.addEventListener('scroll',function(){
+    var h=document.documentElement;
+    ink2.style.transform='scaleX('+(h.scrollTop/(h.scrollHeight-h.clientHeight))+')';
+  },{passive:true});
+}
+
+/* ══ حفظُ الموضع ══ */
+var saveT;
+window.addEventListener('scroll',function(){
+  clearTimeout(saveT);
+  saveT=setTimeout(function(){
+    try{localStorage.setItem('juthur_epic_pos',Math.round(window.scrollY));}catch(e){}
+  },400);
+},{passive:true});
+window.resumeReading=function(){
+  try{var p=parseInt(localStorage.getItem('juthur_epic_pos')||'0');if(p>300)window.scrollTo({top:p,behavior:'smooth'});}catch(e){}
+};
+(function(){
+  try{var p=parseInt(localStorage.getItem('juthur_epic_pos')||'0');if(p>500)document.getElementById('resumeBtn').style.display='block';}catch(e){}
+})();
+
+/* ══ تقليبُ الصفحات ══ */
+var epics=['cover','e1','e2','e3','e4'];
+var labels=['غلاف','١ / ٤','٢ / ٤','٣ / ٤','٤ / ٤'];
+var cur=0;
+var counter=document.getElementById('ep-counter');
+function moveTo(i){
+  cur=Math.max(0,Math.min(epics.length-1,i));
+  counter.textContent=labels[cur];
+  var el=document.getElementById(epics[cur]);
+  if(el){el.scrollIntoView({behavior:'smooth',block:'start'});playPageTurn();}
+}
+window.goNext=function(){moveTo(cur+1);};
+window.goPrev=function(){moveTo(cur-1);};
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){var i=epics.indexOf(e.target.id);if(i>=0){cur=i;counter.textContent=labels[i];}}});
+  },{threshold:.3});
+  epics.forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});
+}
+
+/* ══ مؤقّتُ الصمت ══ */
+if('IntersectionObserver' in window){
+  var io2=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('vis');});
+  },{threshold:.65});
+  document.querySelectorAll('.silence-timer').forEach(function(t){io2.observe(t);});
+}
+window.startTimer=function(btn,ms){
+  if(btn.dataset.running)return;
+  btn.dataset.running='1';
+  var s=Math.round(ms/1000);
+  btn.textContent='◷ '+s+'ث';
+  var iv=setInterval(function(){s--;if(s<=0){clearInterval(iv);btn.textContent='✓ انتهى';delete btn.dataset.running;}else btn.textContent='◷ '+s+'ث';},1000);
+};
+
+/* ══ حمرةُ العناوين ══ */
+document.querySelectorAll('.epic-title,.titlepage h1,.wordmark').forEach(function(el){
+  el.innerHTML=el.innerHTML.replace(/([\u064B-\u0652\u0670])/g,'<span style="color:#8f3a1e">$1</span>');
+});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://juthur.netlify.app/sitemap.xml
