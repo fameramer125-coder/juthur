@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>بنك الأثر · Bank of Athar · Juthur</title>
+<meta name="description" content="بنك الأثر: دفتر جُذور لساعات الخدمة. Bank of Athar: Juthur's ledger of service hours, one clock hour for one hour, verified and kept.">
+<link rel="canonical" href="https://juthur.netlify.app/athar/">
+<meta property="og:title" content="بنك الأثر · Bank of Athar">
+<meta property="og:image" content="https://juthur.netlify.app/assets/juthur_seal_mono.png">
+<meta name="theme-color" content="#2b2823">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ink:#2b2823; --ink-deep:#221f1a; --ink-70:#6b6459;
+  --gold:#b08f43; --gold-aa:#7a5d22; --gold-soft:#c9a961; --gold-15:#e9e2d2;
+  --paper:#f3eee2; --paper-aged:#e9e2d2; --rule:#d5cbb8;
+  --rubric:#8f3a1e; --sage:#4f6b3e; --slate:#44636f;
+  --ar:'Amiri',serif; --lat:'Fraunces',Georgia,serif; --label:'Outfit',system-ui,sans-serif;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--ar);color:var(--ink);background:var(--paper);font-size:19px;line-height:2.0;overflow-x:hidden;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body::before{content:"";position:fixed;inset:0;z-index:50;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+/* language switching, same convention as the rest of the site */
+body[data-lang="ar"] .en{display:none!important}
+body[data-lang="en"] .ar{display:none!important}
+body[data-lang="ar"]{direction:rtl}
+body[data-lang="en"]{direction:ltr;font-family:var(--lat);font-size:17px;line-height:1.75}
+body[data-lang="en"] h1,body[data-lang="en"] h2,body[data-lang="en"] h3{font-family:var(--lat);font-weight:600;letter-spacing:-.01em}
+.lat{font-family:var(--lat);direction:ltr;unicode-bidi:isolate}
+
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold-aa);outline-offset:3px}
+img{max-width:100%;display:block}
+.wrap{width:min(1100px,100%);margin-inline:auto;padding-inline:20px}
+.narrow{width:min(760px,100%);margin-inline:auto;padding-inline:20px}
+h1,h2,h3{font-family:var(--ar);font-weight:700;margin:0;line-height:1.45;text-wrap:balance}
+h2{font-size:clamp(1.8rem,4vw,2.6rem)}
+h3{font-size:clamp(1.15rem,2.2vw,1.4rem)}
+p{margin:0}
+.eyebrow{display:block;font-size:.9rem;letter-spacing:.14em;color:var(--gold-aa)}
+body[data-lang="en"] .eyebrow{font-family:var(--lat);font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600}
+.lede{font-size:clamp(1.05rem,1.7vw,1.2rem);color:var(--ink-70);max-width:58ch}
+.fleuron{display:block;text-align:center;color:var(--gold);letter-spacing:1.1em;padding-inline-start:1.1em;opacity:.75;font-size:1.1rem}
+.rule-double{border:0;height:4px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:0}
+section{padding-block:clamp(3.5rem,8vw,6rem)}
+.head{display:grid;gap:.4rem;margin-bottom:2rem}
+
+/* masthead */
+.mast{border-bottom:1px solid var(--rule);position:sticky;top:env(safe-area-inset-top,0px);background:var(--paper);z-index:40}
+.mast .wrap{display:flex;justify-content:space-between;align-items:center;gap:.6rem 1rem;padding-block:10px;flex-wrap:wrap}
+.brand{text-decoration:none;font-weight:700;font-size:1.25rem}
+.mast nav{display:flex;gap:.2rem 1.1rem;flex-wrap:wrap;font-size:.95rem;align-items:center}
+.mast nav a{color:var(--ink-70);text-decoration:none}
+.mast nav a:hover{color:var(--rubric)}
+.langbtn{font-family:var(--lat);font-size:.8rem;letter-spacing:.12em;background:transparent;border:1px solid var(--rule);color:var(--ink);padding:.3rem .8rem;cursor:pointer}
+.langbtn .ar{font-family:var(--ar);font-size:1rem;letter-spacing:0}
+
+/* hero */
+.hero{padding-block:clamp(3rem,7vw,5rem) clamp(2.5rem,5vw,3.5rem);text-align:center;display:grid;gap:1.1rem;justify-items:center}
+.hero .seal{width:92px;height:92px;opacity:.9}
+.hero h1{font-size:clamp(3rem,9vw,5.4rem);line-height:1.2}
+body[data-lang="en"] .hero h1{font-size:clamp(2.6rem,8vw,4.6rem)}
+.hero h1 .dot{color:var(--rubric)}
+.imprint{font-family:var(--lat);font-size:.7rem;letter-spacing:.42em;text-transform:uppercase;color:var(--gold-aa);direction:ltr}
+.motto{font-size:clamp(1.25rem,2.6vw,1.6rem);max-width:32ch}
+body[data-lang="en"] .motto{font-style:italic;font-size:clamp(1.1rem,2.2vw,1.35rem)}
+.hero .lede{max-width:60ch}
+
+/* the unit */
+.unit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(1.5rem,4vw,3rem);align-items:center}
+.coin{aspect-ratio:1;max-width:340px;width:100%;margin-inline:auto;border-radius:50%;background:radial-gradient(circle at 38% 32%,#fbf6ea,var(--paper-aged) 62%,#dccfb2);border:1px solid var(--gold);box-shadow:inset 0 0 0 10px var(--paper),inset 0 0 0 11px var(--gold),0 18px 40px -24px rgba(43,40,35,.55);display:grid;place-items:center;text-align:center;position:relative}
+.coin .inner{display:grid;gap:.1rem;justify-items:center}
+.coin .one{font-family:var(--lat);font-size:clamp(4rem,11vw,6rem);line-height:1;font-weight:500}
+.coin .name{font-size:1.6rem;font-weight:700;color:var(--rubric);line-height:1.3}
+body[data-lang="en"] .coin .name{font-size:1.3rem}
+.coin .small{font-family:var(--lat);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-aa)}
+.coin svg{position:absolute;inset:0;width:100%;height:100%}
+.rules{display:grid;gap:1.1rem}
+.rules > div{border-inline-start:2px solid var(--gold);padding-inline-start:1rem}
+.rules b{font-size:1.12rem}
+.rules p{color:var(--ink-70);font-size:1rem}
+
+/* ledgers */
+.tabs{display:flex;flex-wrap:wrap;border-bottom:1px solid var(--rule)}
+.tabs button{font:inherit;font-size:1.02rem;background:none;border:0;border-bottom:3px solid transparent;padding:.5rem 1.1rem;cursor:pointer;color:var(--ink-70)}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--rubric);font-weight:700}
+.passbook{background:#fbf8f0;border:1px solid var(--rule);box-shadow:0 1px 0 var(--rule),0 2px 0 #fbf8f0,0 3px 0 var(--rule);margin-top:1.4rem}
+.pb-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;padding:1rem 1.2rem;border-bottom:3px double var(--rule)}
+.pb-head b{font-size:1.2rem}
+.pb-head small{display:block;color:var(--ink-70);font-size:.88rem}
+.sample-tag{font-family:var(--label);font-size:.72rem;letter-spacing:.06em;background:var(--gold-15);color:var(--gold-aa);padding:.15rem .6rem;border-radius:2px;align-self:center}
+.sample-tag .ar{font-family:var(--ar);font-size:.9rem;letter-spacing:0}
+.pb-scroll{overflow-x:auto}
+.pb-table{width:100%;border-collapse:collapse;min-width:640px;font-size:.98rem}
+.pb-table th{font-weight:400;font-size:.82rem;color:var(--gold-aa);text-align:start;padding:.55rem .9rem;border-bottom:1px solid var(--rule)}
+.pb-table td{padding:.6rem .9rem;border-bottom:1px dashed var(--rule);vertical-align:middle;line-height:1.65;text-align:start}
+.pb-table td.h{font-variant-numeric:tabular-nums;text-align:center}
+.pb-table tfoot td{border-bottom:0;border-top:3px double var(--rule);font-weight:700}
+.st{display:inline-flex;align-items:center;gap:.35rem;font-size:.86rem;white-space:nowrap}
+.st i{width:.62rem;height:.62rem;border-radius:50%;display:inline-block;border:1px solid currentColor}
+.st.s1{color:var(--ink-70)}
+.st.s2{color:var(--slate)} .st.s2 i{background:var(--slate)}
+.st.s3{color:var(--sage)} .st.s3 i{background:var(--sage)}
+.gold-seal{display:inline-grid;place-items:center;width:1.6rem;height:1.6rem;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f3dfa4,var(--gold) 70%);color:var(--ink-deep);font-size:.8rem;box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--gold)}
+.pb-note{padding:.9rem 1.2rem;font-size:.92rem;color:var(--ink-70);border-top:1px solid var(--rule)}
+.status-line{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:2rem;border:1px solid var(--rule)}
+.status-line > div{padding:1.1rem 1.2rem;border-inline-start:1px solid var(--rule);display:grid;gap:.3rem;align-content:start}
+.status-line > div:first-child{border-inline-start:0}
+.status-line b{font-size:1.08rem}
+.status-line p{font-size:.93rem;color:var(--ink-70)}
+
+/* tree */
+.tree{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.tier{padding:1.2rem .9rem 1.4rem;border-inline-start:1px solid var(--rule);display:grid;gap:.35rem;align-content:start}
+.tier:first-child{border-inline-start:0}
+.tier .stage{font-family:var(--lat);font-size:.66rem;letter-spacing:.28em;color:var(--gold-aa);text-transform:uppercase}
+.tier h3{font-size:1.3rem}
+.tier .hrs{font-size:1.9rem;line-height:1.1;color:var(--rubric)}
+.tier .hrs small{font-size:.8rem;color:var(--ink-70)}
+.tier p{font-size:.9rem;color:var(--ink-70);line-height:1.75}
+.tier .glyph{height:44px;display:flex;align-items:flex-end}
+.tier.top{background:linear-gradient(to top,var(--gold-15),transparent)}
+.tier.top .hrs{font-size:1.15rem;color:var(--gold-aa)}
+.note{font-size:.95rem;color:var(--ink-70);max-width:62ch;margin-top:1.2rem}
+
+/* dark plate */
+.plate{background:#2b2823;color:var(--paper)}
+.plate .eyebrow{color:var(--gold-soft)}
+.plate h2,.plate h3{color:var(--paper)}
+.plate p{color:#e6dfcf}
+.bridge{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3rem)}
+.bridge-copy{display:grid;gap:1.1rem;align-content:start}
+.counter{border:1px solid var(--gold);padding:1.6rem;display:grid;gap:.8rem;align-content:start}
+.counter .big{font-size:clamp(2.6rem,7vw,3.6rem);line-height:1;color:var(--gold-soft)}
+.meter{height:10px;background:rgba(243,238,226,.12)}
+.weights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem}
+.weights div{border-top:1px solid rgba(201,169,97,.45);padding-top:.5rem}
+.weights b{font-size:1.6rem;color:var(--paper);display:block;line-height:1.2}
+.weights span{font-size:.85rem;color:#d7cfbd;line-height:1.55;display:block}
+.caveat{font-size:.86rem!important;color:#d7cfbd!important;border-inline-start:2px solid #e0a765;padding-inline-start:.8rem}
+
+/* edition */
+.edition{text-align:center;display:grid;gap:1rem;justify-items:center}
+.edition .year{font-family:var(--lat);font-size:clamp(5rem,16vw,9rem);line-height:.95;letter-spacing:-.02em}
+.edition .year sup{font-size:.2em;letter-spacing:.3em;color:var(--gold-aa);vertical-align:top;margin-inline-start:.4em}
+.edition p{max-width:56ch}
+
+/* certificate */
+.cert{width:min(820px,100%);margin-inline:auto;aspect-ratio:1.414/1;min-height:420px;background:#fbf7ec;border:1px solid var(--gold);box-shadow:inset 0 0 0 8px #fbf7ec,inset 0 0 0 9px var(--gold),0 24px 50px -30px rgba(43,40,35,.6);padding:clamp(1.4rem,4vw,2.8rem);display:grid;grid-template-rows:auto 1fr auto;text-align:center;position:relative}
+.cert .ctop{display:grid;gap:.2rem;justify-items:center}
+.cert .ctop img{width:58px;height:58px;opacity:.85}
+.cert .press{font-family:var(--lat);font-size:.6rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-aa)}
+.cert h3{font-size:clamp(1.5rem,4vw,2.3rem);color:var(--rubric)}
+.cert .cbody{display:grid;gap:.4rem;align-content:center;justify-items:center}
+.cert .who{font-size:clamp(1.3rem,3vw,1.8rem);border-bottom:1px solid var(--rule);padding-inline:2.2rem;min-width:50%}
+.cert .line{font-size:clamp(.95rem,2vw,1.08rem);color:var(--ink-70);max-width:46ch}
+.cert .figs{display:flex;gap:clamp(1rem,4vw,2.4rem);justify-content:center;flex-wrap:wrap;margin-top:.4rem}
+.cert .figs div{display:grid}
+.cert .figs b{font-size:1.5rem;font-weight:500}
+.cert .figs span{font-size:.8rem;color:var(--gold-aa)}
+.cert .cfoot{display:flex;justify-content:space-between;align-items:end;gap:1rem;font-size:.82rem;color:var(--ink-70)}
+.cert .sig{border-top:1px solid var(--ink-70);padding-top:.2rem;min-width:120px}
+.cert .stamp{position:absolute;inset-inline-start:clamp(1.4rem,5vw,3.2rem);bottom:clamp(3rem,9vw,4.8rem);width:clamp(64px,10vw,86px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f6e6b4,var(--gold) 68%,#8a6b2c);display:grid;place-items:center;color:var(--ink-deep);font-size:.72rem;font-weight:700;line-height:1.3;box-shadow:0 0 0 3px #fbf7ec,0 0 0 4px var(--gold);transform:rotate(-12deg);padding:.3rem}
+.cert .specimen{position:absolute;top:1rem;inset-inline-end:1rem;font-family:var(--label);font-size:.65rem;letter-spacing:.2em;color:var(--rubric);border:1px solid var(--rubric);padding:.1rem .5rem;transform:rotate(4deg)}
+
+/* export, never */
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));border:1px solid var(--rule)}
+.grid4 > div{padding:1.1rem 1.2rem;border-inline-start:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.grid4 b{display:block;font-size:1.05rem}
+.grid4 p{font-size:.93rem;color:var(--ink-70)}
+.never{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.never > div{border-top:1px solid var(--rubric);padding-top:.7rem}
+.never b{color:var(--rubric);font-size:1.05rem}
+.never p{font-size:.92rem;color:var(--ink-70)}
+
+/* rates */
+.rates{display:grid;gap:.7rem;max-width:720px}
+.rate{display:grid;grid-template-columns:minmax(120px,200px) 1fr;gap:1rem;align-items:center}
+.rate .lbl{font-size:.98rem;line-height:1.5}
+.rate .lbl small{display:block;font-size:.8rem;color:var(--ink-70)}
+.track{height:22px;position:relative;background:repeating-linear-gradient(to left,transparent 0,transparent calc(25% - 1px),var(--rule) calc(25% - 1px),var(--rule) 25%)}
+body[data-lang="en"] .track{background:repeating-linear-gradient(to right,transparent 0,transparent calc(25% - 1px),var(--rule) calc(25% - 1px),var(--rule) 25%)}
+.bar{position:absolute;inset-block:3px;inset-inline-start:0;background:var(--ink);display:flex;align-items:center;justify-content:flex-end;padding-inline:.4rem;min-width:44px}
+.bar.ours{background:var(--rubric)}
+.bar em{font-style:normal;font-family:var(--lat);font-size:.76rem;color:var(--paper)}
+.ticks{display:grid;grid-template-columns:minmax(120px,200px) 1fr;gap:1rem}
+.ticks div{display:flex;justify-content:space-between;font-family:var(--lat);font-size:.72rem;color:var(--ink-70)}
+
+/* waqf, basis, footer */
+.waqf{text-align:center;display:grid;gap:1.1rem;justify-items:center}
+.waqf blockquote{margin:0;font-size:clamp(1.35rem,3vw,1.8rem);line-height:1.9;max-width:34ch}
+.waqf .fiqh{font-size:.92rem;color:#d7cfbd;max-width:58ch}
+.basis{font-size:.86rem;color:var(--ink-70);columns:2 300px;column-gap:2rem;direction:ltr;text-align:left;font-family:var(--lat);line-height:1.7}
+.basis p{break-inside:avoid;margin-bottom:.5rem}
+.basis a{word-break:break-word}
+footer{border-top:1px solid var(--rule);padding-block:2rem 3rem;text-align:center;display:grid;gap:.4rem;font-size:.95rem;color:var(--ink-70)}
+footer .lat{font-size:.85rem}
+
+@media (max-width:820px){
+  .unit,.bridge{grid-template-columns:1fr}
+  .tree{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .tier:nth-child(4){border-inline-start:0}
+  .tier:nth-child(n+4){border-top:1px solid var(--rule)}
+}
+@media (max-width:560px){
+  body{font-size:18px}
+  .tree{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tier:nth-child(odd){border-inline-start:0}
+  .tier:nth-child(4){border-inline-start:1px solid var(--rule)}
+  .tier:nth-child(n+3){border-top:1px solid var(--rule)}
+  .status-line{grid-template-columns:1fr}
+  .status-line > div{border-inline-start:0;border-top:1px solid var(--rule)}
+  .status-line > div:first-child{border-top:0}
+  .rate,.ticks{grid-template-columns:1fr;gap:.2rem}
+  .ticks > span{display:none}
+  .cert{aspect-ratio:auto}
+  .mast nav{font-size:.88rem}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero .seal{animation:settle 1.2s ease-out both}
+  @keyframes settle{from{transform:rotate(-20deg) scale(.9);opacity:0}to{transform:none;opacity:.9}}
+}
+</style>
+</head>
+<body data-lang="ar">
+
+<header class="mast">
+  <div class="wrap">
+    <a class="brand" href="/juthur/"><span class="ar">جُذور</span><span class="en" lang="en">Juthur</span></a>
+    <nav aria-label="بنك الأثر">
+      <a href="#unit"><span class="ar">الوحدة</span><span class="en" lang="en">The Unit</span></a>
+      <a href="#ledgers"><span class="ar">الدفاتر</span><span class="en" lang="en">Ledgers</span></a>
+      <a href="#tree"><span class="ar">السُّلَّم</span><span class="en" lang="en">The Tree</span></a>
+      <a href="#bridge"><span class="ar">التوثيق الوطنيّ</span><span class="en" lang="en">National Record</span></a>
+      <a href="#certificate"><span class="ar">الشهادة</span><span class="en" lang="en">Certificate</span></a>
+      <a href="#basis"><span class="ar">المرجعيّة</span><span class="en" lang="en">Basis</span></a>
+      <button class="langbtn" id="langbtn" type="button" aria-label="Switch language"><span class="ar" lang="en">English</span><span class="en" lang="ar">العربية</span></button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="hero wrap">
+  <img class="seal" src="/juthur/assets/juthur_seal_mono.png" alt="ختم مطبعة جُذور · Juthur Press seal">
+  <span class="imprint">Juthur Press · Dubai · MCMXXVI · Bank of Athar</span>
+  <h1><span class="ar">بَنْكُ الأَثَر<span class="dot">.</span></span><span class="en" lang="en">Bank of Athar<span class="dot">.</span></span></h1>
+  <p class="motto"><span class="ar">يقرأُ الكبيرُ للصغير، فتُكتَبُ له ساعة؛ ويكبرُ الصغيرُ فيقرأُ لمن بعدَه.</span><span class="en" lang="en">The elder reads to the younger, and an hour is written to his name; the younger grows up and reads to the one after him.</span></p>
+  <p class="lede"><span class="ar">دفترُ جُذور لساعاتِ الخدمة. المحطّةُ العاشرةُ في دورةِ النَّرْف اسمُها «العودةُ والتعليم»، والرابعةَ عشرةَ «الأثرُ الممتدّ». وهذا البنكُ يمدُّ المحطّتين خارجَ الصفّ: كلُّ ساعةٍ يعطيها طالبٌ لطفلٍ أو لمجتمعِه تُقيَّدُ باسمِه، وتُوثَّق، وتبقى.</span><span class="en" lang="en">Juthur's ledger of service hours. The tenth station of the Naraf cycle is called Return and Teach; the fourteenth, Extended Imprint. This bank carries both stations beyond the classroom: every hour a student gives to a child or to the community is written in the student's name, verified, and kept.</span></p>
+</div>
+
+<hr class="rule-double">
+
+<section id="unit" class="wrap">
+  <div class="unit">
+    <div class="coin" role="img" aria-label="ساعة أثر واحدة · One hour of Athar">
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="ring" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+        <text font-family="Fraunces, Georgia, serif" font-size="8.2" letter-spacing="3.2" fill="#7a5d22"><textPath href="#ring">ONE HOUR GIVEN · ONE HOUR WRITTEN · JUTHUR PRESS · MCMXXVI ·</textPath></text>
+      </svg>
+      <div class="inner">
+        <span class="one"><span class="ar">١</span><span class="en">1</span></span>
+        <span class="name"><span class="ar">ساعةُ أَثَر</span><span class="en" lang="en">hour of Athar</span></span>
+        <span class="small">= one clock hour</span>
+      </div>
+    </div>
+    <div class="rules">
+      <span class="eyebrow"><span class="ar">العُملة</span><span class="en" lang="en">The Currency</span></span>
+      <h2><span class="ar">ساعةٌ بساعة، لا أكثرُ ولا أقلّ</span><span class="en" lang="en">One hour for one hour, no more and no less</span></h2>
+      <div>
+        <b><span class="ar">ساعةُ الأثرِ ساعةٌ فعليّة.</span><span class="en" lang="en">An hour of Athar is a clock hour.</span></b>
+        <p><span class="ar">لا تتضاعفُ بنوعِ العملِ ولا بالجهة. القراءةُ لطفلٍ، وتنظيفُ شاطئ، وحلقةُ تلاوة: الساعةُ فيها كلِّها ساعة. هذه قاعدةُ بنوكِ الوقتِ منذ عقود، وهي ما يجعلُ الرقمَ صادقًا حين يُكتَبُ في طلبِ الجامعة.</span><span class="en" lang="en">It is not multiplied by the kind of work or by the host. Reading to a child, cleaning a beach, a recitation circle: an hour is an hour in all of them. Time banks have worked by this rule for decades, and it is what keeps the number honest when it appears on a university application.</span></p>
+      </div>
+      <div>
+        <b><span class="ar">الدورةُ كاملةً تُحسَب.</span><span class="en" lang="en">The whole cycle counts.</span></b>
+        <p><span class="ar">ساعاتُ الإعدادِ والتنفيذِ والتأمّلِ تُقيَّدُ معًا، كما في معاييرِ ميريلاند وأركنساس وسنغافورة. ومن حضّرَ قصّةً ليقرأها ساعةً، فقد أعطى أكثرَ من ساعة.</span><span class="en" lang="en">Hours of preparation, action and reflection are recorded together, as in the Maryland, Arkansas and Singapore standards. A student who prepared a story in order to read it for an hour has given more than an hour.</span></p>
+      </div>
+      <div>
+        <b><span class="ar">البنكُ يُصدِر، والمنصّةُ الوطنيّةُ توثِّق.</span><span class="en" lang="en">The bank issues; the national platform verifies.</span></b>
+        <p><span class="ar">نحن نكتبُ الساعة. وإذا سُجِّلت الساعةُ نفسُها أيضًا على منصّة Volunteers.ae، حملت في دفترِنا علامةَ التوثيقِ الوطنيّ.</span><span class="en" lang="en">We write the hour. When the same hour is also logged on the Volunteers.ae platform, it carries the national verification mark in our ledger.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ledgers" class="wrap" style="padding-top:0">
+  <div class="head">
+    <span class="eyebrow"><span class="ar">الدفاترُ الثلاثة</span><span class="en" lang="en">Three Ledgers</span></span>
+    <h2><span class="ar">ثلاثةُ دفاترَ في كتابٍ واحد</span><span class="en" lang="en">Three ledgers in one book</span></h2>
+    <p class="lede"><span class="ar">المعيارُ الإحصائيُّ الدوليُّ لا يَعُدُّ الخدمةَ المفروضةَ تطوّعًا، والأبحاثُ تشيرُ إلى أنّ الإلزامَ قد يُطفئُ الرغبة. لذلك يُفصَلُ ما طُلِبَ عمّا اختير، ويُفتَحُ دفترٌ ثالثٌ للأسرة.</span><span class="en" lang="en">The international statistical standard does not count required service as volunteering, and research suggests that compulsion can dampen the wish to serve. So what was required is kept apart from what was chosen, and a third ledger is opened for the family.</span></p>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="الدفاتر · Ledgers">
+    <button role="tab" id="t-chosen" aria-selected="true" aria-controls="p-chosen"><span class="ar">دفترُ المختار</span><span class="en" lang="en">Chosen</span></button>
+    <button role="tab" id="t-required" aria-selected="false" aria-controls="p-required"><span class="ar">دفترُ المطلوب</span><span class="en" lang="en">Required</span></button>
+    <button role="tab" id="t-family" aria-selected="false" aria-controls="p-family"><span class="ar">دفترُ الأسرة</span><span class="en" lang="en">Family</span></button>
+  </div>
+
+  <div class="passbook">
+    <div id="p-chosen" role="tabpanel" aria-labelledby="t-chosen">
+      <div class="pb-head">
+        <div><b><span class="ar">دفترُ المختار</span><span class="en" lang="en">The chosen ledger</span></b><small><span class="ar">الخدمةُ التي اختارها الطالب، وهي التي تُبرَزُ في ملفِّ الجامعة</span><span class="en" lang="en">Service the student chose; this is the ledger shown on a university file</span></small></div>
+        <span class="sample-tag"><span class="ar">مثالٌ توضيحيّ</span><span class="en" lang="en">Sample entries</span></span>
+      </div>
+      <div class="pb-scroll"><table class="pb-table">
+        <thead><tr><th><span class="ar">التاريخ</span><span class="en">Date</span></th><th><span class="ar">الخدمة</span><span class="en">Service</span></th><th><span class="ar">الجهة</span><span class="en">Host</span></th><th><span class="ar">الساعات</span><span class="en">Hours</span></th><th><span class="ar">الحالة</span><span class="en">Status</span></th><th><span class="ar">الختم</span><span class="en">Seal</span></th></tr></thead>
+        <tbody>
+          <tr><td><span class="ar">٧ أكتوبر</span><span class="en">7 Oct</span></td><td><span class="ar">قراءةُ «حبلُ المرسى» لأطفالِ الروضة، مع الإعداد</span><span class="en">Reading "The Mooring Rope" to kindergarten children, with preparation</span></td><td><span class="ar">مكتبةُ الحيّ</span><span class="en">Neighbourhood library</span></td><td class="h"><span class="ar">٢٫٥</span><span class="en">2.5</span></td><td><span class="st s3"><i></i><span class="ar">معتمدٌ ومقفل</span><span class="en">Approved, locked</span></span></td><td><span class="gold-seal" title="✦">✦</span></td></tr>
+          <tr><td><span class="ar">١٤ أكتوبر</span><span class="en">14 Oct</span></td><td><span class="ar">تنظيفُ شاطئ، ضمن برنامج تكاتف</span><span class="en">Beach clean-up with the Takatof programme</span></td><td><span class="ar">مؤسسةُ الإمارات</span><span class="en">Emirates Foundation</span></td><td class="h"><span class="ar">٣</span><span class="en">3</span></td><td><span class="st s3"><i></i><span class="ar">معتمدٌ ومقفل</span><span class="en">Approved, locked</span></span></td><td><span class="gold-seal">✦</span></td></tr>
+          <tr><td><span class="ar">٢١ أكتوبر</span><span class="en">21 Oct</span></td><td><span class="ar">تسجيلُ قصّةٍ صوتيّةٍ لمكتبةِ «الاستماع»</span><span class="en">Recording an audio story for the Listening library</span></td><td><span class="ar">جُذور</span><span class="en">Juthur</span></td><td class="h"><span class="ar">١٫٥</span><span class="en">1.5</span></td><td><span class="st s2"><i></i><span class="ar">موثَّقٌ من المشرف</span><span class="en">Verified by supervisor</span></span></td><td>·</td></tr>
+          <tr><td><span class="ar">٢٨ أكتوبر</span><span class="en">28 Oct</span></td><td><span class="ar">زيارةُ دارٍ لرعايةِ المسنّين، والقراءةُ مع المقيمين فيها</span><span class="en">Visiting a care home and reading with its residents</span></td><td><span class="ar">جهةٌ محلّيّة</span><span class="en">Local host</span></td><td class="h"><span class="ar">٢</span><span class="en">2</span></td><td><span class="st s1"><i></i><span class="ar">مسجَّلٌ ذاتيًّا</span><span class="en">Self-logged</span></span></td><td>·</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="3"><span class="ar">الرصيدُ المعتمد</span><span class="en">Approved balance</span></td><td class="h"><span class="ar">٥٫٥</span><span class="en">5.5</span></td><td colspan="2"><span class="ar">كلُّها بالختمِ الذهبيّ</span><span class="en">All with the gold seal</span></td></tr></tfoot>
+      </table></div>
+    </div>
+
+    <div id="p-required" role="tabpanel" aria-labelledby="t-required" hidden>
+      <div class="pb-head">
+        <div><b><span class="ar">دفترُ المطلوب</span><span class="en" lang="en">The required ledger</span></b><small><span class="ar">الخدمةُ التي يقرّرها المنهج، وتُعرَضُ منفصلة</span><span class="en" lang="en">Service set by the curriculum, always shown separately</span></small></div>
+        <span class="sample-tag"><span class="ar">مثالٌ توضيحيّ</span><span class="en" lang="en">Sample entries</span></span>
+      </div>
+      <div class="pb-scroll"><table class="pb-table">
+        <thead><tr><th><span class="ar">التاريخ</span><span class="en">Date</span></th><th><span class="ar">الخدمة</span><span class="en">Service</span></th><th><span class="ar">الجهة</span><span class="en">Host</span></th><th><span class="ar">الساعات</span><span class="en">Hours</span></th><th><span class="ar">الحالة</span><span class="en">Status</span></th><th><span class="ar">الختم</span><span class="en">Seal</span></th></tr></thead>
+        <tbody>
+          <tr><td><span class="ar">٣ أكتوبر</span><span class="en">3 Oct</span></td><td><span class="ar">المحطّةُ العاشرة: الطالبُ يعلّمُ زميلًا ما تعلّمه</span><span class="en">Station ten: the student teaches a classmate what they learned</span></td><td><span class="ar">الصفّ</span><span class="en">Class</span></td><td class="h"><span class="ar">١</span><span class="en">1</span></td><td><span class="st s3"><i></i><span class="ar">معتمدٌ ومقفل</span><span class="en">Approved, locked</span></span></td><td>·</td></tr>
+          <tr><td><span class="ar">١٧ أكتوبر</span><span class="en">17 Oct</span></td><td><span class="ar">مشروعُ خدمةٍ مقرَّرٌ ضمن المنهج</span><span class="en">A service project set by the curriculum</span></td><td><span class="ar">الصفّ</span><span class="en">Class</span></td><td class="h"><span class="ar">٢</span><span class="en">2</span></td><td><span class="st s2"><i></i><span class="ar">موثَّقٌ من المشرف</span><span class="en">Verified by supervisor</span></span></td><td>·</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="3"><span class="ar">الرصيدُ المعتمد</span><span class="en">Approved balance</span></td><td class="h"><span class="ar">١</span><span class="en">1</span></td><td colspan="2"><span class="ar">لا يُخلَطُ بدفترِ المختار</span><span class="en">Never merged with chosen hours</span></td></tr></tfoot>
+      </table></div>
+    </div>
+
+    <div id="p-family" role="tabpanel" aria-labelledby="t-family" hidden>
+      <div class="pb-head">
+        <div><b><span class="ar">دفترُ الأسرة</span><span class="en" lang="en">The family ledger</span></b><small><span class="ar">خدمةٌ يؤدّيها الطالبُ مع أهله، ويوثّقُها وليُّ الأمر</span><span class="en" lang="en">Service done with the family, verified by a parent</span></small></div>
+        <span class="sample-tag"><span class="ar">مثالٌ توضيحيّ</span><span class="en" lang="en">Sample entries</span></span>
+      </div>
+      <div class="pb-scroll"><table class="pb-table">
+        <thead><tr><th><span class="ar">التاريخ</span><span class="en">Date</span></th><th><span class="ar">الخدمة</span><span class="en">Service</span></th><th><span class="ar">مع من</span><span class="en">With</span></th><th><span class="ar">الساعات</span><span class="en">Hours</span></th><th><span class="ar">الحالة</span><span class="en">Status</span></th><th><span class="ar">الختم</span><span class="en">Seal</span></th></tr></thead>
+        <tbody>
+          <tr><td><span class="ar">١٠ أكتوبر</span><span class="en">10 Oct</span></td><td><span class="ar">الطالبُ يقرأُ لأخيه الأصغرِ قصّةً من الرِّواقِ كلَّ مساء، مدّةَ أسبوع</span><span class="en">Reading a story from the Gallery to a younger brother every evening for a week</span></td><td><span class="ar">الأسرة</span><span class="en">Family</span></td><td class="h"><span class="ar">٣٫٥</span><span class="en">3.5</span></td><td><span class="st s2"><i></i><span class="ar">موثَّقٌ من وليِّ الأمر</span><span class="en">Verified by a parent</span></span></td><td>·</td></tr>
+          <tr><td><span class="ar">٢٤ أكتوبر</span><span class="en">24 Oct</span></td><td><span class="ar">إعدادُ وجباتٍ مع الأسرة، وتوزيعُها على عمّالِ الحيّ</span><span class="en">Preparing meals with the family and giving them to workers in the neighbourhood</span></td><td><span class="ar">الأسرة</span><span class="en">Family</span></td><td class="h"><span class="ar">٢</span><span class="en">2</span></td><td><span class="st s3"><i></i><span class="ar">معتمدٌ ومقفل</span><span class="en">Approved, locked</span></span></td><td><span class="gold-seal">✦</span></td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="3"><span class="ar">الرصيدُ المعتمد</span><span class="en">Approved balance</span></td><td class="h"><span class="ar">٢</span><span class="en">2</span></td><td colspan="2"><span class="ar">حماسةُ الأهلِ تصيرُ رصيدًا</span><span class="en">A family's enthusiasm becomes a balance</span></td></tr></tfoot>
+      </table></div>
+    </div>
+
+    <p class="pb-note"><span class="ar">لا يدخلُ الرصيدَ إلّا القيدُ المعتمد، والحدُّ الأعلى ثماني ساعاتٍ في اليوم. والنجمةُ الذهبيّةُ ✦ تعني أنّ الساعةَ نفسَها مسجَّلةٌ أيضًا على المنصّةِ الوطنيّة.</span><span class="en" lang="en">Only approved entries enter the balance, and the daily maximum is eight hours. The gold star ✦ means the same hour is also logged on the national platform.</span></p>
+  </div>
+
+  <div class="status-line" aria-label="مراحل القيد · Stages of an entry">
+    <div><span class="st s1"><i></i><span class="ar">مسجَّلٌ ذاتيًّا</span><span class="en">Self-logged</span></span><b><span class="ar">الطالبُ يكتب</span><span class="en">The student writes</span></b><p><span class="ar">التاريخَ والجهةَ والساعات، وسطرًا من التأمّل: ماذا رأيتَ، وماذا تغيّرَ فيك؟</span><span class="en">The date, the host, the hours, and one line of reflection: what did you see, and what changed in you?</span></p></div>
+    <div><span class="st s2"><i></i><span class="ar">موثَّق</span><span class="en">Verified</span></span><b><span class="ar">المشرفُ يصادق</span><span class="en">The supervisor confirms</span></b><p><span class="ar">مشرفُ الجهة، أو وليُّ الأمرِ في دفترِ الأسرة، بتوقيعٍ أو صورةٍ أو رسالة.</span><span class="en">The host's supervisor, or a parent in the family ledger, by signature, photo or message.</span></p></div>
+    <div><span class="st s3"><i></i><span class="ar">معتمدٌ ومقفل</span><span class="en">Approved, locked</span></span><b><span class="ar">البنكُ يعتمد</span><span class="en">The bank approves</span></b><p><span class="ar">بعد الاعتمادِ يُقفَلُ القيد، فلا يُعدَّلُ ولا يُحذَف. ومن هنا يبدأُ الرصيد.</span><span class="en">Once approved, the entry is locked and cannot be edited or deleted. This is where the balance begins.</span></p></div>
+  </div>
+</section>
+
+<hr class="rule-double">
+
+<section id="tree" class="wrap">
+  <div class="head">
+    <span class="eyebrow"><span class="ar">سُلَّمُ الشَّجَرة</span><span class="en" lang="en">The Tree of Service</span></span>
+    <h2><span class="ar">يصعدُ الطالبُ الشجرةَ نفسَها</span><span class="en" lang="en">The student climbs the same tree</span></h2>
+    <p class="lede"><span class="ar">مراحلُ سُلَّمِ جُذور الستُّ هي مستوياتُ البنك. تُحسَبُ الساعاتُ في السنةِ الواحدةِ من دفترِ المختار، والمدّةُ شرطٌ مع الساعة كما في جائزةِ الكونغرس. أمّا الحصادُ فلا يُنالُ بالساعات.</span><span class="en" lang="en">The six stages of the Juthur ladder are the bank's levels. Hours are counted within one year from the chosen ledger, and duration is required alongside hours, as in the Congressional Award. The Harvest is not reached by hours.</span></p>
+  </div>
+  <div class="tree">
+    <div class="tier">
+      <div class="glyph" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 30 30"><ellipse cx="15" cy="20" rx="7" ry="5" fill="#b08f43"/></svg></div>
+      <span class="stage">I · Seed</span><h3><span class="ar">البَذْرة</span><span class="en">Seed</span></h3>
+      <span class="hrs"><span class="ar">١٠ <small>ساعات</small></span><span class="en">10 <small>hours</small></span></span>
+      <p><span class="ar">أوّلُ قيدٍ معتمد، وأوّلُ ساعةٍ تُهدى.</span><span class="en">The first approved entry, and the first hour given.</span></p>
+    </div>
+    <div class="tier">
+      <div class="glyph" aria-hidden="true"><svg width="30" height="36" viewBox="0 0 30 36"><path d="M15 34V16" stroke="#6e8b5a" stroke-width="2"/><path d="M15 18c-6-1-8-6-7-10 5 0 8 4 7 10z" fill="#6e8b5a"/></svg></div>
+      <span class="stage">II · Bud</span><h3><span class="ar">البُرْعُم</span><span class="en">Bud</span></h3>
+      <span class="hrs"><span class="ar">٣٠ <small>ساعة</small></span><span class="en">30 <small>hours</small></span></span>
+      <p><span class="ar">خدمةٌ منتظمةٌ ثلاثةَ أشهر.</span><span class="en">Regular service over three months.</span></p>
+    </div>
+    <div class="tier">
+      <div class="glyph" aria-hidden="true"><svg width="36" height="40" viewBox="0 0 36 40"><path d="M18 40V12M18 24l9-7M18 20l-8-6" stroke="#6e8b5a" stroke-width="2" fill="none"/></svg></div>
+      <span class="stage">III · Branch</span><h3><span class="ar">الغُصْن</span><span class="en">Branch</span></h3>
+      <span class="hrs"><span class="ar">٦٠ <small>ساعة</small></span><span class="en">60 <small>hours</small></span></span>
+      <p><span class="ar">ستّةُ أشهرٍ متّصلة، ومشروعٌ واحدٌ كاملُ الدورة.</span><span class="en">Six continuous months, and one project through its full cycle.</span></p>
+    </div>
+    <div class="tier">
+      <div class="glyph" aria-hidden="true"><svg width="40" height="42" viewBox="0 0 40 42"><path d="M20 42V14" stroke="#5a6b5a" stroke-width="2"/><circle cx="12" cy="14" r="6" fill="#6e8b5a"/><circle cx="27" cy="11" r="7" fill="#6e8b5a"/><circle cx="20" cy="6" r="5" fill="#5a6b5a"/></svg></div>
+      <span class="stage">IV · Leaves</span><h3><span class="ar">الأوراق</span><span class="en">Leaves</span></h3>
+      <span class="hrs"><span class="ar">٩٠ <small>ساعة</small></span><span class="en">90 <small>hours</small></span></span>
+      <p><span class="ar">تسعةُ أشهر، ونصفُ الساعاتِ على الأقلِّ بالختمِ الذهبيّ.</span><span class="en">Nine months, with at least half the hours carrying the gold seal.</span></p>
+    </div>
+    <div class="tier">
+      <div class="glyph" aria-hidden="true"><svg width="40" height="42" viewBox="0 0 40 42"><path d="M20 42V14" stroke="#5a6b5a" stroke-width="2"/><circle cx="20" cy="12" r="11" fill="#6e8b5a"/><circle cx="15" cy="14" r="3" fill="#c98a4b"/><circle cx="25" cy="9" r="3" fill="#c98a4b"/></svg></div>
+      <span class="stage">V · Fruit</span><h3><span class="ar">الثَّمَرة</span><span class="en">Fruit</span></h3>
+      <span class="hrs"><span class="ar">١٥٠ <small>ساعة</small></span><span class="en">150 <small>hours</small></span></span>
+      <p><span class="ar">سنةٌ كاملة، يقودُ فيها الطالبُ فريقًا.</span><span class="en">A full year in which the student leads a team.</span></p>
+    </div>
+    <div class="tier top">
+      <div class="glyph" aria-hidden="true"><svg width="44" height="42" viewBox="0 0 44 42"><path d="M6 40h32" stroke="#b08f43" stroke-width="2"/><path d="M14 40l4-22M22 40V14M30 40l-4-22" stroke="#b08f43" stroke-width="2"/><circle cx="18" cy="16" r="3" fill="#b08f43"/><circle cx="22" cy="11" r="3" fill="#b08f43"/><circle cx="26" cy="16" r="3" fill="#b08f43"/></svg></div>
+      <span class="stage">VI · Harvest</span><h3><span class="ar">الحَصاد</span><span class="en">Harvest</span></h3>
+      <span class="hrs"><span class="ar">لا يُنالُ بالساعات</span><span class="en">Not reached by hours</span></span>
+      <p><span class="ar">مشروعٌ يبادرُ به الطالبُ خارجَ المدرسة، ويدرّبُ فيه متطوّعًا أصغرَ منه يحملُ العملَ بعدَه.</span><span class="en">A project the student starts beyond the school, training a younger volunteer who will carry the work on.</span></p>
+    </div>
+  </div>
+  <p class="note"><span class="ar">الحصادُ هو معنى «تتابعِ الأجيال»: لا يكتملُ أثرُ الطالبِ حتى يتركَ خلفَه من يُكمل. والفكرةُ مأخوذةٌ من المستوى الخامسِ في نظامِ سنغافورة، ومن جائزةِ «نقطةِ ضوء» التي تكافئُ الخدمةَ المستمرّةَ لا مجموعَ الساعات.</span><span class="en" lang="en">The Harvest is what the succession of generations means: a student's imprint is not complete until someone is left behind to continue it. The idea comes from level five of Singapore's system and from the Points of Light award, which rewards sustained service rather than total hours.</span></p>
+</section>
+
+<section id="bridge" class="plate">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow"><span class="ar">التوثيقُ الوطنيّ</span><span class="en" lang="en">The National Record</span></span>
+      <h2><span class="ar">التوثيقُ الوطنيُّ إلى جانبِ دفترِنا</span><span class="en" lang="en">The national record beside our ledger</span></h2>
+    </div>
+    <div class="bridge">
+      <div class="bridge-copy">
+        <p><span class="ar">كلُّ فرصةِ خدمةٍ خارجيّةٍ تُنشَرُ على منصّةِ التطوّعِ الوطنيّة Volunteers.ae، التي أطلقتها مؤسسةُ الإمارات ووزارةُ تمكينِ المجتمع. فإذا سُجِّلت الساعةُ هناك أيضًا، نالت في دفترِنا الختمَ الذهبيّ، وصار لها سجلٌّ على المنصّةِ الوطنيّةِ إلى جانبِ دفترِ جُذور.</span><span class="en" lang="en">Every external service opportunity is posted on Volunteers.ae, the national volunteering platform launched by the Emirates Foundation and the Ministry of Community Empowerment. When the hour is also logged there, it receives the gold seal in our ledger and has a record on the national platform beside Juthur's own.</span></p>
+        <p><span class="ar">لكنّ الختمَ لا يغيّرُ العُملة. المنصّةُ تعطي أوزانًا لأغراضِها، ونحن نكتبُ الساعةَ كما هي. هكذا يبقى الرقمُ في ملفِّ الجامعةِ صادقًا، ويبقى البنكُ قائمًا لو انتهت أيُّ حملةٍ وطنيّة.</span><span class="en" lang="en">The seal does not change the currency. The platform applies weights for its own purposes; we write the hour as it is. That keeps the number on a university file honest, and keeps the bank standing if any national campaign ends.</span></p>
+        <p class="caveat"><span class="ar">لا تُعرَضُ الأوزانُ الوطنيّةُ في الشهادةِ ولا في ملفِّ الجامعة، ومكانُها هذا العدّادُ وحده.</span><span class="en" lang="en">National weights never appear on the certificate or on a university file; they live only in this counter.</span></p>
+      </div>
+      <div class="counter">
+        <span class="eyebrow"><span class="ar">مساهمتُنا في المليون</span><span class="en" lang="en">Our share of the million</span></span>
+        <span class="big"><span class="ar">٠</span><span class="en" style="font-family:var(--lat)">0</span></span>
+        <p><span class="ar">ساعةً موزونةً أُهديت إلى مبادرةِ «مليون ساعة تطوّع» الوطنيّة. يبدأُ العدُّ مع أوّلِ قيدٍ معتمد.</span><span class="en" lang="en">weighted hours given to the national One Million Volunteer Hours initiative. The count begins with the first approved entry.</span></p>
+        <div class="meter" aria-hidden="true"></div>
+        <div class="weights">
+          <div><b><span class="ar">٢</span><span class="en">2</span></b><span><span class="ar">تطوّعٌ داخلَ المدرسة</span><span class="en">In-school volunteering</span></span></div>
+          <div><b><span class="ar">٣</span><span class="en">3</span></b><span><span class="ar">مع جهةٍ معتمدة</span><span class="en">With an approved organisation</span></span></div>
+          <div><b><span class="ar">١</span><span class="en">1</span></b><span><span class="ar">نشاطٌ أسريٌّ موثَّق</span><span class="en">Documented family activity</span></span></div>
+        </div>
+        <p class="caveat"><span class="ar">أوزانُ الوزارةِ كما نشرتها Gulf News في فبراير ٢٠٢٦، ولم تتأكّد بعدُ من وثيقةٍ رسميّة، ولا يُعرَفُ أهي لكلِّ نشاطٍ أم لكلِّ ساعة.</span><span class="en" lang="en">Ministry weights as reported by Gulf News in February 2026. They are not yet confirmed in an official document, nor is it known whether they apply per activity or per hour.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="edition" class="wrap">
+  <div class="edition">
+    <span class="eyebrow"><span class="ar">الطبعةُ الأولى</span><span class="en" lang="en">Editio Princeps</span></span>
+    <span class="year">2026<sup>h</sup></span>
+    <h2><span class="ar">ألفان وستٌّ وعشرون ساعة</span><span class="en" lang="en">Two thousand and twenty-six hours</span></h2>
+    <p><span class="ar">هدفُ الطبعةِ الأولى من البنك ساعاتٌ بعددِ سنتِها: ألفان وستٌّ وعشرون ساعة. وهي السنةُ التي تُتِمُّ فيها «طبعةُ ١٩٢٦» قرنَها، و«١٩٢٦» تقليدٌ طباعيٌّ في هويّةِ جُذور لا تاريخُ تأسيس. والساعةُ الأولى المعتمدةُ تُهدى إلى المليونِ الوطنيّ.</span><span class="en" lang="en">The first edition's goal is as many hours as its year: 2,026. It is the year in which the "1926 edition" completes its century; 1926 is a typographic conceit in Juthur's identity, not a founding date. The first approved hour is given to the national million.</span></p>
+    <span class="fleuron" aria-hidden="true">❧ ✽ ❧</span>
+  </div>
+</section>
+
+<hr class="rule-double">
+
+<section id="certificate" class="wrap">
+  <div class="head">
+    <span class="eyebrow"><span class="ar">الشهادة</span><span class="en" lang="en">The Certificate</span></span>
+    <h2><span class="ar">ورقةٌ تُطبَعُ كأنّ عمرَها قرن</span><span class="en" lang="en">A sheet printed as if it were a century old</span></h2>
+    <p class="lede"><span class="ar">تُصدَرُ عند كلِّ مرحلةٍ من مراحلِ الشجرة. لا تحملُ إلّا الساعاتِ الفعليّةَ المعتمدة، وتذكرُ منها ما حملَ الختمَ الذهبيّ.</span><span class="en" lang="en">Issued at every stage of the tree. It carries only approved clock hours, and states how many of them bear the gold seal.</span></p>
+  </div>
+  <div class="cert" role="img" aria-label="نموذج شهادة مرحلة الغصن، بيانات توضيحية · Specimen Branch certificate, sample data">
+    <span class="specimen">SPECIMEN</span>
+    <div class="ctop">
+      <img src="/juthur/assets/juthur_seal_mono.png" alt="">
+      <span class="press">Juthur Press · Bank of Athar · MCMXXVI</span>
+      <h3><span class="ar">شهادةُ الأثر · مرحلةُ الغُصْن</span><span class="en" lang="en">Certificate of Athar · Branch Stage</span></h3>
+    </div>
+    <div class="cbody">
+      <span class="line"><span class="ar">يشهدُ بنكُ الأثرِ أنّ</span><span class="en">The Bank of Athar certifies that</span></span>
+      <span class="who"><span class="ar">اسمُ الطالب</span><span class="en">Student name</span></span>
+      <span class="line"><span class="ar">أعطى من وقتِه لمن هو أصغرُ منه ولمجتمعِه، على مدى ستّةِ أشهرٍ متّصلة، فكُتِبَ له:</span><span class="en">gave of their time to those younger and to their community over six continuous months, and is credited with:</span></span>
+      <div class="figs">
+        <div><b><span class="ar">٦٤</span><span class="en">64</span></b><span><span class="ar">ساعةَ أثرٍ معتمدة</span><span class="en">approved hours of Athar</span></span></div>
+        <div><b><span class="ar">٤١</span><span class="en">41</span></b><span><span class="ar">منها بالختمِ الذهبيّ</span><span class="en">with the gold seal</span></span></div>
+        <div><b><span class="ar">١</span><span class="en">1</span></b><span><span class="ar">مشروعٌ كاملُ الدورة</span><span class="en">full-cycle project</span></span></div>
+      </div>
+    </div>
+    <div class="cfoot">
+      <span class="sig"><span class="ar">المشرف</span><span class="en">Supervisor</span></span>
+      <span class="lat">No. 0001 · 2026</span>
+      <span class="sig"><span class="ar">بنكُ الأثر</span><span class="en">Bank of Athar</span></span>
+    </div>
+    <div class="stamp" aria-hidden="true"><span class="ar">الختمُ<br>الذهبيّ</span><span class="en">GOLD<br>SEAL</span></div>
+  </div>
+</section>
+
+<section id="export" class="wrap" style="padding-top:0">
+  <div class="head">
+    <span class="eyebrow"><span class="ar">إلى الجامعة</span><span class="en" lang="en">To the University File</span></span>
+    <h2><span class="ar">ما يخرجُ من البنكِ إلى طلبِ القبول</span><span class="en" lang="en">What leaves the bank for an application</span></h2>
+    <p class="lede"><span class="ar">الجامعاتُ لا تحوّلُ الخدمةَ إلى ساعاتٍ دراسيّة، لكنّها تقرأُ السجلَّ الموثَّق، فيخرجُ الدفترُ بالشكلِ الذي تقرؤه.</span><span class="en" lang="en">Universities do not convert service into course credit, but they read a verified record, so the ledger leaves in the form they read.</span></p>
+  </div>
+  <div class="grid4">
+    <div><b><span class="ar">حقولُ Common App</span><span class="en">Common App fields</span></b><p><span class="ar">المسمّى، والجهة، ووصفٌ في ١٥٠ حرفًا، وساعاتُ الأسبوع، وأسابيعُ السنة، تُحسَبُ آليًّا من دفترِ المختار.</span><span class="en">Position, organisation, a 150-character description, hours per week and weeks per year, computed from the chosen ledger.</span></p></div>
+    <div><b><span class="ar">كشفٌ يُرسَلُ من البنك</span><span class="en">A record sent by the bank</span></b><p><span class="ar">السجلُّ الرسميُّ يُرسَلُ من البنكِ مباشرةً لا من الطالب، كما تفعلُ منصّة x2VOL.</span><span class="en">The official record is sent by the bank, not by the student, as the x2VOL platform does.</span></p></div>
+    <div><b><span class="ar">شارةٌ رقميّة</span><span class="en">A digital badge</span></b><p><span class="ar">كلُّ مرحلةٍ من الشجرةِ يمكنُ أن تصدرَ شارةً بمعيار Open Badges 3.0، يتحقّقُ منها أيُّ مكتبِ قبول.</span><span class="en">Each stage can be issued as an Open Badges 3.0 credential that any admissions office can verify.</span></p></div>
+    <div><b><span class="ar">خطابُ المرشد</span><span class="en">The counsellor's letter</span></b><p><span class="ar">فقرةٌ جاهزةٌ تلخّصُ المسيرة: المدّة، والمرحلة، والمشروع، وما تعلّمه الطالبُ بكلماتِه من سطورِ التأمّل.</span><span class="en">A ready paragraph summarising the record: duration, stage, project, and what the student learned, in their own words from the reflection lines.</span></p></div>
+  </div>
+</section>
+
+<hr class="rule-double">
+
+<section id="reference" class="wrap">
+  <div class="head">
+    <span class="eyebrow"><span class="ar">سعرُ الصرف</span><span class="en" lang="en">For Comparison Only</span></span>
+    <h2><span class="ar">كم تساوي ساعاتُنا في أنظمةِ العالم؟</span><span class="en" lang="en">What are our hours worth in other systems?</span></h2>
+    <p class="lede"><span class="ar">للمقارنةِ والإقناع، لا وعدًا بساعاتٍ دراسيّة. والخطُّ الأحمرُ مرحلةُ الغصنِ عندنا.</span><span class="en" lang="en">For comparison only, not a promise of course credit. The red bar is our Branch stage.</span></p>
+  </div>
+  <div class="rates" role="img" aria-label="مقارنة مرحلة الغصن بوحدات دولية على مقياس من صفر إلى ١٢٠ ساعة · Branch stage compared with international units, 0 to 120 hours">
+    <div class="rate"><div class="lbl"><span class="ar">وحدةُ كارنيغي <small>ساعةٌ دراسيّةٌ واحدة · الثانويّةُ الأمريكيّة</small></span><span class="en">Carnegie Unit <small>1.0 credit · US high school</small></span></div><div class="track"><div class="bar" style="width:100%"><em>120</em></div></div></div>
+    <div class="rate"><div class="lbl"><span class="ar">أركنساس <small>ساعةٌ دراسيّةٌ مقابلَ الخدمة</small></span><span class="en">Arkansas <small>one credit for service</small></span></div><div class="track"><div class="bar" style="width:62.5%"><em>75</em></div></div></div>
+    <div class="rate"><div class="lbl"><span class="ar">مرحلةُ الغصن <small>بنكُ الأثر</small></span><span class="en">Branch stage <small>Bank of Athar</small></span></div><div class="track"><div class="bar ours" style="width:50%"><em>60</em></div></div></div>
+    <div class="rate"><div class="lbl"><span class="ar">أونتاريو <small>شرطُ الدبلومِ الكنديّ</small></span><span class="en">Ontario <small>Canadian diploma requirement</small></span></div><div class="track"><div class="bar" style="width:33.3%"><em>40</em></div></div></div>
+    <div class="rate"><div class="lbl"><span class="ar">ECTS <small>وحدةٌ جامعيّةٌ أوروبيّة</small></span><span class="en">ECTS <small>one European university credit</small></span></div><div class="track"><div class="bar" style="width:25%"><em>25–30</em></div></div></div>
+    <div class="ticks"><span></span><div><span>0</span><span>30</span><span>60</span><span>90</span><span>120 h</span></div></div>
+  </div>
+</section>
+
+<section id="never" class="wrap" style="padding-top:0">
+  <div class="head">
+    <span class="eyebrow"><span class="ar">ما لا يدخلُ البنك</span><span class="en" lang="en">Never in the Bank</span></span>
+    <h2><span class="ar">أربعةُ أبوابٍ مغلقة</span><span class="en" lang="en">Four closed doors</span></h2>
+  </div>
+  <div class="never">
+    <div><b><span class="ar">المال</span><span class="en">Money</span></b><p><span class="ar">لا جوائزَ ماليّةً ولا شراءَ رصيد. في اليابان فضّلَ كبارُ السنِّ من يخدمُهم برصيدٍ على من يخدمُهم بأجر.</span><span class="en">No cash prizes and no buying credit. In Japan, older people preferred helpers paid in credits to helpers paid in money.</span></p></div>
+    <div><b><span class="ar">التجارة</span><span class="en">Commerce</span></b><p><span class="ar">لا رعاةَ تجاريّين ولا رحلاتٍ مدفوعة. سقطت مؤسّسةُ WE Charity حين اختلطَ الخيرُ بالبيع.</span><span class="en">No commercial sponsors and no paid trips. WE Charity fell when charity and sales became entangled.</span></p></div>
+    <div><b><span class="ar">السحبُ العشوائيّ</span><span class="en">Lotteries</span></b><p><span class="ar">الرصيدُ يُكسَبُ ولا يُربَحُ بالحظّ، والسجلُّ الذي يُقدَّمُ للجامعةِ لا يحتملُ اليانصيب.</span><span class="en">Credit is earned, not won by luck, and a record sent to a university cannot carry a lottery.</span></p></div>
+    <div><b><span class="ar">لوحةُ الصدارة</span><span class="en">Leaderboards</span></b><p><span class="ar">لا ترتيبَ للطلّابِ بمجموعِ الساعات. المجموعُ يكافئُ الكمّ، والشجرةُ تكافئُ العمق.</span><span class="en">No ranking of students by total hours. Totals reward volume; the tree rewards depth.</span></p></div>
+  </div>
+</section>
+
+<section class="plate">
+  <div class="narrow waqf">
+    <span class="eyebrow"><span class="ar">وَقْفُ الوقت</span><span class="en" lang="en">An Endowment of Time</span></span>
+    <blockquote><span class="ar">ما يُعطى من الوقتِ لا يُستردّ، ولذلك يبقى.</span><span class="en" lang="en">Time given cannot be taken back, and that is why it lasts.</span></blockquote>
+    <p class="fiqh"><span class="ar">يُقدَّمُ البنكُ بوصفِه صدقةً جاريةً من الوقت. أمّا تسميتُه «وقفًا» بالمعنى الفقهيّ فموضعُ خلافٍ بين العلماءِ في جوازِ وقفِ المنافعِ والوقت، ولذلك تبقى الكلمةُ هنا وصفًا للروحِ لا حكمًا فقهيًّا.</span><span class="en" lang="en">The bank is offered as an ongoing charity of time. Whether it can be called a waqf in the legal sense is a matter on which scholars differ, since they disagree over endowing benefits and time; here the word describes a spirit, not a ruling.</span></p>
+    <span class="fleuron" aria-hidden="true">❧ ✽ ❧</span>
+  </div>
+</section>
+
+<section id="basis" class="wrap">
+  <div class="head">
+    <span class="eyebrow"><span class="ar">المرجعيّة</span><span class="en" lang="en">The Basis</span></span>
+    <h2><span class="ar">على ماذا بُني</span><span class="en" lang="en">What it is built on</span></h2>
+    <p class="lede"><span class="ar">كلُّ قاعدةٍ في هذا البنكِ مأخوذةٌ من نظامٍ قائمٍ نجح، وما لم يُتحقَّقْ منه في وثيقةٍ رسميّةٍ ذُكِرَ ذلك إلى جانبِه.</span><span class="en" lang="en">Every rule in this bank comes from an existing system that worked; anything not confirmed in an official document is marked as such.</span></p>
+  </div>
+  <div class="basis">
+    <p>Time-bank rule (one hour = one credit) · <a href="https://www.timebanks.org/how-it-works">TimeBanks.org</a></p>
+    <p>Preparation, action, reflection · <a href="https://marylandpublicschools.org/programs/Pages/Service-Learning/Graduation-Requirement.aspx">Maryland MSDE</a> · <a href="https://dese.ade.arkansas.gov/Files/Community_Service_and_Diploma_RequirementsRV_Legal.pdf">Arkansas DESE</a></p>
+    <p>Hours with minimum duration · <a href="https://www.congressionalaward.org/the-program/">The Congressional Award</a></p>
+    <p>Student-initiated project as top level · <a href="https://www.moe.gov.sg/api/media/9f2f8124-5fbd-4223-b073-4ab8a93c5c6e/LEAPS-2-Framework.pdf">Singapore MOE, LEAPS 2.0</a></p>
+    <p>Sustained service recognition · <a href="https://pointsoflight.org/daily-point-of-light-award/">Points of Light</a></p>
+    <p>Required service is not volunteer work · <a href="https://ilostat.ilo.org/topics/volunteer-work/">ILO / ILOSTAT</a></p>
+    <p>Compulsion and future volunteering · <a href="https://journals.sagepub.com/doi/10.1111/1467-9280.00107">Stukas, Snyder &amp; Clary (1999)</a></p>
+    <p>National platform and certified hours · <a href="https://www.volunteers.ae/en/faq">Volunteers.ae</a></p>
+    <p>One Million Volunteer Hours (weights unconfirmed in an official document) · <a href="https://gulfnews.com/uae/uae-launches-one-million-volunteer-hours-initiative-to-boost-student-and-parent-engagement-1.500454110">Gulf News</a></p>
+    <p>Credits that are guaranteed · <a href="https://intergeneration.ch/de/projekte/zeitvorsorge-stgallen/">Zeitvorsorge St. Gallen</a></p>
+    <p>Relationship over payment · <a href="https://mopact.sites.sheffield.ac.uk/research-fields/social-support-and-long-term-care/innovations/fureai-kippu-ticket-for-a-caring-relationship">Fureai Kippu</a></p>
+    <p>Issuer-sent transcripts · <a href="https://help.x2vol.com/knowledge/everything-you-need-to-know-about-the-official-service-transcript">x2VOL</a></p>
+    <p>Activities fields · <a href="https://www.commonapp.org/static/a5d59a915bdc2031e62c468ad35e0de9/Resource_FY_Activities_ENG_2025.06.25_0.pdf">Common App</a></p>
+    <p>Verifiable badges · <a href="https://www.1edtech.org/1edtech-article/new-open-badges-30-standard-provides-enhanced-security-and-mobility/411060">1EdTech Open Badges 3.0</a></p>
+    <p>Carnegie Unit · <a href="https://www.carnegiefoundation.org/what-is-the-carnegie-unit/">Carnegie Foundation</a> · ECTS · <a href="https://education.ec.europa.eu/sites/default/files/document-library-docs/ects-users-guide_en.pdf">European Commission</a></p>
+    <p>Commercial entanglement · <a href="https://globalnews.ca/news/7327427/we-charity-canada-operations-me-to-we/">WE Charity, Global News</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <span class="fleuron" aria-hidden="true">❧ ✽ ❧</span>
+  <span><span class="ar">بنكُ الأثر · مطبعةُ جُذور · دبي · ٢٠٢٦</span><span class="en" lang="en">Bank of Athar · Juthur Press · Dubai · 2026</span></span>
+  <span class="lat">Designed and developed by Dr. Adel F. Amer · Amer (2024)</span>
+  <span><span class="ar">صُفَّ بحرفَي «أميري» و«فراونسِس»، على طرازِ مطابعِ لندن سنةَ ١٩٢٦</span><span class="en" lang="en">Set in Amiri &amp; Fraunces, in the manner of the London houses of 1926</span></span>
+</footer>
+
+<script>
+(function(){
+  var body=document.body, root=document.documentElement, btn=document.getElementById('langbtn');
+  function setLang(l){
+    body.setAttribute('data-lang',l);
+    root.setAttribute('lang',l);
+    root.setAttribute('dir',l==='ar'?'rtl':'ltr');
+    try{localStorage.setItem('juthur-athar-lang',l);}catch(e){}
+  }
+  var start='ar';
+  try{var saved=localStorage.getItem('juthur-athar-lang'); if(saved==='en'||saved==='ar') start=saved;}catch(e){}
+  if(location.hash==='#en') start='en';
+  setLang(start);
+  btn.addEventListener('click',function(){ setLang(body.getAttribute('data-lang')==='ar'?'en':'ar'); });
+
+  var tabs=[].slice.call(document.querySelectorAll('[role="tab"]'));
+  function select(t){
+    tabs.forEach(function(x){ x.setAttribute('aria-selected','false'); document.getElementById(x.getAttribute('aria-controls')).hidden=true; });
+    t.setAttribute('aria-selected','true'); document.getElementById(t.getAttribute('aria-controls')).hidden=false;
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){ select(t); });
+    t.addEventListener('keydown',function(e){
+      var d=(e.key==='ArrowLeft'?1:e.key==='ArrowRight'?-1:0);
+      if(!d) return;
+      if(body.getAttribute('data-lang')==='en') d=-d;
+      var n=tabs[(i+d+tabs.length)%tabs.length]; n.focus(); select(n);
+    });
+  });
+})();
+</script>
+</body>
+</html>
