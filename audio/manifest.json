@@ -1,5 +1,5 @@
 {
-  "$schema": "https://juthur.netlify.app/audio/SCHEMA.md",
+  "$schema": "https://juthur.netlify.app/audio/schema.md",
   "version": 1,
   "updated": "2026-08-19",
   "note": "سِجِلُّ المكتبةِ الصوتيّة. من يُنتِجُ الصوتَ يُضيفُ مدخلًا هنا ويرفعُ الملفَّ إلى /audio/. لا يُعدَّلُ شيءٌ آخرُ في الموقع.",
