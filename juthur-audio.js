@@ -3,7 +3,7 @@
   "use strict";
   var KEY = document.documentElement.getAttribute("data-audio-id");
   if (!KEY) return;
-  fetch("/juthur/audio/manifest.json", { cache: "no-cache" })
+  fetch("/audio/manifest.json", { cache: "no-cache" })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (m) {
       if (!m || !m.items || !m.items.length) return;
