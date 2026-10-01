@@ -13,7 +13,7 @@
 <style>
 :root{--ink:#1B3A2F;--gold:#9A7B23;--paper:#FBF9F4;--ink-70:#4A6459;--rule:#D9CFB4;--gold-15:#F0E9D6}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper) url("/assets/srf_paper.jpg") repeat;background-size:420px 420px;
+body{margin:0;background:var(--paper) url("../assets/srf_paper.jpg") repeat;background-size:420px 420px;
  color:var(--ink);font-family:'Amiri',serif;line-height:2.1;font-size:1.02rem}
 body::before{content:"";position:fixed;inset:0;background:rgba(251,249,244,.86);z-index:-1}
 .wrap{max-width:52rem;margin:0 auto;padding:clamp(1.2rem,4vw,3rem)}
@@ -98,13 +98,14 @@ footer p{margin:.2rem 0}
 </div>
 </main>
 <footer>
-<img src="/assets/juthur_seal_mono.png" alt="ختمُ الدار" width="52" height="52">
+<img src="../assets/juthur_seal_mono.png" alt="ختمُ الدار" width="52" height="52">
 <p>مَطبعةُ جُذور · دبي · MCMXXVI</p>
 <p>Designed and developed by Dr. Adel F. Amer · ORCID 0009-0008-9618-3863 · CC BY-NC-SA 4.0</p>
-<a class="back" href="/library/stories/">المتنُ القصصيّ</a> <a class="back" href="/mushafaha/">الميثاق</a> <a class="back" href="/">↤ عودةٌ إلى الدار</a> 
+<a class="back" href="../library/stories/">المتنُ القصصيّ</a> <a class="back" href="../mushafaha/">الميثاق</a> <a class="back" href="../">↤ عودةٌ إلى الدار</a> 
 </footer>
 <script>
-fetch("/audio/manifest.json",{cache:"no-cache"}).then(function(r){return r.ok?r.json():null}).then(function(m){
+function at(u){return u&&u.charAt(0)=="/"?"../"+u.slice(1):u}
+fetch("../audio/manifest.json",{cache:"no-cache"}).then(function(r){return r.ok?r.json():null}).then(function(m){
   if(!m||!m.items||!m.items.length) return;
   var NAMES={stories:"المتنُ القصصيّ",asfar:"الأسفار",harf:"سلسلةُ الحرف",epics:"الملاحم",doctrine:"الميثاق"};
   var g={},i,it;
@@ -114,9 +115,9 @@ fetch("/audio/manifest.json",{cache:"no-cache"}).then(function(r){return r.ok?r.
     out+="<h2>"+(NAMES[k]||k)+"</h2>";
     for(i=0;i<g[k].length;i++){it=g[k][i];
       out+='<div class="audiobox"><b>'+(it.title||it.id)+"</b>"+
-      '<audio controls preload="none" src="'+it.src+'" style="width:100%"></audio>'+
+      '<audio controls preload="none" src="'+at(it.src)+'" style="width:100%"></audio>'+
       '<p style="font-size:.82rem;margin:.5rem 0 0">'+(it.reciter?it.reciter+" · ":"")+(it.duration?it.duration+" · ":"")+
-      '<a href="'+it.src+'" download>تنزيل</a></p></div>';
+      '<a href="'+at(it.src)+'" download>تنزيل</a></p></div>';
     }
   }
   document.getElementById("lib").innerHTML=out;
