@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Tally — Calibration Workshop</title>
+<meta name="author" content="Adel F. Amer">
+<style>
+  :root{--novice:#2563eb;--intermediate:#16a34a;--advanced:#ea580c;--superior:#ca8a04;--distinguished:#6b7280;--border:#e5e5ea}
+  body{font-family:'Segoe UI',Tahoma,sans-serif;color:#1c1c22;max-width:1100px;margin:0 auto;padding:20px;background:#f7f7f9}
+  h1{font-size:1.3rem}
+  .card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:14px}
+  table{border-collapse:collapse;width:100%;font-size:.85rem}
+  th,td{border:1px solid var(--border);padding:4px 6px;text-align:center}
+  th{background:#f3f4f6}
+  input[type=number]{width:52px;padding:3px;text-align:center;border:1px solid var(--border);border-radius:4px}
+  .barrow{display:flex;align-items:center;gap:2px;height:22px}
+  .seg{height:100%;border-radius:3px}
+  .stat{font-size:1.05rem;font-weight:700}
+  button{background:#ea580c;color:#fff;border:none;padding:9px 16px;border-radius:8px;cursor:pointer;margin-top:8px}
+  button.ghost{background:#fff;color:#991b1b;border:1px solid #fca5a5}
+  .tabs{display:flex;gap:6px;flex-wrap:wrap}
+  .tabs button{margin-top:0;background:#fff;color:#1c1c22;border:1px solid var(--border)}
+  .tabs button.on{background:#10172e;color:#fff;border-color:#10172e}
+  .note{font-size:.78rem;color:#666}
+  .warn{color:#991b1b;font-weight:700}
+  .ok{color:#166534}
+  .caveat{border-left:3px solid #ca8a04;background:#fffbeb;padding:8px 12px;font-size:.82rem;margin-top:10px}
+</style>
+</head>
+<body>
+<h1>Live Tally — how far apart are we? <span style="font-weight:400;font-size:.8em;color:#666">(internal exercise, independent of ACTFL®)</span></h1>
+<p class="note">Workshop 1 rates <b>major levels only</b>. For each sample and each round, enter how many raters chose each major level, and in the last column how many circled <b>U</b> (unratable). <b>U is missing data, never a low rating</b>: it is counted and shown, and left out of every agreement figure. Each language has its own grid; what you type is kept in this browser until you clear it.</p>
+
+<div class="card">
+  <div class="tabs" id="tabs"></div>
+  <p style="margin:12px 0 0">
+    <label>Raters in this language group: <input type="number" id="nRaters" min="2" max="60" step="1" oninput="setRaters(this.value)"></label>
+    <span class="note" style="margin-left:10px">Each row must add up to this number. A row that does not is flagged.</span>
+  </p>
+</div>
+
+<div id="grids"></div>
+
+<div class="card">
+  <h3 style="margin-top:0">Results — <span id="resLang"></span></h3>
+  <div id="headline"></div>
+  <div class="caveat"><b>Read these figures for what they are.</b> They describe one small room on six constructed samples. With two to four raters a single changed rating moves every percentage a long way. Krippendorff’s α on six samples reflects how far apart the samples’ levels were built to be as much as it reflects the raters: samples spread from Novice to Superior give a high α even when raters disagree on each one. It is shown as a secondary index and is left blank, never shown as 1, when every rating is identical. The per-sample rows above are the primary display.</div>
+  <p class="note">Exact agreement = share of rater pairs choosing the same major level. Adjacent = within one major level. Distance = average gap, in major levels, between all rater pairs on a sample. The Round 1 / Round 2 comparison uses only the samples that at least two raters rated in <i>both</i> rounds, and says how many those were. Descriptive statistics for this room only; not a benchmark.</p>
+  <button onclick="exportJSON()">Export this language’s session (JSON)</button>
+  <button class="ghost" onclick="clearLang()">Clear this language’s grid</button>
+</div>
+
+<p class="note" style="text-align:center">Designed and developed by Dr. Adel F. Amer · Miqyas v2.7 workshop pack · CC BY-NC-ND 4.0, with the local-adaptation permission stated in the README</p>
+
+<script>
+const LV = ['Novice','Intermediate','Advanced','Superior','Distinguished'];
+const LVC = ['var(--novice)','var(--intermediate)','var(--advanced)','var(--superior)','var(--distinguished)'];
+const K = LV.length;
+const SAMPLES = ['1','2','3','4','5','6'];
+const LANGS = ['Arabic','French','Spanish'];
+const KEY = 'miqyas_tally_v3';
+
+/* ---- state: one grid per language, kept in this browser only ---- */
+function blankLang(){
+  const g={raters:3,rounds:{1:{},2:{}}};
+  [1,2].forEach(r=>SAMPLES.forEach(s=>{g.rounds[r][s]={c:Array(K).fill(0),u:0};}));
+  return g;
+}
+let state={lang:'Arabic',data:{}};
+LANGS.forEach(l=>state.data[l]=blankLang());
+function cleanInt(v,max){v=Math.floor(Number(v));if(!isFinite(v)||v<0)v=0;if(max&&v>max)v=max;return v;}
+function load(){
+  try{
+    const j=JSON.parse(localStorage.getItem(KEY)||'null');
+    if(j&&j.data){
+      LANGS.forEach(l=>{const src=j.data[l];if(!src)return;const g=blankLang();
+        g.raters=Math.max(2,cleanInt(src.raters,60)||3);
+        [1,2].forEach(r=>SAMPLES.forEach(s=>{const x=src.rounds&&src.rounds[r]&&src.rounds[r][s];if(!x)return;
+          g.rounds[r][s]={c:LV.map((_,i)=>cleanInt(x.c&&x.c[i],60)),u:cleanInt(x.u,60)};}));
+        state.data[l]=g;});
+      if(LANGS.includes(j.lang))state.lang=j.lang;
+    }
+  }catch(e){}
+}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+function cur(){return state.data[state.lang];}
+
+function setLang(l){state.lang=l;save();render();}
+function setRaters(v){cur().raters=Math.max(2,cleanInt(v,60)||2);save();calc();}
+function setCell(round,s,li,el){
+  const v=cleanInt(el.value,60); if(String(v)!==el.value)el.value=v;
+  if(li==='u')cur().rounds[round][s].u=v; else cur().rounds[round][s].c[li]=v;
+  save();calc();
+}
+function clearLang(){
+  if(!confirm('Clear every number entered for '+state.lang+'? Export first if you need them.'))return;
+  state.data[state.lang]=blankLang();save();render();
+}
+
+function render(){
+  document.getElementById('tabs').innerHTML=LANGS.map(l=>`<button class="${l===state.lang?'on':''}" onclick="setLang('${l}')">${l}</button>`).join('');
+  document.getElementById('nRaters').value=cur().raters;
+  document.getElementById('resLang').textContent=state.lang;
+  document.getElementById('grids').innerHTML=[1,2].map(round=>`
+    <div class="card">
+      <h3 style="margin-top:0">${state.lang} — Round ${round} ${round===1?'(blind, before the lesson)':'(after the lesson)'}</h3>
+      <table>
+        <tr><th>Sample</th>${LV.map(l=>`<th>${l}</th>`).join('')}<th style="color:#991b1b">U</th><th>Entered / raters</th><th style="min-width:170px">Distribution</th><th>Range</th><th>Distance</th></tr>
+        ${SAMPLES.map(s=>{const x=cur().rounds[round][s];return `<tr><td><b>${s}</b></td>${LV.map((l,li)=>`<td><input type="number" min="0" max="60" step="1" value="${x.c[li]}" oninput="setCell(${round},'${s}',${li},this)"></td>`).join('')}<td><input type="number" min="0" max="60" step="1" value="${x.u}" oninput="setCell(${round},'${s}','u',this)" style="border-color:#fca5a5"></td><td id="r${round}s${s}tot"></td><td><div class="barrow" id="r${round}s${s}bar"></div></td><td id="r${round}s${s}range">—</td><td id="r${round}s${s}spread">—</td></tr>`;}).join('')}
+      </table>
+    </div>`).join('');
+  calc();
+}
+
+function sampleStats(counts){
+  const n = counts.reduce((a,b)=>a+b,0);
+  if(n<2) return {n, counts, spread:null, exact:null, adj:null, pairs:0};
+  let pairs=0, same=0, adjacent=0, distSum=0;
+  for(let i=0;i<K;i++) for(let j=i;j<K;j++){
+    const p = i===j ? counts[i]*(counts[i]-1)/2 : counts[i]*counts[j];
+    if(!p) continue;
+    pairs+=p; distSum += p*Math.abs(i-j);
+    if(i===j) same+=p;
+    if(Math.abs(i-j)<=1) adjacent+=p;
+  }
+  return {n, counts, spread:distSum/pairs, exact:same/pairs, adj:adjacent/pairs, pairs};
+}
+
+/* Krippendorff's alpha, ordinal metric, from per-sample counts.
+   A sample with fewer than two ratings contributes nothing (U is missing data). */
+function kAlpha(units){
+  const o=Array.from({length:K},()=>Array(K).fill(0));
+  units.forEach(c=>{const m=c.reduce((a,b)=>a+b,0);if(m<2)return;
+    for(let i=0;i<K;i++)for(let j=0;j<K;j++)o[i][j]+=c[i]*(c[j]-(i===j?1:0))/(m-1);});
+  const nc=o.map(r=>r.reduce((a,b)=>a+b,0)),n=nc.reduce((a,b)=>a+b,0);
+  if(n<2)return null;
+  const d2=(i,j)=>{if(i===j)return 0;const a=Math.min(i,j),b=Math.max(i,j);let g=0;for(let k=a;k<=b;k++)g+=nc[k];g-=(nc[a]+nc[b])/2;return g*g;};
+  let Do=0,De=0;
+  for(let i=0;i<K;i++)for(let j=0;j<K;j++){Do+=o[i][j]*d2(i,j);De+=nc[i]*nc[j]*d2(i,j);}
+  Do/=n;De/=n*(n-1);
+  if(De===0)return null;   // every rating identical: alpha is undefined, not 1
+  return 1-Do/De;
+}
+
+function roundSummary(stats){           // stats: array of per-sample stat objects with n>=2
+  if(!stats.length) return null;
+  const avg=a=>a.reduce((x,y)=>x+y,0)/a.length;
+  return {samples:stats.length, pairs:stats.reduce((a,s)=>a+s.pairs,0),
+          spread:avg(stats.map(s=>s.spread)), exact:avg(stats.map(s=>s.exact)), adj:avg(stats.map(s=>s.adj)),
+          alpha:kAlpha(stats.map(s=>s.counts))};
+}
+
+function calc(){
+  const g=cur(), per={1:{},2:{}};
+  [1,2].forEach(round=>SAMPLES.forEach(s=>{
+    const x=g.rounds[round][s], st=sampleStats(x.c); per[round][s]=st;
+    const entered=st.n+x.u, tot=document.getElementById(`r${round}s${s}tot`);
+    tot.textContent=entered+' / '+g.raters;
+    tot.className = entered===0 ? '' : (entered===g.raters ? 'ok' : 'warn');
+    tot.title = entered===0||entered===g.raters ? '' : 'This row does not add up to the number of raters.';
+    const used=st.counts.map((c,i)=>c?i:-1).filter(i=>i>=0);
+    document.getElementById(`r${round}s${s}range`).textContent = used.length ? (used.length===1||used[0]===used[used.length-1] ? LV[used[0]] : LV[used[0]]+' – '+LV[used[used.length-1]]) : '—';
+    document.getElementById(`r${round}s${s}spread`).textContent = st.spread===null?'—':st.spread.toFixed(2);
+    document.getElementById(`r${round}s${s}bar`).innerHTML = st.n ? st.counts.map((c,li)=> c?`<div class="seg" style="width:${c/st.n*100}%;background:${LVC[li]}" title="${LV[li]}: ${c}"></div>`:'').join('') : '';
+  }));
+  const uTot=r=>SAMPLES.reduce((a,s)=>a+g.rounds[r][s].u,0);
+  const all=r=>SAMPLES.map(s=>per[r][s]).filter(st=>st.n>=2);
+  const both=SAMPLES.filter(s=>per[1][s].n>=2&&per[2][s].n>=2);
+  const R={1:roundSummary(all(1)),2:roundSummary(all(2))};
+  const C={1:roundSummary(both.map(s=>per[1][s])),2:roundSummary(both.map(s=>per[2][s]))};
+  window.__last={R,C,both,u:{1:uTot(1),2:uTot(2)}};
+  const pct=v=>v===null?'—':Math.round(v*100)+'%';
+  const fa=v=>(v===null||v===undefined)?'—':v.toFixed(2);
+  const row=(label,r,u)=>`<tr><td><b>${label}</b></td><td>${r?r.samples:0} of 6</td><td>${r?r.pairs:0}</td><td class="stat">${r?r.spread.toFixed(2):'—'}</td><td>${r?pct(r.exact):'—'}</td><td>${r?pct(r.adj):'—'}</td><td>${r?fa(r.alpha):'—'}</td><td>${u}</td></tr>`;
+  let html=`<p class="note" style="margin-top:0">${g.raters} raters in this group.</p><table><tr><th></th><th>Samples with ≥2 ratings</th><th>Rater pairs counted</th><th>Avg distance (major levels)</th><th>Exact agreement</th><th>Adjacent agreement</th><th>Krippendorff’s α (ordinal) — secondary</th><th>Unratable (U)</th></tr>`;
+  html+=row('Round 1',R[1],uTot(1))+row('Round 2',R[2],uTot(2))+'</table>';
+  if(C[1]&&C[2]){
+    const a=C[1].spread,b=C[2].spread;
+    let msg;
+    if(Math.abs(a-b)<1e-9) msg='is unchanged';
+    else if(a===0) msg='rose from 0.00 to '+b.toFixed(2);
+    else msg=(b<a?'fell':'rose')+' from '+a.toFixed(2)+' to '+b.toFixed(2);
+    html+=`<p class="stat">On the ${both.length} sample${both.length===1?'':'s'} rated by at least two raters in both rounds, the average distance between raters ${msg}; exact agreement went from ${pct(C[1].exact)} to ${pct(C[2].exact)}.</p><p class="note">Whether a fall is calibration or the room agreeing on a mistake cannot be read from this screen. That needs the reference judgments, which are collected separately.</p>`;
+  }
+  document.getElementById('headline').innerHTML=html;
+}
+
+function exportJSON(){
+  calc();
+  const L=window.__last,g=cur(),pct=v=>(v===null||v===undefined)?null:Math.round(v*100);
+  const d=new Date(),iso=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  const data={schema:'miqyas-tally-3',exported:iso,langSet:state.lang,scale:'major',levels:LV,nRaters:g.raters,
+    samples_compared:L.both.length,
+    round1_exact:L.C[1]?pct(L.C[1].exact):null, round2_exact:L.C[2]?pct(L.C[2].exact):null,
+    round1_adjacent:L.C[1]?pct(L.C[1].adj):null, round2_adjacent:L.C[2]?pct(L.C[2].adj):null,
+    round1_distance:L.C[1]?L.C[1].spread:null, round2_distance:L.C[2]?L.C[2].spread:null,
+    round1_alpha_ordinal:L.R[1]?L.R[1].alpha:null, round2_alpha_ordinal:L.R[2]?L.R[2].alpha:null,
+    round1_unratable:L.u[1], round2_unratable:L.u[2],
+    note:'Major levels only. Unratable (U) counts are missing data: excluded from every agreement figure. round*_exact, _adjacent and _distance are computed on the samples rated by at least two raters in both rounds (samples_compared). Alpha is a secondary index and uses every sample with at least two ratings in that round. The toolkit header dial reads round1_exact / round2_exact from this file.',
+    rounds:{}};
+  [1,2].forEach(r=>{data.rounds[r]={};SAMPLES.forEach(s=>{data.rounds[r]['sample'+s]=g.rounds[r][s].c.slice();data.rounds[r]['sample'+s+'_unratable']=g.rounds[r][s].u;});});
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));
+  a.download='workshop_tally_'+state.lang.toLowerCase()+'_'+iso+'.json';a.click();
+}
+
+load(); render();
+</script>
+</body>
+</html>
