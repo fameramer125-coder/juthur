@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="author" content="Dr. Adel F. Amer">
+<meta name="description" content="جُذُور · فنّ البيان — الكتاب الرابع: إنصاتُ البرعم. الطبعة التراثيّة.">
+<title>جُذُور · فنّ البيان — الكتاب الرابع: إنصاتُ البرعم (الطبعة التراثيّة)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parch:#f4ead0; --parch-deep:#ece0c2; --ink:#2c2118; --sepia:#6a4e2c;
+  --gold:#a6862f; --gold-ink:#8b6914; --oxblood:#7a2e1f;
+  --seed:#4f5f2b; --emerald:#254032; --frame:#7c5a2a;
+  --stage-lit:#D9A05C; --stage-crown:#7E8C48; --stage-shadow:#3E5852;
+}
+*{box-sizing:border-box}
+html{background:#241a10}
+body{font-family:'Amiri',serif;color:var(--ink);line-height:1.95;margin:0;font-size:19px;direction:rtl;
+  text-rendering:optimizeLegibility;
+  background:radial-gradient(ellipse at 80% 8%, rgba(255,250,235,.55), transparent 60%),radial-gradient(ellipse at 15% 92%, rgba(120,90,45,.10), transparent 55%),repeating-linear-gradient(0deg, rgba(120,90,45,.014) 0 2px, transparent 2px 4px),var(--parch);}
+p{margin:0 0 .86em}
+.lat{font-family:'EB Garamond',serif;direction:ltr;unicode-bidi:isolate}
+.en{font-family:'Cormorant Garamond',serif;direction:ltr;unicode-bidi:isolate;font-style:italic}
+.skip{position:absolute;right:-999px;top:0;background:var(--oxblood);color:#fff;padding:8px 14px;border-radius:0 0 0 6px;z-index:99}
+.skip:focus{right:0}
+.leaf{max-width:880px;margin:1.72em auto;background:radial-gradient(circle at 70% 0%, rgba(255,252,240,.7), transparent 45%),var(--parch);border:2px solid var(--frame);box-shadow:0 0 0 7px var(--parch),0 0 0 8px var(--gold),0 18px 50px rgba(0,0,0,.5);position:relative;padding:2.58em 2.4em;}
+.leaf::before{content:"";position:absolute;inset:12px;border:1px solid rgba(124,90,42,.5);pointer-events:none}
+.corner{position:absolute;font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:32px;line-height:1}
+.corner.tl{top:6px;left:12px}.corner.tr{top:6px;right:12px}.corner.bl{bottom:2px;left:12px}.corner.br{bottom:2px;right:12px}
+.crest{display:block;margin:0 auto}
+.house{text-align:center;letter-spacing:2px;font-size:14px;color:var(--sepia);margin-top:.4em}
+h1,h2,h3,h4{font-family:'Amiri',serif;color:var(--ink);font-weight:700;line-height:1.5}
+.frontispiece{text-align:center;padding:.6em 10px .2em;border-bottom:1px double var(--gold);margin-bottom:.86em}
+.frontispiece .bookno{letter-spacing:1px;color:var(--oxblood);font-size:16px}
+.frontispiece h1{font-size:52px;margin:.1em 0 .05em;color:var(--ink)}
+.frontispiece .translit{font-style:italic;color:var(--sepia);font-size:19px}
+.frontispiece .motto{font-family:'Amiri',serif;font-size:24px;color:var(--oxblood);margin:.5em auto;max-width:600px}
+.frontispiece .stage{letter-spacing:1px;color:var(--sepia);font-size:16px}
+.legal{border:1px solid rgba(124,90,42,.4);border-radius:4px;background:rgba(255,251,240,.5);padding:1em 1.4em;margin:1.4em 0;font-size:15.5px;color:var(--sepia);position:relative;line-height:1.9}
+.legal .copyr{font-weight:700;color:var(--ink)}
+.legal .qbadge{float:left;margin:0 16px 10px 0}
+.legal b{color:var(--emerald)}
+.legal .qmark-line{color:var(--oxblood);letter-spacing:.5px;border-top:1px solid rgba(166,134,47,.4);border-bottom:1px solid rgba(166,134,47,.4);padding:.45em 0;text-align:center;margin:.7em 0}
+.legal .imprint{letter-spacing:.5px;font-size:14px}
+.arc{display:flex;align-items:center;justify-content:center;gap:0;margin:1.2em auto .4em;flex-wrap:wrap}
+.arc .node{letter-spacing:.5px;font-size:14.5px;color:var(--sepia);display:inline-flex;align-items:center;gap:5px;font-family:'Amiri',serif}
+.arc .dot{width:11px;height:11px;border-radius:50%;border:1.4px solid var(--gold-ink);display:inline-block}
+.arc .node.on .dot{background:var(--gold-ink)} .arc .node.on{color:var(--oxblood);font-weight:700}
+.arc .node.done .dot{background:rgba(139,105,20,.4)}
+.arc .lnk{width:26px;height:1px;background:linear-gradient(90deg,var(--gold),rgba(166,134,47,.3));margin:0 3px}
+.toc{border:1px solid rgba(124,90,42,.35);border-radius:4px;padding:.6em 1.2em;margin:1.4em 0;background:rgba(255,251,240,.5);columns:2;column-gap:2em;font-size:16px}
+.toc h3{margin:.2em 0 .4em;letter-spacing:.5px;color:var(--emerald);column-span:all}
+.toc a{color:var(--sepia);text-decoration:none;display:block;padding:.14em 0;border-bottom:1px dotted rgba(124,90,42,.3)}
+.toc a:hover{color:var(--oxblood)}
+.rule-orn{border:0;text-align:center;margin:1.72em 0}
+.rule-orn::before{content:"❦   ✦   ❦";color:var(--gold-ink);letter-spacing:8px;font-size:16px}
+.thread{background:linear-gradient(270deg,rgba(166,134,47,.10),rgba(166,134,47,.02));border:1px solid var(--gold);border-right:5px solid var(--gold);border-radius:3px;padding:.86em 1em;margin:1.72em 0;font-size:17.5px;color:var(--sepia)}
+.thread b{color:var(--oxblood)}
+h2.sec{font-size:31px;margin:2.4em 0 .86em;color:var(--ink);text-align:center;position:relative}
+h2.sec span{background:var(--parch);padding:0 18px;position:relative;z-index:1}
+h2.sec::after{content:"";position:absolute;left:0;right:0;top:52%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.note{border:1px solid var(--gold);border-right:5px solid var(--gold);background:rgba(255,250,235,.55);border-radius:3px;padding:.86em 1em;margin:1.72em 0}
+.note.warn{border-right-color:var(--oxblood)} .note.safe{border-right-color:var(--stage-crown)}
+.note .mk{color:var(--gold-ink);font-weight:700} .note.warn .mk{color:var(--oxblood)} .note.safe .mk{color:var(--stage-crown)}
+.card{background:rgba(255,251,240,.6);border:1px solid rgba(124,90,42,.35);border-radius:4px;padding:.6em 1.3em;margin:1.72em 0}
+table{width:100%;border-collapse:collapse;margin:.86em 0;font-size:16.5px}
+th,td{border:1px solid rgba(124,90,42,.28);padding:.5em .7em;text-align:right;vertical-align:top}
+th{background:transparent;color:var(--emerald);font-family:'Amiri',serif;font-weight:700;border-bottom:2px solid var(--gold)}
+tr:nth-child(even) td{background:rgba(124,90,42,.05)}
+.plate{margin:1.72em 0;border:1px solid rgba(124,90,42,.4);border-radius:4px;background:rgba(255,252,242,.5);padding:10px 10px 6px;box-shadow:inset 0 0 0 3px rgba(126,140,72,.22)}
+.plate svg{display:block;width:100%;height:auto;border-radius:2px}
+.plate figcaption{font-family:'Amiri',serif;color:var(--sepia);text-align:center;font-size:16px;margin-top:.3em}
+.scene h4{color:var(--oxblood);font-size:21px;margin:1.2em 0 .3em;text-align:center}
+.scene h4::before,.scene h4::after{content:"❧";color:var(--gold-ink);font-size:14px;margin:0 .5em;vertical-align:middle}
+.story{background:rgba(255,252,242,.7);border:1px solid rgba(124,90,42,.3);border-radius:4px;padding:1em 1.5em;font-size:20px;line-height:2.05}
+.story .drop::first-letter{font-family:'Amiri',serif;font-size:3.2em;line-height:.7;float:right;padding:.05em 0 0 .12em;color:var(--oxblood);font-weight:700}
+.dialogue{color:var(--sepia)}
+.pill{display:inline-block;background:rgba(166,134,47,.14);border:1px solid var(--gold-ink);border-radius:10px;padding:1px 9px;font-size:13px;color:var(--sepia)}
+.bridge{display:flex;gap:16px;flex-wrap:wrap}
+.bridge>div{flex:1 1 300px;background:rgba(255,251,240,.6);border:1px solid rgba(124,90,42,.3);border-radius:4px;padding:.86em 1em}
+.qrwin{width:140px;float:left;margin:0 18px 10px 0;text-align:center}
+.qrwin .frameq{border:2px double var(--gold);border-radius:4px;padding:8px;position:relative;background:rgba(255,252,242,.7)}
+.qrwin .frameq::before{content:"❦";position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--parch);color:var(--gold-ink);padding:0 4px;font-size:13px}
+.qrwin .q{width:100%;aspect-ratio:1;border:1px solid rgba(124,90,42,.4);display:flex;align-items:center;justify-content:center;color:var(--sepia);font-size:13px}
+.qrwin .cap{letter-spacing:.5px;color:var(--sepia);font-size:13px;margin-top:.3em}
+blockquote{border:0;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);margin:1.2em 0;padding:.6em 1em;color:var(--oxblood);text-align:center;font-family:'Amiri',serif;font-size:22px}
+.covenant{border:2px double var(--gold);border-radius:4px;padding:.86em 1.4em;margin:1.2em 0;background:rgba(255,251,240,.5)}
+.covenant ul{list-style:none;padding-right:0;margin:.4em 0}
+.covenant li{position:relative;padding-right:1.6em;margin:.5em 0}
+.covenant li::before{content:"❧";position:absolute;right:0;color:var(--gold-ink)}
+.sig{background:rgba(166,134,47,.07);border:1px dashed var(--gold);border-radius:4px;padding:.86em 1.1em;margin-top:.86em}
+.colophon{margin-top:2.4em;border-top:1px double var(--gold);padding-top:1em;text-align:center;color:var(--sepia)}
+.colophon .mark{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--oxblood);letter-spacing:2px}
+.backcover{margin-top:2.2em;border:2px double var(--gold);border-radius:6px;padding:1.6em 1.4em;text-align:center;background:radial-gradient(circle at 50% 0%,rgba(126,140,72,.13),transparent 60%),rgba(255,251,240,.6)}
+.backcover .blurb{max-width:620px;margin:.8em auto;font-size:18px;line-height:2}
+.backcover .mission{color:var(--oxblood);font-family:'Amiri',serif;font-size:20px;margin:.6em auto;max-width:580px}
+.backcover .isbn{letter-spacing:.5px;color:var(--sepia);font-size:13px;margin-top:1em}
+.spinecode{display:inline-block;margin-top:.4em;padding:6px 10px;border:1px solid var(--gold);border-radius:3px;background:#fff;font-family:monospace;letter-spacing:2px;color:#222;direction:ltr}
+small.d{color:#6a4e2c}
+ul li{margin:.3em 0}
+@media print{@page{margin:16mm;@bottom-center{content:counter(page);font-family:'Amiri',serif;color:#8b6914;font-size:9pt}}
+  html,body{background:#fdfaf2 !important}body{font-size:12pt;color:#1e1810}.skip,.toc{display:none}
+  .leaf{max-width:100%;margin:0;border:0.6pt solid #a6862f;box-shadow:none;padding:10mm}.leaf::before{inset:5px;border:0.4pt solid #a6862f}
+  .frontispiece h1{font-size:34pt}h2.sec::after{background:#a6862f;height:.5pt}
+  .note,.card,.story,.plate,.covenant,.bridge>div,figure,table,.scene,.sig,.backcover,.legal{box-shadow:none;background:#fdfaf2 !important;page-break-inside:avoid;break-inside:avoid}
+  tr,thead,h2.sec{page-break-inside:avoid;break-inside:avoid}h2,h3,h4{page-break-after:avoid}
+  tr:nth-child(even) td{background:#f6efdd !important}a{color:inherit;text-decoration:none}}
+</style>
+<link rel="canonical" href="https://fameramer125-coder.github.io/juthur/works/bayan/ar/04">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Fraunces:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet">
+<style id="jw-bar-css">
+.jw-bar{position:sticky;top:0;z-index:9999;display:flex;flex-wrap:wrap;gap:.25rem 1.1rem;align-items:center;justify-content:center;
+ margin:0;padding:7px 16px;background:#1B3A2F;color:#FBF9F4;font-family:'Amiri',Georgia,serif;font-size:15px;line-height:1.5;
+ border-bottom:2px solid #9A7B23;box-shadow:0 2px 6px rgba(0,0,0,.18);font-style:normal;font-weight:400;letter-spacing:0;text-align:center}
+.jw-bar a{color:#FBF9F4;text-decoration:none;border-bottom:1px solid transparent;padding:0 1px}
+.jw-bar a:hover{border-bottom-color:#C9A227}
+.jw-bar a:focus-visible{outline:2px solid #C9A227;outline-offset:3px}
+.jw-bar .jw-k{color:#C9A227;font-size:12px;letter-spacing:.18em}
+.jw-bar .jw-d{color:#C9A227;font-size:13px;border:1px solid #C9A227;padding:0 .5em}
+.jw-bar[dir=ltr]{font-family:'Fraunces',Georgia,serif;font-size:14px}
+.jw-bar [lang=ar]{font-family:'Amiri',serif}
+@media print{.jw-bar{display:none!important}}
+</style>
+</head>
+<body>
+<nav class="jw-bar" dir="rtl" lang="ar" aria-label="تنقّل المكتبة المفتوحة"><span class="jw-k">مَطبعةُ جُذور · دبي · MCMXXVI</span> <a href="../../../">جُذور · الدار</a> <a href="../../">المكتبةُ المفتوحة</a> <a href="../../../asfar/sifr-04">صفحةُ السِّفر</a> <a href="../en/04" lang="en">English</a></nav>
+
+<a class="skip" href="#begin">تخطَّ إلى المحتوى</a>
+<article class="leaf">
+<span class="corner tl">❧</span><span class="corner tr">❧</span><span class="corner bl">❧</span><span class="corner br">❧</span>
+
+<header>
+<svg class="crest" width="164" height="210" viewBox="86 68 268 392" role="img" aria-label="شعار جُذُور المطويّ بألوان مرحلة البرعم: مثلّثٌ مطويٌّ على حرفٍ مركزيٍّ إلى وجهٍ كهرمانيٍّ مضيءٍ ووجهٍ أخضرَ مزرقٍّ داكنٍ تحت تاجٍ أخضرَ بُرعميٍّ، ومصراعانِ مطويّانِ منفرجانِ يكشفانِ بذرةً ذهبيّةً، برعمًا فوقها وجذورًا تحتها.">
+<g transform="translate(20,0)">
+  <g fill="none" stroke="#6E4E2E" stroke-linecap="round">
+    <path d="M200 300 C200 344 200 388 200 448" stroke-width="4"/>
+    <path d="M200 312 C176 338 154 366 138 414" stroke-width="3"/><path d="M200 312 C224 338 246 366 262 414" stroke-width="3"/>
+    <path d="M200 326 C186 352 172 380 164 428" stroke-width="2.2" opacity=".85"/><path d="M200 326 C214 352 228 380 236 428" stroke-width="2.2" opacity=".85"/>
+    <path d="M200 340 C214 366 218 394 214 444" stroke-width="1.8" opacity=".7"/>
+  </g>
+  <polygon points="135,188 200,215 200,300 70,300" fill="#D9A05C"/><polygon points="265,188 200,215 200,300 330,300" fill="#3E5852"/>
+  <polygon points="200,75 200,215 135,188" fill="#7E8C48"/><polygon points="200,75 265,188 200,215" fill="#647034"/>
+  <g stroke-linecap="round" fill="none"><path d="M200 75 L200 300" stroke="#EAD7A2" stroke-width="1.1" opacity=".5"/>
+    <path d="M135 188 L200 215 L265 188" stroke="#2c1f10" stroke-width="0.8" opacity=".2"/><path d="M70 300 L200 215 L330 300" stroke="#2c1f10" stroke-width="0.8" opacity=".16"/></g>
+  <polygon points="198,178 163,216 198,254" fill="#4A3620"/><polygon points="202,178 237,216 202,254" fill="#2E2010"/>
+  <path d="M198 178 L198 254 M202 178 L202 254" stroke="#140c04" stroke-width="0.7" opacity=".5"/>
+  <path d="M200 183 C186 199 186 233 200 251 L200 183 Z" fill="#E3C063" stroke="#5A3D1E" stroke-width="1.4"/>
+  <path d="M200 183 C214 199 214 233 200 251 L200 183 Z" fill="#C0912E" stroke="#5A3D1E" stroke-width="1.4"/>
+  <path d="M200 183 L200 251" stroke="#5A3D1E" stroke-width="0.8" opacity=".8"/>
+  <path d="M200 183 C199 171 200 162 201 150" stroke="#4f5f2b" stroke-width="2.6" fill="none"/>
+  <path d="M200 172 C188 173 177 170 171 159 C181 160 193 165 200 170 Z" fill="#5f7034"/>
+  <path d="M201 159 C210 159 218 155 222 145 C216 151 207 155 201 157 Z" fill="#6a7d3c"/>
+</g>
+</svg>
+<div class="house">جُذُور · فنّ البيان · <span class="lat">Juthur · The Art of Expression</span></div>
+
+<div class="frontispiece">
+  <div class="bookno">الكتاب الرابع · الغلاف الأماميّ</div>
+  <h1>إِنْصَاتُ الْبُرْعُمِ</h1>
+  <div class="translit"><span class="lat">Insat al-Burʿum</span> · The Bud's Listening</div>
+  <div class="motto">«أُنْصِتُ إِلَيْكَ — فَأَفْهَمُكَ»</div>
+  <div class="stage">المقامُ الأدنى · مرحلةُ البرعمِ · بُرعمٌ مغلقٌ · ٧–٩ سنوات · محاذاةٌ استرشاديّةٌ <span class="lat">CEFR A1 · ACTFL Novice Mid</span></div>
+  <div style="margin-top:.5em;font-size:15px;color:var(--sepia)">د. عادل ف. عامر &nbsp;·&nbsp; <span class="lat">ORCID 0009-0008-9618-3863</span> &nbsp;·&nbsp; نظريّةُ القراءةِ الملموسةِ <span class="lat">(CRT)</span>، عامر (2024)</div>
+</div>
+
+<div class="arc" aria-label="المواسم الستّة؛ هذا الكتاب يفتتح مرحلة البرعم.">
+  <span class="node done"><span class="dot"></span>بَذْرَة</span><span class="lnk"></span>
+  <span class="node on"><span class="dot"></span>بُرْعُم</span><span class="lnk"></span>
+  <span class="node"><span class="dot"></span>غُصْن</span><span class="lnk"></span>
+  <span class="node"><span class="dot"></span>أوراق</span><span class="lnk"></span>
+  <span class="node"><span class="dot"></span>ثَمَر</span><span class="lnk"></span>
+  <span class="node"><span class="dot"></span>حَصاد</span>
+</div>
+</header>
+
+<section class="legal" aria-label="حقوق النشر والامتياز">
+<svg class="qbadge" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 120" width="112" height="112" role="img" aria-label="ختم جُذُور الرسميّ: بذرةٌ ذهبيّةٌ يعلوها برعمٌ وتحتها جذورٌ، في قلبها اسمُ جُذُور، يُحيط بها اسمُ الختم بالإنجليزيّة وعبارةُ CRT Aligned.">
+  <defs>
+    <path id="arcTop" d="M 20 60 A 40 40 0 0 1 100 60"/>
+    <path id="arcBot" d="M 100 60 A 40 40 0 0 1 20 60"/>
+    <radialGradient id="seedGrad" cx="0.42" cy="0.32" r="0.88"><stop offset="0" stop-color="#ecd488"/><stop offset="0.6" stop-color="#c0912e"/><stop offset="1" stop-color="#8B6914"/></radialGradient>
+    <radialGradient id="seedGlow" cx="0.5" cy="0.4" r="0.5"><stop offset="0" stop-color="#f4e8b8" stop-opacity="0.6"/><stop offset="1" stop-color="#c0912e" stop-opacity="0"/></radialGradient>
+  </defs>
+  <circle cx="60" cy="60" r="57" fill="#f7efda" stroke="#a6862f" stroke-width="1.6"/>
+  <circle cx="60" cy="60" r="51" fill="none" stroke="#a6862f" stroke-width="0.7"/>
+  <circle cx="60" cy="60" r="46" fill="none" stroke="#c9a961" stroke-width="0.3" stroke-dasharray="2 3"/>
+  <path d="M20 60 l2.8 -2.8 l2.8 2.8 l-2.8 2.8 z" fill="#a6862f"/>
+  <path d="M100 60 l-2.8 -2.8 l-2.8 2.8 l2.8 2.8 z" fill="#a6862f"/>
+  <text font-family="'Cormorant Garamond',serif" font-size="12" letter-spacing="3.5" fill="#7a2e1f" font-weight="700"><textPath xlink:href="#arcTop" startOffset="50%" text-anchor="middle">JUTHUR</textPath></text>
+  <text font-family="'Cormorant Garamond',serif" font-size="9.5" letter-spacing="2" fill="#254032" font-weight="600"><textPath xlink:href="#arcBot" startOffset="50%" text-anchor="middle">&#183; CRT Aligned &#183;</textPath></text>
+  <path d="M60 38 L60 32" stroke="#4f5f2b" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M60 35 C54 31 47 34 50 40 C55 41 58 38 60 35 Z" fill="#5f7034"/>
+  <path d="M60 35 C66 31 73 34 70 40 C65 41 62 38 60 35 Z" fill="#6a7d3c"/>
+  <ellipse cx="60" cy="52" rx="7.5" ry="10" fill="url(#seedGrad)" stroke="#5A3D1E" stroke-width="1.2"/>
+  <ellipse cx="60" cy="50" rx="5" ry="6" fill="url(#seedGlow)"/>
+  <circle cx="60" cy="50" r="1.6" fill="#7a2e1f" opacity="0.85"/><circle cx="60" cy="50" r="0.7" fill="#f4e8b8"/>
+  <line x1="42" y1="62" x2="78" y2="62" stroke="#a6862f" stroke-width="0.8" stroke-linecap="round"/>
+  <line x1="44" y1="62.8" x2="76" y2="62.8" stroke="#c9a961" stroke-width="0.4" stroke-linecap="round"/>
+  <g fill="none" stroke="#6E4E2E" stroke-width="1.4" stroke-linecap="round">
+    <path d="M60 62 C60 70 60 76 60 84"/><path d="M60 66 C55 72 50 78 46 86"/><path d="M60 66 C65 72 70 78 74 86"/>
+    <path d="M58 64 C52 70 46 76 42 82"/><path d="M62 64 C68 70 74 76 78 82"/></g>
+  <circle cx="60" cy="84" r="1" fill="#6E4E2E"/><circle cx="46" cy="86" r="1" fill="#6E4E2E"/><circle cx="74" cy="86" r="1" fill="#6E4E2E"/>
+  <circle cx="42" cy="82" r="0.8" fill="#6E4E2E"/><circle cx="78" cy="82" r="0.8" fill="#6E4E2E"/>
+  <text x="60" y="102" text-anchor="middle" font-family="'Amiri', serif" font-size="17" fill="#254032" font-weight="700" letter-spacing="0.5">جُذُور</text>
+  <line x1="46" y1="105" x2="74" y2="105" stroke="#a6862f" stroke-width="0.6" stroke-linecap="round"/>
+</svg>
+<p class="copyr">&copy; 2024 عادل ف. عامر (<span class="lat">Adel F. Amer</span>). جميعُ الحقوقِ محفوظةٌ.</p>
+<p><b>التأليفُ والذكاءُ الاصطناعيُّ.</b> جميعُ المحتوى والأفكارِ في هذا العملِ مساهمةٌ أصليّةٌ حصريّةٌ للمؤلِّفِ، واستُخدِمَت أدواتُ الذكاءِ الاصطناعيِّ التوليديِّ أداةً مساعدةً في التحريرِ اللغويِّ والإخراجِ فقط.</p>
+<p><b>الملكيّةُ الفكريّةُ.</b> مصطلحا <b>جُذُور</b> و<b>نظريّةِ القراءةِ الملموسةِ <span class="lat">(CRT)</span></b>، وكلُّ ما يرتبطُ بهما من مصطلحاتٍ وأُطُرٍ ومنهجيّاتٍ، ملكيّةٌ فكريّةٌ حصريّةٌ للمؤلِّفِ.</p>
+<p><b>الاستخدامُ والاقتباسُ.</b> يُسمَحُ بالاقتباسِ الموجزِ لأغراضٍ أكاديميّةٍ أو تعليميّةٍ أو نقديّةٍ بشرطِ الإشارةِ الواضحةِ للمؤلِّفِ والمصدرِ؛ وتحتاجُ إعادةُ النشرِ الكاملةُ أو الترجمةُ أو الأعمالُ المشتقّةُ إذنًا كتابيًّا من المؤلِّفِ.</p>
+<p class="qmark-line">&#10022; علامةُ الجودةِ &#10022; &nbsp;أُنتِجَ وفقَ المعاييرِ الداخليّةِ لمشروعِ جُذُور · متوائمٌ مع نظريّةِ القراءةِ الملموسةِ <span class="lat">(CRT)</span>.</p>
+<p class="imprint"><span class="lat">ISBN: ____</span> · الطبعةُ الأولى 2024 · بَذْرَةٌ تَبْقَى لِتَنْمُوَ مِنْ بَعْدِنَا · عامر (2024)</p>
+</section>
+
+<p style="text-align:center;color:var(--sepia)">
+منظومةُ <b>جُذُور</b> · <b>فنُّ البيان</b> — عشرونَ كتابًا. صارتْ <b>نور</b> بُرعمًا، ومعها نَفَسٌ وصوتٌ ونظرةٌ. والآنَ تبدأُ أوّلَ مهاراتِ التواصلِ الحقيقيِّ: الإنصاتَ. فالكلامُ نصفُ الحوارِ، ونصفُهُ الأجملُ أنْ تُصغيَ — عبرَ <b>نظريّةِ القراءةِ الملموسةِ</b> <span class="lat">(CRT)</span>، عامر (2024).
+</p>
+
+<nav class="toc" aria-label="المحتويات">
+<h3>المحتويات</h3>
+<a href="#begin">قبلَ أنْ تبدأ</a>
+<a href="#id">بطاقةُ هُويّةِ الكتابِ</a>
+<a href="#root">الجذرُ وأسرتُهُ</a>
+<a href="#story">القصّةُ الكاملةُ: «إنصاتُ نورٍ»</a>
+<a href="#brief">النسخةُ الموجزةُ</a>
+<a href="#elements">العناصرُ الخمسةُ للتطبيقِ</a>
+<a href="#safestop">التوقُّفُ الآمنُ والدمجُ</a>
+<a href="#guide">دليلُ الأهلِ والمعلّمِ</a>
+<a href="#jps">مقياسُ جُذُور <span class="lat">(JPS)</span></a>
+<a href="#words">مفرداتُ الكتابِ</a>
+<a href="#questions">أسئلةُ الفهمِ</a>
+<a href="#media">نشاطٌ ووسائطُ</a>
+<a href="#bridge">جسرُ الذاكرةِ</a>
+<a href="#covenant">قائمةُ التحقُّقِ الملزِمةُ</a>
+</nav>
+
+<div class="thread">
+<b>الخيطُ الواحدُ —</b> الإنصاتُ أوّلُ نصفِ الحوارِ. صارَ لنورٍ نَفَسٌ وصوتٌ ونظرةٌ، فانشقَّتْ قشرتُها وصارتْ بُرعمًا؛ <b>والآنَ تتعلَّمُ أنَّ الكلامَ نصفُ الحوارِ، ونصفَهُ الأجملَ أنْ تُصغيَ بقلبِها لا بأُذنِها فقط.</b> النظرةُ فتحتْ عينَيها على الآخرِ، والإنصاتُ يفتحُ قلبَها لهُ — ومنهُ ينبثقُ السؤالُ ثمَّ الحوارُ.
+</div>
+
+<hr class="rule-orn">
+
+<main id="begin">
+
+<section>
+<h2 class="sec"><span>قبلَ أنْ تبدأ — تنبيهٌ للمعلّمِ والأهلِ</span></h2>
+<div class="note warn">
+<span class="mk">⚠</span> &nbsp;<b>تنبيهٌ استباقيٌّ.</b> هذا الكتابُ يدرّبُ على الإنصاتِ والجلوسِ المنتبهِ. الطفلُ ذو فرطِ الحركةِ قد يصعبُ عليهِ الجلوسُ طويلًا — اقبلْ منهُ إنصاتًا قصيرًا (ثانيتينِ) ثمَّ زِدْ تدريجيًّا، ولا تُفسِّرِ الحركةَ بأنّها عدمُ إنصاتٍ.
+</div>
+<div class="note">
+<span class="mk">❦</span> &nbsp;<b>كيف تستعملُ هذا الكتابَ.</b> الكتابُ فيه نسختانِ من القصّةِ: موجزةٌ (٣ دقائق) وكاملةٌ (٧ دقائق). والقصّةُ تكملةٌ مباشرةٌ: نورُ صارتْ بُرعمًا، ومعها نَفَسٌ وصوتٌ ونظرةٌ، فتتعلَّمُ الآنَ أنْ تُنصِتَ.
+</div>
+</section>
+
+<section id="id">
+<h2 class="sec"><span>بطاقةُ هُويّةِ الكتابِ</span></h2>
+<table>
+<tr><th>المستوى / الدرجة</th><td>البرعم — بُرعمٌ مغلقٌ</td></tr>
+<tr><th>الفئةُ العمريّةُ</th><td>٧–٩ سنوات · يمتدُّ بمرونةٍ من ٦ إلى ١٠ بحسبِ نضجِ الطفلِ</td></tr>
+<tr><th>الجذرُ الأساسيُّ</th><td>س – م – ع · السَّمْعُ: أنْ تُصغيَ بقلبِكَ لا بأُذنِكَ فقط</td></tr>
+<tr><th>أسرةُ الجذرِ</th><td>سَمْع · سامِع · مَسموع · سمّاعة · استمعَ</td></tr>
+<tr><th>المرساةُ الحسّيّةُ</th><td>الجلوسُ بظهرٍ مستقيمٍ والإنصاتُ حتى ينتهيَ المتكلِّمُ قبلَ الردِّ</td></tr>
+<tr><th>الاستعارةُ</th><td>البرعمُ المغلقُ يُنصِتُ للنورِ والماءِ في صمتٍ قبلَ أنْ يتفتَّحَ</td></tr>
+<tr><th>الشخصيّتانِ المُلهِمتانِ</th><td>القاضي ابنُ جماعةَ + الجَدّةُ رملة</td></tr>
+<tr><th>الشخصيّةُ الرمزيّةُ</th><td>نورُ (البرعم — تنمو عبرَ الأسفارِ)</td></tr>
+<tr><th>الشخصيّةُ المضادّةُ</th><td>الصَّدى المُشَوَّشُ — شخصيّةٌ رمزيّةٌ (لا تاريخيّةٌ) تُمثِّلُ المقاطعةَ والردَّ قبلَ الفهمِ، وتتعلّمُ أنْ تُنصِتَ</td></tr>
+<tr><th>محكُّ الإتقانِ</th><td>بُرعمٌ مغلقٌ: يجلسُ بظهرٍ مستقيمٍ ويُنصِتُ حتى ينتهيَ المتكلِّمُ ثمَّ يردُّ، ويُعيدُ صياغةَ ما سمعَهُ</td></tr>
+<tr><th>مجالُ <span class="lat">CASEL</span></th><td>الوعيُ الاجتماعيُّ <span class="lat">(Social Awareness)</span></td></tr>
+<tr><th>المعيارُ الدوليُّ</th><td>يُوائمُ وصفَ <span class="lat">CEFR</span> لمستوى <span class="lat">A1</span> (تواصلٌ بسيطٌ مدعومٌ بالإصغاءِ والوقفاتِ)</td></tr>
+</table>
+<div class="card">
+<h3 style="color:var(--oxblood)">جوهرُ الكتابِ</h3>
+<p>بعدَ أنْ تعلَّمتْ نورُ النَّفَسَ والصوتَ والنظرةَ، وصارتْ بُرعمًا، تبدأُ أوّلَ مهاراتِ التواصلِ الحقيقيِّ: الإنصاتَ. فالكلامُ نصفُ الحوارِ، ونصفُهُ الأجملُ أنْ تُصغيَ. ومَن لا يُنصِتُ، يتكلَّمُ كثيرًا ولا يفهمُ شيئًا.</p>
+</div>
+<div class="note">
+<span class="mk">❦</span> &nbsp;<b>هامشٌ تعريفيٌّ.</b> بدرُ الدينِ ابنُ جماعةَ (ت. ٧٣٣هـ)، قاضٍ وعالِمٌ جليلٌ، صنّفَ «تذكرةَ السامعِ والمتكلّمِ في أدبِ العالِمِ والمتعلّمِ» فجعلَ لأدبِ الإنصاتِ والاستماعِ أصولًا — فصارَ حُسنُ الإنصاتِ مفتاحَ العلمِ.
+</div>
+</section>
+
+<section id="root">
+<h2 class="sec"><span>الجذرُ وأسرتُهُ — مهارةٌ ولغةٌ</span></h2>
+<div class="note safe">
+<span class="mk">❧</span> &nbsp;<b>الجسدُ قبلَ الرمزِ (أوّلُ مبادئ <span class="lat">CRT</span>).</b> يلتقي الطفلُ بهذا الجذرِ عبرَ <b>جسدِ الإنصاتِ</b> — ظهرٌ مستقيمٌ، ووجهٌ نحوَ المتكلِّمِ، وسكوتٌ حتى يُكمِلَ — لا عبرَ تحليلِ الحروفِ. والملاحظةُ الصرفيّةُ أدناهُ <b>للمعلّمِ وحدَهُ</b>.
+</div>
+<table>
+<tr><th>الجذرُ (المهارةُ)</th><th>أسرةُ الجذرِ (كلماتٌ من النَّسَبِ نفسِهِ)</th></tr>
+<tr><td>س – م – ع</td><td>سَمْع · سامِع · مَسموع · سمّاعة · استمعَ</td></tr>
+</table>
+<div class="note">
+<span class="mk">❦</span> &nbsp;<b>كيف نشرحُها للطفلِ.</b> «كلمةُ <i>سَمْع</i> لها إخوةٌ! الذي يُصغي جيِّدًا هو <i>سامِع</i>، والكلامُ الذي وصلَ هو <i>مَسموع</i>، والآلةُ التي نسمعُ بها الطبيبَ هي <i>سمّاعة</i>. وحِينَ تُصغي بكلِّكَ تقولُ: <i>استمعتُ</i>. كلُّها أسرةٌ من أبٍ واحدٍ: س-م-ع.»
+</div>
+<div class="note">
+<span class="mk">❦</span> &nbsp;<b>ملاحظةٌ صرفيّةٌ للمعلّمِ.</b> الجذرُ <b>(س-م-ع)</b> صحيحٌ سالمٌ. منهُ السَّمْعُ (إدراكُ الصوتِ بالأُذنِ) والاستماعُ (الإصغاءُ بقصدٍ وانتباهٍ) — وبينهما فرقٌ لطيفٌ: نَسمعُ كثيرًا، لكنّنا نُنصِتُ قليلًا.
+</div>
+</section>
+
+<section id="story">
+<h2 class="sec"><span>القصّةُ الكاملةُ: «إنصاتُ نورٍ»</span></h2>
+<p style="text-align:center"><small class="d">النسخةُ الكاملةُ · للقراءةِ الجهريّةِ مع الطفلِ · مدّةُ السردِ: ٧ دقائق · بخمسِ لوحاتٍ أصليّةٍ بلوحةِ البرعمِ</small></p>
+<div class="story">
+
+<div class="scene">
+<h4>١ — نورُ صارتْ بُرعمًا، تتكلَّمُ كثيرًا ولا تُنصِتُ لأحدٍ</h4>
+<figure class="plate">
+<svg viewBox="0 0 400 210" role="img" aria-label="برعمٌ أخضرُ يتكلَّمُ بحماسٍ، وحولَ رأسِهِ سحابةٌ مزدحمةٌ من كلماتِهِ هو تدورُ؛ بجانبِهِ يقولُ المطرُ شيئًا مهمًّا، لكنَّ كلماتِهِ تمرُّ دونَ أنْ تُسمَعَ."><defs><radialGradient id="wPaper" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#faf3e1"/><stop offset="0.6" stop-color="#f3e8cf"/><stop offset="1" stop-color="#e9dcbd"/></radialGradient><radialGradient id="wGlow" cx="50%" cy="55%" r="55%"><stop offset="0" stop-color="#ffe9b8" stop-opacity="0.55"/><stop offset="0.5" stop-color="#f6d98f" stop-opacity="0.22"/><stop offset="1" stop-color="#f6d98f" stop-opacity="0"/></radialGradient></defs>
+  <rect width="400" height="210" fill="url(#wPaper)"/><ellipse cx="200" cy="120" rx="150" ry="86" fill="url(#wGlow)"/>
+  <path d="M0 180 H400" stroke="#6a4e2c" stroke-width="1"/>
+  <path d="M150 176 C150 140 156 116 172 108 C188 116 194 140 194 176 Z" fill="#7E8C48"/>
+  <ellipse cx="172" cy="104" rx="14" ry="20" fill="#8ea15a" stroke="#5f7034" stroke-width="1.2"/>
+  <g fill="#b8935a" font-family="'Amiri',serif" font-size="13" opacity=".9">
+    <text x="230" y="70" text-anchor="end">أنا… أنا…</text><text x="250" y="92" text-anchor="end">…وأنا!</text>
+  </g>
+  <g stroke="#7c9aa6" stroke-width="1.4" fill="none" opacity=".6" stroke-dasharray="3 4">
+    <path d="M70 120 q30 -8 56 6"/><path d="M60 140 q34 -6 60 8"/>
+  </g>
+  <text x="30" y="108" font-family="'Amiri',serif" font-size="12" fill="#5c6a72">(المطرُ، بِلا سامعٍ)</text>
+</svg>
+<figcaption>اللوحةُ الأولى — تكلَّمتْ وتكلَّمتْ؛ فمرَّتْ كلماتُ المطرِ المهمّةُ بِلا سامعٍ.</figcaption>
+</figure>
+<p class="drop">صارتْ نورُ بُرعمًا أخضرَ جميلًا! ومعها كلُّ ما تعلَّمتْهُ: نَفَسٌ، وصوتٌ، ونظرةٌ. صارتْ تحبُّ الكلامَ كثيرًا — تتكلَّمُ وتتكلَّمُ، لكنَّها كانتْ كلَّما تكلَّمَ أحدٌ، تُعِدُّ ردَّها بسرعةٍ ولا تُصغي.</p>
+<p>قالَ لها المطرُ شيئًا مهمًّا، لكنَّها لم تُنصِتْ — كانتْ مشغولةً بما ستقولُهُ هي. فلم تفهمْ ما أرادَ المطرُ، وردَّتْ ردًّا في غيرِ مكانِهِ.</p>
+</div>
+
+<div class="scene">
+<h4>٢ — الصَّدى المُشَوَّشُ يردُّ قبلَ أنْ يسمعَ، فتعمُّ الفوضى</h4>
+<figure class="plate">
+<svg viewBox="0 0 400 210" role="img" aria-label="تشابكُ خطوطِ كلامٍ متقاطعةٍ متضاربةٍ بألوانٍ موحلةٍ يعقدُ في الهواءِ؛ سؤالٌ وجوابٌ غيرُ متطابقينِ يطفوانِ متباعدينِ، يُظهِرانِ ردًّا قِيلَ قبلَ أنْ يُسمَعَ السؤالُ."><defs><radialGradient id="wPaper" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#faf3e1"/><stop offset="0.6" stop-color="#f3e8cf"/><stop offset="1" stop-color="#e9dcbd"/></radialGradient><radialGradient id="wGlow" cx="50%" cy="55%" r="55%"><stop offset="0" stop-color="#ffe9b8" stop-opacity="0.55"/><stop offset="0.5" stop-color="#f6d98f" stop-opacity="0.22"/><stop offset="1" stop-color="#f6d98f" stop-opacity="0"/></radialGradient></defs>
+  <rect width="400" height="210" fill="url(#wPaper)"/><ellipse cx="200" cy="120" rx="150" ry="86" fill="url(#wGlow)"/>
+  <g fill="none" stroke-linecap="round" opacity=".7">
+    <path d="M60 90 C140 60 200 130 300 80" stroke="#9a7a4a" stroke-width="3"/>
+    <path d="M70 120 C150 150 210 70 320 120" stroke="#7c9aa6" stroke-width="3"/>
+    <path d="M90 150 C160 110 230 170 310 140" stroke="#a06a52" stroke-width="2.4"/>
+  </g>
+  <text x="60" y="46" font-family="'Amiri',serif" font-size="13" fill="#5c6a72">«هل أكلتَ؟»</text>
+  <text x="360" y="184" text-anchor="end" font-family="'Amiri',serif" font-size="13" fill="#7a2e1f">«نعم — الجوُّ جميلٌ!»</text>
+</svg>
+<figcaption>اللوحةُ الثانيةُ — ردَّ الصَّدى على نصفِ ما سمعَ، فتضاربتِ الكلماتُ وتشابكتْ.</figcaption>
+</figure>
+<p>مرَّ في ذلكَ اليومِ <b>الصَّدى المُشَوَّشُ</b>. كان يردُّ على كلِّ شيءٍ قبلَ أنْ يسمعَهُ كاملًا، فتختلطُ كلماتُهُ وتتضاربُ. سألَهُ أحدُهم: «هل أكلتَ؟» فأجابَ قبلَ أنْ يسمعَ تمامَ السؤالِ: «نعم، الجوُّ جميلٌ!» — لأنّهُ ردَّ على نِصفِ ما سمعَ.</p>
+<p class="dialogue">«الإنصاتُ بطيءٌ يا نورُ! رُدّي بسرعةٍ مثلي، لا تنتظري أنْ يُكمِلَ أحدٌ كلامَهُ. الأسرعُ ردًّا هو الأذكى!»</p>
+<p>جرَّبتْ نورٌ طريقةَ الصَّدى: صارتْ تردُّ قبلَ أنْ يُكمِلَ أحدٌ. لكنَّ ردودَها صارتْ في غيرِ موضعِها، وضحكَ منها الجميعُ، وحزنتْ. لم يفهمْها أحدٌ، لأنّها لم تفهمْ أحدًا.</p>
+</div>
+
+<div class="scene">
+<h4>٣ — القاضي ابنُ جماعةَ والجَدّةُ رملةُ يُنصِتانِ لنورٍ بكلِّ انتباهٍ</h4>
+<figure class="plate">
+<svg viewBox="0 0 400 210" role="img" aria-label="شخصيّتانِ هادئتانِ تميلانِ برفقٍ نحوَ برعمٍ صغيرٍ وتُنصِتانِ دونَ مقاطعةٍ؛ أقواسٌ ناعمةٌ متراكزةٌ من الإصغاءِ تتدفّقُ منهما نحوَ البرعمِ الذي تصلُ كلماتُهُ أخيرًا."><defs><radialGradient id="wPaper" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#faf3e1"/><stop offset="0.6" stop-color="#f3e8cf"/><stop offset="1" stop-color="#e9dcbd"/></radialGradient><radialGradient id="wGlow" cx="50%" cy="55%" r="55%"><stop offset="0" stop-color="#ffe9b8" stop-opacity="0.55"/><stop offset="0.5" stop-color="#f6d98f" stop-opacity="0.22"/><stop offset="1" stop-color="#f6d98f" stop-opacity="0"/></radialGradient></defs>
+  <rect width="400" height="210" fill="url(#wPaper)"/><ellipse cx="200" cy="120" rx="150" ry="86" fill="url(#wGlow)"/>
+  <path d="M0 180 H400" stroke="#6a4e2c" stroke-width="1"/>
+  <g fill="#254032"><circle cx="96" cy="80" r="16"/><path d="M74 180 C74 136 78 112 96 106 C114 112 118 136 118 180 Z"/></g>
+  <g fill="#5f3b26"><circle cx="150" cy="84" r="15"/><path d="M130 180 C130 138 134 114 150 108 C166 114 170 138 170 180 Z"/></g>
+  <path d="M300 176 C300 148 306 128 318 122 C330 128 336 148 336 176 Z" fill="#7E8C48"/>
+  <ellipse cx="318" cy="118" rx="11" ry="15" fill="#8ea15a" stroke="#5f7034" stroke-width="1"/>
+  <g fill="none" stroke="#a6862f" stroke-linecap="round" opacity=".6">
+    <path d="M186 120 q40 -6 90 0" stroke-width="1.4"/>
+    <path d="M182 138 q46 -4 100 4" stroke-width="1.1"/>
+  </g>
+</svg>
+<figcaption>اللوحةُ الثالثةُ — أنصتا بهدوءٍ دونَ مقاطعةٍ حتى أنهتْ — فوصلتْ كلماتُها.</figcaption>
+</figure>
+<p>جلسَ بجانبِ التُّرابِ القاضي <b>ابنُ جماعةَ</b>، الذي صنّفَ للناسِ أدبَ السامعِ والمتكلّمِ، وعلَّمَ كيفَ يُنصِتُ المتعلّمُ بأدبٍ ليتعلَّمَ. ومعَهُ <b>الجَدّةُ رملة</b> التي عرفناها من قبلُ.</p>
+<p>قالتْ نورٌ كلامًا، فأنصتَ إليها ابنُ جماعةَ والجَدّةُ بكلِّ هدوءٍ، دونَ أنْ يقاطعاها، حتى أنهتْ. ولأوّلِ مرّةٍ، شعرتْ نورٌ أنَّ كلامَها... وصلَ.</p>
+<p>ثمَّ قالَ ابنُ جماعةَ بلطفٍ: <span class="dialogue">«يا نورُ، هل تعرفينَ لماذا وصلَ كلامُكِ الآنَ؟ لأنّنا أنصَتنا إليكِ. وهكذا يُبنى العلمُ: بأدبِ الإنصاتِ! مَن يُنصِتْ جيّدًا يَتعلَّمْ أكثرَ. جرّبي أنتِ: اجلسي بظهرٍ مستقيمٍ، وانظري إليَّ، وأنصتي حتى أُكمِلَ كلامي قبلَ أنْ تردّي.»</span></p>
+</div>
+
+<div class="scene">
+<h4>٤ — نورُ تجلسُ بظهرٍ مستقيمٍ وتُنصِتُ، فتتفتَّحُ ورقةٌ منها كأذنٍ</h4>
+<figure class="plate">
+<svg viewBox="0 0 400 210" role="img" aria-label="برعمٌ يجلسُ منتصبًا منتبهًا؛ تنبثقُ من جانبِهِ ورقةٌ جديدةٌ صغيرةٌ على شكلِ أُذنٍ، وتتدفّقُ إليها حلقاتٌ ناعمةٌ من الصوتِ — إنّهُ يسمعُ ما وراءَ الكلماتِ."><defs><radialGradient id="wPaper" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#faf3e1"/><stop offset="0.6" stop-color="#f3e8cf"/><stop offset="1" stop-color="#e9dcbd"/></radialGradient><radialGradient id="wGlow" cx="50%" cy="55%" r="55%"><stop offset="0" stop-color="#ffe9b8" stop-opacity="0.55"/><stop offset="0.5" stop-color="#f6d98f" stop-opacity="0.22"/><stop offset="1" stop-color="#f6d98f" stop-opacity="0"/></radialGradient></defs>
+  <rect width="400" height="210" fill="url(#wPaper)"/><ellipse cx="200" cy="120" rx="150" ry="86" fill="url(#wGlow)"/>
+  <path d="M0 182 H400" stroke="#6a4e2c" stroke-width="1"/>
+  <path d="M196 178 C196 138 202 110 218 102 C234 110 240 138 240 178 Z" fill="#7E8C48"/>
+  <ellipse cx="218" cy="98" rx="14" ry="20" fill="#8ea15a" stroke="#5f7034" stroke-width="1.2"/>
+  <path d="M240 130 C262 122 276 132 272 150 C258 152 244 144 240 134 Z" fill="#9bb06a" stroke="#5f7034" stroke-width="1"/>
+  <g fill="none" stroke="#a6862f" stroke-linecap="round"><path d="M300 120 q-18 12 -36 22" stroke-width="1.4" opacity=".7"/><path d="M312 132 q-24 14 -48 26" stroke-width="1.1" opacity=".5"/></g>
+  <text x="30" y="150" font-family="'Amiri',serif" font-size="13" fill="#5c6a72">…المطرُ تعبٌ… الريحُ وحيدةٌ…</text>
+</svg>
+<figcaption>اللوحةُ الرابعةُ — تفتّحتْ ورقةٌ كأُذنٍ، فسمعتْ ما وراءَ الكلماتِ.</figcaption>
+</figure>
+<p>جلستْ نورٌ بظهرٍ مستقيمٍ، وثبّتتْ عينَيها على وجهِ مَن يكلّمُها — كما تعلَّمتْ في النظرةِ — وأنصتتْ بهدوءٍ حتى أكملَ كلامَهُ. وحدثَ شيءٌ جميلٌ: تفتّحتْ منها ورقةٌ صغيرةٌ، كأنّها أذنٌ تستقبلُ العالمَ.</p>
+<p>ولأوّلِ مرّةٍ، سمعتْ نورٌ ما لم تسمعْهُ من قبلُ: سمعتْ ما وراءَ الكلماتِ. سمعتِ المطرَ يقولُ إنّهُ تعبٌ، وسمعتِ الريحَ تقولُ إنّها وحيدةٌ. الإنصاتُ فتحَ لها بابًا إلى قلوبِ الآخرينَ.</p>
+</div>
+
+<div class="scene">
+<h4>٥ — نورُ تُجيبُ جوابًا جميلًا بعدَ إنصاتٍ، فيهدأُ الصَّدى ويتعلَّمُ</h4>
+<figure class="plate">
+<svg viewBox="0 0 400 210" role="img" aria-label="بعدَ الإنصاتِ يتكلَّمُ البرعمُ جوابًا واضحًا مناسبًا، وكلماتُهُ تتدفّقُ في حلقاتٍ مرتّبةٍ؛ والصَّدى الذي كان متشابكًا هدأَ وصارتْ خطوطُهُ منتظمةً متوازيةً."><defs><radialGradient id="wPaper" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#faf3e1"/><stop offset="0.6" stop-color="#f3e8cf"/><stop offset="1" stop-color="#e9dcbd"/></radialGradient><radialGradient id="wGlow" cx="50%" cy="55%" r="55%"><stop offset="0" stop-color="#ffe9b8" stop-opacity="0.55"/><stop offset="0.5" stop-color="#f6d98f" stop-opacity="0.22"/><stop offset="1" stop-color="#f6d98f" stop-opacity="0"/></radialGradient></defs>
+  <rect width="400" height="210" fill="url(#wPaper)"/><ellipse cx="200" cy="120" rx="150" ry="86" fill="url(#wGlow)"/>
+  <path d="M0 182 H400" stroke="#6a4e2c" stroke-width="1"/>
+  <path d="M120 178 C120 140 126 114 142 106 C158 114 164 140 164 178 Z" fill="#7E8C48"/>
+  <ellipse cx="142" cy="102" rx="13" ry="18" fill="#8ea15a" stroke="#5f7034" stroke-width="1.2"/>
+  <g fill="none" stroke="#a6862f" stroke-linecap="round"><path d="M166 120 q40 -4 70 -2" stroke-width="1.6"/><path d="M168 132 q44 -2 80 2" stroke-width="1.2" opacity=".7"/></g>
+  <g stroke="#7c9aa6" stroke-width="2" fill="none" opacity=".7"><path d="M300 150 H360"/><path d="M300 162 H356"/></g>
+  <text x="120" y="200" font-family="'Amiri',serif" font-size="14" fill="#7a2e1f">«أُنْصِتُ إليكَ، فأفهمُكَ.»</text>
+</svg>
+<figcaption>اللوحةُ الخامسةُ — جوابٌ مناسبٌ وُلِدَ من الإنصاتِ؛ فاستقامتْ خطوطُ الصَّدى المتشابكةِ أخيرًا.</figcaption>
+</figure>
+<p>بعدَ أنْ أنصَتَتْ نورٌ جيِّدًا، تكلَّمتْ. وكان جوابُها هذهِ المرّةَ جميلًا ومناسبًا، لأنّها فهمتْ أوّلًا. قالتْ بصوتِها الذي تعلَّمتْهُ، وبنظرةٍ صادقةٍ: <b>«أُنْصِتُ إليكَ، فأفهمُكَ.»</b></p>
+<p>وحدثَ العجبُ: الصَّدى المُشَوَّشُ توقَّفَ... وأنصَتَ لأوّلِ مرّةٍ. ولمّا أنصَتَ، صارتْ كلماتُهُ واضحةً مرتّبةً. وهَمَسَ في دهشةٍ: <span class="dialogue">«كنتُ أردُّ بسرعةٍ، فلا أفهمُ ولا أُفهَمُ. الآنَ أنصَتُّ... فصرتُ أفهمُ.»</span></p>
+<p>وتعلَّمَ الصَّدى أنَّ الردَّ الجميلَ يبدأُ بإنصاتٍ جميلٍ. ومنذُ ذلكَ اليومِ، صارتْ نورُ البرعمُ تُنصِتُ قبلَ أنْ تتكلَّمَ — فأحبَّها كلُّ مَن حولَها.</p>
+</div>
+
+<p style="margin-top:.86em"><span style="color:var(--gold-ink);font-weight:700">❦</span> &nbsp;<b>صمتُ السؤالِ الجسديِّ (٤–٥ ثوانٍ).</b> <span class="dialogue">«اجلِسْ بظهرٍ مستقيمٍ، وأنصِتْ لأيِّ صوتٍ حولَكَ خمسَ ثوانٍ. ماذا سمعتَ لم تنتبهْ لهُ من قبلُ؟»</span></p>
+</div>
+</section>
+
+<section id="brief">
+<h2 class="sec"><span>النسخةُ الموجزةُ (للأصغرِ · ٣ دقائق)</span></h2>
+<p style="text-align:center"><small class="d">جُملٌ قصيرةٌ، المعنى نفسُهُ.</small></p>
+<div class="story">
+<p class="drop">صارتْ نورٌ بُرعمًا، وأحبَّتِ الكلامَ كثيرًا، لكنّها كانتْ لا تُنصِتُ لأحدٍ.</p>
+<p>مرَّ الصَّدى المُشَوَّشُ وكان يردُّ قبلَ أنْ يسمعَ، فقلَّدتْهُ نورٌ، فلم يفهمْها أحدٌ.</p>
+<p>قالَ القاضي ابنُ جماعةَ: «اجلسي بظهرٍ مستقيمٍ، وأنصتي حتى أُكمِلَ كلامي قبلَ أنْ تردّي.»</p>
+<p>أنصَتَتْ نورٌ... فسمعتْ ما وراءَ الكلماتِ! ثمَّ قالتْ: <b>«أُنْصِتُ إليكَ، فأفهمُكَ.»</b> فأنصَتَ الصَّدى وتعلَّمَ.</p>
+</div>
+</section>
+
+<section id="elements">
+<h2 class="sec"><span>العناصرُ الخمسةُ للتطبيقِ</span></h2>
+<table>
+<tr><th>العنصرُ</th><th>النشاطُ</th><th>الهدفُ</th></tr>
+<tr><td>المُخرَجُ اللُّغويُّ</td><td>«أُنْصِتُ إليكَ، فأفهمُ ما لم تقُلْهُ»</td><td>ربطُ الإنصاتِ بالفهمِ</td></tr>
+<tr><td>الحركةُ الجسديّةُ</td><td>يجلسُ بظهرٍ مستقيمٍ وينظرُ للمتكلِّمِ ويُنصِتُ حتى يُكمِلَ قبلَ الردِّ</td><td>تجسيدُ الإصغاءِ</td></tr>
+<tr><td>الدفءُ العلائقيُّ</td><td>يُعيدُ ما سمعَهُ («سمعتُ أنّكَ…») ليطمئنَّ المتكلِّمُ أنّهُ فُهِمَ</td><td>الإنصاتُ يُشعِرُ الآخرَ بقيمتِهِ</td></tr>
+<tr><td>البديلُ الحسّيُّ</td><td>يعُدُّ في سرِّهِ إلى خمسةٍ بعدَ أنْ يسكتَ المتكلِّمُ قبلَ أنْ يردَّ</td><td>ترسيخُ التأنّي حسّيًّا</td></tr>
+<tr><td>الجسرُ الإنجليزيُّ</td><td><span class="lat">«I listen to you, so I understand.»</span></td><td>التوازنُ اللُّغويُّ</td></tr>
+</table>
+
+<h3>الدرجةُ التحتيّةُ ومحكُّ الإتقانِ (متدرّجٌ)</h3>
+<p><b>محكٌّ من مرحلتينِ.</b> <b>بُرعمٌ مغلقٌ (بداية):</b> يُنصِتُ لحظةً قبلَ الردِّ بتذكيرٍ. ← <b>بُرعمٌ مغلقٌ (تمكُّن):</b> يجلسُ بظهرٍ مستقيمٍ ويُنصِتُ حتى ينتهيَ المتكلِّمُ ثمَّ يردُّ دونَ تذكيرٍ، ويُعيدُ صياغةَ ما سمعَهُ. (وللطفلِ أنْ يَعُدَّ في سرِّهِ إلى خمسةٍ إنْ أحبَّ — اقتراحٌ لطيفٌ لا شرطٌ.)</p>
+<h3>محكّاتُ <span class="lat">CASEL</span> السلوكيّةُ</h3>
+<ul>
+<li>يُنصِتُ دونَ مقاطعةِ المتكلِّمِ حتى يُنهيَ كلامَهُ.</li>
+<li>ينتظرُ دورَهُ في الكلامِ دونَ تعجُّلٍ.</li>
+<li>يُعيدُ صياغةَ ما سمعَهُ قبلَ أنْ يجيبَ (سمعتُ أنّكَ...).</li>
+<li>يجلسُ بظهرٍ مستقيمٍ ووجهُهُ نحوَ المتكلِّمِ.</li>
+</ul>
+</section>
+
+<section id="safestop">
+<h2 class="sec"><span>بروتوكولُ التوقُّفِ الآمنِ وبدائلُ الدمجِ</span></h2>
+<div class="note safe">
+<span class="mk">⚑</span> &nbsp;<b>بروتوكولُ التوقُّفِ الآمنِ.</b> إذا شعرَ الطفلُ بالمللِ أو العجزِ عن الجلوسِ، يُوقَفُ النشاطُ ويُقصَّرُ زمنُ الإنصاتِ. الإنصاتُ دعوةٌ لا عقابٌ، والجلوسُ الطويلُ ليسَ هدفًا — بل الانتباهُ للآخرِ بمحبّةٍ.
+</div>
+<table>
+<tr><th>الحالةُ</th><th>البديلُ المقترحُ</th></tr>
+<tr><td>فرطُ حركةٍ / صعوبةُ تركيزٍ</td><td>يُسمَحُ بحركةٍ هادئةٍ (كرةُ ضغطٍ) أثناءَ الإنصاتِ، وتُقصَّرُ المدّةُ إلى ثانيتينِ ثمَّ تُزادُ تدريجيًّا.</td></tr>
+<tr><td>ضعفُ السمعِ</td><td>يُعتمَدُ على النظرِ إلى وجهِ المتكلِّمِ وقراءةِ الشفاهِ والإيماءِ؛ الإنصاتُ هنا بصريٌّ لا سمعيٌّ فقط.</td></tr>
+<tr><td>طيفُ التوحّدِ <span class="lat">(ASD)</span></td><td>يُوضَّحُ المتوقَّعُ بصورةٍ أو جدولٍ، وتُقلَّلُ المشتّتاتُ، ويُقبَلُ إنصاتٌ دونَ تواصلٍ بصريٍّ مباشرٍ.</td></tr>
+<tr><td>قلقٌ اجتماعيٌّ</td><td>يبدأُ الإنصاتُ في ثنائيٍّ مألوفٍ قبلَ المجموعةِ، بِلا مطالبتِهِ بالردِّ فورًا.</td></tr>
+<tr><td>صعوباتُ تعلّمٍ لغويّةٌ</td><td>تُبسَّطُ جملةُ إعادةِ الصياغةِ، ويُقبَلُ التعبيرُ بكلمةٍ واحدةٍ أو إشارةٍ.</td></tr>
+<tr><td>اختلافٌ ثقافيٌّ</td><td>تُحترَمُ أعرافُ الإنصاتِ المختلفةِ؛ بعضُ الثقافاتِ تُنصِتُ بصمتٍ تامٍّ، وبعضُها بترديدٍ مُشجِّعٍ.</td></tr>
+</table>
+</section>
+
+<section id="guide">
+<h2 class="sec"><span>دليلُ الأهلِ والمعلّمِ</span></h2>
+<div class="card">
+<p><b>قبلَ الجلسةِ: صندوقُ الشاشاتِ.</b> ضعوا الأجهزةَ بعيدًا. الشاشةُ تتكلَّمُ ولا تُنصِتُ؛ ونحنُ نُعلِّمُ الطفلَ ما لا تُعلِّمُهُ الشاشةُ: أنْ يُصغيَ لإنسانٍ.</p>
+<p><b>أثناءَ الجلسةِ: لعبةُ الصدى الجميلِ.</b> بعدَ أنْ يتكلَّمَ أحدُكم، يُعيدُ الطفلُ ما سمعَهُ: «سمعتُ أنّكَ...». هذا يحوّلُ الإنصاتَ من صمتٍ سلبيٍّ إلى فهمٍ نشطٍ.</p>
+<p><b>بعدَ الجلسةِ: خمسُ ثوانٍ من ذهبٍ.</b> درّبوا العادةَ: بعدَ أنْ يسكتَ المتكلِّمُ، ننتظرُ خمسَ ثوانٍ قبلَ الردِّ. لاحظوا كيفَ يصيرُ الكلامُ أهدأَ وأعمقَ.</p>
+<p><span style="color:var(--gold-ink);font-weight:700">❦</span> &nbsp;<b>اجعلوها قابلةً للقياسِ.</b> سجِّلوا في مفكّرةِ الثلّاجةِ: «كم مرّةً أنصتَ طفلُنا حتى نهايةِ الكلامِ دونَ مقاطعةٍ؟» نجمةٌ لكلِّ مرّةٍ. عُدُّوا النجومَ في نهايةِ الأسبوعِ.</p>
+<blockquote>«الشاشةُ تُعلِّمُ الطفلَ أنْ يَرُدَّ بسرعةٍ. نحنُ نُعلِّمُهُ أنْ يُنصِتَ بعمقٍ.»</blockquote>
+</div>
+</section>
+
+<section id="jps">
+<h2 class="sec"><span>مقياسُ جُذُور النفسيُّ <span class="lat">(JPS)</span> — وحدةُ الكتابِ الرابعِ</span></h2>
+<div class="note warn">
+<span class="mk">⚠</span> &nbsp;<b>تنبيهٌ مهمٌّ.</b> مقياسُ جُذُور أداةُ <b>ملاحظةٍ تربويّةٍ</b> قيدَ التطويرِ — لا أداةَ تشخيصٍ نفسيٍّ أو طبّيٍّ. نتائجُهُ استرشاديّةٌ، ولا تُصدِرُ حُكمًا على الطفلِ.
+</div>
+<div class="note">
+<span class="mk">❦</span> &nbsp;<b>آليّةُ القياسِ التراكميّةُ.</b> اكتملتْ في مرحلةِ البذرةِ أبعادُ الجسدِ والصوتِ والنظرةِ. هذا الكتابُ — أوّلُ البرعمِ — يضيفُ أوّلَ بُعدٍ اجتماعيٍّ كاملٍ: <b>الإنصاتُ الفعّالُ</b>. تُملأُ مرّتينِ بمُقيِّمَيْنِ مستقلَّيْنِ حيثُ أمكنَ. المقياسُ: ○ نادرًا · ◐ أحيانًا · ● غالبًا.
+</div>
+<h3>البُعدُ الجديدُ: الإنصاتُ الفعّالُ</h3>
+<table>
+<tr><th>المؤشّرُ السلوكيُّ</th><th>○</th><th>◐</th><th>●</th><th>ملاحظة</th></tr>
+<tr><td>يُنصِتُ دونَ مقاطعةٍ حتى نهايةِ الكلامِ</td><td>○</td><td>◐</td><td>●</td><td></td></tr>
+<tr><td>يُعيدُ صياغةَ ما سمعَهُ بدقّةٍ</td><td>○</td><td>◐</td><td>●</td><td></td></tr>
+<tr><td>يجلسُ بانتباهٍ موجِّهًا وجهَهُ للمتكلِّمِ</td><td>○</td><td>◐</td><td>●</td><td></td></tr>
+<tr><td>ينتظرُ دورَهُ في الكلامِ دونَ تعجُّلٍ</td><td>○</td><td>◐</td><td>●</td><td></td></tr>
+</table>
+<p><b>تاريخُ القياسِ القبليِّ:</b> ________  <b>تاريخُ القياسِ البعديِّ:</b> ________</p>
+<p><small class="d">ملاحظةٌ بحثيّةٌ: المقياسُ فرضيّةٌ استكشافيّةٌ قابلةٌ للاختبارِ، تُجمَعُ نتائجُها تدريجيًّا لمعايرةٍ مستقبليّةٍ للمقياسِ الكاملِ.</small></p>
+</section>
+
+<section id="words">
+<h2 class="sec"><span>مفرداتُ الكتابِ</span></h2>
+<table>
+<tr><th>الكلمةُ</th><th>المعنى المبسّطُ</th><th><span class="lat">English</span></th></tr>
+<tr><td>سَمْعٌ</td><td>أنْ تُصغيَ بأُذنِكَ وقلبِكَ</td><td><span class="lat">hearing</span></td></tr>
+<tr><td>سامِعٌ</td><td>الذي يُنصِتُ باهتمامٍ</td><td><span class="lat">listener</span></td></tr>
+<tr><td>مَسموعٌ</td><td>الكلامُ الذي وصلَ وفُهِمَ</td><td><span class="lat">heard</span></td></tr>
+<tr><td>إنصاتٌ</td><td>أنْ تسكتَ وتُصغيَ بكلِّكَ</td><td><span class="lat">attentive listening</span></td></tr>
+<tr><td>مُسْتَمِعٌ</td><td>الذي يُصغي بقصدٍ وانتباهٍ</td><td><span class="lat">attentive listener</span></td></tr>
+</table>
+<div class="bridge">
+<div><b>المُخرَجُ بالعربيّةِ:</b> «أُنْصِتُ إِلَيْكَ، فَأَفْهَمُ مَا لَمْ تَقُلْهُ.»</div>
+<div><b><span class="lat">English Bridge:</span></b> <span class="lat" style="font-style:normal">“I listen to you, so I understand.” Before I answer, I truly listen — even to what you did not say.</span></div>
+</div>
+</section>
+
+<section id="questions">
+<h2 class="sec"><span>أسئلةُ الفهمِ</span></h2>
+<div class="card">
+<ul>
+<li>ماذا فعلَ البرعمُ المغلقُ في صمتٍ قبلَ أنْ يتفتَّحَ؟ <span class="pill">تذكُّر</span></li>
+<li>لماذا لم يفهمِ الصَّدى المُشوَّشُ ما قِيلَ لهُ؟ <span class="pill">استنتاج</span></li>
+<li>أَنصِتْ لصوتٍ حولَكَ خمسَ ثوانٍ — ماذا سمعتَ لم تنتبهْ لهُ من قبلُ؟ <span class="pill">حسّيّ</span></li>
+<li>متى شعرتَ أنَّ أحدًا أنصتَ إليكَ حقًّا؟ وكيفَ كان شعورُكَ؟ <span class="pill">ربطٌ شخصيٌّ</span></li>
+</ul>
+<blockquote>قَبْلَ أَنْ أُجِيبَ، أُنْصِتُ.<br>فَمَنْ أَنْصَتَ جَيِّدًا، أَجَابَ جَمِيلًا.</blockquote>
+<p><span style="color:var(--gold-ink);font-weight:700">❦</span> &nbsp;<b>ترجمةٌ سلوكيّةٌ (لا شعارٌ فقط).</b> علِّمِ الطفلَ: <b>«حِينَ يتكلَّمُ غيرُكَ، عُدَّ في سرِّكَ إلى خمسةٍ بعدَ أنْ يسكتَ، ثمَّ تكلَّمْ.»</b> فالإنصاتُ يبدأُ بألّا نتعجَّلَ الردَّ، كما تعلَّمتْ نورٌ.</p>
+</div>
+</section>
+
+<section id="media">
+<h2 class="sec"><span>نشاطٌ ووسائطُ</span></h2>
+<div class="card">
+<div class="qrwin"><div class="frameq"><div class="q"><span class="lat">QR</span></div></div><div class="cap">امسحِ الرمزَ للاستماعِ</div></div>
+<p><b>نشاطٌ فنّيٌّ.</b> اطلبْ من الطفلِ أنْ يرسمَ أُذنًا كبيرةً، وحولَها كلَّ الأصواتِ الجميلةِ التي يحبُّ أنْ يُنصِتَ إليها (صوتُ أمِّهِ، المطرُ، العصفورُ، الحكايةُ).</p>
+<p><b>نشاطٌ تمثيليٌّ.</b> يلعبُ طفلانِ: أحدُهما يحكي شيئًا حدثَ معهُ، والآخرُ يُنصِتُ ثمَّ يُعيدُ ما سمعَهُ. هل أصابَ؟ ثمَّ يتبادلانِ الدورَ.</p>
+<p><b>الوسائطُ الصوتيّةُ.</b> امسحِ الرمزَ للاستماعِ إلى القصّةِ، ولسماعِ الفرقِ بينَ مَن يردُّ بسرعةٍ ومَن يُنصِتُ أوّلًا. <small class="d">(عنوانُ الصوتِ محفوظٌ ويُختَمُ إلى الرمزِ قبلَ الطباعةِ.)</small></p>
+</div>
+</section>
+
+<section id="bridge">
+<h2 class="sec"><span>جسرُ الذاكرةِ — الصدى التراكميُّ</span></h2>
+<div class="bridge">
+<div>‹‹ &nbsp;<b>إلى الوراءِ — الكتابُ الثالثُ ونهايةُ البذرةِ.</b> «في البذرةِ تعلَّمتَ النَّفَسَ (أنا هنا)، فالصوتَ (صوتي لي)، فالنظرةَ (أراكَ). والآنَ — وقد انشقَّتْ قشرتُكَ وصرتَ بُرعمًا — تبدأُ مهارةً أعمقَ: أنْ تُنصِتَ. فالنظرةُ فتحتْ عينَيكَ على الآخرِ، والإنصاتُ يفتحُ قلبَكَ لهُ.»</div>
+<div><b>إلى الأمامِ — الكتابُ الخامسُ («سؤالُ البرعمِ»)</b> &nbsp;››<br><i>«حِينَ تُنصِتُ جيِّدًا، تنبثقُ في رأسِكَ أسئلةٌ. في الكتابِ القادمِ ستتعلَّمُ كيفَ تسألُ سؤالًا جميلًا هادئًا يفتحُ القلوبَ ويزيدُ الفهمَ.»</i></div>
+</div>
+</section>
+
+<section id="covenant">
+<h2 class="sec"><span>قائمةُ التحقُّقِ الملزِمةُ</span></h2>
+<p style="text-align:center"><small class="d">تُوقَّعُ قبلَ تمريرِ الكتابِ إلى الطباعةِ النهائيّةِ (مطابقةً للقالبِ الذهبيِّ):</small></p>
+<div class="covenant">
+<ul>
+<li>الجذرُ المعتمدُ (س-م-ع) صحيحٌ صرفيًّا، و«أسرةُ الجذرِ» معروضةٌ بدقّةٍ — صفرُ أخطاءٍ.</li>
+<li>الدرجةُ التحتيّةُ «بُرعمٌ مغلقٌ» متدرّجةٌ ومحكُّها من مرحلتينِ — أوّلُ قوسِ البرعمِ.</li>
+<li>محكّاتُ <span class="lat">CASEL</span> الأربعةُ (الوعيُ الاجتماعيُّ) مُدرَجةٌ كنواتجَ قابلةٍ للرصدِ.</li>
+<li>الشخصيّتانِ موثَّقتانِ (ابنُ جماعةَ قاضٍ وعالِمٌ تاريخيٌّ صنّفَ أدبَ السامعِ والمتكلّمِ + الجَدّةُ رملة نموذجٌ نسائيٌّ متكرّرٌ)، والصَّدى موسومٌ كرمزيٍّ لا تاريخيٍّ.</li>
+<li>البطلةُ «نور» تتكرّرُ وتنمو (صارتْ بُرعمًا)، والشخصيّةُ المضادّةُ تتحوّلُ لا تُشيطَنُ.</li>
+<li>كلُّ مهارةٍ مترجمةٌ إلى مرساةٍ حسّيّةٍ (الجلوسُ المستقيمُ والنظرُ للمتكلِّمِ والإنصاتُ حتى يُكمِلَ) — صفرُ نشاطٍ سلبيٍّ.</li>
+<li>تنبيهٌ استباقيٌّ (فرطُ الحركةِ) + بروتوكولُ توقفٍ آمنٍ + ٦ بدائلِ دمجٍ (تشملُ <span class="lat">ASD</span> وضعفَ السمعِ) — صفرُ إكراهٍ.</li>
+<li>نسختانِ للسردِ (موجزةٌ/كاملةٌ) تراعيانِ فروقَ الانتباهِ.</li>
+<li>الصدى التراكميُّ <b>ثنائيُّ الاتجاهِ</b>: يربطُ بنهايةِ البذرةِ ويمهّدُ للسؤالِ (الكتابُ الخامسُ) — صفرُ حلقةٍ منفصلةٍ.</li>
+<li>المقياسُ يضيفُ بُعدًا جديدًا (الإنصاتُ الفعّالُ) أوّلَ أبعادِ الوعي الاجتماعيِّ — نموٌّ تراكميٌّ.</li>
+<li>أسئلةُ الفهمِ تشملُ سؤالًا حسّيًّا، والدرسُ مترجَمٌ إلى قاعدةٍ سلوكيّةٍ.</li>
+<li><b>التشكيلُ مدقّقٌ على كلِّ كلمةٍ في القصّةِ.</b></li>
+<li>رسومٌ أصليّةٌ (٥ مشاهد) بلوحةِ البرعمِ الخضراءِ + موتيفُ موجاتِ الإنصاتِ + رمزُ <span class="lat">QR</span> + جسرٌ ثنائيُّ اللغةِ.</li>
+<li>صفحةُ حقوقٍ موحّدةٌ بختمِ جُذُور الرسميِّ + غلافانِ أماميٌّ وخلفيٌّ.</li>
+</ul>
+<div class="sig">
+<b>التوقيعاتُ قبلَ الطباعةِ:</b><br>
+المؤلف ______ · المراجع اللغوي ______ · <b>المراجع الصرفي</b> ______ · <b>المراجع التراثي</b> ______<br>
+المراجع النفسي/التربوي ______ · المخرج الفني ______
+</div>
+</div>
+</section>
+
+</main>
+
+<footer class="colophon">
+<div class="mark">❦ · جُذُور · ❦</div>
+<p style="max-width:660px;margin:.4em auto"><b>د. عادل ف. عامر</b> — خبيرُ اللغةِ العربيةِ والتربيةِ، مؤسِّسُ منظومةِ <b>جُذُور</b> (نظريّةُ القراءةِ الملموسةِ <span class="lat">CRT</span> — عامر 2024). «فنُّ البيان» سلسلتُهُ في مهارتَيِ التحدّثِ وفنِّ الحوارِ، تنمو خطوةً خطوةً.</p>
+<p style="letter-spacing:1px;font-size:15px">بَذْرَةٌ تَبْقَى لِتَنْمُوَ مِنْ بَعْدِنَا</p>
+<p style="font-size:13.5px;color:#6a4e2c">جُذُور · فنّ البيان · الكتابُ الرابع «إِنْصَاتُ البرعم» · الطبعةُ التراثيّةُ · <span class="lat">ORCID 0009-0008-9618-3863</span> · عامر (2024)</p>
+</footer>
+
+<section class="backcover" aria-label="الغلاف الخلفيّ">
+<svg width="92" height="118" viewBox="86 68 268 392" role="img" aria-label="ختمُ جُذُور المطويّ بألوان البرعم، صغيرًا.">
+<g transform="translate(20,0)">
+  <polygon points="135,188 200,215 200,300 70,300" fill="#D9A05C"/><polygon points="265,188 200,215 200,300 330,300" fill="#3E5852"/>
+  <polygon points="200,75 200,215 135,188" fill="#7E8C48"/><polygon points="200,75 265,188 200,215" fill="#647034"/>
+  <path d="M200 75 L200 300" stroke="#EAD7A2" stroke-width="1.1" opacity=".5" fill="none"/>
+  <polygon points="198,178 163,216 198,254" fill="#4A3620"/><polygon points="202,178 237,216 202,254" fill="#2E2010"/>
+  <path d="M200 183 C186 199 186 233 200 251 L200 183 Z" fill="#E3C063" stroke="#5A3D1E" stroke-width="1.4"/>
+  <path d="M200 183 C214 199 214 233 200 251 L200 183 Z" fill="#C0912E" stroke="#5A3D1E" stroke-width="1.4"/>
+  <g fill="none" stroke="#6E4E2E" stroke-linecap="round"><path d="M200 300 C200 344 200 388 200 448" stroke-width="4"/><path d="M200 312 C176 338 154 366 138 414" stroke-width="3"/><path d="M200 312 C224 338 246 366 262 414" stroke-width="3"/></g>
+  <path d="M200 183 C199 171 200 162 201 150" stroke="#4f5f2b" stroke-width="2.6" fill="none"/>
+  <path d="M200 172 C188 173 177 170 171 159 C181 160 193 165 200 170 Z" fill="#5f7034"/>
+  <path d="M201 159 C210 159 218 155 222 145 C216 151 207 155 201 157 Z" fill="#6a7d3c"/>
+</g>
+</svg>
+<div style="letter-spacing:1px;color:var(--oxblood);font-size:15px;margin-top:.4em">جُذُور · فنّ البيان · الكتابُ الرابع</div>
+<h2 style="font-size:34px;margin:.1em 0">إِنْصَاتُ الْبُرْعُمِ</h2>
+<div class="mission">لإنقاذِ أطفالِ العالمِ من وباءِ الشاشاتِ — ولنُعلِّمَ الطفلَ أنْ يُصغيَ لإنسانٍ لا أنْ يَرُدَّ بسرعةٍ.</div>
+<p class="blurb">صارتْ نورُ بُرعمًا تحبُّ الكلامَ، لكنّها لا تُنصِتُ لأحدٍ. مرَّ الصَّدى المُشَوَّشُ يردُّ قبلَ أنْ يسمعَ، فقلَّدتْهُ فلم يفهمْها أحدٌ. فأنصتَ إليها القاضي ابنُ جماعةَ والجَدّةُ رملةُ بلا مقاطعةٍ حتى أنهتْ، فوصلَ كلامُها لأوّلِ مرّةٍ. فجلستْ بظهرٍ مستقيمٍ وأنصتتْ، فتفتّحتْ منها ورقةٌ كأذنٍ، وسمعتْ ما وراءَ الكلماتِ: المطرَ تعبًا، والريحَ وحيدةً. ثمَّ أجابتْ جوابًا جميلًا وقالتْ: «أُنْصِتُ إليكَ، فأفهمُكَ» — فأنصَتَ الصَّدى وتعلَّمَ أنَّ الردَّ الجميلَ يبدأُ بإنصاتٍ جميلٍ. قصّةٌ حسّيّةٌ على نهجِ <b>نظريّةِ القراءةِ الملموسةِ</b>: الإنصاتُ نصفُ الحوارِ الأجملُ.</p>
+<blockquote style="max-width:560px;margin-inline:auto">«أُنْصِتُ إِلَيْكَ — فَأَفْهَمُكَ»</blockquote>
+<div class="isbn">مرحلةُ البرعمِ · ٧–٩ سنوات · <span class="lat">CEFR A1 · CASEL Social Awareness</span></div>
+<div class="spinecode">JUTHUR · BAYAN · 04</div>
+<div class="isbn" style="margin-top:.6em">بَذْرَةٌ تَبْقَى لِتَنْمُوَ مِنْ بَعْدِنَا · عامر (2024)</div>
+</section>
+
+</article>
+
+<div style="text-align:center;font-family:Amiri,serif;color:#7A6A4F;font-size:.88rem;margin:24px 0">⟋ «كُلُّ يَدٍ تَتْرُكُ أَثَرًا. وَكُلُّ أَثَرٍ يُعَلِّمُ يَدًا جَدِيدَةً.» — جُذُور · Amer (2024)</div>
+</body>
+</html>

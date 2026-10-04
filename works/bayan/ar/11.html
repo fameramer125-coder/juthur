@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="author" content="Dr. Adel F. Amer">
+<meta name="description" content="جُذُور · فنّ البيان — الكتاب الحادي عشر: عذرُ الغصن. الطبعة التراثيّة.">
+<title>جُذُور · فنّ البيان — الكتاب الحادي عشر: عذرُ الغصن (الطبعة التراثيّة)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parch:#f4ead0; --parch-deep:#ece0c2; --ink:#2c2118; --sepia:#6a4e2c;
+  --gold:#a6862f; --gold-ink:#8b6914; --oxblood:#7a2e1f;
+  --seed:#4f5f2b; --emerald:#254032; --frame:#7c5a2a;
+  --stage-lit:#D5A15E; --stage-crown:#86894B; --stage-shadow:#47564A;
+}
+*{box-sizing:border-box}
+html{background:#241a10}
+body{font-family:'Amiri',serif;color:var(--ink);line-height:1.95;margin:0;font-size:19px;direction:rtl;
+  text-rendering:optimizeLegibility;
+  background:radial-gradient(ellipse at 80% 8%, rgba(255,250,235,.55), transparent 60%),radial-gradient(ellipse at 15% 92%, rgba(120,90,45,.10), transparent 55%),repeating-linear-gradient(0deg, rgba(120,90,45,.014) 0 2px, transparent 2px 4px),var(--parch);}
+p{margin:0 0 .86em}
+.lat{font-family:'EB Garamond',serif;direction:ltr;unicode-bidi:isolate}
+.en{font-family:'Cormorant Garamond',serif;direction:ltr;unicode-bidi:isolate;font-style:italic}
+.skip{position:absolute;right:-999px;top:0;background:var(--oxblood);color:#fff;padding:8px 14px;border-radius:0 0 0 6px;z-index:99}
+.skip:focus{right:0}
+.leaf{max-width:880px;margin:1.72em auto;background:radial-gradient(circle at 70% 0%, rgba(255,252,240,.7), transparent 45%),var(--parch);border:2px solid var(--frame);box-shadow:0 0 0 7px var(--parch),0 0 0 8px var(--gold),0 18px 50px rgba(0,0,0,.5);position:relative;padding:2.58em 2.4em;}
+.leaf::before{content:"";position:absolute;inset:12px;border:1px solid rgba(124,90,42,.5);pointer-events:none}
+.corner{position:absolute;font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:32px;line-height:1}
+.corner.tl{top:6px;left:12px}.corner.tr{top:6px;right:12px}.corner.bl{bottom:2px;left:12px}.corner.br{bottom:2px;right:12px}
+.crest{display:block;margin:0 auto}
+.house{text-align:center;letter-spacing:2px;font-size:14px;color:var(--sepia);margin-top:.4em}
+h1,h2,h3,h4{font-family:'Amiri',serif;color:var(--ink);font-weight:700;line-height:1.5}
+.frontispiece{text-align:center;padding:.6em 10px .2em;border-bottom:1px double var(--gold);margin-bottom:.86em}
+.frontispiece .bookno{letter-spacing:1px;color:var(--oxblood);font-size:16px}
+.frontispiece h1{font-size:52px;margin:.1em 0 .05em;color:var(--ink)}
+.frontispiece .translit{font-style:italic;color:var(--sepia);font-size:19px}
+.frontispiece .motto{font-family:'Amiri',serif;font-size:24px;color:var(--oxblood);margin:.5em auto;max-width:600px}
+.frontispiece .stage{letter-spacing:1px;color:var(--sepia);font-size:16px}
+.legal{border:1px solid rgba(124,90,42,.4);border-radius:4px;background:rgba(255,251,240,.5);padding:1em 1.4em;margin:1.4em 0;font-size:15.5px;color:var(--sepia);position:relative;line-height:1.9}
+.legal .copyr{font-weight:700;color:var(--ink)}
+.legal .qbadge{float:left;margin:0 16px 10px 0}
+.legal b{color:var(--emerald)}
+.legal .qmark-line{color:var(--oxblood);letter-spacing:.5px;border-top:1px solid rgba(166,134,47,.4);border-bottom:1px solid rgba(166,134,47,.4);padding:.45em 0;text-align:center;margin:.7em 0}
+.legal .imprint{letter-spacing:.5px;font-size:14px}
+.arc{display:flex;align-items:center;justify-content:center;gap:0;margin:1.2em auto .4em;flex-wrap:wrap}
+.arc .node{letter-spacing:.5px;font-size:14.5px;color:var(--sepia);display:inline-flex;align-items:center;gap:5px;font-family:'Amiri',serif}
+.arc .dot{width:11px;height:11px;border-radius:50%;border:1.4px solid var(--gold-ink);display:inline-block}
+.arc .node.on .dot{background:var(--gold-ink)} .arc .node.on{color:var(--oxblood);font-weight:700}
+.arc .node.done .dot{background:rgba(139,105,20,.4)}
+.arc .lnk{width:26px;height:1px;background:linear-gradient(90deg,var(--gold),rgba(166,134,47,.3));margin:0 3px}
+.toc{border:1px solid rgba(124,90,42,.35);border-radius:4px;padding:.6em 1.2em;margin:1.4em 0;background:rgba(255,251,240,.5);columns:2;column-gap:2em;font-size:16px}
+.toc h3{margin:.2em 0 .4em;letter-spacing:.5px;color:var(--emerald);column-span:all}
+.toc a{color:var(--sepia);text-decoration:none;display:block;padding:.14em 0;border-bottom:1px dotted rgba(124,90,42,.3)}
+.toc a:hover{color:var(--oxblood)}
+.rule-orn{border:0;text-align:center;margin:1.72em 0}
+.rule-orn::before{content:"❦   ✦   ❦";color:var(--gold-ink);letter-spacing:8px;font-size:16px}
+.thread{background:linear-gradient(270deg,rgba(166,134,47,.10),rgba(166,134,47,.02));border:1px solid var(--gold);border-right:5px solid var(--gold);border-radius:3px;padding:.86em 1em;margin:1.72em 0;font-size:17.5px;color:var(--sepia)}
+.thread b{color:var(--oxblood)}
+h2.sec{font-size:31px;margin:2.4em 0 .86em;color:var(--ink);text-align:center;position:relative}
+h2.sec span{background:var(--parch);padding:0 18px;position:relative;z-index:1}
+h2.sec::after{content:"";position:absolute;left:0;right:0;top:52%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.note{border:1px solid var(--gold);border-right:5px solid var(--gold);background:rgba(255,250,235,.55);border-radius:3px;padding:.86em 1em;margin:1.72em 0}
+.note.warn{border-right-color:var(--oxblood)} .note.safe{border-right-color:var(--stage-crown)}
+.note .mk{color:var(--gold-ink);font-weight:700} .note.warn .mk{color:var(--oxblood)} .note.safe .mk{color:var(--stage-crown)}
+.card{background:rgba(255,251,240,.6);border:1px solid rgba(124,90,42,.35);border-radius:4px;padding:.6em 1.3em;margin:1.72em 0}
+table{width:100%;border-collapse:collapse;margin:.86em 0;font-size:16.5px}
+th,td{border:1px solid rgba(124,90,42,.28);padding:.5em .7em;text-align:right;vertical-align:top}
+th{background:transparent;color:var(--emerald);font-family:'Amiri',serif;font-weight:700;border-bottom:2px solid var(--gold)}
+tr:nth-child(even) td{background:rgba(124,90,42,.05)}
+.plate{margin:1.72em 0;border:1px solid rgba(124,90,42,.4);border-radius:4px;background:rgba(255,252,242,.5);padding:10px 10px 6px;box-shadow:inset 0 0 0 3px rgba(134,137,75,.22)}
+.plate svg{display:block;width:100%;height:auto;border-radius:2px}
+.plate figcaption{font-family:'Amiri',serif;color:var(--sepia);text-align:center;font-size:16px;margin-top:.3em}
+.scene h4{color:var(--oxblood);font-size:21px;margin:1.2em 0 .3em;text-align:center}
+.scene h4::before,.scene h4::after{content:"❧";color:var(--gold-ink);font-size:14px;margin:0 .5em;vertical-align:middle}
+.story{background:rgba(255,252,242,.7);border:1px solid rgba(124,90,42,.3);border-radius:4px;padding:1em 1.5em;font-size:20px;line-height:2.05}
+.story .drop::first-letter{font-family:'Amiri',serif;font-size:3.2em;line-height:.7;float:right;padding:.05em 0 0 .12em;color:var(--oxblood);font-weight:700}
+.dialogue{color:var(--sepia)}
+.pill{display:inline-block;background:rgba(166,134,47,.14);border:1px solid var(--gold-ink);border-radius:10px;padding:1px 9px;font-size:13px;color:var(--sepia)}
+.bridge{display:flex;gap:16px;flex-wrap:wrap}
+.bridge>div{flex:1 1 300px;background:rgba(255,251,240,.6);border:1px solid rgba(124,90,42,.3);border-radius:4px;padding:.86em 1em}
+.qrwin{width:140px;float:left;margin:0 18px 10px 0;text-align:center}
+.qrwin .frameq{border:2px double var(--gold);border-radius:4px;padding:8px;position:relative;background:rgba(255,252,242,.7)}
+.qrwin .frameq::before{content:"❦";position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--parch);color:var(--gold-ink);padding:0 4px;font-size:13px}
+.qrwin .q{width:100%;aspect-ratio:1;border:1px solid rgba(124,90,42,.4);display:flex;align-items:center;justify-content:center;color:var(--sepia);font-size:13px}
+.qrwin .cap{letter-spacing:.5px;color:var(--sepia);font-size:13px;margin-top:.3em}
+blockquote{border:0;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);margin:1.2em 0;padding:.6em 1em;color:var(--oxblood);text-align:center;font-family:'Amiri',serif;font-size:22px}
+.covenant{border:2px double var(--gold);border-radius:4px;padding:.86em 1.4em;margin:1.2em 0;background:rgba(255,251,240,.5)}
+.covenant ul{list-style:none;padding-right:0;margin:.4em 0}
+.covenant li{position:relative;padding-right:1.6em;margin:.5em 0}
+.covenant li::before{content:"❧";position:absolute;right:0;color:var(--gold-ink)}
+.sig{background:rgba(166,134,47,.07);border:1px dashed var(--gold);border-radius:4px;padding:.86em 1.1em;margin-top:.86em}
+.colophon{margin-top:2.4em;border-top:1px double var(--gold);padding-top:1em;text-align:center;color:var(--sepia)}
+.colophon .mark{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--oxblood);letter-spacing:2px}
+.backcover{margin-top:2.2em;border:2px double var(--gold);border-radius:6px;padding:1.6em 1.4em;text-align:center;background:radial-gradient(circle at 50% 0%,rgba(134,137,75,.13),transparent 60%),rgba(255,251,240,.6)}
+.backcover .blurb{max-width:620px;margin:.8em auto;font-size:18px;line-height:2}
+.backcover .mission{color:var(--oxblood);font-family:'Amiri',serif;font-size:20px;margin:.6em auto;max-width:580px}
+.backcover .isbn{letter-spacing:.5px;color:var(--sepia);font-size:13px;margin-top:1em}
+.spinecode{display:inline-block;margin-top:.4em;padding:6px 10px;border:1px solid var(--gold);border-radius:3px;background:#fff;font-family:monospace;letter-spacing:2px;color:#222;direction:ltr}
+small.d{color:#6a4e2c}
+ul li{margin:.3em 0}
+@media print{@page{margin:16mm;@bottom-center{content:counter(page);font-family:'Amiri',serif;color:#8b6914;font-size:9pt}}
+  html,body{background:#fdfaf2 !important}body{font-size:12pt;color:#1e1810}.skip,.toc{display:none}
+  .leaf{max-width:100%;margin:0;border:0.6pt solid #a6862f;box-shadow:none;padding:10mm}.leaf::before{inset:5px;border:0.4pt solid #a6862f}
+  .frontispiece h1{font-size:34pt}h2.sec::after{background:#a6862f;height:.5pt}
+  .note,.card,.story,.plate,.covenant,.bridge>div,figure,table,.scene,.sig,.backcover,.legal{box-shadow:none;background:#fdfaf2 !important;page-break-inside:avoid;break-inside:avoid}
+  tr,thead,h2.sec{page-break-inside:avoid;break-inside:avoid}h2,h3,h4{page-break-after:avoid}
+  tr:nth-child(even) td{background:#f6efdd !important}a{color:inherit;text-decoration:none}}
+</style>
+<link rel="canonical" href="https://fameramer125-coder.github.io/juthur/works/bayan/ar/11">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Fraunces:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet">
+<style id="jw-bar-css">
+.jw-bar{position:sticky;top:0;z-index:9999;display:flex;flex-wrap:wrap;gap:.25rem 1.1rem;align-items:center;justify-content:center;
+ margin:0;padding:7px 16px;background:#1B3A2F;color:#FBF9F4;font-family:'Amiri',Georgia,serif;font-size:15px;line-height:1.5;
+ border-bottom:2px solid #9A7B23;box-shadow:0 2px 6px rgba(0,0,0,.18);font-style:normal;font-weight:400;letter-spacing:0;text-align:center}
+.jw-bar a{color:#FBF9F4;text-decoration:none;border-bottom:1px solid transparent;padding:0 1px}
+.jw-bar a:hover{border-bottom-color:#C9A227}
+.jw-bar a:focus-visible{outline:2px solid #C9A227;outline-offset:3px}
+.jw-bar .jw-k{color:#C9A227;font-size:12px;letter-spacing:.18em}
+.jw-bar .jw-d{color:#C9A227;font-size:13px;border:1px solid #C9A227;padding:0 .5em}
+.jw-bar[dir=ltr]{font-family:'Fraunces',Georgia,serif;font-size:14px}
+.jw-bar [lang=ar]{font-family:'Amiri',serif}
+@media print{.jw-bar{display:none!important}}
+</style>
+</head>
+<body>
+<nav class="jw-bar" dir="rtl" lang="ar" aria-label="تنقّل المكتبة المفتوحة"><span class="jw-k">مَطبعةُ جُذور · دبي · MCMXXVI</span> <a href="../../../">جُذور · الدار</a> <a href="../../">المكتبةُ المفتوحة</a> <a href="../../../asfar/sifr-11">صفحةُ السِّفر</a> <a href="../en/11" lang="en">English</a></nav>
+
+<a class="skip" href="#begin">تخطَّ إلى المحتوى</a>
+<article class="leaf">
+<span class="corner tl">❧</span><span class="corner tr">❧</span><span class="corner bl">❧</span><span class="corner br">❧</span>
+
+<header>
+<svg class="crest" width="164" height="210" viewBox="86 68 268 392" role="img" aria-label="شعار جُذُور المطويّ بألوان مرحلة الغصن: مثلّثٌ مطويٌّ على حرفٍ مركزيٍّ إلى وجهٍ كهرمانيٍّ مضيءٍ ووجهٍ رماديٍّ أخضرَ داكنٍ تحت تاجٍ زيتونيٍّ، ومصراعانِ مطويّانِ منفرجانِ يكشفانِ بذرةً ذهبيّةً، برعمًا فوقها وجذورًا تحتها.">
+<g transform="translate(20,0)">
+  <g fill="none" stroke="#6E4E2E" stroke-linecap="round">
+    <path d="M200 300 C200 344 200 388 200 448" stroke-width="4"/>
+    <path d="M200 312 C176 338 154 366 138 414" stroke-width="3"/><path d="M200 312 C224 338 246 366 262 414" stroke-width="3"/>
+    <path d="M200 326 C186 352 172 380 164 428" stroke-width="2.2" opacity=".85"/><path d="M200 326 C214 352 228 380 236 428" stroke-width="2.2" opacity=".85"/>
+    <path d="M200 340 C214 366 218 394 214 444" stroke-width="1.8" opacity=".7"/>
+  </g>
+  <polygon points="135,188 200,215 200,300 70,300" fill="#D5A15E"/><polygon points="265,188 200,215 200,300 330,300" fill="#47564A"/>
+  <polygon points="200,75 200,215 135,188" fill="#86894B"/><polygon points="200,75 265,188 200,215" fill="#6b7040"/>
+  <g stroke-linecap="round" fill="none"><path d="M200 75 L200 300" stroke="#EAD7A2" stroke-width="1.1" opacity=".5"/>
+    <path d="M135 188 L200 215 L265 188" stroke="#2c1f10" stroke-width="0.8" opacity=".2"/><path d="M70 300 L200 215 L330 300" stroke="#2c1f10" stroke-width="0.8" opacity=".16"/></g>
+  <polygon points="198,178 163,216 198,254" fill="#4A3620"/><polygon points="202,178 237,216 202,254" fill="#2E2010"/>
+  <path d="M198 178 L198 254 M202 178 L202 254" stroke="#140c04" stroke-width="0.7" opacity=".5"/>
+  <path d="M200 183 C186 199 186 233 200 251 L200 183 Z" fill="#E3C063" stroke="#5A3D1E" stroke-width="1.4"/>
+  <path d="M200 183 C214 199 214 233 200 251 L200 183 Z" fill="#C0912E" stroke="#5A3D1E" stroke-width="1.4"/>
+  <path d="M200 183 L200 251" stroke="#5A3D1E" stroke-width="0.8" opacity=".8"/>
+  <path d="M200 183 C199 171 200 162 201 150" stroke="#4f5f2b" stroke-width="2.6" fill="none"/>
+  <path d="M200 172 C188 173 177 170 171 159 C181 160 193 165 200 170 Z" fill="#5f7034"/>
+  <path d="M201 159 C210 159 218 155 222 145 C216 151 207 155 201 157 Z" fill="#6a7d3c"/>
+</g>
+</svg>
+<div class="house">جُذُور · فنّ البيان · <span class="lat">Juthur · The Art of Expression</span></div>
+
+<div class="frontispiece">
+  <div class="bookno">الكتاب الحادي عشر · الغلاف الأماميّ · خِتامُ الغصنِ</div>
+  <h1>عُذْرُ الْغُصْنِ</h1>
+  <div class="translit"><span class="lat">Udhr al-Ghusn</span> · The Branch's Apology</div>
+  <div class="motto">«أَعْتَذِرُ — فَأُصْلِحُ مَا كَسَرْتُ»</div>
+  <div class="stage">المقامُ الأوسطُ · مرحلةُ الغصنِ · غُصنٌ يُثمِرُ بُرعمًا · ١٠–١٢ سنة · محاذاةٌ استرشاديّةٌ <span class="lat">CEFR A2 · ACTFL Intermediate Low</span></div>
+  <div style="margin-top:.5em;font-size:15px;color:var(--sepia)">د. عادل ف. عامر &nbsp;·&nbsp; <span class="lat">ORCID 0009-0008-9618-3863</span> &nbsp;·&nbsp; نظريّةُ القراءةِ الملموسةِ <span class="lat">(CRT)</span>، عامر (2024)</div>
+</div>
+
+<div class="arc" aria-label="المواسم الستّة؛ هذا الكتاب خِتامُ مرحلة الغصن.">
+  <span class="node done"><span class="dot"></span>بَذْرَة</span><span class="lnk"></span>
+  <span class="node done"><span class="dot"></span>بُرْعُم</span><span class="lnk"></span>
+  <span class="node on"><span class="dot"></span>غُصْن</span><span class="lnk"></span>
+  <span class="node"><span class="dot"></span>أوراق</span><span class="lnk"></span>
+  <span class="node"><span class="dot"></span>ثَمَر</span><span class="lnk"></span>
+  <span class="node"><span class="dot"></span>حَصاد</span>
+</div>
+</header>
+
+<section class="legal" aria-label="حقوق النشر والامتياز">
+<svg class="qbadge" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 120 120" width="112" height="112" role="img" aria-label="ختم جُذُور الرسميّ: بذرةٌ ذهبيّةٌ يعلوها برعمٌ وتحتها جذورٌ، في قلبها اسمُ جُذُور، يُحيط بها اسمُ الختم بالإنجليزيّة وعبارةُ CRT Aligned.">
+  <defs>
+    <path id="arcTop" d="M 20 60 A 40 40 0 0 1 100 60"/>
+    <path id="arcBot" d="M 100 60 A 40 40 0 0 1 20 60"/>
+    <radialGradient id="seedGrad" cx="0.42" cy="0.32" r="0.88"><stop offset="0" stop-color="#ecd488"/><stop offset="0.6" stop-color="#c0912e"/><stop offset="1" stop-color="#8B6914"/></radialGradient>
+    <radialGradient id="seedGlow" cx="0.5" cy="0.4" r="0.5"><stop offset="0" stop-color="#f4e8b8" stop-opacity="0.6"/><stop offset="1" stop-color="#c0912e" stop-opacity="0"/></radialGradient>
+  </defs>
+  <circle cx="60" cy="60" r="57" fill="#f7efda" stroke="#a6862f" stroke-width="1.6"/>
+  <circle cx="60" cy="60" r="51" fill="none" stroke="#a6862f" stroke-width="0.7"/>
+  <circle cx="60" cy="60" r="46" fill="none" stroke="#c9a961" stroke-width="0.3" stroke-dasharray="2 3"/>
+  <path d="M20 60 l2.8 -2.8 l2.8 2.8 l-2.8 2.8 z" fill="#a6862f"/>
+  <path d="M100 60 l-2.8 -2.8 l-2.8 2.8 l2.8 2.8 z" fill="#a6862f"/>
+  <text font-family="'Cormorant Garamond',serif" font-size="12" letter-spacing="3.5" fill="#7a2e1f" font-weight="700"><textPath xlink:href="#arcTop" startOffset="50%" text-anchor="middle">JUTHUR</textPath></text>
+  <text font-family="'Cormorant Garamond',serif" font-size="9.5" letter-spacing="2" fill="#254032" font-weight="600"><textPath xlink:href="#arcBot" startOffset="50%" text-anchor="middle">&#183; CRT Aligned &#183;</textPath></text>
+  <path d="M60 38 L60 32" stroke="#4f5f2b" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M60 35 C54 31 47 34 50 40 C55 41 58 38 60 35 Z" fill="#5f7034"/>
+  <path d="M60 35 C66 31 73 34 70 40 C65 41 62 38 60 35 Z" fill="#6a7d3c"/>
+  <ellipse cx="60" cy="52" rx="7.5" ry="10" fill="url(#seedGrad)" stroke="#5A3D1E" stroke-width="1.2"/>
+  <ellipse cx="60" cy="50" rx="5" ry="6" fill="url(#seedGlow)"/>
+  <circle cx="60" cy="50" r="1.6" fill="#7a2e1f" opacity="0.85"/><circle cx="60" cy="50" r="0.7" fill="#f4e8b8"/>
+  <line x1="42" y1="62" x2="78" y2="62" stroke="#a6862f" stroke-width="0.8" stroke-linecap="round"/>
+  <line x1="44" y1="62.8" x2="76" y2="62.8" stroke="#c9a961" stroke-width="0.4" stroke-linecap="round"/>
+  <g fill="none" stroke="#6E4E2E" stroke-width="1.4" stroke-linecap="round">
+    <path d="M60 62 C60 70 60 76 60 84"/><path d="M60 66 C55 72 50 78 46 86"/><path d="M60 66 C65 72 70 78 74 86"/>
+    <path d="M58 64 C52 70 46 76 42 82"/><path d="M62 64 C68 70 74 76 78 82"/></g>
+  <circle cx="60" cy="84" r="1" fill="#6E4E2E"/><circle cx="46" cy="86" r="1" fill="#6E4E2E"/><circle cx="74" cy="86" r="1" fill="#6E4E2E"/>
+  <circle cx="42" cy="82" r="0.8" fill="#6E4E2E"/><circle cx="78" cy="82" r="0.8" fill="#6E4E2E"/>
+  <text x="60" y="102" text-anchor="middle" font-family="'Amiri', serif" font-size="17" fill="#254032" font-weight="700" letter-spacing="0.5">جُذُور</text>
+  <line x1="46" y1="105" x2="74" y2="105" stroke="#a6862f" stroke-width="0.6" stroke-linecap="round"/>
+</svg>
+<p class="copyr">&copy; 2024 عادل ف. عامر (<span class="lat">Adel F. Amer</span>). جميعُ الحقوقِ محفوظةٌ.</p>
+<p><b>التأليفُ والذكاءُ الاصطناعيُّ.</b> جميعُ المحتوى والأفكارِ في هذا العملِ مساهمةٌ أصليّةٌ حصريّةٌ للمؤلِّفِ، واستُخدِمَت أدواتُ الذكاءِ الاصطناعيِّ التوليديِّ أداةً مساعدةً في التحريرِ اللغويِّ والإخراجِ فقط.</p>
+<p><b>الملكيّةُ الفكريّةُ.</b> مصطلحا <b>جُذُور</b> و<b>نظريّةِ القراءةِ الملموسةِ <span class="lat">(CRT)</span></b>، وكلُّ ما يرتبطُ بهما من مصطلحاتٍ وأُطُرٍ ومنهجيّاتٍ، ملكيّةٌ فكريّةٌ حصريّةٌ للمؤلِّفِ.</p>
+<p><b>الاستخدامُ والاقتباسُ.</b> يُسمَحُ بالاقتباسِ الموجزِ لأغراضٍ أكاديميّةٍ أو تعليميّةٍ أو نقديّةٍ بشرطِ الإشارةِ الواضحةِ للمؤلِّفِ والمصدرِ؛ وتحتاجُ إعادةُ النشرِ الكاملةُ أو الترجمةُ أو الأعمالُ المشتقّةُ إذنًا كتابيًّا من المؤلِّفِ.</p>
+<p class="qmark-line">&#10022; علامةُ الجودةِ &#10022; &nbsp;أُنتِجَ وفقَ المعاييرِ الداخليّةِ لمشروعِ جُذُور · متوائمٌ مع نظريّةِ القراءةِ الملموسةِ <span class="lat">(CRT)</span>.</p>
+<p class="imprint"><span class="lat">ISBN: ____</span> · الطبعةُ الأولى 2024 · بَذْرَةٌ تَبْقَى لِتَنْمُوَ مِنْ بَعْدِنَا · عامر (2024)</p>
+</section>
+
+<p style="text-align:center;color:var(--sepia)">
+منظومةُ <b>جُذُور</b> · <b>فنُّ البيان</b> — عشرونَ كتابًا. تعلَّمتْ <b>نور</b> فنَّ الحوارِ. لكنْ في كلِّ حوارٍ قد نُخطئُ أو نجرحُ. والآنَ تتعلَّمُ أعظمَ مهارةٍ تختمُ الغصنَ: الاعتذارَ — أنْ تعترفَ بخطئِكَ وتُصلِحَهُ — عبرَ <b>نظريّةِ القراءةِ الملموسةِ</b> <span class="lat">(CRT)</span>، عامر (2024).
+</p>
+
+<nav class="toc" aria-label="المحتويات">
+<h3>المحتويات</h3>
+<a href="#begin">قبلَ أنْ تبدأ</a>
+<a href="#id">بطاقةُ هُويّةِ الكتابِ</a>
+<a href="#root">الجذرُ وأسرتُهُ</a>
+<a href="#story">القصّةُ الكاملةُ: «عُذرُ نورٍ»</a>
+<a href="#brief">النسخةُ الموجزةُ</a>
+<a href="#elements">العناصرُ الخمسةُ للتطبيقِ</a>
+<a href="#safestop">التوقُّفُ الآمنُ والدمجُ</a>
+<a href="#guide">دليلُ الأهلِ والمعلّمِ</a>
+<a href="#jps">مقياسُ جُذُور <span class="lat">(JPS)</span></a>
+<a href="#words">مفرداتُ الكتابِ</a>
+<a href="#questions">أسئلةُ الفهمِ</a>
+<a href="#media">نشاطٌ ووسائطُ</a>
+<a href="#bridge">جسرُ الذاكرةِ</a>
+<a href="#covenant">قائمةُ التحقُّقِ الملزِمةُ</a>
+</nav>
+
+<div class="thread">
+<b>الخيطُ الواحدُ —</b> الاعتذارُ يُصلِحُ ما ينكسرُ في الحوارِ. تعلَّمتْ نورُ فنَّ الحوارِ، لكنَّ في كلِّ حوارٍ قد نُخطئُ ونجرحُ؛ <b>والآنَ تتعلَّمُ أنَّ الاعتذارَ ليسَ هزيمةً بل شجاعةٌ تُعيدُ بناءَ ما انكسرَ.</b> بهِ تُختَمُ مرحلةُ الغصنِ كلُّها — نغمةً وإيماءً وحوارًا وعُذرًا — فيُثمِرُ الغصنُ أوّلَ برعمِ حكمةٍ، ويصيرُ الطفلُ مستعدًّا لمرحلةِ الأوراقِ حيثُ يبدأُ التعاطفُ.
+</div>
+
+<hr class="rule-orn">
+
+<main id="begin">
+
+<section>
+<h2 class="sec"><span>قبلَ أنْ تبدأ — تنبيهٌ للمعلّمِ والأهلِ</span></h2>
+<div class="note warn">
+<span class="mk">⚠</span> &nbsp;<b>تنبيهٌ استباقيٌّ.</b> هذا الكتابُ يُنمّي شجاعةَ الاعتذارِ. تذكَّرْ ألّا تُجبِرَ الطفلَ على اعتذارٍ أجوفَ، وألّا تُذِلَّهُ. ساعدْهُ على فهمِ أثرِ خطئِهِ بتعاطفٍ ليعتذرَ بصدقٍ، واعتذرْ أنتَ حِينَ تُخطئُ ليتعلَّمَ بالقدوةِ.
+</div>
+<div class="note">
+<span class="mk">❦</span> &nbsp;<b>كيف تستعملُ هذا الكتابَ.</b> الكتابُ فيه نسختانِ من القصّةِ: موجزةٌ (٣ دقائق) وكاملةٌ (٧ دقائق). والقصّةُ تكملةٌ وختامٌ للغصنِ: نورُ تعلَّمتِ الحوارَ، فتتعلَّمُ الآنَ أنْ تُصلِحَ ما قد يفسدُ فيهِ بالاعتذارِ.
+</div>
+</section>
+
+<section id="id">
+<h2 class="sec"><span>بطاقةُ هُويّةِ الكتابِ</span></h2>
+<table>
+<tr><th>المستوى / الدرجة</th><td>الغصن — غُصنٌ يُثمِرُ بُرعمًا (خِتامُ الغصنِ)</td></tr>
+<tr><th>الفئةُ العمريّةُ</th><td>١٠–١٢ سنة · يمتدُّ بمرونةٍ من ٩ إلى ١٣ بحسبِ نضجِ الطفلِ</td></tr>
+<tr><th>الجذرُ الأساسيُّ</th><td>ع – ذ – ر · العُذرُ: أنْ تعترفَ بخطئِكَ وتطلبَ المسامحةَ بصدقٍ</td></tr>
+<tr><th>أسرةُ الجذرِ</th><td>عُذر · مُعتذِر · مَعذِرة · اعتذرَ · مُعذور</td></tr>
+<tr><th>المرساةُ الحسّيّةُ</th><td>يقولُ: أنا آسفٌ، أخطأتُ، سامحْني — بصدقٍ ونظرةٍ، ويُصلِحُ ما أفسدَ</td></tr>
+<tr><th>الاستعارةُ</th><td>الغصنُ الذي ينكسرُ فرعُهُ يُداوي نفسَهُ فيُنبِتُ برعمًا جديدًا مكانَ الكسرِ</td></tr>
+<tr><th>الشخصيّتانِ الحكيمتانِ</th><td>صلاحُ الدينِ الأيوبيُّ (يُستلهَمُ سرديًّا عبرَ الجَدّةِ) + الجَدّةُ رملة</td></tr>
+<tr><th>الشخصيّةُ الرمزيّةُ</th><td>نورُ (الغصن — تنمو عبرَ الأسفارِ)</td></tr>
+<tr><th>الشخصيّةُ المضادّةُ</th><td>الصَّخرةُ العَنيدةُ — شخصيّةٌ رمزيّةٌ (لا تاريخيّةٌ) تُمثِّلُ مَن لا يعتذرُ أبدًا مهما أخطأَ، وتتعلّمُ أنَّ الاعتذارَ يُلِينُ ويُنبِتُ</td></tr>
+<tr><th>محكُّ الإتقانِ</th><td>غُصنٌ يُثمِرُ بُرعمًا: يعترفُ بخطئِهِ ويعتذرُ بصدقٍ، ويسعى لإصلاحِ ما أفسدَ</td></tr>
+<tr><th>مجالُ <span class="lat">CASEL</span></th><td>اتخاذُ القرارِ المسؤولِ + الوعيُ الذاتيُّ <span class="lat">(Responsible Decision-Making &amp; Self-Awareness)</span></td></tr>
+<tr><th>المعيارُ الدوليُّ</th><td>يُوائمُ وصفَ <span class="lat">CEFR</span> لمستوى <span class="lat">A2</span> (تعبيرٌ عن الاعتذارِ بجُملٍ قصيرةٍ صادقةٍ)</td></tr>
+</table>
+<div class="card">
+<h3 style="color:var(--oxblood)">جوهرُ الكتابِ</h3>
+<p>تعلَّمتْ نورُ فنَّ الحوارِ. لكنْ في كلِّ حوارٍ قد نُخطئُ، أو نجرحُ، أو نقولُ ما نندمُ عليهِ. فما العملُ؟ هنا أعظمُ مهارةٍ تختمُ الغصنَ: الاعتذارُ. أنْ تعترفَ بخطئِكَ وتُصلِحَهُ. الاعتذارُ ليسَ هزيمةً — بل شجاعةٌ تُعيدُ بناءَ ما انكسرَ، وبهِ يُثمِرُ الغصنُ أوّلَ برعمِ حكمةٍ.</p>
+</div>
+<div class="note">
+<span class="mk">❦</span> &nbsp;<b>هامشٌ تعريفيٌّ.</b> صلاحُ الدينِ الأيوبيُّ (ت. ٥٨٩هـ)، القائدُ الحليمُ، اشتُهرَ بالعفوِ عندَ المقدرةِ وحُسنِ الاعتذارِ وردِّ الجميلِ، فأصلحَ بالعفوِ ما لا يُصلِحُهُ السيفُ. نستلهمُ منهُ أنَّ الاعتذارَ والعفوَ قوّةٌ لا ضعفٌ. <i>(في عالمِ الغصنِ يُستلهَمُ سرديًّا عبرَ حكايةِ الجَدّةِ رملة، لا يحضرُ جسدًا — صونًا للتوقيرِ ولاتّساقِ السردِ الرمزيِّ في السلسلةِ.)</i>
+</div>
+</section>
+
+<section id="root">
+<h2 class="sec"><span>الجذرُ وأسرتُهُ — مهارةٌ ولغةٌ</span></h2>
+<div class="note safe">
+<span class="mk">❧</span> &nbsp;<b>الجسدُ قبلَ الرمزِ (أوّلُ مبادئ <span class="lat">CRT</span>).</b> يلتقي الطفلُ بهذا الجذرِ عبرَ <b>جسدِ الاعتذارِ</b> — نظرةٌ صادقةٌ في العينِ، ويدٌ على القلبِ، وسعيٌ لإصلاحِ ما انكسرَ — لا عبرَ تحليلِ الحروفِ. والملاحظةُ الصرفيّةُ أدناهُ <b>للمعلّمِ وحدَهُ</b>.
+</div>
+<table>
+<tr><th>الجذرُ (المهارةُ)</th><th>أسرةُ الجذرِ (كلماتٌ من النَّسَبِ نفسِهِ)</th></tr>
+<tr><td>ع – ذ – ر</td><td>عُذر · مُعتذِر · مَعذِرة · اعتذرَ · مُعذور</td></tr>
+</table>
+<div class="note">
+<span class="mk">❦</span> &nbsp;<b>كيف نشرحُها للطفلِ.</b> «كلمةُ <i>عُذر</i> لها إخوةٌ! الذي يطلبُ المسامحةَ <i>مُعتذِرٌ</i>، وطلبُ المسامحةِ نفسُهُ <i>مَعذِرةٌ</i>. وحِينَ قلتَ: أنا آسفٌ، فقد <i>اعتذرتَ</i>. كلُّها أسرةٌ من أبٍ واحدٍ: ع-ذ-ر.»
+</div>
+<div class="note">
+<span class="mk">❦</span> &nbsp;<b>ملاحظةٌ صرفيّةٌ للمعلّمِ.</b> الجذرُ <b>(ع-ذ-ر)</b> صحيحٌ سالمٌ. منهُ العُذرُ والاعتذارُ والمَعذِرةُ. ونُذكّرُ المعلّمَ أنَّ الاعتذارَ الحقيقيَّ ثلاثٌ: اعترافٌ بالخطأِ، وطلبُ مسامحةٍ، وعزمٌ على الإصلاحِ — لا مجرّدُ كلمةٍ عابرةٍ.
+</div>
+</section>
+
+<section id="story">
+<h2 class="sec"><span>القصّةُ الكاملةُ: «عُذرُ نورٍ»</span></h2>
+<p style="text-align:center"><small class="d">النسخةُ الكاملةُ · للقراءةِ الجهريّةِ مع الطفلِ · مدّةُ السردِ: ٧ دقائق · بخمسِ لوحاتٍ أصليّةٍ بلوحةِ الغصنِ</small></p>
+<div class="story">
+
+<div class="scene">
+<h4>١ — نورُ تُخطئُ فتجرحُ صديقتَها، ولا تعرفُ كيفَ تُصلِحُ</h4>
+<figure class="plate">
+<svg viewBox="0 0 400 210" role="img" aria-label="كلمةٌ قاسيةٌ كشظيّةٍ مسنّنةٍ تطيرُ من غصنٍ إلى صديقةٍ صغيرةٍ، فتستديرُ عنها بدمعةٍ؛ بينهما لوحُ زجاجٍ تشقَّقَ في خطٍّ حادٍّ مسنّنٍ."><defs><radialGradient id="wPaper" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#faf3e1"/><stop offset="0.6" stop-color="#f3e8cf"/><stop offset="1" stop-color="#e9dcbd"/></radialGradient><radialGradient id="wGlow" cx="50%" cy="55%" r="55%"><stop offset="0" stop-color="#ffe9b8" stop-opacity="0.55"/><stop offset="0.5" stop-color="#f6d98f" stop-opacity="0.22"/><stop offset="1" stop-color="#f6d98f" stop-opacity="0"/></radialGradient></defs>
+  <rect width="400" height="210" fill="url(#wPaper)"/><ellipse cx="200" cy="120" rx="150" ry="86" fill="url(#wGlow)"/>
+  <path d="M0 182 H400" stroke="#6a4e2c" stroke-width="1"/>
+  <path d="M80 178 L80 100" stroke="#86894B" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="80" cy="94" r="11" fill="#9aa05c" stroke="#6b7040" stroke-width="1.2"/>
+  <path d="M118 108 l30 -6 l-10 12 l24 -2 l-22 12 Z" fill="#7c9aa6"/>
+  <path d="M200 60 L200 170" stroke="#9aa6ac" stroke-width="2" stroke-dasharray="6 4 2 6 4 8" opacity=".8"/>
+  <path d="M310 178 L310 104" stroke="#86894B" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="310" cy="98" r="10" fill="#9aa05c" stroke="#6b7040" stroke-width="1"/>
+  <path d="M305 100 q5 4 10 0" stroke="#5b4630" stroke-width="1.4" fill="none" transform="rotate(180 310 100)"/>
+  <circle cx="316" cy="106" r="2" fill="#7c9aa6"/>
+  <text x="200" y="150" text-anchor="middle" font-family="'Amiri',serif" font-size="13" fill="#5c6a72">شرخٌ بينهما</text>
+</svg>
+<figcaption>اللوحةُ الأولى — طارتْ كلمةٌ قاسيةٌ كالزجاجِ، فتشقَّقَ شيءٌ بينَ الصديقتينِ.</figcaption>
+</figure>
+<p class="drop">ذاتَ يومٍ، في خِضمِّ حوارٍ، قالتْ نورُ لصديقتِها كلمةً قاسيةً دونَ أنْ تقصدَ: «رأيُكِ سخيفٌ!». ندمتْ نورُ فورًا، لكنَّ الكلمةَ كانتْ قد خرجتْ. حزنتْ صديقتُها، ودمعتْ، واستدارتْ عنها.</p>
+<p>شعرتْ نورُ بثقلٍ في صدرِها. كانتْ بينها وبينَ صديقتِها كأنَّ زجاجًا انكسرَ. أرادتْ أنْ تُصلِحَ، لكنّها لم تعرفْ كيفَ. هل تتظاهرُ أنَّ شيئًا لم يحدثْ؟ هل تختبئُ؟ بقيَ الشرخُ، وبقيَ الحزنُ.</p>
+</div>
+
+<div class="scene">
+<h4>٢ — الصَّخرةُ العَنيدةُ لا تعتذرُ أبدًا مهما أخطأتْ</h4>
+<figure class="plate">
+<svg viewBox="0 0 400 210" role="img" aria-label="صخرةٌ رماديّةٌ صلبةٌ تجلسُ وحيدةً باردةً؛ تدحرجتْ فكسرتْ ما حولَها وسدَّتِ الطريقَ، ومع ذلك لا أحدَ قربَها، لأنّها لم تقلْ يومًا إنّها آسفةٌ."><defs><radialGradient id="wPaper" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#faf3e1"/><stop offset="0.6" stop-color="#f3e8cf"/><stop offset="1" stop-color="#e9dcbd"/></radialGradient><radialGradient id="wGlow" cx="50%" cy="55%" r="55%"><stop offset="0" stop-color="#ffe9b8" stop-opacity="0.55"/><stop offset="0.5" stop-color="#f6d98f" stop-opacity="0.22"/><stop offset="1" stop-color="#f6d98f" stop-opacity="0"/></radialGradient></defs>
+  <rect width="400" height="210" fill="url(#wPaper)"/><ellipse cx="200" cy="120" rx="150" ry="86" fill="url(#wGlow)"/>
+  <path d="M0 182 H400" stroke="#6a4e2c" stroke-width="1"/>
+  <path d="M150 178 C142 140 160 118 200 116 C240 118 258 140 250 178 Z" fill="#9a9a92" stroke="#7a7a70" stroke-width="1.4"/>
+  <g stroke="#7a7a70" stroke-width="1" opacity=".6"><path d="M180 130 l10 14 M215 128 l-8 18 M190 156 l16 6"/></g>
+  <text x="255" y="120" font-family="'Amiri',serif" font-size="13" fill="#8a8a80">«أنا لا أعتذرُ أبدًا.»</text>
+  <text x="150" y="200" font-family="'Amiri',serif" font-size="12" fill="#5c6a72">(وحيدةٌ، وباردةٌ)</text>
+</svg>
+<figcaption>اللوحةُ الثانيةُ — كسرتِ الصخرةُ العنيدةُ ما حولَها ولم تعتذرْ قطُّ — فبقيتْ وحيدةً تمامًا.</figcaption>
+</figure>
+<p>وفي الحديقةِ، كانتْ هناكَ <b>الصَّخرةُ العَنيدةُ</b>. كانتْ تُخطئُ كثيرًا — تتدحرجُ فتكسرُ، وتسدُّ الطريقَ — لكنّها لم تعتذرْ قطُّ. صلبةٌ لا تلينُ. قالتْ لنورٍ:</p>
+<p class="dialogue">«الاعتذارُ ضعفٌ يا نورُ! أنا لا أعتذرُ أبدًا، مهما أخطأتُ. مَن يعتذرْ يبدُ صغيرًا! ابقَيْ صلبةً مثلي، ولا تقولي آسفةً أبدًا!»</p>
+<p>لكنَّ نورَ لاحظتْ شيئًا: الصَّخرةُ العنيدةُ كانتْ وحيدةً تمامًا. كلُّ مَن جرحتْهم ابتعدوا، ولم يعدْ لها صديقٌ. عنادُها لم يجعلْها قويّةً — جعلَها وحيدةً باردةً. الذي لا يعتذرُ، يخسرُ مَن يحبُّ.</p>
+</div>
+
+<div class="scene">
+<h4>٣ — الجَدّةُ رملةُ تنقلُ لنورٍ حكمةَ صلاحِ الدينِ: العفوُ والاعتذارُ قوّةٌ</h4>
+<figure class="plate">
+<svg viewBox="0 0 400 210" role="img" aria-label="جَدّةٌ تضعُ يدَها على قلبِها تعلّمُ بلطفٍ؛ بجانبِها غصنٌ صغيرٌ يُنصِتُ، وثلاثُ علاماتٍ صغيرةٍ تُظهِرُ أجزاءَ الاعتذارِ الصادقِ الثلاثةَ."><defs><radialGradient id="wPaper" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#faf3e1"/><stop offset="0.6" stop-color="#f3e8cf"/><stop offset="1" stop-color="#e9dcbd"/></radialGradient><radialGradient id="wGlow" cx="50%" cy="55%" r="55%"><stop offset="0" stop-color="#ffe9b8" stop-opacity="0.55"/><stop offset="0.5" stop-color="#f6d98f" stop-opacity="0.22"/><stop offset="1" stop-color="#f6d98f" stop-opacity="0"/></radialGradient></defs>
+  <rect width="400" height="210" fill="url(#wPaper)"/><ellipse cx="200" cy="120" rx="150" ry="86" fill="url(#wGlow)"/>
+  <path d="M0 182 H400" stroke="#6a4e2c" stroke-width="1"/>
+  <g fill="#5f3b26"><circle cx="110" cy="76" r="16"/><path d="M88 182 C88 138 92 114 110 106 C128 114 132 138 132 182 Z"/></g>
+  <path d="M126 118 C118 122 112 118 112 112" stroke="#5f3b26" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M108 126 c-5 -6 4 -12 8 -6 c4 -6 13 0 8 6 c-3 4 -8 8 -8 8 c0 0 -5 -4 -8 -8 Z" fill="#c0552f"/>
+  <g font-family="'Amiri',serif" font-size="13" fill="#7a2e1f"><text x="180" y="96">١ · اعترافٌ</text><text x="180" y="120">٢ · طلبُ مسامحةٍ</text><text x="180" y="144">٣ · إصلاحٌ</text></g>
+  <path d="M320 178 C320 152 326 132 338 126 C350 132 356 152 356 178 Z" fill="#86894B"/>
+</svg>
+<figcaption>اللوحةُ الثالثةُ — «الاعتذارُ الصادقُ ثلاثٌ: اعترافٌ، وطلبُ مسامحةٍ، وإصلاحٌ.»</figcaption>
+</figure>
+<p>وتذكَّرتْ نورُ ما يُروى عن القائدِ الحليمِ <b>صلاحِ الدينِ</b>، الذي كان يعفو عندَ المقدرةِ ويُصلِحُ ما فسدَ، ولا يأنفُ أنْ يعترفَ ويعتذرَ. وكانتْ <b>الجَدّةُ رملة</b> بجانبِها تُذكّرُها بحكمتِهِ، فوضعتْ يدَها على قلبِها وقالتْ كأنّها تنقلُ قولَهُ:</p>
+<p class="dialogue">«يا نورُ، أتظنّينَ الاعتذارَ ضعفًا؟ بل هو أصعبُ شجاعةٍ! الضعيفُ يعاندُ خوفًا، والقويُّ يعترفُ ويُصلِحُ. حِينَ تقولينَ: أخطأتُ وأنا آسفةٌ، فأنتِ أكبرُ لا أصغرُ.»</p>
+<p>ثمَّ أضافتْ من عندِها: <span class="dialogue">«والاعتذارُ الصادقُ ثلاثٌ يا نورُ: تعترفينَ بخطئِكِ، وتطلبينَ المسامحةَ، وتُصلِحِينَ ما أفسدتِ. وانظري في عينيها وأنتِ تعتذرينَ، فالقلبُ يصلُ إلى القلبِ.»</span></p>
+</div>
+
+<div class="scene">
+<h4>٤ — نورُ تعتذرُ بصدقٍ لصديقتِها، فيُرمَّمُ الشرخُ</h4>
+<figure class="plate">
+<svg viewBox="0 0 400 210" role="img" aria-label="غصنانِ يتواجهانِ، ولوحُ الزجاجِ المتشقّقِ بينهما يلتئمُ على خطٍّ ذهبيٍّ مضيءٍ، أقوى من قبلُ، كإناءٍ رُمِّمَ؛ ويدٌ صغيرةٌ تستقرُّ على قلبٍ."><defs><radialGradient id="wPaper" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#faf3e1"/><stop offset="0.6" stop-color="#f3e8cf"/><stop offset="1" stop-color="#e9dcbd"/></radialGradient><radialGradient id="wGlow" cx="50%" cy="55%" r="55%"><stop offset="0" stop-color="#ffe9b8" stop-opacity="0.55"/><stop offset="0.5" stop-color="#f6d98f" stop-opacity="0.22"/><stop offset="1" stop-color="#f6d98f" stop-opacity="0"/></radialGradient></defs>
+  <rect width="400" height="210" fill="url(#wPaper)"/><ellipse cx="200" cy="120" rx="150" ry="86" fill="url(#wGlow)"/>
+  <path d="M0 182 H400" stroke="#6a4e2c" stroke-width="1"/>
+  <path d="M90 178 L90 104" stroke="#86894B" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="90" cy="98" r="11" fill="#9aa05c" stroke="#6b7040" stroke-width="1.2"/>
+  <path d="M84 104 q6 5 12 0" stroke="#5b4630" stroke-width="1.6" fill="none"/>
+  <path d="M108 118 c-5 -6 4 -12 8 -6 c4 -6 13 0 8 6 c-3 4 -8 8 -8 8 c0 0 -5 -4 -8 -8 Z" fill="#c0552f"/>
+  <path d="M200 58 L200 172" stroke="#c8922e" stroke-width="3" stroke-dasharray="0"/>
+  <path d="M200 84 l-10 -8 M200 108 l12 -8 M200 134 l-10 8 M200 152 l12 8" stroke="#c8922e" stroke-width="2"/>
+  <path d="M310 178 L310 104" stroke="#86894B" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="310" cy="98" r="11" fill="#9aa05c" stroke="#6b7040" stroke-width="1.2"/>
+  <path d="M304 100 q6 5 12 0" stroke="#5b4630" stroke-width="1.6" fill="none"/>
+  <text x="200" y="200" text-anchor="middle" font-family="'Amiri',serif" font-size="14" fill="#7a2e1f">«أنا آسفةٌ. سامحيني، أرجوكِ.»</text>
+</svg>
+<figcaption>اللوحةُ الرابعةُ — التأمَ الزجاجُ المكسورُ على خيطٍ ذهبيٍّ — مُرمَّمًا، وأقوى من قبلُ.</figcaption>
+</figure>
+<p>ذهبتْ نورُ إلى صديقتِها، وأخذتْ نَفَسًا هادئًا، ونظرتْ في عينيها بصدقٍ، ووضعتْ فرعَها على قلبِها، وقالتْ:</p>
+<p class="dialogue">«أنا آسفةٌ يا صديقتي. أخطأتُ حِينَ قلتُ إنَّ رأيَكِ سخيفٌ — كان كلامًا قاسيًا وغيرَ صحيحٍ. رأيُكِ مهمٌّ، وأنتِ غاليةٌ عليَّ. سامحيني، أرجوكِ.»</p>
+<p>وحدثَ شيءٌ جميلٌ: لانَ قلبُ الصديقةِ، وجفَّتْ دمعتُها، وابتسمتْ. الزجاجُ المكسورُ بينهما التأمَ، بل صارَ أقوى — كأنَّ خيطًا ذهبيًّا رمّمَ الشرخَ. الاعتذارُ الصادقُ لم يُصلِحِ الصداقةَ فقط، بل جعلَها أعمقَ.</p>
+</div>
+
+<div class="scene">
+<h4>٥ — نورُ تتصالحُ، فتلينُ الصخرةُ وتعتذرُ لأوّلِ مرّةٍ فيُنبِتُ منها برعمٌ</h4>
+<figure class="plate">
+<svg viewBox="0 0 400 210" role="img" aria-label="غصنانِ يقفانِ متقاربينِ متصالحينِ؛ بجانبِهما لانتِ الصخرةُ الرماديّةُ الصلبةُ، وخرجَ من شقٍّ فيها برعمٌ أخضرُ صغيرٌ، حيًّا أخيرًا."><defs><radialGradient id="wPaper" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#faf3e1"/><stop offset="0.6" stop-color="#f3e8cf"/><stop offset="1" stop-color="#e9dcbd"/></radialGradient><radialGradient id="wGlow" cx="50%" cy="55%" r="55%"><stop offset="0" stop-color="#ffe9b8" stop-opacity="0.55"/><stop offset="0.5" stop-color="#f6d98f" stop-opacity="0.22"/><stop offset="1" stop-color="#f6d98f" stop-opacity="0"/></radialGradient></defs>
+  <rect width="400" height="210" fill="url(#wPaper)"/><ellipse cx="200" cy="120" rx="150" ry="86" fill="url(#wGlow)"/>
+  <path d="M0 182 H400" stroke="#6a4e2c" stroke-width="1"/>
+  <path d="M80 178 L80 106" stroke="#86894B" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="80" cy="100" r="10" fill="#9aa05c" stroke="#6b7040" stroke-width="1.2"/>
+  <path d="M108 178 L108 108" stroke="#86894B" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="108" cy="102" r="10" fill="#9aa05c" stroke="#6b7040" stroke-width="1.2"/>
+  <path d="M90 116 q4 4 8 0" stroke="#c8922e" stroke-width="1.6" fill="none"/>
+  <path d="M250 178 C242 144 260 124 296 122 C332 124 350 144 342 178 Z" fill="#9a9a92" stroke="#7a7a70" stroke-width="1.2"/>
+  <path d="M296 122 C295 112 296 104 297 96" stroke="#5f7034" stroke-width="2.4" fill="none"/>
+  <path d="M297 100 C291 96 286 98 288 103 C292 103 295 101 297 100 Z" fill="#5f7034"/>
+  <path d="M297 100 C303 96 308 98 306 103 C302 103 299 101 297 100 Z" fill="#6a7d3c"/>
+  <text x="250" y="200" font-family="'Amiri',serif" font-size="14" fill="#7a2e1f">«أنا… آسفةٌ.» — فنبتَ برعمٌ.</text>
+</svg>
+<figcaption>اللوحةُ الخامسةُ — لانتِ الصخرةُ، وهَمَستْ «أنا آسفةٌ»، فنبتَ من شقِّها برعمٌ أخضرُ.</figcaption>
+</figure>
+<p>عادتْ نورُ وصديقتُها أقربَ من ذي قبلُ. تعلَّمتْ نورُ أنَّ الاعتذارَ جسرٌ يُعيدُ بناءَ ما انكسرَ. قالتْ لكلِّ مَن أخطأتْ في حقِّهِ: <b>«أنا آسفةٌ، سامِحْني.»</b> — فأحبّوها أكثرَ، لأنَّ الاعتذارَ شجاعةٌ نادرةٌ.</p>
+<p>وحدثَ العجبُ: الصَّخرةُ العنيدةُ راقبتْ نورَ، ورأتْ كيفَ عادَ إليها أصدقاؤها. فحاولتْ... وللمرّةِ الأولى في حياتِها، قالتْ بصوتٍ متهدّجٍ: «أنا... آسفةٌ». وحِينَ قالتْها، لانَ حجرُها قليلًا، وخرجَ من شقٍّ فيها <b>برعمٌ أخضرُ صغيرٌ</b>! وهَمَستْ: <span class="dialogue">«كنتُ صلبةً فبقيتُ وحيدةً، الآنَ اعتذرتُ... فأنبتُّ حياةً!»</span></p>
+<p>وتعلَّمتْ الصخرةُ أنَّ الاعتذارَ يُلِينُ أصلبَ القلوبِ ويُنبِتُ فيها الحياةَ. وهكذا أتمَّتْ نورُ مرحلةَ الغصنِ كلَّها — نغمةً، وإيماءً، وحوارًا، وعُذرًا — وأثمرَ غصنُها أوّلَ برعمِ حكمةٍ، فصارتْ مستعدّةً لمرحلةِ الأوراقِ.</p>
+</div>
+
+<p style="margin-top:.86em"><span style="color:var(--gold-ink);font-weight:700">❦</span> &nbsp;<b>صمتُ السؤالِ الجسديِّ (٤–٥ ثوانٍ).</b> <span class="dialogue">«فكِّرْ في مرّةٍ أخطأتَ فيها في حقِّ أحدٍ. كيفَ ستقولُ لهُ: أنا آسفٌ، سامحْني؟ تخيَّلْ وجهَهُ وهو يُسامحُكَ.»</span></p>
+</div>
+</section>
+
+<section id="brief">
+<h2 class="sec"><span>النسخةُ الموجزةُ (٣ دقائق)</span></h2>
+<p style="text-align:center"><small class="d">جُملٌ قصيرةٌ، المعنى نفسُهُ.</small></p>
+<div class="story">
+<p class="drop">قالتْ نورُ لصديقتِها كلمةً قاسيةً دونَ قصدٍ، فحزنتْ صديقتُها وانكسرتِ الصداقةُ.</p>
+<p>كانتِ الصَّخرةُ العَنيدةُ لا تعتذرُ أبدًا، فبقيتْ وحيدةً، فلم تقلّدْها نورُ.</p>
+<p>وتذكَّرتْ نورُ حكمةَ صلاحِ الدينِ: «الاعتذارُ قوّةٌ! اعترفي، واطلبي المسامحةَ، وأصلِحي ما أفسدتِ.»</p>
+<p>اعتذرتْ نورُ بصدقٍ: <b>«أنا آسفةٌ، سامحيني.»</b> فعادتِ الصداقةُ أقوى، ولانتِ الصخرةُ وأنبتتْ برعمًا.</p>
+</div>
+</section>
+
+<section id="elements">
+<h2 class="sec"><span>العناصرُ الخمسةُ للتطبيقِ</span></h2>
+<table>
+<tr><th>العنصرُ</th><th>النشاطُ</th><th>الهدفُ</th></tr>
+<tr><td>المُخرَجُ اللُّغويُّ</td><td>«أنا آسفٌ، أخطأتُ، سامحْني»</td><td>ربطُ الاعتذارِ باللغةِ</td></tr>
+<tr><td>الحركةُ الجسديّةُ</td><td>ينظرُ في عينِ مَن أخطأَ في حقِّهِ ويضعُ يدَهُ على قلبِهِ ويعتذرُ</td><td>تجسيدُ صدقِ الاعتذارِ</td></tr>
+<tr><td>الدفءُ العلائقيُّ</td><td>يسعى لإصلاحِ ما أفسدَ، ويُسامِحُ مَن يعتذرُ إليهِ</td><td>الاعتذارُ يُرمّمُ العلاقةَ</td></tr>
+<tr><td>البديلُ الحسّيُّ</td><td>بطاقةُ المسامحةِ: قلبٌ مكسورٌ التأمَ بخيطٍ ذهبيٍّ + كلمةُ اعتذارٍ</td><td>ترسيخُ الترميمِ حسّيًّا</td></tr>
+<tr><td>الجسرُ الإنجليزيُّ</td><td><span class="lat">«I apologize, so I mend what I broke.»</span></td><td>التوازنُ اللُّغويُّ</td></tr>
+</table>
+
+<h3>الدرجةُ التحتيّةُ ومحكُّ الإتقانِ (متدرّجٌ)</h3>
+<p><b>محكٌّ من مرحلتينِ.</b> <b>غُصنٌ يُثمِرُ بُرعمًا (بداية):</b> يقولُ آسفٌ بتذكيرٍ. ← <b>غُصنٌ يُثمِرُ بُرعمًا (تمكُّن):</b> يعترفُ بخطئِهِ تلقائيًّا، ويعتذرُ بصدقٍ ونظرةٍ، ويسعى لإصلاحِ ما أفسدَ. وبهذا يكتملُ الغصنُ.</p>
+<h3>محكّاتُ <span class="lat">CASEL</span> السلوكيّةُ</h3>
+<ul>
+<li>يعترفُ بخطئِهِ دونَ مكابرةٍ.</li>
+<li>يعتذرُ بصدقٍ وينظرُ في عينِ مَن أخطأَ في حقِّهِ.</li>
+<li>يسعى لإصلاحِ ما أفسدَ.</li>
+<li>يُسامِحُ غيرَهُ إذا اعتذرَ إليهِ.</li>
+</ul>
+</section>
+
+<section id="safestop">
+<h2 class="sec"><span>بروتوكولُ التوقُّفِ الآمنِ وبدائلُ الدمجِ</span></h2>
+<div class="note safe">
+<span class="mk">⚑</span> &nbsp;<b>بروتوكولُ التوقُّفِ الآمنِ.</b> لا يُجبَرُ الطفلُ على اعتذارٍ أجوفَ غيرِ صادقٍ، فالاعتذارُ المفروضُ يفقدُ معناهُ. نساعدُهُ أوّلًا على فهمِ أثرِ خطئِهِ بتعاطفٍ، فيأتي الاعتذارُ من قلبِهِ. ولا نُذِلُّهُ أمامَ الآخرينَ.
+</div>
+<table>
+<tr><th>الحالةُ</th><th>البديلُ المقترحُ</th></tr>
+<tr><td>طيفُ التوحّدِ <span class="lat">(ASD)</span></td><td>قد لا يُدرِكُ أثرَ كلامِهِ على الآخرِ؛ يُشرَحُ بقصصٍ اجتماعيّةٍ واضحةٍ، وتُعلَّمُ صيغةُ اعتذارٍ ثابتةٌ بسيطةٌ.</td></tr>
+<tr><td>صعوباتُ التعبيرِ الانفعاليِّ</td><td>تُعلَّمُ جملةُ الاعتذارِ كصيغةٍ، وتُربطُ بصورةِ شعورِ الآخرِ ليفهمَ الأثرَ.</td></tr>
+<tr><td>الخجلُ الشديدُ</td><td>يُقبَلُ اعتذارٌ مكتوبٌ أو بإشارةٍ (تقديمُ هديّةٍ صغيرةٍ، رسمةٍ) إذا صعُبَ القولُ المباشرُ.</td></tr>
+<tr><td>الكبرياءُ أو الدفاعيّةُ</td><td>يُعلَّمُ أنَّ الاعتذارَ شجاعةٌ لا هزيمةٌ، بالقدوةِ: يعتذرُ الكبارُ أمامَهُ حِينَ يُخطئونَ.</td></tr>
+<tr><td>بيئةٌ تربطُ الاعتذارَ بالعقابِ</td><td>يُطمأَنُ الطفلُ أنَّ الاعتذارَ لإصلاحِ العلاقةِ لا لجلبِ العقابِ، حتى لا يخافَ الاعترافَ.</td></tr>
+<tr><td>اختلافٌ ثقافيٌّ</td><td>تُحترَمُ صِيغُ الاعتذارِ المختلفةُ بينَ الثقافاتِ؛ المهمُّ صدقُ الندمِ ونيّةُ الإصلاحِ.</td></tr>
+</table>
+</section>
+
+<section id="guide">
+<h2 class="sec"><span>دليلُ الأهلِ والمعلّمِ</span></h2>
+<div class="card">
+<p><b>قبلَ الجلسةِ: صندوقُ الشاشاتِ.</b> ضعوا الأجهزةَ بعيدًا. في الشاشاتِ كثيرٌ من العنادِ والمكابرةِ؛ ونحنُ نُعلِّمُ الطفلَ شجاعةَ الاعترافِ التي تَقِلُّ فيها.</p>
+<p><b>أثناءَ الجلسةِ: جسرُ المسامحةِ.</b> مثِّلوا موقفَ خطأٍ بسيطٍ، ودرّبوا الطفلَ على الاعتذارِ الثلاثيِّ: أخطأتُ، آسفٌ، سأُصلِحُ. ثمَّ المسامحةُ بحضنٍ.</p>
+<p><b>بعدَ الجلسةِ: اعتذارُ الكبارِ.</b> اعتذِروا أنتم للطفلِ حِينَ تُخطئونَ في حقِّهِ. حِينَ يرى الكبيرَ يعتذرُ، يتعلَّمُ أنَّ الاعتذارَ قوّةٌ لا عيبٌ.</p>
+<p><span style="color:var(--gold-ink);font-weight:700">❦</span> &nbsp;<b>اجعلوها قابلةً للقياسِ.</b> سجِّلوا في مفكّرةِ الثلّاجةِ: «كم مرّةً اعتذرَ طفلُنا بصدقٍ من تلقاءِ نفسِهِ، أو سامحَ غيرَهُ؟» نجمةٌ لكلِّ مرّةٍ. عُدُّوا النجومَ في نهايةِ الأسبوعِ.</p>
+<blockquote>«الشاشةُ تُعلِّمُ المكابرةَ. نحنُ نُعلِّمُ شجاعةَ الاعتذارِ.»</blockquote>
+</div>
+</section>
+
+<section id="jps">
+<h2 class="sec"><span>مقياسُ جُذُور النفسيُّ <span class="lat">(JPS)</span> — وحدةُ الكتابِ الحاديَ عشرَ</span></h2>
+<div class="note warn">
+<span class="mk">⚠</span> &nbsp;<b>تنبيهٌ مهمٌّ.</b> مقياسُ جُذُور أداةُ <b>ملاحظةٍ تربويّةٍ</b> قيدَ التطويرِ لمتابعةِ نموِّ المهارةِ — لا أداةَ تشخيصٍ نفسيٍّ أو طبّيٍّ. نتائجُهُ استرشاديّةٌ تُعينُ المعلّمَ، ولا تُصدِرُ حُكمًا على الطفلِ.
+</div>
+<div class="note">
+<span class="mk">❦</span> &nbsp;<b>آليّةُ القياسِ التراكميّةُ.</b> بهذا الكتابِ تكتملُ مرحلةُ الغصنِ (النغمةُ، الإيماءُ، الحوارُ، العُذرُ). والبُعدُ الجديدُ: <b>الاعتذارُ وإصلاحُ العلاقةِ</b>، تمهيدًا لمرحلةِ الأوراقِ. تُملأُ مرّتينِ بمُقيِّمَيْنِ مستقلَّيْنِ حيثُ أمكنَ. المقياسُ: ○ نادرًا · ◐ أحيانًا · ● غالبًا.
+</div>
+<h3>البُعدُ الجديدُ: الاعتذارُ وإصلاحُ العلاقةِ</h3>
+<table>
+<tr><th>المؤشّرُ السلوكيُّ</th><th>○</th><th>◐</th><th>●</th><th>ملاحظة</th></tr>
+<tr><td>يعترفُ بخطئِهِ دونَ مكابرةٍ</td><td>○</td><td>◐</td><td>●</td><td></td></tr>
+<tr><td>يعتذرُ بصدقٍ ونظرةٍ صادقةٍ</td><td>○</td><td>◐</td><td>●</td><td></td></tr>
+<tr><td>يسعى لإصلاحِ ما أفسدَ</td><td>○</td><td>◐</td><td>●</td><td></td></tr>
+<tr><td>يُسامِحُ مَن يعتذرُ إليهِ</td><td>○</td><td>◐</td><td>●</td><td></td></tr>
+</table>
+<p><b>تاريخُ القياسِ القبليِّ:</b> ________  <b>تاريخُ القياسِ البعديِّ:</b> ________</p>
+<p><small class="d">ملاحظةٌ بحثيّةٌ: المقياسُ فرضيّةٌ استكشافيّةٌ قابلةٌ للاختبارِ، تُجمَعُ نتائجُها تدريجيًّا عبرَ الأسفارِ لمعايرةِ المقياسِ الكاملِ.</small></p>
+</section>
+
+<section id="words">
+<h2 class="sec"><span>مفرداتُ الكتابِ</span></h2>
+<table>
+<tr><th>الكلمةُ</th><th>المعنى المبسّطُ</th><th><span class="lat">English</span></th></tr>
+<tr><td>عُذرٌ</td><td>ما تقولُهُ معترفًا بخطئِكَ طالبًا المسامحةَ</td><td><span class="lat">apology</span></td></tr>
+<tr><td>مُعتذِرٌ</td><td>الذي يطلبُ المسامحةَ</td><td><span class="lat">one who apologizes</span></td></tr>
+<tr><td>مَعذِرةٌ</td><td>طلبُ المسامحةِ</td><td><span class="lat">seeking pardon</span></td></tr>
+<tr><td>مُسامَحةٌ</td><td>العفوُ عمّن أخطأَ</td><td><span class="lat">forgiveness</span></td></tr>
+<tr><td>نَدَمٌ</td><td>أنْ تأسفَ على ما فعلتَ</td><td><span class="lat">remorse</span></td></tr>
+</table>
+<div class="bridge">
+<div><b>المُخرَجُ بالعربيّةِ:</b> «أَعْتَذِرُ بِصِدْقٍ، فَأُصْلِحُ مَا كَسَرْتُ، وَأَكْبُرُ.»</div>
+<div><b><span class="lat">English Bridge:</span></b> <span class="lat" style="font-style:normal">“I apologize, so I mend what I broke.” Saying sorry is not weakness; it is the strength that heals.</span></div>
+</div>
+</section>
+
+<section id="questions">
+<h2 class="sec"><span>أسئلةُ الفهمِ</span></h2>
+<div class="card">
+<ul>
+<li>ماذا حدثَ للصداقةِ حِينَ قالتْ نورُ الكلمةَ القاسيةَ؟ <span class="pill">تذكُّر</span></li>
+<li>لماذا بقيتِ الصخرةُ العنيدةُ وحيدةً رغمَ قوّتِها؟ <span class="pill">استنتاج</span></li>
+<li>تخيَّلْ أنّكَ أخطأتَ في حقِّ صديقٍ — كيفَ ستعتذرُ لهُ بصدقٍ الآنَ؟ <span class="pill">حسّيّ</span></li>
+<li>متى اعتذرَ لكَ أحدٌ بصدقٍ؟ وكيفَ تغيَّرَ شعورُكَ نحوَهُ؟ <span class="pill">ربطٌ شخصيٌّ</span></li>
+</ul>
+<blockquote>الِاعْتِذَارُ قُوَّةٌ لَا ضَعْفٌ.<br>مَنِ اعْتَرَفَ بِخَطَئِهِ، أَصْلَحَهُ وَكَبُرَ.</blockquote>
+<p><span style="color:var(--gold-ink);font-weight:700">❦</span> &nbsp;<b>ترجمةٌ سلوكيّةٌ (لا شعارٌ فقط).</b> علِّمِ الطفلَ: <b>«حِينَ تُخطئُ في حقِّ أحدٍ، انظرْ في عينيهِ وقُلْ: أنا آسفٌ، أخطأتُ، سامحْني. ثمَّ أصلِحْ ما أفسدتَ. الاعتذارُ يجبرُ القلوبَ.»</b> فبالاعتذارِ رمّمتْ نورُ صداقتَها.</p>
+</div>
+</section>
+
+<section id="media">
+<h2 class="sec"><span>نشاطٌ ووسائطُ</span></h2>
+<div class="card">
+<div class="qrwin"><div class="frameq"><div class="q"><span class="lat">QR</span></div></div><div class="cap">امسحِ الرمزَ للاستماعِ</div></div>
+<p><b>نشاطٌ فنّيٌّ.</b> اطلبْ من الطفلِ أنْ يصنعَ «بطاقةَ مسامحةٍ» لشخصٍ أخطأَ في حقِّهِ: يرسمُ قلبًا مكسورًا التأمَ بخيطٍ ذهبيٍّ، ويكتبُ كلمةَ اعتذارٍ.</p>
+<p><b>نشاطٌ تمثيليٌّ.</b> يلعبُ طفلانِ موقفًا: أحدُهما يُخطئُ (يكسرُ لعبةً مثلًا)، ويتدرّبُ على الاعتذارِ الثلاثيِّ (أخطأتُ، آسفٌ، سأُصلِحُ)، والآخرُ يتدرّبُ على المسامحةِ. ثمَّ يتبادلانِ.</p>
+<p><b>الوسائطُ الصوتيّةُ.</b> امسحِ الرمزَ للاستماعِ إلى القصّةِ، ولترى كيفَ يُرمِّمُ الاعتذارُ الصادقُ ما كسرَهُ الخطأُ. <small class="d">(عنوانُ الصوتِ محفوظٌ ويُختَمُ إلى الرمزِ قبلَ الطباعةِ.)</small></p>
+</div>
+</section>
+
+<section id="bridge">
+<h2 class="sec"><span>جسرُ الذاكرةِ — الصدى التراكميُّ</span></h2>
+<div class="bridge">
+<div>‹‹ &nbsp;<b>إلى الوراءِ — الكتابُ العاشرُ («حوارُ الغصنِ»).</b> «تعلَّمتَ الحوارَ: أنْ تأخذَ دورَكَ وتعطيَ. لكنْ في كلِّ حوارٍ قد نُخطئُ ونجرحُ. الاعتذارُ هو ما يُصلِحُ الحوارَ حِينَ ينكسرُ. فهو يحمي كلَّ ما تعلَّمتَهُ من العلاقاتِ، ويجعلُ الصداقةَ تدومُ.»</div>
+<div><b>إلى الأمامِ — مرحلةُ الأوراقِ (الكتابُ الثانيَ عشرَ: «تعاطفُ الأوراقِ»)</b> &nbsp;››<br><i>«أتممتَ مرحلةَ الغصنِ! نغمةً، وإيماءً، وحوارًا، وعُذرًا — فأثمرَ غصنُكَ. في المرحلةِ القادمةِ — مرحلةِ الأوراقِ الوارفةِ — ستتعلَّمُ أعمقَ المهاراتِ الإنسانيّةِ، أوّلُها: أنْ تتعاطفَ، فتشعرَ بما يشعرُ بهِ غيرُكَ.»</i></div>
+</div>
+</section>
+
+<section id="covenant">
+<h2 class="sec"><span>قائمةُ التحقُّقِ الملزِمةُ</span></h2>
+<p style="text-align:center"><small class="d">تُوقَّعُ قبلَ تمريرِ الكتابِ إلى الطباعةِ النهائيّةِ (مطابقةً للقالبِ الذهبيِّ):</small></p>
+<div class="covenant">
+<ul>
+<li>الجذرُ المعتمدُ (ع-ذ-ر) صحيحٌ صرفيًّا، و«أسرةُ الجذرِ» معروضةٌ بدقّةٍ — صفرُ أخطاءٍ.</li>
+<li>الدرجةُ «غُصنٌ يُثمِرُ بُرعمًا» متدرّجةٌ ومحكُّها من مرحلتينِ — وهي ختامُ قوسِ الغصنِ.</li>
+<li>محكّاتُ <span class="lat">CASEL</span> الأربعةُ (اتخاذُ القرارِ المسؤولِ والوعيُ الذاتيُّ) مُدرَجةٌ كنواتجَ قابلةٍ للرصدِ.</li>
+<li>حكمةُ صلاحِ الدينِ تُستلهَمُ سرديًّا (لا يحضرُ جسدًا في عالمِ الغصنِ)، والجَدّةُ رملة نموذجٌ نسائيٌّ متكرّرٌ، والصَّخرةُ موسومةٌ كرمزيّةٍ.</li>
+<li>البطلةُ «نور» تتكرّرُ وتنمو (أثمرَ غصنُها برعمًا)، والشخصيّةُ المضادّةُ تتحوّلُ لا تُشيطَنُ (الصخرةُ تلينُ وتُنبِتُ برعمًا).</li>
+<li>كلُّ مهارةٍ مترجمةٌ إلى مرساةٍ حسّيّةٍ (النظرُ واليدُ على القلبِ والاعتذارُ الثلاثيُّ) — صفرُ نشاطٍ سلبيٍّ.</li>
+<li>تنبيهٌ استباقيٌّ (لا اعتذارَ مفروضٌ أجوفُ) + بروتوكولُ توقفٍ آمنٍ + ٦ بدائلِ دمجٍ (تشملُ <span class="lat">ASD</span> والبيئةَ القاسيةَ) — صفرُ إكراهٍ.</li>
+<li>نسختانِ للسردِ (موجزةٌ/كاملةٌ).</li>
+<li>الصدى التراكميُّ <b>ثنائيُّ الاتجاهِ</b>: يحمي مهاراتِ الحوارِ ويمهّدُ للتعاطفِ (الأوراق) — صفرُ حلقةٍ منفصلةٍ.</li>
+<li>المقياسُ يضيفُ بُعدًا جديدًا (الاعتذارُ وإصلاحُ العلاقةِ) ويُتمُّ أبعادَ الغصنِ — نموٌّ تراكميٌّ.</li>
+<li>أسئلةُ الفهمِ تشملُ سؤالًا حسّيًّا، والدرسُ مترجَمٌ إلى قاعدةٍ سلوكيّةٍ.</li>
+<li><b>التشكيلُ مدقّقٌ على كلِّ كلمةٍ في القصّةِ.</b></li>
+<li>رسومٌ أصليّةٌ (٥ مشاهد) بلوحةِ الغصنِ + موتيفُ ترميمِ القلبِ والبرعمِ + رمزُ <span class="lat">QR</span> + جسرٌ ثنائيُّ اللغةِ.</li>
+<li>صفحةُ حقوقٍ موحّدةٌ بختمِ جُذُور الرسميِّ + غلافانِ أماميٌّ وخلفيٌّ.</li>
+</ul>
+<div class="sig">
+<b>التوقيعاتُ قبلَ الطباعةِ:</b><br>
+المؤلف ______ · المراجع اللغوي ______ · <b>المراجع الصرفي</b> ______ · <b>المراجع التراثي</b> ______<br>
+المراجع النفسي/التربوي ______ · المخرج الفني ______
+</div>
+</div>
+</section>
+
+</main>
+
+<footer class="colophon">
+<div class="mark">❦ · جُذُور · ❦</div>
+<p style="max-width:660px;margin:.4em auto"><b>د. عادل ف. عامر</b> — خبيرُ اللغةِ العربيةِ والتربيةِ، مؤسِّسُ منظومةِ <b>جُذُور</b> (نظريّةُ القراءةِ الملموسةِ <span class="lat">CRT</span> — عامر 2024). «فنُّ البيان» سلسلتُهُ في مهارتَيِ التحدّثِ وفنِّ الحوارِ، تنمو خطوةً خطوةً.</p>
+<p style="letter-spacing:1px;font-size:15px">بَذْرَةٌ تَبْقَى لِتَنْمُوَ مِنْ بَعْدِنَا</p>
+<p style="font-size:13.5px;color:#6a4e2c">جُذُور · فنّ البيان · الكتابُ الحاديَ عشرَ «عُذْرُ الغصن» · الطبعةُ التراثيّةُ · <span class="lat">ORCID 0009-0008-9618-3863</span> · عامر (2024)</p>
+</footer>
+
+<section class="backcover" aria-label="الغلاف الخلفيّ">
+<svg width="92" height="118" viewBox="86 68 268 392" role="img" aria-label="ختمُ جُذُور المطويّ بألوان الغصن، صغيرًا.">
+<g transform="translate(20,0)">
+  <polygon points="135,188 200,215 200,300 70,300" fill="#D5A15E"/><polygon points="265,188 200,215 200,300 330,300" fill="#47564A"/>
+  <polygon points="200,75 200,215 135,188" fill="#86894B"/><polygon points="200,75 265,188 200,215" fill="#6b7040"/>
+  <path d="M200 75 L200 300" stroke="#EAD7A2" stroke-width="1.1" opacity=".5" fill="none"/>
+  <polygon points="198,178 163,216 198,254" fill="#4A3620"/><polygon points="202,178 237,216 202,254" fill="#2E2010"/>
+  <path d="M200 183 C186 199 186 233 200 251 L200 183 Z" fill="#E3C063" stroke="#5A3D1E" stroke-width="1.4"/>
+  <path d="M200 183 C214 199 214 233 200 251 L200 183 Z" fill="#C0912E" stroke="#5A3D1E" stroke-width="1.4"/>
+  <g fill="none" stroke="#6E4E2E" stroke-linecap="round"><path d="M200 300 C200 344 200 388 200 448" stroke-width="4"/><path d="M200 312 C176 338 154 366 138 414" stroke-width="3"/><path d="M200 312 C224 338 246 366 262 414" stroke-width="3"/></g>
+  <path d="M200 183 C199 171 200 162 201 150" stroke="#4f5f2b" stroke-width="2.6" fill="none"/>
+  <path d="M200 172 C188 173 177 170 171 159 C181 160 193 165 200 170 Z" fill="#5f7034"/>
+  <path d="M201 159 C210 159 218 155 222 145 C216 151 207 155 201 157 Z" fill="#6a7d3c"/>
+</g>
+</svg>
+<div style="letter-spacing:1px;color:var(--oxblood);font-size:15px;margin-top:.4em">جُذُور · فنّ البيان · الكتابُ الحاديَ عشرَ · خِتامُ الغصنِ</div>
+<h2 style="font-size:34px;margin:.1em 0">عُذْرُ الْغُصْنِ</h2>
+<div class="mission">لإنقاذِ أطفالِ العالمِ من وباءِ الشاشاتِ — ولنُعلِّمَ الطفلَ شجاعةَ أنْ يقولَ: أنا آسفٌ، وأنْ يُصلِحَ ما كسرَ.</div>
+<p class="blurb">قالتْ نورُ لصديقتِها كلمةً قاسيةً دونَ قصدٍ، فانكسرتْ بينهما الصداقةُ كزجاجٍ. حاولتِ الصَّخرةُ العَنيدةُ أنْ تُقنِعَها أنَّ «الاعتذارَ ضعفٌ»، لكنَّ نورَ رأتِ الصخرةَ وحيدةً باردةً، فلم تقلّدْها. فنقلتِ الجَدّةُ رملةُ حكمةَ صلاحِ الدينِ: «الاعتذارُ قوّةٌ! اعترافٌ، وطلبُ مسامحةٍ، وإصلاحٌ.» فنظرتْ نورُ في عينِ صديقتِها ووضعتْ فرعَها على قلبِها وقالتْ: «أنا آسفةٌ، سامحيني» — فالتأمَ الشرخُ على خيطٍ ذهبيٍّ أقوى من قبلُ. ولانتِ الصخرةُ واعتذرتْ لأوّلِ مرّةٍ، فنبتَ من شقِّها برعمٌ أخضرُ. بهذا أثمرَ الغصنُ. قصّةٌ حسّيّةٌ على نهجِ <b>نظريّةِ القراءةِ الملموسةِ</b>: الاعتذارُ يُلِينُ أصلبَ القلوبِ ويُنبِتُ الحياةَ.</p>
+<blockquote style="max-width:560px;margin-inline:auto">«أَعْتَذِرُ — فَأُصْلِحُ مَا كَسَرْتُ»</blockquote>
+<div class="isbn">خِتامُ مرحلةِ الغصنِ · ١٠–١٢ سنة · <span class="lat">CEFR A2 · CASEL Responsible Decision-Making</span></div>
+<div class="spinecode">JUTHUR · BAYAN · 11</div>
+<div class="isbn" style="margin-top:.6em">بَذْرَةٌ تَبْقَى لِتَنْمُوَ مِنْ بَعْدِنَا · عامر (2024)</div>
+</section>
+
+</article>
+
+<div style="text-align:center;font-family:Amiri,serif;color:#7A6A4F;font-size:.88rem;margin:24px 0">⟋ «كُلُّ يَدٍ تَتْرُكُ أَثَرًا. وَكُلُّ أَثَرٍ يُعَلِّمُ يَدًا جَدِيدَةً.» — جُذُور · Amer (2024)</div>
+</body>
+</html>
