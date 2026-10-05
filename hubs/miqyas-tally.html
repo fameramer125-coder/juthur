@@ -12,7 +12,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Live Tally · Calibration Workshop</title>
-<meta name="author" content="Adel F. Amer">
 <style>
   :root{--novice:#2563eb;--intermediate:#16a34a;--advanced:#ea580c;--superior:#ca8a04;--distinguished:#6b7280;--border:#e5e5ea}
   body{font-family:'Segoe UI',Tahoma,sans-serif;color:#1c1c22;max-width:1100px;margin:0 auto;padding:20px;background:#f7f7f9}
@@ -38,6 +37,7 @@
 </head>
 <body>
 <h1>Live Tally · how far apart are we? <span style="font-weight:400;font-size:.8em;color:#666">(internal exercise, independent of ACTFL®)</span></h1>
+<p class="note" lang="ar" dir="rtl" style="text-align:right">العدّاد الحيّ لورشة المعايرة: أدخل لكل عيّنة ولكل جولة عدد المقيِّمين الذين اختاروا كل مستوى رئيسي، وعدد من كتب <b>U</b> (غير قابلة للتقييم). الـ U بيانات ناقصة لا رتبة منخفضة، ولا تدخل في أي نسبة اتفاق. لكل لغة شبكتها، وما تكتبه يبقى في هذا المتصفح حتى تمسحه.</p>
 <p class="note">Workshop 1 rates <b>major levels only</b>. For each sample and each round, enter how many raters chose each major level, and in the last column how many circled <b>U</b> (unratable). <b>U is missing data, never a low rating</b>: it is counted and shown, and left out of every agreement figure. Each language has its own grid; what you type is kept in this browser until you clear it.</p>
 
 <div class="card">
@@ -115,7 +115,7 @@ function render(){
       <h3 style="margin-top:0">${state.lang}, Round ${round} ${round===1?'(blind, before the lesson)':'(after the lesson)'}</h3>
       <table>
         <tr><th>Sample</th>${LV.map(l=>`<th>${l}</th>`).join('')}<th style="color:#991b1b">U</th><th>Entered / raters</th><th style="min-width:170px">Distribution</th><th>Range</th><th>Distance</th></tr>
-        ${SAMPLES.map(s=>{const x=cur().rounds[round][s];return `<tr><td><b>${s}</b></td>${LV.map((l,li)=>`<td><input type="number" min="0" max="60" step="1" value="${x.c[li]}" oninput="setCell(${round},'${s}',${li},this)"></td>`).join('')}<td><input type="number" min="0" max="60" step="1" value="${x.u}" oninput="setCell(${round},'${s}','u',this)" style="border-color:#fca5a5"></td><td id="r${round}s${s}tot"></td><td><div class="barrow" id="r${round}s${s}bar"></div></td><td id="r${round}s${s}range">–</td><td id="r${round}s${s}spread">–</td></tr>`;}).join('')}
+        ${SAMPLES.map(s=>{const x=cur().rounds[round][s];return `<tr><td><b>${s}</b></td>${LV.map((l,li)=>`<td><input type="number" min="0" max="60" step="1" value="${x.c[li]}" oninput="setCell(${round},'${s}',${li},this)"></td>`).join('')}<td><input type="number" min="0" max="60" step="1" value="${x.u}" oninput="setCell(${round},'${s}','u',this)" style="border-color:#fca5a5"></td><td id="r${round}s${s}tot"></td><td><div class="barrow" id="r${round}s${s}bar"></div></td><td id="r${round}s${s}range">·</td><td id="r${round}s${s}spread">–</td></tr>`;}).join('')}
       </table>
     </div>`).join('');
   calc();
@@ -168,8 +168,8 @@ function calc(){
     tot.className = entered===0 ? '' : (entered===g.raters ? 'ok' : 'warn');
     tot.title = entered===0||entered===g.raters ? '' : 'This row does not add up to the number of raters.';
     const used=st.counts.map((c,i)=>c?i:-1).filter(i=>i>=0);
-    document.getElementById(`r${round}s${s}range`).textContent = used.length ? (used.length===1||used[0]===used[used.length-1] ? LV[used[0]] : LV[used[0]]+' – '+LV[used[used.length-1]]) : ', ';
-    document.getElementById(`r${round}s${s}spread`).textContent = st.spread===null?', ':st.spread.toFixed(2);
+    document.getElementById(`r${round}s${s}range`).textContent = used.length ? (used.length===1||used[0]===used[used.length-1] ? LV[used[0]] : LV[used[0]]+' to '+LV[used[used.length-1]]) : '·';
+    document.getElementById(`r${round}s${s}spread`).textContent = st.spread===null?'·':st.spread.toFixed(2);
     document.getElementById(`r${round}s${s}bar`).innerHTML = st.n ? st.counts.map((c,li)=> c?`<div class="seg" style="width:${c/st.n*100}%;background:${LVC[li]}" title="${LV[li]}: ${c}"></div>`:'').join('') : '';
   }));
   const uTot=r=>SAMPLES.reduce((a,s)=>a+g.rounds[r][s].u,0);
@@ -178,8 +178,8 @@ function calc(){
   const R={1:roundSummary(all(1)),2:roundSummary(all(2))};
   const C={1:roundSummary(both.map(s=>per[1][s])),2:roundSummary(both.map(s=>per[2][s]))};
   window.__last={R,C,both,u:{1:uTot(1),2:uTot(2)}};
-  const pct=v=>v===null?', ':Math.round(v*100)+'%';
-  const fa=v=>(v===null||v===undefined)?', ':v.toFixed(2);
+  const pct=v=>v===null?'·':Math.round(v*100)+'%';
+  const fa=v=>(v===null||v===undefined)?'·':v.toFixed(2);
   const row=(label,r,u)=>`<tr><td><b>${label}</b></td><td>${r?r.samples:0} of 6</td><td>${r?r.pairs:0}</td><td class="stat">${r?r.spread.toFixed(2):' · '}</td><td>${r?pct(r.exact):' · '}</td><td>${r?pct(r.adj):' · '}</td><td>${r?fa(r.alpha):' · '}</td><td>${u}</td></tr>`;
   let html=`<p class="note" style="margin-top:0">${g.raters} raters in this group.</p><table><tr><th></th><th>Samples with ≥2 ratings</th><th>Rater pairs counted</th><th>Avg distance (major levels)</th><th>Exact agreement</th><th>Adjacent agreement</th><th>Krippendorff’s α (ordinal) · secondary</th><th>Unratable (U)</th></tr>`;
   html+=row('Round 1',R[1],uTot(1))+row('Round 2',R[2],uTot(2))+'</table>';
