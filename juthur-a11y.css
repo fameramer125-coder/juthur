@@ -1,0 +1,11 @@
+/* Juthur accessibility layer: structure only. Colour contrast is handled by juthur-a11y.js. */
+:root{--gold-text:#6F5714}
+.langtog button:not(.on){background:#4a463f;color:#fff}
+:focus-visible{outline:3px solid #1B3A2F;outline-offset:2px}
+.grade-row>div{min-width:0;overflow-wrap:anywhere}
+.grade-row p,.grade-row i,.grade-row a{overflow-wrap:anywhere}
+a[href*="doi.org"],p:has(a[href*="doi.org"]),i:has(a[href*="doi.org"]){overflow-wrap:anywhere}
+.mline,.mline span{color:var(--gold-text)!important}
+.taqiba{opacity:1!important}
+.slug small{opacity:1!important}
+.end{opacity:1!important}

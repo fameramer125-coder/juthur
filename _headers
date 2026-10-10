@@ -4,7 +4,7 @@
   X-Frame-Options: SAMEORIGIN
   tdm-reservation: 1
   X-Robots-Tag: noai, noimageai
-  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Permissions-Policy: camera=(), microphone=(self), geolocation=()
 
 /assets/*
   Cache-Control: public, max-age=604800

@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Murqat al-Juthur: The Whole Qur'an</title>
+<style>
+@font-face{font-family:"Amiri";font-weight:400;src:url(amiri400.woff2) format("woff2");font-display:swap}@font-face{font-family:"Amiri";font-weight:700;src:url(amiri700.woff2) format("woff2");font-display:swap}@font-face{font-family:"EB Garamond";font-weight:400 500;src:url(gar400.woff2) format("woff2");font-display:swap}@font-face{font-family:"EB Garamond";font-weight:600;src:url(gar600.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"KFGQPC Hafs";src:url(hafs3.ttf) format("truetype");font-display:swap}
+/* Concept: a quiet reading desk. Paper, ink and gold from the Juthur brand; five stage colours appear only as markers. The verse card is always paper and ink, in both themes. */
+:root{
+ --bg:#FBF9F4;--surface:#F4EEDC;--ink:#1B3A2F;--ink2:#4A6459;--gold:#9A7B23;--rule:#D9CFB4;
+ --band:#1B3A2F;--bandfg:#F0E9D6;--bandgold:#C9A94B;--focus:#2F7FC1;--goldt:#7A6218;--pfocus:#F0E9D6;
+ --vbg:#FBF9F4;--vfg:#1B3A2F;--vrule:#D9CFB4;
+ --s1:#1B3A2F;--s2:#2F7FC1;--s3:#C4801A;--s4:#5B2A6E;--s5:#2B2B2B;
+ --s1t:#EAF1EC;--s2t:#E4EFF8;--s3t:#FBEBD0;--s4t:#F0E6F5;--s5t:#E9E9E7;
+ --font-ui:"Amiri","Noto Naskh Arabic",serif;--font-lat:"EB Garamond",Georgia,serif;--font-q:"KFGQPC Hafs","Amiri Quran","Amiri",serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+ --bg:#0F1E18;--surface:#162A21;--ink:#F0E9D6;--ink2:#A9BDB1;--gold:#C9A94B;--rule:#2C4438;--band:#0A140F;--focus:#6AA9E0;--goldt:#C9A94B;
+ --s1:#8FC4A8;--s2:#6AA9E0;--s3:#E0A04A;--s4:#B58AC9;--s5:#BDBDBD;color-scheme:dark}}
+:root[data-theme="dark"]{
+ --bg:#0F1E18;--surface:#162A21;--ink:#F0E9D6;--ink2:#A9BDB1;--gold:#C9A94B;--rule:#2C4438;--band:#0A140F;--focus:#6AA9E0;--goldt:#C9A94B;
+ --s1:#8FC4A8;--s2:#6AA9E0;--s3:#E0A04A;--s4:#B58AC9;--s5:#BDBDBD;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-ui);font-size:18px;line-height:1.7}
+.lat{font-family:var(--font-lat);direction:ltr;unicode-bidi:isolate}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+.wrap{max-width:940px;margin:0 auto;padding-inline:16px}
+.top{background:var(--band);color:var(--bandfg);border-bottom:2px solid var(--bandgold)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.mark{min-height:44px;display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.mark b{font-family:var(--font-q);font-size:34px;font-weight:400;color:var(--bandgold);line-height:1.2}
+.mark span{font-size:20px}
+.draft{font-family:var(--font-lat);font-size:13px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--bandgold);color:var(--bandgold);padding:3px 10px;border-radius:999px;white-space:nowrap}
+.notice{background:var(--surface);border-bottom:1px solid var(--rule);font-size:15px;color:var(--ink2)}
+.notice .wrap{padding-block:8px;display:flex;gap:14px;flex-wrap:wrap;justify-content:space-between}
+main{padding-block:28px calc(var(--ph,0px) + 40px)}
+h1{font-size:44px;line-height:1.35;font-weight:700;margin:0;text-wrap:balance}
+h2{font-size:26px;margin:36px 0 12px;font-weight:700}
+.sub{font-family:var(--font-lat);color:var(--ink2);font-size:18px;direction:ltr;text-align:right}
+.path{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:22px 0 6px}
+.path::before{content:"";position:absolute;inset-inline:10%;top:21px;height:2px;background:var(--rule)}
+.node{position:relative;text-align:center;display:flex;flex-direction:column;align-items:center;gap:4px;font-size:16px;line-height:1.3}
+.node i{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-family:var(--font-lat);font-weight:600;font-size:20px;color:#fff;border:3px solid var(--bg)}
+.node small{font-family:var(--font-lat);color:var(--ink2);font-size:13px}
+.n1 i{background:#1B3A2F}.n2 i{background:#2F7FC1}.n3 i{background:#C4801A}.n4 i{background:#5B2A6E}.n5 i{background:#2B2B2B}
+.parts{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.card{display:flex;flex-direction:column;gap:6px;padding:16px;background:var(--surface);border:1px solid var(--rule);border-radius:8px;text-decoration:none;color:inherit;min-width:0}
+.card:hover{border-color:var(--gold)}
+.card .code{font-family:var(--font-lat);font-size:14px;letter-spacing:.12em;color:var(--goldt);font-weight:600}
+.card .t{font-size:24px;line-height:1.4;font-weight:700}
+.card .m{font-family:var(--font-lat);font-size:15px;color:var(--ink2);direction:ltr;text-align:right}
+.bar{height:5px;border-radius:3px;background:var(--rule);overflow:hidden;margin-top:6px}
+.bar>b{display:block;height:100%;background:var(--gold);width:0}
+.card .p{font-family:var(--font-lat);font-size:13.5px;color:var(--ink2);direction:ltr;text-align:right}
+.back{min-height:44px;display:inline-flex;gap:8px;align-items:center;text-decoration:none;color:var(--ink2);font-size:17px;margin-bottom:14px}
+.phead{display:flex;flex-direction:column;gap:2px;margin-bottom:10px}
+.unit{margin-top:30px}
+.ubanner{background:var(--band);color:var(--bandfg);border:1px solid var(--bandgold);border-radius:6px;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.ubanner b{font-size:30px;font-weight:700;color:var(--bandgold)}
+.ubanner span{font-family:var(--font-lat);font-size:15px;direction:ltr}
+.cont{font-size:15px;color:var(--ink2);margin:8px 2px 0}
+.verse{background:var(--vbg);color:var(--vfg);border:1px solid var(--vrule);border-radius:8px;padding:16px 18px 12px;margin-top:14px;scroll-margin-top:90px;scroll-margin-bottom:calc(var(--ph,150px) + 20px)}
+.verse.on{border-color:var(--gold);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 35%,transparent)}
+.vtext{font-family:var(--font-q);font-size:38px;line-height:2.3;direction:rtl;text-align:right;margin:0;font-weight:400}
+.vrow{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--vrule);margin-top:6px;padding-top:10px}
+.vl{display:flex;align-items:center;gap:10px;font-family:var(--font-lat);color:#4A6459;font-size:15px}
+.num{min-width:34px;height:34px;padding-inline:6px;border-radius:50%;border:1.5px solid #9A7B23;display:grid;place-items:center;font-weight:600;color:#1B3A2F;font-size:16px}
+.play{width:46px;height:46px;border-radius:50%;border:2px solid #9A7B23;background:#fff;color:#1B3A2F;display:grid;place-items:center;flex:none}
+.play:hover{background:#F0E9D6}
+.play svg{width:20px;height:20px;fill:currentColor}
+.verse.on .play{background:#1B3A2F;color:#F0E9D6;border-color:#1B3A2F}
+.stages{display:flex;gap:6px;flex-wrap:wrap}
+.dot{width:36px;height:36px;border-radius:50%;border:2px solid var(--c);background:transparent;color:var(--c);font-family:var(--font-lat);font-weight:600;font-size:15px;display:grid;place-items:center;padding:0}
+.dot[aria-pressed="true"]{background:var(--c);color:#fff}
+.d1{--c:#1B3A2F}.d2{--c:#2F7FC1}.d3{--c:#C4801A}.d4{--c:#5B2A6E}.d5{--c:#2B2B2B}
+.bas .vtext{font-size:34px;text-align:center}
+details{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:10px 16px;margin-top:14px}
+summary{cursor:pointer;font-weight:700;font-size:20px;min-height:44px;display:list-item}
+details ol{margin:10px 0 4px;padding-inline-start:22px}
+details li{margin:4px 0;font-size:18px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:15px;color:var(--ink2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:20px;height:20px;border-radius:50%;display:inline-grid;place-items:center;font-style:normal;font-family:var(--font-lat);font-size:12px;font-weight:600;color:#fff}
+.player{position:fixed;inset-inline:0;bottom:0;z-index:5;background:var(--band);color:var(--bandfg);border-top:2px solid var(--bandgold);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+.pin{max-width:940px;margin:0 auto;display:grid;gap:8px}
+.prow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:space-between}
+.now{font-size:19px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1 1 180px}
+.ctl{display:flex;gap:8px;align-items:center}
+.pb{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--bandgold);background:transparent;color:var(--bandfg);display:grid;place-items:center}
+.pb.main{background:var(--bandgold);color:#1B3A2F;width:50px;height:50px}
+.pb svg{width:20px;height:20px;fill:currentColor}
+.seg{display:inline-flex;border:1px solid var(--bandgold);border-radius:999px;overflow:hidden}
+.seg button{background:transparent;border:0;padding:5px 12px;color:var(--bandfg);font-size:15px;min-height:36px}
+.seg button[aria-pressed="true"]{background:var(--bandgold);color:#1B3A2F;font-weight:700}
+.track{height:5px;border-radius:3px;background:rgba(240,233,214,.25);overflow:hidden}
+.track>b{display:block;height:100%;width:0;background:var(--bandgold)}
+#rep{display:none;font-size:18px;color:var(--bandgold)}
+.player.rep #rep{display:block}
+footer{border-top:1px solid var(--rule);color:var(--ink2);font-size:14px;padding-block:18px calc(var(--ph,0px) + 30px)}
+footer .wrap{display:grid;gap:4px}
+@media(max-width:560px){h1{font-size:34px}.vtext{font-size:30px}.node{font-size:14px}.node i{width:36px;height:36px}.path::before{top:18px}.mark b{font-size:28px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+html{scroll-padding-bottom:calc(var(--ph,210px) + 16px)}
+.seg button,.dot{min-height:44px;min-width:44px}
+.stages{gap:8px}
+.d2,.n2 i{--c:#1F6AA8}.d3,.n3 i{--c:#8A5A0A}
+.n2 i{background:#1F6AA8}.n3 i{background:#8A5A0A}
+.more{display:none}
+.opts{display:grid;gap:8px}
+.optb{display:none;background:transparent;border:1px solid var(--bandgold);color:var(--bandfg);border-radius:999px;min-height:44px;padding:0 14px;font-size:15px}
+.msg{color:#FFD9A0;font-size:15px}.now:has(.msg){white-space:normal}
+.player{max-height:60vh;overflow:auto}.player :focus-visible{outline-color:var(--pfocus)}
+#player[data-mode="one"] #span{display:none}
+.ubanner h2{margin:0;font-size:30px;color:var(--bandgold)}
+.lsb{background:transparent;border:1px solid var(--bandgold);color:var(--bandgold);border-radius:999px;min-height:44px;padding:0 14px;font-size:16px}
+#skip:focus{clip:auto!important;width:auto!important;height:auto!important;background:#fff;color:#1B3A2F;padding:8px 14px;z-index:30;top:6px;inset-inline-start:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.vtext:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+.ubanner a{display:inline-flex;align-items:center;min-height:44px}
+@media(max-width:560px){.mark .lat{display:none}}
+@media(max-width:560px),(max-height:480px){.optb{display:inline-block}.opts{display:none}.player.open .opts{display:grid}.player{padding-top:8px}.now{font-size:17px}}
+.w{cursor:help;border-radius:4px}
+@media(hover:hover){.w:hover{background:var(--gold15,#F0E9D6)}}
+.w.on{background:#F0E9D6}
+#tip{position:fixed;z-index:20;pointer-events:none;background:#1B3A2F;color:#F0E9D6;border:1px solid #C9A94B;border-radius:8px;padding:6px 12px;font-family:var(--font-lat);font-size:19px;line-height:1.3;direction:ltr;text-align:center;max-width:260px;box-shadow:0 4px 14px rgba(0,0,0,.25);opacity:0;transition:opacity .12s}
+#tip.show{opacity:1}
+.sxg{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}.sx{padding:10px 12px}
+.hsteps{list-style:none;padding:0;margin:18px 0}.hstep{margin:10px 0}.hsh{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:12px 14px}
+.hchk{width:44px;height:44px;flex:none;border-radius:50%;border:2px solid var(--gold);background:transparent;color:var(--ink);font-family:var(--font-lat);font-weight:700;font-size:17px}.hchk[aria-pressed="true"]{background:var(--goldt);border-color:var(--goldt);color:#fff}
+.hst{min-width:0;font-size:18px}.hen{font-size:15px;color:var(--ink2)}.hdone{font-size:15px;color:var(--ink2);margin-top:4px}
+.hb{display:inline-block!important;color:var(--ink)!important;border-color:var(--gold)!important;margin:6px 6px 0 0}.hpray{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:6px;font-size:17px}.hpray input{width:24px;height:24px}.hpray label{min-height:44px;display:inline-flex;align-items:center;gap:8px}
+.hm .num{display:inline-grid;color:var(--ink)}.hm{border-top:1px solid var(--rule);padding-top:4px}.hund{margin-top:14px}.hund summary{font-size:22px}
+#printarea{display:none}
+@media print{.player{display:none!important}body.pc>div[lang="ar"]{display:none!important}body.pc #printarea{display:block!important}.pcard{page-break-inside:avoid;border:3px solid #9A7B23;border-radius:14px;padding:18px 22px;margin:0 0 14mm;position:relative;background:#fff;color:#1B3A2F}.pnum{position:absolute;top:10px;left:14px;width:46px;height:46px;border-radius:50%;border:2px solid #9A7B23;display:grid;place-items:center;font:700 22px Georgia}.pq{font-family:"KFGQPC Hafs","Amiri",serif;font-size:34px;line-height:2.3;text-align:center;margin:20px 0 4px}.pl{font:15px Georgia;text-align:center;margin:0;color:#4A6459;direction:rtl;unicode-bidi:isolate}.pe{font:15px Georgia;text-align:center;margin:4px 0 0;direction:ltr}}
+.hint{font-size:15px;color:var(--ink2);margin:8px 0 0}
+</style>
+</head><body>
+
+
+<div lang="ar" dir="rtl">
+<a class="sr" href="#" id="skip" style="position:absolute" onclick="event.preventDefault();var p=document.getElementById('player');if(!p.hidden)p.focus()">تخطَّ إلى المشغّل</a><header class="top"><div class="wrap">
+ <a class="mark" href="#"><b>جُذُور</b><span>مِرْقَاةُ الْجُذُورِ <span class="lat" style="font-size:15px;opacity:.8">Murqat al-Juthur · The Whole Qur’an</span></span></a>
+ <span class="draft">Reviewed</span>
+</div></header>
+<div class="notice"><div class="wrap"><span>رَاجَعَ مُطَابَقَةَ الصَّوْتِ لِلنَّصِّ د. عَادِل ف. عَامِر، مُجَازٌ فِي التَّجْوِيدِ وَالْقِرَاءَاتِ الْعَشْرِ، فِي ٩ أُكْتُوبَر ٢٠٢٦.</span><span class="lat">Audio-to-text match reviewed by Dr. Adel F. Amer, holder of an ijaza in Tajweed and the Ten Qira’at, 9 October 2026.</span></div></div>
+<div class="wrap"><main id="app"></main></div>
+<div class="player" id="player" data-mode="one" role="region" aria-label="مشغل التلاوة" tabindex="-1" hidden>
+ <div class="pin">
+  <div class="prow">
+   <div class="now" id="now" aria-live="polite"></div>
+   <div class="ctl">
+    <button class="pb" id="prev" aria-label="الآية السابقة"><svg viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM4 5v14l10-7z"/></svg></button>
+    <button class="pb main" id="pp" aria-label="تشغيل" aria-pressed="false"><svg id="ppi" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+    <button class="pb" id="next" aria-label="الآية التالية"><svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zM20 5v14L10 12z"/></svg></button>
+   </div>
+  </div>
+  <div class="prow"><button class="optb" id="optb" aria-expanded="false">خِيَارَاتٌ</button></div>
+  <div class="opts"><div class="prow">
+   <div class="seg" role="group" aria-label="وضع الاستماع" id="modes">
+    <button data-m="one" aria-pressed="true">آيَةٌ وَاحِدَةٌ</button><button data-m="repeat" aria-pressed="false">اسْمَعْ ثُمَّ كَرِّرْ</button><button data-m="cont" aria-pressed="false">مُتَوَاصِلٌ</button>
+   </div>
+   <div class="seg" role="group" aria-label="عدد الآيات في الاستماع المتواصل" id="span"><button data-k="3" aria-pressed="false">٣ آيَاتٍ</button><button data-k="5" aria-pressed="false">٥ آيَاتٍ</button><button data-k="10" aria-pressed="false">١٠ آيَاتٍ</button><button data-k="20" aria-pressed="false">٢٠ آيَةً</button><button data-k="0" aria-pressed="true">كَامِلُ السُّورَةِ</button></div>
+   <div class="seg" role="group" aria-label="عدد مرات التكرار" id="reps"><button data-n="1" aria-pressed="true" class="lat">×1</button><button data-n="3" aria-pressed="false" class="lat">×3</button><button data-n="5" aria-pressed="false" class="lat">×5</button><button data-n="10" aria-pressed="false" class="lat">×10</button><button data-n="0" aria-pressed="false" class="lat" aria-label="تكرار مستمر">∞</button></div>
+   <div class="seg" role="group" aria-label="الصوت" id="voices"><button data-v="r" aria-pressed="true">مُرَتَّلٌ</button><button data-v="m" aria-pressed="false">مُعَلِّمٌ</button></div>
+   <div class="seg" role="group" aria-label="السرعة (للاستماع فقط)" id="rates"><button data-r="0.5" aria-pressed="false" class="lat">0.5×</button><button data-r="0.75" aria-pressed="false" class="lat">0.75×</button><button data-r="1" aria-pressed="true" class="lat">1×</button></div>
+  </div></div>
+  <div class="rep" id="rep">كَرِّرْ أَنْتَ الْآنَ <span class="lat" style="font-size:14px">Now you repeat</span></div>
+  <div class="track" aria-hidden="true"><b id="tb"></b></div>
+ </div>
+</div>
+<div id="tip" role="tooltip" aria-hidden="true"></div><div class="sr" id="sr" aria-live="polite"></div>
+<footer><div class="wrap">
+ <span class="lat">Designed and developed by Dr. Adel F. Amer</span>
+ <span class="lat">Text: King Fahd Complex Hafs script (all 6,236 verses, as published in the Quran.com data set; full text reviewed by Dr. Adel F. Amer, 9 October 2026). Word meanings: Quran.com word-by-word data, matched to the text word for word (licence to be confirmed before print). Recitation: Mahmoud Khalil Al-Husary, Hafs from Asim, in two readings: murattal and the slower teaching (muallim) recording; verse files from EveryAyah.com, re-encoded for offline use (licence to be confirmed before wider distribution).</span>
+ <span>الاسْتِمَاعُ هُنَا عَوْنٌ عَلَى التَّلَقِّي وَلَا يُغْنِي عَنْ مُعَلِّمٍ مُجَازٍ. وَسُرْعَةُ الْإِبْطَاءِ لِلاسْتِمَاعِ فَقَطْ.</span>
+ <span>الْمَرَاحِلُ تُسَجَّلُ عَلَى هَذَا الْجِهَازِ فَقَطْ وَعَلَى مُسْتَوَى الصَّفِّ دُونَ أَسْمَاءٍ.</span>
+</div></footer>
+</div>
+
+<script src="data.js"></script>
+<script src="spr.js"></script>
+<script src="mean.js"></script>
+<script src="und.js"></script>
+<script src="hifz.js"></script>
+<script>
+const STG=[['كَمَا فِي الْمُصْحَفِ','As in the Mushaf'],['مُنَقَّطَةٌ','Dotted'],['غَائِرَةٌ','Engraved'],['الشَّفَّافُ','Film'],['بَارِزَةٌ','Raised']];
+const SKEY='murqat_full_progress_v1';
+let prog={};
+try{prog=JSON.parse(localStorage.getItem(SKEY)||'{}')||{}}catch(e){prog={}}
+if(typeof prog!=='object'||Array.isArray(prog))prog={};Object.keys(prog).forEach(k=>{if(!Array.isArray(prog[k]))delete prog[k]});
+function save(){try{localStorage.setItem(SKEY,JSON.stringify(prog))}catch(e){}}
+const $=s=>document.querySelector(s);
+const ARL=/[\u0621-\u064A\u0671-\u06D3]/;
+function esc(x){return x.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function W(t,key){const tr=WBW[key];if(!tr)return t;let i=0;return t.split(' ').map(tok=>{if(!ARL.test(tok)||i>=tr.length)return tok;return '<span class="w" data-tr="'+esc(tr[i++])+'">'+tok+'</span>'}).join(' ')}
+const app=$('#app');
+const AI='٠١٢٣٤٥٦٧٨٩';
+const en2ar=n=>String(n);
+function vkey(u,n){return u.num+':'+n}
+function partDone(p){let t=0,d=0;p.units.forEach(u=>u.ayat.forEach(a=>{t+=5;const r=prog[vkey(u,a.n)];if(Array.isArray(r))d+=r.filter(Boolean).length}));return [d,t]}
+function home(){
+
+ const sidx=[];DATA.parts.forEach(p=>p.units.forEach(u=>{if(u.from===1||u.num===1)sidx.push(`<a class="card sx" href="#${p.code}:${u.num}"><span class="t" style="font-size:20px">${u.num}. ${u.name_ar}</span><span class="m">${u.name_en}</span></a>`)}));
+ const sidxOpts=[];DATA.parts.forEach(p=>p.units.forEach(u=>{if(u.from===1||u.num===1)sidxOpts.push(`<option value="${u.num}">${u.num}. ${u.name_ar}</option>`)}));
+ const legend=STG.map((s,i)=>`<div class="node n${i+1}"><i>${i+1}</i><span>${s[0]}</span><small>${s[1]}</small></div>`).join('');
+ const cards=DATA.parts.map(p=>{const [d,t]=partDone(p);const pc=t?Math.round(100*d/t):0;
+  const nv=p.units.reduce((a,u)=>a+u.ayat.length,0);
+  return `<a class="card" href="#${p.code}"><span class="code">PART ${p.code.slice(1)}</span><span class="t">${p.title_ar}</span><span class="m">${p.title_en}</span><span class="m">${p.loc}</span><span class="p">${nv} verses · ${d} of ${t} stage marks</span><span class="bar"><b style="width:${pc}%"></b></span></a>`}).join('');
+ app.innerHTML=`<h1>خَمْسُ مَرَاحِلَ لِكُلِّ آيَةٍ</h1><div class="sub">Five stages for every verse</div>
+ <div class="path" aria-label="المراحل الخمس">${legend}</div>
+ <p style="color:var(--ink2);font-size:18px;max-width:62ch;margin:14px 0 0">يَسْمَعُ الطِّفْلُ الْآيَةَ ثُمَّ يَمُرُّ بِهَا فِي الْمَرَاحِلِ الْخَمْسِ بِالتَّرْتِيبِ وَيَنْطِقُ كُلَّ صَوْتٍ.</p>
+ <h2>الِاسْتِمَاعُ لِسُورَةٍ كَامِلَةٍ <span class="lat" style="font-size:18px;color:var(--ink2)">Listen to a whole surah</span></h2><div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center"><select id="lssel" aria-label="اخْتَرْ سُورَةً لِلِاسْتِمَاعِ" style="font:inherit;min-height:44px;padding:0 10px;border:1px solid var(--rule);border-radius:8px;background:var(--surface);color:var(--ink)">${sidxOpts.join('')}</select><button class="lsb" id="lsgo" style="color:var(--ink);border-color:var(--gold)">▶ اسْتَمِعْ</button></div>
+ ${hHomeBlock()}
+ <h2>الْأَجْزَاءُ <span class="lat" style="font-size:18px;color:var(--ink2)">Parts</span></h2><div class="parts">${cards}</div>
+ <h2>السُّوَرُ <span class="lat" style="font-size:18px;color:var(--ink2)">Surahs</span></h2><div class="parts sxg">${sidx.join('')}</div>`;
+ window.scrollTo(0,0);document.title='Murqat al-Juthur · The Whole Qur\'an';
+}
+let QUEUE=[],CURI=-1,PART=null;
+function partView(code){
+ const p=DATA.parts.find(x=>x.code===code);if(!p){location.hash='';return}
+ PART=p;QUEUE=[];
+ let h=`<a class="back" href="#">› الرَّئِيسِيَّةُ <span class="lat">Home</span></a><div class="phead"><h1 style="font-size:34px">${p.title_ar}</h1><div class="sub">${p.title_en} · ${p.loc}</div></div>
+ <details><summary>وَرَقَةُ الْمُعَلِّمِ <span class="lat" style="font-size:16px;color:var(--ink2)">Teacher sheet</span></summary><ol>
+ <li>الْمُعَلِّمُ يَقْرَأُ أَوَّلًا ثُمَّ نَسْمَعُ الْآيَةَ مَعًا.</li>
+ <li>الطِّفْلُ يَنْطِقُ كُلَّ صَوْتٍ فِي كُلِّ مَرْحَلَةٍ.</li>
+ <li>الْمَرَاحِلُ بِالتَّرْتِيبِ: كَمَا فِي الْمُصْحَفِ ثُمَّ مُنَقَّطَةٌ ثُمَّ غَائِرَةٌ ثُمَّ الشَّفَّافُ ثُمَّ بَارِزَةٌ.</li>
+ <li>سُلَّمُ اللَّمْسِ: كَلِمَةٌ ثُمَّ كَلِمَتَانِ ثُمَّ نِصْفُ آيَةٍ ثُمَّ مَقْطَعٌ كَامِلٌ وَالدَّوْرُ الْأَخِيرُ أَسْهَلُ بِدَرَجَةٍ.</li>
+ <li>نُسَجِّلُ عَلَى مُسْتَوَى الصَّفِّ وَلَا نَكْتُبُ أَسْمَاءً.</li></ol></details>
+ <p class="hint">مَرِّرِ الْمُؤَشِّرَ أَوِ المَسْ أَيَّ كَلِمَةٍ لِيَظْهَرَ مَعْنَاهَا بِالْإِنْجِلِيزِيَّةِ. <span class="lat">Hover or tap any word to see its English meaning.</span></p>
+ <div class="legend">${STG.map((s,i)=>`<span><i style="background:${['#1B3A2F','#1F6AA8','#8A5A0A','#5B2A6E','#2B2B2B'][i]}">${i+1}</i>${s[0]}</span>`).join('')}</div>`;
+ p.units.forEach(u=>{
+  h+=`<section class="unit" id="u${u.num}"><div class="ubanner"><h2>${u.name_ar}</h2><span>${u.name_en} · ${u.loc}</span><button class="lsb" data-ls="${u.num}">▶ ${u.from>1?'تَابِعِ الِاسْتِمَاعَ':'اسْتِمَاعٌ لِلسُّورَةِ كَامِلَةً'}</button><a href="#H${u.num}:${u.from}" style="color:var(--bandgold)">خَرِيطَةُ الْحِفْظِ</a></div>`;
+  if(u.from>1)h+=`<p class="cont">تَتَابُعٌ مِنَ الْآيَةِ <span class="lat">${u.from}</span></p>`;
+  if(u.bas){const id=QUEUE.length;QUEUE.push({s:u.num,key:'bas',label:u.name_ar+' · الْبَسْمَلَةُ'});
+   h+=`<article class="verse bas" id="v${id}"><p class="vtext" tabindex="0">${W(DATA.bas,'1:1')}</p><div class="vrow"><div class="vl"><button class="play" data-q="${id}" aria-label="استماع إلى البسملة"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button><span>Basmalah</span></div></div></article>`}
+  u.ayat.forEach(a=>{const id=QUEUE.length;QUEUE.push({s:u.num,key:a.n,label:u.name_ar+' · الْآيَةُ '+a.n,vk:vkey(u,a.n)});
+   const r=prog[vkey(u,a.n)]||[0,0,0,0,0];
+   h+=`<article class="verse" id="v${id}"><p class="vtext" tabindex="0">${W(a.t,u.num+':'+a.n)}</p><div class="vrow"><div class="vl"><button class="play" data-q="${id}" aria-label="استماع إلى الآية ${a.n}"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button><span class="num">${a.n}</span><span>${u.num}:${a.n}</span></div>
+   <div class="stages" role="group" aria-label="مراحل الآية ${a.n}">${[1,2,3,4,5].map(k=>`<button class="dot d${k}" data-vk="${vkey(u,a.n)}" data-k="${k-1}" aria-pressed="${r[k-1]?'true':'false'}" aria-label="الآية ${a.n}، المرحلة ${k}: ${STG[k-1][0]}">${k}</button>`).join('')}</div></div></article>`});
+  h+='</section>'});
+ app.innerHTML=h;window.scrollTo(0,0);document.title=p.title_ar+' · Murqat al-Juthur';
+ $('#player').hidden=false;setNow(-1);
+ if(window.AUTOP){const a=window.AUTOP;window.AUTOP=null;const ix=QUEUE.findIndex(x=>x.s===a.s);if(ix>=0){autoAdv=!!a.keep;playIdx(ix)}}
+}
+document.addEventListener('click',e=>{
+ const ls=e.target.closest('[data-ls]');if(ls){listenUnit(+ls.dataset.ls);return}
+ if(e.target.id==='lsgo'){startSurah(+$('#lssel').value);return}
+ const pl=e.target.closest('.play');if(pl){window.HLOOP=false;window.HEND=null;const i=+pl.dataset.q;if(i===CURI&&(playing()||wait))pause();else playIdx(i);return}
+ const d=e.target.closest('.dot');if(d){const k=d.dataset.vk,i=+d.dataset.k;const r=prog[k]||[0,0,0,0,0];r[i]=r[i]?0:1;prog[k]=r;save();d.setAttribute('aria-pressed',r[i]?'true':'false')}
+});
+/* audio */
+const AU=new Audio();AU.preload='metadata';let TK=null,badSeek=0;let A=AU,timer=null,mode='one',rate=1,span=0,ran=0,autoAdv=false,wait=null,reps=1,left=1,round=1,gen=0,pend=null,cur=null,held=false;
+function playing(){return !AU.paused}
+function firstVisible(){const v=[...document.querySelectorAll('article.verse')];for(const el of v){if(el.getBoundingClientRect().bottom>110){const id=+el.id.slice(1);if(QUEUE[id])return id}}return 0}
+function listenUnit(num){const m=document.querySelector('#modes [data-m="cont"]');if(m)m.click();setSpan(0);window.HLOOP=false;window.HEND=null;const ix=QUEUE.findIndex(x=>x.s===num&&x.key!=='bas');if(ix<0)return;autoAdv=false;playIdx(ix)}
+function startSurah(n){const p=DATA.parts.find(p=>p.units.some(u=>u.num===n&&(u.from===1||u.num===1)));if(!p)return;const m=document.querySelector('#modes [data-m="cont"]');if(m)m.click();setSpan(0);window.AUTOP={s:n};const h='#'+p.code+':'+n;if(location.hash===h)route();else location.hash=h}
+function nextPartJump(s){const k=DATA.parts.indexOf(PART);const np=DATA.parts[k+1];if(!np)return false;window.AUTOP={s,keep:true};location.replace('#'+np.code+':'+s);return true}
+function nextPartHas(s){if(!PART||window.HCUR)return false;const k=DATA.parts.indexOf(PART);const np=DATA.parts[k+1];return !!(np&&np.units[0]&&np.units[0].num===s)}
+let voice='r';function seg(it){return (voice==='m'?SPM:SPR)[it.s+':'+it.key]}
+function msg(t){$('#now').innerHTML='<span class="msg">'+t+'</span>'}
+function setNow(i){
+ CURI=i;document.querySelectorAll('.verse.on').forEach(x=>x.classList.remove('on'));
+ const it=QUEUE[i];$('#now').textContent=it?it.label:'اخْتَرْ آيَةً لِلاسْتِمَاعِ';
+ if(it){const el=document.getElementById('v'+i);if(el){el.classList.add('on');const r=el.getBoundingClientRect();if(r.top<80||r.bottom>innerHeight-($('#player').offsetHeight+20))el.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'})}}
+ $('#tb').style.width='0';
+}
+function icon(p){const pp=$('#pp');pp.setAttribute('aria-pressed',p?'true':'false');pp.setAttribute('aria-label',p?'إيقاف مؤقت':'تشغيل');$('#ppi').innerHTML=p?'<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>':'<path d="M8 5v14l11-7z"/>';document.querySelectorAll('.play').forEach(b=>{const on=p&&+b.dataset.q===CURI;if(!b.dataset.l)b.dataset.l=b.getAttribute('aria-label').replace(/^استماع إلى /,'');b.setAttribute('aria-label',(on?'إيقاف ':'استماع إلى ')+b.dataset.l);b.querySelector('svg').innerHTML=on?'<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>':'<path d="M8 5v14l11-7z"/>'})}
+function stopAll(){gen++;TK=null;clearInterval(timer);clearTimeout(wait);wait=null;if(pend){AU.removeEventListener('loadedmetadata',pend);pend=null}AU.pause();$('#player').classList.remove('rep')}
+function showNow(){const it=QUEUE[CURI];if(!it)return;$('#now').textContent=it.label+(reps!==1?'  ·  '+round+'/'+(reps===0?'∞':reps):'')}
+function pause(){stopAll();held=false;cur=null;icon(false)}
+function holdPause(){if(wait||!cur){pause();return}const keep=cur;stopAll();cur=keep;held=true;icon(false)}
+function tick(tok,i,st,en){TK={tok,i,st,en};badSeek=0;clearInterval(timer);timer=setInterval(tickCheck,40)}
+function tickCheck(){if(!TK)return;const {tok,i,st,en}=TK;if(tok!==gen){TK=null;clearInterval(timer);return}const t=AU.currentTime;
+ if(t<st-0.4){if(!AU.seeking&&++badSeek>60){stopAll();held=false;cur=null;icon(false);msg('تَعَذَّرَ الْقَفْزُ إِلَى الْآيَةِ. شَغِّلِ الْمُصْحَفَ مِنْ مِلَفٍّ عَادِيٍّ أَوْ مِنْ مَوْقِعِهِ.');return}try{AU.currentTime=Math.max(0,st-0.12)}catch(e){}return}
+ badSeek=0;if(AU.muted)AU.muted=false;$('#tb').style.width=Math.max(0,Math.min(100,100*(t-st)/(en-st)))+'%';
+ if(t>=en+0.03||AU.ended){TK=null;clearInterval(timer);AU.pause();onEnd(i,(en-st)/rate)}}
+AU.addEventListener('timeupdate',tickCheck);
+function fail(){icon(false);msg('تَعَذَّرَ تَشْغِيلُ الصَّوْتِ. تَحَقَّقْ مِنَ الِاتِّصَالِ ثُمَّ اضْغَطْ مَرَّةً أُخْرَى.')}
+function resume(){const tok=++gen;const {i,st,en}=cur;held=false;AU.playbackRate=rate;const pr=AU.play();if(pr&&pr.catch)pr.catch(e=>{if(e&&e.name!=='AbortError')fail()});icon(true);tick(tok,i,st,en)}
+function playIdx(i,again){
+ const wasAuto=autoAdv;autoAdv=false;
+ if(i>=QUEUE.length&&QUEUE.length){if(window.HEND){const f=window.HEND;window.HEND=null;pause();f();return}if(window.HLOOP){if(typeof window.HLOOP==='number'){window.HLOOP--;if(window.HLOOP<=0)window.HLOOP=false}autoAdv=true;playIdx(0);return}}
+ if(i<0||i>=QUEUE.length){pause();return}
+ if(!again&&!wasAuto)ran=0;stopAll();held=false;if(again){round++}else{round=1;left=reps===0?Infinity:reps}setNow(i);showNow();const it=QUEUE[i];const sg=seg(it);if(!sg){pause();setNow(i);msg('صَوْتُ هَذِهِ السُّورَةِ فِي النُّسْخَةِ الْكَامِلَةِ الَّتِي تَعْمَلُ دُونَ إِنْتَرْنِت.');return}const [f,st,en]=sg;
+ const tok=gen;cur={i,st,en};
+ const go=()=>{if(tok!==gen)return;pend=null;try{AU.currentTime=Math.max(0,st-0.12)}catch(e){}AU.playbackRate=rate;icon(true);tick(tok,i,st,en)};
+ AU.playbackRate=rate;
+ if(AU.dataset.f===f&&AU.readyState>=1){try{AU.currentTime=Math.max(0,st-0.12)}catch(e){}AU.muted=false;const pr=AU.play();if(pr&&pr.catch)pr.catch(e=>{if(e&&e.name!=='AbortError')fail()});icon(true);tick(tok,i,st,en)}
+ else{AU.dataset.f=f;AU.muted=true;AU.src='audio/'+f;pend=go;AU.addEventListener('loadedmetadata',go,{once:true});const pr=AU.play();if(pr&&pr.catch)pr.catch(e=>{if(e&&e.name!=='AbortError')fail()})}
+}
+AU.addEventListener('error',()=>{if(AU.dataset.f){stopAll();cur=null;held=false;AU.dataset.f='';fail()}});
+function onEnd(i,len){
+ left--;
+ if(left>0){icon(false);const gap=mode==='repeat'?(len+1.2)*1000:700;if(mode==='repeat'){$('#player').classList.add('rep');const t0=performance.now();clearInterval(timer);timer=setInterval(()=>{$('#tb').style.width=Math.min(100,100*(performance.now()-t0)/gap)+'%'},60)}wait=setTimeout(()=>{clearInterval(timer);$('#player').classList.remove('rep');wait=null;playIdx(i,true)},gap);return}
+ if(mode==='one'){icon(false);cur=null;return}
+ const nx=QUEUE[i+1];if(QUEUE[i]&&QUEUE[i].key!=='bas')ran++;const done=span>0&&ran>=span;const crosses=done||(nx&&QUEUE[i]&&nx.s!==QUEUE[i].s);
+ const jump=!nx&&!done&&nextPartHas(QUEUE[i].s);
+ const adv=()=>{autoAdv=true;if(jump){if(!nextPartJump(QUEUE[i].s)){autoAdv=false;icon(false);cur=null}}else playIdx(i+1)};
+ if(mode==='cont'){if(crosses){icon(false);cur=null;return}adv();return}
+ icon(false);$('#player').classList.add('rep');const ms=(len+1.2)*1000;
+ const t0=performance.now();clearInterval(timer);
+ timer=setInterval(()=>{const f=Math.min(1,(performance.now()-t0)/ms);$('#tb').style.width=(100*f)+'%'},60);
+ wait=setTimeout(()=>{clearInterval(timer);$('#player').classList.remove('rep');wait=null;if(crosses){icon(false);cur=null;return}adv()},ms);
+}
+$('#pp').addEventListener('click',()=>{if(playing()||wait){holdPause()}else if(held&&cur&&cur.i===CURI){resume()}else{window.HLOOP=false;window.HEND=null;playIdx(CURI<0?firstVisible():CURI)}});$('#optb').addEventListener('click',()=>{const o=$('#player').classList.toggle('open');$('#optb').setAttribute('aria-expanded',o)});
+$('#reps').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;reps=+b.dataset.n;document.querySelectorAll('#reps button').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));if(playing()||wait){left=reps===0?Infinity:Math.max(1,reps-round+(wait?0:1))}showNow()});
+$('#next').addEventListener('click',()=>{window.HLOOP=false;window.HEND=null;playIdx(Math.min(QUEUE.length-1,CURI+1))});
+$('#prev').addEventListener('click',()=>{window.HLOOP=false;window.HEND=null;playIdx(Math.max(0,CURI-1))});
+$('#modes').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;mode=b.dataset.m;$('#player').dataset.mode=mode;document.querySelectorAll('#modes button').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'))});
+function setSpan(k){span=k;document.querySelectorAll('#span button').forEach(x=>x.setAttribute('aria-pressed',+x.dataset.k===k?'true':'false'))}
+$('#span').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;setSpan(+b.dataset.k);if(mode==='one'){const m=document.querySelector('#modes [data-m="cont"]');if(m)m.click()}});
+$('#voices').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;voice=b.dataset.v;document.querySelectorAll('#voices button').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));if((playing()||wait)&&CURI>=0)playIdx(CURI);else{held=false;cur=null}});
+$('#rates').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;rate=+b.dataset.r;AU.playbackRate=rate;document.querySelectorAll('#rates button').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'))});
+const tip=$('#tip');let tipEl=null,tipT=null;
+function showTip(el){if(tipEl)tipEl.classList.remove('on');tipEl=el;el.classList.add('on');tip.textContent=el.dataset.tr;tip.classList.add('show');const r=el.getBoundingClientRect(),tw=tip.offsetWidth,th=tip.offsetHeight;let x=r.left+r.width/2-tw/2;x=Math.max(8,Math.min(innerWidth-tw-8,x));let y=r.top-th-8;if(y<8)y=r.bottom+8;tip.style.left=x+'px';tip.style.top=y+'px';clearTimeout(tipT);tipT=setTimeout(hideTip,4500)}
+function hideTip(){tip.classList.remove('show');if(tipEl){tipEl.classList.remove('on');tipEl=null}}
+app.addEventListener('mouseover',e=>{if(matchMedia('(hover:hover)').matches){const w=e.target.closest('.w');if(w)showTip(w)}});
+app.addEventListener('mouseout',e=>{if(matchMedia('(hover:hover)').matches&&e.target.closest('.w'))hideTip()});
+app.addEventListener('click',e=>{const w=e.target.closest('.w');if(w){showTip(w)}else hideTip()});
+app.addEventListener('keydown',e=>{const vt=e.target.closest&&e.target.closest('.vtext');if(!vt||!['ArrowLeft','ArrowRight','Enter',' '].includes(e.key))return;const ws=[...vt.querySelectorAll('.w')];if(!ws.length)return;e.preventDefault();let k=tipEl&&vt.contains(tipEl)?ws.indexOf(tipEl):-1;if(e.key==='ArrowLeft')k=Math.min(ws.length-1,k+1);else if(e.key==='ArrowRight')k=Math.max(0,k-1);else if(k<0)k=0;showTip(ws[k]);$('#sr').textContent=ws[k].textContent+' : '+ws[k].dataset.tr});
+if('ResizeObserver' in window)new ResizeObserver(()=>{const p=$('#player');document.documentElement.style.setProperty('--ph',(p.hidden?0:p.offsetHeight)+'px')}).observe($('#player'));
+if('mediaSession' in navigator){try{navigator.mediaSession.setActionHandler('play',()=>{if(held&&cur)resume();else if(!playing())playIdx(CURI<0?0:CURI)});navigator.mediaSession.setActionHandler('pause',()=>holdPause());navigator.mediaSession.setActionHandler('nexttrack',()=>$('#next').click());navigator.mediaSession.setActionHandler('previoustrack',()=>$('#prev').click())}catch(e){}}
+addEventListener('scroll',hideTip,{passive:true});addEventListener('keydown',e=>{if(e.key==='Escape')hideTip()});
+function route(){hideTip();pause();QUEUE=[];hifzReset();const h=location.hash.replace('#','');if(h&&/^H\d+(:\d+)?$/.test(h)){const [a,b]=h.slice(1).split(':');hifzView(+a,+(b||1))}else if(h&&/^P\d\d(:\d+)?$/.test(h)){const [pc,sn]=h.split(':');partView(pc);if(sn){const el=document.getElementById('u'+sn);if(el)el.scrollIntoView({block:'start'})}}else{$('#player').hidden=true;home()}}
+const SETK='murqat_set_v1';
+function saveSet(){try{localStorage.setItem(SETK,JSON.stringify({v:voice,r:rate,n:reps,m:mode}))}catch(e){}}
+['#modes','#reps','#voices','#rates'].forEach(q=>$(q).addEventListener('click',()=>setTimeout(saveSet,0)));
+try{const S=JSON.parse(localStorage.getItem(SETK)||'null');if(S&&typeof S==='object'){const c=(q,k,v)=>{const b=document.querySelector(q+' ['+k+'="'+v+'"]');if(b)b.click()};c('#voices','data-v',S.v);c('#rates','data-r',S.r);c('#reps','data-n',S.n);c('#modes','data-m',S.m)}}catch(e){}
+addEventListener('hashchange',route);route();
+</script>
+
+</body></html>
