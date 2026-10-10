@@ -1,4 +1,4 @@
-/*  juthur-bayan.css — جِلْدُ الأَسْفار
+/*  juthur-bayan.css، جِلْدُ الأَسْفار
     مطبعةُ جُذور · MCMXXVI
     صمّمه وطوّره د. عادل ف. عامر · Designed and developed by Dr. Adel F. Amer
     ────────────────────────────────────────────
@@ -83,7 +83,7 @@ html[data-stage]{
   --blue-stage:#3C6A55; --blue-deep:#1B3A2F; --blue-pale:#F0E9D6; --blue-soft:#6E9584;
   --s1:#3C6A55; --s1d:#1B3A2F; --s2:#4A7C64; --s2d:#23503F; --s3:#5E8F79; --s3d:#2E6350;
 }
-/* ── شريطُ المراحلِ الستّ — الوحدةُ العضويّةُ والتدرُّج ── */
+/* ── شريطُ المراحلِ الستّ، الوحدةُ العضويّةُ والتدرُّج ── */
 .jz-arc{display:flex;flex-wrap:wrap;justify-content:center;gap:.35rem;margin:1.4rem 0 .4rem;font-size:.76rem}
 .jz-arc span{padding:.3rem .7rem;border:1px solid var(--rule);background:rgba(251,249,244,.8);color:var(--ink-70);letter-spacing:.06em}
 .jz-arc span.on{background:var(--band,#9A7B23);color:#FBF9F4;border-color:var(--gold);font-weight:700}

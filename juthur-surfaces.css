@@ -1,5 +1,5 @@
 /*
-  juthur-surfaces.css — أسطحُ صناديقِ الخِزانة
+  juthur-surfaces.css، أسطحُ صناديقِ الخِزانة
   مطبعةُ جُذور · MCMXXVI
   صمّمه وطوّره د. عادل ف. عامر · Designed and developed by Dr. Adel F. Amer
   ══════════════════════════════════════════
@@ -33,7 +33,7 @@
 .srf--marble {background-image:url("assets/srf_marble.jpg")}
 .srf--brass  {background-image:url("assets/srf_brass.jpg")}
 
-/* لونُ النصِّ فوقَ كلِّ سطح — محسوبٌ للتباين */
+/* لونُ النصِّ فوقَ كلِّ سطح، محسوبٌ للتباين */
 .srf--leather,.srf--oak,.srf--paper,.srf--marble,.srf--brass{color:#1B3A2F}
 .srf--linen{color:#FBF9F4}
 .srf--linen::before{border-color:rgba(240,233,214,.45)}

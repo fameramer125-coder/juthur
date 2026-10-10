@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="description" content="Miqyas · Blind Rating Sheets and Sample Booklets · أداة من جُذور · A Juthur tool. © Dr. Adel F. Amer. All rights reserved.">
+<meta name="copyright" content="© 2024 to 2026 Dr. Adel F. Amer. All rights reserved.">
+<meta name="author" content="Dr. Adel F. Amer">
+<meta name="rights" content="All rights reserved">
+<meta name="tdm-reservation" content="1">
+<meta name="robots" content="max-image-preview:large,noai,noimageai">
+<link rel="license" href="https://fameramer125-coder.github.io/juthur/rights">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Miqyas · Blind Rating Sheets and Sample Booklets</title>
+<style>
+@page{size:A4;margin:11mm 11mm 10mm}
+*{box-sizing:border-box}
+body{margin:0;background:#ece7da;color:#1c2033;font-family:'Spectral','EB Garamond',Georgia,'Times New Roman',serif;font-size:10.4pt;line-height:1.45}
+.ar{font-family:'Amiri','Geeza Pro','Traditional Arabic','Times New Roman',serif;direction:rtl;unicode-bidi:isolate}
+.page{background:#fff;width:210mm;min-height:297mm;margin:10mm auto;padding:11mm;box-shadow:0 4px 22px rgba(0,0,0,.18);position:relative}
+.top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2.2pt double #8a6626;padding-bottom:5pt}
+.top h1{font-family:'EB Garamond',Georgia,serif;font-size:16pt;letter-spacing:1.5pt;margin:0;font-weight:700;color:#10172e}
+.top .sub{font-size:9pt;color:#555;margin-top:1pt}
+.round{border:1.6pt solid #10172e;padding:3pt 12pt;text-align:center;font-family:'EB Garamond',Georgia,serif}
+.round b{display:block;font-size:17pt;letter-spacing:2pt;line-height:1.1}
+.round span{font-size:8pt;letter-spacing:1pt;text-transform:uppercase}
+.meta{display:flex;gap:4pt 14pt;flex-wrap:wrap;margin:6pt 0 4pt;font-size:9.6pt}
+.meta .ln{display:inline-block;border-bottom:.8pt solid #1c2033;min-width:34mm;height:11pt;vertical-align:bottom}
+.box{display:inline-block;width:9pt;height:9pt;border:.9pt solid #1c2033;vertical-align:-1pt;margin:0 3pt 0 8pt}
+.rules{border:.8pt solid #c9b98a;border-left:3pt solid #a97e2f;padding:5pt 9pt;font-size:9.4pt;margin-bottom:6pt;background:#fdfbf4}
+.rules .ar{display:block;font-size:10pt;line-height:1.55;color:#333}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+th{background:#10172e;color:#fff;font-family:'EB Garamond',Georgia,serif;font-weight:600;letter-spacing:.6pt;font-size:8.6pt;padding:4pt 3pt;text-transform:uppercase;border:.8pt solid #10172e;vertical-align:middle}
+th .ar{display:block;text-transform:none;letter-spacing:0;font-size:9.5pt;font-weight:400;opacity:.9}
+td{border:.8pt solid #6b6f7d;padding:3pt 4pt;vertical-align:top}
+td.id{text-align:center;font-family:'EB Garamond',Georgia,serif}
+td.id b{font-size:17pt;display:block;line-height:1.1}
+td.id span{font-size:7.6pt;color:#555;display:block;line-height:1.2}
+.rungs{font-family:'EB Garamond',Georgia,serif;font-size:10.4pt;letter-spacing:.3pt;line-height:1.5;text-align:center;white-space:nowrap}
+.rungs i{font-style:normal;color:#a97e2f;padding:0 1pt}
+.rungs .u{display:inline-block;border:.9pt dashed #8a2f2f;color:#8a2f2f;padding:0 5pt;font-size:9.4pt;margin-top:1pt}
+.conf{text-align:center;font-size:10.5pt;letter-spacing:1.6pt;padding-top:7pt;white-space:nowrap}
+.opt{font-size:8.9pt;line-height:1.55;white-space:nowrap}
+.o{display:inline-block;width:7.5pt;height:7.5pt;border:.9pt solid #1c2033;border-radius:50%;vertical-align:-1pt;margin-right:3pt}
+.hes{font-size:8.8pt;color:#333;padding-top:5pt;white-space:nowrap;line-height:1.9}
+.hes .ln,.codes .ln{display:inline-block;border-bottom:.8pt solid #1c2033;width:11mm;height:10pt;vertical-align:bottom}
+tr.r td{height:24mm}
+.p2 tr.r td{height:15mm}
+.p2 .rungs{line-height:1.28;font-size:10pt}
+.p2 .hes{padding-top:3pt;line-height:1.6}
+.unr{border:1pt solid #8a2f2f;padding:4pt 9pt;margin-top:5pt;font-size:8.8pt;line-height:1.4}
+.unr h3,.refl h3{font-family:'EB Garamond',Georgia,serif;font-size:10.6pt;letter-spacing:1pt;margin:0 0 2pt;color:#8a2f2f;text-transform:uppercase}
+.refl h3{color:#10172e}
+.unr .g{display:grid;grid-template-columns:1fr 1fr;gap:1pt 14pt}
+.unr b.c{display:inline-block;width:12pt;height:12pt;border:.9pt solid #8a2f2f;border-radius:50%;text-align:center;line-height:11pt;font-size:8.5pt;margin-right:4pt;color:#8a2f2f}
+.refl{margin-top:6pt;font-size:9.6pt}
+.wl{border-bottom:.8pt solid #6b6f7d;height:15pt}
+.foot{position:absolute;left:11mm;right:11mm;bottom:9mm;border-top:.8pt solid #c9b98a;padding-top:4pt;font-size:7.9pt;color:#444;line-height:1.45}
+.foot .by{display:block;text-align:center;margin-top:2pt;color:#8a6626;letter-spacing:.5pt}
+.note h2{font-family:'EB Garamond',Georgia,serif;font-size:13pt;letter-spacing:1pt;color:#10172e;margin:14pt 0 3pt;border-bottom:.8pt solid #c9b98a;padding-bottom:2pt}
+.note p,.note li{font-size:10.4pt;line-height:1.6}
+.note .foot{position:static;margin-top:12pt}
+.bar{max-width:210mm;margin:12px auto 0;padding:0 4px;font-family:Georgia,serif;font-size:13px;display:flex;gap:12px;align-items:center}
+.bar button{font:inherit;padding:7px 16px;border:1px solid #10172e;background:#10172e;color:#fff;border-radius:3px;cursor:pointer}
+
+.bk h2{font-family:'EB Garamond',Georgia,serif;font-size:11.5pt;letter-spacing:1pt;color:#10172e;margin:6pt 0 2pt;border-bottom:.8pt solid #c9b98a;padding-bottom:1pt}
+.bk h2 b{display:inline-block;border:1.2pt solid #10172e;padding:0 7pt;margin-right:7pt;font-size:13pt}
+.bk .sample{border:.8pt solid #6b6f7d;border-radius:2pt;padding:5pt 10pt;font-size:10.6pt;line-height:1.55;page-break-inside:avoid;background:#fdfcf8}
+.bk .sample[dir="rtl"]{font-family:'Amiri','Geeza Pro','Traditional Arabic','Times New Roman',serif;font-size:12pt;line-height:1.62;text-align:right}
+.page.bk{min-height:0}
+@media print{.page.bk{height:auto}.bk .sample{background:none}}
+@media print{
+  body{background:#fff}
+  .bar{display:none}
+  .page{margin:0;box-shadow:none;width:auto;min-height:0;height:275mm;padding:0;page-break-after:always}
+  .page:last-child{page-break-after:auto}
+  .foot{left:0;right:0;bottom:0}
+  .page.note{height:auto}
+  th{background:#fff!important;color:#000!important;border:1pt solid #000}
+  .rules{background:none}
+}
+</style>
+<link rel="canonical" href="https://fameramer125-coder.github.io/juthur/hubs/miqyas-rating-sheets">
+<link rel="stylesheet" href="../juthur-a11y.css">
+</head>
+<body>
+<div class="bar"><button onclick="window.print()">Print (A4)</button><span>Page 1 (Round 1 sheet) and page 2 (Round 2 sheet) go to every rater, with the sample booklet of their own language: page 4 Arabic, page 5 French, page 6 Spanish. Page 3 stays with the facilitator.</span></div>
+
+<!-- ═════════ ROUND 1 ═════════ -->
+<div class="page p1">
+  <div class="top">
+    <div><h1>MIQYAS · BLIND RATING SHEET</h1><div class="sub">The Kitchen Workshop · rater calibration · <span class="ar">استمارة التقييم الأعمى · ورشة المطبخ المشترك</span></div></div>
+    <div class="round"><b>ROUND 1</b><span>before calibration · <span class="ar">الجولة الأولى</span></span></div>
+  </div>
+  <div class="meta">
+    <span>Language: <span class="box"></span>Arabic <span class="box"></span>French <span class="box"></span>Spanish</span>
+    <span>Rater code <span style="color:#555;font-size:8.6pt">(invent one, no names, and write the same code on your Round 2 sheet)</span>: <span class="ln"></span></span>
+    <span>Date: <span class="ln" style="min-width:26mm"></span></span>
+  </div>
+  <div class="rules">
+    <b>Alone and in silence.</b> Read each sample to the end before you decide. Give the <b>major level only</b>, with your understanding as it stands today. <b>A blank is more honorable than a guess:</b> if a sample cannot be rated, circle <b>U</b> and say why in one line.
+    <span class="ar">وحدك وفي صمت. اقرأ العيّنة إلى آخرها قبل الحكم، واكتفِ بالمستوى الرئيس، بفهمك كما هو اليوم. الفراغ أشرف من التخمين: إن تعذّر التقييم فأحِط U واكتب السبب في سطر.</span>
+  </div>
+  <table>
+    <colgroup><col style="width:15mm"><col style="width:44mm"><col style="width:25mm"><col><col style="width:33mm"></colgroup>
+    <tbody><tr><th>Sample<span class="ar">العيّنة</span></th><th>Major level · circle one<span class="ar">المستوى الرئيس · أحِط واحدًا</span></th><th>Confidence<span class="ar">١ تخمين · ٥ يقين</span><span style="display:block;text-transform:none;letter-spacing:0;font-size:7.4pt;font-weight:400">1 = a guess · 5 = certain</span></th><th>Your reason, in one line<span class="ar">تعليلك في سطر</span></th><th>If you hesitated<span class="ar">إن تردّدت</span></th></tr>
+  </tbody><tbody><tr class="r"><td class="id"><b>1</b><span>speech · transcript</span></td><td><div class="rungs">Novice <i>·</i> Intermediate<br>Advanced <i>·</i> Superior<br>Distinguished <i>·</i> <span class="u">U · unratable</span></div></td><td><div class="conf">1 2 3 4 5</div></td><td></td><td class="hes">between<br><span class="ln"></span> and <span class="ln"></span></td></tr><tr class="r"><td class="id"><b>2</b><span>writing</span></td><td><div class="rungs">Novice <i>·</i> Intermediate<br>Advanced <i>·</i> Superior<br>Distinguished <i>·</i> <span class="u">U · unratable</span></div></td><td><div class="conf">1 2 3 4 5</div></td><td></td><td class="hes">between<br><span class="ln"></span> and <span class="ln"></span></td></tr><tr class="r"><td class="id"><b>3</b><span>speech · transcript</span></td><td><div class="rungs">Novice <i>·</i> Intermediate<br>Advanced <i>·</i> Superior<br>Distinguished <i>·</i> <span class="u">U · unratable</span></div></td><td><div class="conf">1 2 3 4 5</div></td><td></td><td class="hes">between<br><span class="ln"></span> and <span class="ln"></span></td></tr><tr class="r"><td class="id"><b>4</b><span>writing</span></td><td><div class="rungs">Novice <i>·</i> Intermediate<br>Advanced <i>·</i> Superior<br>Distinguished <i>·</i> <span class="u">U · unratable</span></div></td><td><div class="conf">1 2 3 4 5</div></td><td></td><td class="hes">between<br><span class="ln"></span> and <span class="ln"></span></td></tr><tr class="r"><td class="id"><b>5</b><span>speech · transcript</span></td><td><div class="rungs">Novice <i>·</i> Intermediate<br>Advanced <i>·</i> Superior<br>Distinguished <i>·</i> <span class="u">U · unratable</span></div></td><td><div class="conf">1 2 3 4 5</div></td><td></td><td class="hes">between<br><span class="ln"></span> and <span class="ln"></span></td></tr><tr class="r"><td class="id"><b>6</b><span>speech · transcript</span></td><td><div class="rungs">Novice <i>·</i> Intermediate<br>Advanced <i>·</i> Superior<br>Distinguished <i>·</i> <span class="u">U · unratable</span></div></td><td><div class="conf">1 2 3 4 5</div></td><td></td><td class="hes">between<br><span class="ln"></span> and <span class="ln"></span></td></tr></tbody></table>
+  <div class="refl">
+    <h3>After the sixth sample · <span class="ar">بعد العيّنة السادسة</span></h3>
+    Between which two levels did you hesitate most today, and why? <span class="ar">بين أيّ مستويين كان تردّدك الأكبر اليوم، ولماذا؟</span>
+    <div class="wl"></div><div class="wl"></div>
+  </div>
+  <div class="foot">
+    <b>What these samples are:</b> every sample in this workshop is Tier C (<span class="ar">اجتهاد</span>), one author's proposal, not an answer key. No answer key is shown or used today. Reference judgments are collected separately, from raters who never see this room's numbers. <b>What this sheet is:</b> an internal calibration exercise for teachers. It measures raters, not students, and confers no rating or credential from ACTFL® or Project AERO. Individual sheets are never shown with a name.
+    <span class="by">Designed and developed by Dr. Adel F. Amer</span>
+  </div>
+</div>
+
+<!-- ═════════ ROUND 2 ═════════ -->
+<div class="page p2">
+  <div class="top">
+    <div><h1>MIQYAS · BLIND RATING SHEET</h1><div class="sub">The Kitchen Workshop · rater calibration · <span class="ar">استمارة التقييم الأعمى · ورشة المطبخ المشترك</span></div></div>
+    <div class="round"><b>ROUND 2</b><span>after calibration · <span class="ar">الجولة الثانية</span></span></div>
+  </div>
+  <div class="meta">
+    <span>Language: <span class="box"></span>Arabic <span class="box"></span>French <span class="box"></span>Spanish</span>
+    <span>Rater code <span style="color:#555;font-size:8.6pt">(the same code as Round 1)</span>: <span class="ln"></span></span>
+    <span>Date: <span class="ln" style="min-width:26mm"></span></span>
+  </div>
+  <div class="rules">
+    <b>Same six samples, fresh sheet, same silence.</b> Major level only, as before. Rate the highest function the learner <b>sustains</b>, not the one shining sentence. Use the FACT lens for your reason. Keep your Round 1 rating or change it: either is a sound answer if your reason holds. <b>Unratable is a legitimate professional answer</b>: circle <b>U</b> and give its reason code from the box below.
+    <span class="ar">العيّنات الستّ نفسها، بورقة جديدة وبالصمت نفسه، والمستوى الرئيس فقط كما سبق. قيّم أعلى وظيفة يُديمها المتعلّم لا الجملة اللامعة الواحدة، وعلّل بعدسة FACT. ثبّت حكمك الأول أو غيّره؛ كلاهما جواب سليم ما دام تعليلك قائمًا. «غير قابل للتقييم» إجابة مهنية مشروعة: أحِط U واكتب رمز السبب.</span>
+  </div>
+  <table>
+    <colgroup><col style="width:15mm"><col style="width:44mm"><col style="width:25mm"><col><col style="width:30mm"></colgroup>
+    <tbody><tr><th>Sample<span class="ar">العيّنة</span></th><th>Major level · circle one<span class="ar">المستوى الرئيس · أحِط واحدًا</span></th><th>Confidence<span class="ar">١ تخمين · ٥ يقين</span><span style="display:block;text-transform:none;letter-spacing:0;font-size:7.4pt;font-weight:400">1 = a guess · 5 = certain</span></th><th>Your reason · F · A · C · T<span class="ar">تعليلك بعدسة FACT</span></th><th>Hesitated / U code<span class="ar">تردّد / رمز U</span></th></tr>
+  </tbody><tbody><tr class="r"><td class="id"><b>1</b><span>speech · transcript</span></td><td><div class="rungs">Novice <i>·</i> Intermediate<br>Advanced <i>·</i> Superior<br>Distinguished <i>·</i> <span class="u">U · unratable</span></div></td><td><div class="conf">1 2 3 4 5</div></td><td></td><td class="hes codes"><span class="ln"></span> / <span class="ln"></span><br><span style="font-size:8pt;color:#8a2f2f">U code: <span class="ln" style="width:7mm"></span></span></td></tr><tr class="r"><td class="id"><b>2</b><span>writing</span></td><td><div class="rungs">Novice <i>·</i> Intermediate<br>Advanced <i>·</i> Superior<br>Distinguished <i>·</i> <span class="u">U · unratable</span></div></td><td><div class="conf">1 2 3 4 5</div></td><td></td><td class="hes codes"><span class="ln"></span> / <span class="ln"></span><br><span style="font-size:8pt;color:#8a2f2f">U code: <span class="ln" style="width:7mm"></span></span></td></tr><tr class="r"><td class="id"><b>3</b><span>speech · transcript</span></td><td><div class="rungs">Novice <i>·</i> Intermediate<br>Advanced <i>·</i> Superior<br>Distinguished <i>·</i> <span class="u">U · unratable</span></div></td><td><div class="conf">1 2 3 4 5</div></td><td></td><td class="hes codes"><span class="ln"></span> / <span class="ln"></span><br><span style="font-size:8pt;color:#8a2f2f">U code: <span class="ln" style="width:7mm"></span></span></td></tr><tr class="r"><td class="id"><b>4</b><span>writing</span></td><td><div class="rungs">Novice <i>·</i> Intermediate<br>Advanced <i>·</i> Superior<br>Distinguished <i>·</i> <span class="u">U · unratable</span></div></td><td><div class="conf">1 2 3 4 5</div></td><td></td><td class="hes codes"><span class="ln"></span> / <span class="ln"></span><br><span style="font-size:8pt;color:#8a2f2f">U code: <span class="ln" style="width:7mm"></span></span></td></tr><tr class="r"><td class="id"><b>5</b><span>speech · transcript</span></td><td><div class="rungs">Novice <i>·</i> Intermediate<br>Advanced <i>·</i> Superior<br>Distinguished <i>·</i> <span class="u">U · unratable</span></div></td><td><div class="conf">1 2 3 4 5</div></td><td></td><td class="hes codes"><span class="ln"></span> / <span class="ln"></span><br><span style="font-size:8pt;color:#8a2f2f">U code: <span class="ln" style="width:7mm"></span></span></td></tr><tr class="r"><td class="id"><b>6</b><span>speech · transcript</span></td><td><div class="rungs">Novice <i>·</i> Intermediate<br>Advanced <i>·</i> Superior<br>Distinguished <i>·</i> <span class="u">U · unratable</span></div></td><td><div class="conf">1 2 3 4 5</div></td><td></td><td class="hes codes"><span class="ln"></span> / <span class="ln"></span><br><span style="font-size:8pt;color:#8a2f2f">U code: <span class="ln" style="width:7mm"></span></span></td></tr></tbody></table>
+  <div class="unr">
+    <h3>If you circled U · the reason is required · <span class="ar">إن أحطتَ U فالسبب إلزامي</span></h3>
+    <div class="g">
+      <div><b class="c">A</b><b>Task above the language floor</b>: the thinking asked for outruns the language available; it needs a scaffold. <span class="ar">المهمّة فوق العتبة اللغوية</span></div>
+      <div><b class="c">B</b><b>Task elicited only the supplied frames</b>: the prompt left no room beyond them; a verdict on the task, not the learner. <span class="ar">المهمّة لم تستخرج إلا القوالب المعطاة</span></div>
+      <div><b class="c">C</b><b>Not enough evidence</b>: too short, unclear, or too little produced to judge. <span class="ar">أدلّة غير كافية</span></div>
+      <div><b class="c">D</b><b>Evidence integrity in doubt</b>: possible AI or translation tool, or group work not untangled. <span class="ar">سلامة الأدلّة مشكوك فيها</span></div>
+      <div style="grid-column:1/3"><b class="c">E</b><b>Other</b>: write it: <span class="ln" style="display:inline-block;border-bottom:.8pt solid #1c2033;width:120mm;height:10pt"></span></div>
+    </div>
+  </div>
+  <div class="refl">
+    <h3>After the sixth sample · <span class="ar">بعد العيّنة السادسة</span></h3>
+    Which border still puzzles you, where did your Round 2 rating move, or refuse to move, and why? <span class="ar">أيّ حدٍّ ما زال يحيّرك · أين تحرّك حكمك أو أبى أن يتحرّك، ولماذا؟</span>
+    <div class="wl"></div>
+  </div>
+  <div class="foot">
+    <b>What these samples are:</b> every sample in this workshop is Tier C (<span class="ar">اجتهاد</span>), one author's proposal, not an answer key. An independent specialist's confirmation lifts a sample to Tier B (<span class="ar">اعتضاد</span>); two raters agreeing blind lifts it to Tier A (<span class="ar">اعتماد</span>). <b>What this sheet is:</b> an internal calibration exercise for teachers. It measures raters, not students, and confers no rating or credential from ACTFL® or Project AERO. Individual sheets are never shown with a name.
+    <span class="by">Designed and developed by Dr. Adel F. Amer</span>
+  </div>
+</div>
+
+<!-- ═════════ FACILITATOR ═════════ -->
+<div class="page note">
+  <div class="top">
+    <div><h1>MIQYAS · RATING SHEETS · FACILITATOR NOTE</h1><div class="sub">Keep this page. It is not handed to raters.</div></div>
+    <div class="round"><b>v2.7</b><span>pairs with kit v1.5</span></div>
+  </div>
+  <h2>Print run</h2>
+  <p>Per rater: one Round 1 sheet, one Round 2 sheet, and one sample booklet in the language they teach (the booklets follow this page: Arabic, French, Spanish). Single-sided A4. The booklet is reused in Round 2; the Round 2 sheet is handed out only after Round 1 has been collected. Sample numbers 1–6 on the sheets are samples 1–6 in the booklet. Give every rater the one-page information sheet for teachers before anything else, and keep a second person beside you for the tally.</p>
+  <h2>Why the two sheets are not identical</h2>
+  <p>Round 1 measures judgment as it walks in. The kit's own rule for that round is that any teaching contaminates it. So the Round 1 sheet says nothing about sustained function, FACT, method floors or memorized frames, carries no worked example in its first row, names no border, and says nothing about what the workshop hopes to see in Round 2. Each of those would teach the very idea the workshop is about to measure the effect of teaching.</p>
+  <p><b>Both sheets ask for the major level only</b> (Novice, Intermediate, Advanced, Superior, Distinguished). Sublevels are Workshop 2, on real samples, and a single short sample does not carry enough evidence for one. The Round 2 sheet adds what the lesson has by then taught: the sustained-function reminder, the FACT prompt, and the five Unratable reason codes that match the toolkit's Tab 9 dialog.</p>
+  <p><b>The rating column and the confidence column are identical on both sheets.</b> Those two are what the Round 1 / Round 2 comparison is computed from, so the comparison is not disturbed by the additions.</p>
+  <h2>Why neither sheet asks about memorized frames</h2>
+  <p>The Generative Check compares a sample with the frames the learner was given. The six workshop samples were not written from supplied frames, so a rater has nothing to compare them with, and a column asking for that judgment would manufacture data. The check is introduced in Scene 4.5 on the projector and tested separately, on samples written from frames with the frames shown.</p>
+  <h2>Unratable</h2>
+  <p>In Round 1 a rater who circles U writes the reason in their own words. After the workshop, code those free-text reasons into A–E yourself, so that the use of Unratable can be compared across rounds without having taught the categories first. Enter U in the tally calculator's U column: it is missing data, never a low rating, and the calculator leaves it out of every agreement figure, Krippendorff's α included.</p>
+  <h2>Rater codes</h2>
+  <p>The code exists so one rater's Round 1 sheet can be paired with their Round 2 sheet. It is invented by the rater and no name is ever written down. Say the limit plainly at the start: with two to four raters in a language group, a code keeps a sheet unnamed but cannot make its writer unrecognisable to colleagues. Report collective numbers only. At the reveal, never ask who gave a particular rating; ask whether anyone is willing to explain a rating, without saying which one was theirs.</p>
+  <h2>What is pre-printed and why</h2>
+  <p>Samples are numbered 1–6, never labelled with a level, and the booklet order is deliberately not the order of difficulty. The mode is printed for the rater (samples 1, 3, 5 and 6 are speech transcripts, 2 and 4 are writing) because the mode is a fact about the sample, not a judgment to collect.</p>
+  <p><b>Key, for the facilitator only.</b> Booklet sample 1 is the toolkit bank's NH-01 (French F1, Spanish S1) &nbsp;·&nbsp; 2 is S-01 (F6, S6) &nbsp;·&nbsp; 3 is IM-01 (F3, S3) &nbsp;·&nbsp; 4 is AL-01 (F5, S5) &nbsp;·&nbsp; 5 is IL-01 (F2, S2) &nbsp;·&nbsp; 6 is IH-01 (F4, S4). For the Arabic set the bank holds the author's proposed level; for the French and Spanish sets it holds only the border each sample was written for, and no level. Both are folded away, one click from view, in the public toolkit file (Tabs 7 and 8), so ask raters not to open those tabs before the workshop, and do not project them until Round 2 has been collected.</p>
+  <div class="foot">Miqyas workshop pack v2.7 · All rights reserved, with the author's written permission for local adaptation (see the README) · https://osf.io/expu4<span class="by">Designed and developed by Dr. Adel F. Amer</span></div>
+</div>
+
+
+
+
+
+<!-- SAMPLE BOOKLET · Arabic -->
+<div class="page bk">
+  <div class="top">
+    <div><h1>MIQYAS · SAMPLE BOOKLET · ARABIC</h1><div class="sub">Six constructed samples · used unchanged in Round 1 and Round 2 · <span class="ar">كتيّب العيّنات · العربية</span></div></div>
+    <div class="round"><b>1 to 6</b><span>same in both rounds</span></div>
+  </div>
+  <div class="rules" style="margin-top:7pt">Read each sample to the end. <b>Write nothing here</b>: your ratings go on the Blind Rating Sheet, against the same sample number. These samples were written for this workshop, not collected from students. They are Tier C (<span class="ar" style="display:inline">اجتهاد</span>): nobody but their author has judged them, and nothing of his judgment is printed here. The order is not the order of difficulty.</div>
+  <div style="page-break-inside:avoid;break-inside:avoid"><h2><b>1</b>Sample 1 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· speech, transcribed</span></h2>
+<div class="sample" dir="rtl" lang="ar">أنا اسمي سارة. أنا من أمريكا. أدرس... أدرس العربية في الجامعة. أمس... أمس أنا ذهب، ذهبتُ؟، السوق. السوق كبير. أحب السوق.</div></div>
+<div style="page-break-inside:avoid;break-inside:avoid"><h2><b>2</b>Sample 2 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· writing</span></h2>
+<div class="sample" dir="rtl" lang="ar">لو سُئلتُ عن أثر التقنية في تعليم اللغات لقلت إن المسألة ليست في الأداة بل في طريقة توظيفها. فلو اقتصر المعلم على التطبيقات دون تفاعل إنساني، لتحول التعلم إلى تكرار آلي لا ينتج كفاءة تواصلية حقيقية. غير أن إنكار فائدتها مكابرة؛ فالوصول إلى نصوص أصيلة ومتحدثين حقيقيين لم يكن متاحًا بهذه السعة من قبل. ولذلك أرى أن السؤال الصحيح ليس: هل نستخدم التقنية؟ بل: أي كفايات نريد بناءها، وأي أدوات تخدمها؟</div></div>
+<div style="page-break-inside:avoid;break-inside:avoid"><h2><b>3</b>Sample 3 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· speech, transcribed</span></h2>
+<div class="sample" dir="rtl" lang="ar">في عطلة نهاية الأسبوع عندي أشياء كثيرة. يوم الجمعة أذهب مع أصدقائي إلى البحر ونسبح ونلعب الكرة. بعد ذلك نأكل سمك في مطعم قريب من البحر. يوم السبت أدرس قليلًا وأتكلم مع عائلتي بالفيديو. أمي تسأل دائمًا: ماذا تأكل؟ هل تنام جيدًا؟ وأنا أقول لها كل شيء تمام.</div></div>
+<div style="page-break-inside:avoid;break-inside:avoid"><h2><b>4</b>Sample 4 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· writing</span></h2>
+<div class="sample" dir="rtl" lang="ar">عندما كنت أدرس في القاهرة حدث لي موقف لن أنسى هو. كنت أسكن مع عائلة مصري، وفي يوم واحد تأخرت في الجامعة وما استطعت أن أتصل بهم لأن هاتفي كان معطل. عندما رجعت إلى البيت في الليل، وجدت الأم قلقة كثير وهي اتصلت بكل أصدقائي. شعرت بالخجل واعتذرت لها وشرحت ماذا حدث. من ذلك اليوم أنا أخبرهم دائمًا قبل أن أتأخر، وفهمت أن العائلة في مصر تعتبر الطالب الأجنبي مثل أولادها.</div></div>
+<div style="page-break-inside:avoid;break-inside:avoid"><h2><b>5</b>Sample 5 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· speech, transcribed</span></h2>
+<div class="sample" dir="rtl" lang="ar">أنا... أسكن في شقة صغير... اه... قريب من الجامعة. كل يوم أنا أذهب... إلى الصف؟ نعم، الصف، في الصباح. وأرجع في... في المساء. أحب أطبخ، أن أطبخ، الطعام العربي لكن... لكن هو صعب. صديقي يساعد... يساعدني.</div></div>
+<div style="page-break-inside:avoid;break-inside:avoid"><h2><b>6</b>Sample 6 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· speech, transcribed</span></h2>
+<div class="sample" dir="rtl" lang="ar">في الصيف الماضي سافرت إلى الأردن مع صفي. وصلنا إلى عمّان في الليل وكان الجو حار. في اليوم الثاني ذهبنا إلى البتراء ومشينا كثيرًا. ثم... كان عندنا مشكلة لأن الباص... الباص لا يعمل، ما اشتغل؟، والسائق يقول لنا انتظروا. نحن ننتظر ساعتين. بعدين كل شيء تمام والرحلة جميلة جدًا.</div></div>
+
+  <div style="border-top:.8pt solid #c9b98a;margin-top:10pt;padding-top:4pt;font-size:7.9pt;color:#8a6626;text-align:center;letter-spacing:.5pt">Designed and developed by Dr. Adel F. Amer</div>
+</div>
+
+<!-- SAMPLE BOOKLET · French -->
+<div class="page bk">
+  <div class="top">
+    <div><h1>MIQYAS · SAMPLE BOOKLET · FRENCH</h1><div class="sub">Six constructed samples · used unchanged in Round 1 and Round 2 · <span class="ar">كتيّب العيّنات · الفرنسية</span></div></div>
+    <div class="round"><b>1 to 6</b><span>same in both rounds</span></div>
+  </div>
+  <div class="rules" style="margin-top:7pt">Read each sample to the end. <b>Write nothing here</b>: your ratings go on the Blind Rating Sheet, against the same sample number. These samples were written for this workshop, not collected from students. They are Tier C (<span class="ar" style="display:inline">اجتهاد</span>): nobody but their author has judged them, and nothing of his judgment is printed here. The order is not the order of difficulty.</div>
+  <div style="page-break-inside:avoid;break-inside:avoid"><h2><b>1</b>Sample 1 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· speech, transcribed</span></h2>
+<div class="sample" lang="fr">Je m'appelle Sara. Je suis américaine. J'étudie... j'étudie le français à l'université. Hier... hier je... aller, je vais ? je suis allée ?, au marché. Le marché est grand. J'aime le marché.</div></div>
+<div style="page-break-inside:avoid;break-inside:avoid"><h2><b>2</b>Sample 2 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· writing</span></h2>
+<div class="sample" lang="fr">Si l'on me demandait quel est l'effet de la technologie sur l'enseignement des langues, je répondrais que la question n'est pas l'outil mais la manière de s'en servir. Si l'enseignant se limitait aux applications sans interaction humaine, l'apprentissage deviendrait une répétition mécanique qui ne produit aucune compétence communicative réelle. Il serait pourtant absurde d'en nier les bénéfices : jamais l'accès à des textes authentiques et à de vrais locuteurs n'a été aussi large. C'est pourquoi la vraie question n'est pas « faut-il utiliser la technologie ? » mais « quelles compétences voulons-nous construire, et quels outils les servent ? »</div></div>
+<div style="page-break-inside:avoid;break-inside:avoid"><h2><b>3</b>Sample 3 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· speech, transcribed</span></h2>
+<div class="sample" lang="fr">Le week-end j'ai beaucoup de choses. Le samedi je vais à la plage avec mes amis et nous nageons et nous jouons au foot. Après ça nous mangeons du poisson dans un restaurant près de la plage. Le dimanche j'étudie un peu et je parle avec ma famille en vidéo. Ma mère demande toujours : qu'est-ce que tu manges ? Tu dors bien ? Et je lui dis que tout va bien.</div></div>
+<div style="page-break-inside:avoid;break-inside:avoid"><h2><b>4</b>Sample 4 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· writing</span></h2>
+<div class="sample" lang="fr">Quand j'étudiais à Lyon, il m'est arrivé une histoire que je n'oublierai jamais. J'habitais chez une famille française, et un jour je suis resté tard à l'université et je ne pouvais pas les appeler parce que mon téléphone était cassé. Quand je suis rentré le soir, j'ai trouvé la mère très inquiète et elle a téléphoné à tous mes amis. J'avais beaucoup de honte et je me suis excusé et j'ai expliqué qu'est-ce qui s'est passé. Depuis ce jour je les informe toujours avant d'être en retard, et j'ai compris que la famille en France considère l'étudiant étranger comme ses enfants.</div></div>
+<div style="page-break-inside:avoid;break-inside:avoid"><h2><b>5</b>Sample 5 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· speech, transcribed</span></h2>
+<div class="sample" lang="fr">J'habite... euh... dans un petit appartement... près de l'université. Chaque jour je vais... en classe ? oui, en classe, le matin. Et je rentre le... le soir. J'aime cuisiner, faire la cuisine, la nourriture française mais... mais c'est difficile. Mon ami il aide... il m'aide.</div></div>
+<div style="page-break-inside:avoid;break-inside:avoid"><h2><b>6</b>Sample 6 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· speech, transcribed</span></h2>
+<div class="sample" lang="fr">L'été dernier je suis allé en Jordanie avec ma classe. Nous sommes arrivés à Amman la nuit et il faisait très chaud. Le deuxième jour nous avons visité Pétra et nous avons beaucoup marché. Puis... nous avons eu un problème parce que le bus... le bus ne marche pas, il ne marchait pas ?, et le chauffeur nous dit attendez. Nous attendons deux heures. Après tout va bien et le voyage est très beau.</div></div>
+
+  <div style="border-top:.8pt solid #c9b98a;margin-top:10pt;padding-top:4pt;font-size:7.9pt;color:#8a6626;text-align:center;letter-spacing:.5pt">Designed and developed by Dr. Adel F. Amer</div>
+</div>
+
+<!-- SAMPLE BOOKLET · Spanish -->
+<div class="page bk">
+  <div class="top">
+    <div><h1>MIQYAS · SAMPLE BOOKLET · SPANISH</h1><div class="sub">Six constructed samples · used unchanged in Round 1 and Round 2 · <span class="ar">كتيّب العيّنات · الإسبانية</span></div></div>
+    <div class="round"><b>1 to 6</b><span>same in both rounds</span></div>
+  </div>
+  <div class="rules" style="margin-top:7pt">Read each sample to the end. <b>Write nothing here</b>: your ratings go on the Blind Rating Sheet, against the same sample number. These samples were written for this workshop, not collected from students. They are Tier C (<span class="ar" style="display:inline">اجتهاد</span>): nobody but their author has judged them, and nothing of his judgment is printed here. The order is not the order of difficulty.</div>
+  <div style="page-break-inside:avoid;break-inside:avoid"><h2><b>1</b>Sample 1 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· speech, transcribed</span></h2>
+<div class="sample" lang="es">Me llamo Sara. Soy americana. Estudio... estudio español en la universidad. Ayer... ayer yo... ir, ¿voy? ¿fui?, al mercado. El mercado es grande. Me gusta el mercado.</div></div>
+<div style="page-break-inside:avoid;break-inside:avoid"><h2><b>2</b>Sample 2 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· writing</span></h2>
+<div class="sample" lang="es">Si me preguntaran cuál es el efecto de la tecnología en la enseñanza de idiomas, respondería que la cuestión no es la herramienta sino la manera de usarla. Si el profesor se limitara a las aplicaciones sin interacción humana, el aprendizaje se convertiría en una repetición mecánica que no produce ninguna competencia comunicativa real. Sin embargo, sería absurdo negar sus beneficios: nunca el acceso a textos auténticos y a hablantes reales ha sido tan amplio. Por eso la verdadera pregunta no es «¿debemos usar la tecnología?» sino «¿qué competencias queremos construir, y qué herramientas las sirven?»</div></div>
+<div style="page-break-inside:avoid;break-inside:avoid"><h2><b>3</b>Sample 3 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· speech, transcribed</span></h2>
+<div class="sample" lang="es">Los fines de semana tengo muchas cosas. El sábado voy a la playa con mis amigos y nadamos y jugamos al fútbol. Después comemos pescado en un restaurante cerca de la playa. El domingo estudio un poco y hablo con mi familia por video. Mi madre siempre pregunta: ¿qué comes? ¿duermes bien? Y yo le digo que todo está bien.</div></div>
+<div style="page-break-inside:avoid;break-inside:avoid"><h2><b>4</b>Sample 4 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· writing</span></h2>
+<div class="sample" lang="es">Cuando estudiaba en Madrid, me pasó una historia que nunca voy a olvidar. Vivía con una familia española, y un día me quedé tarde en la universidad y no podía llamarlos porque mi teléfono estaba roto. Cuando regresé a casa por la noche, encontré a la madre muy preocupada y ella llamó a todos mis amigos. Tenía mucha vergüenza y me disculpé y expliqué qué es lo que pasó. Desde ese día siempre les aviso antes de llegar tarde, y comprendí que la familia en España considera al estudiante extranjero como sus hijos.</div></div>
+<div style="page-break-inside:avoid;break-inside:avoid"><h2><b>5</b>Sample 5 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· speech, transcribed</span></h2>
+<div class="sample" lang="es">Yo vivo... eh... en un apartamento pequeño... cerca de la universidad. Cada día voy... ¿a la clase? sí, a la clase, por la mañana. Y regreso por la... por la tarde. Me gusta cocinar, hacer comida, la comida española pero... pero es difícil. Mi amigo ayuda... me ayuda.</div></div>
+<div style="page-break-inside:avoid;break-inside:avoid"><h2><b>6</b>Sample 6 <span style="font-weight:400;color:#555;letter-spacing:0;font-size:9.5pt">· speech, transcribed</span></h2>
+<div class="sample" lang="es">El verano pasado fui a Jordania con mi clase. Llegamos a Ammán por la noche y hacía mucho calor. El segundo día visitamos Petra y caminamos mucho. Luego... tuvimos un problema porque el autobús... el autobús no funciona, ¿no funcionaba?, y el conductor nos dice esperen. Nosotros esperamos dos horas. Después todo está bien y el viaje es muy bonito.</div></div>
+
+  <div style="border-top:.8pt solid #c9b98a;margin-top:10pt;padding-top:4pt;font-size:7.9pt;color:#8a6626;text-align:center;letter-spacing:.5pt">Designed and developed by Dr. Adel F. Amer</div>
+</div>
+<footer class="jx-rights" style="direction:rtl;text-align:center;font:14px/1.8 Amiri,serif;color:#5f584d;padding:1.2rem 1rem;border-top:1px solid #d5cbb8;margin:2rem 0 0">© ٢٠٢٤ إلى ٢٠٢٦ د. عادل ف. عامر. جميع الحقوق محفوظة. يُحظر النسخ وإعادة النشر والترجمة والتحويل وتدريب أنظمة الذكاء الاصطناعي دون إذن كتابي. <a href="../rights" style="color:#7a5e1e">الحقوق والاستخدام</a><br><span lang="en" dir="ltr" style="font-family:Georgia,serif;font-size:12.5px">© 2024 to 2026 Dr. Adel F. Amer. All rights reserved. No copying, republishing, translation, conversion or AI training without written permission. <a href="../rights" style="color:#7a5e1e">Rights and use</a></span></footer>
+<script src="../juthur-a11y.js" defer></script>
+</body></html>
