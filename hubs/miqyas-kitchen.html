@@ -14,12 +14,6 @@
 <title>Miqyas · Cross-Language Proficiency Calibration</title>
 <link href="../assets/fonts/gf11.css" rel="stylesheet">
 <style>
-/* ═══════════════════════════════════════════════════════════════════
-   MIQYAS · OBSERVATORY LIVERY v0.7, the project's own instrument identity.
-   Deep indigo + engraved brass. Deliberately NOT any organization's palette
-   or mark, see the Independence Notice. Type: EB Garamond / Spectral /
-   Amiri via webfont when online, honest system-serif fallback offline.
-   ═══════════════════════════════════════════════════════════════════ */
 :root{
   --ink:#10172e; --ink-2:#1b2547; --ink-3:#243059;
   --brass:#a97e2f; --brass-2:#c9a04c; --brass-soft:#e8cf8f; --brass-deep:#8a6626;--brassdeep:#8a6626;
@@ -417,7 +411,6 @@ textarea:focus,select:focus,input[type=text]:focus,input[type=date]:focus,input[
 .skiplink{position:absolute;left:-9999px;top:8px;z-index:999;background:var(--ink);color:#fff;padding:8px 14px;border-radius:3px}
 .skiplink:focus{left:8px}
 
-/* ─── Kitchen epithets + small-organ life (v1.3) ──────────────── */
 .kk{font-family:'EB Garamond',serif;font-style:italic;color:var(--brassdeep);font-size:13px;letter-spacing:.4px;margin:-14px 0 14px}
 .kk::before{content:'⟡ ';font-style:normal;opacity:.7}
 .certlink{color:var(--brass-deep);cursor:pointer;text-decoration:underline dotted;font-style:normal;background:none;border:none;padding:0;font:inherit}
@@ -438,7 +431,6 @@ textarea:focus,select:focus,input[type=text]:focus,input[type=date]:focus,input[
   .momorb2{animation-delay:-5.5s}
   @keyframes orbspin{to{transform:rotate(360deg)}}
 }
-/* ══ v1.6 THE PULSE، الجرعة المحسوسة: طبقة النبض الكامل + مفتاح السكون ══ */
 body.m-still *,body.m-still *::before,body.m-still *::after{animation:none!important;transition:none!important}
 body.m-pulse .card{animation:cardfloat 7s ease-in-out infinite}
 body.m-pulse .card:nth-of-type(2n){animation-duration:8.2s;animation-delay:-2.1s}
@@ -516,7 +508,6 @@ body.m-pulse #tabs button.active{background-image:linear-gradient(90deg,transpar
   body.certprint #certSheet{display:block!important}
   body.certprint section{page-break-before:avoid}
 }
-/* ── v2.7 additions ── */
 .tier-y{background:#fdf3c8;color:#6d5200;border:1px solid #e0c35a}
 summary .tier-y{margin-inline-start:8px;font-size:.62rem;vertical-align:middle;white-space:nowrap}
 .hypstatus{background:#fdf6d8;border:1px solid #e0c35a;border-left:4px solid #d4a514;border-radius:3px;padding:10px 14px;font-size:12.5px;line-height:1.8;color:#5c4700;margin:0 0 10px}
@@ -1340,24 +1331,6 @@ To cite: Amer, A. F. (2026). <em>Miqyas: An Operationalizing Instrument for the 
 
 <script>
 'use strict';
-/* ═══════════════════════════════════════════════════════════════════
-   MIQYAS, ARCHITECTURE MAP (for maintainers)
-   Layers/tabs t1..t11 · header dial (exact% + weighted κ over 11 rungs)
-   Data structures: BANK{ar,fr,es} · NIGHTS{ar,fr,es} (27) · BRIDGE (12 cells)
-   · METHODS (5×3 rungs+ican) · BRD (4 borders) · MOM (state cards)
-   · lsData[{student,date,mode,level,sup?,aero?,audio?,rationale?}]
-   Engines: lsCross (crossing flags, pure derivation, never stored)
-   · momState/momThr (trichotomy + oscillation-hypothesis + altitude tiers)
-   · certShow (print-isolated via body.certprint) · supersede (ghost, reversible)
-   Storage (this browser only, all via safe `store`): miqyas_dial_v1 ·
-   miqyas_firstday_v1 · miqyas_bridge_targets_v1 · miqyas_motion_v1
-   v2.7: miqyas_templates_v1 (Tab 11 bank) · miqyas_task_toggle_v1 (UI only)
-   · miqyas_generative_checks_v1 · miqyas_unratable_reasons_v1 (both nameless)
-   · miqyas_tier_state_v1 (night promotions; read-only in this version)
-   Invariants: no number invented · fictional stamped · author-proposed labeled
-   · witnessed-only enters lsData · init deferred to DOMContentLoaded (TDZ-safe)
-   Self-test: open with ?selftest=1 → runtime assertion report overlay.
-   ═══════════════════════════════════════════════════════════════════ */
 window.addEventListener('error',function(e){
   try{
     if(document.getElementById('errbanner'))return;
@@ -1401,7 +1374,6 @@ function activateTab(btn){
    reduced-motion or when JS is absent (elements stay visible). ---------- */
 /* Motion controller, three doses, the user's hand on the dial:
    pulse (amplified, default) · whisper (the old subtle layer) · still. */
-/* v2.7 · local calendar date (the UTC date is yesterday until 04:00 in Dubai) */
 function todayISO(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 const store={g:k=>{try{return localStorage.getItem(k)}catch(e){return null}},s:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}},d:k=>{try{localStorage.removeItem(k)}catch(e){}}};
 let MO_REDUCE=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1707,12 +1679,6 @@ const METHODS=[
    {rung:'S, the independent version',task:'Independent multi-source, multi-perspective research essay, the G12 benchmark as written.',ican:'I can research a question across sources and defend a multi-perspective synthesis.'}
   ]}
 ];
-/* ---------- v2.7 · Template Bank + Generative Check.
-   The flat template bank made visible: per method, editable frames in three
-   languages (starter frames are author-proposed, Tier C, a department's own
-   bank replaces them). The Generative Check asks the one question that
-   separates reproducing a frame from building on it: was the template reproduced intact, or
-   adapted? Records carry NO student name, date, method, language, class only. ---------- */
 const TPL_KEY='miqyas_templates_v1',GEN_KEY='miqyas_generative_checks_v1',TOG_KEY='miqyas_task_toggle_v1';
 const TPL_DEFAULT={
  desc:{ar:['هذا / هذه …، وهو / وهي في …','يتكوّن / تتكوّن من …','يُستخدم / تُستخدم لـ …','يشبه / تشبه … في …'],fr:['C\'est … et il/elle se trouve …','Il/Elle se compose de …','Il/Elle sert à …','Il/Elle ressemble à … par …'],es:['Es … y está en …','Se compone de …','Sirve para …','Se parece a … en …']},
@@ -1964,12 +1930,7 @@ function runPlacement(){
   out.innerHTML=`<div class="gap-report" style="background:${bg}"><p><b>Reading ceiling:</b> <span class="badge ${rL.cls}">${rL.name}</span> &nbsp; <b>Writing ceiling:</b> <span class="badge ${wL.cls}">${wL.name}</span></p><p style="margin-top:6px">${msg}</p></div>`;
 }
 
-/* ---------- Layers 7/8 data: parallel bank, 3 languages ----------
-   v0.7: texts below are the FULL rating-sheet texts, one canonical corpus
-   for both documents.
-   Arabic entries carry the AUTHOR'S PROPOSED ratings (single rater, marked
-   as such). French/Spanish entries are raw drafted text only, no ratings,
-   markers, or verdicts exist for them yet, and none are invented here. */
+/* Layers 7/8 data: parallel bank, 3 languages */
 const BANK={
  ar:[
   {id:'NH-01',rating:'Novice High',cls:'b-novice',boundary:'NH/IL',mode:'speaking',status:'rated',tier:'C',
@@ -2231,13 +2192,6 @@ es:[
   reveal:"<b>Two traps braided: the group product and the rehearsed display.</b> A skit shows engagement, memory, and courage · it cannot show <i>her</i> unrehearsed proficiency. The untangling probe costs thirty seconds: «¿Y qué pasó después de la escena?», solo, unscripted. <b>Author-proposed: skit logged as engagement; the rating waits for the solo answer.</b>",
   tags:"group untangling · rehearsed display · solo probe"}
 ]};
-/* ---------- v2.7 · Tier state of the Nights, read from this browser only.
-   Everything is born Tier C. A night's promotion (C → B after an independent
-   specialist confirms it; B → A after two blind raters agree) is recorded under
-   miqyas_tier_state_v1 as {"AR-1":"B",...}. No promotion button exists in this
-   version by design: tiers move on workshop evidence, not on a click. The
-   status bar and every night's tag are derived from the same state, so the
-   counter can never disagree with the cards. ---------- */
 const TIER_KEY='miqyas_tier_state_v1';
 function tierState(){let o={};try{o=JSON.parse(store.g(TIER_KEY)||'{}')||{};}catch(e){o={};}
   const ids=new Set([].concat(NIGHTS.ar,NIGHTS.fr,NIGHTS.es).map(g=>g.n));const out={};
@@ -2590,11 +2544,6 @@ function wizConfirm(){
   document.getElementById('recStatus').textContent='✓ Rating set to '+SUB_FULL[parseInt(v)]+' (human-confirmed via guided flow), now press Add point.';
 }
 
-/* ---------- v2.7 · Diagnostic Unratable. "Unratable" never closes silently:
-   a reason is required, and the reason is data. The modal has no ✕, ignores
-   Escape and backdrop clicks; Cancel withdraws the Unratable choice itself.
-   Session copy (with the student's name) travels in the chart export; the
-   browser copy under miqyas_unratable_reasons_v1 carries no name. ---------- */
 const UNR_KEY='miqyas_unratable_reasons_v1';
 const UNR_REASONS={floor_exceeded:'Task above the language floor',frames_only:'Task elicited only the supplied frames',insufficient:'Not enough evidence',integrity:'Evidence integrity in doubt',other:'Other'};
 let lsUnr=[],unrFrom='major';
@@ -2646,7 +2595,6 @@ function unrRender(){
 }
 function unrClear(){if(!confirm('Erase the unratable-reasons log saved in this browser?'))return;store.d(UNR_KEY);unrRender();}
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('unrModal').classList.contains('show')){e.preventDefault();e.stopPropagation();}},true);
-/* keep keyboard focus inside whichever v2.7 modal is open */
 document.addEventListener('keydown',e=>{
   if(e.key!=='Tab')return;const m=document.querySelector('.mqmodal.show');if(!m)return;
   const f=[...m.querySelectorAll('input,button')].filter(x=>!x.disabled&&x.offsetParent);if(!f.length)return;
@@ -3072,7 +3020,6 @@ function lsExport(){
 }
 </script>
 
-<!-- v2.7 · Teacher attestation · the page cannot print without it -->
 <div class="mqmodal" id="certModal" role="dialog" aria-modal="true" aria-labelledby="certModalH">
   <div class="mqbox">
     <div class="mqh" id="certModalH">TEACHER ATTESTATION<small>Required before printing</small></div>
@@ -3082,7 +3029,6 @@ function lsExport(){
     <div class="mqf"><button type="button" class="action ghost" onclick="certCancel()">Cancel</button><button type="button" class="action gold" id="certPrintBtn" onclick="certPrint()" disabled>Print milestone page</button></div>
   </div>
 </div>
-<!-- v2.7 · Diagnostic Unratable · no ✕, no Escape, no backdrop close -->
 <div class="mqmodal" id="unrModal" role="dialog" aria-modal="true" aria-labelledby="unrModalH">
   <div class="mqbox">
     <div class="mqh" id="unrModalH">DIAGNOSTIC REASON · Required for Unratable<small>Why is this sample not rateable yet? Select the primary reason.</small></div>

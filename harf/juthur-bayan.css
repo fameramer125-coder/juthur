@@ -74,8 +74,7 @@ code,pre{font-family:ui-monospace,Menlo,monospace;background:var(--gold-15)}
   body{background:#FBF9F4}body::before{display:none}
 }
 
-/* ── توحيدُ ألوانِ الأسفار على هويّةِ الدار ──
-   ما كان أزرقَ في المسوّدات يُردُّ إلى INK والذهب؛ الهويّةُ واحدة. */
+/* ── توحيدُ ألوانِ الأسفار على هويّةِ الدار ── */
 html[data-stage]{
   --forest:#1B3A2F; --forest-mid:#3C6A55; --forest-soft:#6E9584; --forest-pale:#EAF1ED;
   --gold:#9A7B23; --gold-light:#C9A227; --gold-pale:#F0E9D6; --gold-deep:#6E5716;

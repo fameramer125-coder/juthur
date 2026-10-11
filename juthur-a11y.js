@@ -68,7 +68,7 @@
     try{
       if(!document.querySelector('main,[role="main"]')){
         var c=document.querySelector('.jz-wrap')||document.getElementById('root')||document.getElementById('app')||
-          document.querySelector('body > div:not(.jx-indep):not(#__bundler_thumbnail):not(.langtog)');
+          document.querySelector('body > div:not(.jx-indep):not(.langtog)');
         if(c)c.setAttribute('role','main');
       }
       var en=(document.documentElement.lang||'').indexOf('en')===0;
