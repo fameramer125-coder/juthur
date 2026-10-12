@@ -4,6 +4,7 @@
   X-Frame-Options: SAMEORIGIN
   tdm-reservation: 1
   X-Robots-Tag: noai, noimageai
+  Content-Security-Policy-Report-Only: default-src 'self' data: blob:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; media-src 'self' blob: data:; connect-src 'self' https:; frame-ancestors 'self'; base-uri 'self'; form-action 'self' mailto:
   Permissions-Policy: camera=(), microphone=(self), geolocation=()
 
 /assets/*
@@ -14,3 +15,13 @@
 
 /*.js
   Cache-Control: public, max-age=86400
+
+/*.webmanifest
+  Content-Type: application/manifest+json
+  Cache-Control: public, max-age=86400
+
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.jpg
+  Cache-Control: public, max-age=604800

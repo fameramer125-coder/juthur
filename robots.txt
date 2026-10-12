@@ -97,4 +97,4 @@ Disallow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://fameramer125-coder.github.io/juthur/sitemap.xml
+Sitemap: https://juthur-621.netlify.app/sitemap.xml
